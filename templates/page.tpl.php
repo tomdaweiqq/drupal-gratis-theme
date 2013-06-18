@@ -190,7 +190,7 @@ if ($page['preface_first'] || $page['preface_second'] ||
     <?php endif; ?></div>
   <?php endif; ?>
 
-    <div class="<?php print _bamboo_content_grid($columns); ?>
+    <div class="<?php print _gratis_content_grid($columns); ?>
       ">
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
@@ -228,7 +228,7 @@ if ($page['preface_first'] || $page['preface_second'] ||
 
     <!--Sidebar first-->
     <?php if (!empty($page['sidebar_first'])): ?>
-    <aside id="sidebar-first" class="sidebar <?php print _bamboo_content_sidebar_grid($columns); ?>
+    <aside id="sidebar-first" class="sidebar <?php print _gratis_content_sidebar_grid($columns); ?>
       ">
       <?php if ($page['sidebar_first']): ?>
       <?php print render($page['sidebar_first']); ?>
@@ -257,19 +257,19 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
 
   <!--Postscript -->
   <?php if (!empty($page['postscript_first'])): ?>
-  <div class="<?php print _bamboo_content_postscript($pscolumns); ?> ">
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
     <?php print render($page['postscript_first']); ?>
   </div>
 <?php endif; ?>
 
 <?php if (!empty($page['postscript_second'])): ?>
-  <div class="<?php print _bamboo_content_postscript($pscolumns); ?> ">
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
     <?php print render($page['postscript_second']); ?>
   </div>
 <?php endif; ?>
 
 <?php if (!empty($page['postscript_third'])): ?>
-  <div class="<?php print _bamboo_content_postscript($pscolumns); ?> ">
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
     <?php print render($page['postscript_third']); ?>
   </div>
 <?php endif; ?>

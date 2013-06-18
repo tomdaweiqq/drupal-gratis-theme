@@ -11,30 +11,30 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
+function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
 
-  $form['bamboo_settings'] = array(
+  $form['gratis_settings'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Bamboo Theme Settings'),
+    '#title' => t('gratis Theme Settings'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );
 
-  $form['bamboo_settings']['breadcrumbs'] = array(
+  $form['gratis_settings']['breadcrumbs'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show breadcrumbs in a page'),
-    '#default_value' => theme_get_setting('breadcrumbs', 'bamboo'),
+    '#default_value' => theme_get_setting('breadcrumbs', 'gratis'),
     '#description' => t("Check this option to show breadcrumbs in page. Uncheck to hide."),
   );
 
-  $form['bamboo_settings']['general_settings']['bamboo_themelogo'] = array(
+  $form['gratis_settings']['general_settings']['gratis_themelogo'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use theme Logo?'),
-    '#default_value' => theme_get_setting('bamboo_themelogo', 'bamboo'),
+    '#default_value' => theme_get_setting('gratis_themelogo', 'gratis'),
     '#description' => t("Check for yes, uncheck to upload your own logo!"),
   );
 
-  $form['bamboo_settings']['general_settings']['theme_bg_config']['theme_bg'] = array(
+  $form['gratis_settings']['general_settings']['theme_bg_config']['theme_bg'] = array(
     '#type' => 'select',
     '#title' => t('Choose a background'),
     '#default_value' => theme_get_setting('theme_bg'),
@@ -60,18 +60,18 @@ function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
     ),
   );
 
-  $form['bamboo_settings']['general_settings']['theme_color_config']['theme_color_palette'] = array(
+  $form['gratis_settings']['general_settings']['theme_color_config']['theme_color_palette'] = array(
     '#type' => 'select',
     '#title' => t('Choose a color palette'),
     '#default_value' => theme_get_setting('theme_color_palette'),
     '#options' => array(
-      'green_bamboo' => t('Green bamboo'),
+      'green_gratis' => t('Green gratis'),
       'warm_purple' => t('Warm purple'),
       'dark_rust' => t('Dark rust'),
     ),
   );
 
-  $form['bamboo_settings']['general_settings']['header_font_style'] = array(
+  $form['gratis_settings']['general_settings']['header_font_style'] = array(
     '#type' => 'select',
     '#title' => t('Choose a header font style'),
     '#default_value' => theme_get_setting('header_font_style'),
@@ -81,7 +81,7 @@ function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
     ),
   );
 
-  $form['bamboo_settings']['general_settings']['body_font_style'] = array(
+  $form['gratis_settings']['general_settings']['body_font_style'] = array(
     '#type' => 'select',
     '#title' => t('Choose a body font style'),
     '#default_value' => theme_get_setting('body_font_style'),
@@ -91,7 +91,7 @@ function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
     ),
   );
 
-  $form['bamboo_settings']['general_settings']['theme_sidebar_location'] = array(
+  $form['gratis_settings']['general_settings']['theme_sidebar_location'] = array(
     '#type' => 'select',
     '#title' => t('Sidebar location'),
     '#default_value' => theme_get_setting('theme_sidebar_location'),
@@ -105,24 +105,24 @@ function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['additional_settings'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Additional Bamboo Settings'),
+    '#title' => t('Additional gratis Settings'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );
 
-  $form['additional_settings']['other_settings']['bamboo_localcss'] = array(
+  $form['additional_settings']['other_settings']['gratis_localcss'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use local.css?'),
-    '#default_value' => theme_get_setting('bamboo_localcss', 'bamboo'),
-    '#description' => t("This setting allows you to use your own custom css file within the Bamboo
+    '#default_value' => theme_get_setting('gratis_localcss', 'gratis'),
+    '#description' => t("This setting allows you to use your own custom css file within the gratis
     theme folder. Only check this box if you have renamed local.sample.css to local.css.
     You must clear the Drupal cache after doing this."),
   );
 
-  $form['additional_settings']['other_settings']['bamboo_grid_container_width'] = array(
+  $form['additional_settings']['other_settings']['gratis_grid_container_width'] = array(
     '#type' => 'textfield',
     '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
-    '#default_value' => theme_get_setting('bamboo_grid_container_width', 'bamboo'),
+    '#default_value' => theme_get_setting('gratis_grid_container_width', 'gratis'),
     '#description' => t("This setting allows you to set the width of the entire gird container. 
       Leave blank for the default max width of 1200px.  All inner grids are percentage based 
       so this should work with most any value you set within reason. 
@@ -130,17 +130,17 @@ function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
       you are doing!</strong>"),
   );
 
-  $form['additional_settings']['other_settings']['bamboo_tertiarymenu'] = array(
+  $form['additional_settings']['other_settings']['gratis_tertiarymenu'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use tertiary drop down menus?'),
-    '#default_value' => theme_get_setting('bamboo_tertiarymenu', 'bamboo'),
+    '#default_value' => theme_get_setting('gratis_tertiarymenu', 'gratis'),
     '#description' => t("Check this box if you are going to have tertiary (third level drop down menus)"),
   );
 
-  $form['additional_settings']['other_settings']['bamboo_viewport'] = array(
+  $form['additional_settings']['other_settings']['gratis_viewport'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use Touch device pinch and zoom?'),
-    '#default_value' => theme_get_setting('bamboo_viewport', 'bamboo'),
+    '#default_value' => theme_get_setting('gratis_viewport', 'gratis'),
     '#description' => t("** Check this box ONLY if you want to enable touch device users to be able to pinch and zoom.
     Note this is purely experimental and if you enable this, there is no support for layouts breaking."),
   );
@@ -153,18 +153,18 @@ function bamboo_form_system_theme_settings_alter(&$form, &$form_state) {
     '#collapsed' => FALSE,
   );
 
-  $form['custom_css_path_settings']['custom_css_path']['bamboo_custom_css_location'] = array(
+  $form['custom_css_path_settings']['custom_css_path']['gratis_custom_css_location'] = array(
     '#type' => 'checkbox',
     '#title' => t('Only check the box if you want to specify a custom path below to your local css file.'),
-    '#default_value' => theme_get_setting('bamboo_custom_css_location', 'bamboo'),
+    '#default_value' => theme_get_setting('gratis_custom_css_location', 'gratis'),
   );
 
-  $form['custom_css_path_settings']['custom_css_path']['bamboo_custom_css_path'] = array(
+  $form['custom_css_path_settings']['custom_css_path']['gratis_custom_css_path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to Custom Stylesheet'),
     '#description' => t('Specify a custom path to the local.css file without the leading slash:
     e.g.: sites/default/files/custom-css/local.css you must check the box above for this to work.'),
-    '#default_value' => theme_get_setting('bamboo_custom_css_path', 'bamboo'),
+    '#default_value' => theme_get_setting('gratis_custom_css_path', 'gratis'),
   );
 
 }

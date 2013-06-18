@@ -1,5 +1,5 @@
-name = bamboo
-description = Bamboo is a responsive Drupal 7 theme designed and developed by Danny Englander, <a href="http://highrockmedia.com">High Rock Media</a>
+name = gratis
+description = Gratis is a responsive Drupal 7 theme designed and developed by Danny Englander, <a href="http://highrockmedia.com">High Rock Media</a>
 core = 7.x
 engine = phptemplate
 
@@ -42,14 +42,14 @@ features[] = comment_user_picture
 features[] = favicon
 features[] = main_menu
 
-; Bamboo default settings --------------
+; Gratis default settings --------------
 
-settings[bamboo_themelogo]  = 1
+settings[gratis_themelogo]  = 1
 settings[breadcrumbs]  = 1
 settings[theme_sidebar_location]  = sidebar_right
-settings[bamboo_viewport]  = 0
+settings[gratis_viewport]  = 0
 settings[header_font_style]  = sans_serif
 settings[body_font_style]  = sans_serif
-settings[theme_color_palette]  = green_bamboo
+settings[theme_color_palette]  = green_gratis
 settings[theme_bg]  = dark_linen
-settings[bamboo_tertiarymenu]  = 0
+settings[gratis_tertiarymenu]  = 0
