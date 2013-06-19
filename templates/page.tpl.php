@@ -152,17 +152,7 @@
   <?php print render($page['content']); ?>
 
 
-<<<<<<< HEAD
-    <div class="<?php print _gratis_content_grid($columns); ?>
-      ">
-      <?php print $messages; ?>
-      <?php if (!empty($tabs)): ?>
-      <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['help'])): ?>
-=======
 </div>
->>>>>>> Theme refactoring.
 
 
 <!--Sidebar first-->
@@ -184,28 +174,6 @@
 <?php endif; ?>
 <!-- // Sidebar second--> 
 
-<<<<<<< HEAD
-    <!--Sidebar first-->
-    <?php if (!empty($page['sidebar_first'])): ?>
-    <aside id="sidebar-first" class="sidebar <?php print _gratis_content_sidebar_grid($columns); ?>
-      ">
-      <?php if ($page['sidebar_first']): ?>
-      <?php print render($page['sidebar_first']); ?>
-      <?php endif; ?></aside>
-    <?php endif; ?>
-    <!-- // Sidebar first  (first only - grid-20 pull-80) -->
-
-    <!--Sidebar second-->
-    <?php if (!empty($page['sidebar_second'])): ?>
-    <aside id="sidebar-second" class="grid-20 sidebar">
-      <?php if ($page['sidebar_second']): ?>
-      <?php print render($page['sidebar_second']); ?>
-      <?php endif; ?></aside>
-    <?php endif; ?>
-    <!-- // Sidebar second--> 
-  </div>
-=======
->>>>>>> Theme refactoring.
 
 <?php
 // Define and divide the postscript page regions.
@@ -216,16 +184,6 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
 <div id ="postscript-wrapper">
   <div class="grid-container" id="postscript-container" >
 
-<<<<<<< HEAD
-  <!--Postscript -->
-  <?php if (!empty($page['postscript_first'])): ?>
-  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
-    <?php print render($page['postscript_first']); ?>
-  </div>
-<?php endif; ?>
-
-<?php if (!empty($page['postscript_second'])): ?>
-=======
     <!--Postscript -->
     <?php if (!empty($page['postscript_first'])): ?>
     <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
@@ -234,7 +192,6 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
   <?php endif; ?>
 
   <?php if (!empty($page['postscript_second'])): ?>
->>>>>>> Theme refactoring.
   <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
     <?php print render($page['postscript_second']); ?>
   </div>
