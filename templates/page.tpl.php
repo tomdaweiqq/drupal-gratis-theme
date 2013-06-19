@@ -80,7 +80,7 @@
           </div>
         </span>
       </div>
-      <!--//grid-30-->
+      <!--//grid-25-->
 
       <div class="grid-75">
         <section id="main-menu" role="navigation">
@@ -88,29 +88,26 @@
           <!-- Theme native drop downs and mobile menu-->
           <?php if ($main_menu): ?>
 
-<!--  <div id="nav-wrap">
-  <div id="menu-icon"></div> -->
+          <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
+          <nav class="menu-navigation">
+            <?php if (!empty($primary_nav)): ?>
+            <?php print render($primary_nav); ?>
+          <?php endif; ?>
+        </nav>
 
-  <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
-  <nav class="menu-navigation">
-    <?php if (!empty($primary_nav)): ?>
-    <?php print render($primary_nav); ?>
-  <?php endif; ?>
-</nav>
+        <!--    </div> -->
+      <?php endif; ?>
 
-<!--    </div> -->
-<?php endif; ?>
-
-<!-- for third party menu system modules like superfish-->
-<?php if ($page['main_menu']): ?>
-  <div id="nav-wrap">
-    <div id="menu-icon"></div>
-    <?php //print render($page['main_menu']); ?></div>
-  <?php endif; ?>
-  <!--   </div> -->
-</section>
-</div>
-<!--//grid-70--> 
+      <!-- for third party menu system modules like superfish-->
+      <?php if ($page['main_menu']): ?>
+      <div id="nav-wrap">
+        <div id="menu-icon"></div>
+        <?php //print render($page['thirdparty_menu']); ?></div>
+      <?php endif; ?>
+      <!--   </div> -->
+    </section>
+  </div>
+  <!--//grid-75--> 
 </header>
 </div>
 
@@ -149,7 +146,7 @@
 <?php endif; ?>
 
 
-  <?php print render($page['content']); ?>
+<?php print render($page['content']); ?>
 
 
 </div>

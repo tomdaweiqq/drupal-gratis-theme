@@ -6,19 +6,15 @@ engine = phptemplate
 ; CSS --------------------
 
 ; --- Note, 'responsive.css' must come last!
-;stylesheets[all][] = css/menu.css
-stylesheets[all][] = css/normalize.css
-stylesheets[all][] = css/flexnav.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/design.css
 stylesheets[all][] = css/font-awesome.css
-stylesheets[all][] = css/responsive.css
+stylesheets[all][] = css/flexnav.css
 stylesheets[all][] = css/unsemantic-grid-responsive.css
-
 
 ; Regions --------------------
 regions[top_links]       = Top Links
-regions[main_menu]  = Main menu (3rd party menu systems)
+regions[thirdparty_menu]  = Main menu (3rd party menu systems)
 regions[hero_first]      = Hero first
 regions[hero_second]  = Hero second
 regions[preface_first]  = Preface first
