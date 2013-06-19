@@ -232,6 +232,10 @@ pre {
   text-transform: uppercase;
 }
 
+.icon-fixed-width {
+  color: #666;
+}
+
 span.image-block,
 .img-caption {
   display: block;

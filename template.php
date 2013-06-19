@@ -556,6 +556,7 @@ function gratis_preprocess_comment(&$vars){
  */
  
 function gratis_field($vars) {
+
   $output = '';
  
   // Render the label, if it's not hidden.
@@ -564,14 +565,14 @@ function gratis_field($vars) {
   }
  
   // Render the items.
-  $output .= '<ul' . $vars['content_attributes'] . '>';
+  //$output .= '<div' . $vars['content_attributes'] . '>';
   foreach ($vars['items'] as $delta => $item) {
-    $output .= '<li ' . $vars['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+    $output .= '<span ' . $vars['item_attributes'][$delta] . '>' . drupal_render($item) . '</span>';
   }
-  $output .= '</ul>';
+  //$output .= '</div>';
  
   // Render the top-level DIV.
-  $output = '<section class="' . $vars['classes'] . '"' . $vars['attributes'] . '>' . $output . '</section>';
+  $output = '<div class="' . $vars['classes'] . '"' . $vars['attributes'] . '>' . $output . '</div>';
  
   return $output;
 }
@@ -581,6 +582,7 @@ function gratis_field($vars) {
  */
  
 function gratis_preprocess_field(&$vars) {
+   // if ($vars['field_tags']) {
   /* Set shortcut variables. Hooray for less typing! */
   $name = $vars['element']['#field_name'];
   $bundle = $vars['element']['#bundle'];
@@ -639,4 +641,6 @@ function gratis_preprocess_field(&$vars) {
       $item_classes[] = 'last';
     }
     $vars['item_attributes_array'][$delta]['class'] = $item_classes;
-  }}
+  }
+//}
+}
