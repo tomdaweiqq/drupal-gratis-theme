@@ -89,44 +89,38 @@
         <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>"
        title="<?php print $title ?>"><?php print $title ?></a></h2>
       <?php else: ?>
-        <?php if ($title): ?><h1<?php print $title_attributes; ?> class="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php if ($title): ?><h1<?php print $title_attributes; ?> class="node-page-title"><?php print $title; ?></h1><?php endif; ?>
     </header>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
-  <div id="submit-wrapper">
-
+    <div id="submit-wrapper">
   <!-- Overidden in template.php to show just username. -->
-  <span class="submitted"><?php print $submitted; ?></span>
+  <span class="submitted">
+    <i class="e-icon-pencil"></i> <?php print $submitted; ?> |  <i class="e-icon-clock"></i> <?php echo date("j", $node->created); ?> / <?php echo date("M", $node->created); ?> / <?php echo date("Y", $node->created); ?>
+    <span class="blog-category"><?php print render($content['field_blog_category']); ?></span>
+  </span>
 
-  <!-- Then show the date in parts for better theming. -->
-  <div class="date-in-parts">
-    <span class="day"><?php print $thedate;  ?></span>
-    <span class="month"><?php print $themonth;  ?></span>
-    <span class="year"><?php print $theyear;  ?></span>
-  </div><!--//date-in-parts -->
-  </div><!--//submit-wrapper-->
+ </div><!--//submit-wrapper-->
   <?php endif; ?>
 
         <?php
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
         hide($content['links']);
+        hide($content['body']);
         print render($content);
         ?>
 
-      <?php if ($node_block): ?>
-        <div id="node-block">
-          <?php print render($node_block); ?>
-        </div>
-      <?php endif; ?>
+  <?php print render($content['body']); ?>
 
     <div class="clearfix">
         <?php if (!empty($content['links'])): ?>
         <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
         <?php endif; ?>
 
-        <?php print render($content['comments']); ?>
+          <?php print render($content['comments']); ?>
+
     </div>
 </article>

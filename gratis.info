@@ -6,12 +6,15 @@ engine = phptemplate
 ; CSS --------------------
 
 ; --- Note, 'responsive.css' must come last!
-stylesheets[all][] = css/menu.css
+;stylesheets[all][] = css/menu.css
 stylesheets[all][] = css/normalize.css
+stylesheets[all][] = css/flexnav.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/design.css
+stylesheets[all][] = css/font-awesome.css
 stylesheets[all][] = css/responsive.css
 stylesheets[all][] = css/unsemantic-grid-responsive.css
+
 
 ; Regions --------------------
 regions[top_links]       = Top Links
@@ -26,7 +29,6 @@ regions[help]           = Help
 regions[sidebar_first]  = Sidebar First
 regions[sidebar_second]  = Sidebar Second
 regions[content]         = Content
-regions[node_block]  = Node Block (block in a node)
 regions[postscript_first]   = Postscript first
 regions[postscript_second]  = Postscript second
 regions[postscript_third]   = Postscript third

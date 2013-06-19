@@ -1,4 +1,5 @@
 <?php
+
 /**
 * @file
 * Default theme implementation to display a single Drupal page.
@@ -65,131 +66,93 @@
 */
 ?>
 
-<header id="head" role="banner" class="grid-container" style="max-width:<?php print $thegrid; ?>
-  ;">
-  <div class="grid-60">
+<div id="wrapper">
 
-    <div id="logo">
-      <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>
-        " title="
-        <?php print $site_name; ?>
-        <?php print t('&nbsp;» Home Page'); ?>
-        ">
-        <img id="logo-img" src="<?php print $logo; ?>
-        " alt="
-        <?php print $site_name; ?>
-        <?php print t(' » Home Page'); ?>"/></a>
-      <?php endif; ?></div>
+  <div id="top-bar">
+    <header role="banner" class="grid-container" style="max-width:<?php print $thegrid; ?>">
+      <div class="grid-25">
+        <span id="brand">
+          <div id="logo">
+            <?php if ($logo): ?>
+            <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
+              <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
+            <?php endif; ?>
+          </div>
+        </span>
+      </div>
+      <!--//grid-30-->
 
-    <div id="site-title-wrapper">
-      <h1 id="site-title">
-        <a href="<?php print $front_page; ?>
-          " title="
-          <?php print t('Home'); ?>
-          ">
-          <?php print $site_name; ?></a>
-      </h1>
-      <?php if ($site_slogan): ?>
-      <div class="site-slogan">
-        <?php print $site_slogan; ?></div>
-      <!--site slogan-->
-      <?php endif; ?></div>
+      <div class="grid-75">
+        <section id="main-menu" role="navigation">
+          <!--          <div class="menu-navigation-container"> -->
+          <!-- Theme native drop downs and mobile menu-->
+          <?php if ($main_menu): ?>
 
+<!--  <div id="nav-wrap">
+  <div id="menu-icon"></div> -->
+
+  <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
+  <nav class="menu-navigation">
+    <?php if (!empty($primary_nav)): ?>
+    <?php print render($primary_nav); ?>
+  <?php endif; ?>
+</nav>
+
+<!--    </div> -->
+<?php endif; ?>
+
+<!-- for third party menu system modules like superfish-->
+<?php if ($page['main_menu']): ?>
+  <div id="nav-wrap">
+    <div id="menu-icon"></div>
+    <?php //print render($page['main_menu']); ?></div>
+  <?php endif; ?>
+  <!--   </div> -->
+</section>
+</div>
+<!--//grid-70--> 
+</header>
+</div>
+
+<main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content" >
+
+  <div class="<?php print _gratis_content_grid($columns); ?> ">
+    <?php print $messages; ?>
+    <?php if (!empty($tabs)): ?>
+    <?php print render($tabs); ?>
+  <?php endif; ?>
+  <?php if (!empty($page['help'])): ?>
+
+  <div class="well">
+    <?php print render($page['help']); ?>
   </div>
 
-  <div id="top-links" class="grid-40">
-    <?php if ($page['top_links']): ?>
-    <?php print render($page['top_links']); ?>
-    <?php endif; ?></div>
-</header>
+<?php endif; ?>
+<?php if (!empty($action_links)): ?>
+  <ul class="action-links">
+    <?php print render($action_links); ?>
+  </ul>
+<?php endif; ?>
 
-<div id="menu-wrapper" class="grid-container" style="max-width:<?php print $thegrid; ?>
-  ;">
-  <nav id="main-menu" role="navigation" class="grid-100">
-    <div class="menu-navigation-container">
-      <!-- Theme native drop downs and mobile menu-->
-      <?php if ($primary_nav): ?>
-      <div id="nav-wrap">
-        <div id="menu-icon">Menu</div>
-        <?php print render($primary_nav); ?></div>
-      <?php endif; ?>
+<?php if (!empty($page['content_top'])): ?>
+  <?php print render($page['content_top']); ?>
+<?php endif; ?>
 
-      <!-- for third party menu system modules like superfish-->
-      <?php if ($page['main_menu']): ?>
-      <?php print render($page['main_menu']); ?>
-      <?php endif; ?></div>
-  </nav>
-</div>
-<!-- end main-menu -->
+<?php if (!$is_node): ?>
+  <?php print render($title_prefix); ?>
+  <?php if ($title): ?>
+  <h1 class="page-header">
+    <?php print $title; ?>
+  </h1>
+<?php endif; ?>
+<?php print render($title_suffix); ?>
+<?php endif; ?>
 
-<main role="main" class="grid-container" id="content-wrapper" style="max-width:<?php print $thegrid; ?>">
 
-  <?php if ($page['hero_first']): ?>
-  <!--above breadcrumbs-->
-  <div id="hero-first" class="grid-100">
-    <?php print render($page['hero_first']); ?></div>
-  <?php endif; ?>
+  <?php print render($page['content']); ?>
 
-  <?php if ($breadcrumb): ?>
-  <div id="breadcrumbs">
-    <?php print $breadcrumb; ?></div>
-  <?php endif; ?>
 
-  <?php if ($page['hero_second']): ?>
-  <!--below breadcrumbs-->
-  <div id="hero-second" class="grid-100">
-    <?php print render($page['hero_second']); ?></div>
-  <?php endif; ?>
-
-  <?php
-// Define and divide the preface page regions.
-if ($page['preface_first'] || $page['preface_second'] ||
-  $page['preface_third']):
-?>
-
-  <div id="preface-wrapper">
-
-    <?php
-  $bottom = ((bool) $page['preface_first'] + (bool) $page['preface_second'] +
-    (bool) $page['preface_third']);
-
-  switch ($bottom) :
-
-  case 1:
-  $preface_wid = "grid-100";
-  break;
-
-  case 2:
-  $preface_wid = "grid-50";
-  break;
-
-  case 3:
-  $preface_wid = "grid-33";
-  break;
-
-  endswitch;
-  ?>
-
-    <?php if ($page['preface_first']): ?>
-    <div class="<?php print $preface_wid; ?>
-      preface-area">
-      <?php print render($page['preface_first']); ?></div>
-    <?php endif; ?>
-
-    <?php if ($page['preface_second']): ?>
-    <div class="<?php print $preface_wid; ?>
-      preface-area">
-      <?php print render($page['preface_second']); ?></div>
-    <?php endif; ?>
-
-    <?php if ($page['preface_third']): ?>
-    <div class="<?php print $preface_wid; ?>
-      preface-area">
-      <?php print render($page['preface_third']); ?></div>
-    <?php endif; ?></div>
-  <?php endif; ?>
-
+<<<<<<< HEAD
     <div class="<?php print _gratis_content_grid($columns); ?>
       ">
       <?php print $messages; ?>
@@ -197,35 +160,31 @@ if ($page['preface_first'] || $page['preface_second'] ||
       <?php print render($tabs); ?>
       <?php endif; ?>
       <?php if (!empty($page['help'])): ?>
+=======
+</div>
+>>>>>>> Theme refactoring.
 
-      <div class="well">
-        <?php print render($page['help']); ?>
-      </div>
 
-      <?php endif; ?>
-      <?php if (!empty($action_links)): ?>
-      <ul class="action-links">
-        <?php print render($action_links); ?>
-      </ul>
-      <?php endif; ?>
+<!--Sidebar first-->
+<?php if (!empty($page['sidebar_first'])): ?>
+  <aside id="sidebar-first" class="sidebar <?php print _gratis_content_sidebar_grid($columns); ?>
+    ">
+    <?php if ($page['sidebar_first']): ?>
+    <?php print render($page['sidebar_first']); ?>
+  <?php endif; ?></aside>
+<?php endif; ?>
+<!-- // Sidebar first  (first only - grid-20 pull-80) -->
 
-      <?php if (!empty($page['content_top'])): ?>
-      <?php print render($page['content_top']); ?>
-      <?php endif; ?>
+<!--Sidebar second-->
+<?php if (!empty($page['sidebar_second'])): ?>
+  <aside id="sidebar-second" class="grid-20 sidebar">
+    <?php if ($page['sidebar_second']): ?>
+    <?php print render($page['sidebar_second']); ?>
+  <?php endif; ?></aside>
+<?php endif; ?>
+<!-- // Sidebar second--> 
 
-      <?php if (!$is_node): ?>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-      <h1 class="page-header">
-        <?php print $title; ?>
-      </h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php endif; ?>
-   
-      <?php print render($page['content']); ?>
-    </div>
-
+<<<<<<< HEAD
     <!--Sidebar first-->
     <?php if (!empty($page['sidebar_first'])): ?>
     <aside id="sidebar-first" class="sidebar <?php print _gratis_content_sidebar_grid($columns); ?>
@@ -245,16 +204,19 @@ if ($page['preface_first'] || $page['preface_second'] ||
     <?php endif; ?>
     <!-- // Sidebar second--> 
   </div>
+=======
+>>>>>>> Theme refactoring.
 
-    <?php
+<?php
 // Define and divide the postscript page regions.
 if ($page['postscript_first'] || $page['postscript_second'] ||
   $page['postscript_third']):
 ?>
 
 <div id ="postscript-wrapper">
-<div class="grid-container" id="postscript-container" >
+  <div class="grid-container" id="postscript-container" >
 
+<<<<<<< HEAD
   <!--Postscript -->
   <?php if (!empty($page['postscript_first'])): ?>
   <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
@@ -263,6 +225,16 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
 <?php endif; ?>
 
 <?php if (!empty($page['postscript_second'])): ?>
+=======
+    <!--Postscript -->
+    <?php if (!empty($page['postscript_first'])): ?>
+    <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+      <?php print render($page['postscript_first']); ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (!empty($page['postscript_second'])): ?>
+>>>>>>> Theme refactoring.
   <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
     <?php print render($page['postscript_second']); ?>
   </div>
@@ -281,47 +253,19 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
 
 </main>
 
-  <footer id="colophon" class="grid-container" style="max-width:<?php print $thegrid; ?>">
-    
-    <?php
-// Define and divide the footer page regions.
-  if ($page['footer_first'] || $page['footer_second'] ||
-    $page['footer_third']):
+<div class="push-sticky"></div>
 
-    $bottom = ((bool) $page['footer_first'] + (bool) $page['footer_second'] +
-      (bool) $page['footer_third']);
+</div>
 
-  switch ($bottom) :
+<?php if (!$is_front): ?>
+  <footer id="footer" role="footer">
+    <section class="grid-container">
+      <div class="grid-100">
+        footer
+        <?php if (!empty($page['footer_first'])): ?>
+        <?php print render($page['footer_first']); ?>
+      <?php endif; ?></div>
+    </section>
+  </footer>
+<?php endif; ?>
 
-  case 1:
-  $footer_wid = "grid-100";
-  break;
-
-  case 2:
-  $footer_wid = "grid-50";
-  break;
-
-  case 3:
-  $footer_wid = "grid-33";
-  break;
-
-  endswitch;
-  ?>
-
-    <?php if ($page['footer_first']): ?>
-    <div class="<?php print $footer_wid; ?>
-      footer-area">
-      <?php print render($page['footer_first']); ?></div>
-    <?php endif; ?>
-    <?php if ($page['footer_second']): ?>
-    <div class="<?php print $footer_wid; ?>
-      footer-area">
-      <?php print render($page['footer_second']); ?></div>
-    <?php endif; ?>
-    <?php if ($page['footer_third']): ?>
-    <div class="<?php print $footer_wid; ?>
-      footer-area">
-      <?php print render($page['footer_third']); ?></div>
-    <?php endif; ?>
-
-    <?php endif; ?></footer>

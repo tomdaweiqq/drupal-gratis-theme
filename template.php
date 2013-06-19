@@ -25,9 +25,6 @@ function gratis_preprocess_html(&$vars) {
     $vars['rdf']->profile = '';
   }
   
-  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700',array('type' => 'external'));
-  drupal_add_css('//fonts.googleapis.com/css?family=Rosarivo:400,400italic&subset=latin,latin-ext',array('type' => 'external'));
-
 // Add a body class is the site name is hidden.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
@@ -104,6 +101,10 @@ if (theme_get_setting('gratis_custom_css_location') == TRUE) {
   }
 }
 
+// Add FlexNav.
+drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/jquery.flexnav.js', 'file');
+
+// Add general JS.
 drupal_add_js(path_to_theme() . '/js/scripts.js',
   array(
     'group' => JS_THEME,
@@ -213,7 +214,7 @@ function gratis_breadcrumb($vars) {
 * Override or insert variables into the page template.
 */
 function gratis_preprocess_page(&$vars, $hook) {
-// Set variable for theme native main menu with sub links.
+/*// Set variable for theme native main menu with sub links.
   if (!empty($vars['main_menu'])) {
 // Get the entire main menu tree.
     $main_menu_tree = menu_tree_all_data('main-menu');
@@ -224,7 +225,7 @@ function gratis_preprocess_page(&$vars, $hook) {
   else {
 // Don't show the menu if unchecked in the theme settings.
     $vars['primary_nav'] = FALSE;
-  }
+  }*/
 
 // If the default logo is used, then determine which color and set the path.
   $file = theme_get_setting('theme_color_palette');
@@ -276,6 +277,22 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['pscolumns'] = 1;
   }
 
+  // Primary nav.
+$vars['primary_nav'] = FALSE;
+if ($vars['main_menu']) {
+// Build links.
+  $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+// Provide default theme wrapper function.
+  $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+}
+
+}
+
+/**
+* Theme wrapper function for the primary menu links
+*/
+function gratis_menu_tree__primary(&$vars) {
+  return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
 
 /**
@@ -467,4 +484,47 @@ function _gratis_content_postscript($pscolumns = 1) {
   }
 
   return $class;
+}
+
+
+function gratis_css_alter(&$css) {
+  $path_system = drupal_get_path('module', 'system');
+
+  $remove = array(
+    $path_system . '/system.menus.css',
+    );
+
+// Remove stylesheets which match our remove array.
+  foreach ($css as $stylesheet => $options) {
+    if (in_array($stylesheet, $remove)) {
+      unset($css[$stylesheet]);
+    }
+  }
+}
+
+
+/**
+* Add unique class (mlid) to all menu items.
+* Add menu levels.
+* Menu title as class in lowercase.
+* https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
+*/
+function gratis_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  $name_id = strtolower(strip_tags($element['#title']));
+// remove colons and anything past colons.
+  if (strpos($name_id, ':')) $name_id = substr ($name_id, 0, strpos($name_id, ':'));
+//Preserve alphanumerics, everything else goes away.
+  $pattern = '/[^a-z]+/ ';
+  $name_id = preg_replace($pattern, '', $name_id);
+  $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' '.$name_id;
+  // Add levels.
+  $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }

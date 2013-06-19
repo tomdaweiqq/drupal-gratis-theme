@@ -12,24 +12,25 @@
 
       $('html').addClass('js');
 
-      // Mobile menu.
-      // http://webdesignerwall.com/demo/mobile-nav/
-      // http://www.learningjquery.com/2008/10/1-way-
-      // to-avoid-the-flash-of-unstyled-content
-      // Add a menu depth for better theming.
-      // Lets not render the menu until it's fully ready.
-      // It's hidden with CSS initally
+// Set Ul depths for better theming.
+$('#main-menu ul').each(function() {
+  var depth = $(this).parents('ul').length;
+  $(this).addClass('ul-depth-' + depth);
+});
 
-        $('#main-menu ul').each(function() {
-          var depth = $(this).parents('ul').length;
-          $(this).addClass('ul-depth-' + depth);
-        });
+// Set li depths for better theming.
+$('#main-menu ul li').each(function() {
+  var depth = $(this).parents('li').length;
+  $(this).addClass('li-depth-' + depth);
+});
 
-      /* toggle nav */
-      $("#menu-icon").click(function() {
-        $("#main-menu ul.menu.ul-depth-0").toggle();
-        $(this).toggleClass("active");
+$('#main-menu ul li a').each(function() {
+        var depth = $(this).parents('ul').length;
+        $(this).addClass('ula-depth-' + depth);
       });
+
+// Start flexnav. 
+$(".flexnav").flexNav();
 
       // End mobile menu.
 
@@ -56,12 +57,7 @@
         }
   });
 
-// Add an "arrow" span to primary menus that are expanded.
-  $('#main-menu ul li.expanded').each(function() {
-    //if ($(this).hasClass('expanded')) {
-      $(this).append("<span class='drop-arrow'></span>").html();
-    //  }
-  });
+
 
   }}})
 (jQuery);
