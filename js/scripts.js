@@ -51,6 +51,7 @@ $(".flexnav").flexNav();
       if ($("img-caption").length == 0) {
         $(this).closest(".field-type-image .field-item").append("<span " +
           "class='img-caption'>" + this.alt + "</span>");
+        $('.field-type-image img').wrap('<span class="image-block">');
         }
         else {
           $(this).closest(".field-type-image .field-item").append("");

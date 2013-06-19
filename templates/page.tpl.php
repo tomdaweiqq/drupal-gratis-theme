@@ -84,27 +84,21 @@
 
       <div class="grid-75">
         <section id="main-menu" role="navigation">
-          <!--          <div class="menu-navigation-container"> -->
-          <!-- Theme native drop downs and mobile menu-->
+          
           <?php if ($main_menu): ?>
-
           <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
           <nav class="menu-navigation">
             <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
         </nav>
-
-        <!--    </div> -->
       <?php endif; ?>
 
-      <!-- for third party menu system modules like superfish-->
-      <?php if ($page['main_menu']): ?>
-      <div id="nav-wrap">
-        <div id="menu-icon"></div>
-        <?php //print render($page['thirdparty_menu']); ?></div>
+      <!-- for third party menu systems or modules-->
+      <?php if ($page['thirdparty_menu']): ?>
+        <?php print render($page['thirdparty_menu']); ?>
       <?php endif; ?>
-      <!--   </div> -->
+
     </section>
   </div>
   <!--//grid-75--> 

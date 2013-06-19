@@ -278,13 +278,13 @@ function gratis_preprocess_page(&$vars, $hook) {
   }
 
   // Primary nav.
-$vars['primary_nav'] = FALSE;
-if ($vars['main_menu']) {
-// Build links.
-  $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-// Provide default theme wrapper function.
-  $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
-}
+    $vars['primary_nav'] = FALSE;
+    if ($vars['main_menu']) {
+    // Build links.
+      $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+      // Provide default theme wrapper function.
+      $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+    }
 
 }
 
@@ -294,6 +294,7 @@ if ($vars['main_menu']) {
 function gratis_menu_tree__primary(&$vars) {
   return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
+
 
 /**
 * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
@@ -353,7 +354,6 @@ function gratis_preprocess_node(&$vars) {
   }
 
 // Set date variables using drupal's format_date function
-// Based on <?php echo format_date($node->created, "custom", "M");.
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
@@ -408,7 +408,7 @@ drupal_add_html_head($viewport, 'viewport');
 }
 
 /**
-* Returns the correct grid class for the main content region.
+* Custom function, returns the correct grid class for the main content region.
 */
 function _gratis_content_grid($columns = 1) {
   $class = FALSE;
@@ -440,7 +440,7 @@ function _gratis_content_grid($columns = 1) {
 }
 
 /**
-* Returns the correct grid class for the sidebars.
+* Custom function, returns the correct grid class for the sidebars.
 */
 function _gratis_content_sidebar_grid($columns = 4) {
   $class = FALSE;
@@ -462,7 +462,7 @@ function _gratis_content_sidebar_grid($columns = 4) {
 }
 
 /**
-* Returns the correct grid class for the postscript regions.
+* Custom function, returns the correct grid class for the postscript regions.
 */
 function _gratis_content_postscript($pscolumns = 1) {
   $class = FALSE;
@@ -486,6 +486,22 @@ function _gratis_content_postscript($pscolumns = 1) {
   return $class;
 }
 
+/**
+ * Alters the JavaScript/CSS library registry.
+ *
+ * Allows certain, contributed modules to update libraries to newer versions
+ * while ensuring backwards compatibility. In general, such manipulations should
+ * only be done by designated modules, since most modules that integrate with a
+ * certain library also depend on the API of a certain library version.
+ *
+ * @param $libraries
+ *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
+ *   name and passed by reference.
+ * @param $module
+ *   The name of the module that registered the libraries.
+ *
+ * @see hook_library()
+ */
 
 function gratis_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
@@ -509,8 +525,8 @@ function gratis_css_alter(&$css) {
 * Menu title as class in lowercase.
 * https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
 */
-function gratis_menu_link(array $variables) {
-  $element = $variables['element'];
+function gratis_menu_link(array $vars) {
+  $element = $vars['element'];
   $sub_menu = '';
   $name_id = strtolower(strip_tags($element['#title']));
 // remove colons and anything past colons.
@@ -528,3 +544,99 @@ function gratis_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+function gratis_preprocess_comment(&$vars){
+  $vars['created'] = date('m / j / y', $vars['elements']['#node']->created);
+  $vars['changed'] = date('m / j / y', $vars['elements']['#node']->created);
+}
+
+/**
+ * Overrides theme_field()
+ * Remove the hard coded classes so we can add them in preprocess functions.
+ */
+ 
+function gratis_field($vars) {
+  $output = '';
+ 
+  // Render the label, if it's not hidden.
+  if (!$vars['label_hidden']) {
+    $output .= '<span ' . $vars['title_attributes'] . '>' . $vars['label'] . ':&nbsp;</span>';
+  }
+ 
+  // Render the items.
+  $output .= '<ul' . $vars['content_attributes'] . '>';
+  foreach ($vars['items'] as $delta => $item) {
+    $output .= '<li ' . $vars['item_attributes'][$delta] . '>' . drupal_render($item) . '</li>';
+  }
+  $output .= '</ul>';
+ 
+  // Render the top-level DIV.
+  $output = '<section class="' . $vars['classes'] . '"' . $vars['attributes'] . '>' . $output . '</section>';
+ 
+  return $output;
+}
+
+/**
+ * Implements hook_preprocess_field()
+ */
+ 
+function gratis_preprocess_field(&$vars) {
+  /* Set shortcut variables. Hooray for less typing! */
+  $name = $vars['element']['#field_name'];
+  $bundle = $vars['element']['#bundle'];
+  $mode = $vars['element']['#view_mode'];
+  $classes = &$vars['classes_array'];
+  $title_classes = &$vars['title_attributes_array']['class'];
+  $content_classes = &$vars['content_attributes_array']['class'];
+  $item_classes = array();
+ 
+  /* Global field classes */
+  $classes[] = 'field-wrapper';
+  $title_classes[] = 'field-label';
+  $content_classes[] = 'field-items';
+  $item_classes[] = 'field-item';
+ 
+  /* Uncomment the lines below to see variables you can use to target a field */
+  // print '<strong>Name:</strong> ' . $name . '<br/>';
+  // print '<strong>Bundle:</strong> ' . $bundle  . '<br/>';
+  // print '<strong>Mode:</strong> ' . $mode .'<br/>';
+ 
+  /* Add specific classes to targeted fields */
+  switch ($mode) {
+    /* All teasers */
+    case 'teaser':
+      switch ($name) {
+        /* Teaser read more links */
+        case 'node_link':
+          $item_classes[] = 'more-link';
+          break;
+        /* Teaser descriptions */
+        case 'body':
+        case 'field_description':
+          $item_classes[] = 'description';
+          break;
+      }
+      break;
+  }
+ 
+  switch ($name) {
+    case 'field_authors':
+      $title_classes[] = 'inline';
+      $content_classes[] = 'authors';
+      $item_classes[] = 'author';
+      break;
+  }
+ 
+  // Apply odd or even classes along with our custom classes to each item.
+  $item_classes_count = count($item_classes);
+  $item_classes[$item_classes_count] = 'odd';
+  foreach ($vars['items'] as $delta => $item) {
+    $item_classes[$item_classes_count] = $delta % 2 ? 'even' : 'odd';
+    if ($delta == 0) {
+      $item_classes[] = 'first';
+    }
+    if($delta==count($vars['items'])-1){
+      $item_classes[] = 'last';
+    }
+    $vars['item_attributes_array'][$delta]['class'] = $item_classes;
+  }}
