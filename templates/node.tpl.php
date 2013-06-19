@@ -105,12 +105,17 @@
 
 <?php print render($content['field_tags']); ?>
 
+<?php if (!empty($content['field_image'])): ?>
+  <?php print render($content['field_image']); ?>
+<?php endif; ?>
+
 <?php
 // We hide the comments and links now so that we can render them later.
 hide($content['comments']);
 hide($content['links']);
 hide($content['body']);
 hide($content['field_tags']);
+hide($content['field_image']);
 print render($content);
 ?>
 
@@ -123,7 +128,9 @@ print render($content);
   </nav>
 <?php endif; ?>
 
-<?php print render($content['comments']); ?>
+<?php if (!empty($content['comments'])): ?>
+  <?php print render($content['comments']); ?>
+<?php endif; ?>
 
 </div>
 </article>

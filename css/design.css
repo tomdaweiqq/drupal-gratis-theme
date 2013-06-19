@@ -47,13 +47,13 @@ h3,
 h4,
 h5 {
   font-family: 'OpenSansRegular', serif;
-  margin-bottom: 0;
 }
 
 h1 {
-  color: #666;
-  font-size: 4em;
-  margin-bottom: 10px;
+color: #666;
+font-size: 4em;
+line-height: 1.1em;
+margin-bottom: 16px;
 }
 
 p {
@@ -88,8 +88,12 @@ a.logo {
   padding-left: 10px;
 }
 
-
 /* Regions */
+
+#sidebar-second,
+#sidebar-first {
+margin-top: 20px;
+}
 
 .sidebar .block {
   margin-bottom: 20px;
@@ -134,7 +138,7 @@ a.logo {
   margin-top: 0;
 }
 
-.not-front span.submitted  {
+span.submitted  {
   display: block;
   width: 96%;
   padding: 4px;
@@ -225,13 +229,24 @@ pre {
   text-transform: uppercase;
 }
 
-span.image-block {
+span.image-block,
+.img-caption {
   display: block;
 }
 
 .is-node .field-type-image img {
 width: 100%;
 height: auto;
+}
+
+.not-node span.image-block {
+float: right;
+margin-left: 10px;
+}
+
+.links.node-links ul li {
+  display: inline-block;
+  padding: 0 10px;
 }
 
 /* Comments */
