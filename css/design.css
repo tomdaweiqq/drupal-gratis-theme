@@ -140,7 +140,6 @@ margin-top: 20px;
 
 span.submitted  {
   display: block;
-  width: 96%;
   padding: 4px;
   border: 1px dotted #999;
 }
@@ -215,6 +214,10 @@ pre {
   margin: 10px 0;
 }
 
+.node-teaser .field-type-taxonomy-term-reference {
+  margin: 0
+}
+
 .field-type-taxonomy-term-reference span.field-label {
   font-weight: bold;
   float: left;
@@ -235,8 +238,8 @@ span.image-block,
 }
 
 .is-node .field-type-image img {
-width: 100%;
 height: auto;
+width: 100%;
 }
 
 .not-node span.image-block {
@@ -245,8 +248,18 @@ margin-left: 10px;
 }
 
 .links.node-links ul li {
+/*  background: #ddd;*/
   display: inline-block;
-  padding: 0 10px;
+  margin-right: 10px;
+  padding-left: 4px;
+}
+
+.links.node-links ul li a {
+  padding: 4px 4px 4px 3px;
+}
+
+.node-teaser ul.links.inline  {
+  margin-bottom: 10px;
 }
 
 /* Comments */
@@ -437,8 +450,8 @@ ul.secondary a.active {
 }
 
 #main-menu ul li .ula-depth-1 {
-  padding: 2em 3.2em 2em .7em;
   background: #000;
+  padding: 2em 3.2em 2em .7em;
 }
 
 #main-menu ul li.li-depth-0:not(.item-with-ul) a {
@@ -456,15 +469,27 @@ ul.secondary a.active {
   background: #E04604;
 }
 
+#main-menu ul li.level-2 a {
+  background: #333;
+}
+
+#main-menu ul li.level-2 a:hover {
+  background: #E04604;
+}
+
 .touch-button:hover {
   background: rgba(0, 0, 0, 0.075);
 }
 
 #main-menu li a {
-  text-transform: capitalize;
   font-family: 'OpenSansRegular', serif;
   font-size: 1.1em;
   font-weight: bold;
+  text-transform: capitalize;
+}
+
+.menu-navigation ul {
+  margin-bottom: 0;
 }
 
 .front #postscript-wrapper {
@@ -474,12 +499,12 @@ ul.secondary a.active {
 .arrow.icon-fixed-width {
   font-size: 3.7em;
   color: #fff;
-  text-align: left !important
+  text-align: left !important;
 }
 
 .menu-icon.icon-fixed-width {
+  color: #fff;
   font-size: 1.9em;
-  color: #E04604;
 }
 
 .go-arrow {
@@ -494,5 +519,3 @@ ul.secondary a.active {
   width: 85%;
   float: left;
 }
-
-

@@ -98,12 +98,16 @@
   <section id="submit-wrapper">
     <!-- Overidden in template.php to show just username. -->
     <span class="submitted">
-      <i class="e-icon-pencil"></i> <?php print $submitted; ?> |  <i class="e-icon-clock"></i> <?php echo date("j", $node->created); ?> / <?php echo date("M", $node->created); ?> / <?php echo date("Y", $node->created); ?>
+      <i class="icon-fixed-width">&#xf007;</i> <?php print $submitted; ?> |  <i class="icon-fixed-width">&#xf073;</i> <?php echo date("j", $node->created); ?> / <?php echo date("M", $node->created); ?> / <?php echo date("Y", $node->created); ?>
     </span>
   </section><!--//submit-wrapper-->
 <?php endif; ?>
 
-<?php print render($content['field_tags']); ?>
+<?php if (!$teaser) : ?>
+  <?php if (!empty($content['field_tags'])): ?>
+  <?php print render($content['field_tags']); ?>
+<?php endif; ?>
+<?php endif; ?>
 
 <?php if (!empty($content['field_image'])): ?>
   <?php print render($content['field_image']); ?>
@@ -121,16 +125,20 @@ print render($content);
 
 <?php print render($content['body']); ?>
 
-<div class="clearfix">
   <?php if (!empty($content['links'])): ?>
   <nav class="links node-links clearfix">
     <?php print render($content['links']); ?>
   </nav>
 <?php endif; ?>
 
+<?php if ($teaser) : ?>
+  <?php if (!empty($content['field_tags'])): ?>
+  <?php print render($content['field_tags']); ?>
+<?php endif; ?>
+<?php endif; ?>
+
 <?php if (!empty($content['comments'])): ?>
   <?php print render($content['comments']); ?>
 <?php endif; ?>
 
-</div>
 </article>
