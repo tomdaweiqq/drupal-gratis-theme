@@ -125,6 +125,9 @@ print render($content);
 
 <?php print render($content['body']); ?>
 
+
+<div class="clearfix">
+
   <?php if (!empty($content['links'])): ?>
   <nav class="links node-links clearfix">
     <?php print render($content['links']); ?>
@@ -140,5 +143,7 @@ print render($content);
 <?php if (!empty($content['comments'])): ?>
   <?php print render($content['comments']); ?>
 <?php endif; ?>
+
+</div>
 
 </article>

@@ -248,3 +248,8 @@ h6 {
 ol {
   list-style: decimal;
 }
+
+.clearfix {
+  clear: both;
+}
+
