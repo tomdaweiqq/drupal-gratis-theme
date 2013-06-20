@@ -72,13 +72,13 @@ a {
   -ms-transition: color .2s ease-in-out;
   text-decoration: none;
   transition: color .2s ease-in-out;
-  color: #ca3d00;
 }
 
 a:hover {
   color: #f60;
 }
 
+a,
 a.active,
 li a.active {
   color: #e04604;
@@ -535,3 +535,55 @@ ul.secondary a.active {
   width: 85%;
   float: left;
 }
+
+
+/* colors */ 
+
+.color-palette-orange {
+
+}
+
+.color-palette-turquoise a {
+  color: #02b4ce;
+}
+
+.color-palette-turquoise #main-menu ul li a.active, 
+.color-palette-turquoise #main-menu ul li a:hover, 
+.color-palette-turquoise #main-menu ul li.hover-state a, 
+.color-palette-turquoise #main-menu ul li.active-trail a {
+background: #02b4ce;
+}
+
+.color-palette-turquoise #main-menu ul li.level-2 a {
+background: #333;
+}
+
+.color-palette-turquoise #main-menu ul li.level-2 a:hover {
+background: #02b4ce;
+}
+
+/* Green */
+
+.color-palette-green a,
+.color-palette-green a.active, 
+.color-palette-green li a.active,
+.color-palette-green #comments h3 a {
+  color: #6a8500;
+}
+
+.color-palette-green #main-menu ul li a.active, 
+.color-palette-green #main-menu ul li a:hover, 
+.color-palette-green #main-menu ul li.hover-state a, 
+.color-palette-green #main-menu ul li.active-trail a {
+background: #6a8500;
+}
+
+.color-palette-green #main-menu ul li.level-2 a {
+background: #333;
+}
+
+.color-palette-green #main-menu ul li.level-2 a:hover {
+background: #6a8500;
+}
+
+

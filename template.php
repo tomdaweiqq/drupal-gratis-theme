@@ -63,14 +63,6 @@ $vars['classes_array'][] = drupal_html_class('bg-' . $file);
 $file = theme_get_setting('theme_color_palette');
 $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
 
-// The header font style.
-$file = theme_get_setting('header_font_style');
-$vars['classes_array'][] = drupal_html_class('header-font-' . $file);
-
-// The body font style.
-$file = theme_get_setting('body_font_style');
-$vars['classes_array'][] = drupal_html_class('body-font-' . $file);
-
 // Sidebar location.
 $file = theme_get_setting('theme_sidebar_location');
 $vars['classes_array'][] = drupal_html_class($file);
@@ -556,7 +548,7 @@ function gratis_preprocess_comment(&$vars){
  */
  
 function gratis_field($vars) {
-  
+
   $output = '';
  
   // Render the label, if it's not hidden.

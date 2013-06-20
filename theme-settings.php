@@ -65,32 +65,13 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Choose a color palette'),
     '#default_value' => theme_get_setting('theme_color_palette'),
     '#options' => array(
-      'green_gratis' => t('Green gratis'),
-      'warm_purple' => t('Warm purple'),
-      'dark_rust' => t('Dark rust'),
+      'turquoise' => t('Turquoise'),
+      'purple' => t('Purple'),
+      'orange' => t('Orange'),
+      'green' => t('Green'),
     ),
   );
-
-  $form['gratis_settings']['general_settings']['header_font_style'] = array(
-    '#type' => 'select',
-    '#title' => t('Choose a header font style'),
-    '#default_value' => theme_get_setting('header_font_style'),
-    '#options' => array(
-      'sans_serif' => t('Sans-Serif'),
-      'serif' => t('Serif'),
-    ),
-  );
-
-  $form['gratis_settings']['general_settings']['body_font_style'] = array(
-    '#type' => 'select',
-    '#title' => t('Choose a body font style'),
-    '#default_value' => theme_get_setting('body_font_style'),
-    '#options' => array(
-      'sans_serif' => t('Sans-Serif'),
-      'serif' => t('Serif'),
-    ),
-  );
-
+  
   $form['gratis_settings']['general_settings']['theme_sidebar_location'] = array(
     '#type' => 'select',
     '#title' => t('Sidebar location'),
