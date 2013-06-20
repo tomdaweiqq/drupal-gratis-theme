@@ -70,7 +70,7 @@
 
   <div id="top-bar">
     <header role="banner" class="grid-container" style="max-width:<?php print $thegrid; ?>">
-      <div class="grid-25">
+      <div class="grid-15">
         <span id="brand">
           <div id="logo">
             <?php if ($logo): ?>
@@ -82,9 +82,9 @@
       </div>
       <!--//grid-25-->
 
-      <div class="grid-75">
+      <div class="grid-85">
         <section id="main-menu" role="navigation">
-          
+
           <?php if ($main_menu): ?>
           <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
           <nav class="menu-navigation">
@@ -96,16 +96,27 @@
 
       <!-- for third party menu systems or modules-->
       <?php if ($page['thirdparty_menu']): ?>
-        <?php print render($page['thirdparty_menu']); ?>
-      <?php endif; ?>
+      <?php print render($page['thirdparty_menu']); ?>
+    <?php endif; ?>
 
-    </section>
-  </div>
-  <!--//grid-75--> 
+  </section>
+</div>
+<!--//grid-75--> 
 </header>
 </div>
 
+<?php if ($site_slogan): ?>
+<div id="branding-wrapper">
+  <header role="branding" class="grid-container" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-100">
+      <h3 class="branding"><?php print $site_slogan; ?></h3>
+    </div>
+  </header>
+</div>
+<?php endif; ?>
+
 <main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content" >
+
 
   <div class="<?php print _gratis_content_grid($columns); ?> ">
     <?php print $messages; ?>

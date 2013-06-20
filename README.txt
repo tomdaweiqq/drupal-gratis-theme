@@ -2,21 +2,19 @@ Version 1.9, February 24, 2013
 
 -- SUMMARY --
 
-Gratis is a responsive Drupal 7 theme designed and developed
+Gratis is a responsive Drupal 7 HTML5 theme designed and developed
 by Danny Englander (Twitter: @highrockmedia). Based on the CSS
-Skeleton Framework, it allows for a choice of backgrounds,
-color palettes, sidebars and fonts in the theme's settings page.
+Unsemantic Framework, it allows for a choice color palettes
+in the theme's settings page. There also may be support in the 
+future for the color module to choose your own colors for 
+various elements. 
 
 Gratis is aimed at users who want to get a nice looking theme up
-and running fast, and may not want to take the time to create
-a sub-theme and fuss about with regions, settings, media queries,
-and other super technical things. It's also aimed at the casual
-Drupal user who has some familiarity with building sites. This
-is designed with this type of user in mind, so it may not be
-for the developer per se who would most likely use
-Omega or Zen. This theme also does not require any base theme. There will
-be an online demo soon and I considering offering some downloadable
-Features as well, i.e. "Slideshow", "Gallery", etc...
+and running in short order, may not want to take the time to create
+a sub-theme and mess with regions, settings, media queries,
+and other highly technical things. It's also aimed at a casual
+Drupal user who has some familiarity with building sites. 
+This theme also does not require any base theme.
 
 -- CONFIGURATION --
 
@@ -25,23 +23,15 @@ or admin/appearance/settings/Gratis and choose various options
 available.
 
 - For drop down menus to work, you need to set a main menu item to
-"expanded". Then its sub-menus will work as drop downs.
-If you need help with this, please consult Drupal core
-documentation.
+"expanded". It should also be checked on the theme's settings page. Then 
+its sub-menus will work as drop downs. If you need help with 
+this, please consult Drupal core documentation.
 
 -- THEME SETTINGS UI --
 
-- Choice of fonts:
- (e.g, choose sans-serif or serif for headers and body seperately.)
-
-- Choice of several backgrounds and textures
-
-- Choice of three color palettes
+- Choice of four color palettes
 
 - Toggle Breadcrumbs on or off
-
-- Choice of Sidebar left or right (Note no sidebar will appear automtically,
-you must assign blocks to that region.)
 
 - Default logo changes for each color palette
 You can also toggle this off and use your own logo.)
@@ -57,13 +47,7 @@ Choose to enable local.css file within the theme folder.
  Define a custom path for your own css file to use with the theme.
 
 - Tertiary Menus
-There is a theme setting checkbox if you will be using tertiary menus.
-Check this box if you have sub-sub or third level drop down
-menus. The setting does not change your menus, it merely styles
-the last secondary level menu to not have rounded corners. This setting
-was added to preseve the original styling of the theme for those who
-are not using tertiary drop down menus. Note that tertiary menus in
-mobile are indented already.
+There is no support for Tertiary Menus, only secondary sub-navs.
 
 - Main Menu block region
 Use this region if you turn off "Main Menu in the theme settings
@@ -81,8 +65,6 @@ or comments. Useful for ads or otherwise.
 is off. Note, there is no support for layouts breaking or otherwise if you choose to
 enable this option.
 
-
-
 -- ADDITIONAL FEATURES --
 
 - JQuery Image captions on default imagefield in Article content type
@@ -92,8 +74,6 @@ enable this option.
 - Mobile friendly menu
 
 - Drop down menus (for desktop)
-
-- Tertiary drop down menu styling
 
 -- REQUIREMENTS --
 
@@ -112,8 +92,8 @@ with Gratis.
 - drupal.org theme guide is here : http://drupal.org/documentation/theme
 
 -- UPGRADING --
-Nothing too tricky here other than if you have a local.css file as
-per the documentation. When upgrading, you must preserve local.css
+Nothing too tricky here other than if you have a local.css or custom path CSS 
+file as per the documentation. When upgrading, you must preserve local.css
 somewhere, otherwise it could get overwritten with the upgrade.
 After you upgrade, you can then drop local.css back in to the theme.
 Of course if you have modified other files, they will all get overwritten.
@@ -125,14 +105,12 @@ theme may allow for a custom path for local.css to avoid upgrade snags.
 
 -- NOTES --
 
-- This theme supports CSS3 features, i.e. round corners for modern browsers.
+- This theme supports CSS3 features.
 - There is no support for IE8 and below though there is an IE8 stylesheet
-in the theme and some defaults are provided that it should work ok.
+in the theme and some defaults are provided that it should work ok but
+essentially you are on your own when it comes to IE8 and below support.
 
-- Inspiration for this theme comes from my surroundings in glorious sunny
-Southern California!
-
-If you required specific customizations that you are not able to do on your own,
+If you require specific customizations that you are not able to do on your own,
 I can offer paid support. Please email me: contact@highrockmedia.com or
 through my website's contact form. http://highrockmedia.com/contact-us
 
