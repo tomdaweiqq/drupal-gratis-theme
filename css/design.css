@@ -46,6 +46,7 @@ h2.block-title,
 h3,
 h4,
 h5 {
+  color: #666;
   font-family: 'OpenSansRegular', serif;
 }
 
@@ -114,8 +115,8 @@ margin-top: 20px;
   background: #000;
 }
 
-.breadcrumb {
-  float: right;
+#breadcrumbs {
+  padding-top: 8px;
 }
 
 .front .region.region-postscript {
@@ -123,19 +124,20 @@ margin-top: 20px;
 }
 
 #footer {
-  padding: 0;
   background: #202020 url('../img/pattern01.png') repeat;
   color: #fff;
+  padding: 0;
+}
+
+#branding-wrapper {
+  background: #ccc
 }
 
 h3.branding {
-  margin: 0;
   color: #464646;
   font-size: 1em;
-}
-
-#branding-wrapper .grid-container {
-  margin-top: 4px;
+  margin: 0;
+  padding: 2px 0;
 }
 
 /* Navigation */
