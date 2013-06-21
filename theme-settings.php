@@ -20,11 +20,11 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#collapsed' => FALSE,
   );
 
-  $form['gratis_settings']['breadcrumbs'] = array(
+  $form['gratis_settings']['breadcrumb'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Show breadcrumbs in a page'),
-    '#default_value' => theme_get_setting('breadcrumbs', 'gratis'),
-    '#description' => t("Check this option to show breadcrumbs in page. Uncheck to hide."),
+    '#title' => t('Show page breadcrumbs'),
+    '#default_value' => theme_get_setting('breadcrumb', 'gratis'),
+    '#description' => t("Check this option to show page breadcrumbs. Uncheck to hide."),
   );
 
   $form['gratis_settings']['general_settings']['gratis_themelogo'] = array(
@@ -32,32 +32,6 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Use theme Logo?'),
     '#default_value' => theme_get_setting('gratis_themelogo', 'gratis'),
     '#description' => t("Check for yes, uncheck to upload your own logo!"),
-  );
-
-  $form['gratis_settings']['general_settings']['theme_bg_config']['theme_bg'] = array(
-    '#type' => 'select',
-    '#title' => t('Choose a background'),
-    '#default_value' => theme_get_setting('theme_bg'),
-    '#options' => array(
-      'gray_gradient' => t('Gray gradient'),
-      'green_gradient' => t('Green gradient'),
-      'purple_gradient' => t('Purple gradient'),
-      'rust_gradient' => t('Rust gradient'),
-      'light_fabric' => t('Light fabric'),
-      'dark_linen' => t('Dark linen'),
-      'light_cloth' => t('Light cloth'),
-      'tiles' => t('Tiles'),
-      'retro1' => t('Retro 1'),
-      'retro2' => t('Retro 2'),
-      'retro3' => t('Retro 3'),
-      'retro4' => t('Retro 4'),
-      'retro5' => t('Retro 5'),
-      'abstract1' => t('Abstract pattern 1'),
-      'abstract2' => t('Abstract pattern 2'),
-      'abstract3' => t('Abstract pattern 3'),
-      'abstract4' => t('Abstract pattern 4'),
-      'abstract5' => t('Abstract pattern 5'),
-    ),
   );
 
   $form['gratis_settings']['general_settings']['theme_color_config']['theme_color_palette'] = array(
@@ -69,18 +43,6 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
       'purple' => t('Purple'),
       'orange' => t('Orange'),
       'green' => t('Green'),
-    ),
-  );
-  
-  $form['gratis_settings']['general_settings']['theme_sidebar_location'] = array(
-    '#type' => 'select',
-    '#title' => t('Sidebar location'),
-    '#default_value' => theme_get_setting('theme_sidebar_location'),
-    '#description' => t("Choose where you would like your sidebar, left or right. Either way for mobile, it
-      will flow underneath the content area."),
-    '#options' => array(
-      'sidebar_right' => t('Right'),
-      'sidebar_left' => t('Left'),
     ),
   );
 

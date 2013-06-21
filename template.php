@@ -187,8 +187,7 @@ function gratis_preprocess_username(&$vars) {
 function gratis_breadcrumb($vars) {
 
 // Show breadcrumbs if checked.
-  if (theme_get_setting('breadcrumbs') == 1) {
-
+  if (theme_get_setting('breadcrumb') == 1) {
 // Theme the breadcrumbs.
     $breadcrumb = $vars['breadcrumb'];
     if (!empty($breadcrumb)) {
@@ -206,18 +205,6 @@ function gratis_breadcrumb($vars) {
 * Override or insert variables into the page template.
 */
 function gratis_preprocess_page(&$vars, $hook) {
-/*// Set variable for theme native main menu with sub links.
-  if (!empty($vars['main_menu'])) {
-// Get the entire main menu tree.
-    $main_menu_tree = menu_tree_all_data('main-menu');
-// Add the rendered output to the $primary_nav variable.
-    $vars['primary_nav'] = menu_tree_output($main_menu_tree);
-  }
-
-  else {
-// Don't show the menu if unchecked in the theme settings.
-    $vars['primary_nav'] = FALSE;
-  }*/
 
 // If the default logo is used, then determine which color and set the path.
   $file = theme_get_setting('theme_color_palette');
@@ -250,6 +237,7 @@ function gratis_preprocess_page(&$vars, $hook) {
   else {
     $vars['columns'] = 1;
   }
+
 
 // Postscript columns ('$pscolumns').
 

@@ -105,20 +105,32 @@
 </header>
 </div>
 
-<?php if ($site_slogan): ?>
+
+<?php if ($site_slogan || $breadcrumb) : ?>
 <div id="branding-wrapper">
   <header role="branding" class="grid-container" style="max-width:<?php print $thegrid; ?>">
-    <div class="grid-100">
+    
+  <?php if ($site_slogan): ?>
+    <div class="grid-40">
       <h3 class="branding"><?php print $site_slogan; ?></h3>
     </div>
+  <?php endif; ?>
+
+<?php if ($breadcrumb): ?>
+   <div class="grid-60">
+      <?php print $breadcrumb; ?>
+    </div>
+  <?php endif; ?>
+
   </header>
 </div>
-<?php endif; ?>
+  <?php endif; ?>
+
 
 <main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content" >
 
 
-  <div class="<?php print _gratis_content_grid($columns); ?> ">
+  <div class="<?php print _gratis_content_grid($columns); ?>">
     <?php print $messages; ?>
     <?php if (!empty($tabs)): ?>
     <?php print render($tabs); ?>
