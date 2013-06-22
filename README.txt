@@ -1,31 +1,29 @@
-Version 1.9, February 24, 2013
+Version 1.0, June, 2013
 
 -- SUMMARY --
 
-Gratis is a responsive Drupal 7 HTML5 theme designed and developed
-by Danny Englander (Twitter: @highrockmedia). Based on the CSS
-Unsemantic Framework, it allows for a choice color palettes
-in the theme's settings page. There also may be support in the 
-future for the color module to choose your own colors for 
-various elements. 
+Gratis is a responsive Drupal 7 HTML5 theme designed and developed by Danny
+Englander (Twitter: @highrockmedia). Based on the CSS Unsemantic Framework,
+it allows for a choice color palettes in the theme's settings page. There
+also may be support in the future for the color module to choose your own
+colors for various elements.
 
-Gratis is aimed at users who want to get a nice looking theme up
-and running in short order, may not want to take the time to create
-a sub-theme and mess with regions, settings, media queries,
-and other highly technical things. It's also aimed at a casual
-Drupal user who has some familiarity with building sites. 
-This theme also does not require any base theme.
+Gratis is aimed at users who want to get a nice looking theme up and
+running in short order, may not want to take the time to create a sub-theme
+and mess with regions, settings, media queries, and other highly technical
+things. It's also aimed at a casual Drupal user who has some familiarity
+with building sites. This theme also does not require any base theme.
 
 -- CONFIGURATION --
 
-- Configure theme settings in Administration » Appearance » Settings » Gratis
-or admin/appearance/settings/Gratis and choose various options
+- Configure theme settings in Administration » Appearance » Settings »
+Gratis or admin/appearance/settings/Gratis and choose various options
 available.
 
 - For drop down menus to work, you need to set a main menu item to
-"expanded". It should also be checked on the theme's settings page. Then 
-its sub-menus will work as drop downs. If you need help with 
-this, please consult Drupal core documentation.
+"expanded". It should also be checked on the theme's settings page. Then
+its sub-menus will work as drop downs. If you need help with this, please
+consult Drupal core documentation.
 
 -- THEME SETTINGS UI --
 
@@ -33,36 +31,32 @@ this, please consult Drupal core documentation.
 
 - Toggle Breadcrumbs on or off
 
-- Default logo changes for each color palette
-You can also toggle this off and use your own logo.)
-***  Note, it's hard to anticipate what effect
-various shapes and sizes a custom uploaded logos will have on the
-theme so unfortunately support cannot be offered through the issue
-queue for things like this.
+- Default logo changes for each color palette You can also toggle this off
+and use your own logo.) ***  Note, it's hard to anticipate what effect
+various shapes and sizes a custom uploaded logos will have on the theme so
+unfortunately support cannot be offered through the issue queue for things
+like this.
 
-- Local CSS
-Choose to enable local.css file within the theme folder.
+- Local CSS Choose to enable local.css file within the theme folder.
 
-- Custom Path CSS
- Define a custom path for your own css file to use with the theme.
+- Custom Path CSS Define a custom path for your own css file to use with
+the theme.
 
-- Tertiary Menus
-There is no support for Tertiary Menus, only secondary sub-navs.
+- Tertiary Menus There is no support for Tertiary Menus, only secondary
+sub-navs.
 
-- Main Menu block region
-Use this region if you turn off "Main Menu in the theme settings
-and use your own third party menu system such
-as Menu Block or Superfish Module. You are responsible for any
-styling and CSS for this. (Use local.css as mentioned above.)
+- Main Menu block region Use this region if you turn off "Main Menu in the
+theme settings and use your own third party menu system such as Menu Block
+or Superfish Module. You are responsible for any styling and CSS for this.
+(Use local.css as mentioned above.)
 
-- Node block region
-Use this region to have a block region within a
-node which will appear right after the content but before any node links
-or comments. Useful for ads or otherwise.
+- Node block region Use this region to have a block region within a node
+which will appear right after the content but before any node links or
+comments. Useful for ads or otherwise.
 
-- Pinch and Zoom for Touch friendly devices
-- Option to choose whether to pinch and zoom on a touch sensitive device or not. Default
-is off. Note, there is no support for layouts breaking or otherwise if you choose to
+- Pinch and Zoom for Touch friendly devices - Option to choose whether to
+pinch and zoom on a touch sensitive device or not. Default is off. Note,
+there is no support for layouts breaking or otherwise if you choose to
 enable this option.
 
 -- ADDITIONAL FEATURES --
@@ -81,7 +75,8 @@ No base theme needed, simply use this theme on its own.
 
 -- INSTALLATION --
 
-Install as usual, see http://drupal.org/node/176045 for further information.
+Install as usual, see http://drupal.org/node/176045 for further
+information.
 
 -- CUSTOMIZATION --
 
@@ -91,37 +86,31 @@ with Gratis.
 
 - drupal.org theme guide is here : http://drupal.org/documentation/theme
 
--- UPGRADING --
-Nothing too tricky here other than if you have a local.css or custom path CSS 
-file as per the documentation. When upgrading, you must preserve local.css
-somewhere, otherwise it could get overwritten with the upgrade.
-After you upgrade, you can then drop local.css back in to the theme.
-Of course if you have modified other files, they will all get overwritten.
-In many cases, a subtheme is probably recommended then as
-opposed to using local.css. You can create a sub-theme of your
-own to put all your overrides in: "Creating a sub-theme"
-- http://drupal.org/node/225125 A future version of this
-theme may allow for a custom path for local.css to avoid upgrade snags.
+-- UPGRADING -- Nothing too tricky here other than if you have a local.css
+or custom path CSS file as per the documentation. When upgrading, you must
+preserve local.css somewhere, otherwise it could get overwritten with the
+upgrade. After you upgrade, you can then drop local.css back in to the
+theme. Of course if you have modified other files, they will all get
+overwritten. In many cases, a subtheme is probably recommended then as
+opposed to using local.css. You can create a sub-theme of your own to put
+all your overrides in: "Creating a sub-theme" -
+http://drupal.org/node/225125 A future version of this theme may allow for
+a custom path for local.css to avoid upgrade snags.
 
 -- NOTES --
 
-- This theme supports CSS3 features.
-- There is no support for IE8 and below though there is an IE8 stylesheet
-in the theme and some defaults are provided that it should work ok but
-essentially you are on your own when it comes to IE8 and below support.
+- This theme supports CSS3 features. - There is no support for IE8 and
+below though there is an IE8 stylesheet in the theme and some defaults are
+provided that it should work ok but essentially you are on your own when it
+comes to IE8 and below support.
 
-If you require specific customizations that you are not able to do on your own,
-I can offer paid support. Please email me: contact@highrockmedia.com or
-through my website's contact form. http://highrockmedia.com/contact-us
+If you require specific customizations that you are not able to do on your
+own, I can offer paid support. Please email me: contact@highrockmedia.com
+or through my website's contact form. http://highrockmedia.com/contact-us
 
-Buy me a Latte
-- Help support Gratis and the Gratis slideshow.
+Buy me a Latte - Help support Gratis and the Gratis slideshow.
 http://highrockmedia.com/buy-me-latte
 
-------------------------
-Danny Englander
-Drupal Themer and Photographer
-High Rock Media
-San Diego, California
-http://highrockmedia.com
+------------------------ Danny Englander Drupal Themer and Photographer
+High Rock Media San Diego, California http://highrockmedia.com
 http://highrockphoto.com

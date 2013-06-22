@@ -1,7 +1,7 @@
 (function ($) {
 // Add drupal 7 code.
 Drupal.behaviors.flexnav = {
-	attach:function (context, settings) {
+  attach:function (context, settings) {
 // End drupal calls.
 
 /*

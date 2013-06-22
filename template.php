@@ -24,13 +24,13 @@ function gratis_preprocess_html(&$vars) {
     $vars['rdf']->namespaces = '';
     $vars['rdf']->profile = '';
   }
-  
-// Add a body class is the site name is hidden.
+
+  // Add a body class is the site name is hidden.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
   }
 
-// Add IE 8 fixes style sheet.
+  // Add IE 8 fixes style sheet.
   drupal_add_css(path_to_theme() . '/css/ie8-fixes.css',
     array(
       'group' => CSS_THEME,
@@ -40,7 +40,7 @@ function gratis_preprocess_html(&$vars) {
         '!IE' => FALSE),
       'preprocess' => FALSE));
 
-// Add IE 9 fixes style sheet.
+  // Add IE 9 fixes style sheet.
   drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
     array(
       'group' => CSS_THEME,
@@ -50,37 +50,37 @@ function gratis_preprocess_html(&$vars) {
         '!IE' => FALSE),
       'preprocess' => FALSE));
 
-// Extra body classes for theme variables.
+  // Extra body classes for theme variables.
 
-// The Color Palette.
-$file = theme_get_setting('theme_color_palette');
-$vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
+  // The Color Palette.
+  $file = theme_get_setting('theme_color_palette');
+  $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
 
-// Local css within theme folder if checked.
-if (theme_get_setting('gratis_localcss') == TRUE) {
-  drupal_add_css(path_to_theme() . '/css/local.css',
-    array(
-      'group' => CSS_THEME,
-      'media' => 'screen',
-      'preprocess' => TRUE,
-      'weight' => '9998',
-      )
-    );
-}
-
-// Custom css file path if checked and file exists.
-if (theme_get_setting('gratis_custom_css_location') == TRUE) {
-  $path =  theme_get_setting('gratis_custom_css_path');
-  if (file_exists($path)) {
-    drupal_add_css("$path",
+  // Local css within theme folder if checked.
+  if (theme_get_setting('gratis_localcss') == TRUE) {
+    drupal_add_css(path_to_theme() . '/css/local.css',
       array(
         'group' => CSS_THEME,
+        'media' => 'screen',
         'preprocess' => TRUE,
-        'weight' => 9999
+        'weight' => '9998',
         )
       );
   }
-}
+
+// Custom css file path if checked and file exists.
+  if (theme_get_setting('gratis_custom_css_location') == TRUE) {
+    $path =  theme_get_setting('gratis_custom_css_path');
+    if (file_exists($path)) {
+      drupal_add_css("$path",
+        array(
+          'group' => CSS_THEME,
+          'preprocess' => TRUE,
+          'weight' => 9999
+          )
+        );
+    }
+  }
 
 // Add FlexNav.
 drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/jquery.flexnav.js', 'file');
@@ -590,7 +590,7 @@ function gratis_preprocess_field(&$vars) {
     if ($delta == 0) {
       $item_classes[] = 'first';
     }
-    if($delta==count($vars['items'])-1){
+    if($delta == count($vars['items']) -1){
       $item_classes[] = 'last';
     }
     $vars['item_attributes_array'][$delta]['class'] = $item_classes;

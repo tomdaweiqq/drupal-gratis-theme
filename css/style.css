@@ -138,22 +138,9 @@ strong {
   font-weight: bold;
 }
 
-img {
-/* color: transparent; */
-/* font-size: 0; */
-/* height: auto; */
-/* -ms-interpolation-mode: bicubic; */
-/* max-width: 100%; */
-/* vertical-align: middle; */
-}
-
 ul,
 ol {
   list-style: none;
-}
-
-li {
-/* display: list-item; */
 }
 
 table {
@@ -226,7 +213,7 @@ h1 {
 
 h2 {
   font-size: 2.8em;
-  margin-bottom:6px;
+  margin-bottom: 6px;
 }
 
 h3 {
@@ -252,4 +239,3 @@ ol {
 .clearfix {
   clear: both;
 }
-

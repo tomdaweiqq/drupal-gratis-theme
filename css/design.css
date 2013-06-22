@@ -143,7 +143,7 @@ h3.branding {
   margin-top: 0;
 }
 
-span.submitted  {
+span.submitted {
   border: 1px dotted #999;
   display: block;
   padding: 4px;
@@ -160,7 +160,7 @@ span.submitted  {
 }
 
 .main-container.container {
-  background: #FFF;
+  background: #fff;
 }
 
 #main-container-inner,
@@ -176,10 +176,9 @@ span.submitted  {
 
 .geshifilter code,
 pre {
-  background-color: #F8F8F8;
-  border: 1px solid #CCC;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
   color: #222;
-
   display: block;
   font-size: 0.88em;
   line-height: 1.3;
@@ -194,7 +193,7 @@ pre {
 
 aside h2 {
   background: url(../img/diagstripe.png);
-  border-left: 5px solid #F60;
+  border-left: 5px solid #f60;
   clear: both;
   font-size: 140%;
   line-height: 1.5em;
@@ -204,7 +203,7 @@ aside h2 {
 }
 
 aside .block-content  ul li {
-  border-bottom: 1px solid #D6D6D6;
+  border-bottom: 1px solid #d6d6d6;
   padding: 3px 0;
 }
 
@@ -538,7 +537,6 @@ ul.secondary a.active {
   width: 85%;
 }
 
-
 /* Colors */ 
 
 /* Orange */
@@ -558,8 +556,8 @@ ul.secondary a.active {
   color: #333;
 }
 
-.color-palette-orange #main-menu ul li a.active, 
-.color-palette-orange #main-menu ul li a:hover, 
+.color-palette-orange #main-menu ul li a.active,
+.color-palette-orange #main-menu ul li a:hover,
 .color-palette-orange #main-menu ul li.hover-state a, 
 .color-palette-orange #main-menu ul li.active-trail a {
   background: #e04604;
@@ -580,7 +578,7 @@ ul.secondary a.active {
 }
 
 .color-palette-turquoise a,
-.color-palette-turquoise a.active, 
+.color-palette-turquoise a.active,
 .color-palette-turquoise li a.active,
 .color-palette-turquoise #comments h3 a {
   color: #02b4ce;
@@ -590,9 +588,9 @@ ul.secondary a.active {
   color: #333;
 }
 
-.color-palette-turquoise #main-menu ul li a.active, 
+.color-palette-turquoise #main-menu ul li a.active,
 .color-palette-turquoise #main-menu ul li a:hover, 
-.color-palette-turquoise #main-menu ul li.hover-state a, 
+.color-palette-turquoise #main-menu ul li.hover-state a,
 .color-palette-turquoise #main-menu ul li.active-trail a {
   background: #02b4ce;
 }
@@ -622,9 +620,9 @@ ul.secondary a.active {
   color: #333;
 }
 
-.color-palette-green #main-menu ul li a.active, 
-.color-palette-green #main-menu ul li a:hover, 
-.color-palette-green #main-menu ul li.hover-state a, 
+.color-palette-green #main-menu ul li a.active,
+.color-palette-green #main-menu ul li a:hover,
+.color-palette-green #main-menu ul li.hover-state a,
 .color-palette-green #main-menu ul li.active-trail a {
   background: #6a8500;
 }
@@ -644,7 +642,7 @@ ul.secondary a.active {
 }
 
 .color-palette-purple a,
-.color-palette-purple a.active, 
+.color-palette-purple a.active,
 .color-palette-purple li a.active,
 .color-palette-purple #comments h3 a {
   color: #491f70;
@@ -654,9 +652,9 @@ ul.secondary a.active {
   color: #333;
 }
 
-.color-palette-purple #main-menu ul li a.active, 
-.color-palette-purple #main-menu ul li a:hover, 
-.color-palette-purple #main-menu ul li.hover-state a, 
+.color-palette-purple #main-menu ul li a.active,
+.color-palette-purple #main-menu ul li a:hover,
+.color-palette-purple #main-menu ul li.hover-state a,
 .color-palette-purple #main-menu ul li.active-trail a {
   background: #491f70;
 }
@@ -668,5 +666,3 @@ ul.secondary a.active {
 .color-palette-purple #main-menu ul li.level-2 a:hover {
   background: #491f70;
 }
-
-

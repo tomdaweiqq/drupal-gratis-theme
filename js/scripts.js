@@ -30,7 +30,7 @@ $('#main-menu ul li a').each(function() {
         $(this).addClass('ula-depth-' + depth);
       });
 
-// Start flexnav. 
+// Start flexnav.
 $(".flexnav").flexNav();
 
       // End mobile menu.
@@ -45,7 +45,6 @@ $(".flexnav").flexNav();
   $("#post-content article:last").addClass("last");
   $("#post-content article:first").addClass("first");
 
-
 // Set image captions for the image field.
   $(".field-type-image img").each(function (i, ele) {
     var alt = this.alt;
@@ -58,7 +57,7 @@ $(".flexnav").flexNav();
         }
   });
 
-// Add a wrapper around the image field. 
+// Add a wrapper around the image field.
   $('.field-type-image li') .each(function () {
     $(this).wrapInner('<span class="image-block">');
   });
@@ -81,8 +80,6 @@ $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
 $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
 $('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-fixed-width">&#xf054;</i>');
-
-
 
   }}})
 (jQuery);
