@@ -1,144 +1,67 @@
-/* Flexnav Base Styles */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-/*  font: inherit;*/
-/*  font-size: 100%;*/
-  vertical-align: baseline;
-}
-
-
 html {
   line-height: 1;
 }
 
-
-ol, ul {
-  list-style: none;
-}
-
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* Globals */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  vertical-align: baseline;
-}
-
-
 .flexnav {
-  *zoom: 1;
-  -webkit-transition: 0;
+  margin: 0 auto;
+  max-height: 0;
+  overflow: hidden;
   -moz-transition: 0;
   -o-transition: 0;
+  -webkit-transition: 0;
   transition: 0;
-  -webkit-transform-style: preserve-3d;
-  overflow: hidden;
-  margin: 0 auto;
   width: 100%;
-  max-height: 0;
+  -webkit-transform-style: preserve-3d;
+  *zoom: 1;
 }
 
 .flexnav:after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 .flexnav.show {
   max-height: 2000px;
-  -webkit-transition: 1s;
   -moz-transition: 1s;
   -o-transition: 1s;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 .flexnav.one-page {
-  position: fixed;
-  top: 50px;
-  right: 5%;
   max-width: 200px;
+  position: fixed;
+  right: 5%;
+  top: 50px;
 }
 
 .flexnav li {
   font-size: 100%;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .flexnav li a {
-  position: relative;
-  display: block;
-  padding: .4em 0.7em;
-  z-index: 2;
-  overflow: hidden;
-  color: #222222;
   background: #a6a6a2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  color: #222222;
+  display: block;
+  overflow: hidden;
+  padding: .4em 0.7em;
+  position: relative;
+  z-index: 2;
 }
 
 .flexnav li ul {
-  width: 210px;
   min-width: 100%;
+  width: 210px;
 }
 
 .flexnav li ul li {
   font-size: 100%;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .flexnav li ul.show li {
@@ -146,8 +69,8 @@ time, mark, audio, video {
 }
 
 .flexnav li ul li a {
-  display: block;
   background: #b2b2af;
+  display: block;
 }
 
 .flexnav ul li ul li a {
@@ -159,16 +82,16 @@ time, mark, audio, video {
 }
 
 .flexnav .touch-button {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 34px;
-  height: 71px;
-  display: inline-block;
   background: #acaca1;
   background: rgba(0, 0, 0, 0.075);
+  display: inline-block;
+  height: 71px;
+  position: absolute;
+  right: 0;
   text-align: center;
+  top: 0;
+  width: 34px;
+  z-index: 999;
 }
 
 .flexnav .touch-button:hover {
@@ -176,54 +99,53 @@ time, mark, audio, video {
 }
 
 .flexnav .touch-button .navicon {
-position: relative;
-top: 2.2em;
-font-size: 12px;
-color: #FFF;
+  color: #FFF;
+  font-size: 12px;
+  position: relative;
+  top: 2.2em;
 }
 
 .menu-button {
-position: relative;
-display: block;
-padding: 1em;
-background: #E04604;
-color: #FFF;
-cursor: pointer;
-border: none;
-width: 74px;
-float: right;
-top: 0;
-height: 33px;
+  background: #E04604;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 33px;
+  padding: 1em;
+  position: relative;
+  top: 0;
+  width: 74px;
 }
 
 .menu-button.one-page {
-  position: fixed;
-  top: 0;
-  right: 5%;
   padding-right: 45px;
+  position: fixed;
+  right: 5%;
+  top: 0;
 }
 
 .menu-button .touch-button {
   background: transparent;
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
   display: inline-block;
+  height: 50px;
+  position: absolute;
+  right: 0;
   text-align: center;
+  top: 0;
+  width: 50px;
+  z-index: 999;
 }
 
 .menu-button .touch-button .navicon {
+  color: #666;
   font-size: 16px;
   position: relative;
   top: 1em;
-  color: #666;
 }
 
 @media all and (min-width: 769px) {
-
 
   body.one-page {
     padding-top: 70px;
@@ -234,31 +156,31 @@ height: 33px;
   }
 
   .flexnav.one-page {
-    top: 0;
-    right: auto;
     max-width: 1080px;
+    right: auto;
+    top: 0;
   }
 
   .flexnav li {
-    position: relative;
-    list-style: none;
-    float: left;
-    display: block;
     background-color: #a6a6a2;
-    width: auto;
+    display: block;
+    float: left;
+    list-style: none;
     overflow: visible;
+    position: relative;
+    width: auto;
   }
 
   .flexnav li a {
-  border: none;
+    border: none;
     border-bottom: none;
   }
 
   .flexnav li > ul {
+    display: block;
+    left: 0;
     position: absolute;
     top: auto;
-    left: 0;
-    display: block;
   }
 
   .flexnav li > ul li {
@@ -282,8 +204,8 @@ height: 33px;
   }
 
   .flexnav li ul.open li {
-    overflow: visible;
     max-height: 100px;
+    overflow: visible;
   }
 
   .flexnav li ul.open ul.open {
@@ -294,89 +216,4 @@ height: 33px;
   .menu-button {
     display: none;
   }
-}
-
-.oldie body.one-page {
-  padding-top: 70px;
-}
-
-.oldie .flexnav {
-  overflow: visible;
-}
-
-.oldie .flexnav.one-page {
-  top: 0;
-  right: auto;
-  max-width: 1080px;
-}
-
-.oldie .flexnav li {
-  position: relative;
-  list-style: none;
-  float: left;
-  display: block;
-  background-color: #a6a6a2;
-  width: 20%;
-  min-height: 50px;
-}
-
-.oldie .flexnav li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-  height: auto;
-  display: block;
-  position: absolute;
-}
-
-.oldie .flexnav li:hover > ul li {
-  width: 100%;
-  float: none;
-}
-
-.oldie .flexnav li a {
-  border-left: 1px solid #acaca1;
-  border-bottom: none;
-}
-
-.oldie .flexnav li > ul {
-  position: absolute;
-  top: auto;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  height: 1px;
-  z-index: 1;
-}
-
-.oldie .flexnav li ul li ul {
-  top: 0;
-}
-
-.oldie .flexnav li ul li a {
-  border-bottom: none;
-}
-
-.oldie .flexnav li ul.open {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-}
-
-.oldie .flexnav li ul.open ul.open {
-  margin-left: 100%;
-  top: 0;
-}
-
-.oldie .flexnav ul li:hover ul {
-  margin-left: 100%;
-  top: 0;
-}
-
-.oldie .menu-button {
-  display: none;
-}
-
-.oldie.ie7 .flexnav li {
-  width: 19.9%;
 }
