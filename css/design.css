@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: 'OpenSansRegular';
+  font-style: normal;
+  font-weight: normal;
   src: url('..font/open-sans/OpenSans-Regular-webfont.eot');
   src: url('..font/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
   url('../font/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
   url('../font/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
   url('../font/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* sticky footer 
@@ -25,10 +25,10 @@ body {
 }
 
 #wrapper {
-  min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -140px;
+  min-height: 100%;
 }
 
 #footer,
@@ -67,11 +67,11 @@ img {
 }
 
 a {
-  -webkit-transition: color .2s ease-in-out;
-  -moz-transition: color .2s ease-in-out;
-  -o-transition: color .2s ease-in-out;
-  -ms-transition: color .2s ease-in-out;
   text-decoration: none;
+  -moz-transition: color .2s ease-in-out;
+  -ms-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
 
@@ -102,8 +102,8 @@ margin-top: 20px;
 
 #footer {
   background: #333;
-  position: relative;
   margin: 0 auto;
+  position: relative;
 }
 
 #logo-img {
@@ -129,7 +129,7 @@ margin-top: 20px;
 }
 
 #branding-wrapper {
-  background: #ccc
+  background: #ccc;
 }
 
 h3.branding {
@@ -176,16 +176,16 @@ span.submitted  {
 
 .geshifilter code,
 pre {
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+  color: #222;
 
   display: block;
-  padding: 0.5em;
-  margin: 0.5em;
-  border: 1px solid #CCC;
-  background-color: #F8F8F8;
-  color: #222;
-  line-height: 1.3;
-  overflow: auto;
   font-size: 0.88em;
+  line-height: 1.3;
+  margin: 0.5em;
+  overflow: auto;
+  padding: 0.5em;
   text-shadow: none;
   white-space: inherit;
 }
@@ -193,14 +193,14 @@ pre {
 /* Sidebars */
 
 aside h2 {
-  margin: 0 0 20px 0;
-  text-transform: uppercase;
-  line-height: 1.5em;
-  clear: both;
-  font-size: 140%;
   background: url(../img/diagstripe.png);
   border-left: 5px solid #F60;
+  clear: both;
+  font-size: 140%;
+  line-height: 1.5em;
+  margin: 0 0 20px 0;
   padding-left: 6px;
+  text-transform: uppercase;
 }
 
 aside .block-content  ul li {
@@ -229,12 +229,12 @@ aside .region.region-sidebar-second {
 }
 
 .node-teaser .field-type-taxonomy-term-reference {
-  margin: 0
+  margin: 0;
 }
 
 .field-type-taxonomy-term-reference span.field-label {
-  font-weight: bold;
   float: left;
+  font-weight: bold;
 }
 
 .field-type-taxonomy-term-reference ul li {
@@ -299,9 +299,9 @@ margin-left: 10px;
 
 .comment .attribution {
   display: table-cell;
+  overflow: hidden;
   padding: 0 30px 0 0;
   vertical-align: top;
-  overflow: hidden;
   width: 16%;
 }
 
@@ -329,8 +329,8 @@ margin-left: 10px;
   line-height: 1.6;
 }
 .comment .comment-arrow {
-  border-color: #fff;
   border: #fff;
+  border-color: #fff;
 }
 
 .comment .comment-arrow {
@@ -358,8 +358,8 @@ margin-left: 10px;
 }
 
 .comment ul.links {
-  padding: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 .comment ul.links li {
@@ -437,14 +437,14 @@ ul.primary li.active a {
 
 ul.primary li a:hover {
   background-color: #eee;
-  border-color: #ccc;
   border-bottom-color: #eee;
+  border-color: #ccc;
 }
 
 ul.secondary {
   border-bottom: 1px solid #bbb;
-  padding: 0.5em 1em;
   margin: 5px;
+  padding: 0.5em 1em;
 }
 
 ul.secondary li {
@@ -515,8 +515,8 @@ ul.secondary a.active {
 }
 
 .arrow.icon-fixed-width {
-  font-size: 3.7em;
   color: #fff;
+  font-size: 3.7em;
   text-align: left !important;
 }
 
@@ -526,16 +526,16 @@ ul.secondary a.active {
 }
 
 .go-arrow {
-  float: right;
-  display: block;
-  width: 42px;
   border: 1px dotted #fff;
+  display: block;
+  float: right;
   padding: 5px;
+  width: 42px;
 }
 
 .home-featured-content {
-  width: 85%;
   float: left;
+  width: 85%;
 }
 
 
