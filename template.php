@@ -1,19 +1,14 @@
 <?php
 
 /**
-* @file
-* Template.php provides theme functions & overrides
-*/
+ * @file
+ * Template.php provides theme functions & overrides
+ */
 
 /**
-* Implements hook_preprocess_html().
-*/
+ * Implements hook_preprocess_html().
+ */
 function gratis_preprocess_html(&$vars) {
-
-    // Hook into color.module.
-/*  if (module_exists('color')) {
-    _color_html_alter($vars);
-  }*/
 
   $vars['rdf'] = new stdClass;
 

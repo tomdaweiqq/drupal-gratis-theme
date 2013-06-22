@@ -2,7 +2,6 @@
 
 /* Wide layout ++ 1020 PX*/
 @media (min-width: 1020px) {
-
 }
 
 /* Desktop with 768 container */
@@ -109,20 +108,20 @@
     max-width: 460px;
   }
 
-  }
+}
 
-  a.logo {
-    position: relative;
-    top: -30px;
-  }
+a.logo {
+  position: relative;
+  top: -30px;
+}
 
-  a.logo img {
-    max-width: 84%;
-  }
+a.logo img {
+  max-width: 84%;
+}
 
-  .region-top-bar .social {
-    margin: 12px 0 0 0;
-  }
+.region-top-bar .social {
+  margin: 12px 0 0 0;
+}
 }
 
 @media (min-width: 640px) and (max-width: 979px) {

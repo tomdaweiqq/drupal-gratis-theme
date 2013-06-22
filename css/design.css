@@ -11,15 +11,15 @@
   url('../font/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
 }
 
-/* sticky footer 
-http://ryanfait.com/sticky-footer/
+/* sticky footer
+http://ryanfait.com/sticky-footer
 */
 
 * {
   margin: 0;
 }
 
-html, 
+html,
 body {
   height: 100%;
 }
@@ -51,10 +51,10 @@ h5 {
 }
 
 h1 {
-color: #666;
-font-size: 4em;
-line-height: 1.1em;
-margin: 10px 0 16px 0;
+  color: #666;
+  font-size: 4em;
+  line-height: 1.1em;
+  margin: 10px 0 16px 0;
 }
 
 p {
@@ -93,7 +93,7 @@ a.logo {
 
 #sidebar-second,
 #sidebar-first {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .sidebar .block {
@@ -256,13 +256,13 @@ span.image-block,
 }
 
 .is-node .field-type-image img {
-height: auto;
-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .not-node span.image-block {
-float: right;
-margin-left: 10px;
+  float: right;
+  margin-left: 10px;
 }
 
 /* Links */
@@ -594,15 +594,15 @@ ul.secondary a.active {
 .color-palette-turquoise #main-menu ul li a:hover, 
 .color-palette-turquoise #main-menu ul li.hover-state a, 
 .color-palette-turquoise #main-menu ul li.active-trail a {
-background: #02b4ce;
+  background: #02b4ce;
 }
 
 .color-palette-turquoise #main-menu ul li.level-2 a {
-background: #333;
+  background: #333;
 }
 
 .color-palette-turquoise #main-menu ul li.level-2 a:hover {
-background: #02b4ce;
+  background: #02b4ce;
 }
 
 /* Green */
