@@ -10,6 +10,11 @@
 */
 function gratis_preprocess_html(&$vars) {
 
+    // Hook into color.module.
+/*  if (module_exists('color')) {
+    _color_html_alter($vars);
+  }*/
+
   $vars['rdf'] = new stdClass;
 
   if (module_exists('rdf')) {
@@ -51,21 +56,10 @@ function gratis_preprocess_html(&$vars) {
       'preprocess' => FALSE));
 
 // Extra body classes for theme variables.
-// The background.
-// $file = theme_get_setting('theme_bg') . '-style';
-  $file = theme_get_setting('theme_bg');
-/* drupal_add_css(path_to_theme() . '/css/'.
-$file, array('group' => CSS_THEME, 'weight' =>
-  115,'browsers' => array(), 'preprocess' => FALSE)); */
-$vars['classes_array'][] = drupal_html_class('bg-' . $file);
 
 // The Color Palette.
 $file = theme_get_setting('theme_color_palette');
 $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
-
-// Sidebar location.
-$file = theme_get_setting('theme_sidebar_location');
-$vars['classes_array'][] = drupal_html_class($file);
 
 // Local css within theme folder if checked.
 if (theme_get_setting('gratis_localcss') == TRUE) {
@@ -104,14 +98,6 @@ drupal_add_js(path_to_theme() . '/js/scripts.js',
     'weight' => '9999',
     )
   );
-
-// Possibly using this later for a grid width body class.
-//$vars['classes_array'][] = drupal_html_class('grid-' . $gridwidth );
-
-// Use tertiary menus = true.
-if (theme_get_setting('gratis_tertiarymenu') == TRUE) {
-  $vars['classes_array'][] = drupal_html_class('tertiarymenu');
-}
 
 if (!$vars['is_front']) {
 // Add unique class for each page.
@@ -205,6 +191,11 @@ function gratis_breadcrumb($vars) {
 * Override or insert variables into the page template.
 */
 function gratis_preprocess_page(&$vars, $hook) {
+
+    // Hook into color.module.
+/*  if (module_exists('color')) {
+    _color_page_alter($vars);
+  }*/
 
 // If the default logo is used, then determine which color and set the path.
   $file = theme_get_setting('theme_color_palette');
@@ -344,12 +335,6 @@ function gratis_preprocess_node(&$vars) {
 * Implements hook_page_alter().
 */
 function gratis_page_alter($page) {
-/* add the viewport meta tag which will render as:
-* see: https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag
-* for docs
-* <meta name="viewport" content="width=device-width, initial-scale=1.0
-* maximum-scale=1, user-scalable=no" />
-*/
 
 if (theme_get_setting('gratis_viewport') == FALSE) {
 
@@ -365,12 +350,6 @@ if (theme_get_setting('gratis_viewport') == FALSE) {
   drupal_add_html_head($viewport, 'viewport');
 }
 else {
-
-/*
-* user-scalable=yes;
-* width=device-width;
-* initial-scale=0.31; maximum-scale=1.0; minimum-scale=0.25
-*/
 
 // Pinch and Zoom enabled.
 $viewport = array(

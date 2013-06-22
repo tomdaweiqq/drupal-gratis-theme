@@ -80,7 +80,7 @@ $('#main-menu li.level-1').on('mouseover', function() {
 $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
 $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
-$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar ul li').prepend('<i class="icon-fixed-width">&#xf054;</i>');
+$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-fixed-width">&#xf054;</i>');
 
 
 

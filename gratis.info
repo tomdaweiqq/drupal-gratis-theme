@@ -45,10 +45,6 @@ features[] = main_menu
 
 settings[gratis_themelogo]  = 1
 settings[breadcrumbs]  = 1
-settings[theme_sidebar_location]  = sidebar_right
 settings[gratis_viewport]  = 0
-settings[header_font_style]  = sans_serif
-settings[body_font_style]  = sans_serif
-settings[theme_color_palette]  = green_gratis
-settings[theme_bg]  = dark_linen
+settings[theme_color_palette]  = 
 settings[gratis_tertiarymenu]  = 0

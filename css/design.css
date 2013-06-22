@@ -481,7 +481,7 @@ ul.secondary a.active {
 
 #main-menu ul li .ula-depth-1 {
   background: #000;
-  padding: 2em 2.1em 2em .3em;
+  padding: 2em 3.1em 2em .5em;
 }
 
 #main-menu ul li.li-depth-0:not(.item-with-ul) a {
