@@ -34,6 +34,7 @@ body {
 #footer,
 .push-sticky {
   height: 140px;
+  padding-bottom: 14px;
 }
 
 /* End sticky footer. */
@@ -89,6 +90,10 @@ a.logo {
   padding-left: 10px;
 }
 
+ol li {
+  margin-left: 30px;
+}
+
 /* Regions */
 
 #sidebar-second,
@@ -107,11 +112,12 @@ a.logo {
 }
 
 #logo-img {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 #top-bar {
   background: #000;
+  height: 58px;
 }
 
 #breadcrumbs {
@@ -468,11 +474,11 @@ ul.secondary a.active {
 
 #main-menu ul li .ula-depth-1 {
   background: #000;
-  padding: 2em 3.1em 2em .5em;
+  padding: 1.5em 3em 1.5em .5em;
 }
 
 #main-menu ul li.li-depth-0:not(.item-with-ul) a {
-  padding: 2em .5em;
+  padding: 1.5em .5em;
 }
 
 #main-menu ul li a {
@@ -591,7 +597,11 @@ ul.secondary a.active {
 .color-palette-turquoise #main-menu ul li a.active,
 .color-palette-turquoise #main-menu ul li a:hover, 
 .color-palette-turquoise #main-menu ul li.hover-state a,
-.color-palette-turquoise #main-menu ul li.active-trail a {
+.color-palette-turquoise #main-menu ul li.active-trail a,
+.color-palette-turquoise  input[type=submit],
+.color-palette-turquoise button,
+.color-palette-turquoise input[type=reset],
+.color-palette-turquoise .menu-button {
   background: #02b4ce;
 }
 
@@ -601,6 +611,10 @@ ul.secondary a.active {
 
 .color-palette-turquoise #main-menu ul li.level-2 a:hover {
   background: #02b4ce;
+}
+
+.color-palette-turquoise input[type=submit]:hover {
+  background: #009bb2;
 }
 
 /* Green */
