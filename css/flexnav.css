@@ -99,16 +99,16 @@ html {
 }
 
 .flexnav .touch-button .navicon {
-  color: #FFF;
+  color: #fff;
   font-size: 12px;
   position: relative;
   top: 1.7em;
 }
 
 .menu-button {
-  background: #E04604;
+  background: #e04604;
   border: none;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   display: block;
   float: right;

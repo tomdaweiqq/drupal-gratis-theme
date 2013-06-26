@@ -300,7 +300,7 @@ span.image-block,
   padding: 4px 4px 4px 3px;
 }
 
-.node-teaser ul.links.inline  {
+.node-teaser ul.links.inline {
   margin-bottom: 10px;
 }
 
@@ -413,7 +413,7 @@ p.comment-time {
 }
 
 #comments h3 a {
-  color: #0EB5C8;
+  color: #0eb5c8;
 }
 
 #edit-submit {
@@ -488,13 +488,13 @@ ul.secondary a.active {
   border-bottom: 4px solid #999;
 }
 
-ul.inline li, 
+ul.inline li,
 ul.links.inline li {
-display: inline;
-padding-left: 0;
+  display: inline;
+  padding-left: 0;
 }
 
-#main-menu  {
+#main-menu {
   float: right;
   position: relative;
   z-index: 5000;
@@ -517,7 +517,7 @@ padding-left: 0;
 #main-menu ul li a:hover,
 #main-menu ul li.hover-state a,
 #main-menu ul li.active-trail a {
-  background: #E04604;
+  background: #e04604;
 }
 
 #main-menu ul li.level-2 a {
@@ -525,7 +525,7 @@ padding-left: 0;
 }
 
 #main-menu ul li.level-2 a:hover {
-  background: #E04604;
+  background: #e04604;
 }
 
 .touch-button:hover {
@@ -571,7 +571,7 @@ padding-left: 0;
   width: 85%;
 }
 
-/* Colors */ 
+/* Colors */
 
 /* Orange */
 
@@ -580,7 +580,7 @@ padding-left: 0;
 }
 
 .color-palette-orange a,
-.color-palette-orange a.active, 
+.color-palette-orange a.active,
 .color-palette-orange li a.active,
 .color-palette-orange #comments h3 a {
   color: #e04604;
@@ -592,7 +592,7 @@ padding-left: 0;
 
 .color-palette-orange #main-menu ul li a.active,
 .color-palette-orange #main-menu ul li a:hover,
-.color-palette-orange #main-menu ul li.hover-state a, 
+.color-palette-orange #main-menu ul li.hover-state a,
 .color-palette-orange #main-menu ul li.active-trail a {
   background: #e04604;
 }
@@ -623,7 +623,7 @@ padding-left: 0;
 }
 
 .color-palette-turquoise #main-menu ul li a.active,
-.color-palette-turquoise #main-menu ul li a:hover, 
+.color-palette-turquoise #main-menu ul li a:hover,
 .color-palette-turquoise #main-menu ul li.hover-state a,
 .color-palette-turquoise #main-menu ul li.active-trail a,
 .color-palette-turquoise  input[type=submit],

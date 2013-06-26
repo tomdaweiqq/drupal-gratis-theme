@@ -39,7 +39,7 @@ if (module_exists('rdf')) {
     $vars['rdf']->profile = '';
   }
 
-  // Only add theme modernizr if the drupal contrib module is not enabled. 
+  // Only add theme modernizr if the drupal contrib module is not enabled.
   if (!module_exists('modernizr')) {
     drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/modernizr.js', 'file');
   }
@@ -318,9 +318,6 @@ function gratis_preprocess_node(&$vars, $hook) {
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
-
-
- 
 
 }
 

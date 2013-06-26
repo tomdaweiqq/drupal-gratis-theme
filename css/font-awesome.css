@@ -337,7 +337,7 @@ ul.icons-ul > li .icon-li {
 }
 /* Icon rotations and mirroring */
 .icon-rotate-90:before {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
@@ -345,7 +345,7 @@ ul.icons-ul > li .icon-li {
   transform: rotate(90deg);
 }
 .icon-rotate-180:before {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -353,7 +353,7 @@ ul.icons-ul > li .icon-li {
   transform: rotate(180deg);
 }
 .icon-rotate-270:before {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  filter: "progid: DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
