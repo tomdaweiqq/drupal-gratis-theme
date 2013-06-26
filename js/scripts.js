@@ -45,18 +45,6 @@ $(".flexnav").flexNav();
   $("#post-content article:last").addClass("last");
   $("#post-content article:first").addClass("first");
 
-// Set image captions for the image field.
-  $(".field-type-image img").each(function (i, ele) {
-    var alt = this.alt;
-      if ($("img-caption").length == 0) {
-        $(this).closest(".field-type-image .field-item").append("<span " +
-          "class='img-caption'>" + this.alt + "</span>");
-        }
-        else {
-          $(this).closest(".field-type-image .field-item").append("");
-        }
-  });
-
 // Add a wrapper around the image field.
   $('.field-type-image li') .each(function () {
     $(this).wrapInner('<span class="image-block">');

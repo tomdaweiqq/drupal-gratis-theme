@@ -55,7 +55,7 @@ h1 {
   color: #666;
   font-size: 4em;
   line-height: 1.1em;
-  margin: 10px 0 16px 0;
+  margin: 10px 0;
 }
 
 p {
@@ -118,6 +118,25 @@ ol li {
 #top-bar {
   background: #000;
   height: 58px;
+}
+
+ .ie10 #top-bar {
+  height: 59px;
+}
+
+.submit-wrapper {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.node-teaser .field-type-image {
+  float: right;
+  margin-left: 14px;
+}
+
+figcaption {
+  color: #787878;
+  font-style: italic;
 }
 
 #breadcrumbs {
@@ -225,12 +244,11 @@ aside .region.region-sidebar-second {
   margin-left: -17px;
 }
 
-
 /* Fields */
 
 .field-type-taxonomy-term-reference {
   display: block;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 }
 
 .node-teaser .field-type-taxonomy-term-reference {
@@ -252,7 +270,7 @@ aside .region.region-sidebar-second {
 }
 
 .icon-fixed-width {
-  color: #666;
+  color: #898989;
 }
 
 span.image-block,
@@ -398,6 +416,10 @@ p.comment-time {
   color: #0EB5C8;
 }
 
+#edit-submit {
+  margin-right: 10px;
+}
+
 .field-group-format-toggler {
   cursor: pointer;
 }
@@ -464,6 +486,12 @@ ul.secondary a {
 }
 ul.secondary a.active {
   border-bottom: 4px solid #999;
+}
+
+ul.inline li, 
+ul.links.inline li {
+display: inline;
+padding-left: 0;
 }
 
 #main-menu  {

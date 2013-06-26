@@ -10,11 +10,25 @@
  */
 function gratis_preprocess_html(&$vars) {
 
-  $vars['rdf'] = new stdClass;
+// Add an ie10 class if needed.
 
-  if (module_exists('rdf')) {
-    $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
-    $vars['rdf']->version = ' version="HTML+RDFa 1.1"';
+  $inline_script = <<<EOL
+  <script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
+    document.documentElement.className+=' ie10';
+  }</script>
+EOL;
+$element = array(
+  '#type' => 'markup',
+  '#markup' => $inline_script,
+  );
+
+drupal_add_html_head($element, 'javascript');
+
+$vars['rdf'] = new stdClass;
+
+if (module_exists('rdf')) {
+  $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
+  $vars['rdf']->version = ' version="HTML+RDFa 1.1"';
     $vars['rdf']->namespaces = $vars['rdf_namespaces'];
     $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
   }
@@ -25,20 +39,15 @@ function gratis_preprocess_html(&$vars) {
     $vars['rdf']->profile = '';
   }
 
+  // Only add theme modernizr if the drupal contrib module is not enabled. 
+  if (!module_exists('modernizr')) {
+    drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/modernizr.js', 'file');
+  }
+
   // Add a body class is the site name is hidden.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
   }
-
-  // Add IE 8 fixes style sheet.
-  drupal_add_css(path_to_theme() . '/css/ie8-fixes.css',
-    array(
-      'group' => CSS_THEME,
-      'browsers' =>
-      array(
-        'IE' => 'lte IE 8',
-        '!IE' => FALSE),
-      'preprocess' => FALSE));
 
   // Add IE 9 fixes style sheet.
   drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
@@ -46,7 +55,7 @@ function gratis_preprocess_html(&$vars) {
       'group' => CSS_THEME,
       'browsers' =>
       array(
-        'IE' => 'IE 9',
+        'IE' => 'iE 9',
         '!IE' => FALSE),
       'preprocess' => FALSE));
 
@@ -120,6 +129,8 @@ else {
 }
 
 }
+
+
 
 /**
 * Custom functions for the theme
@@ -261,34 +272,18 @@ function gratis_menu_tree__primary(&$vars) {
   return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
 
-
-/**
-* Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
-*/
-function gratis_menu_local_tasks(&$vars) {
-  $output = '';
-
-  if (!empty($vars['primary'])) {
-    $vars['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $vars['primary']['#prefix'] .= '<ul class="tabs primary clearfix">';
-    $vars['primary']['#suffix'] = '</ul>';
-    $output .= drupal_render($vars['primary']);
-  }
-  if (!empty($vars['secondary'])) {
-    $vars['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $vars['secondary']['#prefix'] .= '<ul class="tabs secondary clearfix">';
-    $vars['secondary']['#suffix'] = '</ul>';
-    $output .= drupal_render($vars['secondary']);
-  }
-  return $output;
-}
-
 /**
 * Override or insert variables into the node template.
 */
-function gratis_preprocess_node(&$vars) {
+function gratis_preprocess_node(&$vars, $hook) {
 // Global node.
   $node = $vars['node'];
+
+/* $field_image_items = field_get_items('node', $node, 'field_image');
+  // Load individual data from 'field_image'.
+    $vars['alt_caption'] = $field_image_items[0]['alt'];*/
+
+
   if ($vars['view_mode'] == 'full' && node_is_page($node)) {
     $vars['classes_array'][] = 'node-full';
   }
@@ -323,6 +318,9 @@ function gratis_preprocess_node(&$vars) {
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
+
+
+ 
 
 }
 
@@ -504,94 +502,3 @@ function gratis_preprocess_comment(&$vars){
   $vars['changed'] = date('m / j / y', $vars['elements']['#node']->created);
 }
 
-/**
- * Overrides theme_field()
- * Remove the hard coded classes so we can add them in preprocess functions.
- */
- 
-function gratis_field($vars) {
-
-  $output = '';
- 
-  // Render the label, if it's not hidden.
-  if (!$vars['label_hidden']) {
-    $output .= '<span ' . $vars['title_attributes'] . '>' . $vars['label'] . ':&nbsp;</span>';
-  }
- 
-  // Render the items.
-  //$output .= '<div' . $vars['content_attributes'] . '>';
-  foreach ($vars['items'] as $delta => $item) {
-    $output .= '<span ' . $vars['item_attributes'][$delta] . '>' . drupal_render($item) . '</span>';
-  }
-  //$output .= '</div>';
- 
-  // Render the top-level DIV.
-  $output = '<div class="' . $vars['classes'] . '"' . $vars['attributes'] . '>' . $output . '</div>';
- 
-  return $output;
-}
-
-/**
- * Implements hook_preprocess_field()
- */
- 
-function gratis_preprocess_field(&$vars) {
-  /* Set shortcut variables. Hooray for less typing! */
-  $name = $vars['element']['#field_name'];
-  $bundle = $vars['element']['#bundle'];
-  $mode = $vars['element']['#view_mode'];
-  $classes = &$vars['classes_array'];
-  $title_classes = &$vars['title_attributes_array']['class'];
-  $content_classes = &$vars['content_attributes_array']['class'];
-  $item_classes = array();
- 
-  /* Global field classes */
-  $classes[] = 'field-wrapper';
-  $title_classes[] = 'field-label';
-  $content_classes[] = 'field-items';
-  $item_classes[] = 'field-item';
- 
-  /* Uncomment the lines below to see variables you can use to target a field */
-  // print '<strong>Name:</strong> ' . $name . '<br/>';
-  // print '<strong>Bundle:</strong> ' . $bundle  . '<br/>';
-  // print '<strong>Mode:</strong> ' . $mode .'<br/>';
- 
-  /* Add specific classes to targeted fields */
-  switch ($mode) {
-    /* All teasers */
-    case 'teaser':
-      switch ($name) {
-        /* Teaser read more links */
-        case 'node_link':
-          $item_classes[] = 'more-link';
-          break;
-        /* Teaser descriptions */
-        case 'body':
-        case 'field_description':
-          $item_classes[] = 'description';
-          break;
-      }
-      break;
-  }
- 
-  switch ($name) {
-    case 'field_authors':
-      $title_classes[] = 'inline';
-      $content_classes[] = 'authors';
-      $item_classes[] = 'author';
-      break;
-  }
- 
-  // Apply odd or even classes along with our custom classes to each item.
-  $item_classes_count = count($item_classes);
-  $item_classes[$item_classes_count] = 'odd';
-  foreach ($vars['items'] as $delta => $item) {
-    $item_classes[$item_classes_count] = $delta % 2 ? 'even' : 'odd';
-    if ($delta == 0) {
-      $item_classes[] = 'first';
-    }
-    if($delta == count($vars['items']) -1){
-      $item_classes[] = 'last';
-    }
-    $vars['item_attributes_array'][$delta]['class'] = $item_classes;
-  }}

@@ -95,12 +95,12 @@
 <?php print render($title_suffix); ?>
 
 <?php if ($display_submitted): ?>
-  <section class="submit-wrapper">
+  <span class="submit-wrapper">
     <!-- Overidden in template.php to show just username. -->
     <span class="submitted">
       <i class="icon-fixed-width">&#xf007;</i> <?php print $submitted; ?> |  <i class="icon-fixed-width">&#xf073;</i> <?php echo date("j", $node->created); ?> / <?php echo date("M", $node->created); ?> / <?php echo date("Y", $node->created); ?>
     </span>
-  </section><!--//submit-wrapper-->
+  </span><!--//submit-wrapper-->
 <?php endif; ?>
 
 <?php if (!$teaser) : ?>
