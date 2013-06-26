@@ -27,7 +27,7 @@ consult Drupal core documentation.
 
 -- THEME SETTINGS UI --
 
-- Choice of four color palettes
+- Choice of several color palettes
 
 - Toggle Breadcrumbs on or off
 
@@ -42,8 +42,8 @@ like this.
 - Custom Path CSS Define a custom path for your own css file to use with
 the theme.
 
-- Tertiary Menus There is no support for Tertiary Menus, only secondary
-sub-navs.
+- Tertiary Menus -  There is no support for Tertiary Menus, only secondary
+sub-navs. 
 
 - Main Menu block region Use this region if you turn off "Main Menu in the
 theme settings and use your own third party menu system such as Menu Block
@@ -61,17 +61,17 @@ enable this option.
 
 -- ADDITIONAL FEATURES --
 
-- JQuery Image captions on default imagefield in Article content type
+- HTML5 Image captions on default imagefield, may work for others.
 
 - Responsive for phone, tablet, and desktop using media queries
 
-- Mobile friendly menu
+- Mobile, touch friendly menu
 
 - Drop down menus (for desktop)
 
 -- REQUIREMENTS --
 
-No base theme needed, simply use this theme on its own.
+No base theme needed, simply use this theme on its own. 
 
 -- INSTALLATION --
 
@@ -91,7 +91,9 @@ or custom path CSS file as per the documentation. When upgrading, you must
 preserve local.css somewhere, otherwise it could get overwritten with the
 upgrade. After you upgrade, you can then drop local.css back in to the
 theme. Of course if you have modified other files, they will all get
-overwritten. In many cases, a subtheme is probably recommended then as
+overwritten. 
+
+- In many cases, a subtheme is probably recommended then as
 opposed to using local.css. You can create a sub-theme of your own to put
 all your overrides in: "Creating a sub-theme" -
 http://drupal.org/node/225125 A future version of this theme may allow for
@@ -99,16 +101,15 @@ a custom path for local.css to avoid upgrade snags.
 
 -- NOTES --
 
-- This theme supports CSS3 features. - There is no support for IE8 and
-below though there is an IE8 stylesheet in the theme and some defaults are
-provided that it should work ok but essentially you are on your own when it
-comes to IE8 and below support.
+This theme supports CSS3 / HTML5 and media queries. 
+There is no support for IE8 and below so please do not file any issues in 
+regard to this. 
 
 If you require specific customizations that you are not able to do on your
 own, I can offer paid support. Please email me: contact@highrockmedia.com
 or through my website's contact form. http://highrockmedia.com/contact-us
 
-Buy me a Latte - Help support Gratis and the Gratis slideshow.
+Buy me a Latte - Help support Gratis but it's not a requirement.
 http://highrockmedia.com/buy-me-latte
 
 ------------------------ Danny Englander Drupal Themer and Photographer
