@@ -12,7 +12,6 @@
  * Implements hook_form_FORM_ID_alter().
  */
 function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
-  
 
   $form['gratis_settings'] = array(
     '#type' => 'fieldset',
