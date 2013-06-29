@@ -326,27 +326,27 @@ drupal_add_html_head($viewport, 'viewport');
 function _gratis_content_grid($columns = 1) {
 
   $class = FALSE;
-  switch($columns) {
+  switch($columns) {;
 
   // No sidebars, just content.
     case 1:
-    $class = 'grid-100';
-    break;
+      $class = 'grid-100';
+      break;
 
     // Sidebar second (right)  and content.
     case 2:
-    $class = 'grid-80';
-    break;
+      $class = 'grid-80';
+      break;
 
     // Sidebar first (left) and content.
     case 3:
-    $class = 'grid-80 push-20';
-    break;
+      $class = 'grid-80 push-20';
+      break;
 
     // Both sidebars and content.
     case 4:
-    $class = 'grid-60 push-20';
-    break;
+      $class = 'grid-60 push-20';
+      break;
 
   }
 
@@ -361,15 +361,16 @@ function _gratis_content_sidebar_grid($columns = 4) {
   $class = FALSE;
 
   switch($columns) {
+
   // No sidebars.
     case 4:
-    $class = 'grid-20 pull-60';
-    break;
+      $class = 'grid-20 pull-60';
+      break;
 
     // Sidebar second (right).
     case 3:
-    $class = 'grid-20 pull-80';
-    break;
+      $class = 'grid-20 pull-80';
+      break;
 
     }
 
@@ -384,16 +385,16 @@ function _gratis_content_postscript($pscolumns = 1) {
 
   switch($pscolumns) {
     case 1:
-    $class = 'grid-100 postscript';
-    break;
+      $class = 'grid-100 postscript';
+      break;
 
     case 2:
-    $class = 'grid-50 postscript';
-    break;
+      $class = 'grid-50 postscript';
+      break;
 
     case 3:
-    $class = 'grid-33 postscript';
-    break;
+      $class = 'grid-33 postscript';
+      break;
   }
 
   return $class;
