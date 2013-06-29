@@ -326,27 +326,31 @@ drupal_add_html_head($viewport, 'viewport');
 function _gratis_content_grid($columns = 1) {
 
   $class = FALSE;
-  switch($columns) {;
+  switch($columns) {
 
   // No sidebars, just content.
-    case 1:
+    case 1: {
       $class = 'grid-100';
       break;
+    }
 
     // Sidebar second (right)  and content.
-    case 2:
+    case 2: {
       $class = 'grid-80';
       break;
+    }
 
     // Sidebar first (left) and content.
-    case 3:
+    case 3: {
       $class = 'grid-80 push-20';
       break;
+    }
 
     // Both sidebars and content.
-    case 4:
+    case 4: {
       $class = 'grid-60 push-20';
       break;
+    }
 
   }
 
