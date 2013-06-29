@@ -27,7 +27,8 @@
  * - $title: Linked title.
  * - $classes: String of classes that can be used to style contextually through
  *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values can be one or more of the following:
+ *   preprocess functions. The default values can be one or more of the 
+ *   following:
  *   - comment: The current template type, i.e., "theming hook".
  *   - comment-by-anonymous: Comment by an unregistered user.
  *   - comment-by-node-author: Comment by the author of the parent node.

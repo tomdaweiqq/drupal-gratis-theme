@@ -1,6 +1,6 @@
-@media screen and (max-width: 1019px) { 
+@media screen and (max-width: 1019px) {
   .grid-container {
-    max-width: 768px
+    max-width: 768px;
   }
 }
 
@@ -23,7 +23,7 @@
   input[type="search"],
   input[type="tel"],
   input[type="color"] {
-    width: 80%
+    width: 80%;
   }
 
   #main-menu {
@@ -34,7 +34,7 @@
   }
 
   #main-menu ul li.li-depth-0:not(.item-with-ul) a {
-    padding: 1em
+    padding: 1em;
   }
 
   #main-menu ul li .ula-depth-1 {
@@ -43,11 +43,11 @@
   }
 
   .flexnav .touch-button .navicon {
-    top: 1.4em
+    top: 1.4em;
   }
 
   .flexnav .touch-button {
-    height: 51px
+    height: 51px;
   }
 
   .grid-container {
@@ -55,11 +55,11 @@
   }
 
   .comment {
-    display: block
+    display: block;
   }
 
   .comment .attribution {
-    display: block
+    display: block;
   }
 
   .comment .comment-text {
@@ -79,7 +79,7 @@
   }
 
   #comments .indented {
-    margin-left: 36px
+    margin-left: 36px;
   }
 
   p.lead {
@@ -90,15 +90,15 @@
   /* blog tags  */
 
   .not-front span.submitted {
-    border: none
+    border: none;
   }
 
   .not-front span.submitted {
-    height: 40px
+    height: 40px;
   }
 
   ul.field-items.tags-list {
-    margin: 10px 0 0 0
+    margin: 10px 0 0 0;
   }
 
   .blog-category {
@@ -107,13 +107,13 @@
   }
 
   .field-items.tags-list {
-    float: left
+    float: left;
   }
 }
 
 @media (max-width: 480px) { 
   .grid-container {
-    max-width: 460px
+    max-width: 460px;
   }
 }
 
@@ -123,9 +123,9 @@ a.logo {
 }
 
 a.logo img {
-  max-width: 84%
+  max-width: 84%;
 }
 
 .region-top-bar .social {
-  margin: 12px 0 0 0
+  margin: 12px 0 0 0;
 }

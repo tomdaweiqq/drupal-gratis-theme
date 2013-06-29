@@ -2,11 +2,11 @@
 
 /**
  * @file
- * Template.php provides theme functions & overrides
+  * Template.php provides theme functions & overrides
  */
 
 /**
- * Implements hook_preprocess_html().
+  * Implements hook_preprocess_html().
  */
 function gratis_preprocess_html(&$vars) {
 
@@ -125,11 +125,11 @@ else {
 }
 
 /**
-* Custom functions for the theme
+ * Custom functions for the theme
 */
 
 /**
-* Implements hook_html_head_alter().
+ * Implements hook_html_head_alter().
 */
 function gratis_html_head_alter(&$head_elements) {
 // Overwrite default meta character tag with HTML5 version.
@@ -139,13 +139,13 @@ function gratis_html_head_alter(&$head_elements) {
 }
 
 /**
-* Preprocesses variables for theme_username().
-*
-* Modules that make any changes to variables like 'name' or 'extra' must insure
-* that the final string is safe to include directly in the output by using
-* check_plain() or filter_xss().
-*
-* @see template_process_username()
+ * Preprocesses variables for theme_username().
+ *
+ * Modules that make any changes to variables like 'name' or 'extra' must insure
+ * that the final string is safe to include directly in the output by using
+ * check_plain() or filter_xss().
+ *
+ * @see template_process_username()
 */
 function gratis_preprocess_username(&$vars) {
 // Update the username so it's the full name of the user.
@@ -249,14 +249,14 @@ function gratis_preprocess_page(&$vars, $hook) {
   }
 
 /**
-* Theme wrapper function for the primary menu links
+ * Theme wrapper function for the primary menu links
 */
 function gratis_menu_tree__primary(&$vars) {
   return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
 
 /**
-* Override or insert variables into the node template.
+ * Override or insert variables into the node template.
 */
 function gratis_preprocess_node(&$vars, $hook) {
 // Global node.
@@ -286,7 +286,7 @@ function gratis_preprocess_node(&$vars, $hook) {
 }
 
 /**
-* Implements hook_page_alter().
+ * Implements hook_page_alter().
 */
 function gratis_page_alter($page) {
 
@@ -431,21 +431,21 @@ function gratis_css_alter(&$css) {
 }
 
 /**
-* Add unique class (mlid) to all menu items.
-* Add menu levels.
-* Menu title as class in lowercase.
-* https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
-*/
+ * Add unique class (mlid) to all menu items.
+ * Add menu levels.
+ * Menu title as class in lowercase.
+ * https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
+ */
 function gratis_menu_link(array $vars) {
   $element = $vars['element'];
   $sub_menu = '';
   $name_id = strtolower(strip_tags($element['#title']));
   // remove colons and anything past colons.
   if (strpos($name_id, ':')) $name_id = substr ($name_id, 0, strpos($name_id, ':'));
-  //Preserve alphanumerics, everything else goes away.
+  // Preserve alphanumerics, everything else goes away.
   $pattern = '/[^a-z]+/ ';
   $name_id = preg_replace($pattern, '', $name_id);
-  $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' '. $name_id;
+  $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $name_id;
   // Add levels.
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
 
