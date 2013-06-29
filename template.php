@@ -29,62 +29,62 @@ $vars['rdf'] = new stdClass;
 if (module_exists('rdf')) {
   $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
   $vars['rdf']->version = ' version="HTML+RDFa 1.1"';
-    $vars['rdf']->namespaces = $vars['rdf_namespaces'];
-    $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
-  }
-  else {
-    $vars['doctype'] = '<!DOCTYPE html>' . "\n";
-    $vars['rdf']->version = '';
-    $vars['rdf']->namespaces = '';
-    $vars['rdf']->profile = '';
-  }
+  $vars['rdf']->namespaces = $vars['rdf_namespaces'];
+  $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
+}
+else {
+  $vars['doctype'] = '<!DOCTYPE html>' . "\n";
+  $vars['rdf']->version = '';
+  $vars['rdf']->namespaces = '';
+  $vars['rdf']->profile = '';
+}
 
-  // Add a body class is the site name is hidden.
-  if (theme_get_setting('toggle_name') == FALSE) {
-    $vars['classes_array'][] = 'site-name-hidden';
-  }
+// Add a body class is the site name is hidden.
+if (theme_get_setting('toggle_name') == FALSE) {
+  $vars['classes_array'][] = 'site-name-hidden';
+}
 
-  // Add IE 9 fixes style sheet.
-  drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
+// Add IE 9 fixes style sheet.
+drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
+  array(
+    'group' => CSS_THEME,
+    'browsers' =>
+    array(
+      'IE' => 'iE 9',
+      '!IE' => FALSE),
+    'preprocess' => FALSE));
+
+    // Extra body classes for theme variables.
+
+    // The Color Palette.
+$file = theme_get_setting('theme_color_palette');
+$vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
+
+// Local css within theme folder if checked.
+if (theme_get_setting('gratis_localcss') == TRUE) {
+  drupal_add_css(path_to_theme() . '/css/local.css',
     array(
       'group' => CSS_THEME,
-      'browsers' =>
-      array(
-        'IE' => 'iE 9',
-        '!IE' => FALSE),
-      'preprocess' => FALSE));
+      'media' => 'screen',
+      'preprocess' => TRUE,
+      'weight' => '9998',
+      )
+    );
+}
 
-  // Extra body classes for theme variables.
-
-  // The Color Palette.
-  $file = theme_get_setting('theme_color_palette');
-  $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
-
-  // Local css within theme folder if checked.
-  if (theme_get_setting('gratis_localcss') == TRUE) {
-    drupal_add_css(path_to_theme() . '/css/local.css',
+// Custom css file path if checked and file exists.
+if (theme_get_setting('gratis_custom_css_location') == TRUE) {
+  $path =  theme_get_setting('gratis_custom_css_path');
+  if (file_exists($path)) {
+    drupal_add_css("$path",
       array(
         'group' => CSS_THEME,
-        'media' => 'screen',
         'preprocess' => TRUE,
-        'weight' => '9998',
+        'weight' => 9999
         )
       );
   }
-
-// Custom css file path if checked and file exists.
-  if (theme_get_setting('gratis_custom_css_location') == TRUE) {
-    $path =  theme_get_setting('gratis_custom_css_path');
-    if (file_exists($path)) {
-      drupal_add_css("$path",
-        array(
-          'group' => CSS_THEME,
-          'preprocess' => TRUE,
-          'weight' => 9999
-          )
-        );
-    }
-  }
+}
 
 // Add FlexNav.
 drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/jquery.flexnav.js', 'file');
@@ -101,7 +101,7 @@ drupal_add_js(path_to_theme() . '/js/scripts.js',
 if (!$vars['is_front']) {
 // Add unique class for each page.
   $path = drupal_get_path_alias($_GET['q']);
-// Add unique class for each website section.
+  // Add unique class for each website section.
   list($section,) = explode('/', $path, 2);
   $arg = explode('/', $_GET['q']);
   if ($arg[0] == 'node' && isset($arg[1])) {
@@ -122,10 +122,7 @@ if ($node = menu_get_object()) {
 else {
   $vars['classes_array'][] = 'not-node';
 }
-
 }
-
-
 
 /**
 * Custom functions for the theme
@@ -151,19 +148,18 @@ function gratis_html_head_alter(&$head_elements) {
 * @see template_process_username()
 */
 function gratis_preprocess_username(&$vars) {
-
 // Update the username so it's the full name of the user.
   $account = $vars['account'];
 
-// Revise the name trimming done in template_preprocess_username.
+  // Revise the name trimming done in template_preprocess_username.
   $name = $vars['name_raw'] = format_username($account);
 
-// Trim the altered name as core does, but with a higher character limit.
+  // Trim the altered name as core does, but with a higher character limit.
   if (drupal_strlen($name) > 35) {
     $name = drupal_substr($name, 0, 18) . '...';
   }
 
-// Assign the altered name to $vars['name'].
+  // Assign the altered name to $vars['name'].
   $vars['name'] = check_plain($name);
 
 }
@@ -172,15 +168,14 @@ function gratis_preprocess_username(&$vars) {
 * Insert themed breadcrumb page navigation at top of the node content.
 */
 function gratis_breadcrumb($vars) {
-
 // Show breadcrumbs if checked.
   if (theme_get_setting('breadcrumb') == 1) {
-// Theme the breadcrumbs.
+  // Theme the breadcrumbs.
     $breadcrumb = $vars['breadcrumb'];
     if (!empty($breadcrumb)) {
-// Use CSS to hide titile .element-invisible.
+    // Use CSS to hide titile .element-invisible.
       $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-// Comment below line to hide current page to breadcrumb.
+      // Comment below line to hide current page to breadcrumb.
       $breadcrumb[] = drupal_get_title();
       $output .= '<nav class="breadcrumb">' . implode(' » ', $breadcrumb) . '</nav>';
       return $output;
@@ -192,31 +187,25 @@ function gratis_breadcrumb($vars) {
 * Override or insert variables into the page template.
 */
 function gratis_preprocess_page(&$vars, $hook) {
-
-    // Hook into color.module.
-/*  if (module_exists('color')) {
-    _color_page_alter($vars);
-  }*/
-
 // If the default logo is used, then determine which color and set the path.
   $file = theme_get_setting('theme_color_palette');
   if (theme_get_setting('gratis_themelogo') == TRUE) {
     $vars['logo'] = base_path() . path_to_theme() . '/images/' . $file . '-logo.png';
   }
 
-// Check if it's a node and set a variable.
+  // Check if it's a node and set a variable.
   $vars['is_node'] = false;
   if ($node = menu_get_object()) {
     $vars['is_node'] = true;
   }
 
-// Set the custom grid width in a variable.
+  // Set the custom grid width in a variable.
   $gridwidth =  theme_get_setting('gratis_grid_container_width');
   $vars['thegrid'] = $gridwidth;
 
-// Add information about the number of sidebars.
+  // Add information about the number of sidebars.
 
-// Both sidebars.
+  // Both sidebars.
   if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
     $vars['columns'] = 4;
   }
@@ -232,7 +221,6 @@ function gratis_preprocess_page(&$vars, $hook) {
 
 
 // Postscript columns ('$pscolumns').
-
   if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
     $vars['pscolumns'] = 3;
   }
@@ -258,7 +246,7 @@ function gratis_preprocess_page(&$vars, $hook) {
       $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
     }
 
-}
+  }
 
 /**
 * Theme wrapper function for the primary menu links
@@ -282,16 +270,16 @@ function gratis_preprocess_node(&$vars, $hook) {
     $vars['classes_array'][] = 'node-teaser';
   }
 
-// Some nice expanded classes for Nodes.
+  // Some nice expanded classes for Nodes.
   $vars['attributes_array']['role'][] = 'article';
   $vars['title_attributes_array']['class'][] = 'article-title';
   $vars['content_attributes_array']['class'][] = 'article-content';
 
-// Show only the username in submitted, the date is handled by node.tpl.php.
+  // Show only the username in submitted, the date is handled by node.tpl.php.
   $vars['submitted'] = t('Submitted by !username',
     array('!username' => $vars['name']));
 
-// Set date variables using drupal's format_date function
+    // Set date variables using drupal's format_date function
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
@@ -302,20 +290,21 @@ function gratis_preprocess_node(&$vars, $hook) {
 */
 function gratis_page_alter($page) {
 
-if (theme_get_setting('gratis_viewport') == FALSE) {
+  if (theme_get_setting('gratis_viewport') == FALSE) {
 
-// No pinch and zoom
-  $viewport = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'name' => 'viewport',
-      'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
-      ),
-    );
-  drupal_add_html_head($viewport, 'viewport');
-}
-else {
+  // No pinch and zoom.
+    $viewport = array(
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+        ),
+      );
+    drupal_add_html_head($viewport, 'viewport');
+  }
+
+  else {
 
 // Pinch and Zoom enabled.
 $viewport = array(
@@ -335,25 +324,26 @@ drupal_add_html_head($viewport, 'viewport');
 * Custom function, returns the correct grid class for the main content region.
 */
 function _gratis_content_grid($columns = 1) {
-  $class = FALSE;
 
+  $class = FALSE;
   switch($columns) {
-// No sidebars, just content.
+
+  // No sidebars, just content.
     case 1:
     $class = 'grid-100';
     break;
 
-// Sidebar second (right)  and content.
+    // Sidebar second (right)  and content.
     case 2:
     $class = 'grid-80';
     break;
 
-// Sidebar first (left) and content.
+    // Sidebar first (left) and content.
     case 3:
     $class = 'grid-80 push-20';
     break;
 
-// Both sidebars and content.
+    // Both sidebars and content.
     case 4:
     $class = 'grid-60 push-20';
     break;
@@ -367,20 +357,21 @@ function _gratis_content_grid($columns = 1) {
 * Custom function, returns the correct grid class for the sidebars.
 */
 function _gratis_content_sidebar_grid($columns = 4) {
+
   $class = FALSE;
 
   switch($columns) {
-// No sidebars.
+  // No sidebars.
     case 4:
     $class = 'grid-20 pull-60';
     break;
 
-// Sidebar second (right).
+    // Sidebar second (right).
     case 3:
     $class = 'grid-20 pull-80';
     break;
 
-  }
+    }
 
   return $class;
 }
@@ -392,7 +383,6 @@ function _gratis_content_postscript($pscolumns = 1) {
   $class = FALSE;
 
   switch($pscolumns) {
-
     case 1:
     $class = 'grid-100 postscript';
     break;
@@ -404,7 +394,6 @@ function _gratis_content_postscript($pscolumns = 1) {
     case 3:
     $class = 'grid-33 postscript';
     break;
-
   }
 
   return $class;
@@ -429,19 +418,17 @@ function _gratis_content_postscript($pscolumns = 1) {
 
 function gratis_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
-
   $remove = array(
     $path_system . '/system.menus.css',
     );
 
-// Remove stylesheets which match our remove array.
+    // Remove stylesheets which match our remove array.
   foreach ($css as $stylesheet => $options) {
     if (in_array($stylesheet, $remove)) {
       unset($css[$stylesheet]);
     }
   }
 }
-
 
 /**
 * Add unique class (mlid) to all menu items.
@@ -453,12 +440,12 @@ function gratis_menu_link(array $vars) {
   $element = $vars['element'];
   $sub_menu = '';
   $name_id = strtolower(strip_tags($element['#title']));
-// remove colons and anything past colons.
+  // remove colons and anything past colons.
   if (strpos($name_id, ':')) $name_id = substr ($name_id, 0, strpos($name_id, ':'));
-//Preserve alphanumerics, everything else goes away.
+  //Preserve alphanumerics, everything else goes away.
   $pattern = '/[^a-z]+/ ';
   $name_id = preg_replace($pattern, '', $name_id);
-  $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' '.$name_id;
+  $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' '. $name_id;
   // Add levels.
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
 
@@ -469,8 +456,12 @@ function gratis_menu_link(array $vars) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
-function gratis_preprocess_comment(&$vars){
+/**
+ * Process variables for comment.tpl.php.
+ *
+ * @see comment.tpl.php
+ */
+function gratis_preprocess_comment(&$vars) {
   $vars['created'] = date('m / j / y', $vars['elements']['#node']->created);
   $vars['changed'] = date('m / j / y', $vars['elements']['#node']->created);
 }
-

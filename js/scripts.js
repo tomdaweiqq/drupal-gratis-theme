@@ -69,7 +69,7 @@ $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
 $('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-fixed-width">&#xf054;</i>');
 
-// Node block - this should come last. 
+// Node block - this should come last.
   $(".region-node-block")
   .appendTo(".field-name-body");
 

@@ -6,11 +6,11 @@
 /* ============================================
 ================================================== */
 
-@media screen and (max-width: 400px) { 
+/*@media screen and (max-width: 400px) {
 
-}
+}*/
 
-@media screen { 
+@media screen {
   .clear {
     clear: both;
     display: block;
@@ -108,7 +108,7 @@
   }
 }
 
-@media screen and (max-width: 767px) { 
+@media screen and (max-width: 767px) {
   .mobile-push-5,
   .mobile-pull-5,
   .mobile-push-10,
@@ -621,7 +621,7 @@
   }
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   .push-5,
   .pull-5,
   .push-10,
