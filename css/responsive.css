@@ -1,153 +1,131 @@
-/* Media queries */
-
-/* Wide layout ++ 1020 PX*/
-/*@media (min-width: 1020px) {
-  }*/
-
-  /* Desktop with 768 container */
-  @media screen and (max-width: 1019px) {
-
-    .grid-container {
-      max-width: 768px;
-    }
-
-  }
-
-  /* Tablets */
-  @media (max-width: 768px) {
-
-    select,
-    textarea,
-    input[type="text"],
-    input[type="password"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="date"],
-    input[type="month"],
-    input[type="time"],
-    input[type="week"],
-    input[type="number"],
-    input[type="email"],
-    input[type="url"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="color"] {
-      width: 80%;
-    }
-
-    #main-menu {
-      float: right;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    #main-menu ul li.li-depth-0:not(.item-with-ul) a {
-      padding: 1em;
-    }
-
-    #main-menu ul li .ula-depth-1 {
-      background: #e04604;
-      padding: 1em 5em 1em 1em;
-    }
-
-    .flexnav .touch-button .navicon {
-      top: 1.4em;
-    }
-
-    .flexnav .touch-button {
-      height: 51px;
-    }
-
-    .grid-container {
-      max-width: 468px;
-    }
-
-    .comment {
-      display: block;
-    }
-
-    .comment .attribution {
-      display: block;
-    }
-
-    .comment .comment-text {
-      padding: 8px;
-      width: 90%;
-      display: block;
-    }
-
-    .comment-arrow {
-      clip: rect(1px, 1px, 1px, 1px);
-      position: absolute !important;
-    }
-
-    .comment.comment-by-anonymous.clearfix {
-      border-bottom: 1px solid #999;
-      padding-bottom: 20px;
-    }
-
-    #comments .indented {
-      margin-left: 36px;
-    }
-
-    p.lead {
-      font-size: 14px;
-      line-height: 1.5em;
-    }
-
-    /* blog tags */
-
-    .not-front span.submitted {
-      border: none;
-    }
-
-    .not-front span.submitted {
-      height: 40px;
-    }
-
-    ul.field-items.tags-list {
-      margin: 10px 0 0 0;
-    }
-
-    .blog-category {
-      float: left;
-      width: 100%;
-    }
-
-    .field-items.tags-list {
-      float: left;
-    }
-
-  }
-
-  @media (max-width: 480px) {
-
-    .grid-container {
-      max-width: 460px;
-    }
-
-  }
-
-  a.logo {
-    position: relative;
-    top: -30px;
-  }
-
-  a.logo img {
-    max-width: 84%;
-  }
-
-  .region-top-bar .social {
-    margin: 12px 0 0 0;
+@media screen and (max-width: 1019px) { 
+  .grid-container {
+    max-width: 768px
   }
 }
 
-@media (min-width: 640px) and (max-width: 979px) {
+/* ===[ Tablets ]=== */
 
-  .region-top-bar {
-    float: right;
-    position: relative;
-    right: 2%;
+@media (max-width: 768px) { 
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    width: 80%
   }
+
+  #main-menu {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  #main-menu ul li.li-depth-0:not(.item-with-ul) a {
+    padding: 1em
+  }
+
+  #main-menu ul li .ula-depth-1 {
+    background: #e04604;
+    padding: 1em 5em 1em 1em;
+  }
+
+  .flexnav .touch-button .navicon {
+    top: 1.4em
+  }
+
+  .flexnav .touch-button {
+    height: 51px
+  }
+
+  .grid-container {
+    max-width: 468px
+  }
+
+  .comment {
+    display: block
+  }
+
+  .comment .attribution {
+    display: block
+  }
+
+  .comment .comment-text {
+    padding: 8px;
+    width: 90%;
+    display: block;
+  }
+
+  .comment-arrow {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+  }
+
+  .comment.comment-by-anonymous.clearfix {
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+  }
+
+  #comments .indented {
+    margin-left: 36px
+  }
+
+  p.lead {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+
+  /* blog tags  */
+
+  .not-front span.submitted {
+    border: none
+  }
+
+  .not-front span.submitted {
+    height: 40px
+  }
+
+  ul.field-items.tags-list {
+    margin: 10px 0 0 0
+  }
+
+  .blog-category {
+    float: left;
+    width: 100%;
+  }
+
+  .field-items.tags-list {
+    float: left
+  }
+}
+
+@media (max-width: 480px) { 
+  .grid-container {
+    max-width: 460px
+  }
+}
+
+a.logo {
+  position: relative;
+  top: -30px;
+}
+
+a.logo img {
+  max-width: 84%
+}
+
+.region-top-bar .social {
+  margin: 12px 0 0 0
 }
