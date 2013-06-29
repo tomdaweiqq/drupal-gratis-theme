@@ -156,12 +156,13 @@
 <?php print render($title_suffix); ?>
 <?php endif; ?>
 
-
 <?php print render($page['content']); ?>
 
+<?php if ($page['node_block']): ?>
+<?php print render($page['node_block']); ?>
+<?php endif; ?>
 
 </div>
-
 
 <!--Sidebar first-->
 <?php if (!empty($page['sidebar_first'])): ?>
@@ -233,4 +234,3 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
     </section>
   </footer>
 <?php endif; ?>
-

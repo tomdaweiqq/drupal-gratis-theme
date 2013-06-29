@@ -1,5 +1,4 @@
 <?php
-
 /**
 * @file
 * Default theme implementation to display a node.
@@ -124,7 +123,6 @@ print render($content);
 ?>
 
 <?php print render($content['body']); ?>
-
 
 <div class="clearfix">
 

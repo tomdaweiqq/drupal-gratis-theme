@@ -16,7 +16,7 @@ stylesheets[all][] = css/responsive.css
 
 ; Regions --------------------
 regions[top_links]       = Top Links
-regions[thirdparty_menu]  = Main menu (3rd party menu systems)
+regions[thirdparty_menu]  = Main menu (third party menu systems)
 regions[hero_first]      = Hero first
 regions[hero_second]  = Hero second
 regions[preface_first]  = Preface first
@@ -27,6 +27,7 @@ regions[help]           = Help
 regions[sidebar_first]  = Sidebar First
 regions[sidebar_second]  = Sidebar Second
 regions[content]         = Content
+regions[node_block]         = Node Block
 regions[postscript_first]   = Postscript first
 regions[postscript_second]  = Postscript second
 regions[postscript_third]   = Postscript third

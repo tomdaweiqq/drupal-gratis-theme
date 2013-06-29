@@ -39,11 +39,6 @@ if (module_exists('rdf')) {
     $vars['rdf']->profile = '';
   }
 
-  // Only add theme modernizr if the drupal contrib module is not enabled.
-  if (!module_exists('modernizr')) {
-    drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/modernizr.js', 'file');
-  }
-
   // Add a body class is the site name is hidden.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
@@ -279,11 +274,6 @@ function gratis_preprocess_node(&$vars, $hook) {
 // Global node.
   $node = $vars['node'];
 
-/* $field_image_items = field_get_items('node', $node, 'field_image');
-  // Load individual data from 'field_image'.
-    $vars['alt_caption'] = $field_image_items[0]['alt'];*/
-
-
   if ($vars['view_mode'] == 'full' && node_is_page($node)) {
     $vars['classes_array'][] = 'node-full';
   }
@@ -301,24 +291,10 @@ function gratis_preprocess_node(&$vars, $hook) {
   $vars['submitted'] = t('Submitted by !username',
     array('!username' => $vars['name']));
 
-  if ($blocks  = block_get_blocks_by_region('node_block')) {
-    $vars['node_block'] = $blocks;
-  }
-
-  if ($blocks_node_block = block_get_blocks_by_region('node_block')) {
-    $vars['node_block'] = $blocks_node_block;
-    $vars['node_block']['#theme_wrappers'] = array('region');
-    $vars['node_block']['#region'] = 'node_block';
-  }
-  else {
-    $vars['node_block'] = '';
-  }
-
 // Set date variables using drupal's format_date function
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
-
 }
 
 /**
@@ -351,7 +327,6 @@ $viewport = array(
     ),
   );
 drupal_add_html_head($viewport, 'viewport');
-
 }
 
 }
