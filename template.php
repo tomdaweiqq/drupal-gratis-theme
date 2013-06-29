@@ -321,7 +321,7 @@ drupal_add_html_head($viewport, 'viewport');
 }
 
 /**
-* Custom function, returns the correct grid class for the main content region.
+ * Custom function, returns the correct grid class for the main content region.
 */
 function _gratis_content_grid($columns = 1) {
 
@@ -354,7 +354,7 @@ function _gratis_content_grid($columns = 1) {
 }
 
 /**
-* Custom function, returns the correct grid class for the sidebars.
+ * Custom function, returns the correct grid class for the sidebars.
 */
 function _gratis_content_sidebar_grid($columns = 4) {
 
@@ -377,7 +377,7 @@ function _gratis_content_sidebar_grid($columns = 4) {
 }
 
 /**
-* Custom function, returns the correct grid class for the postscript regions.
+ * Custom function, returns the correct grid class for the postscript regions.
 */
 function _gratis_content_postscript($pscolumns = 1) {
   $class = FALSE;
@@ -400,20 +400,20 @@ function _gratis_content_postscript($pscolumns = 1) {
 }
 
 /**
- * Alters the JavaScript/CSS library registry.
- *
- * Allows certain, contributed modules to update libraries to newer versions
- * while ensuring backwards compatibility. In general, such manipulations should
- * only be done by designated modules, since most modules that integrate with a
- * certain library also depend on the API of a certain library version.
- *
- * @param $libraries
- *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
- *   name and passed by reference.
- * @param $module
- *   The name of the module that registered the libraries.
- *
- * @see hook_library()
+  * Alters the JavaScript/CSS library registry.
+  *
+  * Allows certain, contributed modules to update libraries to newer versions
+  * while ensuring backwards compatibility. In general, such manipulations should
+  * only be done by designated modules, since most modules that integrate with a
+  * certain library also depend on the API of a certain library version.
+  *
+  * @param $libraries
+  *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
+  *   name and passed by reference.
+  * @param $module
+  *   The name of the module that registered the libraries.
+  *
+  * @see hook_library()
  */
 
 function gratis_css_alter(&$css) {
@@ -440,14 +440,15 @@ function gratis_menu_link(array $vars) {
   $element = $vars['element'];
   $sub_menu = '';
   $name_id = strtolower(strip_tags($element['#title']));
-  // remove colons and anything past colons.
-  if (strpos($name_id, ':')) $name_id = substr ($name_id, 0, strpos($name_id, ':'));
+  // Remove colons and anything past colons.
+  if(strpos($name_id, ':')) $name_id = substr ($name_id, 0, strpos($name_id, ':')); {
   // Preserve alphanumerics, everything else goes away.
   $pattern = '/[^a-z]+/ ';
   $name_id = preg_replace($pattern, '', $name_id);
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $name_id;
   // Add levels.
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
+}
 
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
