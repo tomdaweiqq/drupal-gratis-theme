@@ -1,17 +1,14 @@
 <?php
-
 /**
-  * @file
-  * Template.php provides theme functions & overrides
+ * @file
+ * Template.php provides theme functions & overrides
  */
 
 /**
-  * Implements hook_preprocess_html().
+ * Implements hook_preprocess_html().
  */
 function gratis_preprocess_html(&$vars) {
-
 // Add an ie10 class if needed.
-
   $inline_script = <<<EOL
   <script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
     document.documentElement.className+=' ie10';
@@ -140,13 +137,13 @@ function gratis_html_head_alter(&$head_elements) {
 }
 
 /**
-  * Preprocesses variables for theme_username().
-  *
-  * Modules that make any changes to variables like 'name' or 'extra' must insure
-  * that the final string is safe to include directly in the output by using
-  * check_plain() or filter_xss().
-  *
-  * @see template_process_username()
+ * Preprocesses variables for theme_username().
+ *
+ * Modules that make any changes to variables like 'name' or 'extra' must insure
+ * that the final string is safe to include directly in the output by using
+ * check_plain() or filter_xss().
+ *
+ * @see template_process_username()
 */
 function gratis_preprocess_username(&$vars) {
   // Update the username so it's the full name of the user.
@@ -195,9 +192,9 @@ function gratis_preprocess_page(&$vars, $hook) {
   }
 
   // Check if it's a node and set a variable.
-  $vars['is_node'] = false;
+  $vars['is_node'] = FALSE;
   if ($node = menu_get_object()) {
-    $vars['is_node'] = true;
+    $vars['is_node'] = TRUE;
   }
 
   // Set the custom grid width in a variable.
@@ -352,7 +349,6 @@ function _gratis_content_grid($columns = 1) {
       $class = 'grid-60 push-20';
       break;
     }
-
   }
 
   return $class;
@@ -377,8 +373,7 @@ function _gratis_content_sidebar_grid($columns = 4) {
       $class = 'grid-20 pull-80';
       break;
     }
-
-    }
+  }
 
   return $class;
 }
@@ -411,22 +406,20 @@ function _gratis_content_postscript($pscolumns = 1) {
 }
 
 /**
-  * Alters the JavaScript/CSS library registry.
-  *
-  * Allows certain, contributed modules to update libraries to newer versions
-  * while ensuring backwards compatibility. In general, such manipulations should
-  * only be done by designated modules, since most modules that integrate with a
-  * certain library also depend on the API of a certain library version.
-  *
-  * @param $libraries
-  *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
-  *   name and passed by reference.
-  * @param $module
-  *   The name of the module that registered the libraries.
-  *
-  * @see hook_library()
+ * Alters the JavaScript/CSS library registry.
+ *
+ * Allows certain, contributed modules to update libraries to newer versions
+ * while ensuring backwards compatibility. In general, such manipulations 
+ * should only be done by designated modules, since most modules that 
+ * integrate with a certain library also depend on the API of a certain 
+ * library version.
+ *
+ * @param $libraries
+ *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
+ *   name and passed by reference.
+ *
+ * @see hook_library()
  */
-
 function gratis_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
   $remove = array(
@@ -442,17 +435,16 @@ function gratis_css_alter(&$css) {
 }
 
 /**
-  * Add unique class (mlid) to all menu items.
-  * Add menu levels.
-  * Menu title as class in lowercase.
-  * https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
+ * Add unique class (mlid) to all menu items.
+ * Add menu levels.
+ * Menu title as class in lowercase.
+ * https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
  */
 function gratis_menu_link(array $vars) {
   $element = $vars['element'];
   $sub_menu = '';
   $name_id = strtolower(strip_tags($element['#title']));
   // Remove colons and anything past colons.
-
   // Preserve alphanumerics, everything else goes away.
   $pattern = '/[^a-z]+/ ';
   $name_id = preg_replace($pattern, '', $name_id);
