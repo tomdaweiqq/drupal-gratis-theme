@@ -14,110 +14,110 @@ function gratis_preprocess_html(&$vars) {
     document.documentElement.className+=' ie10';
   }</script>
 EOL;
-$element = array(
-  '#type' => 'markup',
-  '#markup' => $inline_script,
-  );
+  $element = array(
+    '#type' => 'markup',
+    '#markup' => $inline_script,
+    );
 
 drupal_add_html_head($element, 'javascript');
 
-$vars['rdf'] = new stdClass;
+$vars['rdf'] = new stdClass();
 
-if (module_exists('rdf')) {
-  $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
-  $vars['rdf']->version = ' version="HTML+RDFa 1.1"';
-  $vars['rdf']->namespaces = $vars['rdf_namespaces'];
-  $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
-}
-else {
-  $vars['doctype'] = '<!DOCTYPE html>' . "\n";
-  $vars['rdf']->version = '';
-  $vars['rdf']->namespaces = '';
-  $vars['rdf']->profile = '';
-}
+  if (module_exists('rdf')) {
+    $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
+    $vars['rdf']->version = ' version="HTML+RDFa 1.1"';
+    $vars['rdf']->namespaces = $vars['rdf_namespaces'];
+    $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
+  }
+  else {
+    $vars['doctype'] = '<!DOCTYPE html>' . "\n";
+    $vars['rdf']->version = '';
+    $vars['rdf']->namespaces = '';
+    $vars['rdf']->profile = '';
+  }
 
-// Add a body class is the site name is hidden.
-if (theme_get_setting('toggle_name') == FALSE) {
-  $vars['classes_array'][] = 'site-name-hidden';
-}
+  // Add a body class is the site name is hidden.
+  if (theme_get_setting('toggle_name') == FALSE) {
+    $vars['classes_array'][] = 'site-name-hidden';
+  }
 
-// Add IE 9 fixes style sheet.
-drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
-  array(
-    'group' => CSS_THEME,
-    'browsers' =>
-    array(
-      'IE' => 'iE 9',
-      '!IE' => FALSE),
-    'preprocess' => FALSE));
-
-    // Extra body classes for theme variables.
-    // The Color Palette.
-$file = theme_get_setting('theme_color_palette');
-$vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
-
-// Local css within theme folder if checked.
-if (theme_get_setting('gratis_localcss') == TRUE) {
-  drupal_add_css(path_to_theme() . '/css/local.css',
+  // Add IE 9 fixes style sheet.
+  drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
     array(
       'group' => CSS_THEME,
-      'media' => 'screen',
-      'preprocess' => TRUE,
-      'weight' => '9997',
-      )
-    );
-}
+      'browsers' =>
+      array(
+        'IE' => 'iE 9',
+        '!IE' => FALSE),
+      'preprocess' => FALSE));
 
-// Custom css file path if checked and file exists.
-if (theme_get_setting('gratis_custom_css_location') == TRUE) {
-  $path =  theme_get_setting('gratis_custom_css_path');
-  if (file_exists($path)) {
-    drupal_add_css("$path",
+      // Extra body classes for theme variables.
+      // The Color Palette.
+  $file = theme_get_setting('theme_color_palette');
+  $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
+
+  // Local css within theme folder if checked.
+  if (theme_get_setting('gratis_localcss') == TRUE) {
+    drupal_add_css(path_to_theme() . '/css/local.css',
       array(
         'group' => CSS_THEME,
+        'media' => 'screen',
         'preprocess' => TRUE,
-        'weight' => 9998
+        'weight' => '9997',
         )
       );
   }
-}
 
-// Add FlexNav.
-drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/jquery.flexnav.js', 'file');
-
-// Add general JS.
-drupal_add_js(path_to_theme() . '/js/scripts.js',
-  array(
-    'group' => JS_THEME,
-    'preprocess' => TRUE,
-    'weight' => '9999',
-    )
-  );
-
-if (!$vars['is_front']) {
-  // Add unique class for each page.
-  $path = drupal_get_path_alias($_GET['q']);
-  // Add unique class for each website section.
-  list($section,) = explode('/', $path, 2);
-  $arg = explode('/', $_GET['q']);
-  if ($arg[0] == 'node' && isset($arg[1])) {
-    if ($arg[1] == 'add') {
-      $section = 'node-add';
-    }
-    elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
-      $section = 'node-' . $arg[2];
+  // Custom css file path if checked and file exists.
+  if (theme_get_setting('gratis_custom_css_location') == TRUE) {
+    $path =  theme_get_setting('gratis_custom_css_path');
+    if (file_exists($path)) {
+      drupal_add_css("$path",
+        array(
+          'group' => CSS_THEME,
+          'preprocess' => TRUE,
+          'weight' => 9998
+          )
+        );
     }
   }
-  $vars['classes_array'][] = drupal_html_class('section-' . $section);
-}
 
-// Test if page is a node or not and then add a body class.
-if ($node = menu_get_object()) {
-  $vars['classes_array'][] = 'is-node';
-}
-else {
-  $vars['classes_array'][] = 'not-node';
-}
+  // Add FlexNav.
+  drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/jquery.flexnav.js', 'file');
+
+  // Add general JS.
+  drupal_add_js(path_to_theme() . '/js/scripts.js',
+    array(
+      'group' => JS_THEME,
+      'preprocess' => TRUE,
+      'weight' => '9999',
+      )
+    );
+
+  if (!$vars['is_front']) {
+    // Add unique class for each page.
+    $path = drupal_get_path_alias($_GET['q']);
+    // Add unique class for each website section.
+    list($section,) = explode('/', $path, 2);
+    $arg = explode('/', $_GET['q']);
+    if ($arg[0] == 'node' && isset($arg[1])) {
+      if ($arg[1] == 'add') {
+        $section = 'node-add';
+      }
+      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
+        $section = 'node-' . $arg[2];
+      }
+    }
+    $vars['classes_array'][] = drupal_html_class('section-' . $section);
+  }
+
+  // Test if page is a node or not and then add a body class.
+  if ($node = menu_get_object()) {
+    $vars['classes_array'][] = 'is-node';
+  }
+  else {
+    $vars['classes_array'][] = 'not-node';
+  }
 
 }
 
