@@ -17,11 +17,11 @@ EOL;
   $element = array(
     '#type' => 'markup',
     '#markup' => $inline_script,
-    );
+  );
 
-drupal_add_html_head($element, 'javascript');
+  drupal_add_html_head($element, 'javascript');
 
-$vars['rdf'] = new stdClass();
+  $vars['rdf'] = new stdClass();
 
   if (module_exists('rdf')) {
     $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
@@ -51,8 +51,8 @@ $vars['rdf'] = new stdClass();
         '!IE' => FALSE),
       'preprocess' => FALSE));
 
-      // Extra body classes for theme variables.
-      // The Color Palette.
+  // Extra body classes for theme variables.
+  // The Color Palette.
   $file = theme_get_setting('theme_color_palette');
   $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
 
@@ -64,19 +64,19 @@ $vars['rdf'] = new stdClass();
         'media' => 'screen',
         'preprocess' => TRUE,
         'weight' => '9997',
-        )
+    )
       );
   }
 
   // Custom css file path if checked and file exists.
   if (theme_get_setting('gratis_custom_css_location') == TRUE) {
-    $path =  theme_get_setting('gratis_custom_css_path');
+    $path = theme_get_setting('gratis_custom_css_path');
     if (file_exists($path)) {
       drupal_add_css("$path",
         array(
           'group' => CSS_THEME,
           'preprocess' => TRUE,
-          'weight' => 9998
+          'weight' => 9998,
           )
         );
     }
@@ -91,7 +91,7 @@ $vars['rdf'] = new stdClass();
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'weight' => '9999',
-      )
+    )
     );
 
   if (!$vars['is_front']) {
@@ -123,7 +123,7 @@ $vars['rdf'] = new stdClass();
 
 /**
  * Implements hook_html_head_alter().
-*/
+ */
 function gratis_html_head_alter(&$head_elements) {
   // Overwrite default meta character tag with HTML5 version.
   $head_elements['system_meta_content_type']['#attributes'] = array(
@@ -139,7 +139,7 @@ function gratis_html_head_alter(&$head_elements) {
  * check_plain() or filter_xss().
  *
  * @see template_process_username()
-*/
+ */
 function gratis_preprocess_username(&$vars) {
   // Update the username so it's the full name of the user.
   $account = $vars['account'];
@@ -158,15 +158,15 @@ function gratis_preprocess_username(&$vars) {
 }
 
 /**
-* Insert themed breadcrumb page navigation at top of the node content.
-*/
+ * Insert themed breadcrumb page navigation at top of the node content.
+ */
 function gratis_breadcrumb($vars) {
   // Show breadcrumbs if checked.
   if (theme_get_setting('breadcrumb') == 1) {
-  // Theme the breadcrumbs.
+    // Theme the breadcrumbs.
     $breadcrumb = $vars['breadcrumb'];
     if (!empty($breadcrumb)) {
-    // Use CSS to hide titile .element-invisible.
+      // Use CSS to hide titile .element-invisible.
       $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
       // Comment below line to hide current page to breadcrumb.
       $breadcrumb[] = drupal_get_title();
@@ -177,10 +177,10 @@ function gratis_breadcrumb($vars) {
 }
 
 /**
-* Override or insert variables into the page template.
-*/
+ * Override or insert variables into the page template.
+ */
 function gratis_preprocess_page(&$vars, $hook) {
-// If the default logo is used, then determine which color and set the path.
+  // If the default logo is used, then determine which color and set the path.
   $file = theme_get_setting('theme_color_palette');
   if (theme_get_setting('gratis_themelogo') == TRUE) {
     $vars['logo'] = base_path() . path_to_theme() . '/images/' . $file . '-logo.png';
@@ -193,11 +193,10 @@ function gratis_preprocess_page(&$vars, $hook) {
   }
 
   // Set the custom grid width in a variable.
-  $gridwidth =  theme_get_setting('gratis_grid_container_width');
+  $gridwidth = theme_get_setting('gratis_grid_container_width');
   $vars['thegrid'] = $gridwidth;
 
   // Add information about the number of sidebars.
-
   // Both sidebars.
   if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
     $vars['columns'] = 4;
@@ -232,7 +231,7 @@ function gratis_preprocess_page(&$vars, $hook) {
   // Primary nav.
   $vars['primary_nav'] = FALSE;
   if ($vars['main_menu']) {
-  // Build links.
+    // Build links.
     $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
     // Provide default theme wrapper function.
     $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
@@ -240,17 +239,17 @@ function gratis_preprocess_page(&$vars, $hook) {
 }
 
 /**
- * Theme wrapper function for the primary menu links
-*/
+ * Theme wrapper function for the primary menu links.
+ */
 function gratis_menu_tree__primary(&$vars) {
   return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
 
 /**
  * Override or insert variables into the node template.
-*/
+ */
 function gratis_preprocess_node(&$vars, $hook) {
-// Global node.
+  // Global node.
   $node = $vars['node'];
 
   if ($vars['view_mode'] == 'full' && node_is_page($node)) {
@@ -270,7 +269,7 @@ function gratis_preprocess_node(&$vars, $hook) {
   $vars['submitted'] = t('Submitted by !username',
     array('!username' => $vars['name']));
 
-    // Set date variables using drupal's format_date function
+  // Set date variables using drupal's format_date function.
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
@@ -278,34 +277,34 @@ function gratis_preprocess_node(&$vars, $hook) {
 
 /**
  * Implements hook_page_alter().
-*/
+ */
 function gratis_page_alter($page) {
 
   if (theme_get_setting('gratis_viewport') == FALSE) {
 
-  // No pinch and zoom.
+    // No pinch and zoom.
     $viewport = array(
       '#type' => 'html_tag',
       '#tag' => 'meta',
       '#attributes' => array(
         'name' => 'viewport',
         'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
-        ),
-      );
+      ),
+    );
     drupal_add_html_head($viewport, 'viewport');
   }
 
   else {
 
-// Pinch and Zoom enabled.
+    // Pinch and Zoom enabled.
     $viewport = array(
       '#type' => 'html_tag',
       '#tag' => 'meta',
       '#attributes' => array(
         'name' => 'viewport',
         'content' => 'width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.55, user-scalable=yes',
-        ),
-      );
+      ),
+    );
     drupal_add_html_head($viewport, 'viewport');
   }
 
@@ -313,20 +312,20 @@ function gratis_page_alter($page) {
 
 /**
  * Custom function, returns the correct grid class for the main content region.
-*/
+ */
 function _gratis_content_grid($columns = 1) {
 
   $class = FALSE;
   switch($columns) {
 
     // No sidebars, just content.
-    case 1: {
+    case 1:{
       $class = 'grid-100';
       break;
     }
 
     // Sidebar second (right)  and content.
-    case 2: {
+    case 2:{
       $class = 'grid-80';
       break;
     }
@@ -338,7 +337,7 @@ function _gratis_content_grid($columns = 1) {
     }
 
     // Both sidebars and content.
-    case 4: {
+    case 4:{
       $class = 'grid-60 push-20';
       break;
     }
@@ -356,13 +355,13 @@ function _gratis_content_sidebar_grid($columns = 4) {
   switch($columns) {
 
     // No sidebars.
-    case 4: {
+    case 4:{
       $class = 'grid-20 pull-60';
       break;
     }
 
     // Sidebar second (right).
-    case 3: {
+    case 3:{
       $class = 'grid-20 pull-80';
       break;
     }
@@ -373,23 +372,23 @@ function _gratis_content_sidebar_grid($columns = 4) {
 
 /**
  * Custom function, returns the correct grid class for the postscript regions.
-*/
+ */
 function _gratis_content_postscript($pscolumns = 1) {
   $class = FALSE;
 
   switch($pscolumns) {
 
-    case 1: {
+    case 1:{
       $class = 'grid-100 postscript';
       break;
     }
 
-    case 2: {
+    case 2:{
       $class = 'grid-50 postscript';
       break;
     }
 
-    case 3: {
+    case 3:{
       $class = 'grid-33 postscript';
       break;
     }
@@ -427,10 +426,6 @@ function gratis_css_alter(&$css) {
 
 /**
  * Returns HTML for a menu link and submenu.
- *
- * @param $variables
- *   An associative array containing:
- *   - element: Structured array data for a menu link.
  */
 function gratis_menu_link(array $vars) {
   $element = $vars['element'];
