@@ -183,7 +183,7 @@ function gratis_preprocess_page(&$vars, $hook) {
   // If the default logo is used, then determine which color and set the path.
   $file = theme_get_setting('theme_color_palette');
   if (theme_get_setting('gratis_themelogo') == TRUE) {
-    $vars['logo'] = base_path() . path_to_theme() . '/images/' . $file . '-logo.png';
+    $vars['logo'] = base_path() . path_to_theme() . '/images/logo-' . $file . '.png';
   }
 
   // Check if it's a node and set a variable.

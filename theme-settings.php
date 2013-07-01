@@ -39,10 +39,13 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Choose a color palette'),
     '#default_value' => theme_get_setting('theme_color_palette'),
     '#options' => array(
-      'turquoise' => t('Turquoise'),
-      'purple' => t('Purple'),
-      'orange' => t('Orange'),
-      'green' => t('Green'),
+      'turquoise' => t('Turquoise Blue'),
+      'purple' => t('Cool Purple'),
+      'orange' => t('Pumpkin Orange'),
+      'green' => t('Olive Green'),
+      'pomegranate' => t('Pomegranate Red'),
+      'seafoam' => t('Seafoam Green'),
+      'greengray' => t('Green Gray'),
     ),
   );
 

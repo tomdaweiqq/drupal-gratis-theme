@@ -597,7 +597,11 @@ ul.links.inline li {
 .color-palette-orange #main-menu ul li a.active,
 .color-palette-orange #main-menu ul li a:hover,
 .color-palette-orange #main-menu ul li.hover-state a,
-.color-palette-orange #main-menu ul li.active-trail a {
+.color-palette-orange #main-menu ul li.active-trail a,
+.color-palette-orange  input[type=submit],
+.color-palette-orange button,
+.color-palette-orange input[type=reset],
+.color-palette-orange .menu-button {
   background: #e04604;
 }
 
@@ -669,7 +673,11 @@ ul.links.inline li {
 .color-palette-green #main-menu ul li a.active,
 .color-palette-green #main-menu ul li a:hover,
 .color-palette-green #main-menu ul li.hover-state a,
-.color-palette-green #main-menu ul li.active-trail a {
+.color-palette-green #main-menu ul li.active-trail a,
+.color-palette-green  input[type=submit],
+.color-palette-green button,
+.color-palette-green input[type=reset],
+.color-palette-green .menu-button {
   background: #6a8500;
 }
 
@@ -701,7 +709,11 @@ ul.links.inline li {
 .color-palette-purple #main-menu ul li a.active,
 .color-palette-purple #main-menu ul li a:hover,
 .color-palette-purple #main-menu ul li.hover-state a,
-.color-palette-purple #main-menu ul li.active-trail a {
+.color-palette-purple #main-menu ul li.active-trail a,
+.color-palette-purple  input[type=submit],
+.color-palette-purple button,
+.color-palette-purple input[type=reset],
+.color-palette-purple .menu-button {
   background: #491f70;
 }
 
@@ -711,4 +723,112 @@ ul.links.inline li {
 
 .color-palette-purple #main-menu ul li.level-2 a:hover {
   background: #491f70;
+}
+
+/* Seafoam Green */
+
+.color-palette-seafoam aside h2 {
+  border-left: 5px solid #e04604;
+}
+
+.color-palette-seafoam a,
+.color-palette-seafoam a.active,
+.color-palette-seafoam li a.active,
+.color-palette-seafoam #comments h3 a {
+  color: #16a085;
+}
+
+.color-palette-seafoam a:hover {
+  color: #333;
+}
+
+.color-palette-seafoam #main-menu ul li a.active,
+.color-palette-seafoam #main-menu ul li a:hover,
+.color-palette-seafoam #main-menu ul li.hover-state a,
+.color-palette-seafoam #main-menu ul li.active-trail a,
+.color-palette-seafoam  input[type=submit],
+.color-palette-seafoam button,
+.color-palette-seafoam input[type=reset],
+.color-palette-seafoam .menu-button {
+  background: #16a085;
+}
+
+.color-palette-seafoam #main-menu ul li.level-2 a {
+  background: #333;
+}
+
+.color-palette-seafoam #main-menu ul li.level-2 a:hover {
+  background: #16a085;
+}
+
+/* pomegranate Red */
+
+.color-palette-pomegranate aside h2 {
+  border-left: 5px solid #e04604;
+}
+
+.color-palette-pomegranate a,
+.color-palette-pomegranate a.active,
+.color-palette-pomegranate li a.active,
+.color-palette-pomegranate #comments h3 a {
+  color: #c0392b;
+}
+
+.color-palette-pomegranate a:hover {
+  color: #333;
+}
+
+.color-palette-pomegranate #main-menu ul li a.active,
+.color-palette-pomegranate #main-menu ul li a:hover,
+.color-palette-pomegranate #main-menu ul li.hover-state a,
+.color-palette-pomegranate #main-menu ul li.active-trail a,
+.color-palette-pomegranate  input[type=submit],
+.color-palette-pomegranate button,
+.color-palette-pomegranate input[type=reset],
+.color-palette-pomegranate .menu-button {
+  background: #c0392b;
+}
+
+.color-palette-pomegranate #main-menu ul li.level-2 a {
+  background: #333;
+}
+
+.color-palette-pomegranate #main-menu ul li.level-2 a:hover {
+  background: #c0392b;
+}
+
+/* Green Gray */
+
+.color-palette-greengray aside h2 {
+  border-left: 5px solid #e04604;
+}
+
+.color-palette-greengray a,
+.color-palette-greengray a.active,
+.color-palette-greengray li a.active,
+.color-palette-greengray #comments h3 a {
+  color: #7f8c8d;
+}
+
+.color-palette-greengray a:hover {
+  color: #333;
+}
+
+.color-palette-greengray #main-menu ul li a.active,
+.color-palette-greengray #main-menu ul li a:hover,
+.color-palette-greengray #main-menu ul li.hover-state a,
+.color-palette-greengray #main-menu ul li.active-trail a,
+.color-palette-greengray  input[type=submit],
+.color-palette-greengray button,
+.color-palette-greengray input[type=reset],
+.color-palette-greengray .menu-button {
+  background: #7f8c8d;
+}
+
+.color-palette-greengray #main-menu ul li.level-2 a {
+  background: #333;
+}
+
+.color-palette-greengray #main-menu ul li.level-2 a:hover {
+  background: #7f8c8d;
 }

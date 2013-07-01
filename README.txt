@@ -22,7 +22,9 @@ available.
 
 -- THEME SETTINGS UI --
 
-- Choice of several color palettes
+- Choice of several color palettes: Turquoise Blue, Cool Purple, 
+Pumpkin Orange, Olive Green, Pomegranate Red, Seafoam Green, 
+Green Gray
 
 - Toggle Breadcrumbs on or off
 
