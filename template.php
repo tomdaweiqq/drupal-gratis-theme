@@ -8,7 +8,7 @@
  * Implements hook_preprocess_html().
  */
 function gratis_preprocess_html(&$vars) {
-// Add an ie10 class if needed.
+  // Add an ie10 class if needed.
   $inline_script = <<<EOL
   <script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
     document.documentElement.className+=' ie10';
@@ -52,7 +52,6 @@ drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
     'preprocess' => FALSE));
 
     // Extra body classes for theme variables.
-
     // The Color Palette.
 $file = theme_get_setting('theme_color_palette');
 $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
@@ -121,10 +120,6 @@ else {
 }
 
 }
-
-/**
- * Custom functions for the theme
-*/
 
 /**
  * Implements hook_html_head_alter().
@@ -217,18 +212,17 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['columns'] = 1;
   }
 
-
-// Postscript columns ('$pscolumns').
+  // Postscript columns ('$pscolumns').
   if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
     $vars['pscolumns'] = 3;
   }
-  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) ) {
+  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second'])) {
     $vars['pscolumns'] = 2;
   }
-  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_third']) ) {
+  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_third'])) {
     $vars['pscolumns'] = 2;
   }
-  elseif (!empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third']) ) {
+  elseif (!empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
     $vars['pscolumns'] = 2;
   }
   else {
@@ -236,15 +230,14 @@ function gratis_preprocess_page(&$vars, $hook) {
   }
 
   // Primary nav.
-    $vars['primary_nav'] = FALSE;
-    if ($vars['main_menu']) {
-    // Build links.
-      $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-      // Provide default theme wrapper function.
-      $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
-    }
-
+  $vars['primary_nav'] = FALSE;
+  if ($vars['main_menu']) {
+  // Build links.
+    $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+    // Provide default theme wrapper function.
+    $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
+}
 
 /**
  * Theme wrapper function for the primary menu links
@@ -305,16 +298,16 @@ function gratis_page_alter($page) {
   else {
 
 // Pinch and Zoom enabled.
-$viewport = array(
-  '#type' => 'html_tag',
-  '#tag' => 'meta',
-  '#attributes' => array(
-    'name' => 'viewport',
-    'content' => 'width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.55, user-scalable=yes',
-    ),
-  );
-drupal_add_html_head($viewport, 'viewport');
-}
+    $viewport = array(
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.55, user-scalable=yes',
+        ),
+      );
+    drupal_add_html_head($viewport, 'viewport');
+  }
 
 }
 
@@ -417,8 +410,6 @@ function _gratis_content_postscript($pscolumns = 1) {
  * @param $libraries
  *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
  *   name and passed by reference.
- *
- * @see hook_library()
  */
 function gratis_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
@@ -426,7 +417,7 @@ function gratis_css_alter(&$css) {
     $path_system . '/system.menus.css',
     );
 
-    // Remove stylesheets which match our remove array.
+  // Remove stylesheets which match our remove array.
   foreach ($css as $stylesheet => $options) {
     if (in_array($stylesheet, $remove)) {
       unset($css[$stylesheet]);
@@ -435,10 +426,11 @@ function gratis_css_alter(&$css) {
 }
 
 /**
- * Add unique class (mlid) to all menu items.
- * Add menu levels.
- * Menu title as class in lowercase.
- * https://api.drupal.org/api/drupal/includes!menu.inc/function/theme_menu_link/7
+ * Returns HTML for a menu link and submenu.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: Structured array data for a menu link.
  */
 function gratis_menu_link(array $vars) {
   $element = $vars['element'];
