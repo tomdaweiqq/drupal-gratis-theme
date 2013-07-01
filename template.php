@@ -83,7 +83,7 @@ EOL;
   }
 
   // Add FlexNav.
-  drupal_add_js(drupal_get_path('theme', 'gratis') .'/js/jquery.flexnav.js', 'file');
+  drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
 
   // Add general JS.
   drupal_add_js(path_to_theme() . '/js/scripts.js',
@@ -316,7 +316,7 @@ function gratis_page_alter($page) {
 function _gratis_content_grid($columns = 1) {
 
   $class = FALSE;
-  switch($columns) {
+  switch ($columns) {
 
     // No sidebars, just content.
     case 1:{
@@ -331,7 +331,7 @@ function _gratis_content_grid($columns = 1) {
       }
 
     // Sidebar first (left) and content.
-    case 3: {
+    case 3:{
       $class = 'grid-80 push-20';
       break;
       }
@@ -348,11 +348,11 @@ function _gratis_content_grid($columns = 1) {
 
 /**
  * Custom function, returns the correct grid class for the sidebars.
-*/
+ */
 function _gratis_content_sidebar_grid($columns = 4) {
 
   $class = FALSE;
-  switch($columns) {
+  switch ($columns) {
 
     // No sidebars.
     case 4:{
@@ -376,7 +376,7 @@ function _gratis_content_sidebar_grid($columns = 4) {
 function _gratis_content_postscript($pscolumns = 1) {
   $class = FALSE;
 
-  switch($pscolumns) {
+  switch ($pscolumns) {
 
     case 1:{
       $class = 'grid-100 postscript';
@@ -404,7 +404,7 @@ function gratis_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
   $remove = array(
     $path_system . '/system.menus.css',
-    );
+  );
 
   // Remove stylesheets which match our remove array.
   foreach ($css as $stylesheet => $options) {
