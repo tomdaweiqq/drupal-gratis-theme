@@ -73,13 +73,6 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
       you are doing!</strong>"),
   );
 
-  $form['additional_settings']['other_settings']['gratis_tertiarymenu'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use tertiary drop down menus?'),
-    '#default_value' => theme_get_setting('gratis_tertiarymenu', 'gratis'),
-    '#description' => t("Check this box if you are going to have tertiary (third level drop down menus)"),
-  );
-
   $form['additional_settings']['other_settings']['gratis_viewport'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use Touch device pinch and zoom?'),

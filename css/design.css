@@ -96,6 +96,10 @@ ol li {
 
 /* Regions */
 
+.js .flexnav {
+  display: none;
+}
+
 #sidebar-second,
 #sidebar-first {
   margin-top: 20px;

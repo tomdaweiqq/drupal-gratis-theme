@@ -20,11 +20,6 @@ with building sites. This theme also does not require any base theme.
 Gratis or admin/appearance/settings/Gratis and choose various options
 available.
 
-- For drop down menus to work, you need to set a main menu item to
-"expanded". It should also be checked on the theme's settings page. Then
-its sub-menus will work as drop downs. If you need help with this, please
-consult Drupal core documentation.
-
 -- THEME SETTINGS UI --
 
 - Choice of several color palettes
@@ -42,8 +37,7 @@ like this.
 - Custom Path CSS -  Define a custom path for your own css file to use with
 the theme.
 
-- Tertiary Menus -  ** There is no support for Tertiary Menus, only secondary
-sub-navs. 
+- Tertiary Menus -  Currently not supported but planned. 
 
 - Customizable layout width in the theme settings UI, go as wide as you 
 want! It's all percentage based within the parent container. 
@@ -59,7 +53,8 @@ or Superfish Module. You are responsible for any styling and CSS for this.
 which will appear right after the content but before any node links or
 comments. Useful for ads or otherwise. Note, to use this and for this region 
 to work properly, you must at least be using the standard Drupal 
-7 field_body field. 
+7 field_body field, otherwise this region will simply sit below whatever 
+blocks are assigned to the content region. 
 
 - Pinch and Zoom for Touch friendly devices - Option to choose whether to
 pinch and zoom on a touch sensitive device or not. Default is off. Note,
@@ -75,6 +70,13 @@ enable this option.
 - Mobile, touch friendly menu
 
 - Drop down menus (for desktop)
+
+- Note for drop down / sub-menus to work, you need to set a main menu item to
+"Show as expanded" in the Drupal menu settings UI. This setting is located
+at /admin/structure/menu/item/xxx/edit where "xxx" is the id of your menu
+item. Or simply go to: Administration > Structure > Menus > Main menu
+and then click a menu item and edit. If you need help with this, please
+consult Drupal core documentation.
 
 -- REQUIREMENTS --
 
@@ -119,6 +121,8 @@ or through my website's contact form. http://highrockmedia.com/contact-us
 Buy me a Latte - Help support Gratis but it's not a requirement.
 http://highrockmedia.com/buy-me-latte
 
------------------------- Danny Englander Drupal Themer and Photographer
+------------------------ 
+Danny Englander 
+Drupal Themer and Photographer
 High Rock Media San Diego, California http://highrockmedia.com
 http://highrockphoto.com

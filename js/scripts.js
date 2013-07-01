@@ -10,7 +10,11 @@
     attach:function (context, settings) {
 // End drupal calls.
 
-$('html').addClass('js');
+/* 
+* Toggle the main menu, it's hidden initially
+* to prevent FOUC. 
+*/
+$("#main-menu ul.flexnav").toggle();
 
 // Set ul depths for better theming.
 $('#main-menu ul').each(function() {
@@ -35,7 +39,7 @@ $(".flexnav").flexNav();
 
       // End mobile menu.
 
-// prepend the post date before the h1.
+// Prepend the post date before the h1.
   $(".date-in-parts")
     .prependTo(".not-front.page-node #post-content");
 
@@ -69,9 +73,11 @@ $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
 $('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-fixed-width">&#xf054;</i>');
 
-// Node block - this should come last.
+// Node block - this should come last. It gets appened to the body field if it exists.
+  if ( $(".field").hasClass("field-name-body")) {
   $(".region-node-block")
   .appendTo(".field-name-body");
+}
 
   }}})
 (jQuery);
