@@ -64,7 +64,7 @@ EOL;
         'media' => 'screen',
         'preprocess' => TRUE,
         'weight' => '9997',
-    )
+      )
       );
   }
 
@@ -77,7 +77,7 @@ EOL;
           'group' => CSS_THEME,
           'preprocess' => TRUE,
           'weight' => 9998,
-          )
+        )
         );
     }
   }
@@ -128,7 +128,7 @@ function gratis_html_head_alter(&$head_elements) {
   // Overwrite default meta character tag with HTML5 version.
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8',
-    );
+  );
 }
 
 /**
@@ -322,25 +322,25 @@ function _gratis_content_grid($columns = 1) {
     case 1:{
       $class = 'grid-100';
       break;
-    }
+      }
 
     // Sidebar second (right)  and content.
     case 2:{
       $class = 'grid-80';
       break;
-    }
+      }
 
     // Sidebar first (left) and content.
     case 3: {
       $class = 'grid-80 push-20';
       break;
-    }
+      }
 
     // Both sidebars and content.
     case 4:{
       $class = 'grid-60 push-20';
       break;
-    }
+      }
   }
 
   return $class;
@@ -358,13 +358,13 @@ function _gratis_content_sidebar_grid($columns = 4) {
     case 4:{
       $class = 'grid-20 pull-60';
       break;
-    }
+      }
 
     // Sidebar second (right).
     case 3:{
       $class = 'grid-20 pull-80';
       break;
-    }
+      }
   }
 
   return $class;
@@ -381,17 +381,17 @@ function _gratis_content_postscript($pscolumns = 1) {
     case 1:{
       $class = 'grid-100 postscript';
       break;
-    }
+      }
 
     case 2:{
       $class = 'grid-50 postscript';
       break;
-    }
+      }
 
     case 3:{
       $class = 'grid-33 postscript';
       break;
-    }
+      }
   }
 
   return $class;
@@ -399,16 +399,6 @@ function _gratis_content_postscript($pscolumns = 1) {
 
 /**
  * Alters the JavaScript/CSS library registry.
- *
- * Allows certain, contributed modules to update libraries to newer versions
- * while ensuring backwards compatibility. In general, such manipulations 
- * should only be done by designated modules, since most modules that 
- * integrate with a certain library also depend on the API of a certain 
- * library version.
- *
- * @param $libraries
- *   The JavaScript/CSS libraries provided by $module. Keyed by internal library
- *   name and passed by reference.
  */
 function gratis_css_alter(&$css) {
   $path_system = drupal_get_path('module', 'system');
