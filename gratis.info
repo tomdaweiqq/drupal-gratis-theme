@@ -17,8 +17,6 @@ stylesheets[all][] = css/responsive.css
 ; Regions --------------------
 regions[top_links]       = Top Links
 regions[thirdparty_menu]  = Main menu (third party menu systems)
-regions[hero_first]      = Hero first
-regions[hero_second]  = Hero second
 regions[preface_first]  = Preface first
 regions[preface_second] = Preface second
 regions[preface_third]  = Preface third
@@ -32,8 +30,6 @@ regions[postscript_first]   = Postscript first
 regions[postscript_second]  = Postscript second
 regions[postscript_third]   = Postscript third
 regions[footer_first]   = Footer first
-regions[footer_second]  = Footer second
-regions[footer_third]   = Footer third
 
 ; Features --------------------
 features[] = logo
@@ -48,5 +44,7 @@ features[] = main_menu
 settings[gratis_themelogo]  = 1
 settings[breadcrumbs]  = 1
 settings[gratis_viewport]  = 0
-settings[theme_color_palette]  = 
-settings[gratis_tertiarymenu]  = 0
+settings[theme_color_palette]  = orange
+settings[gratis_localcss]  = 0
+settings[gratis_viewport]  = 0
+settings[gratis_custom_css_location]  = 0

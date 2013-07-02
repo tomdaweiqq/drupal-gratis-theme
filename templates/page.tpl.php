@@ -123,6 +123,39 @@
 </div>
 <?php endif; ?>
 
+<?php
+// Define and divide the preface page regions.
+if ($page['preface_first'] || $page['preface_second'] ||
+  $page['preface_third']):
+?>
+
+<div id ="preface-wrapper">
+  <div class="grid-container" id="preface-container" style="max-width:<?php print $thegrid; ?>">
+
+    <!--Preface -->
+    <?php if (!empty($page['preface_first'])): ?>
+    <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+      <?php print render($page['preface_first']); ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (!empty($page['preface_second'])): ?>
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+    <?php print render($page['preface_second']); ?>
+  </div>
+<?php endif; ?>
+
+<?php if (!empty($page['preface_third'])): ?>
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+    <?php print render($page['preface_third']); ?>
+  </div>
+<?php endif; ?>
+
+</div>
+</div>
+
+<?php endif; ?>
+
 <main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content" >
   <div class="<?php print _gratis_content_grid($columns); ?>">
     <?php print $messages; ?>

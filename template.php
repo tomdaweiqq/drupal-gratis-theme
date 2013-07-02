@@ -228,6 +228,23 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['pscolumns'] = 1;
   }
 
+  // Preface columns ('$precolumns').
+  if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
+    $vars['precolumns'] = 3;
+  }
+  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
+    $vars['precolumns'] = 2;
+  }
+  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
+    $vars['precolumns'] = 2;
+  }
+  elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
+    $vars['precolumns'] = 2;
+  }
+  else {
+    $vars['precolumns'] = 1;
+  }
+
   // Primary nav.
   $vars['primary_nav'] = FALSE;
   if ($vars['main_menu']) {
