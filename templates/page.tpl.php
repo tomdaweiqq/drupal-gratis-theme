@@ -256,14 +256,14 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
 
 </div>
 
-<?php if (!$is_front): ?>
+
   <footer id="footer" role="footer">
     <section class="grid-container">
       <div class="grid-100">
-        footer
         <?php if (!empty($page['footer_first'])): ?>
         <?php print render($page['footer_first']); ?>
-      <?php endif; ?></div>
+      <?php endif; ?>
+    </div>
     </section>
   </footer>
-<?php endif; ?>
+
