@@ -30,6 +30,7 @@ regions[postscript_first]   = Postscript first
 regions[postscript_second]  = Postscript second
 regions[postscript_third]   = Postscript third
 regions[footer_first]   = Footer first
+regions[top_panel]  = Top Panel (special use)
 
 ; Features --------------------
 features[] = logo

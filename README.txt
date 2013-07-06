@@ -63,6 +63,12 @@ pinch and zoom on a touch sensitive device or not. Default is off. Note,
 there is no support for layouts breaking or otherwise if you choose to
 enable this option.
 
+***** A note about the "Top Panel" block region *****
+- This block region within the theme does not really have any styling so 
+I would not reccomend using this unless you want to add your own
+extra styling and jQuery. This was done on purpose for some 
+custom modules that I use in concert with this block region. 
+
 -- ADDITIONAL FEATURES --
 
 - HTML5 Image captions on default imagefield, may work for others.

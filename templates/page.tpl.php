@@ -65,6 +65,12 @@
  */
 ?>
 
+<?php if ($page['top_panel']): ?>
+  <div id="top-panel">
+  <?php print render($page['top_panel']); ?>
+</div>
+<?php endif; ?>
+
 <div id="wrapper">
 
   <div id="top-bar">
