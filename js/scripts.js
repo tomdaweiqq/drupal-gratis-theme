@@ -79,5 +79,4 @@ $('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li,
   .appendTo(".field-name-body");
 }
 
-  }}})
-(jQuery);
+  }}}) (jQuery);
