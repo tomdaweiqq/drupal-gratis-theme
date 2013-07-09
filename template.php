@@ -36,9 +36,20 @@ EOL;
     $vars['rdf']->profile = '';
   }
 
-  // Add a body class is the site name is hidden.
+  // Add a body class is the site name is hidden or not.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
+  }
+  else {
+    $vars['classes_array'][] = 'site-name';
+  }
+
+    // Add a body class is the site slogan is hidden or not.
+  if (theme_get_setting('toggle_slogan') == FALSE) {
+    $vars['classes_array'][] = 'site-slogan-hidden';
+  }
+  else {
+    $vars['classes_array'][] = 'site-slogan';
   }
 
   // Add IE 9 fixes style sheet.

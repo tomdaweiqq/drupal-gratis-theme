@@ -4,11 +4,22 @@
   font-family: 'OpenSansRegular';
   font-style: normal;
   font-weight: normal;
-  src: url('..font/open-sans/OpenSans-Regular-webfont.eot');
-  src: url('..font/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  src: url('../font/open-sans/OpenSans-Regular-webfont.eot');
+  src: url('../font/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
   url('../font/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
   url('../font/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
   url('../font/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../font/open-sans/OpenSans-Bold-webfont.eot');
+    src: url('../font/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/OpenSans-Bold-webfont.woff') format('woff'),
+    url('../font/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'),
+    url('../font/open-sans/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* sticky footer
@@ -56,6 +67,22 @@ h1 {
   font-size: 4em;
   line-height: 1.1em;
   margin: 10px 0;
+}
+
+h1.site-name {
+  display: inline-block;
+  font-size: 1.1em;
+  margin: 0;
+  font-family: OpenSansBold, serif;
+}
+
+h1.site-name a {
+
+}
+
+.site-name h1.site-name:after {
+  content: "\003A";
+  margin-left: -4px;
 }
 
 p {
@@ -113,6 +140,10 @@ ol li {
   margin-bottom: 20px;
 }
 
+#branding-wrapper {
+  background: #444;
+}
+
 #footer {
   background: #333;
   margin: 0 auto;
@@ -162,14 +193,16 @@ figcaption {
 }
 
 #branding-wrapper {
-  background: #ccc;
+  background: #333;
+  border-top: 2px solid #6a8500;
 }
 
 h3.branding {
-  color: #464646;
+  color: #fff;
   font-size: 1em;
   margin: 0;
   padding: 2px 0;
+  display: inline-block;
 }
 
 .page-node h1.page-title {

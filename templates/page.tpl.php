@@ -89,7 +89,6 @@
 
       <div class="grid-85">
         <section id="main-menu" role="navigation">
-
           <?php if ($main_menu): ?>
           <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
           <nav class="menu-navigation">
@@ -111,11 +110,22 @@
 </div>
 
 
-<?php if ($site_slogan): ?>
+<?php if ($site_slogan || $site_name) : ?>
   <div id="branding-wrapper">
     <header role="branding" class="grid-container" style="max-width:<?php print $thegrid; ?>">
       <div class="grid-100">
+        
+        <?php if ($site_name) : ?>
+        <h1 class="site-name">
+          <a href="<?php print $front_page; ?>">
+            <?php print $site_name; ?></a>
+          </h1>
+        <?php endif; ?>
+
+         <?php if ($site_slogan) : ?>
         <h3 class="branding"><?php print $site_slogan; ?></h3>
+          <?php endif; ?>
+
       </div>
 </header>
 </div>
