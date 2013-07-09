@@ -81,6 +81,14 @@
             <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
               <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
+            <?php else : ?>
+     
+        <h1 class="site-name">
+          <a href="<?php print $front_page; ?>">
+            <?php print $site_name; ?></a>
+          </h1>
+     
+
             <?php endif; ?>
           </div>
         </span>
@@ -115,12 +123,14 @@
     <header role="branding" class="grid-container" style="max-width:<?php print $thegrid; ?>">
       <div class="grid-100">
         
+        <?php if ($logo): ?>
         <?php if ($site_name) : ?>
         <h1 class="site-name">
           <a href="<?php print $front_page; ?>">
             <?php print $site_name; ?></a>
           </h1>
         <?php endif; ?>
+         <?php endif; ?>
 
          <?php if ($site_slogan) : ?>
         <h3 class="branding"><?php print $site_slogan; ?></h3>

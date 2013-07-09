@@ -36,6 +36,10 @@ EOL;
     $vars['rdf']->profile = '';
   }
 
+  // Add opensans from Google fonts.
+  // http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400italic,600italic,700italic,400,600,700
+  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700',array('type' => 'external'));
+
   // Add a body class is the site name is hidden or not.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
@@ -44,12 +48,20 @@ EOL;
     $vars['classes_array'][] = 'site-name';
   }
 
-    // Add a body class is the site slogan is hidden or not.
+  // Add a body class is the site slogan is hidden or not.
   if (theme_get_setting('toggle_slogan') == FALSE) {
     $vars['classes_array'][] = 'site-slogan-hidden';
   }
   else {
     $vars['classes_array'][] = 'site-slogan';
+  }
+
+  // Add a body class is the theme logo is hidden or not.
+  if (theme_get_setting('gratis_themelogo') == TRUE) {
+    $vars['classes_array'][] = 'theme-logo';
+  }
+  else {
+    $vars['classes_array'][] = 'theme-logo-none';
   }
 
   // Add IE 9 fixes style sheet.

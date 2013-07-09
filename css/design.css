@@ -1,27 +1,3 @@
-/* Fonts. */
-
-@font-face {
-  font-family: 'OpenSansRegular';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../font/open-sans/OpenSans-Regular-webfont.eot');
-  src: url('../font/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../font/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
-  url('../font/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
-  url('../font/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-}
-
-@font-face {
-    font-family: 'OpenSansBold';
-    src: url('../font/open-sans/OpenSans-Bold-webfont.eot');
-    src: url('../font/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../font/open-sans/OpenSans-Bold-webfont.woff') format('woff'),
-    url('../font/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'),
-    url('../font/open-sans/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* sticky footer
 http://ryanfait.com/sticky-footer
 */
@@ -59,7 +35,8 @@ h3,
 h4,
 h5 {
   color: #666;
-  font-family: 'OpenSansRegular', serif;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: normal;
 }
 
 h1 {
@@ -71,16 +48,25 @@ h1 {
 
 h1.site-name {
   display: inline-block;
-  font-size: 1.1em;
-  margin: 0;
-  font-family: OpenSansBold, serif;
+  font-size: 1.7em;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: bold;
+  margin: 5px 0 8px 0;
+  text-rendering: optimizeLegibility;
+}
+
+.theme-logo-none h1.site-name {
+  font-size: 2.7em;
+  font-family: 'Open Sans', serif;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 h1.site-name a {
 
 }
 
-.site-name h1.site-name:after {
+.theme-logo.site-name h1.site-name:after {
   content: "\003A";
   margin-left: -4px;
 }
@@ -199,7 +185,7 @@ figcaption {
 
 h3.branding {
   color: #fff;
-  font-size: 1em;
+  font-size: 1.4em;
   margin: 0;
   padding: 2px 0;
   display: inline-block;
@@ -574,9 +560,11 @@ ul.links.inline li {
 }
 
 #main-menu li a {
-  font-family: 'OpenSansRegular', serif;
-  font-size: 1em;
-  font-weight: bold;
+  font-family: 'Open Sans', serif;
+  font-size: 1.01em;
+  font-weight: normal;
+  letter-spacing: .1em;
+  text-rendering: optimizeLegibility;
   text-transform: capitalize;
 }
 
@@ -627,7 +615,8 @@ ul.links.inline li {
 .color-palette-orange a,
 .color-palette-orange a.active,
 .color-palette-orange li a.active,
-.color-palette-orange #comments h3 a {
+.color-palette-orange #comments h3 a,
+.theme-logo.site-name.color-palette-orange h1.site-name:after {
   color: #e04604;
 }
 
@@ -667,7 +656,8 @@ ul.links.inline li {
 .color-palette-turquoise a,
 .color-palette-turquoise a.active,
 .color-palette-turquoise li a.active,
-.color-palette-turquoise #comments h3 a {
+.color-palette-turquoise #comments h3 a,
+.theme-logo.site-name.color-palette-turquoise  h1.site-name:after {
   color: #02b4ce;
 }
 
@@ -711,7 +701,8 @@ ul.links.inline li {
 .color-palette-green a,
 .color-palette-green a.active, 
 .color-palette-green li a.active,
-.color-palette-green #comments h3 a {
+.color-palette-green #comments h3 a,
+.theme-logo.site-name.color-palette-green h1.site-name:after {
   color: #6a8500;
 }
 
@@ -751,7 +742,8 @@ ul.links.inline li {
 .color-palette-purple a,
 .color-palette-purple a.active,
 .color-palette-purple li a.active,
-.color-palette-purple #comments h3 a {
+.color-palette-purple #comments h3 a,
+.theme-logo.site-name.color-palette-purple h1.site-name:after {
   color: #491f70;
 }
 
@@ -791,7 +783,8 @@ ul.links.inline li {
 .color-palette-seafoam a,
 .color-palette-seafoam a.active,
 .color-palette-seafoam li a.active,
-.color-palette-seafoam #comments h3 a {
+.color-palette-seafoam #comments h3 a,
+.theme-logo.site-name.color-palette-seafoam h1.site-name:after {
   color: #16a085;
 }
 
@@ -831,7 +824,8 @@ ul.links.inline li {
 .color-palette-pomegranate a,
 .color-palette-pomegranate a.active,
 .color-palette-pomegranate li a.active,
-.color-palette-pomegranate #comments h3 a {
+.color-palette-pomegranate #comments h3 a,
+.theme-logo.site-name.color-palette-pomegranate h1.site-name:after {
   color: #c0392b;
 }
 
@@ -871,7 +865,8 @@ ul.links.inline li {
 .color-palette-greengray a,
 .color-palette-greengray a.active,
 .color-palette-greengray li a.active,
-.color-palette-greengray #comments h3 a {
+.color-palette-greengray #comments h3 a,
+.theme-logo.site-name.color-palette-greengray h1.site-name:after {
   color: #7f8c8d;
 }
 
@@ -911,7 +906,8 @@ ul.links.inline li {
 .color-palette-pink a,
 .color-palette-pink a.active,
 .color-palette-pink li a.active,
-.color-palette-pink #comments h3 a {
+.color-palette-pink #comments h3 a,
+.theme-logo.site-name.color-palette-pink h1.site-name:after {
   color: #b72898;
 }
 
