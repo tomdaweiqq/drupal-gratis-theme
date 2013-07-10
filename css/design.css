@@ -66,6 +66,10 @@ h1.site-name a:hover {
   color: #fff;
 }
 
+h1.page-header {
+  text-transform: capitalize;
+}
+
 .theme-logo.site-name h1.site-name:after {
   content: "\003A";
   margin-left: -4px;
@@ -137,6 +141,7 @@ ol li {
 }
 
 #logo-img {
+  max-height: 40px;
   margin-top: 8px;
 }
 
@@ -164,6 +169,15 @@ figcaption {
   font-style: italic;
 }
 
+article .field li {
+  padding-left: 24px;
+}
+
+article .field .icon-fixed-width {
+  margin-left: -17px;
+  line-height: 1.7em;
+}
+
 #breadcrumbs {
   padding-top: 8px;
 }
@@ -180,7 +194,6 @@ figcaption {
 
 #branding-wrapper {
   background: #333;
-  border-top: 2px solid #6a8500;
 }
 
 h3.branding {
@@ -189,6 +202,10 @@ h3.branding {
   margin: 0;
   padding: 2px 0;
   display: inline-block;
+}
+
+.site-name h3.branding {
+  padding-left: 6px;
 }
 
 .page-node h1.page-title {
@@ -433,6 +450,12 @@ p.comment-time {
 .comment-by-node-author .submitted {
   background: #eaeaea;
   padding: 6px;
+}
+
+.comment-by-node-author .submitted:after {
+  content: 'Author';
+  font-size: .85em;
+  color: #666;
 }
 
 #comments h3 {
@@ -776,6 +799,10 @@ ul.links.inline li {
 .color-palette-purple input[type=reset],
 .color-palette-purple .menu-button {
   background: #491f70;
+}
+
+.color-palette-purple #branding-wrapper {
+  background: #999;
 }
 
 .color-palette-purple #main-menu ul li.level-2 a {
