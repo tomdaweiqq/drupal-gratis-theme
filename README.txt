@@ -22,7 +22,9 @@ you'll need to download and enable the jQuery Update Module
 at least jQuery 1.7 or later. Once jQuery Update is installed, visit
 /admin/config/development/jquery_update to set your options. 
 As of July, 2013, I would recommend the 2.x-dev branch 
-cof jQuery Update.
+of jQuery Update. You'll probably want to set the default to at least 1.7 
+and admin pages to 1.5 though as things tend to break with a newer 
+version with regard to Views UI and other admin screens. 
 
 -- CONFIGURATION --
 
