@@ -369,7 +369,6 @@ span.image-block,
   overflow: hidden;
   padding: 0 30px 0 0;
   vertical-align: top;
-  width: 16%;
 }
 
 .comment .attribution img {
@@ -417,7 +416,6 @@ span.image-block,
   padding: 10px 25px;
   position: relative;
   vertical-align: top;
-  width: 84%;
 }
 
 .comment .indented {
