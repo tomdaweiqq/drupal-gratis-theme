@@ -111,20 +111,25 @@
 }
 
 @media (max-width: 480px) {
+
   .grid-container {
     max-width: 460px;
   }
+
+  .node-teaser .field-type-image {
+    float: none;
+    margin-left: 0;
+  }
+
+  figure {
+    margin: 0 0 6px 0;
+  }
+
+    .node-teaser .field-type-image img {
+      border: none;
+      height: auto;
+      width: 100%;
+    }
+
 }
 
-a.logo {
-  position: relative;
-  top: -30px;
-}
-
-a.logo img {
-  max-width: 84%;
-}
-
-.region-top-bar .social {
-  margin: 12px 0 0 0;
-}
