@@ -132,12 +132,12 @@
 
   .comment .attribution {
     margin-bottom: 10px;
-    width: 100%;
+    width: 95%;
   }
 
   .user-picture {
     float: left;
-    width: 28%;
+    width: 31%;
   }
 
   .comment-by-node-author .submitted,
