@@ -71,7 +71,9 @@ $('#main-menu li.level-1').on('mouseover', function() {
 $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
 $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
-$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-fixed-width">&#xf054;</i>');
+
+$('.is-node article .field-name-body ul, .field-type-text-with-summary ul, .field-type-text ul, .sidebar .block-content ul').addClass('icons-ul');
+$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-li icon-chevron-right"></i>');
 
 // Node block - this should come last. It gets appened to the body field if it exists.
   if ( $(".field").hasClass("field-name-body")) {
