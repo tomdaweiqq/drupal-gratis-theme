@@ -649,7 +649,8 @@ ul.links.inline li {
 .color-palette-orange a.active,
 .color-palette-orange li a.active,
 .color-palette-orange #comments h3 a,
-.theme-logo.site-name.color-palette-orange h1.site-name:after {
+.theme-logo.site-name.color-palette-orange h1.site-name:after,
+.color-palette-orange .icon-quote-left {
   color: #e04604;
 }
 
@@ -694,7 +695,8 @@ ul.links.inline li {
 .color-palette-turquoise a.active,
 .color-palette-turquoise li a.active,
 .color-palette-turquoise #comments h3 a,
-.theme-logo.site-name.color-palette-turquoise  h1.site-name:after {
+.theme-logo.site-name.color-palette-turquoise  h1.site-name:after,
+.color-palette-turquoise .icon-quote-left {
   color: #02b4ce;
 }
 
@@ -743,7 +745,8 @@ ul.links.inline li {
 .color-palette-green a.active, 
 .color-palette-green li a.active,
 .color-palette-green #comments h3 a,
-.theme-logo.site-name.color-palette-green h1.site-name:after {
+.theme-logo.site-name.color-palette-green h1.site-name:after,
+.color-palette-green .icon-quote-left {
   color: #6a8500;
 }
 
@@ -788,7 +791,8 @@ ul.links.inline li {
 .color-palette-purple a.active,
 .color-palette-purple li a.active,
 .color-palette-purple #comments h3 a,
-.theme-logo.site-name.color-palette-purple h1.site-name:after {
+.theme-logo.site-name.color-palette-purple h1.site-name:after,
+.color-palette-purple .icon-quote-left {
   color: #491f70;
 }
 
@@ -837,7 +841,8 @@ ul.links.inline li {
 .color-palette-seafoam a.active,
 .color-palette-seafoam li a.active,
 .color-palette-seafoam #comments h3 a,
-.theme-logo.site-name.color-palette-seafoam h1.site-name:after {
+.theme-logo.site-name.color-palette-seafoam h1.site-name:after,
+.color-palette-seafoam .icon-quote-left {
   color: #16a085;
 }
 
@@ -882,7 +887,8 @@ ul.links.inline li {
 .color-palette-pomegranate a.active,
 .color-palette-pomegranate li a.active,
 .color-palette-pomegranate #comments h3 a,
-.theme-logo.site-name.color-palette-pomegranate h1.site-name:after {
+.theme-logo.site-name.color-palette-pomegranate h1.site-name:after,
+.color-palette-pomegranate .icon-quote-left {
   color: #c0392b;
 }
 
@@ -927,7 +933,8 @@ ul.links.inline li {
 .color-palette-greengray a.active,
 .color-palette-greengray li a.active,
 .color-palette-greengray #comments h3 a,
-.theme-logo.site-name.color-palette-greengray h1.site-name:after {
+.theme-logo.site-name.color-palette-greengray h1.site-name:after,
+.color-palette-greengray .icon-quote-left {
   color: #7f8c8d;
 }
 
@@ -972,7 +979,8 @@ ul.links.inline li {
 .color-palette-pink a.active,
 .color-palette-pink li a.active,
 .color-palette-pink #comments h3 a,
-.theme-logo.site-name.color-palette-pink h1.site-name:after {
+.theme-logo.site-name.color-palette-pink h1.site-name:after, 
+.color-palette-pink .icon-quote-left {
   color: #b72898;
 }
 
