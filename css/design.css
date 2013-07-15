@@ -312,15 +312,19 @@ aside .region.region-sidebar-second {
 }
 
 .field-type-taxonomy-term-reference span.field-label {
+  color: #666;
   float: left;
   font-weight: bold;
+  margin-right: 0;
+  margin-top: 4px;
 }
 
-.field-type-taxonomy-term-reference ul li {
+#content .field-type-taxonomy-term-reference ul li {
   background: url(../images/tag.png) no-repeat;
   display: inline-block;
   height: 22px;
-  margin-right: 10px;
+  margin-left: 6px;
+  margin-right: 4px;
   padding: 0 8px 0 16px;
   text-transform: uppercase;
 }
@@ -589,12 +593,12 @@ ul.links.inline li {
 }
 
 #main-menu li a {
-  font-family: 'Open Sans', serif;
   font-size: 1.01em;
   font-weight: normal;
   letter-spacing: .1em;
   text-rendering: optimizeLegibility;
   text-transform: capitalize;
+  font-family: 'Open Sans', serif;
 }
 
 .menu-navigation ul {
