@@ -40,10 +40,9 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
-?>
-<?php print $doctype; ?>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
-<head<?php print $rdf->profile; ?>>
+?><!DOCTYPE html>
+<html<?php print $html_attributes; ?>>
+<head>
   <?php print $head; ?>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">

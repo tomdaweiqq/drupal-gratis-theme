@@ -21,20 +21,27 @@ EOL;
 
   drupal_add_html_head($element, 'javascript');
 
-  $vars['rdf'] = new stdClass();
-
-  if (module_exists('rdf')) {
-    $vars['doctype'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">' . "\n";
-    $vars['rdf']->version = ' version="HTML+RDFa 1.1"';
-    $vars['rdf']->namespaces = $vars['rdf_namespaces'];
-    $vars['rdf']->profile = ' profile="' . $vars['grddl_profile'] . '"';
+  $vars['html_attributes_array'] = array();
+  $vars['body_attributes_array'] = array();
+ 
+  // HTML element attributes.
+  $vars['html_attributes_array']['lang'] = $vars['language']->language;
+  $vars['html_attributes_array']['dir']  = $vars['language']->dir;
+ 
+  // Adds RDF namespace prefix bindings in the form of an RDFa 1.1 prefix
+  // attribute inside the html element.
+  if (function_exists('rdf_get_namespaces')) {
+    $vars['rdf'] = new stdClass;
+    foreach (rdf_get_namespaces() as $prefix => $uri) {
+      $vars['rdf']->prefix .= $prefix . ': ' . $uri . "\n";
+    }
+    $vars['html_attributes_array']['prefix'] = $vars['rdf']->prefix;
   }
-  else {
-    $vars['doctype'] = '<!DOCTYPE html>' . "\n";
-    $vars['rdf']->version = '';
-    $vars['rdf']->namespaces = '';
-    $vars['rdf']->profile = '';
-  }
+ 
+  // BODY element attributes.
+  $vars['body_attributes_array']['class'] = $vars['classes_array'];
+  $vars['body_attributes_array'] += $vars['attributes_array'];
+  $vars['attributes_array'] = '';
 
   // Add opensans from Google fonts.
   // http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400italic,600italic,700italic,400,600,700
@@ -145,10 +152,33 @@ EOL;
 }
 
 /**
+ * Implements hook_process_html().
+ */
+function gratis_process_html(&$vars) {
+  // Flatten out html_attributes and body_attributes.
+  $vars['html_attributes'] = drupal_attributes($vars['html_attributes_array']);
+  $vars['body_attributes'] = drupal_attributes($vars['body_attributes_array']);
+}
+
+/**
  * Implements hook_html_head_alter().
  */
 function gratis_html_head_alter(&$head_elements) {
-  // Overwrite default meta character tag with HTML5 version.
+
+  global $base_url;
+  // Get our current uri.
+  $uri = drupal_get_path_alias();
+
+  // We try to match it by forming the right key with the info we have.
+  $key = 'drupal_add_html_head_link:canonical:</' . $uri . '>;';
+
+  // Check that it is set, then we re-set it to the correct full url.
+  if (isset($head_elements[$key])) {
+    // Alter our head_element.
+    $head_elements[$key]['#attributes']['href'] = $base_url . '/' .$uri;
+  }
+
+  // Simplify the meta charset declaration.
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8',
   );
