@@ -513,6 +513,6 @@ function gratis_menu_link(array $vars) {
  * @see comment.tpl.php
  */
 function gratis_preprocess_comment(&$vars) {
-  $vars['created'] = date('m / j / y', $vars['elements']['#node']->created);
-  $vars['changed'] = date('m / j / y', $vars['elements']['#node']->created);
+  $vars['created'] = date('m / j / y', $vars['elements']['#comment']->created);
+  $vars['changed'] = date('m / j / y', $vars['elements']['#comment']->created);
 }

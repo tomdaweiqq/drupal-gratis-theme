@@ -98,7 +98,8 @@
   <span class="submit-wrapper">
     <!-- Overidden in template.php to show just username. -->
     <span class="submitted">
-      <i class="icon-fixed-width">&#xf007;</i> <?php print $submitted; ?> |  <i class="icon-fixed-width">&#xf073;</i> <?php echo date("j", $node->created); ?> / <?php echo date("M", $node->created); ?> / <?php echo date("Y", $node->created); ?>
+      <i class="icon-fixed-width">&#xf007;</i> <?php print $submitted; ?> |  <i class="icon-fixed-width">&#xf073;</i> 
+      <?php print $thedate; ?> / <?php print $themonth; ?> / <?php print $theyear; ?>
     </span>
   </span><!--//submit-wrapper-->
 <?php endif; ?>
