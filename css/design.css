@@ -633,6 +633,14 @@ ul.links.inline li {
   width: 85%;
 }
 
+/* fix RTL from system.menus-rtl.css */
+
+li.expanded,
+li.collapsed,
+li.leaf {
+  padding: 0;
+}
+
 /* Colors */
 
 /* Orange */

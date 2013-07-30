@@ -113,6 +113,15 @@ input[type="password"] {
   padding: 7px 9px;
 }
 
+html.js  input.form-autocomplete {
+  background-position: 99% 9px;
+  padding: 3px 8px;
+}
+
+html.js input.throbbing {
+  background-position: 100% -12px;
+}
+
 select[multiple],
 select[size] {
   height: auto;
