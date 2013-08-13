@@ -82,6 +82,30 @@
   .field-items.tags-list {
     float: left;
   }
+
+  #branding-wrapper {
+    text-align: left;
+  }
+
+  .grid-container.banner {
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid-75.branding-grid {
+    border-top: 1px solid #eaeaea;
+  }
+
+  #logo-img {
+    max-height: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+  }
+
+  #logo {
+    height: 52px;
+}
+
 }
 
 @media (min-width: 481px) {

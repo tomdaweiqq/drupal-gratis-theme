@@ -49,9 +49,9 @@ h1 {
 
 h1.site-name {
   display: inline-block;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-family: 'Open Sans', arial, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   margin: 5px 0 8px 0;
   text-rendering: optimizeLegibility;
 }
@@ -144,7 +144,8 @@ ol {
 }
 
 #branding-wrapper {
-  background: #444;
+  text-align: right;
+  padding-top: 6px;
 }
 
 #footer {
@@ -154,13 +155,13 @@ ol {
 }
 
 #logo-img {
-  max-height: 40px;
+  max-height: 48px;
   margin-top: 8px;
 }
 
 #top-bar {
   background: #000;
-  height: 58px;
+  padding: 6px 0 8px 0;
 }
 
  .ie10 #top-bar {
@@ -200,13 +201,9 @@ article .field li {
   padding: 0;
 }
 
-#branding-wrapper {
-  background: #333;
-}
-
 h3.branding {
   color: #fff;
-  font-size: 1.4em;
+  font-size: 1.3em;
   margin: 0;
   padding: 2px 0;
   display: inline-block;
@@ -554,19 +551,22 @@ ul.links.inline li {
   padding-left: 0;
 }
 
+#menu-wrapper{
+  background: #000;
+}
+
 #main-menu {
-  float: right;
   position: relative;
-  z-index: 5000;
+  z-index: 100;
 }
 
 #main-menu ul li .ula-depth-1 {
   background: #000;
-  padding: 1.5em 3em 1.5em .5em;
+  padding: .7em 3.8em .7em .9em;
 }
 
 #main-menu ul li.li-depth-0:not(.item-with-ul) a {
-  padding: 1.5em .5em;
+  padding: .7em .8em;
 }
 
 #main-menu ul li a {
@@ -649,7 +649,7 @@ li.leaf {
   border-left: 5px solid #e04604;
 }
 
-.color-palette-orange #branding-wrapper {
+.color-palette-orange #menu-wrapper {
   border-top: 2px solid #e04604;
 }
 
@@ -695,7 +695,7 @@ li.leaf {
   border-left: 5px solid #02b4ce;
 }
 
-.color-palette-turquoise #branding-wrapper {
+.color-palette-turquoise #menu-wrapper {
   border-top: 2px solid #02b4ce;
 }
 
@@ -745,7 +745,7 @@ li.leaf {
   border-left: 5px solid #6a8500;
 }
 
-.color-palette-green #branding-wrapper {
+.color-palette-green #menu-wrapper {
   border-top: 2px solid #6a8500;
 }
 
@@ -791,7 +791,7 @@ li.leaf {
   border-left: 5px solid #491f70;
 }
 
-.color-palette-purple #branding-wrapper {
+.color-palette-purple #menu-wrapper {
   border-top: 2px solid #491f70;
 }
 
@@ -803,9 +803,17 @@ li.leaf {
 .color-palette-purple a.active,
 .color-palette-purple li a.active,
 .color-palette-purple #comments h3 a,
-.theme-logo.site-name.color-palette-purple h1.site-name:after,
 .color-palette-purple .icon-quote-left {
   color: #491f70;
+}
+
+.theme-logo.site-name.color-palette-purple h1.site-name:after,
+.theme-logo.site-name.color-palette-purple h1.site-name a {
+  color: #7629bd;
+}
+
+.theme-logo.site-name.color-palette-purple h1.site-name a:hover {
+  color: #fff;
 }
 
 .color-palette-purple a:hover {
@@ -823,10 +831,6 @@ li.leaf {
   background: #491f70;
 }
 
-.color-palette-purple #branding-wrapper {
-  background: #999;
-}
-
 .color-palette-purple #main-menu ul li.level-2 a {
   background: #333;
 }
@@ -841,7 +845,7 @@ li.leaf {
   border-left: 5px solid #16a085;
 }
 
-.color-palette-seafoam #branding-wrapper {
+.color-palette-seafoam #menu-wrapper {
   border-top: 2px solid #16a085;
 }
 
@@ -887,7 +891,7 @@ li.leaf {
   border-left: 5px solid #c0392b;
 }
 
-.color-palette-pomegranate #branding-wrapper {
+.color-palette-pomegranate #menu-wrapper {
   border-top: 2px solid #c0392b;
 }
 
@@ -933,7 +937,7 @@ li.leaf {
   border-left: 5px solid #7f8c8d;
 }
 
-.color-palette-greengray #branding-wrapper {
+.color-palette-greengray #menu-wrapper {
   border-top: 2px solid #7f8c8d;
 }
 
@@ -979,7 +983,7 @@ li.leaf {
   border-left: 5px solid #b72898;
 }
 
-.color-palette-pink #branding-wrapper {
+.color-palette-pink #menu-wrapper {
   border-top: 2px solid #b72898;
 }
 

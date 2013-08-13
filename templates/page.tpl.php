@@ -74,10 +74,11 @@
 <div id="wrapper">
 
   <div id="top-bar">
-    <header role="banner" class="grid-container" style="max-width:<?php print $thegrid; ?>">
-      <div class="grid-15">
+    <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
+      <div class="grid-25 logo-wrapper">
         <span id="brand">
           <div id="logo">
+            
             <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
               <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
@@ -88,41 +89,15 @@
             <?php print $site_name; ?></a>
           </h1>
      
-
             <?php endif; ?>
           </div>
         </span>
-      </div>
-      <!--//grid-25-->
+      </div><!--//logo-wrapper-->
 
-      <div class="grid-85">
-        <section id="main-menu" role="navigation">
-          <?php if ($main_menu): ?>
-          <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
-          <nav class="menu-navigation">
-            <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-        </nav>
-      <?php endif; ?>
-
-      <!-- for third party menu systems or modules-->
-      <?php if ($page['thirdparty_menu']): ?>
-      <?php print render($page['thirdparty_menu']); ?>
-    <?php endif; ?>
-
-  </section>
-</div>
-<!--//grid-75--> 
-</header>
-</div>
-
-
+<div class="grid-75 branding-grid">
 <?php if ($site_slogan || $site_name) : ?>
   <div id="branding-wrapper">
-    <header role="branding" class="grid-container" style="max-width:<?php print $thegrid; ?>">
-      <div class="grid-100">
-        
+    
         <?php if ($logo): ?>
         <?php if ($site_name) : ?>
         <h1 class="site-name">
@@ -137,9 +112,35 @@
           <?php endif; ?>
 
       </div>
+<?php endif; ?>
+      </div><!--//branding-grid-->
+
 </header>
 </div>
-<?php endif; ?>
+
+
+<div id="menu-wrapper">
+  <div class="grid-container" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-100">
+      <section id="main-menu" role="navigation">
+        <?php if ($main_menu): ?>
+        <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
+        <nav class="menu-navigation">
+          <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
+        <?php endif; ?>
+      </nav>
+    <?php endif; ?>
+
+    <!-- for third party menu systems or modules-->
+    <?php if ($page['thirdparty_menu']): ?>
+    <?php print render($page['thirdparty_menu']); ?>
+  <?php endif; ?>
+</section>
+</div>
+</div>
+</div>
+
 
     <?php if ($breadcrumb): ?>
   <div id="breadcrumbs">
