@@ -104,27 +104,12 @@
   </span><!--//submit-wrapper-->
 <?php endif; ?>
 
-<?php if (!$teaser) : ?>
-  <?php if (!empty($content['field_tags'])): ?>
-  <?php print render($content['field_tags']); ?>
-<?php endif; ?>
-<?php endif; ?>
-
-<?php if (!empty($content['field_image'])): ?>
-  <?php print render($content['field_image']); ?>
-<?php endif; ?>
-
 <?php
 // We hide the comments and links now so that we can render them later.
 hide($content['comments']);
 hide($content['links']);
-hide($content['body']);
-hide($content['field_tags']);
-hide($content['field_image']);
 print render($content);
 ?>
-
-<?php print render($content['body']); ?>
 
 <div class="clearfix">
 
@@ -134,11 +119,6 @@ print render($content);
   </nav>
 <?php endif; ?>
 
-<?php if ($teaser) : ?>
-  <?php if (!empty($content['field_tags'])): ?>
-  <?php print render($content['field_tags']); ?>
-<?php endif; ?>
-<?php endif; ?>
 
 <?php if (!empty($content['comments'])): ?>
   <?php print render($content['comments']); ?>

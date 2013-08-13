@@ -115,14 +115,15 @@ EOL;
   // Add FlexNav.
   drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
 
-  // Add general JS.
-  drupal_add_js(path_to_theme() . '/js/scripts.js',
+// Add general JS.
+  drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js',
     array(
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'weight' => '9999',
     )
     );
+  $vars['scripts'] = drupal_get_js();
 
   if (!$vars['is_front']) {
     // Add unique class for each page.
