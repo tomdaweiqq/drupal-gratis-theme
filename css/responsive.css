@@ -28,11 +28,25 @@
     width: 80%;
   }
 
-  #main-menu {
-    float: right;
+  .menu-navigation {
+    position: absolute;
+    right: 0;
+    top: 59px;
+    z-index: 200;
+}
+
+  .menu-button {
+    background: #E04604;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    padding: 1em;
     position: absolute;
     right: 0;
     top: 0;
+    width: 74px;
   }
 
   #main-menu ul li.li-depth-0:not(.item-with-ul) a {
@@ -101,11 +115,6 @@
     margin-top: inherit;
     margin-bottom: inherit;
   }
-
-  #logo {
-    height: 52px;
-}
-
 }
 
 @media (min-width: 481px) {

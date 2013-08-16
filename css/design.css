@@ -555,10 +555,11 @@ ul.links.inline li {
   background: #000;
 }
 
-#main-menu {
-  position: relative;
-  z-index: 100;
+#logo {
+  height: 52px;
+  overflow: hidden;
 }
+
 
 #main-menu ul li .ula-depth-1 {
   background: #000;
