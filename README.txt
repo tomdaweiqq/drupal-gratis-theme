@@ -39,10 +39,16 @@ Orange, Olive Green, Pomegranate Red, Seafoam Green, Green Gray
 
 - Toggle Breadcrumbs on or off
 
-- Default logo changes for each color palette You can also toggle this off
-and use your own logo.) ***  Note, it's hard to anticipate what effect
-various shapes and sizes a custom uploaded logos will have on the theme so
-unfortunately support cannot be offered through the issue queue for things
+LOGOS
+- Default theme logo changes for each color palette.
+- You can also toggle this off and use your own logo. Do this by 
+Unchecking in the theme settings, "Use theme Logo?". Once you
+do this and upload your own logo, it should now display and 
+override the default logo.
+
+*** Note, it's hard to anticipate what effect various shapes and sizes of a 
+custom uploaded logo will have on the theme so unfortunately support 
+cannot be offered through the issue queue for things
 like this.
 
 - Local CSS - Choose to enable local.css file within the theme folder.
@@ -50,7 +56,7 @@ like this.
 - Custom Path CSS -  Define a custom path for your own css file to use with
 the theme.
 
-- Tertiary Menus -  Currently not supported but planned.
+- Tertiary Menus -  Currently not supported but possibly planned.
 
 - Customizable layout width in the theme settings UI, go as wide as you
 want! It's all percentage based within the parent container. That's one of
