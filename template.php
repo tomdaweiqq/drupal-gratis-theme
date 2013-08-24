@@ -23,21 +23,22 @@ EOL;
 
   $vars['html_attributes_array'] = array();
   $vars['body_attributes_array'] = array();
- 
+
   // HTML element attributes.
   $vars['html_attributes_array']['lang'] = $vars['language']->language;
   $vars['html_attributes_array']['dir']  = $vars['language']->dir;
- 
+
   // Adds RDF namespace prefix bindings in the form of an RDFa 1.1 prefix
   // attribute inside the html element.
   if (function_exists('rdf_get_namespaces')) {
-    $vars['rdf'] = new stdClass;
+    $vars['rdf'] = new stdClass();
+    $vars['rdf']->prefix = '';
     foreach (rdf_get_namespaces() as $prefix => $uri) {
       $vars['rdf']->prefix .= $prefix . ': ' . $uri . "\n";
     }
     $vars['html_attributes_array']['prefix'] = $vars['rdf']->prefix;
   }
- 
+
   // BODY element attributes.
   $vars['body_attributes_array']['class'] = $vars['classes_array'];
   $vars['body_attributes_array'] += $vars['attributes_array'];
