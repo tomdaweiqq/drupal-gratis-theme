@@ -28,6 +28,11 @@
     width: 80%;
   }
 
+  .header-grid {
+    float: none;
+    width: 100%;
+  }
+
   .menu-navigation {
     position: absolute;
     right: 0;

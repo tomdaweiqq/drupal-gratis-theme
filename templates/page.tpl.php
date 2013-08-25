@@ -75,7 +75,7 @@
 
   <div id="top-bar">
     <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
-      <div class="grid-25 logo-wrapper">
+      <div class="grid-25 logo-wrapper header-grid">
         <span id="brand">
           <div id="logo">
             
@@ -94,7 +94,7 @@
         </span>
       </div><!--//logo-wrapper-->
 
-<div class="grid-75 branding-grid">
+<div class="grid-75 branding-grid header-grid">
 <?php if ($site_slogan || $site_name) : ?>
   <div id="branding-wrapper">
     
