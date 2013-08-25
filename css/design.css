@@ -556,7 +556,7 @@ ul.links.inline li {
 }
 
 #logo {
-  height: 52px;
+  max-height: 52px;
   overflow: hidden;
 }
 

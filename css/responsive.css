@@ -110,6 +110,10 @@
     border-top: 1px solid #eaeaea;
   }
 
+  .grid-25.logo-wrapper {
+    height: 53px;
+  }
+
   #logo-img {
     max-height: inherit;
     margin-top: inherit;
