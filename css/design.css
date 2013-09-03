@@ -642,6 +642,16 @@ li.leaf {
   padding: 0;
 }
 
+#menu-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+#content {
+  position: relative;
+  z-index: 1;
+}
+
 /* Colors */
 
 /* Orange */
