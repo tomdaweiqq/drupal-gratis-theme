@@ -34,7 +34,7 @@
   }
 
   .menu-navigation {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 59px;
     z-index: 200;
@@ -48,7 +48,7 @@
     display: block;
     height: 32px;
     padding: 1em;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     width: 74px;

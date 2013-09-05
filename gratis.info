@@ -1,4 +1,4 @@
-name = gratis
+name = Gratis
 description = Gratis is a responsive Drupal 7 theme designed and developed by Danny Englander, <a href="http://highrockmedia.com">High Rock Media</a>
 core = 7.x
 engine = phptemplate
@@ -47,5 +47,4 @@ settings[breadcrumbs]  = 1
 settings[gratis_viewport]  = 0
 settings[theme_color_palette]  = orange
 settings[gratis_localcss]  = 0
-settings[gratis_viewport]  = 0
 settings[gratis_custom_css_location]  = 0
