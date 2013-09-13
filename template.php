@@ -113,8 +113,12 @@ EOL;
     }
   }
 
-  // Add FlexNav.
-  drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
+  // Add FlexNav to any page except for the admin area. 
+  if (arg(0) == 'admin') {
+  } 
+  else {
+    drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
+}
 
 // Add general JS.
   drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js',

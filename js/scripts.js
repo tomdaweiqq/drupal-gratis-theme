@@ -14,7 +14,7 @@
 * Toggle the main menu, it's hidden initially
 * to prevent FOUC. 
 */
-$("#main-menu ul.flexnav").toggle();
+$("#main-menu ul.flexnav").show();
 
 // Set ul depths for better theming.
 $('#main-menu ul').each(function() {
@@ -35,7 +35,9 @@ $('#main-menu ul li a').each(function() {
       });
 
 // Start flexnav.
-$(".flexnav").flexNav();
+if($().flexNav) {
+  $(".flexnav").flexNav();
+}
 
       // End mobile menu.
 
@@ -55,17 +57,15 @@ $(".flexnav").flexNav();
   });
 
   // Make nav arrow and link uniform classes.
-$('#main-menu li.level-1').on('mouseover', function() {
-    var li$ = $(this);
-    li$.parent('ul').find('li').removeClass('hover-state');
-    li$.addClass('hover-state');
-})
-
-.on('mouseout', function() {
-    var li$ = $(this);
-    li$.removeClass('hover-state');
-    li$.parent('ul').find('li.current').addClass('hover-state');
-});
+// $('#main-menu li.level-1').on('mouseover', function() {
+//     var li$ = $(this);
+//     li$.parent('ul').find('li').removeClass('hover-state');
+//     li$.addClass('hover-state');
+// }).on('mouseout', function() {
+//     var li$ = $(this);
+//     li$.removeClass('hover-state');
+//     li$.parent('ul').find('li.current').addClass('hover-state');
+// });
 
 // Add comment icons using font awesome.
 $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
