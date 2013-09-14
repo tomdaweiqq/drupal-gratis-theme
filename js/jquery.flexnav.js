@@ -1,36 +1,26 @@
-/*
-  FlexNav.js 1.1
+(function ($) {
+// Add drupal 7 code.
+Drupal.behaviors.flexnav = {
+  attach:function (context, settings) {
+// End drupal calls.
 
-  Created by Jason Weaver http://jasonweaver.name
-  Released under http://unlicense.org/
+/*
+	FlexNav.js 0.8
+
+	Copyright 2013, Jason Weaver http://jasonweaver.name
+	Released under http://unlicense.org/
 
 //
 */
 
-
-(function ($) {
-// Add drupal 7 code.
-Drupal.behaviors.flexnav = {
-  attach:function (context, settings) {
-// End drupal calls.
-
- $ = jQuery;
-
   $.fn.flexNav = function(options) {
-    var $nav, breakpoint, flag, resetMenu, resizer, selector, settings, showMenu;
+    var $nav, breakpoint, isDragging, nav_open, resizer, settings;
     settings = $.extend({
-      'animationSpeed': 250,
-      'transitionOpacity': true,
-      'buttonSelector': '.menu-button',
-      'hoverIntent': false,
-      'hoverIntentTimeout': 150
+      'animationSpeed': 100
     }, options);
     $nav = $(this);
-    flag = false;
-    $nav.addClass('with-js');
-    if (settings.transitionOpacity === true) {
-      $nav.addClass('opacity');
-    }
+    nav_open = false;
+    isDragging = false;
     $nav.find("li").each(function() {
       if ($(this).has("ul").length) {
         return $(this).addClass("item-with-ul").find("ul").hide();
@@ -39,238 +29,79 @@ Drupal.behaviors.flexnav = {
     if ($nav.data('breakpoint')) {
       breakpoint = $nav.data('breakpoint');
     }
-    showMenu = function() {
-      if ($nav.hasClass('lg-screen') === true) {
-        if (settings.transitionOpacity === true) {
-          return $(this).find('>ul').addClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"],
-            opacity: "toggle"
-          }, settings.animationSpeed);
-        } else {
-          return $(this).find('>ul').addClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"]
-          }, settings.animationSpeed);
-        }
-      }
-    };
-    resetMenu = function() {
-      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('show') === true) {
-        if (settings.transitionOpacity === true) {
-          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"],
-            opacity: "toggle"
-          }, settings.animationSpeed);
-        } else {
-          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"]
-          }, settings.animationSpeed);
-        }
-      }
-    };
     resizer = function() {
       if ($(window).width() <= breakpoint) {
         $nav.removeClass("lg-screen").addClass("sm-screen");
-        return $('.one-page li a').on('click', function() {
+        $('.one-page li a').on('click', function() {
           return $nav.removeClass('show');
         });
-      } else if ($(window).width() > breakpoint) {
+        return $('.item-with-ul').off();
+      } else {
         $nav.removeClass("sm-screen").addClass("lg-screen");
         $nav.removeClass('show');
-        if (settings.hoverIntent === true) {
-          return $('.item-with-ul').hoverIntent({
-            over: showMenu,
-            out: resetMenu,
-            timeout: settings.hoverIntentTimeout
-          });
-        } else if (settings.hoverIntent === false) {
-          return $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu);
-        }
+        return $('.item-with-ul').on('mouseenter', function() {
+          return $(this).find('>ul').addClass('show').stop(true, true).slideDown(settings.animationSpeed);
+        }).on('mouseleave', function() {
+          return $(this).find('>ul').removeClass('show').stop(true, true).slideUp(settings.animationSpeed);
+        });
       }
     };
-    $(settings['buttonSelector']).data('navEl', $nav);
-    selector = '.item-with-ul, ' + settings['buttonSelector'];
-    $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
-    selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
-    $(selector).on('touchstart click', function(e) {
-      var $btnParent, $thisNav, bs;
+    $('.item-with-ul, .menu-button').append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
+    $('.menu-button, .menu-button .touch-button').on('touchstart mousedown', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      bs = settings['buttonSelector'];
-      $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
-      $thisNav = $btnParent.data('navEl');
-      if (flag === false) {
-        flag = true;
-        setTimeout(function() {
-          return flag = false;
-        }, 301);
-        return $thisNav.toggleClass('show');
+      console.log(isDragging);
+      return $(this).on('touchmove mousemove', function(e) {
+        var msg;
+        msg = e.pageX;
+        isDragging = true;
+        return $(window).off("touchmove mousemove");
+      });
+    }).on('touchend mouseup', function(e) {
+      var $parent;
+      e.preventDefault();
+      e.stopPropagation();
+      isDragging = false;
+      $parent = $(this).parent();
+      if (isDragging === false) {
+        console.log('clicked');
+      }
+      if (nav_open === false) {
+        $nav.addClass('show');
+        return nav_open = true;
+      } else if (nav_open === true) {
+        $nav.removeClass('show');
+        return nav_open = false;
       }
     });
-    $('.touch-button').on('touchstart click', function(e) {
-      var $sub, $touchButton;
+    $('.touch-button').on('touchstart mousedown', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      return $(this).on('touchmove mousemove', function(e) {
+        isDragging = true;
+        return $(window).off("touchmove mousemove");
+      });
+    }).on('touchend mouseup', function(e) {
+      var $sub;
       e.preventDefault();
       e.stopPropagation();
       $sub = $(this).parent('.item-with-ul').find('>ul');
-      $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
-      if (flag === false) {
-        flag = true;
-        setTimeout(function() {
-          return flag = false;
-        }, 301);
-        if ($nav.hasClass('lg-screen') === true) {
-          $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
-        }
-        if ($sub.hasClass('show') === true) {
-          $sub.removeClass('show').slideUp(settings.animationSpeed);
-          return $touchButton.removeClass('active');
-        } else if ($sub.hasClass('show') === false) {
-          $sub.addClass('show').slideDown(settings.animationSpeed);
-          return $touchButton.addClass('active');
-        }
+      if ($nav.hasClass('lg-screen') === true) {
+        $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
+      }
+      if ($sub.hasClass('show') === true) {
+        return $sub.removeClass('show').slideUp(settings.animationSpeed);
+      } else if ($sub.hasClass('show') === false) {
+        return $sub.addClass('show').slideDown(settings.animationSpeed);
       }
     });
-    $nav.find('.item-with-ul *').focus(function() {
+    $('.item-with-ul *').focus(function() {
       $(this).parent('.item-with-ul').parent().find(".open").not(this).removeClass("open").hide();
       return $(this).parent('.item-with-ul').find('>ul').addClass("open").show();
     });
     resizer();
     return $(window).on('resize', resizer);
   };
-
-
-}}})
-(jQuery);
-
-
-(function ($) {
-// Add drupal 7 code.
-Drupal.behaviors.flexnav = {
-  attach:function (context, settings) {
-// End drupal calls.
-
- $ = jQuery;
-
-  $.fn.flexNav = function(options) {
-    var $nav, breakpoint, flag, resetMenu, resizer, selector, settings, showMenu;
-    settings = $.extend({
-      'animationSpeed': 250,
-      'transitionOpacity': true,
-      'buttonSelector': '.menu-button',
-      'hoverIntent': false,
-      'hoverIntentTimeout': 150
-    }, options);
-    $nav = $(this);
-    flag = false;
-    $nav.addClass('with-js');
-    if (settings.transitionOpacity === true) {
-      $nav.addClass('opacity');
-    }
-    $nav.find("li").each(function() {
-      if ($(this).has("ul").length) {
-        return $(this).addClass("item-with-ul").find("ul").hide();
-      }
-    });
-    if ($nav.data('breakpoint')) {
-      breakpoint = $nav.data('breakpoint');
-    }
-    showMenu = function() {
-      if ($nav.hasClass('lg-screen') === true) {
-        if (settings.transitionOpacity === true) {
-          return $(this).find('>ul').addClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"],
-            opacity: "toggle"
-          }, settings.animationSpeed);
-        } else {
-          return $(this).find('>ul').addClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"]
-          }, settings.animationSpeed);
-        }
-      }
-    };
-    resetMenu = function() {
-      if ($nav.hasClass('lg-screen') === true && $(this).find('>ul').hasClass('show') === true) {
-        if (settings.transitionOpacity === true) {
-          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"],
-            opacity: "toggle"
-          }, settings.animationSpeed);
-        } else {
-          return $(this).find('>ul').removeClass('show').stop(true, true).animate({
-            height: ["toggle", "swing"]
-          }, settings.animationSpeed);
-        }
-      }
-    };
-    resizer = function() {
-      if ($(window).width() <= breakpoint) {
-        $nav.removeClass("lg-screen").addClass("sm-screen");
-        return $('.one-page li a').on('click', function() {
-          return $nav.removeClass('show');
-        });
-      } else if ($(window).width() > breakpoint) {
-        $nav.removeClass("sm-screen").addClass("lg-screen");
-        $nav.removeClass('show');
-        if (settings.hoverIntent === true) {
-          return $('.item-with-ul').hoverIntent({
-            over: showMenu,
-            out: resetMenu,
-            timeout: settings.hoverIntentTimeout
-          });
-        } else if (settings.hoverIntent === false) {
-          return $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu);
-        }
-      }
-    };
-    $(settings['buttonSelector']).data('navEl', $nav);
-    selector = '.item-with-ul, ' + settings['buttonSelector'];
-    $(selector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
-    selector = settings['buttonSelector'] + ', ' + settings['buttonSelector'] + ' .touch-button';
-    $(selector).on('touchstart click', function(e) {
-      var $btnParent, $thisNav, bs;
-      e.preventDefault();
-      e.stopPropagation();
-      bs = settings['buttonSelector'];
-      $btnParent = $(this).is(bs) ? $(this) : $(this).parent(bs);
-      $thisNav = $btnParent.data('navEl');
-      if (flag === false) {
-        flag = true;
-        setTimeout(function() {
-          return flag = false;
-        }, 301);
-        return $thisNav.toggleClass('show');
-      }
-    });
-    $('.touch-button').on('touchstart click', function(e) {
-      var $sub, $touchButton;
-      e.preventDefault();
-      e.stopPropagation();
-      $sub = $(this).parent('.item-with-ul').find('>ul');
-      $touchButton = $(this).parent('.item-with-ul').find('>span.touch-button');
-      if (flag === false) {
-        flag = true;
-        setTimeout(function() {
-          return flag = false;
-        }, 301);
-        if ($nav.hasClass('lg-screen') === true) {
-          $(this).parent('.item-with-ul').siblings().find('ul.show').removeClass('show').hide();
-        }
-        if ($sub.hasClass('show') === true) {
-          $sub.removeClass('show').slideUp(settings.animationSpeed);
-          return $touchButton.removeClass('active');
-        } else if ($sub.hasClass('show') === false) {
-          $sub.addClass('show').slideDown(settings.animationSpeed);
-          return $touchButton.addClass('active');
-        }
-      }
-    });
-    $nav.find('.item-with-ul *').focus(function() {
-      $(this).parent('.item-with-ul').parent().find(".open").not(this).removeClass("open").hide();
-      return $(this).parent('.item-with-ul').find('>ul').addClass("open").show();
-    });
-    resizer();
-    return $(window).on('resize', resizer);
-  };
-
 
 }}})
 (jQuery);
