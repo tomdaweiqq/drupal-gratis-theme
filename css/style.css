@@ -239,3 +239,44 @@ ol {
 .clearfix {
   clear: both;
 }
+
+/* Some basic styling to make admin look prettier. */
+tr.odd {
+  background: #eaeaea;
+}
+
+tr.even {
+  background: #f7f7f7;
+}
+
+th, 
+td, 
+caption {
+  padding: 8px;
+}
+
+div.admin .left {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  width: 44%;
+}
+
+div.admin .right {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  width: 44%;
+}
+
+dd {
+  margin-bottom: 10px;
+}
+
+.messages.error {
+  margin-bottom: 14px;
+}
+
+#context-blockform td.blocks .label {
+  background: #F7F7F7;
+}
