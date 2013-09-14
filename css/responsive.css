@@ -1,8 +1,8 @@
 @media screen and (max-width: 1019px) {
   
-  .grid-container {
+/*  .grid-container {
     max-width: 768px;
-  }
+  }*/
 
 }
 
@@ -70,9 +70,9 @@
     height: 51px;
   }
 
-  .grid-container {
+/*  .grid-container {
     max-width: 468px;
-  }
+  }*/
 
   p.lead {
     font-size: 14px;

@@ -161,19 +161,19 @@ if ($page['preface_first'] || $page['preface_second'] ||
 
     <!--Preface -->
     <?php if (!empty($page['preface_first'])): ?>
-    <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+    <div class="<?php print _gratis_content_preface($precolumns); ?> ">
       <?php print render($page['preface_first']); ?>
     </div>
   <?php endif; ?>
 
   <?php if (!empty($page['preface_second'])): ?>
-  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+  <div class="<?php print _gratis_content_preface($precolumns); ?> ">
     <?php print render($page['preface_second']); ?>
   </div>
 <?php endif; ?>
 
 <?php if (!empty($page['preface_third'])): ?>
-  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+  <div class="<?php print _gratis_content_preface($precolumns); ?> ">
     <?php print render($page['preface_third']); ?>
   </div>
 <?php endif; ?>

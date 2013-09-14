@@ -474,6 +474,33 @@ function _gratis_content_postscript($pscolumns = 1) {
 }
 
 /**
+ * Custom function, returns the correct grid class for the postscript regions.
+ */
+function _gratis_content_preface($precolumns = 1) {
+  $class = FALSE;
+
+  switch ($precolumns) {
+
+    case 1:{
+      $class = 'grid-100 postscript';
+      break;
+      }
+
+    case 2:{
+      $class = 'grid-50 postscript';
+      break;
+      }
+
+    case 3:{
+      $class = 'grid-33 postscript';
+      break;
+      }
+  }
+
+  return $class;
+}
+
+/**
  * Alters the JavaScript/CSS library registry.
  */
 function gratis_css_alter(&$css) {

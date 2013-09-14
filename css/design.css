@@ -225,6 +225,10 @@ span.submitted {
   margin: 0 0 0.25em 1.4em;
 }
 
+.item-list ul.pager {
+  margin-bottom: 20px;
+}
+
 .item-list ul.pager li {
   border: 1px solid #999;
   margin: 0 0 0.25em 1.4em;
@@ -597,10 +601,6 @@ ul.links.inline li {
 
 .menu-navigation ul {
   margin-bottom: 0;
-}
-
-.front #postscript-wrapper {
-  background: #333;
 }
 
 .arrow.icon-fixed-width {
