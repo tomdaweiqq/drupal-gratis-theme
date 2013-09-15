@@ -1,4 +1,4 @@
-Version 1.1, August 25, 2013
+Version 1.2, September 15, 2013
 
 -- SUMMARY --
 
@@ -14,17 +14,9 @@ and mess with regions, settings, media queries, and other highly technical
 things. It's also aimed at a casual Drupal user who has some familiarity
 with building sites. This theme also does not require any base theme.
 
--- Theme Dependency!! -- 
+-- Theme Dependency (NONE) -- 
 
-If you opt to use the built in touch friendly responsive menu for Gratis, 
-you'll need to download and enable the jQuery Update Module 
-(https://drupal.org/project/jquery_update) and then set it to
-at least jQuery 1.7 or later. Once jQuery Update is installed, visit
-/admin/config/development/jquery_update to set your options. 
-As of July, 2013, I would recommend the 2.x-dev branch 
-of jQuery Update. You'll probably want to set the default to at least 1.7 
-and admin pages to 1.5 though as things tend to break with a newer 
-version with regard to Views UI and other admin screens. 
+As of Alpha 24, there is no longer a dependancy on jQuery update. 
 
 -- CONFIGURATION --
 
