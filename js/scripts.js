@@ -10,11 +10,13 @@ Drupal.behaviors.miscGratis = {
   attach:function (context, settings) {
 // End drupal calls.
 
+$('body').addClass('js');
+
 /* 
 * Toggle the main menu, it's hidden initially
 * to prevent FOUC. 
 */
-$("#main-menu ul.flexnav").show();
+//$("#main-menu ul.flexnav").show();
 
 // Set ul depths for better theming.
 $('#main-menu ul').each(function() {
@@ -34,22 +36,27 @@ $('#main-menu ul li a').each(function() {
   $(this).addClass('ula-depth-' + depth);
 });
 
-// Start flexnav.
-if($().flexNav) {
-  $(".flexnav").flexNav();
+$('#main-menu li.expanded.level-1 a.ula-depth-1').append('<i class="icon-fixed-width desktop-nav">&#xf13a;</i>');
+$('#main-menu li.expanded.level-1').append('<i class="icon-fixed-width mobile-nav">&#xf13a;</i>');
+$('#main-menu li.expanded.level-1 a.ula-depth-2').prepend('<i class="icon-fixed-width sub-menu-item">&#xf138;</i>');
 
-//Make nav arrow and link uniform classes.
-$('#main-menu li.level-1').on('mouseover', function() {
-  var li$ = $(this);
-  li$.parent('ul').find('li').removeClass('hover-state');
-  li$.addClass('hover-state');
-}).on('mouseout', function() {
-  var li$ = $(this);
-  li$.removeClass('hover-state');
-  li$.parent('ul').find('li.current').addClass('hover-state');
+  $('#main-menu li.level-1 li:visible:first-child').addClass('first');
+  $('#main-menu li.level-1 li:visible:last-child').addClass('last');
+
+// Mobile menu
+var $menu = $('#menu'),
+$menulink = $('.menu-link'),
+$menuTrigger = $('.expanded > .icon-fixed-width.mobile-nav');
+
+$menulink.click(function(e) {
+  e.preventDefault();
+  $menulink.toggleClass('active');
+  $menu.toggleClass('active');
 });
 
-}
+$menuTrigger.click(function(){
+  $(this).closest('li').find('ul.menu.ul-depth-1').toggleClass('active');
+});
 
 // Prepend the post date before the h1.
 $(".date-in-parts")
@@ -62,7 +69,7 @@ $("#post-content article:last").addClass("last");
 $("#post-content article:first").addClass("first");
 
 // Add a wrapper around the image field.
-$('.field-type-image li') .each(function () {
+$('.field-type-image li').each(function () {
   $(this).wrapInner('<span class="image-block">');
 });
 
@@ -70,6 +77,8 @@ $('.field-type-image li') .each(function () {
 $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
 $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
+
+
 
 $('.is-node article .field-name-body ul, .field-type-text-with-summary ul, .field-type-text ul, .sidebar .block-content ul').addClass('icons-ul');
 $('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-li icon-chevron-right"></i>');

@@ -120,7 +120,7 @@ ol {
 /* Regions */
 
 .js .flexnav {
-  display: none;
+/*  display: none;*/
 }
 
 #sidebar-second,
@@ -557,15 +557,14 @@ ul.links.inline li {
   overflow: hidden;
 }
 
-
-#main-menu ul li .ula-depth-1 {
+/*#main-menu ul li .ula-depth-1 {
   background: #000;
   padding: .7em 3.2em .7em .9em;
 }
 
 #main-menu ul li.li-depth-0:not(.item-with-ul) a {
   padding: .7em .8em;
-}
+}*/
 
 #main-menu ul li a {
   color: #fff;
@@ -681,7 +680,8 @@ li.leaf {
 .color-palette-orange  input[type=submit],
 .color-palette-orange button,
 .color-palette-orange input[type=reset],
-.color-palette-orange .menu-button {
+.color-palette-orange .menu-button,
+.color-palette-orange #main-menu a.menu-link {
   background: #e04604;
 }
 
@@ -727,7 +727,8 @@ li.leaf {
 .color-palette-turquoise  input[type=submit],
 .color-palette-turquoise button,
 .color-palette-turquoise input[type=reset],
-.color-palette-turquoise .menu-button {
+.color-palette-turquoise .menu-button,
+.color-palette-turquoise #main-menu a.menu-link {
   background: #02b4ce;
 }
 
@@ -777,7 +778,8 @@ li.leaf {
 .color-palette-green  input[type=submit],
 .color-palette-green button,
 .color-palette-green input[type=reset],
-.color-palette-green .menu-button {
+.color-palette-green .menu-button,
+.color-palette-green #main-menu a.menu-link {
   background: #6a8500;
 }
 
@@ -831,7 +833,8 @@ li.leaf {
 .color-palette-purple  input[type=submit],
 .color-palette-purple button,
 .color-palette-purple input[type=reset],
-.color-palette-purple .menu-button {
+.color-palette-purple .menu-button,
+.color-palette-purple #main-menu a.menu-link {
   background: #491f70;
 }
 
@@ -877,7 +880,8 @@ li.leaf {
 .color-palette-seafoam  input[type=submit],
 .color-palette-seafoam button,
 .color-palette-seafoam input[type=reset],
-.color-palette-seafoam .menu-button {
+.color-palette-seafoam .menu-button,
+.color-palette-seafoam #main-menu a.menu-link  {
   background: #16a085;
 }
 
@@ -923,7 +927,8 @@ li.leaf {
 .color-palette-pomegranate  input[type=submit],
 .color-palette-pomegranate button,
 .color-palette-pomegranate input[type=reset],
-.color-palette-pomegranate .menu-button {
+.color-palette-pomegranate .menu-button,
+.color-palette-pomegranate #main-menu a.menu-link {
   background: #c0392b;
 }
 
@@ -969,7 +974,8 @@ li.leaf {
 .color-palette-greengray  input[type=submit],
 .color-palette-greengray button,
 .color-palette-greengray input[type=reset],
-.color-palette-greengray .menu-button {
+.color-palette-greengray .menu-button,
+.color-palette-greengray #main-menu a.menu-link {
   background: #7f8c8d;
 }
 
@@ -1015,7 +1021,8 @@ li.leaf {
 .color-palette-pink  input[type=submit],
 .color-palette-pink button,
 .color-palette-pink input[type=reset],
-.color-palette-pink .menu-button {
+.color-palette-pink .menu-button,
+.color-palette-pink #main-menu a.menu-link  {
   background: #b72898;
 }
 

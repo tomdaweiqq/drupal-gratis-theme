@@ -6,13 +6,14 @@ engine = phptemplate
 ; CSS --------------------
 
 ; --- Note, 'responsive.css' must come last!
-stylesheets[all][] = css/flexnav.css
+;stylesheets[all][] = css/flexnav.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/design.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/font-awesome.css
 stylesheets[all][] = css/unsemantic-grid-responsive.css
 stylesheets[all][] = css/responsive.css
+stylesheets[all][] = css/menu.css
 
 ; Regions --------------------
 regions[top_links]       = Top Links

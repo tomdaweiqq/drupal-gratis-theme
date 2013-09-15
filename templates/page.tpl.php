@@ -118,14 +118,14 @@
 </header>
 </div>
 
-
 <div id="menu-wrapper">
-  <div class="grid-container" style="max-width:<?php print $thegrid; ?>">
+  <div class="grid-container main-menu-wrapper" style="max-width:<?php print $thegrid; ?>">
     <div class="grid-100">
       <section id="main-menu" role="navigation">
         <?php if ($main_menu): ?>
-        <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div>
-        <nav class="menu-navigation">
+        <!-- <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div> -->
+        <a class="menu-link" href="#menu">Menu</a>
+        <nav id="menu" class="menu">
           <?php if (!empty($primary_nav)): ?>
           <?php print render($primary_nav); ?>
         <?php endif; ?>
@@ -140,7 +140,6 @@
 </div>
 </div>
 </div>
-
 
     <?php if ($breadcrumb): ?>
   <div id="breadcrumbs">

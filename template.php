@@ -117,7 +117,7 @@ EOL;
   if (arg(0) == 'admin') {
   } 
   else {
-    drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
+    //drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
 }
 
 // Add general JS.
@@ -318,7 +318,7 @@ function gratis_preprocess_page(&$vars, $hook) {
  * Theme wrapper function for the primary menu links.
  */
 function gratis_menu_tree__primary(&$vars) {
-  return '<ul class="flexnav" data-breakpoint="769">' . $vars['tree'] . '</ul>';
+  return '<ul class="toggle-menu" data-breakpoint="769">' . $vars['tree'] . '</ul>';
 }
 
 /**
