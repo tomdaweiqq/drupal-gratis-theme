@@ -137,6 +137,12 @@
     position: relative;
   }
 
+  #main-menu ul li.level-2 a {
+    font-size: .9em;
+    padding: 12px;
+  }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -167,7 +173,7 @@
     color: #fff;
     cursor: pointer;
     font-size: 30px;
-    left: 93%;
+    left: 84%;
     position: absolute;
     top: 10px;
   }
@@ -176,8 +182,15 @@
     clear: both;
     float: none;
     min-width: inherit;
-    position: fixed;
-    top: 55px;
+  }
+
+  #menu-wrapper {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    right: 0;
+    border-top: none !important;
+    background: none;
   }
 
   .grid-container.main-menu-wrapper,

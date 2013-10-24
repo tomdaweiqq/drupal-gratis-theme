@@ -24,12 +24,6 @@
     width: 80%;
   }
 
-  #main-menu a.menu-link {
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-
   .ula-depth-1 {
     background: #333;
   }

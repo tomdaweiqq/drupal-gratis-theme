@@ -12,6 +12,27 @@ Drupal.behaviors.miscGratis = {
 
 $('body').addClass('js');
 
+$(document).ready(function(){
+
+  var current_width = $(window).width();
+// Provide for classes based on various widths
+if(current_width <= 754)
+  $('html').addClass("mobile").removeClass("desktop");
+
+if(current_width >= 755)
+  $('html').addClass("desktop").removeClass("mobile");
+});
+
+$(window).resize(function(){
+  var current_width = $(window).width();
+
+  if(current_width <= 754)
+    $('html').addClass("mobile").removeClass("desktop");
+
+  if(current_width >= 755)
+    $('html').addClass("desktop").removeClass("mobile");
+});
+
 /* 
 * Toggle the main menu, it's hidden initially
 * to prevent FOUC. 
@@ -40,8 +61,8 @@ $('#main-menu li.expanded.level-1 a.ula-depth-1').append('<i class="icon-fixed-w
 $('#main-menu li.expanded.level-1').append('<i class="icon-fixed-width mobile-nav">&#xf13a;</i>');
 $('#main-menu li.expanded.level-1 a.ula-depth-2').prepend('<i class="icon-fixed-width sub-menu-item">&#xf138;</i>');
 
-  $('#main-menu li.level-1 li:visible:first-child').addClass('first');
-  $('#main-menu li.level-1 li:visible:last-child').addClass('last');
+$('#main-menu li.level-1 li:visible:first-child').addClass('first');
+$('#main-menu li.level-1 li:visible:last-child').addClass('last');
 
 // Mobile menu
 var $menu = $('#menu'),
