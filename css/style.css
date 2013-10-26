@@ -332,17 +332,17 @@ tr:nth-child(even) td:hover {
   color: #fff;
 }
 
-tr:hover:not(:first-child) {
+tbody tr:hover {
   background: #666;
   color: #fff !important;
 }
 
 tr:hover td {
-  background-color: transparent; /* or #000 */
+  background-color: transparent;
 }
 
-tr td a:hover:not(:first-child),
-tr:hover:not(:first-child) a {
+tbody tr td a:hover,
+tbody tr:hover a {
   color: #fff !important;
 }
 
