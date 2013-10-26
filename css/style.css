@@ -401,6 +401,12 @@ ul.tabs.primary li a {
   font-size: 1.07em;
 }
 
+ul.tabs.primary li.active a:hover,
+ul.tabs.primary li a:hover {
+  background: #333;
+  color: #fff;
+}
+
 ul.tabs.primary li.active a {
   background-color: #ffffff;
 }
@@ -456,3 +462,36 @@ div.admin .left {
   margin: 0;
 }
 
+/* let's try to correct the utterly nasty css that advanced forum is outputting */
+.forum-post-panel-main.clearfix {
+  clear: none;
+}
+
+.af-button-large,
+.af-button-small,
+.author-pane-link {
+  display: block;
+  border-top: none;
+  background: #e7e7e7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dfdfdfd), to(#c1c1c1));
+  background: -moz-linear-gradient(top, #dfdfdfd, #c1c1c1);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: #333;
+  font-family: inherit;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.af-button-small {
+  margin-right: 10px;
+}
+
+#content .forum-post-links ul.links li {
+  margin: 0;
+}
