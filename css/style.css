@@ -332,7 +332,9 @@ tr:nth-child(even) td:hover {
   color: #fff;
 }
 
-tbody tr:hover {
+tbody tr:hover,
+.forum-table tr.even:hover,
+.forum-table tr.odd:hover {
   background: #666;
   color: #fff !important;
 }
@@ -462,7 +464,7 @@ div.admin .left {
   margin: 0;
 }
 
-/* let's try to correct the utterly nasty css that advanced forum is outputting */
+/* Advanced forum styling */
 .forum-post-panel-main.clearfix {
   clear: none;
 }
@@ -494,4 +496,29 @@ div.admin .left {
 
 #content .forum-post-links ul.links li {
   margin: 0;
+}
+
+.forum-node-create-links-top {
+  margin-bottom: 10px;
+}
+
+.forum-post-info {
+  font-size: 1.4em;
+  color: #4c4c4c;
+  display: block;
+  padding: 5px 0;
+}
+
+.author-pane a.username {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.forum-post-links ul.links.inline .icon-fixed-width {
+  display: none;
+}
+
+.forum-post-title h2,
+.forum-post-panel-main .post-title h2 {
+  font-size: 2em;
 }
