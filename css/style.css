@@ -464,6 +464,11 @@ div.admin .left {
   margin: 0;
 }
 
+span.ext,
+span.mailto {
+  height: 12px;
+}
+
 /* Advanced forum styling */
 .forum-post-panel-main.clearfix {
   clear: none;
