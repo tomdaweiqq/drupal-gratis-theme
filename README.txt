@@ -16,7 +16,7 @@ with building sites. This theme also does not require any base theme.
 
 -- Theme Dependency (NONE) -- 
 
-As of Alpha 24, there is no longer a dependency on jQuery update.
+As of 1.0, there is no longer a dependency on jQuery update.
 
 -- CONFIGURATION --
 
