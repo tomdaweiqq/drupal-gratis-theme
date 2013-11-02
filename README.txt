@@ -16,7 +16,7 @@ with building sites. This theme also does not require any base theme.
 
 -- Theme Dependency (NONE) -- 
 
-As of Alpha 24, there is no longer a dependancy on jQuery update. 
+As of Alpha 24, there is no longer a dependency on jQuery update.
 
 -- CONFIGURATION --
 
@@ -59,6 +59,14 @@ theme settings and use your own third party menu system such as Menu Block
 or Superfish Module. You are responsible for any styling and CSS for this.
 (Use local.css as mentioned above.)
 
+- ADMIN PAGES
+Gratis should work reasonably well with admin pages and will continue to
+be improved for those. NOTE, you cannot or should not use Gratis for the
+admin theme if you have the overlay module enabled. It will simply not
+work and is beyond the scope of this project. if you want to use the Overlay,
+then use a dedicated admin theme that is Overlay ready such as Seven or
+Adminimal. 
+
 - Node block region Use this region to have a block region within a node
 which will appear right after the content but before any node links or
 comments. Useful for ads or otherwise. Note, to use this and for this
@@ -72,7 +80,7 @@ there is no support for layouts breaking or otherwise if you choose to
 enable this option.
 
 ***** A note about the "Top Panel" block region ***** - This block region
-within the theme does not really have any styling so I would not reccomend
+within the theme does not really have any styling so I would not recommend
 using this unless you want to add your own extra styling and jQuery. This
 was done on purpose for some custom modules that I use in concert with this
 block region.

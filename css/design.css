@@ -334,6 +334,11 @@ span.image-block,
   width: 100%;
 }
 
+.page-node-edit.is-node .field-type-image img {
+  height: auto;
+  width: inherit;
+}
+
 .not-node span.image-block {
   float: right;
   margin-left: 10px;

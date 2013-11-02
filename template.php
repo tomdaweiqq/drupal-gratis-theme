@@ -114,20 +114,21 @@ EOL;
   }
 
   // Add FlexNav to any page except for the admin area. 
-  if (arg(0) == 'admin') {
-  } 
-  else {
-    //drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
-}
+//  if (arg(0) == 'admin') {
+//  }
+//  else {
+//    //drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
+//}
 
 // Add general JS.
   drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js',
     array(
       'group' => JS_THEME,
       'preprocess' => TRUE,
-      'weight' => '9999',
-    )
-    );
+      'weight' => '999',
+    ));
+
+
   $vars['scripts'] = drupal_get_js();
 
   if (!$vars['is_front']) {
@@ -531,6 +532,7 @@ function gratis_menu_link(array $vars) {
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $name_id;
   // Add levels.
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
+
 
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);

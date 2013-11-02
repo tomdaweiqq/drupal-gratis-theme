@@ -319,6 +319,11 @@ td {
   font-size: .9em;
 }
 
+td a,
+td {
+  font-size: 1em;
+}
+
 tr:nth-child(even) td {
   background: #f1f1f1;
 }
@@ -332,9 +337,9 @@ tr:nth-child(even) td:hover {
   color: #fff;
 }
 
-tbody tr:hover,
-.forum-table tr.even:hover,
-.forum-table tr.odd:hover {
+tbody tr:not(.draggable):hover,
+.forum-table tr:not(.draggable).even:hover,
+.forum-table tr:not(.draggable).odd:hover {
   background: #666;
   color: #fff !important;
 }
@@ -346,6 +351,12 @@ tr:hover td {
 tbody tr td a:hover,
 tbody tr:hover a {
   color: #fff !important;
+}
+
+tbody tr.draggable td a:hover,
+tbody tr.draggable:hover,
+tbody tr.draggable:hover a {
+  color: #333 !important;
 }
 
 tr td ul.inline li {
@@ -365,6 +376,13 @@ a.td-hovered {
 tr td ul {
   margin: 0;
   padding: 0;
+}
+
+a.tabledrag-handle .handle {
+  height: 24px;
+  margin: -0.4em 0.5em;
+  padding: 0.42em 0.5em;
+  width: 27px;
 }
 
 /* System Tabs */
