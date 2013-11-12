@@ -385,6 +385,11 @@ a.tabledrag-handle .handle {
   width: 27px;
 }
 
+tr.draggable td:hover,
+tr.draggable td {
+  color: inherit;
+}
+
 /* System Tabs */
 
 .tabs {

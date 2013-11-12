@@ -331,7 +331,7 @@ span.image-block,
 
 .is-node .field-type-image img {
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .page-node-edit.is-node .field-type-image img {
