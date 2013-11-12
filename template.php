@@ -57,11 +57,11 @@ EOL;
   }
 
   // Add a body class is the site slogan is hidden or not.
-  if (theme_get_setting('toggle_slogan') == FALSE) {
-    $vars['classes_array'][] = 'site-slogan-hidden';
+  if (theme_get_setting('toggle_slogan')) {
+    $vars['classes_array'][] = 'site-slogan';
   }
   else {
-    $vars['classes_array'][] = 'site-slogan';
+    $vars['classes_array'][] = 'site-slogan-hidden';
   }
 
   // Add a body class is the theme logo is hidden or not.

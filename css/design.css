@@ -64,7 +64,7 @@ h1.page-header {
   text-transform: capitalize;
 }
 
-.theme-logo.site-name h1.site-name:after {
+.theme-logo.site-name.site-slogan h1.site-name:after {
   content: "\003A";
   margin-left: -4px;
 }
