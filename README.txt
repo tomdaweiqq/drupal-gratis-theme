@@ -16,7 +16,7 @@ with building sites. This theme also does not require any base theme.
 
 -- Theme Dependency (NONE) -- 
 
-As of 1.0, there is no longer a dependency on jQuery update.
+As of Alpha 24, there is no longer a dependency on jQuery update.
 
 -- CONFIGURATION --
 
@@ -65,7 +65,7 @@ be improved for those. NOTE, you cannot or should not use Gratis for the
 admin theme if you have the overlay module enabled. It will simply not
 work and is beyond the scope of this project. if you want to use the Overlay,
 then use a dedicated admin theme that is Overlay ready such as Seven or
-Adminimal. 
+Adminimal.
 
 - Node block region Use this region to have a block region within a node
 which will appear right after the content but before any node links or

@@ -240,8 +240,9 @@ if ($page['preface_first'] || $page['preface_second'] ||
     <?php print render($page['sidebar_second']); ?>
   <?php endif; ?></aside>
 <?php endif; ?>
-<!-- // Sidebar second--> 
+<!-- // Sidebar second-->
 
+</main>
 
 <?php
 // Define and divide the postscript page regions.
@@ -276,12 +277,9 @@ if ($page['postscript_first'] || $page['postscript_second'] ||
 
 <?php endif; ?>
 
-</main>
-
 <div class="push-sticky"></div>
 
 </div>
-
 
   <footer id="footer" role="footer">
     <section class="grid-container">
