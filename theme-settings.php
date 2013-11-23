@@ -13,6 +13,7 @@
  */
 function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
 
+
   $form['gratis_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('gratis Theme Settings'),
@@ -70,10 +71,10 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
     '#default_value' => theme_get_setting('gratis_grid_container_width', 'gratis'),
-    '#description' => t("This setting allows you to set the width of the entire gird container. 
-      Leave blank for the default max width of 1200px.  All inner grids are percentage based 
-      so this should work with most any value you set within reason. 
-      <strong style='color: #cc0000;'>*** Warning, only use this if you know what 
+    '#description' => t("This setting allows you to set the width of the entire gird container.
+      Leave blank for the default max width of 1200px.  All inner grids are percentage based
+      so this should work with most any value you set within reason.
+      <strong style='color: #cc0000;'>*** Warning, only use this if you know what
       you are doing!</strong>"),
   );
 
