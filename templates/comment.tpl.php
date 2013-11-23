@@ -1,4 +1,5 @@
-{#
+<?php
+
 /**
  * @file
  * Gratis' theme implementation for comments.
@@ -56,22 +57,23 @@
  * @see template_preprocess_comment()
  * @see template_process()
  * @see theme_comment()
- */#}
-<div class="{{ classes }} clearfix"{{ attributes }}>
+ */
+?>
+<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="attribution">
 
-    {{ picture }}
+    <?php print $picture; ?>
 
     <div class="submitted">
       <p class="commenter-name">
-        {{ author }}
+        <?php print $author; ?>
       </p>
       <p class="comment-time">
-        {{ created }}
+        <?php print $created; ?>
       </p>
       <p class="comment-permalink">
-        {{ permalink }}
+        <?php print $permalink; ?>
       </p>
     </div>
   </div>
@@ -79,26 +81,27 @@
   <div class="comment-text">
     <div class="comment-arrow"></div>
 
-    {% if new %}
-      <span class="new">{{ new }}</span>
-    {% endif %}
+    <?php if ($new): ?>
+      <span class="new"><?php print $new; ?></span>
+    <?php endif; ?>
 
-    {{ title_prefix }}
-    <h3{{ title_attributes }}>{{ title }}</h3>
-    {{ title_suffix }}
+    <?php print render($title_prefix); ?>
+    <h3<?php print $title_attributes; ?>><?php print $title; ?></h3>
+    <?php print render($title_suffix); ?>
 
-    <div class="content"{{ content_attributes }}>
-      {#
-// We hide the comments and links now so that we can render them later.
-#}        {% hide(content.links) %}
-        {{ content }}
-      {% if signature %}
+    <div class="content"<?php print $content_attributes; ?>>
+      <?php
+        // We hide the comments and links now so that we can render them later.
+        hide($content['links']);
+        print render($content);
+      ?>
+      <?php if ($signature): ?>
       <div class="user-signature clearfix">
-        {{ signature }}
+        <?php print $signature; ?>
       </div>
-      {% endif %}
+      <?php endif; ?>
     </div> <!-- /.content -->
 
-    {{ content.links }}
+    <?php print render($content['links']); ?>
   </div> <!-- /.comment-text -->
 </div>

@@ -1,4 +1,5 @@
-{#
+<?php
+
 /**
  * @file
  * Default theme implementation to display a node.
@@ -75,54 +76,53 @@
  * @see template_preprocess()
  * @see template_preprocess_node()
  * @see template_process()
- */#}
+ */
+?>
 
-<article id="node-{{ node.id }}" class="{{ attributes.class}} clearfix"{{ attributes }} role="article">
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"
+  <?php print $attributes; ?>>
+  <?php print $user_picture; ?>
 
-  {{ user_picture }}
-
-  {{ title_prefix }}
-  {% if not page and title %}
+  <?php print render($title_prefix); ?>
+  <?php if (!$page && $title): ?>
   <header>
-    <h2{{ title_attributes }}><a href="{{ node_url }}"
-    title="{{ title }}">{{ title }}</a></h2>
-  {% else %}
-  {% if title %}<h1{{ title_attributes }} class="node-page-title">{{ title }}</h1>{% endif %}
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>"
+    title="<?php print $title ?>"><?php print $title ?></a></h2>
+  <?php else: ?>
+  <?php if ($title): ?><h1<?php print $title_attributes; ?> class="node-page-title"><?php print $title; ?></h1><?php endif; ?>
 </header>
-{% endif %}
-{{ title_suffix }}
+<?php endif; ?>
+<?php print render($title_suffix); ?>
 
-{% if display_submitted %}
+<?php if ($display_submitted): ?>
   <span class="submit-wrapper">
     <!-- Overidden in template.php to show just username. -->
     <span class="submitted">
-      <i class="icon-fixed-width">&#xf007;</i> {{ submitted }} |  <i class="icon-fixed-width">&#xf073;</i>
-      {{ thedate }} / {{ themonth }} / {{ theyear }}
+      <i class="icon-fixed-width">&#xf007;</i> <?php print $submitted; ?> |  <i class="icon-fixed-width">&#xf073;</i> 
+      <?php print $thedate; ?> / <?php print $themonth; ?> / <?php print $theyear; ?>
     </span>
   </span><!--//submit-wrapper-->
-{% endif %}
+<?php endif; ?>
 
-{# // We hide the comments and links now so that we can render them later. #}
-
- <div class="content clearfix"{{ content_attributes }}>
-
-{% hide (content.comments) %}
-{% hide(content.links) %}
-{{ content }}
-
- </div>
+<?php
+// We hide the comments and links now so that we can render them later.
+hide($content['comments']);
+hide($content['links']);
+print render($content);
+?>
 
 <div class="clearfix">
 
-  {% if content.links %}
+  <?php if (!empty($content['links'])): ?>
   <nav class="links node-links clearfix">
-    {{ content.links }}
+    <?php print render($content['links']); ?>
   </nav>
-{% endif %}
+<?php endif; ?>
 
-{% if content.comments %}
-  {{ content.comments }}
-{% endif %}
+
+<?php if (!empty($content['comments'])): ?>
+  <?php print render($content['comments']); ?>
+<?php endif; ?>
 
 </div>
 

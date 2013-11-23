@@ -1,4 +1,4 @@
-{#
+<?php
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -62,215 +62,220 @@
  * @see template_preprocess()
  * @see template_preprocess_page()
  * @see template_process()
- */#}
+ */
+?>
 
-{% if page.top_panel %}
+<?php if ($page['top_panel']): ?>
   <div id="top-panel">
-  {{ page.top_panel }}
+  <?php print render($page['top_panel']); ?>
 </div>
-{% endif %}
+<?php endif; ?>
 
 <div id="wrapper">
 
   <div id="top-bar">
-    <header role="banner" class="grid-container banner" style="max-width:{#{ thegrid }#}">
+    <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
       <div class="grid-25 logo-wrapper header-grid">
         <span id="brand">
           <div id="logo">
-
-            {% if logo %}
-            <a href="{{ front_page }}" title="{{ site_name }} » {{ site_slogan }}">
-              <img id="logo-img" src="{{ logo }}" alt="{{ site_name }} » {{ site_slogan }}"/></a>
-            {% else %}
-
+            
+            <?php if ($logo): ?>
+            <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
+              <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
+            <?php else : ?>
+     
         <h1 class="site-name">
-          <a href="{{ front_page }}">
-            {{ site_name }}</a>
+          <a href="<?php print $front_page; ?>">
+            <?php print $site_name; ?></a>
           </h1>
-
-            {% endif %}
+     
+            <?php endif; ?>
           </div>
         </span>
       </div><!--//logo-wrapper-->
 
 <div class="grid-75 branding-grid header-grid">
-{% if site_slogan or site_name %}
+<?php if ($site_slogan || $site_name) : ?>
   <div id="branding-wrapper">
-
-        {% if logo %}
-        {% if site_name %}
+    
+        <?php if ($logo): ?>
+        <?php if ($site_name) : ?>
         <h1 class="site-name">
-          <a href="{{ front_page }}">
-            {{ site_name }}</a>
+          <a href="<?php print $front_page; ?>">
+            <?php print $site_name; ?></a>
           </h1>
-        {% endif %}
-         {% endif %}
+        <?php endif; ?>
+         <?php endif; ?>
 
-         {% if site_slogan %}
-        <h3 class="branding">{{ site_slogan }}</h3>
-          {% endif %}
+         <?php if ($site_slogan) : ?>
+        <h3 class="branding"><?php print $site_slogan; ?></h3>
+          <?php endif; ?>
 
       </div>
-{% endif %}
+<?php endif; ?>
       </div><!--//branding-grid-->
 
 </header>
 </div>
 
 <div id="menu-wrapper">
-  <div class="grid-container main-menu-wrapper" style="max-width:{#{ thegrid }#}">
+  <div class="grid-container main-menu-wrapper" style="max-width:<?php print $thegrid; ?>">
     <div class="grid-100">
       <section id="main-menu" role="navigation">
-        {% if main_menu %}
+        <?php if ($main_menu): ?>
         <!-- <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div> -->
         <a class="menu-link" href="#menu">Menu</a>
         <nav id="menu" class="menu">
-          {% if primary_nav %}
-          {{ primary_nav }}
-        {% endif %}
+          <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
+        <?php endif; ?>
       </nav>
-    {% endif %}
+    <?php endif; ?>
 
     <!-- for third party menu systems or modules-->
-    {% if page.thirdparty_menu %}
-    {{ page.thirdparty_menu }}
-  {% endif %}
+    <?php if ($page['thirdparty_menu']): ?>
+    <?php print render($page['thirdparty_menu']); ?>
+  <?php endif; ?>
 </section>
 </div>
 </div>
 </div>
 
-    {% if breadcrumb %}
+    <?php if ($breadcrumb): ?>
   <div id="breadcrumbs">
-    <header class="grid-container" style="max-width:{#{ thegrid }#}">
-    <div class="grid-100">{{ breadcrumb }}</div>
+    <header class="grid-container" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-100"><?php print $breadcrumb; ?></div>
 </header>
 </div>
-{% endif %}
+<?php endif; ?>
 
-{#
+<?php
 // Define and divide the preface page regions.
-#}{% if page.preface_first or page.preface_second or page.preface_third %}
+if ($page['preface_first'] || $page['preface_second'] ||
+  $page['preface_third']):
+?>
 
 <div id ="preface-wrapper">
-  <div class="grid-container" id="preface-container" style="max-width:{#{ thegrid }#}">
+  <div class="grid-container" id="preface-container" style="max-width:<?php print $thegrid; ?>">
 
     <!--Preface -->
-    {% if page.preface_first %}
-    <div class="{# PHP: print _gratis_content_preface($precolumns); #} ">
-      {{ page.preface_first }}
+    <?php if (!empty($page['preface_first'])): ?>
+    <div class="<?php print _gratis_content_preface($precolumns); ?> ">
+      <?php print render($page['preface_first']); ?>
     </div>
-  {% endif %}
+  <?php endif; ?>
 
-  {% if page.preface_second %}
-  <div class="{# PHP: print _gratis_content_preface($precolumns); #} ">
-    {{ page.preface_second }}
+  <?php if (!empty($page['preface_second'])): ?>
+  <div class="<?php print _gratis_content_preface($precolumns); ?> ">
+    <?php print render($page['preface_second']); ?>
   </div>
-{% endif %}
+<?php endif; ?>
 
-{% if page.preface_third %}
-  <div class="{# PHP: print _gratis_content_preface($precolumns); #} ">
-    {{ page.preface_third }}
+<?php if (!empty($page['preface_third'])): ?>
+  <div class="<?php print _gratis_content_preface($precolumns); ?> ">
+    <?php print render($page['preface_third']); ?>
   </div>
-{% endif %}
+<?php endif; ?>
 
 </div>
 </div>
 
-{% endif %}
+<?php endif; ?>
 
-<main role="main" class="grid-container" style="max-width:{#{ thegrid }#}" id="content" >
-  <div class="{# PHP: print _gratis_content_grid($columns); #}">
-    {{ messages }}
-    {% if tabs %}
-    {{ tabs }}
-  {% endif %}
-  {% if page.help %}
+<main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content" >
+  <div class="<?php print _gratis_content_grid($columns); ?>">
+    <?php print $messages; ?>
+    <?php if (!empty($tabs)): ?>
+    <?php print render($tabs); ?>
+  <?php endif; ?>
+  <?php if (!empty($page['help'])): ?>
 
   <div class="well">
-    {{ page.help }}
+    <?php print render($page['help']); ?>
   </div>
 
-{% endif %}
-{% if action_links %}
+<?php endif; ?>
+<?php if (!empty($action_links)): ?>
   <ul class="action-links">
-    {{ action_links }}
+    <?php print render($action_links); ?>
   </ul>
-{% endif %}
+<?php endif; ?>
 
-{% if page.content_top %}
-  {{ page.content_top }}
-{% endif %}
+<?php if (!empty($page['content_top'])): ?>
+  <?php print render($page['content_top']); ?>
+<?php endif; ?>
 
-{% if not is_node %}
-  {{ title_prefix }}
-  {% if title %}
+<?php if (!$is_node): ?>
+  <?php print render($title_prefix); ?>
+  <?php if ($title): ?>
   <h1 class="page-header">
-    {{ title }}
+    <?php print $title; ?>
   </h1>
-{% endif %}
-{{ title_suffix }}
-{% endif %}
+<?php endif; ?>
+<?php print render($title_suffix); ?>
+<?php endif; ?>
 
-{{ page.content }}
+<?php print render($page['content']); ?>
 
-{% if page.node_block %}
-{{ page.node_block }}
-{% endif %}
+<?php if ($page['node_block']): ?>
+<?php print render($page['node_block']); ?>
+<?php endif; ?>
 
 </div>
 
 <!--Sidebar first-->
-{% if page.sidebar_first %}
-  <aside id="sidebar-first" class="sidebar {# PHP: print _gratis_content_sidebar_grid($columns); #}
+<?php if (!empty($page['sidebar_first'])): ?>
+  <aside id="sidebar-first" class="sidebar <?php print _gratis_content_sidebar_grid($columns); ?>
     ">
-    {% if page.sidebar_first %}
-    {{ page.sidebar_first }}
-  {% endif %}</aside>
-{% endif %}
+    <?php if ($page['sidebar_first']): ?>
+    <?php print render($page['sidebar_first']); ?>
+  <?php endif; ?></aside>
+<?php endif; ?>
 <!-- // Sidebar first  (first only - grid-20 pull-80) -->
 
 <!--Sidebar second-->
-{% if page.sidebar_second %}
+<?php if (!empty($page['sidebar_second'])): ?>
   <aside id="sidebar-second" class="grid-20 sidebar">
-    {% if page.sidebar_second %}
-    {{ page.sidebar_second }}
-  {% endif %}</aside>
-{% endif %}
+    <?php if ($page['sidebar_second']): ?>
+    <?php print render($page['sidebar_second']); ?>
+  <?php endif; ?></aside>
+<?php endif; ?>
 <!-- // Sidebar second-->
 
 </main>
 
-{#
+<?php
 // Define and divide the postscript page regions.
-#}{% if page.postscript_first or page.postscript_second or page.postscript_third %}
+if ($page['postscript_first'] || $page['postscript_second'] ||
+  $page['postscript_third']):
+?>
 
 <div id ="postscript-wrapper">
   <div class="grid-container" id="postscript-container" >
 
     <!--Postscript -->
-    {% if page.postscript_first %}
-    <div class="{# PHP: print _gratis_content_postscript($pscolumns); #} ">
-      {{ page.postscript_first }}
+    <?php if (!empty($page['postscript_first'])): ?>
+    <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+      <?php print render($page['postscript_first']); ?>
     </div>
-  {% endif %}
+  <?php endif; ?>
 
-  {% if page.postscript_second %}
-  <div class="{# PHP: print _gratis_content_postscript($pscolumns); #} ">
-    {{ page.postscript_second }}
+  <?php if (!empty($page['postscript_second'])): ?>
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+    <?php print render($page['postscript_second']); ?>
   </div>
-{% endif %}
+<?php endif; ?>
 
-{% if page.postscript_third %}
-  <div class="{# PHP: print _gratis_content_postscript($pscolumns); #} ">
-    {{ page.postscript_third }}
+<?php if (!empty($page['postscript_third'])): ?>
+  <div class="<?php print _gratis_content_postscript($pscolumns); ?> ">
+    <?php print render($page['postscript_third']); ?>
   </div>
-{% endif %}
+<?php endif; ?>
 
 </div>
 </div>
 
-{% endif %}
+<?php endif; ?>
 
 <div class="push-sticky"></div>
 
@@ -279,9 +284,9 @@
   <footer id="footer" role="footer">
     <section class="grid-container">
       <div class="grid-100">
-        {% if page.footer_first %}
-        {{ page.footer_first }}
-      {% endif %}
+        <?php if (!empty($page['footer_first'])): ?>
+        <?php print render($page['footer_first']); ?>
+      <?php endif; ?>
     </div>
     </section>
   </footer>

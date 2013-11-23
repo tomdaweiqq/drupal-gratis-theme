@@ -1,4 +1,4 @@
-{#
+<?php
 /**
  * @file
  * Default theme implementation to display the basic html structure of a single
@@ -39,28 +39,29 @@
  * @see template_preprocess()
  * @see template_preprocess_html()
  * @see template_process()
- */#}<!DOCTYPE html>
-<html{{ html_attributes }}>
+ */
+?><!DOCTYPE html>
+<html<?php print $html_attributes; ?>>
 <head>
-  {{ head }}
+  <?php print $head; ?>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <title>{{ head_title }}</title>
-  {{ styles }}
-  {{ scripts }}
+    <title><?php print $head_title; ?></title>
+  <?php print $styles; ?>
+  <?php print $scripts; ?>
     <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body{{ attributes }}>
+<body class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">{{ 'Skip to main content'|t }}</a>
+    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 </div>
-{{ page_top }}
-{{ page }}
-{{ page_bottom }}
+<?php print $page_top; ?>
+<?php print $page; ?>
+<?php print $page_bottom; ?>
 </body>
 </html>
