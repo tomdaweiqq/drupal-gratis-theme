@@ -57,26 +57,20 @@ $('#main-menu ul li a').each(function() {
   $(this).addClass('ula-depth-' + depth);
 });
 
-   // if (!$('body').hasClass("page-admin")) {
-
-//$('#main-menu li.expanded.level-1 a.ula-depth-1').not("page-admin").append('<i class="icon-fixed-width desktop-nav">&#xf13a;</i>');
-
-    $('#main-menu li.expanded.level-1 a.ula-depth-1').once(function() {
+    $('#main-menu li.expanded.li-depth-0 a.ula-depth-1').once(function() {
       $(this).append('<i class="icon-fixed-width desktop-nav">&#xf13a;</i>');
     });
 
-$('#main-menu li.expanded.level-1').once(function() {
+$('#main-menu li.expanded.li-depth-0').once(function() {
     $(this).append('<i class="icon-fixed-width mobile-nav">&#xf13a;</i>');
 });
 
-$('#main-menu li.expanded.level-1 a.ula-depth-2').once(function() {
+$('#main-menu li.expanded.li-depth-0 a.ula-depth-2').once(function() {
     $(this).prepend('<i class="icon-fixed-width sub-menu-item">&#xf138;</i>');
 });
 
-  //  }
-
-$('#main-menu li.level-1 li:visible:first-child').addClass('first');
-$('#main-menu li.level-1 li:visible:last-child').addClass('last');
+$('#main-menu li.li-depth-0 li:visible:first-child').addClass('first');
+$('#main-menu li.li-depth-0 li:visible:last-child').addClass('last');
 
 // Mobile menu
 var $menu = $('#menu'),
@@ -113,8 +107,8 @@ $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
 $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
 
-$('.is-node article .field-name-body ul, .field-type-text-with-summary ul, .field-type-text ul, .sidebar .block-content ul').addClass('icons-ul');
-$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .sidebar .block-content ul li').prepend('<i class="icon-li icon-chevron-right"></i>');
+$('.is-node article .field-name-body ul, .field-type-text-with-summary ul, .field-type-text ul, .block-content:not("#main-content .block-content") ul').addClass('icons-ul');
+$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .block-content:not("#main-content .block-content") ul li').prepend('<i class="icon-li icon-chevron-right"></i>');
 
 // Blockquote.
 $('blockquote').prepend('<i class="icon-quote-left icon-4x pull-left icon-muted"></i>');

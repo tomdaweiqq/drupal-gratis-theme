@@ -48,6 +48,7 @@ button {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-appearance: none;
+  margin-bottom: 10px;
 }
 
 input[type=submit]:active {

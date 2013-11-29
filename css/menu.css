@@ -102,7 +102,7 @@
   top:0;
 }
 
-#main-menu li.level-1 li:not(.last) .ula-depth-2 {
+#main-menu li.li-depth-0 li:not(.last) .ula-depth-2 {
   border-bottom: 1px dotted #d6d6d6;
 }
 
@@ -137,7 +137,7 @@
     position: relative;
   }
 
-  #main-menu ul li.level-2 a {
+  #main-menu ul li.li-depth-1 a {
     font-size: .9em;
     padding: 12px;
   }

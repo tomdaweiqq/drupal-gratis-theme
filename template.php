@@ -48,6 +48,9 @@ EOL;
   // http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400italic,600italic,700italic,400,600,700
   drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700',array('type' => 'external'));
 
+  // Add font awesome cdn.
+  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css',array('type' => 'external'));
+
   // Add a body class is the site name is hidden or not.
   if (theme_get_setting('toggle_name') == FALSE) {
     $vars['classes_array'][] = 'site-name-hidden';
@@ -259,50 +262,57 @@ function gratis_preprocess_page(&$vars, $hook) {
   // Add information about the number of sidebars.
   // Both sidebars.
   if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
-    $vars['columns'] = 4;
+    $vars['sb_columns'] = 'grid-20 pull-60';
+    $vars['content_columns'] = 'grid-60 push-20';
   }
+  // Sidebar first.
   elseif (!empty($vars['page']['sidebar_first'])) {
-    $vars['columns'] = 3;
+    $vars['sb_columns'] = 'grid-20 pull-80';
+    $vars['content_columns'] = 'grid-80 push-20';
   }
+  // Sidebar second.
   elseif (!empty($vars['page']['sidebar_second'])) {
-    $vars['columns'] = 2;
+    $vars['sb_columns'] = 'grid-20 sidebar';
+    $vars['content_columns'] = 'grid-80';
   }
+  // no sidebars
   else {
-    $vars['columns'] = 1;
+    $vars['sb_columns'] = 1;
+    $vars['content_columns'] = 'grid-100';
   }
 
-  // Postscript columns ('$pscolumns').
+  // Postscript columns ('$pos_columns').
   if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pscolumns'] = 3;
+    $vars['pos_columns'] =  'grid-33 postscript';
   }
   elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second'])) {
-    $vars['pscolumns'] = 2;
+    $vars['pos_columns'] = 'grid-50 postscript';
   }
   elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pscolumns'] = 2;
+    $vars['pos_columns'] = 'grid-50 postscript';
   }
   elseif (!empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pscolumns'] = 2;
+    $vars['pos_columns'] = 'grid-50 postscript';
   }
   else {
-    $vars['pscolumns'] = 1;
+    $vars['pos_columns'] =  'grid-100 postscript';
   }
 
-  // Preface columns ('$precolumns').
+  // Postscript columns ('$pre_columns').
   if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['precolumns'] = 3;
+    $vars['pre_columns'] =  'grid-33 preface';
   }
   elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
-    $vars['precolumns'] = 2;
+    $vars['pre_columns'] = 'grid-50 preface';
   }
   elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
-    $vars['precolumns'] = 2;
+    $vars['pre_columns'] = 'grid-50 preface';
   }
   elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['precolumns'] = 2;
+    $vars['pre_columns'] = 'grid-50 preface';
   }
   else {
-    $vars['precolumns'] = 1;
+    $vars['pre_columns'] =  'grid-100 preface';
   }
 
   // Primary nav.
@@ -372,7 +382,6 @@ function gratis_page_alter($page) {
   }
 
   else {
-
     // Pinch and Zoom enabled.
     $viewport = array(
       '#type' => 'html_tag',
@@ -384,121 +393,6 @@ function gratis_page_alter($page) {
     );
     drupal_add_html_head($viewport, 'viewport');
   }
-
-}
-
-/**
- * Custom function, returns the correct grid class for the main content region.
- */
-function _gratis_content_grid($columns = 1) {
-
-  $class = FALSE;
-  switch ($columns) {
-
-    // No sidebars, just content.
-    case 1:{
-      $class = 'grid-100';
-      break;
-      }
-
-    // Sidebar second (right)  and content.
-    case 2:{
-      $class = 'grid-80';
-      break;
-      }
-
-    // Sidebar first (left) and content.
-    case 3:{
-      $class = 'grid-80 push-20';
-      break;
-      }
-
-    // Both sidebars and content.
-    case 4:{
-      $class = 'grid-60 push-20';
-      break;
-      }
-  }
-
-  return $class;
-}
-
-/**
- * Custom function, returns the correct grid class for the sidebars.
- */
-function _gratis_content_sidebar_grid($columns = 4) {
-
-  $class = FALSE;
-  switch ($columns) {
-
-    // No sidebars.
-    case 4:{
-      $class = 'grid-20 pull-60';
-      break;
-      }
-
-    // Sidebar second (right).
-    case 3:{
-      $class = 'grid-20 pull-80';
-      break;
-      }
-  }
-
-  return $class;
-}
-
-/**
- * Custom function, returns the correct grid class for the postscript regions.
- */
-function _gratis_content_postscript($pscolumns = 1) {
-  $class = FALSE;
-
-  switch ($pscolumns) {
-
-    case 1:{
-      $class = 'grid-100 postscript';
-      break;
-      }
-
-    case 2:{
-      $class = 'grid-50 postscript';
-      break;
-      }
-
-    case 3:{
-      $class = 'grid-33 postscript';
-      break;
-      }
-  }
-
-  return $class;
-}
-
-/**
- * Custom function, returns the correct grid class for the postscript regions.
- */
-function _gratis_content_preface($precolumns = 1) {
-  $class = FALSE;
-
-  switch ($precolumns) {
-
-    case 1:{
-      $class = 'grid-100 postscript';
-      break;
-      }
-
-    case 2:{
-      $class = 'grid-50 postscript';
-      break;
-      }
-
-    case 3:{
-      $class = 'grid-33 postscript';
-      break;
-      }
-  }
-
-  return $class;
 }
 
 /**
@@ -532,7 +426,6 @@ function gratis_menu_link(array $vars) {
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $name_id;
   // Add levels.
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
-
 
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
