@@ -107,8 +107,8 @@ $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
 $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
 $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
 
-$('.is-node article .field-name-body ul, .field-type-text-with-summary ul, .field-type-text ul, .block-content:not("#main-content .block-content") ul').addClass('icons-ul');
-$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .block-content:not("#main-content .block-content") ul li').prepend('<i class="icon-li icon-chevron-right"></i>');
+$('.is-node article .field-name-body ul, .field-type-text-with-summary ul, .field-type-text ul, .block-content:not("#main-content .block-content, #toggle-wrapper .block-content") ul').addClass('icons-ul');
+$('.is-node article .field-name-body ul li, .field-type-text-with-summary ul li, .field-type-text ul li, .block-content:not("#main-content .block-content, #toggle-wrapper .block-content") ul li').prepend('<i class="icon-li icon-chevron-right"></i>');
 
 // Blockquote.
 $('blockquote').prepend('<i class="icon-quote-left icon-4x pull-left icon-muted"></i>');
