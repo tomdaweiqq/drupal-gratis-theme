@@ -116,12 +116,6 @@ EOL;
     }
   }
 
-  // Add FlexNav to any page except for the admin area. 
-//  if (arg(0) == 'admin') {
-//  }
-//  else {
-//    //drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/jquery.flexnav.js', 'file');
-//}
 
 // Add general JS.
   drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js',
@@ -151,12 +145,28 @@ EOL;
     $vars['classes_array'][] = drupal_html_class('section-' . $section);
   }
 
-  // Test if page is a node or not and then add a body class.
+  // Add various classes for common site paths.
   if ($node = menu_get_object()) {
     $vars['classes_array'][] = 'is-node';
   }
   else {
     $vars['classes_array'][] = 'not-node';
+  }
+
+  if(arg(0) == 'node' && arg(2) == 'edit') {
+    $vars['classes_array'][] = 'page-node-edit';
+  }
+
+  if(arg(0) == 'node' && arg(1) == 'add') {
+    $vars['classes_array'][] = 'page-node-add';
+  }
+
+  if(arg(0) == 'node' && arg(2) === null) {
+    $vars['classes_array'][] = 'page-node-view';
+  }
+
+  if(arg(0) == 'admin') {
+    $vars['classes_array'][] = 'admin-page';
   }
 
 }

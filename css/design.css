@@ -1,5 +1,5 @@
 /* sticky footer
-http://ryanfait.com/sticky-footer
+*  http://ryanfait.com/sticky-footer
 */
 
 * {
@@ -27,7 +27,7 @@ body {
 
 /* End sticky footer. */
 
-/*headings, links, paragraphs, images*/
+/* Headings, links, paragraphs, images. */
 
 h1,
 h2,
@@ -79,13 +79,7 @@ img {
   border: none;
 }
 
-#content li {
-  margin: 6px 0;
-}
-
-.icon-li.icon-chevron-right {
-  color: #666;
-}
+/* Links */
 
 a {
   text-decoration: none;
@@ -110,6 +104,48 @@ a.logo {
   padding-left: 10px;
 }
 
+/* Lists */
+
+#content li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+article .field ul li,
+aside .block-content ul li {
+  list-style: none;
+  position: relative;
+  left: 20px;
+}
+
+aside .block-content ul li {
+  left: 0;
+}
+
+article .field ul li:before,
+aside .block-content ul li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  left: -16px;
+  color: #ccc;
+  top: 2px;
+}
+
+article .field-type-taxonomy-term-reference ul li {
+}
+
+article .field-type-taxonomy-term-reference ul li:before {
+  content: '';
+}
+
+.icon-li.icon-chevron-right {
+  color: #666;
+}
+
 ol li {
   margin-left: 30px;
 }
@@ -119,10 +155,6 @@ ol {
 }
 
 /* Regions */
-
-.js .flexnav {
-/*  display: none;*/
-}
 
 #sidebar-second,
 #sidebar-first {
@@ -153,12 +185,22 @@ ol {
   margin-top: 8px;
 }
 
-#top-bar {
+#header-bar {
   background: #000;
   padding: 6px 0 8px 0;
 }
 
- .ie10 #top-bar {
+#top-bar {
+  background: #333;
+  min-height: 30px;
+  text-align: right;
+}
+
+#top-bar ul.menu {
+  overflow: inherit;
+}
+
+ .ie10 #header-bar {
   height: 59px;
 }
 
@@ -175,10 +217,6 @@ ol {
 figcaption {
   color: #787878;
   font-style: italic;
-}
-
-article .field li {
-  padding-left: 8px;
 }
 
 #breadcrumbs {
@@ -223,7 +261,7 @@ span.submitted {
 }
 
 .item-list ul {
-  margin: 0 0 0.25em 1.4em;
+  margin: 0 1.4em 0.25em 0;
 }
 
 .item-list ul.pager {
@@ -268,7 +306,7 @@ pre {
 /* Sidebars */
 
 aside h2 {
-  background: url(../images/diagstripe.png);
+  background: url('../images/diagstripe.png');
   border-left: 5px solid #f60;
   clear: both;
   font-size: 140%;
@@ -280,7 +318,7 @@ aside h2 {
 
 aside .block-content  ul li {
   border-bottom: 1px solid #d6d6d6;
-  padding: 3px 0;
+  padding-bottom: 4px;
 }
 
 aside input[type="text"] {
@@ -310,18 +348,19 @@ aside .region.region-sidebar-second {
   color: #666;
   float: left;
   font-weight: bold;
-  margin-right: 0;
-  margin-top: 4px;
+  margin: 0;
+}
+
+#content .field-type-taxonomy-term-reference ul {
+  margin: 0 0 14px 0;
 }
 
 #content .field-type-taxonomy-term-reference ul li {
-  background: url(../images/tag.png) no-repeat;
+  background: url('../images/tag.png') 0 1px no-repeat;
   display: inline-block;
-  height: 22px;
-  margin-left: 6px;
-  margin-right: 4px;
-  padding: 0 8px 0 16px;
+  padding: 0px 8px 1px 16px;
   text-transform: uppercase;
+  margin: 0 4px 0 6px;
 }
 
 span.image-block,
@@ -412,7 +451,7 @@ span.image-block,
 }
 
 .comment .comment-arrow {
-  background: url(../images/comment-arrow.gif) no-repeat 0 center transparent;
+  background: url('../images/comment-arrow.gif') no-repeat 0 center transparent;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   height: 40px;
@@ -484,7 +523,7 @@ p.comment-time {
   cursor: pointer;
 }
 
-.region-top-bar {
+.region-header-bar {
   float: right;
 }
 
@@ -502,15 +541,6 @@ ul.links.inline li {
   max-height: 52px;
   overflow: hidden;
 }
-
-/*#main-menu ul li .ula-depth-1 {
-  background: #000;
-  padding: .7em 3.2em .7em .9em;
-}
-
-#main-menu ul li.li-depth-0:not(.item-with-ul) a {
-  padding: .7em .8em;
-}*/
 
 #main-menu ul li a {
   color: #fff;
@@ -556,7 +586,16 @@ ul.links.inline li {
 
 .menu-icon.icon-fixed-width {
   color: #fff;
-  font-size: 1.9em;
+  font-size: 2.2em;
+}
+
+.top-links .block-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.top-links .block-content ul li {
+  display: inline-block;
 }
 
 .go-arrow {

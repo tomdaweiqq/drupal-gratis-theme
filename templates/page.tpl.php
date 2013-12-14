@@ -67,57 +67,67 @@
 
 <?php if ($page['top_panel']): ?>
   <div id="top-panel">
-    <?php print render($page['top_panel']); ?>
-  </div>
+  <?php print render($page['top_panel']); ?>
+</div>
 <?php endif; ?>
+
 
 <div id="wrapper">
 
-<div id="top-bar">
-  <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
-    <div class="grid-25 logo-wrapper header-grid">
-<span id="brand">
-<div id="logo">
-
-  <?php if ($logo): ?>
-    <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
-      <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
-  <?php else : ?>
-
-    <h1 class="site-name">
-      <a href="<?php print $front_page; ?>">
-        <?php print $site_name; ?></a>
-    </h1>
-
-  <?php endif; ?>
+<div id="top-bar" class="top-wrapper">
+<div class="grid-container top-wrapper-inner" style="max-width:<?php print $thegrid; ?>">
+<?php if ($page['top_links']): ?>
+  <div class="grid-100 top-links">
+    <?php print render($page['top_links']); ?>
+  </div>
+<?php endif; ?>
 </div>
-</span>
-    </div>
-    <!--//logo-wrapper-->
+</div>
 
-    <div class="grid-75 branding-grid header-grid">
-      <?php if ($site_slogan || $site_name) : ?>
-        <div id="branding-wrapper">
 
-          <?php if ($logo): ?>
-            <?php if ($site_name) : ?>
-              <h1 class="site-name">
-                <a href="<?php print $front_page; ?>">
-                  <?php print $site_name; ?></a>
-              </h1>
+  <div id="header-bar">
+    <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
+      <div class="grid-25 logo-wrapper header-grid">
+        <span id="brand">
+          <div id="logo">
+            
+            <?php if ($logo): ?>
+            <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
+              <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
+            <?php else : ?>
+     
+        <h1 class="site-name">
+          <a href="<?php print $front_page; ?>">
+            <?php print $site_name; ?></a>
+          </h1>
+     
             <?php endif; ?>
+          </div>
+        </span>
+      </div><!--//logo-wrapper-->
+
+<div class="grid-75 branding-grid header-grid">
+<?php if ($site_slogan || $site_name) : ?>
+  <div id="branding-wrapper">
+    
+        <?php if ($logo): ?>
+        <?php if ($site_name) : ?>
+        <h1 class="site-name">
+          <a href="<?php print $front_page; ?>">
+            <?php print $site_name; ?></a>
+          </h1>
+        <?php endif; ?>
+         <?php endif; ?>
+
+         <?php if ($site_slogan) : ?>
+        <h3 class="branding"><?php print $site_slogan; ?></h3>
           <?php endif; ?>
 
-          <?php if ($site_slogan) : ?>
-            <h3 class="branding"><?php print $site_slogan; ?></h3>
-          <?php endif; ?>
+      </div>
+<?php endif; ?>
+      </div><!--//branding-grid-->
 
-        </div>
-      <?php endif; ?>
-    </div>
-    <!--//branding-grid-->
-
-  </header>
+</header>
 </div>
 
 <div id="menu-wrapper">
@@ -125,22 +135,24 @@
     <div class="grid-100">
       <section id="main-menu" role="navigation">
         <?php if ($main_menu): ?>
-          <!-- <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div> -->
-          <a class="menu-link" href="#menu">Menu</a>
-          <nav id="menu" class="menu">
-            <?php if (!empty($primary_nav)): ?>
-              <?php print render($primary_nav); ?>
-            <?php endif; ?>
-          </nav>
+        <!-- <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div> -->
+        <a class="menu-link" href="#menu">
+         <i class="icon-fixed-width menu-icon">&#xf039;</i>
+        </a>
+        <nav id="menu" class="menu">
+          <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
         <?php endif; ?>
+      </nav>
+    <?php endif; ?>
 
-        <!-- for third party menu systems or modules-->
-        <?php if ($page['thirdparty_menu']): ?>
-          <?php print render($page['thirdparty_menu']); ?>
-        <?php endif; ?>
-      </section>
-    </div>
-  </div>
+    <!-- for third party menu systems or modules-->
+    <?php if ($page['thirdparty_menu']): ?>
+    <?php print render($page['thirdparty_menu']); ?>
+  <?php endif; ?>
+</section>
+</div>
+</div>
 </div>
 
 <?php if ($breadcrumb): ?>
