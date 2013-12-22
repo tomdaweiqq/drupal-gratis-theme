@@ -616,7 +616,7 @@ ul.links.inline li {
 }
 
 .top-links .block-content ul li a:hover {
-  color: #999;
+  color: #ccc;
 }
 
 .top-links .block-content ul li:after {
@@ -633,6 +633,10 @@ ul.links.inline li {
 
 .top-links .block-content li:last-child {
   margin-right: 0;
+}
+
+.top-links .block-content ul li a.active {
+  color: #ccc;
 }
 
 .go-arrow {
