@@ -139,7 +139,7 @@
         <a class="menu-link" href="#menu">
          <i class="icon-fixed-width menu-icon">&#xf039;</i>
         </a>
-        <nav id="menu" class="menu">
+        <nav id="menu" class="main-navigation">
           <?php if (!empty($primary_nav)): ?>
           <?php print render($primary_nav); ?>
         <?php endif; ?>
