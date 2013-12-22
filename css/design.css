@@ -275,12 +275,18 @@ aside.sidebar .block-content ul li {
 }
 
 .item-list ul.pager {
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
 }
 
 .item-list ul.pager li {
   border: 1px solid #999;
-  margin: 0 0 0.25em 1.4em;
+  margin: 0 0 0.25em .4em;
+}
+
+.pager-current {
+  font-weight: bold;
+  background: #999;
+  color: #fff;
 }
 
 .main-container.container {
@@ -606,6 +612,27 @@ ul.links.inline li {
 
 .top-links .block-content ul li {
   display: inline-block;
+  margin: 6px 2px;
+}
+
+.top-links .block-content ul li a:hover {
+  color: #999;
+}
+
+.top-links .block-content ul li:after {
+  color: #999;
+  content: ' | ';
+  margin-left: 6px;
+  margin-right: 2px;
+}
+
+.top-links .block-content li:last-child:after {
+  content: '';
+  margin: 0;
+}
+
+.top-links .block-content li:last-child {
+  margin-right: 0;
 }
 
 .go-arrow {
@@ -819,6 +846,14 @@ li.leaf {
 
 .color-palette-purple a:hover {
   color: #333;
+}
+
+.color-palette-purple .top-links .block-content ul li a {
+  color: #fff;
+}
+
+.color-palette-purple .top-links .block-content ul li a:hover {
+  color: #999;
 }
 
 .color-palette-purple #main-menu ul li a.active,
