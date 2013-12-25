@@ -74,21 +74,20 @@
 
 <div id="wrapper">
 
+<?php if ($page['top_links']): ?>
 <div id="top-bar" class="top-wrapper">
 <div class="grid-container top-wrapper-inner" style="max-width:<?php print $thegrid; ?>">
-<?php if ($page['top_links']): ?>
   <div class="grid-100 top-links">
     <?php print render($page['top_links']); ?>
   </div>
+</div>
+</div>
 <?php endif; ?>
-</div>
-</div>
-
 
   <div id="header-bar">
     <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
       <div class="grid-25 logo-wrapper header-grid">
-        <span id="brand">
+        <div id="brand">
           <div id="logo">
             
             <?php if ($logo): ?>
@@ -103,7 +102,7 @@
      
             <?php endif; ?>
           </div>
-        </span>
+        </div>
       </div><!--//logo-wrapper-->
 
 <div class="grid-75 branding-grid header-grid">
@@ -135,7 +134,6 @@
     <div class="grid-100">
       <section id="main-menu" role="navigation">
         <?php if ($main_menu): ?>
-        <!-- <div class="menu-button"><i class="menu-icon icon-fixed-width">&#xf0ca;</i></div> -->
         <a class="menu-link" href="#menu">
          <i class="icon-fixed-width menu-icon">&#xf039;</i>
         </a>

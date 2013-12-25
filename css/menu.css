@@ -151,6 +151,10 @@
 
 @media screen and (max-width: 768px) {
 
+  #header-bar > header > div.grid-75.branding-grid.header-grid {
+    height: 36px;
+  }
+
   .icon-fixed-width.sub-menu-item {
     left: -27px;
     position: relative;
