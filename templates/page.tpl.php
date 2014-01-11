@@ -292,7 +292,7 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 </div>
 
 <footer id="footer" role="footer">
-  <section class="grid-container">
+  <section class="grid-container" style="max-width:<?php print $thegrid; ?>">
     <div class="grid-100">
       <?php if (!empty($page['footer_first'])): ?>
         <?php print render($page['footer_first']); ?>

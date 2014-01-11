@@ -100,11 +100,6 @@
       $("#post-content article:last").addClass("last");
       $("#post-content article:first").addClass("first");
 
-      // Add a wrapper around the image field.
-      $('.field-type-image li').each(function () {
-        $(this).wrapInner('<span class="image-block">');
-      });
-
       // Add comment icons using font awesome.
       $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
       $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
@@ -112,6 +107,7 @@
 
 // Blockquote.
       $('blockquote').prepend('<i class="icon-quote-left icon-4x pull-left icon-muted"></i>');
+
 
 // Node block - this should come last. It gets appened to the body field if it exists.
       if ($(".field").hasClass("field-name-body")) {

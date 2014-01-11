@@ -332,33 +332,6 @@ tr:nth-child(odd) td {
   background: #fefefe;
 }
 
-tr:nth-child(odd) td:hover,
-tr:nth-child(even) td:hover {
-  color: #fff;
-}
-
-tbody tr:not(.draggable):hover,
-.forum-table tr:not(.draggable).even:hover,
-.forum-table tr:not(.draggable).odd:hover {
-  background: #666;
-  color: #fff !important;
-}
-
-tr:hover td {
-  background-color: transparent;
-}
-
-tbody tr td a:hover,
-tbody tr:hover a {
-  color: #fff !important;
-}
-
-tbody tr.draggable td a:hover,
-tbody tr.draggable:hover,
-tbody tr.draggable:hover a {
-  color: #333 !important;
-}
-
 tr td ul.inline li {
   margin-bottom: 9px;
   display: block;
@@ -367,10 +340,6 @@ tr td ul.inline li {
 tr.odd .form-item,
 tr.even .form-item {
   margin-bottom: 10px;
-}
-
-a.td-hovered {
-  color: #fff !important;
 }
 
 tr td ul {
@@ -385,10 +354,10 @@ a.tabledrag-handle .handle {
   width: 27px;
 }
 
-tr.draggable td:hover,
-tr.draggable td {
-  color: inherit;
+#footer .block-content {
+  padding-top: 10px;
 }
+
 
 /* System Tabs */
 
