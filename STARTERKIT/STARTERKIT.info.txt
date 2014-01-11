@@ -1,0 +1,49 @@
+name = Gratis sub-theme Starter Kit
+description = Gratis is a responsive Drupal 7 theme designed and developed by Danny Englander, <a href="http://highrockmedia.com">High Rock Media</a>
+core = 7.x
+engine = phptemplate
+base theme = gratis
+
+; CSS --------------------
+
+; --- Your subtheme css files.
+; Rename STARTERKIT.css to something meaningful.
+; The actual name you give the file should match what's below.
+; You'll then need to ucomment by removing the semi-colon.
+
+;stylesheets[all][] = css/STARTERKIT.css
+
+; Regions --------------------
+regions[top_links]       = Top Links
+regions[thirdparty_menu]  = Main menu (third party menu systems)
+regions[preface_first]  = Preface first
+regions[preface_second] = Preface second
+regions[preface_third]  = Preface third
+regions[content_top]    = Content top
+regions[help]           = Help
+regions[sidebar_first]  = Sidebar First
+regions[sidebar_second]  = Sidebar Second
+regions[content]         = Content
+regions[node_block]         = Node Block
+regions[postscript_first]   = Postscript first
+regions[postscript_second]  = Postscript second
+regions[postscript_third]   = Postscript third
+regions[footer_first]   = Footer first
+regions[top_panel]  = Top Panel (special use)
+
+; Features --------------------
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+
+; Gratis default settings --------------
+
+settings[gratis_themelogo]  = 1
+settings[breadcrumbs]  = 1
+settings[gratis_viewport]  = 0
+settings[theme_color_palette]  = orange
+settings[gratis_localcss]  = 0
+settings[gratis_custom_css_location]  = 0
