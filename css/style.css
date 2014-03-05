@@ -358,6 +358,9 @@ a.tabledrag-handle .handle {
   padding-top: 10px;
 }
 
+#footer .block-content a:hover {
+  color: #ccc;
+}
 
 /* System Tabs */
 

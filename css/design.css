@@ -8,21 +8,21 @@
 
 html,
 body {
-  height: 100%;
   min-width: 270px !important;
+  height: 100%;
 }
 
 #wrapper {
-  height: auto !important;
-  height: 100%;
   margin: 0 auto -140px;
   min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
 
 #footer,
 .push-sticky {
-  height: 134px;
   padding-bottom: 14px;
+  height: 134px;
 }
 
 /* End sticky footer. */
@@ -36,23 +36,23 @@ h3,
 h4,
 h5 {
   color: #666;
-  font-family: 'Open Sans', arial, sans-serif;
   font-weight: normal;
+  font-family: 'Open Sans', arial, sans-serif;
 }
 
 h1 {
+  margin: 10px 0;
   color: #666;
   font-size: 4em;
   line-height: 1.1em;
-  margin: 10px 0;
 }
 
 h1.site-name {
   display: inline-block;
+  margin: 5px 0 8px 0;
+  font-weight: normal;
   font-size: 1.5em;
   font-family: 'Open Sans', arial, sans-serif;
-  font-weight: normal;
-  margin: 5px 0 8px 0;
   text-rendering: optimizeLegibility;
 }
 
@@ -65,14 +65,14 @@ h1.page-header {
 }
 
 .theme-logo.site-name.site-slogan h1.site-name:after {
-  content: "\003A";
   margin-left: -4px;
+  content: "\003A";
 }
 
 p {
+  margin-bottom: 10px;
   font-size: 1.1em;
   line-height: 1.7em;
-  margin-bottom: 10px;
 }
 
 img {
@@ -83,10 +83,10 @@ img {
 
 a {
   text-decoration: none;
+  -webkit-transition: color .2s ease-in-out;
   -moz-transition: color .2s ease-in-out;
   -ms-transition: color .2s ease-in-out;
   -o-transition: color .2s ease-in-out;
-  -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
 
@@ -108,14 +108,27 @@ a.logo {
 
 #content li {
   margin-bottom: 10px;
-  font-size: 1.1em;
+  font-size: 14px;
+  font-size: .9rem;
+}
+
+#content li li {
+  left: 20px;
+}
+
+#content ul ul {
+  margin: 4px 0 0 0;
 }
 
 article .field ul li,
 aside .block-content ul li {
-  list-style: none;
   position: relative;
-  left: 20px;
+  left: 40px;
+  list-style: none;
+}
+
+.field-type-taxonomy-term-reference.field ul li {
+  left: inherit;
 }
 
 aside .block-content ul li {
@@ -124,18 +137,15 @@ aside .block-content ul li {
 
 article .field ul li:before,
 aside .block-content ul li:before {
-  content: "\f054";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
   position: absolute;
+  top: 2px;
   left: -16px;
   color: #ccc;
-  top: 2px;
-}
-
-article .field-type-taxonomy-term-reference ul li {
+  content: "\f054";
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-family: FontAwesome;
 }
 
 article .field-type-taxonomy-term-reference ul li:before {
@@ -146,12 +156,21 @@ article .field-type-taxonomy-term-reference ul li:before {
   color: #666;
 }
 
-ol li {
-  margin-left: 30px;
-}
-
 ol {
   margin-left: 25px;
+}
+
+ol ol {
+  margin: 3px 0 0 10px;
+}
+
+ol li {
+  margin-left: 20px;
+}
+
+#content ol li li {
+  margin: 0 0 6px 10px;
+  list-style-type: lower-alpha;
 }
 
 /* Regions */
@@ -170,29 +189,29 @@ ol {
 }
 
 #branding-wrapper {
-  text-align: right;
   padding-top: 6px;
+  text-align: right;
 }
 
 #footer {
-  background: #333;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto;
+  background: #333;
 }
 
 #logo-img {
-  max-height: 48px;
   margin-top: 8px;
+  max-height: 48px;
 }
 
 #header-bar {
-  background: #000;
   padding: 6px 0 8px 0;
+  background: #000;
 }
 
 #top-bar {
-  background: #333;
   min-height: 36px;
+  background: #333;
   text-align: right;
 }
 
@@ -200,7 +219,7 @@ ol {
   overflow: inherit;
 }
 
- .ie10 #header-bar {
+.ie10 #header-bar {
   height: 59px;
 }
 
@@ -228,17 +247,17 @@ figcaption {
 }
 
 #footer {
+  padding: 0;
   background: #202020;
   color: #fff;
-  padding: 0;
 }
 
 h3.branding {
-  color: #fff;
-  font-size: 1.3em;
+  display: inline-block;
   margin: 0;
   padding: 2px 0;
-  display: inline-block;
+  color: #fff;
+  font-size: 1.3em;
 }
 
 .site-name h3.branding {
@@ -250,9 +269,9 @@ h3.branding {
 }
 
 span.submitted {
-  border: 1px dotted #999;
   display: block;
   padding: 4px;
+  border: 1px dotted #999;
 }
 
 .img-caption {
@@ -267,7 +286,7 @@ aside.sidebar .block-content ul {
 
 aside.sidebar .block-content ul li {
   margin: 0 0 0.25em 1.5em;
-  padding: 0;
+  padding: 0 0 6px 0;
 }
 
 .calendar {
@@ -279,16 +298,16 @@ aside.sidebar .block-content ul li {
 }
 
 .item-list ul.pager li {
-  border: 1px solid #999;
-  margin: 0 0 0.25em .4em;
   display: inline-block;
+  margin: 0 0 0.25em .4em;
+  border: 1px solid #999;
 }
 
 .pager-current,
 .item-list ul.pager li:hover {
+  border: 1px solid #999;
   background: #999;
   color: #fff;
-  border: 1px solid #999;
   font-weight: normal;
   cursor: pointer;
 }
@@ -315,35 +334,35 @@ aside.sidebar .block-content ul li {
 
 code,
 pre {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  color: #222;
   display: block;
-  font-size: 0.88em;
-  line-height: 1.3;
-  margin: 0.5em;
   overflow: auto;
+  margin: 0.5em;
   padding: 0.5em;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #222;
   text-shadow: none;
   white-space: inherit;
+  font-size: 0.88em;
+  line-height: 1.3;
 }
 
 /* Sidebars */
 
 aside h2 {
-  background: url('../images/diagstripe.png');
-  border-left: 5px solid #f60;
   clear: both;
-  font-size: 140%;
-  line-height: 1.5em;
   margin: 0 0 20px 0;
   padding-left: 6px;
+  border-left: 5px solid #f60;
+  background: url('../images/diagstripe.png');
   text-transform: uppercase;
+  font-size: 140%;
+  line-height: 1.5em;
 }
 
-aside .block-content  ul li {
-  border-bottom: 1px solid #d6d6d6;
+aside .block-content ul li {
   padding-bottom: 4px;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 aside input[type="text"] {
@@ -370,10 +389,10 @@ aside .region.region-sidebar-second {
 }
 
 .field-type-taxonomy-term-reference span.field-label {
-  color: #666;
   float: left;
-  font-weight: bold;
   margin: 0;
+  color: #666;
+  font-weight: bold;
 }
 
 #content .field-type-taxonomy-term-reference ul {
@@ -381,11 +400,11 @@ aside .region.region-sidebar-second {
 }
 
 #content .field-type-taxonomy-term-reference ul li {
-  background: url('../images/tag.png') 0 1px no-repeat;
   display: inline-block;
-  padding: 0px 8px 1px 16px;
-  text-transform: uppercase;
   margin: 0 4px 0 6px;
+  padding: 0px 8px 1px 16px;
+  background: url('../images/tag.png') 0 1px no-repeat;
+  text-transform: uppercase;
 }
 
 span.image-block,
@@ -394,13 +413,13 @@ span.image-block,
 }
 
 .is-node .field-type-image img {
-  height: auto;
   max-width: 100%;
+  height: auto;
 }
 
 .page-node-edit.is-node .field-type-image img {
-  height: auto;
   width: inherit;
+  height: auto;
 }
 
 .not-node span.image-block {
@@ -448,13 +467,13 @@ span.image-block,
 }
 
 .comment .attribution img {
-  border: 1px solid #d3d7d9;
   margin: 0;
+  border: 1px solid #d3d7d9;
 }
 
 .comment .submitted p {
-  line-height: 1.2;
   margin: 4px 0;
+  line-height: 1.2;
 }
 
 .comment .submitted .comment-time {
@@ -463,34 +482,35 @@ span.image-block,
 }
 
 .comment .submitted .comment-permalink {
-  font-size: 0.786em;
   text-transform: lowercase;
+  font-size: 0.786em;
 }
 
 .comment .content {
   line-height: 1.6;
 }
+
 .comment .comment-arrow {
   border: #fff;
   border-color: #fff;
 }
 
 .comment .comment-arrow {
-  background: url('../images/comment-arrow.gif') no-repeat 0 center transparent;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  height: 40px;
-  margin-left: -47px;
-  margin-top: 10px;
   position: absolute;
+  margin-top: 10px;
+  margin-left: -47px;
   width: 20px;
+  height: 40px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  background: url('../images/comment-arrow.gif') no-repeat 0 center transparent;
 }
 
 .comment .comment-text {
-  border: 1px solid #d3d7d9;
+  position: relative;
   display: table-cell;
   padding: 10px 25px;
-  position: relative;
+  border: 1px solid #d3d7d9;
   vertical-align: top;
 }
 
@@ -513,8 +533,8 @@ span.image-block,
 }
 
 .comment-unpublished .comment-text .comment-arrow {
-  border-left: 1px solid #fff4f4;
   border-right: 1px solid #fff4f4;
+  border-left: 1px solid #fff4f4;
 }
 
 p.comment-time {
@@ -522,14 +542,14 @@ p.comment-time {
 }
 
 .comment-by-node-author .submitted {
-  background: #eaeaea;
   padding: 6px;
+  background: #eaeaea;
 }
 
 .comment-by-node-author .submitted:after {
+  color: #666;
   content: 'Author';
   font-size: .85em;
-  color: #666;
 }
 
 #comments h3 {
@@ -558,13 +578,13 @@ ul.links.inline li {
   padding-left: 0;
 }
 
-#menu-wrapper{
+#menu-wrapper {
   background: #000;
 }
 
 #logo {
-  max-height: 52px;
   overflow: hidden;
+  max-height: 52px;
 }
 
 #main-menu ul li a {
@@ -591,12 +611,12 @@ ul.links.inline li {
 }
 
 #main-menu li a {
-  font-size: 1.01em;
-  font-weight: normal;
-  letter-spacing: .1em;
-  text-rendering: optimizeLegibility;
   text-transform: capitalize;
+  letter-spacing: .1em;
+  font-weight: normal;
+  font-size: 1.01em;
   font-family: 'Open Sans', serif;
+  text-rendering: optimizeLegibility;
 }
 
 .menu-navigation ul {
@@ -605,8 +625,8 @@ ul.links.inline li {
 
 .arrow.icon-fixed-width {
   color: #fff;
-  font-size: 3.7em;
   text-align: left !important;
+  font-size: 3.7em;
 }
 
 .menu-icon.icon-fixed-width {
@@ -629,15 +649,15 @@ ul.links.inline li {
 }
 
 .top-links .block-content ul li:after {
+  margin-right: 2px;
+  margin-left: 6px;
   color: #999;
   content: ' | ';
-  margin-left: 6px;
-  margin-right: 2px;
 }
 
 .top-links .block-content li:last-child:after {
-  content: '';
   margin: 0;
+  content: '';
 }
 
 .top-links .block-content li:last-child {
@@ -649,11 +669,11 @@ ul.links.inline li {
 }
 
 .go-arrow {
-  border: 1px dotted #fff;
   display: block;
   float: right;
   padding: 5px;
   width: 42px;
+  border: 1px dotted #fff;
 }
 
 .home-featured-content {
@@ -712,7 +732,7 @@ li.leaf {
 .color-palette-orange #main-menu ul li a:hover,
 .color-palette-orange #main-menu ul li.hover-state a,
 .color-palette-orange #main-menu ul li.active-trail a,
-.color-palette-orange  input[type=submit],
+.color-palette-orange input[type=submit],
 .color-palette-orange button,
 .color-palette-orange input[type=reset],
 .color-palette-orange .menu-button,
@@ -746,7 +766,7 @@ li.leaf {
 .color-palette-turquoise a.active,
 .color-palette-turquoise li a.active,
 .color-palette-turquoise #comments h3 a,
-.theme-logo.site-name.color-palette-turquoise  h1.site-name:after,
+.theme-logo.site-name.color-palette-turquoise h1.site-name:after,
 .color-palette-turquoise .icon-quote-left {
   color: #02b4ce;
 }
@@ -759,7 +779,7 @@ li.leaf {
 .color-palette-turquoise #main-menu ul li a:hover,
 .color-palette-turquoise #main-menu ul li.hover-state a,
 .color-palette-turquoise #main-menu ul li.active-trail a,
-.color-palette-turquoise  input[type=submit],
+.color-palette-turquoise input[type=submit],
 .color-palette-turquoise button,
 .color-palette-turquoise input[type=reset],
 .color-palette-turquoise .menu-button,
@@ -794,7 +814,7 @@ li.leaf {
 }
 
 .color-palette-green a,
-.color-palette-green a.active, 
+.color-palette-green a.active,
 .color-palette-green li a.active,
 .color-palette-green #comments h3 a,
 .theme-logo.site-name.color-palette-green h1.site-name:after,
@@ -810,7 +830,7 @@ li.leaf {
 .color-palette-green #main-menu ul li a:hover,
 .color-palette-green #main-menu ul li.hover-state a,
 .color-palette-green #main-menu ul li.active-trail a,
-.color-palette-green  input[type=submit],
+.color-palette-green input[type=submit],
 .color-palette-green button,
 .color-palette-green input[type=reset],
 .color-palette-green .menu-button,
@@ -873,7 +893,7 @@ li.leaf {
 .color-palette-purple #main-menu ul li a:hover,
 .color-palette-purple #main-menu ul li.hover-state a,
 .color-palette-purple #main-menu ul li.active-trail a,
-.color-palette-purple  input[type=submit],
+.color-palette-purple input[type=submit],
 .color-palette-purple button,
 .color-palette-purple input[type=reset],
 .color-palette-purple .menu-button,
@@ -920,11 +940,11 @@ li.leaf {
 .color-palette-seafoam #main-menu ul li a:hover,
 .color-palette-seafoam #main-menu ul li.hover-state a,
 .color-palette-seafoam #main-menu ul li.active-trail a,
-.color-palette-seafoam  input[type=submit],
+.color-palette-seafoam input[type=submit],
 .color-palette-seafoam button,
 .color-palette-seafoam input[type=reset],
 .color-palette-seafoam .menu-button,
-.color-palette-seafoam #main-menu a.menu-link  {
+.color-palette-seafoam #main-menu a.menu-link {
   background: #16a085;
 }
 
@@ -967,7 +987,7 @@ li.leaf {
 .color-palette-pomegranate #main-menu ul li a:hover,
 .color-palette-pomegranate #main-menu ul li.hover-state a,
 .color-palette-pomegranate #main-menu ul li.active-trail a,
-.color-palette-pomegranate  input[type=submit],
+.color-palette-pomegranate input[type=submit],
 .color-palette-pomegranate button,
 .color-palette-pomegranate input[type=reset],
 .color-palette-pomegranate .menu-button,
@@ -1014,7 +1034,7 @@ li.leaf {
 .color-palette-greengray #main-menu ul li a:hover,
 .color-palette-greengray #main-menu ul li.hover-state a,
 .color-palette-greengray #main-menu ul li.active-trail a,
-.color-palette-greengray  input[type=submit],
+.color-palette-greengray input[type=submit],
 .color-palette-greengray button,
 .color-palette-greengray input[type=reset],
 .color-palette-greengray .menu-button,
@@ -1048,7 +1068,7 @@ li.leaf {
 .color-palette-pink a.active,
 .color-palette-pink li a.active,
 .color-palette-pink #comments h3 a,
-.theme-logo.site-name.color-palette-pink h1.site-name:after, 
+.theme-logo.site-name.color-palette-pink h1.site-name:after,
 .color-palette-pink .icon-quote-left {
   color: #b72898;
 }
@@ -1061,11 +1081,11 @@ li.leaf {
 .color-palette-pink #main-menu ul li a:hover,
 .color-palette-pink #main-menu ul li.hover-state a,
 .color-palette-pink #main-menu ul li.active-trail a,
-.color-palette-pink  input[type=submit],
+.color-palette-pink input[type=submit],
 .color-palette-pink button,
 .color-palette-pink input[type=reset],
 .color-palette-pink .menu-button,
-.color-palette-pink #main-menu a.menu-link  {
+.color-palette-pink #main-menu a.menu-link {
   background: #b72898;
 }
 
