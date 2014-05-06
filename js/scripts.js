@@ -5,10 +5,10 @@
 
 (function ($) {
 
-// Add drupal 7 code.
+  // Add drupal 7 code.
   Drupal.behaviors.miscGratis = {
     attach: function (context, settings) {
-// End drupal calls.
+      // End drupal calls.
 
       $('body').addClass('js');
 
@@ -38,7 +38,6 @@
        * Toggle the main menu, it's hidden initially
        * to prevent FOUC.
        */
-      //$("#main-menu ul.flexnav").show();
 
       // Set ul depths for better theming.
       $('#main-menu ul').each(function () {
@@ -94,25 +93,32 @@
       $(".date-in-parts")
         .prependTo(".not-front.page-node #post-content");
 
-        // Global zebra stripes and first / last.
+      // Global zebra stripes and first / last.
       $("article:visible:even").addClass("even");
       $("article:visible:odd").addClass("odd");
       $("#post-content article:last").addClass("last");
       $("#post-content article:first").addClass("first");
 
+      // @todo make these css 3 before elements if possible. 
       // Add comment icons using font awesome.
-      $('.comment-add').prepend('<i class="icon-fixed-width">&#xf040;</i>');
-      $('.comment-comments').prepend('<i class="icon-fixed-width">&#xf02d;</i>');
-      $('.node-readmore').prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
+      $('.comment-add').once(function () {
+        $(this).prepend('<i class="icon-fixed-width">&#xf040;</i>');
+      });
 
-// Blockquote.
+      $('.comment-comments').once(function () {
+        $(this).prepend('<i class="icon-fixed-width">&#xf02d;</i>');
+      });
+
+      $('.node-readmore').once(function () {
+        $(this).prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
+      });
+
+      // Blockquote.
       $('blockquote').prepend('<i class="icon-quote-left icon-4x pull-left icon-muted"></i>');
 
-
-// Node block - this should come last. It gets appened to the body field if it exists.
+      // Node block - this should come last. It gets appened to the body field if it exists.
       if ($(".field").hasClass("field-name-body")) {
-        $(".region-node-block")
-          .appendTo(".field-name-body");
+        $(".region-node-block").appendTo(".field-name-body");
       }
 
     }
