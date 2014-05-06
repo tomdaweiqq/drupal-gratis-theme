@@ -99,7 +99,7 @@
       $("#post-content article:last").addClass("last");
       $("#post-content article:first").addClass("first");
 
-      // @todo make these css 3 before elements if possible. 
+      // @todo make these css 3 before elements if possible.
       // Add comment icons using font awesome.
       $('.comment-add').once(function () {
         $(this).prepend('<i class="icon-fixed-width">&#xf040;</i>');

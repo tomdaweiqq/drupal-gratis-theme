@@ -199,6 +199,10 @@ ol li {
   text-align: right;
 }
 
+#branding-wrapper a:hover {
+  color: #eaeaea;
+}
+
 #footer {
   position: relative;
   margin: 0 auto;

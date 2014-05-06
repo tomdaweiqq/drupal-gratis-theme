@@ -32,6 +32,11 @@
     max-width: inherit;
   }
 
+  #branding-wrapper a {
+    position: relative;
+    z-index: 500;
+  }
+
   .header-grid {
     float: none;
     width: 100%;
