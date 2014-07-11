@@ -1,0 +1,20 @@
+body ul.menu {
+  @include padding-reset;
+  @include reset-list-style;
+  li.leaf {
+    @include no-bullets;
+  }
+}
+
+
+//@include breakpoint($tab) {
+//  $total-columns: 12;
+//
+//  #block-system-main-menu ul.menu {
+//    @include inline-block-list;
+//    li {
+//      vertical-align: top;
+//    }
+//  }
+//
+//}

@@ -6,7 +6,6 @@ engine = phptemplate
 ; CSS --------------------
 
 ; --- Note, 'responsive.css' must come last!
-;stylesheets[all][] = css/flexnav.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/design.css
 stylesheets[all][] = css/forms.css

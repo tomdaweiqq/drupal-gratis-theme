@@ -1,0 +1,58 @@
+@import "compass";
+
+/* set variables for global use */
+
+@mixin padding-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Use REMs with a pixel fallback for font sizing.
+@mixin font-size($font-size){
+  font-size: $font-size;
+  font-size: ($font-size / $base-font-size)*1rem;
+}
+
+// Menu background mixin
+@mixin menu-background($color, $menu-gradient: true) {
+  background-color: $color;
+  @if $menu-gradient == true {
+    @include background-image(linear-gradient(rgba(255, 255, 255, .2),
+      rgba(255, 255, 255, 0)));
+  }
+  @else {
+    background-image: none;
+  }
+}
+
+// Menu background mixin
+// The $size argument specifies the actual size of the triangle
+// The $shift-left helps on horizontal positioning.
+@mixin pseudo-triangle($size, $shift-left) {
+  &:after {
+    content: '';
+    position: absolute;
+    left: $shift-left * $gutter;
+    top: -$size * 2;
+    border: $size solid transparent;
+    border-bottom-color: inherit;
+  }
+}
+
+@mixin gamma {
+  margin-bottom: emRhythm(4, $ms-up2);
+  @include setType(6, $ms-up2);
+}
+
+
+

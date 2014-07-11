@@ -1,0 +1,45 @@
+// Primary Tabs ~~~~~~~~~~~~~~~ (.)(.)
+
+ul.tabs.tabs--primary {
+  display: table;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 10px 0;
+  width: 100%;
+
+  li {
+    float: left;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+  }
+
+  a {
+    background-color: #eff0f2;
+    border-bottom: 1px solid $white;
+    color: $medgray;
+    font-weight: 500;
+    display: block;
+    letter-spacing: 0;
+    outline: none;
+    padding: 0 20px;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid $dark-grey;
+    font-size: 12px;
+    &.active {
+      color: $white;
+      background: lighten($dark-grey, 20%);
+    }
+    &:hover {
+      background: lighten($dark-grey, 20%);
+      color: $white;
+    }
+  }
+
+}
+
+// End Primary tabs ~~~~~~~~~~~~~~~ (.)(.)
