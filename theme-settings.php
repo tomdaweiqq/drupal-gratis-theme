@@ -62,19 +62,19 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Use local.css?'),
     '#default_value' => theme_get_setting('gratis_localcss', 'gratis'),
     '#description' => t("This setting allows you to use your own custom css file within the gratis
-    theme folder. Only check this box if you have renamed local.sample.css to local.css.
-    You must clear the Drupal cache after doing this."),
+theme folder. Only check this box if you have renamed local.sample.css to local.css.
+You must clear the Drupal cache after doing this."),
   );
 
   $form['additional_settings']['other_settings']['gratis_grid_container_width'] = array(
     '#type' => 'textfield',
     '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
     '#default_value' => theme_get_setting('gratis_grid_container_width', 'gratis'),
-    '#description' => t("This setting allows you to set the width of the entire gird container. 
-      Leave blank for the default max width of 1200px.  All inner grids are percentage based 
-      so this should work with most any value you set within reason. 
-      <strong style='color: #cc0000;'>*** Warning, only use this if you know what 
-      you are doing!</strong>"),
+    '#description' => t("This setting allows you to set the width of the entire gird container.
+Leave blank for the default max width of 1200px.  All inner grids are percentage based
+so this should work with most any value you set within reason.
+<strong style='color: #cc0000;'>*** Warning, only use this if you know what
+you are doing!</strong>"),
   );
 
   $form['additional_settings']['other_settings']['gratis_viewport'] = array(
@@ -82,7 +82,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Use Touch device pinch and zoom?'),
     '#default_value' => theme_get_setting('gratis_viewport', 'gratis'),
     '#description' => t("** Check this box ONLY if you want to enable touch device users to be able to pinch and zoom.
-    Note this is purely experimental and if you enable this, there is no support for layouts breaking."),
+Note this is purely experimental and if you enable this, there is no support for layouts breaking."),
   );
 
   $form['custom_css_path_settings'] = array(
@@ -103,7 +103,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Path to Custom Stylesheet'),
     '#description' => t('Specify a custom path to the local.css file without the leading slash:
-    e.g.: sites/default/files/custom-css/local.css you must check the box above for this to work.'),
+e.g.: sites/default/files/custom-css/local.css you must check the box above for this to work.'),
     '#default_value' => theme_get_setting('gratis_custom_css_path', 'gratis'),
   );
 

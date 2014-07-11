@@ -13,16 +13,20 @@ body {
 }
 
 #wrapper {
-  margin: 0 auto -140px;
+  margin: 0 auto;
   min-height: 100%;
   height: auto !important;
   height: 100%;
 }
 
-#footer,
-.push-sticky {
-  padding-bottom: 14px;
-  height: 134px;
+/*#footer,*/
+/*.push-sticky {*/
+  /*padding-bottom: 14px;*/
+  /*height: 134px;*/
+/*}*/
+
+#footer {
+  min-height: 80px;
 }
 
 /* End sticky footer. */
@@ -211,7 +215,7 @@ ol li {
 
 #logo-img {
   margin-top: 8px;
-  max-height: 48px;
+  /*max-height: 48px;*/
 }
 
 #header-bar {
@@ -594,7 +598,7 @@ ul.links.inline li {
 
 #logo {
   overflow: hidden;
-  max-height: 52px;
+  /*max-height: 52px;*/
 }
 
 #main-menu ul li a {

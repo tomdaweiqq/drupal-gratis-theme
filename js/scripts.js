@@ -12,33 +12,6 @@
 
       $('body').addClass('js');
 
-      $(document).ready(function () {
-
-        var current_width = $(window).width();
-
-        // Provide for classes based on various widths
-        if (current_width <= 754)
-          $('html').addClass("mobile").removeClass("desktop");
-
-        if (current_width >= 755)
-          $('html').addClass("desktop").removeClass("mobile");
-      });
-
-      $(window).resize(function () {
-        var current_width = $(window).width();
-
-        if (current_width <= 754)
-          $('html').addClass("mobile").removeClass("desktop");
-
-        if (current_width >= 755)
-          $('html').addClass("desktop").removeClass("mobile");
-      });
-
-      /*
-       * Toggle the main menu, it's hidden initially
-       * to prevent FOUC.
-       */
-
       // Set ul depths for better theming.
       $('#main-menu ul').each(function () {
         var depth = $(this).parents('ul').length;

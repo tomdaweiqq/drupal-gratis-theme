@@ -179,12 +179,12 @@ svg {
 }
 
 body {
-  font: 13px/1.5 'Open Sans', arial, sans-serif;
+  font: 13px/1.5 'open sans', arial, sans-serif;
 }
 
 pre,
 code {
-  font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
+  font-family: "dejavu sans mono", monaco, consolas, monospace;
 }
 
 hr {
@@ -236,7 +236,7 @@ dd {
 }
 
 #context-blockform td.blocks .label {
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 div.admin .left {
@@ -257,11 +257,11 @@ dd {
   margin-bottom: 10px;
 }
 
-/* Tabs */
+/* tabs */
 
 div.vertical-tabs ul li.vertical-tab-button a {
-  border-right: 1px solid #CCCCCC;
-  background: #F9F9F9;
+  border-right: 1px solid #ccc;
+  background: #f9f9f9;
 }
 
 div.vertical-tabs ul li.vertical-tab-button a:hover,
@@ -280,8 +280,8 @@ div.vertical-tabs ul li.selected a,
 div.vertical-tabs ul li.selected a:hover,
 div.vertical-tabs ul li.selected a:focus,
 div.vertical-tabs ul li.selected a:active {
-  border-left: 5px solid #0074BD;
-  background: none repeat scroll 0 0 #FFFFFF;
+  border-left: 5px solid #0074bd;
+  background: none repeat scroll 0 0 #ffffff;
   border-right: 0 none;
   margin-left: -1px;
 }
@@ -291,7 +291,7 @@ div.vertical-tabs ul li.selected a:focus strong {
 }
 
 /**
- * Tables.
+ * tables.
  */
 table {
   color: #333;
@@ -309,7 +309,7 @@ td, th {
 }
 
 th {
-  background: #DFDFDF;
+  background: #dfdfdf;
   font-weight: bold;
 }
 
@@ -362,7 +362,7 @@ a.tabledrag-handle .handle {
   color: #ccc;
 }
 
-/* System Tabs */
+/* system tabs */
 
 .tabs {
   margin-bottom: 20px;
@@ -392,7 +392,7 @@ ul.tabs.primary li a {
   line-height: 1.9;
   display: block;
   font-size: 0.929em;
-  float: left; /* not LTR */
+  float: left; /* not ltr */
   padding: 4px 14px;
   margin: 0;
   font-size: 1.07em;
@@ -415,15 +415,15 @@ ul.secondary {
 
 ul.secondary li {
   display: block;
-  float: left; /* LTR */
+  float: left; /* ltr */
 }
 
 ul.secondary li:last-child {
-  border-right: none; /* LTR */
+  border-right: none; /* ltr */
 }
 
 ul.secondary li:first-child {
-  padding-left: 0; /* LTR */
+  padding-left: 0; /* ltr */
 }
 
 ul.secondary li a {
@@ -464,7 +464,7 @@ span.mailto {
   height: 12px;
 }
 
-/* Advanced forum styling */
+/* forum styling */
 .forum-post-panel-main.clearfix {
   clear: none;
 }

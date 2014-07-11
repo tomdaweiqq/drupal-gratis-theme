@@ -12,20 +12,20 @@
 
 @media screen {
   .clear {
-    clear: both;
     display: block;
-    height: 0;
-    overflow: hidden;
     visibility: hidden;
+    clear: both;
+    overflow: hidden;
     width: 0;
+    height: 0;
   }
 
   .grid-container {
-    margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
-    padding-left: 10px;
+    margin-left: auto;
     padding-right: 10px;
+    padding-left: 10px;
+    max-width: 1200px;
   }
 
   .grid-5,
@@ -75,22 +75,22 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: 10px;
     padding-right: 10px;
+    padding-left: 10px;
   }
 
   .grid-container:before,
   .clearfix:before,
   .grid-container:after,
   .clearfix:after {
-    content: ".";
     display: block;
-    font-size: 0;
-    height: 0;
-    line-height: 0;
-    overflow: hidden;
     visibility: hidden;
+    overflow: hidden;
     width: 0;
+    height: 0;
+    content: ".";
+    font-size: 0;
+    line-height: 0;
   }
 
   .grid-container:after,
@@ -99,8 +99,8 @@
   }
 
   .grid-parent {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
   body {
@@ -610,14 +610,14 @@
 
   .mobile-grid-100:before,
   .mobile-grid-100:after {
-    content: ".";
     display: block;
-    font-size: 0;
-    height: 0;
-    line-height: 0;
-    overflow: hidden;
     visibility: hidden;
+    overflow: hidden;
     width: 0;
+    height: 0;
+    content: ".";
+    font-size: 0;
+    line-height: 0;
   }
 }
 
@@ -1123,13 +1123,13 @@
 
   .grid-100:before,
   .grid-100:after {
-    content: ".";
     display: block;
-    font-size: 0;
-    height: 0;
-    line-height: 0;
-    overflow: hidden;
     visibility: hidden;
+    overflow: hidden;
     width: 0;
+    height: 0;
+    content: ".";
+    font-size: 0;
+    line-height: 0;
   }
 }

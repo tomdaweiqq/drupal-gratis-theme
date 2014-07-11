@@ -117,7 +117,7 @@ input[type="password"] {
   font-size: 16px;
 }
 
-html.js  input.form-autocomplete {
+html.js input.form-autocomplete {
   background: url("../images/spinner.gif") no-repeat 99% -31px;
 }
 

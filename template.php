@@ -10,9 +10,9 @@
 function gratis_preprocess_html(&$vars) {
   // Add an ie10 class if needed.
   $inline_script = <<<EOL
-  <script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
-    document.documentElement.className+=' ie10';
-  }</script>
+<script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
+document.documentElement.className+=' ie10';
+}</script>
 EOL;
   $element = array(
     '#type' => 'markup',
@@ -26,7 +26,7 @@ EOL;
 
   // HTML element attributes.
   $vars['html_attributes_array']['lang'] = $vars['language']->language;
-  $vars['html_attributes_array']['dir']  = $vars['language']->dir;
+  $vars['html_attributes_array']['dir'] = $vars['language']->dir;
 
   // Adds RDF namespace prefix bindings in the form of an RDFa 1.1 prefix
   // attribute inside the html element.
@@ -46,10 +46,10 @@ EOL;
 
   // Add opensans from Google fonts.
   // http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400italic,600italic,700italic,400,600,700
-  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700',array('type' => 'external'));
+  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700', array('type' => 'external'));
 
   // Add font awesome cdn.
-  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css',array('type' => 'external'));
+  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array('type' => 'external'));
 
   // Add a body class is the site name is hidden or not.
   if (theme_get_setting('toggle_name') == FALSE) {
@@ -75,16 +75,6 @@ EOL;
     $vars['classes_array'][] = 'theme-logo-none';
   }
 
-  // Add IE 9 fixes style sheet.
-  drupal_add_css(path_to_theme() . '/css/ie9-fixes.css',
-    array(
-      'group' => CSS_THEME,
-      'browsers' =>
-      array(
-        'IE' => 'iE 9',
-        '!IE' => FALSE),
-      'preprocess' => FALSE));
-
   // Extra body classes for theme variables.
   // The Color Palette.
   $file = theme_get_setting('theme_color_palette');
@@ -92,39 +82,32 @@ EOL;
 
   // Local css within theme folder if checked.
   if (theme_get_setting('gratis_localcss') == TRUE) {
-    drupal_add_css(path_to_theme() . '/css/local.css',
-      array(
+    drupal_add_css(path_to_theme() . '/css/local.css', array(
         'group' => CSS_THEME,
         'media' => 'screen',
         'preprocess' => TRUE,
         'weight' => '9997',
-      )
-      );
+      ));
   }
 
   // Custom css file path if checked and file exists.
   if (theme_get_setting('gratis_custom_css_location') == TRUE) {
     $path = theme_get_setting('gratis_custom_css_path');
     if (file_exists($path)) {
-      drupal_add_css("$path",
-        array(
+      drupal_add_css("$path", array(
           'group' => CSS_THEME,
           'preprocess' => TRUE,
           'weight' => 9998,
-        )
-        );
+        ));
     }
   }
 
-
-// Add general JS.
-  drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js',
-    array(
+  // Add general JS.
+  drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js', array(
       'group' => JS_THEME,
       'preprocess' => TRUE,
       'weight' => '999',
     ));
-
 
   $vars['scripts'] = drupal_get_js();
 
@@ -153,19 +136,19 @@ EOL;
     $vars['classes_array'][] = 'not-node';
   }
 
-  if(arg(0) == 'node' && arg(2) == 'edit') {
+  if (arg(0) == 'node' && arg(2) == 'edit') {
     $vars['classes_array'][] = 'page-node-edit';
   }
 
-  if(arg(0) == 'node' && arg(1) == 'add') {
+  if (arg(0) == 'node' && arg(1) == 'add') {
     $vars['classes_array'][] = 'page-node-add';
   }
 
-  if(arg(0) == 'node' && arg(2) === null) {
+  if (arg(0) == 'node' && arg(2) === NULL) {
     $vars['classes_array'][] = 'page-node-view';
   }
 
-  if(arg(0) == 'admin') {
+  if (arg(0) == 'admin') {
     $vars['classes_array'][] = 'admin-page';
   }
 
@@ -195,7 +178,7 @@ function gratis_html_head_alter(&$head_elements) {
   // Check that it is set, then we re-set it to the correct full url.
   if (isset($head_elements[$key])) {
     // Alter our head_element.
-    $head_elements[$key]['#attributes']['href'] = $base_url . '/' .$uri;
+    $head_elements[$key]['#attributes']['href'] = $base_url . '/' . $uri;
   }
 
   // Simplify the meta charset declaration.
@@ -293,7 +276,7 @@ function gratis_preprocess_page(&$vars, $hook) {
 
   // Postscript columns ('$pos_columns').
   if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pos_columns'] =  'grid-33 postscript';
+    $vars['pos_columns'] = 'grid-33 postscript';
   }
   elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second'])) {
     $vars['pos_columns'] = 'grid-50 postscript';
@@ -305,12 +288,12 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['pos_columns'] = 'grid-50 postscript';
   }
   else {
-    $vars['pos_columns'] =  'grid-100 postscript';
+    $vars['pos_columns'] = 'grid-100 postscript';
   }
 
   // Postscript columns ('$pre_columns').
   if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['pre_columns'] =  'grid-33 preface';
+    $vars['pre_columns'] = 'grid-33 preface';
   }
   elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
     $vars['pre_columns'] = 'grid-50 preface';
@@ -322,7 +305,7 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['pre_columns'] = 'grid-50 preface';
   }
   else {
-    $vars['pre_columns'] =  'grid-100 preface';
+    $vars['pre_columns'] = 'grid-100 preface';
   }
 
   // Primary nav.
@@ -363,8 +346,7 @@ function gratis_preprocess_node(&$vars, $hook) {
   $vars['content_attributes_array']['class'][] = 'article-content';
 
   // Show only the username in submitted, the date is handled by node.tpl.php.
-  $vars['submitted'] = t('Submitted by !username',
-    array('!username' => $vars['name']));
+  $vars['submitted'] = t('Submitted by !username', array('!username' => $vars['name']));
 
   // Set date variables using drupal's format_date function.
   $vars['thedate'] = format_date($node->created, "custom", "j");
