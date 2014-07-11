@@ -8,18 +8,7 @@
  * Implements hook_preprocess_html().
  */
 function gratis_preprocess_html(&$vars) {
-  // Add an ie10 class if needed.
-  $inline_script = <<<EOL
-<script>if (Function('/*@cc_on return document.documentMode===10@*/') ()) {
-document.documentElement.className+=' ie10';
-}</script>
-EOL;
-  $element = array(
-    '#type' => 'markup',
-    '#markup' => $inline_script,
-  );
 
-  drupal_add_html_head($element, 'javascript');
 
   $vars['html_attributes_array'] = array();
   $vars['body_attributes_array'] = array();

@@ -44,23 +44,23 @@
 
   .menu-navigation {
     position: fixed;
-    right: 0;
     top: 58px;
+    right: 0;
     z-index: 200;
   }
 
   .menu-button {
-    background: #E04604;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 1em;
+    width: 74px;
+    height: 32px;
     border: none;
+    background: #E04604;
     color: #fff;
     cursor: pointer;
-    display: block;
-    height: 32px;
-    padding: 1em;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 74px;
   }
 
   .flexnav .touch-button .navicon {
@@ -117,9 +117,9 @@
   }
 
   #logo-img {
-    max-height: inherit;
     margin-top: inherit;
     margin-bottom: inherit;
+    max-height: inherit;
   }
 }
 
@@ -151,9 +151,9 @@
   }
 
   .node-teaser .field-type-image img {
-    border: none;
-    height: auto;
     width: 100%;
+    height: auto;
+    border: none;
   }
 
   .field-type-taxonomy-term-reference span.field-label {
@@ -197,19 +197,19 @@
   }
 
   .comment .comment-text {
+    display: block;
     padding: 8px;
     width: 90%;
-    display: block;
   }
 
   .comment-arrow {
-    clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
   }
 
   .comment.comment-by-anonymous.clearfix {
-    border-bottom: 1px solid #999;
     padding-bottom: 20px;
+    border-bottom: 1px solid #999;
   }
 
   #comments .indented {
