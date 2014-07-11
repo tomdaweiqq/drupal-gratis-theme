@@ -2,26 +2,25 @@
 
 //colors
 
-$dark-gray: #666;
+$medium-gray: #666;
 $white: #fff;
-$color_2: #f60;
-$color_3: #e04604;
-$color_4: #ccc;
-$color_5: #eaeaea;
-$color_6: #333;
-$color_7: #000;
-$color_8: #787878;
+$orange-1: #f60;
+$orange-2: #e04604;
+$light-gray: #ccc;
+$light-gray-2: #eaeaea;
+$charcol-gray: #333;
+$black: #000;
 $color_9: #202020;
-$white0: #999;
-$white1: #f8f8f8;
-$white2: #222;
-$white3: #d6d6d6;
-$white4: #d3d7d9;
-$white5: #68696b;
-$white6: #fff4f4;
-$white7: #0eb5c8;
-$white8: rgba(0, 0, 0, 0.075);
-$white9: #02b4ce;
+$color_10: #999;
+$color_11: #f8f8f8;
+$color_12: #222;
+$color_13: #d6d6d6;
+$color_14: #d3d7d9;
+$color_15: #68696b;
+$color_16: #fff4f4;
+$color_17: #0eb5c8;
+$color_18: rgba(0, 0, 0, 0.075);
+$color_19: #02b4ce;
 $color_20: #009bb2;
 $color_21: #6a8500;
 $color_22: #491f70;
@@ -43,7 +42,7 @@ $font_4: serif;
 //original selectors
 //h1,  h2,  h2.block-title,  h3,  h4,  h5
 %extend_1 {
-  color: $dark-gray;
+  color: $color_0;
   font-weight: normal;
   font-family: $font_0, $font_1, $font_2;
 }
@@ -74,9 +73,9 @@ $font_4: serif;
 //original selectors
 //.pager-current,  .item-list ul.pager li:hover
 %extend_4 {
-  border: 1px solid $white0;
-  background: $white0;
-  color: $white;
+  border: 1px solid $color_10;
+  background: $color_10;
+  color: $color_1;
   font-weight: normal;
   cursor: pointer;
 }
@@ -89,8 +88,8 @@ $font_4: serif;
   margin: 0.5em;
   padding: 0.5em;
   border: 1px solid $color_4;
-  background-color: $white1;
-  color: $white2;
+  background-color: $color_11;
+  color: $color_12;
   //@todo convert to e.g. @include text-shadow($shadow-1, $shadow-2)
   text-shadow: none;
   white-space: inherit;
@@ -124,13 +123,13 @@ body {
   padding: 0;
   min-height: 80px;
   background: $color_9;
-  color: $white;
+  color: $color_1;
 }
 
 h1 {
   @extend %extend_1;
   margin: 10px 0;
-  color: $dark-gray;
+  color: $color_0;
   font-size: 4em;
   line-height: 1.1em;
   &.site-name {
@@ -141,7 +140,7 @@ h1 {
     font-family: $font_0, $font_1, $font_2;
     text-rendering: optimizeLegibility;
     a:hover {
-      color: $white;
+      color: $color_1;
     }
   }
   &.page-header {
@@ -162,7 +161,7 @@ h3 {
     display: inline-block;
     margin: 0;
     padding: 2px 0;
-    color: $white;
+    color: $color_1;
     font-size: 1.3em;
   }
 }
@@ -278,7 +277,7 @@ aside {
     @extend %extend_2;
     left: 0;
     padding-bottom: 4px;
-    border-bottom: 1px solid $white3;
+    border-bottom: 1px solid $color_13;
     &:before {
       @extend %extend_3;
     }
@@ -304,7 +303,7 @@ aside {
   span.field-label {
     float: left;
     margin: 0;
-    color: $dark-gray;
+    color: $color_0;
     font-weight: bold;
   }
 }
@@ -411,7 +410,7 @@ span {
   &.submitted {
     display: block;
     padding: 4px;
-    border: 1px dotted $white0;
+    border: 1px dotted $color_10;
   }
   &.image-block {
     display: block;
@@ -420,7 +419,7 @@ span {
 
 .img-caption {
   display: block;
-  color: $white0;
+  color: $color_10;
   font-style: italic;
 }
 
@@ -462,7 +461,7 @@ pre {
     vertical-align: top;
     img {
       margin: 0;
-      border: 1px solid $white4;
+      border: 1px solid $color_14;
     }
   }
   .submitted {
@@ -471,7 +470,7 @@ pre {
       line-height: 1.2;
     }
     .comment-time {
-      color: $white5;
+      color: $color_15;
       font-size: 0.786em;
     }
     .comment-permalink {
@@ -488,17 +487,17 @@ pre {
     margin-left: -47px;
     width: 20px;
     height: 40px;
-    border: $white;
-    border-color: $white;
-    border-right: 1px solid $white;
-    border-left: 1px solid $white;
+    border: $color_1;
+    border-color: $color_1;
+    border-right: 1px solid $color_1;
+    border-left: 1px solid $color_1;
     background: url('../images/comment-arrow.gif') no-repeat 0 center transparent;
   }
   .comment-text {
     position: relative;
     display: table-cell;
     padding: 10px 25px;
-    border: 1px solid $white4;
+    border: 1px solid $color_14;
     vertical-align: top;
   }
   .indented {
@@ -523,8 +522,8 @@ pre {
   margin-right: 5px;
   padding: 5px 2px 5px 5px;
   .comment-text .comment-arrow {
-    border-right: 1px solid $white6;
-    border-left: 1px solid $white6;
+    border-right: 1px solid $color_16;
+    border-left: 1px solid $color_16;
   }
 }
 
@@ -553,7 +552,7 @@ pre {
 #main-menu {
   ul li {
     a {
-      color: $white;
+      color: $color_1;
       &.active {
         background: $color_3;
       }
@@ -589,7 +588,7 @@ pre {
   float: right;
   padding: 5px;
   width: 42px;
-  border: 1px dotted $white;
+  border: 1px dotted $color_1;
 }
 
 .home-featured-content {
@@ -668,73 +667,73 @@ pre {
 
 .color-palette-turquoise {
   #menu-wrapper {
-    border-top: 2px solid $white9;
+    border-top: 2px solid $color_19;
   }
   #footer {
-    border-top: 6px solid $white9;
+    border-top: 6px solid $color_19;
   }
   a {
-    color: $white9;
+    color: $color_19;
     &.active {
-      color: $white9;
+      color: $color_19;
     }
     &:hover {
       color: $color_6;
     }
   }
   .icon-quote-left {
-    color: $white9;
+    color: $color_19;
   }
   #main-menu {
     ul li {
       a {
         &.active {
-          background: $white9;
+          background: $color_19;
         }
         &:hover {
-          background: $white9;
+          background: $color_19;
         }
       }
       &.hover-state a {
-        background: $white9;
+        background: $color_19;
       }
       &.active-trail a {
-        background: $white9;
+        background: $color_19;
       }
       &.li-depth-1 a {
         background: $color_6;
         &:hover {
-          background: $white9;
+          background: $color_19;
         }
       }
     }
     a.menu-link {
-      background: $white9;
+      background: $color_19;
     }
   }
   input[type=submit] {
-    background: $white9;
+    background: $color_19;
     &:hover {
       background: $color_20;
     }
   }
   button {
-    background: $white9;
+    background: $color_19;
   }
   input[type=reset] {
-    background: $white9;
+    background: $color_19;
   }
   .menu-button {
-    background: $white9;
+    background: $color_19;
   }
   aside h2 {
-    border-left: 5px solid $white9;
+    border-left: 5px solid $color_19;
   }
   li a.active {
-    color: $white9;
+    color: $color_19;
   }
   #comments h3 a {
-    color: $white9;
+    color: $color_19;
   }
 }
 
@@ -875,9 +874,9 @@ pre {
     color: $color_22;
   }
   .top-links .block-content ul li a {
-    color: $white;
+    color: $color_1;
     &:hover {
-      color: $white0;
+      color: $color_10;
     }
   }
 }
@@ -1167,7 +1166,7 @@ pre {
     color: $color_3;
   }
   &.color-palette-turquoise h1.site-name:after {
-    color: $white9;
+    color: $color_19;
   }
   &.color-palette-green h1.site-name:after {
     color: $color_21;
@@ -1179,7 +1178,7 @@ pre {
     a {
       color: $color_23;
       &:hover {
-        color: $white;
+        color: $color_1;
       }
     }
   }
@@ -1201,12 +1200,12 @@ pre {
   &.pager li {
     display: inline-block;
     margin: 0 0 0.25em .4em;
-    border: 1px solid $white0;
+    border: 1px solid $color_10;
     &:hover {
       @extend %extend_4;
     }
     a:hover {
-      color: $white;
+      color: $color_1;
       font-weight: normal;
     }
   }
@@ -1216,7 +1215,7 @@ pre {
 }
 
 .icon-li.icon-chevron-right {
-  color: $dark-gray;
+  color: $color_0;
 }
 
 .ie10 #header-bar {
@@ -1236,7 +1235,7 @@ pre {
 }
 
 .main-container.container {
-  background: $white;
+  background: $color_1;
 }
 
 .is-node .field-type-image img {
@@ -1267,7 +1266,7 @@ pre {
   padding: 6px;
   background: $color_5;
   &:after {
-    color: $dark-gray;
+    color: $color_0;
     content: 'Author';
     font-size: .85em;
   }
@@ -1276,12 +1275,12 @@ pre {
 #comments h3 {
   font-size: 1.5em;
   a {
-    color: $white7;
+    color: $color_17;
   }
 }
 
 .touch-button:hover {
-  background: $white8;
+  background: $color_18;
 }
 
 .menu-navigation ul {
@@ -1289,13 +1288,13 @@ pre {
 }
 
 .arrow.icon-fixed-width {
-  color: $white;
+  color: $color_1;
   text-align: left !important;
   font-size: 3.7em;
 }
 
 .menu-icon.icon-fixed-width {
-  color: $white;
+  color: $color_1;
   font-size: 2.2em;
 }
 
@@ -1317,7 +1316,7 @@ pre {
       &:after {
         margin-right: 2px;
         margin-left: 6px;
-        color: $white0;
+        color: $color_10;
         content: ' ';
       }
     }
