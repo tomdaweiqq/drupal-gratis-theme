@@ -1,0 +1,174 @@
+/*******************************************************************************
+ * off-canvas.layout.scss
+ *
+ * Styling of the Off Canvas layout.
+ ******************************************************************************/
+@import "compass";
+@import "breakpoint";
+@import "susy";
+
+
+// Susy Variables
+// Globbing from within sub-folders only works with relative paths.
+@import "../../variables/colors";
+@import "../../variables/legacy";
+@import "../../variables/typography";
+@import "../../variables/variables";
+
+
+$susy: (
+columns: 12,
+gutters: .25,
+);
+
+$sixteencols: (
+columns: 24,
+gutters: .25,
+);
+
+.l-constrained {
+  width: 95%;
+  margin: 0 auto;
+  @include pie-clearfix;
+}
+
+
+// clear various elements.
+.foobar {
+  @include break;
+  overflow: hidden;
+}
+
+//@include layout($sixteencols);
+
+.l-header,
+.l-main,
+.l-footer,
+.l-branding {
+  @include container;
+  @include pie-clearfix;
+  margin-bottom: $vert-spacing-unit;
+}
+
+.l-off-canvas {
+  clear: both;
+}
+
+img {
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+// Tablet widths
+@include susy-breakpoint($tab, 12) {
+//  $total-columns: 12;
+//  @include layout(12);
+
+  // Extends
+
+  %grayborder {
+    border: 1px solid $silver;
+  }
+
+  .l-header,
+  .l-main,
+  .l-footer {
+    //@include set-container-width;
+    @include container(1100px);
+  }
+
+  .l-branding {
+    //@include span-columns(4, 12);
+    @include span(4);
+  }
+  .l-region--header {
+    //@include span-columns(8 omega, 12);
+    @include span(8 at 5);
+  }
+  .l-region--navigation {
+    clear: both;
+  }
+
+  .one-sidebar.sidebar-first,
+  .one-sidebar.sidebar-second,
+  .two-sidebars {
+    #main-content {
+      // @include span-columns(8, 12);
+      @include span(8);
+    }
+    #sidebar-first,
+    #sidebar-second {
+     // @include span-columns(4 omega, 12);
+      @include span(4 at 9);
+    }
+    #sidebar-second {
+      clear: right;
+    }
+  }
+
+}
+
+// Wide screen layout grid.
+
+@include susy-breakpoint($desk, 24) {
+  //$total-columns: 16;
+  //@include layout(24);
+
+  .l-branding {
+   // @include span-columns(6, 16);
+    @include span(10);
+  }
+  .l-region--header{
+   // @include span-columns(10 omega, 16);
+    @include span(14 at 11);
+  }
+
+  .one-sidebar.sidebar-first {
+    #main-content {
+    //  @include span-columns(12 omega, 16);
+      @include span(18 at 17);
+    }
+    #sidebar-first {
+    //  @include span-columns(4, 16);
+      @include span(6);
+    }
+  }
+
+  .one-sidebar.sidebar-second {
+    #main-content {
+   //   @include span-columns(12, 16);
+      @include span(18);
+    }
+    #sidebar-second {
+    //  @include span-columns(4 omega, 16);
+      @include span(6 at 19);
+      clear: none;
+    }
+
+  }
+
+  .two-sidebars {
+    #main-content {
+   //   @include span-columns(8, 16);
+      @include span(8);
+      @include push(4);
+    }
+    #sidebar-first,
+    #sidebar-second {
+    //  @include span-columns(4, 16);
+      @include span(4);
+    }
+    #sidebar-first {
+      @include pull(12);
+    }
+    #sidebar-second {
+      @include omega;
+      clear: none;
+    }
+  }
+
+}

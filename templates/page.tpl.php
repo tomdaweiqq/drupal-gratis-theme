@@ -67,66 +67,68 @@
 
 <?php if ($page['top_panel']): ?>
   <div id="top-panel">
-  <?php print render($page['top_panel']); ?>
-</div>
+    <?php print render($page['top_panel']); ?>
+  </div>
 <?php endif; ?>
 
-
-<div id="wrapper">
+<!-- top links-->
 
 <?php if ($page['top_links']): ?>
-<div id="top-bar" class="top-wrapper">
-<div class="grid-container top-wrapper-inner" style="max-width:<?php print $thegrid; ?>">
-  <div class="grid-100 top-links">
-    <?php print render($page['top_links']); ?>
+  <div id="top-bar" class="top-wrapper">
+    <div class="grid-container top-wrapper-inner" style="max-width:<?php print $thegrid; ?>">
+      <div class="grid-100 top-links">
+        <?php print render($page['top_links']); ?>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 <?php endif; ?>
 
-  <div id="header-bar">
-    <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
-      <div class="grid-25 logo-wrapper header-grid">
-        <div id="brand">
-          <div id="logo">
-            
-            <?php if ($logo): ?>
+<!-- header -->
+
+<div id="header-bar">
+
+  <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-25 logo-wrapper header-grid">
+        <div id="logo">
+
+          <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
               <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
-            <?php else : ?>
-     
-        <h1 class="site-name">
-          <a href="<?php print $front_page; ?>">
-            <?php print $site_name; ?></a>
-          </h1>
-     
-            <?php endif; ?>
-          </div>
+          <?php else : ?>
+
+            <h1 class="site-name">
+              <a href="<?php print $front_page; ?>">
+                <?php print $site_name; ?></a>
+            </h1>
+
+          <?php endif; ?>
         </div>
-      </div><!--//logo-wrapper-->
+    </div>
+    <!--//logo-wrapper-->
 
-<div class="grid-75 branding-grid header-grid">
-<?php if ($site_slogan || $site_name) : ?>
-  <div id="branding-wrapper">
-    
-        <?php if ($logo): ?>
-        <?php if ($site_name) : ?>
-        <h1 class="site-name">
-          <a href="<?php print $front_page; ?>">
-            <?php print $site_name; ?></a>
-          </h1>
-        <?php endif; ?>
-         <?php endif; ?>
+    <div class="grid-75 branding-grid header-grid">
+      <?php if ($site_slogan || $site_name) : ?>
+        <div id="branding-wrapper">
 
-         <?php if ($site_slogan) : ?>
-        <h3 class="branding"><?php print $site_slogan; ?></h3>
+          <?php if ($logo): ?>
+            <?php if ($site_name) : ?>
+              <h1 class="site-name">
+                <a href="<?php print $front_page; ?>">
+                  <?php print $site_name; ?></a>
+              </h1>
+            <?php endif; ?>
           <?php endif; ?>
 
-      </div>
-<?php endif; ?>
-      </div><!--//branding-grid-->
+          <?php if ($site_slogan) : ?>
+            <h3 class="branding"><?php print $site_slogan; ?></h3>
+          <?php endif; ?>
 
-</header>
+        </div>
+      <?php endif; ?>
+    </div>
+    <!--//branding-grid-->
+
+  </header>
 </div>
 
 <div id="menu-wrapper">
@@ -134,23 +136,23 @@
     <div class="grid-100">
       <section id="main-menu" role="navigation">
         <?php if ($main_menu): ?>
-        <a class="menu-link" href="#menu">
-         <i class="icon-fixed-width menu-icon">&#xf039;</i>
-        </a>
-        <nav id="menu" class="main-navigation">
-          <?php if (!empty($primary_nav)): ?>
-          <?php print render($primary_nav); ?>
+          <a class="menu-link" href="#menu">
+            <i class="icon-fixed-width menu-icon">&#xf039;</i>
+          </a>
+          <nav id="menu" class="main-navigation">
+            <?php if (!empty($primary_nav)): ?>
+              <?php print render($primary_nav); ?>
+            <?php endif; ?>
+          </nav>
         <?php endif; ?>
-      </nav>
-    <?php endif; ?>
 
-    <!-- for third party menu systems or modules-->
-    <?php if ($page['thirdparty_menu']): ?>
-    <?php print render($page['thirdparty_menu']); ?>
-  <?php endif; ?>
-</section>
-</div>
-</div>
+        <!-- for third party menu systems or modules-->
+        <?php if ($page['thirdparty_menu']): ?>
+          <?php print render($page['thirdparty_menu']); ?>
+        <?php endif; ?>
+      </section>
+    </div>
+  </div>
 </div>
 
 <?php if ($breadcrumb): ?>
@@ -163,8 +165,7 @@
 
 <?php
 // Define and divide the preface page regions.
-if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']):
-  ?>
+if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
 
   <div id="preface-wrapper">
     <div class="grid-container" id="preface-container" style="max-width:<?php print $thegrid; ?>">
@@ -194,7 +195,7 @@ if ($page['preface_first'] || $page['preface_second'] || $page['preface_third'])
 <?php endif; ?>
 
 <main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content">
-  <div id = "main-content" class="<?php print $content_columns; ?>">
+  <div id="main-content" class="<?php print $content_columns; ?>">
     <?php print $messages; ?>
     <?php if (!empty($tabs)): ?>
       <?php print render($tabs); ?>
@@ -257,8 +258,7 @@ if ($page['preface_first'] || $page['preface_second'] || $page['preface_third'])
 
 <?php
 // Define and divide the postscript page regions.
-if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']):
-  ?>
+if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
 
   <div id="postscript-wrapper">
     <div class="grid-container" id="postscript-container" style="max-width:<?php print $thegrid; ?>">
@@ -287,9 +287,6 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 
 <?php endif; ?>
 
-<div class="push-sticky"></div>
-
-</div>
 
 <footer id="footer" role="footer">
   <section class="grid-container" style="max-width:<?php print $thegrid; ?>">
