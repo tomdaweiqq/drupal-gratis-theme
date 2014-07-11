@@ -8,20 +8,3 @@
 
 
 @include establish-baseline($base-font-size);
-
-// For each loop for @fontface
-// Add more fonts e.g @each $font-face in $vera-sans, foobar, $foobar
-
-@each $font-face in $vera-sans {
-  @font-face {
-    font-family: $font-face; font-style: normal; font-weight: normal;
-    src: url('#{$fonts-path}/#{$font-face}.eot');
-    src: url('#{$fonts-path}/#{$font-face}.eot?') format('eot'),
-    url('#{$fonts-path}/#{$font-face}.woff') format('woff'),
-    url('#{$fonts-path}/#{$font-face}.ttf')  format('truetype');
-  }
-}
-
-.promo h2 {
-@include gamma;
-}

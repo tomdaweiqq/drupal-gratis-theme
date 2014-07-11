@@ -5,16 +5,3 @@ body ul.menu {
     @include no-bullets;
   }
 }
-
-
-//@include breakpoint($tab) {
-//  $total-columns: 12;
-//
-//  #block-system-main-menu ul.menu {
-//    @include inline-block-list;
-//    li {
-//      vertical-align: top;
-//    }
-//  }
-//
-//}
