@@ -9,6 +9,22 @@
  */
 function gratis_preprocess_html(&$vars) {
 
+  // Postscript columns ('$pos_columns').
+  if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
+    $vars['classes_array'][] = 'postscript-three';
+  }
+  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second'])) {
+    $vars['classes_array'][] = 'postscript-two';
+  }
+  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_third'])) {
+    $vars['classes_array'][] = 'postscript-two';
+  }
+  elseif (!empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
+    $vars['classes_array'][] = 'postscript-two';
+  }
+  else {
+    $vars['classes_array'][] = 'postscript-one';
+  }
 
   $vars['html_attributes_array'] = array();
   $vars['body_attributes_array'] = array();
@@ -239,7 +255,7 @@ function gratis_preprocess_page(&$vars, $hook) {
 
   // Set the custom grid width in a variable.
   $gridwidth = theme_get_setting('gratis_grid_container_width');
-  $vars['thegrid'] = $gridwidth;
+  $vars['setwidth'] = $gridwidth;
 
   // Add information about the number of sidebars.
   // Both sidebars.

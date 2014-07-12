@@ -6,12 +6,10 @@ engine = phptemplate
 ; CSS --------------------
 
 ; --- Note, 'responsive.css' must come last!
-stylesheets[all][] = css/style.css
-stylesheets[all][] = css/design.css
-stylesheets[all][] = css/forms.css
-stylesheets[all][] = css/unsemantic-grid-responsive.css
-stylesheets[all][] = css/responsive.css
-stylesheets[all][] = css/menu.css
+stylesheets[all][] = css/gratis.normalize.css
+stylesheets[all][] = css/gratis.hacks.css
+stylesheets[all][] = css/gratis.styles.css
+stylesheets[all][] = css/gratis.no-query.css
 
 ; Regions --------------------
 regions[top_links]       = Top Links

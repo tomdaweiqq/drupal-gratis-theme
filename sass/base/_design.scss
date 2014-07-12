@@ -1,15 +1,13 @@
-// @todo better (pretty) vars names, move vars to vars files, create mixins etc..
-
 //colors
-
-$medium-gray: #666;
-$white: #fff;
-$orange-1: #f60;
-$orange-2: #e04604;
-$light-gray: #ccc;
-$light-gray-2: #eaeaea;
-$charcol-gray: #333;
-$black: #000;
+$color_0: #666;
+$color_1: #fff;
+$color_2: #f60;
+$color_3: #e04604;
+$color_4: #ccc;
+$color_5: #eaeaea;
+$color_6: #333;
+$color_7: #000;
+$color_8: #787878;
 $color_9: #202020;
 $color_10: #999;
 $color_11: #f8f8f8;
@@ -30,8 +28,39 @@ $color_25: #c0392b;
 $color_26: #7f8c8d;
 $color_27: #b72898;
 
+
+
+$white: #fff;
+$light-gray: #ccc;
+$light-gray-2: #eaeaea;
+$medium-gray: #666;
+$charcol-gray: #333;
+$gray-gradient: rgba(0, 0, 0, 0.075);
+$dark-gray: #202020;
+$black: #000;
+
+$color_10: #999;
+$color_11: #f8f8f8;
+$color_13: #d6d6d6;
+$color_14: #d3d7d9;
+$color_16: #fff4f4;
+
+// Colors
+
+$sea-green: #16a085;
+$pomegranate: #c0392b;
+$orange-2: #e04604;
+$chartruse: #6a8500;
+$pink: #b72898;
+$purple: #491f70;
+$purple-accent: #7629bd;
+$turquoise: #0eb5c8;
+$green-gray: #7f8c8d;
+
+
+
+
 //fonts
-// @todo come up with pretty names for these.
 $font_0: Open Sans;
 $font_1: arial;
 $font_2: sans-serif;
@@ -56,8 +85,7 @@ $font_4: serif;
 }
 
 //original selectors
-//article .field ul li:before,
-//aside .block-content ul li:before
+//article .field ul li:before,  aside .block-content ul li:before
 %extend_3 {
   position: absolute;
   top: 2px;
@@ -90,42 +118,40 @@ $font_4: serif;
   border: 1px solid $color_4;
   background-color: $color_11;
   color: $color_12;
-  //@todo convert to e.g. @include text-shadow($shadow-1, $shadow-2)
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   text-shadow: none;
   white-space: inherit;
   font-size: 0.88em;
   line-height: 1.3;
 }
 
+
 * {
   margin: 0;
 }
-
 html {
   min-width: 270px !important;
   height: 100%;
 }
-
 body {
   min-width: 270px !important;
   height: 100%;
 }
-
 #wrapper {
   margin: 0 auto;
   min-height: 100%;
+  height: auto !important;
   height: 100%;
 }
-
 #footer {
+  min-height: 80px;
   position: relative;
   margin: 0 auto;
+  background: $color_6;
   padding: 0;
-  min-height: 80px;
   background: $color_9;
   color: $color_1;
 }
-
 h1 {
   @extend %extend_1;
   margin: 10px 0;
@@ -147,14 +173,12 @@ h1 {
     text-transform: capitalize;
   }
 }
-
 h2 {
   @extend %extend_1;
   &.block-title {
     @extend %extend_1;
   }
 }
-
 h3 {
   @extend %extend_1;
   &.branding {
@@ -165,15 +189,12 @@ h3 {
     font-size: 1.3em;
   }
 }
-
 h4 {
   @extend %extend_1;
 }
-
 h5 {
   @extend %extend_1;
 }
-
 p {
   margin-bottom: 10px;
   font-size: 1.1em;
@@ -182,16 +203,14 @@ p {
     font-size: .95em;
   }
 }
-
 img {
   border: none;
 }
-
 a {
-  color: $color_3;
-  // @todo covert to e.g. @include transition($transition-1)
   text-decoration: none;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: color .2s ease-in-out;
+  color: $color_3;
   &:hover {
     color: $color_2;
   }
@@ -202,7 +221,6 @@ a {
     padding-left: 10px;
   }
 }
-
 li {
   &.expanded {
     padding: 0;
@@ -217,12 +235,12 @@ li {
     color: $color_3;
   }
 }
-
 #content {
   position: relative;
   z-index: 1;
   li {
     margin-bottom: 10px;
+    font-size: 14px;
     font-size: .9rem;
     li {
       left: 20px;
@@ -246,7 +264,6 @@ li {
     }
   }
 }
-
 article {
   .field ul li {
     @extend %extend_2;
@@ -258,7 +275,6 @@ article {
     content: '' !important;
   }
 }
-
 aside {
   h2 {
     clear: both;
@@ -293,7 +309,6 @@ aside {
     padding-right: 10px;
   }
 }
-
 .field-type-taxonomy-term-reference {
   display: block;
   margin: 10px 0 0;
@@ -307,7 +322,6 @@ aside {
     font-weight: bold;
   }
 }
-
 ul {
   &.pager li:before {
     content: '' !important;
@@ -321,7 +335,6 @@ ul {
     padding-left: 0;
   }
 }
-
 ol {
   margin-left: 25px;
   ol {
@@ -331,19 +344,15 @@ ol {
     margin-left: 20px;
   }
 }
-
 #sidebar-second {
   margin-top: 20px;
 }
-
 #sidebar-first {
   margin-top: 20px;
 }
-
 #preface-wrapper {
   margin: 10px 0 0;
 }
-
 .sidebar {
   .block {
     margin-bottom: 20px;
@@ -352,7 +361,6 @@ ol {
     margin-left: -17px;
   }
 }
-
 #branding-wrapper {
   padding-top: 6px;
   text-align: right;
@@ -360,16 +368,13 @@ ol {
     color: $color_5;
   }
 }
-
 #logo-img {
   margin-top: 8px;
 }
-
 #header-bar {
   padding: 6px 0 8px;
   background: $color_7;
 }
-
 #top-bar {
   min-height: 36px;
   background: $color_6;
@@ -378,12 +383,10 @@ ol {
     overflow: inherit;
   }
 }
-
 .submit-wrapper {
   display: block;
   margin-bottom: 10px;
 }
-
 .node-teaser {
   .field-type-image {
     float: right;
@@ -396,16 +399,13 @@ ol {
     margin-bottom: 10px;
   }
 }
-
 figcaption {
   color: $color_8;
   font-style: italic;
 }
-
 #breadcrumbs {
   padding-top: 8px;
 }
-
 span {
   &.submitted {
     display: block;
@@ -416,40 +416,32 @@ span {
     display: block;
   }
 }
-
 .img-caption {
-  display: block;
   color: $color_10;
   font-style: italic;
+  display: block;
 }
-
 .calendar {
   width: inherit;
 }
-
 .pager-current {
   @extend %extend_4;
 }
-
 #main-container-inner {
   padding: 0;
   article {
     margin-top: 14px;
   }
 }
-
 #page-header {
   padding: 0;
 }
-
 code {
   @extend %extend_5;
 }
-
 pre {
   @extend %extend_5;
 }
-
 .comment {
   display: table;
   margin-bottom: 20px;
@@ -482,13 +474,13 @@ pre {
     line-height: 1.6;
   }
   .comment-arrow {
+    border: $color_1;
+    border-color: $color_1;
     position: absolute;
     margin-top: 10px;
     margin-left: -47px;
     width: 20px;
     height: 40px;
-    border: $color_1;
-    border-color: $color_1;
     border-right: 1px solid $color_1;
     border-left: 1px solid $color_1;
     background: url('../images/comment-arrow.gif') no-repeat 0 center transparent;
@@ -517,7 +509,6 @@ pre {
     }
   }
 }
-
 .comment-unpublished {
   margin-right: 5px;
   padding: 5px 2px 5px 5px;
@@ -526,29 +517,23 @@ pre {
     border-left: 1px solid $color_16;
   }
 }
-
 #edit-submit {
   margin-right: 10px;
 }
-
 .field-group-format-toggler {
   cursor: pointer;
 }
-
 .region-header-bar {
   float: right;
 }
-
 #menu-wrapper {
+  background: $color_7;
   position: relative;
   z-index: 300;
-  background: $color_7;
 }
-
 #logo {
   overflow: hidden;
 }
-
 #main-menu {
   ul li {
     a {
@@ -582,7 +567,6 @@ pre {
     text-rendering: optimizeLegibility;
   }
 }
-
 .go-arrow {
   display: block;
   float: right;
@@ -590,12 +574,10 @@ pre {
   width: 42px;
   border: 1px dotted $color_1;
 }
-
 .home-featured-content {
   float: left;
   width: 85%;
 }
-
 .color-palette-orange {
   #menu-wrapper {
     border-top: 2px solid $color_3;
@@ -664,7 +646,6 @@ pre {
     color: $color_3;
   }
 }
-
 .color-palette-turquoise {
   #menu-wrapper {
     border-top: 2px solid $color_19;
@@ -736,7 +717,6 @@ pre {
     color: $color_19;
   }
 }
-
 .color-palette-green {
   #menu-wrapper {
     border-top: 2px solid $color_21;
@@ -805,7 +785,6 @@ pre {
     color: $color_21;
   }
 }
-
 .color-palette-purple {
   #menu-wrapper {
     border-top: 2px solid $color_22;
@@ -880,7 +859,6 @@ pre {
     }
   }
 }
-
 .color-palette-seafoam {
   #menu-wrapper {
     border-top: 2px solid $color_24;
@@ -949,7 +927,6 @@ pre {
     color: $color_24;
   }
 }
-
 .color-palette-pomegranate {
   #menu-wrapper {
     border-top: 2px solid $color_25;
@@ -1018,7 +995,6 @@ pre {
     color: $color_25;
   }
 }
-
 .color-palette-greengray {
   #menu-wrapper {
     border-top: 2px solid $color_26;
@@ -1087,7 +1063,6 @@ pre {
     color: $color_26;
   }
 }
-
 .color-palette-pink {
   #menu-wrapper {
     border-top: 2px solid $color_27;
@@ -1156,7 +1131,6 @@ pre {
     color: $color_27;
   }
 }
-
 .theme-logo.site-name {
   &.site-slogan h1.site-name:after {
     margin-left: -4px;
@@ -1195,7 +1169,6 @@ pre {
     color: $color_27;
   }
 }
-
 .item-list ul {
   &.pager li {
     display: inline-block;
@@ -1213,46 +1186,36 @@ pre {
     margin: 0 1.4em 0.25em 0;
   }
 }
-
 .icon-li.icon-chevron-right {
   color: $color_0;
 }
-
 .ie10 #header-bar {
   height: 59px;
 }
-
 .front .region.region-postscript {
   margin-top: 50px;
 }
-
 .site-name h3.branding {
   padding-left: 6px;
 }
-
 .page-node h1.page-title {
   margin-top: 0;
 }
-
 .main-container.container {
   background: $color_1;
 }
-
 .is-node .field-type-image img {
   max-width: 100%;
   height: auto;
 }
-
 .page-node-edit.is-node .field-type-image img {
   width: inherit;
   height: auto;
 }
-
 .not-node span.image-block {
   float: right;
   margin-left: 10px;
 }
-
 .links.node-links ul li {
   display: inline-block;
   margin-right: 10px;
@@ -1261,7 +1224,6 @@ pre {
     padding: 4px 4px 4px 3px;
   }
 }
-
 .comment-by-node-author .submitted {
   padding: 6px;
   background: $color_5;
@@ -1271,33 +1233,27 @@ pre {
     font-size: .85em;
   }
 }
-
 #comments h3 {
   font-size: 1.5em;
   a {
     color: $color_17;
   }
 }
-
 .touch-button:hover {
   background: $color_18;
 }
-
 .menu-navigation ul {
   margin-bottom: 0;
 }
-
 .arrow.icon-fixed-width {
   color: $color_1;
   text-align: left !important;
   font-size: 3.7em;
 }
-
 .menu-icon.icon-fixed-width {
   color: $color_1;
   font-size: 2.2em;
 }
-
 .top-links .block-content {
   ul {
     margin: 0;

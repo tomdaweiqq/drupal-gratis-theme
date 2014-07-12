@@ -75,7 +75,7 @@
 
 <?php if ($page['top_links']): ?>
   <div id="top-bar" class="top-wrapper">
-    <div class="grid-container top-wrapper-inner" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-container top-wrapper-inner" style="max-width:<?php print $setwidth; ?>">
       <div class="grid-100 top-links">
         <?php print render($page['top_links']); ?>
       </div>
@@ -87,7 +87,7 @@
 
 <div id="header-bar">
 
-  <header role="banner" class="grid-container banner" style="max-width:<?php print $thegrid; ?>">
+  <header role="banner" class="grid-container banner" style="max-width:<?php print $setwidth; ?>">
     <div class="grid-25 logo-wrapper header-grid">
         <div id="logo">
 
@@ -132,19 +132,21 @@
 </div>
 
 <div id="menu-wrapper">
-  <div class="grid-container main-menu-wrapper" style="max-width:<?php print $thegrid; ?>">
+  <div class="grid-container main-menu-wrapper" style="max-width:<?php print $setwidth; ?>">
     <div class="grid-100">
       <section id="main-menu" role="navigation">
+
         <?php if ($main_menu): ?>
-          <a class="menu-link" href="#menu">
-            <i class="icon-fixed-width menu-icon">&#xf039;</i>
-          </a>
-          <nav id="menu" class="main-navigation">
-            <?php if (!empty($primary_nav)): ?>
+
+        <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
+
+        <div id="off-canvas-left" class="l-off-canvas l-off-canvas--left">
+          <a id="off-canvas-left-hide" href="#" class="l-off-canvas-hide l-off-canvas-hide--left"><?php print t('Hide Navigation'); ?></a>
               <?php print render($primary_nav); ?>
-            <?php endif; ?>
-          </nav>
+          </div>
         <?php endif; ?>
+
+        <!-- //main menu -->
 
         <!-- for third party menu systems or modules-->
         <?php if ($page['thirdparty_menu']): ?>
@@ -157,7 +159,7 @@
 
 <?php if ($breadcrumb): ?>
   <div id="breadcrumbs">
-    <header class="grid-container" style="max-width:<?php print $thegrid; ?>">
+    <header class="grid-container" style="max-width:<?php print $setwidth; ?>">
       <div class="grid-100"><?php print $breadcrumb; ?></div>
     </header>
   </div>
@@ -168,7 +170,7 @@
 if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
 
   <div id="preface-wrapper">
-    <div class="grid-container" id="preface-container" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-container" id="preface-container" style="max-width:<?php print $setwidth; ?>">
 
       <!--Preface -->
       <?php if (!empty($page['preface_first'])): ?>
@@ -194,7 +196,7 @@ if ($page['preface_first'] || $page['preface_second'] || $page['preface_third'])
 
 <?php endif; ?>
 
-<main role="main" class="grid-container" style="max-width:<?php print $thegrid; ?>" id="content">
+<main role="main" class="grid-container" style="max-width:<?php print $setwidth; ?>" id="content">
   <div id="main-content" class="<?php print $content_columns; ?>">
     <?php print $messages; ?>
     <?php if (!empty($tabs)): ?>
@@ -261,7 +263,7 @@ if ($page['preface_first'] || $page['preface_second'] || $page['preface_third'])
 if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
 
   <div id="postscript-wrapper">
-    <div class="grid-container" id="postscript-container" style="max-width:<?php print $thegrid; ?>">
+    <div class="grid-container" id="postscript-container" style="max-width:<?php print $setwidth; ?>">
 
       <!--Postscript -->
       <?php if (!empty($page['postscript_first'])): ?>
@@ -289,7 +291,7 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 
 
 <footer id="footer" role="footer">
-  <section class="grid-container" style="max-width:<?php print $thegrid; ?>">
+  <section class="grid-container" style="max-width:<?php print $setwidth; ?>">
     <div class="grid-100">
       <?php if (!empty($page['footer_first'])): ?>
         <?php print render($page['footer_first']); ?>
