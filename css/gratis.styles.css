@@ -422,7 +422,7 @@ img, media {
 
 @media (min-width: 44em) {
   /* line 6, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul:after {
+  #foobar > ul:after {
     content: "";
     display: table;
     clear: both;
@@ -445,123 +445,148 @@ img, media {
     }
   }
   /* line 24, ../sass/base/_menu.scss */
-  #block-system-main-menu {
-    font: bold 13px "Open Sans", Arial, sans-serif;
+  #foobar {
+    font: bold 13px Arial, Helvetica;
   }
   /* line 26, ../sass/base/_menu.scss */
-  #block-system-main-menu * {
+  #foobar * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   /* line 29, ../sass/base/_menu.scss */
-  #block-system-main-menu ul {
+  #foobar ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
   }
-  /* line 34, ../sass/base/_menu.scss */
-  #block-system-main-menu li {
+  /* line 35, ../sass/base/_menu.scss */
+  #foobar li {
     position: relative;
   }
-  /* line 37, ../sass/base/_menu.scss */
-  #block-system-main-menu li:hover > ul {
+  /* line 38, ../sass/base/_menu.scss */
+  #foobar li:hover > ul {
     opacity: 1;
     visibility: visible;
     margin: 0;
   }
-  /* line 42, ../sass/base/_menu.scss */
-  #block-system-main-menu li:hover > a {
+  /* line 43, ../sass/base/_menu.scss */
+  #foobar li:hover > a {
     color: white;
   }
-  /* line 47, ../sass/base/_menu.scss */
-  #block-system-main-menu input[type=checkbox] {
+  /* line 48, ../sass/base/_menu.scss */
+  #foobar input[type=checkbox] {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  /* line 52, ../sass/base/_menu.scss */
-  #block-system-main-menu label {
+  /* line 53, ../sass/base/_menu.scss */
+  #foobar label {
     display: none;
     cursor: pointer;
     user-select: none;
   }
 
-  /* line 61, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul {
-    text-align: center;
-    background: #202020;
-  }
-  /* line 65, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul > li {
-    display: inline-block;
-    vertical-align: top;
-    border-right: 1px solid #2d2d2d;
+  /* line 64, ../sass/base/_menu.scss */
+  #foobar > ul {
+    border: 1px solid #131313;
+    background-color: #202020;
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
   }
   /* line 69, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul > li > a {
+  #foobar > ul > li {
+    float: left;
+    border-right: 1px solid #2d2d2d;
+    -moz-box-shadow: 1px 0 0 #535353;
+    -webkit-box-shadow: 1px 0 0 #535353;
+    box-shadow: 1px 0 0 #535353;
+  }
+  /* line 73, ../sass/base/_menu.scss */
+  #foobar > ul > li > a {
+    float: left;
     padding: 1em 3em;
     text-transform: uppercase;
   }
-  /* line 75, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul a {
+  /* line 79, ../sass/base/_menu.scss */
+  #foobar > ul a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    text-shadow: 0 1px 0 #202020;
   }
-  /* line 83, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul ul {
+  /* line 91, ../sass/base/_menu.scss */
+  #foobar > ul ul {
     position: absolute;
     top: 100%;
-    left: -50%;
+    left: 0;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
     margin: 2em 0 0 0;
-    z-index: 100;
     background-color: #464646;
     background-image: none;
     -moz-transition-property: "margin, opacity";
     -webkit-transition-property: "margin, opacity";
     transition-property: "margin, opacity";
-    -moz-transition-duration: 0.15s;
-    -webkit-transition-duration: 0.15s;
-    transition-duration: 0.15s;
+    -moz-transition-duration: ".15s";
+    -webkit-transition-duration: ".15s";
+    transition-duration: ".15s";
     -moz-transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-    width: 200%;
   }
-  /* line 97, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul ul li {
+  /* line 102, ../sass/base/_menu.scss */
+  #foobar > ul ul li {
     display: block;
+    -moz-box-shadow: 0 1px 0 #2d2d2d, 0 2px 0 #606060;
+    -webkit-box-shadow: 0 1px 0 #2d2d2d, 0 2px 0 #606060;
+    box-shadow: 0 1px 0 #2d2d2d, 0 2px 0 #606060;
+  }
+  /* line 106, ../sass/base/_menu.scss */
+  #foobar > ul ul li:first-child > a {
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px 3px 0 0;
   }
   /* line 42, ../sass/abstractions/_mixins.scss */
-  #block-system-main-menu > ul ul li:first-child > a:after {
+  #foobar > ul ul li:first-child > a:after {
     content: '';
     position: absolute;
-    left: 9em;
+    left: 4em;
     top: -12px;
     border: 6px solid transparent;
     border-bottom-color: inherit;
   }
-  /* line 102, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul ul li:last-child {
+  /* line 110, ../sass/base/_menu.scss */
+  #foobar > ul ul li:last-child {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  /* line 109, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul ul a {
-    padding: 1em;
-    display: block;
-    border-color: #851b1d;
-    background-color: #851b1d;
+  /* line 112, ../sass/base/_menu.scss */
+  #foobar > ul ul li:last-child > a {
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0;
+    border-radius: 0 0 3px 3px;
   }
-  /* line 115, ../sass/base/_menu.scss */
-  #block-system-main-menu > ul ul a:hover {
-    background-color: #d94649;
-    border-color: #d94649;
+  /* line 117, ../sass/base/_menu.scss */
+  #foobar > ul ul a {
+    padding: 1em;
+    width: 100%;
+    display: block;
+    border-color: #464646;
+  }
+  /* line 122, ../sass/base/_menu.scss */
+  #foobar > ul ul a:hover {
+    background-color: #851b1d;
+    border-color: #851b1d;
   }
 }
 /* line 3, ../sass/base/_system.scss */

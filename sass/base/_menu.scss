@@ -21,8 +21,8 @@
   }
 
   // New box model, small reset, global stuff
-  #block-system-main-menu {
-    font: bold 13px $opensans;
+  #foobar {
+    font: bold 13px Arial, Helvetica;
     * {
       @include box-sizing(border-box);
     }
@@ -30,6 +30,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      @include border-radius(3px);
     }
     li {
       position: relative;
@@ -57,17 +58,20 @@
   }
 
   // First level -> main menu items
-
-  #block-system-main-menu > ul {
-    text-align: center;
-    background: $baseMenuBackground;
+  // <nav class="animenu">
+  //		<ul></ul>
+  //	</nav>
+  #foobar > ul {
+    border: 1px solid darken($baseMenuBackground, 5%);
+    @include menu-background($baseMenuBackground);
+    @include box-shadow(0 1px 0 rgba(255, 255, 255, .2) inset);
     @extend %cf;
     > li {
-      display: inline-block;
-      vertical-align: top;
+      float: left;
       border-right: 1px solid lighten($baseMenuBackground, 5%);
+      @include box-shadow(1px 0 0 lighten($baseMenuBackground, 20%));
       > a {
-        //      float: left;
+        float: left;
         padding: $gutter 3 * $gutter;
         text-transform: uppercase;
       }
@@ -75,46 +79,49 @@
     a {
       color: $baseMenuColor;
       text-decoration: none;
-      font-weight: bold;
+      @include text-shadow(0 1px 0 $baseMenuBackground);
     }
 
-    // Second level menu.
-
+    // Second level
+    // <nav class="animenu">
+    //		<ul>
+    //			<ul></ul>
+    //		</ul>
+    //	</nav>
     ul {
       position: absolute;
-      top: 100%;
-      left: -50%;
+      top: 100%; left: 0;
       z-index: 1;
       opacity: 0;
       visibility: hidden;
       margin: 2 * $gutter 0 0 0;
-      z-index: 100;
       @include menu-background(lighten($baseMenuBackground, 15%), false);
       @include transition-property("margin, opacity");
-      @include transition-duration(.15s);
+      @include transition-duration(".15s");
       @include transition-timing-function(ease-in-out);
-      width: $subMenuItemWidth;
       li {
         display: block;
+        @include box-shadow(0 1px 0 lighten($baseMenuBackground, 5%),
+          0 2px 0 lighten($baseMenuBackground, 25%));
         &:first-child > a {
-          @include pseudo-triangle(6px, 9);
+          @include border-radius(3px 3px 0 0);
+          @include pseudo-triangle(6px, 4);
         }
         &:last-child {
           @include box-shadow(none);
           > a {
+            @include border-radius(0 0 3px 3px);
           }
         }
       }
-
       a {
         padding: $gutter;
-
+        width: $subMenuItemWidth;
         display: block;
-        border-color: $secondaryMenuBackground;
-        background-color: $secondaryMenuBackground;
+        border-color: lighten($baseMenuBackground, 15%);
         &:hover {
-          background-color: lighten($secondaryMenuBackground, 25%);
-          border-color: lighten($secondaryMenuBackground, 25%);
+          background-color: $secondaryMenuBackground;
+          border-color: $secondaryMenuBackground;
         }
       }
     }

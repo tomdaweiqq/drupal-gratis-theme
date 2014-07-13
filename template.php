@@ -295,9 +295,9 @@ function gratis_preprocess_page(&$vars, $hook) {
 /**
  * Theme wrapper function for the primary menu links.
  */
-function gratis_menu_tree__primary(&$vars) {
-  return '<ul class="toggle-menu" data-breakpoint="769">' . $vars['tree'] . '</ul>';
-}
+//function gratis_menu_tree__primary(&$vars) {
+//  return '<ul class="toggle-menu" data-breakpoint="769">' . $vars['tree'] . '</ul>';
+//}
 
 /**
  * Implements hook_preprocess_node().

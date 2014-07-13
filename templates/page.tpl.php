@@ -130,8 +130,10 @@
         <?php if ($main_menu): ?>
         <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
         <div id="off-canvas-left" class="l-off-canvas l-off-canvas--left">
+          <div id="foobar">
           <a id="off-canvas-left-hide" href="#" class="l-off-canvas-hide l-off-canvas-hide--left"><?php print t('Hide Navigation'); ?></a>
               <?php print render($primary_nav); ?>
+            </div>
         </div><!-- // off-canvas-left -->
         <?php endif; ?>
         <!-- //main menu -->
