@@ -24,7 +24,7 @@
  *   following:
  *   - node: The current template type, i.e., "theming hook".
  *   - node-[type]: The current node type. For example, if the node is a
- *     "Blog entry" it would result in "node-blog". Note that the machine
+ *     "Article" it would result in "node-article". Note that the machine
  *     name will often be in a short form of the human readable label.
  *   - node-teaser: Nodes in teaser form.
  *   - node-preview: Nodes in preview mode.
@@ -42,7 +42,7 @@
  *
  * Other variables:
  * - $node: Full node object. Contains data that may not be safe.
- * - $type: Node type, i.e. story, page, blog, etc.
+ * - $type: Node type, i.e. page, article, etc.
  * - $comment_count: Number of comments attached to the node.
  * - $uid: User ID of the node author.
  * - $created: Time the node was published formatted in Unix timestamp.
@@ -79,51 +79,34 @@
  */
 ?>
 
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"
-  <?php print $attributes; ?>>
-  <?php print $user_picture; ?>
+  <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"
+    <?php print $attributes; ?>>
+  <?php if (!empty($title_prefix) || !empty($title_suffix) || !$page): ?>
+    <header>
+      <?php print render($title_prefix); ?>
+      <?php if (!$page): ?>
+        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+    </header>
+  <?php endif; ?>
 
-  <?php print render($title_prefix); ?>
-  <?php if (!$page && $title): ?>
-  <header>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>"
-    title="<?php print $title ?>"><?php print $title ?></a></h2>
-  <?php else: ?>
-  <?php if ($title): ?><h1<?php print $title_attributes; ?> class="node-page-title"><?php print $title; ?></h1><?php endif; ?>
-</header>
-<?php endif; ?>
-<?php print render($title_suffix); ?>
+  <?php if ($display_submitted): ?>
+    <footer class="node__submitted">
+      <?php print $user_picture; ?>
+      <p class="submitted"><?php print $submitted; ?></p>
+    </footer>
+  <?php endif; ?>
 
-<?php if ($display_submitted): ?>
-  <span class="submit-wrapper">
-    <!-- Overidden in template.php to show just username. -->
-    <span class="submitted">
-      <i class="icon-fixed-width">&#xf007;</i> <?php print $submitted; ?> |  <i class="icon-fixed-width">&#xf073;</i> 
-      <?php print $thedate; ?> / <?php print $themonth; ?> / <?php print $theyear; ?>
-    </span>
-  </span><!--//submit-wrapper-->
-<?php endif; ?>
+  <div<?php print $content_attributes; ?>>
+    <?php
+      // We hide the comments and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      print render($content);
+    ?>
+  </div>
 
-<?php
-// We hide the comments and links now so that we can render them later.
-hide($content['comments']);
-hide($content['links']);
-print render($content);
-?>
-
-<div class="clearfix">
-
-  <?php if (!empty($content['links'])): ?>
-  <nav class="links node-links clearfix">
-    <?php print render($content['links']); ?>
-  </nav>
-<?php endif; ?>
-
-
-<?php if (!empty($content['comments'])): ?>
+  <?php print render($content['links']); ?>
   <?php print render($content['comments']); ?>
-<?php endif; ?>
-
-</div>
-
 </article>

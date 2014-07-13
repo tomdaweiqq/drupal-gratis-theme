@@ -30,7 +30,7 @@ $vera-sans: VeraMono-webfont;
 // Menu Vars.
 
 $subMenuItemWidth: 200%;			// Minimum width for submenus' items
-$baseMenuBackground: $dark-grey;			// Base color theme
+$baseMenuBackground: $dark_gray;			// Base color theme
 $secondaryMenuBackground: $maroon; 	// Secondary color (highlights, triangles...)
 $baseMenuColor: $white;				// Proper menu items color
 $gutter: 1em;						// Base gutter
@@ -65,7 +65,7 @@ $base-line-height: 36px; // Sets the base line height
 // apart if you want :)
 
 // Font families and default text color.
-$font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
 $font-serif: Georgia, 'Times New Roman', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
 $text-color: lighten(#000, 35%);

@@ -26,6 +26,25 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'postscript-one';
   }
 
+
+  // Postscript columns ('$pre_columns').
+  if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
+    $vars['classes_array'][] = 'preface-three';
+  }
+  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
+    $vars['classes_array'][] = 'preface-two';
+  }
+  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
+    $vars['classes_array'][] = 'preface-two';
+  }
+  elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
+    $vars['classes_array'][] = 'preface-two';
+  }
+  else {
+    $vars['classes_array'][] = 'preface-one';
+  }
+
+
   $vars['html_attributes_array'] = array();
   $vars['body_attributes_array'] = array();
 
@@ -139,22 +158,6 @@ function gratis_preprocess_html(&$vars) {
   }
   else {
     $vars['classes_array'][] = 'not-node';
-  }
-
-  if (arg(0) == 'node' && arg(2) == 'edit') {
-    $vars['classes_array'][] = 'page-node-edit';
-  }
-
-  if (arg(0) == 'node' && arg(1) == 'add') {
-    $vars['classes_array'][] = 'page-node-add';
-  }
-
-  if (arg(0) == 'node' && arg(2) === NULL) {
-    $vars['classes_array'][] = 'page-node-view';
-  }
-
-  if (arg(0) == 'admin') {
-    $vars['classes_array'][] = 'admin-page';
   }
 
 }
@@ -279,40 +282,6 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['content_columns'] = 'grid-100';
   }
 
-  // Postscript columns ('$pos_columns').
-  if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pos_columns'] = 'grid-33 postscript';
-  }
-  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second'])) {
-    $vars['pos_columns'] = 'grid-50 postscript';
-  }
-  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pos_columns'] = 'grid-50 postscript';
-  }
-  elseif (!empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['pos_columns'] = 'grid-50 postscript';
-  }
-  else {
-    $vars['pos_columns'] = 'grid-100 postscript';
-  }
-
-  // Postscript columns ('$pre_columns').
-  if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['pre_columns'] = 'grid-33 preface';
-  }
-  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
-    $vars['pre_columns'] = 'grid-50 preface';
-  }
-  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
-    $vars['pre_columns'] = 'grid-50 preface';
-  }
-  elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['pre_columns'] = 'grid-50 preface';
-  }
-  else {
-    $vars['pre_columns'] = 'grid-100 preface';
-  }
-
   // Primary nav.
   $vars['primary_nav'] = FALSE;
   if ($vars['main_menu']) {
@@ -331,24 +300,32 @@ function gratis_menu_tree__primary(&$vars) {
 }
 
 /**
- * Override or insert variables into the node template.
+ * Implements hook_preprocess_node().
+ *
+ * Copied from Sam Richard's (Snugug) fabulous Aurora Base Theme.
+ *
+ * Backports the following changes made to Drupal 8:
+ * - #1077602: Convert node.tpl.php to HTML5.
  */
 function gratis_preprocess_node(&$vars, $hook) {
   // Global node.
   $node = $vars['node'];
 
-  if ($vars['view_mode'] == 'full' && node_is_page($node)) {
-    $vars['classes_array'][] = 'node-full';
-  }
-
-  if ($vars['view_mode'] == 'teaser' && node_is_page($node)) {
-    $vars['classes_array'][] = 'node-teaser';
-  }
-
-  // Some nice expanded classes for Nodes.
-  $vars['attributes_array']['role'][] = 'article';
-  $vars['title_attributes_array']['class'][] = 'article-title';
-  $vars['content_attributes_array']['class'][] = 'article-content';
+  $css_node_type = drupal_clean_css_identifier($vars['type']);
+  $css_view_mode = drupal_clean_css_identifier($vars['view_mode']);
+  // Add article ARIA role.
+  $vars['attributes_array']['role'] = 'article';
+  // Add BEM element classes.
+  $vars['title_attributes_array']['class'][] = 'node__title';
+  $vars['content_attributes_array']['class'][] = 'node__content';
+  $vars['content']['links']['#attributes']['class'][] = 'node__links';
+  // Change modifier classes to use BEM syntax.
+  $vars['classes_array'] = preg_replace('/^node-' . $css_node_type . '$/', 'node--' . $css_node_type, $vars['classes_array']);
+  $vars['classes_array'] = preg_replace('/^node-promoted$/', 'node--promoted', $vars['classes_array']);
+  $vars['classes_array'] = preg_replace('/^node-sticky$/', 'node--sticky', $vars['classes_array']);
+  // Add modifier classes for view mode.
+  $vars['classes_array'][] = 'node--' . $css_view_mode;
+  $vars['classes_array'][] = 'node--' . $css_node_type . '--' . $css_view_mode;
 
   // Show only the username in submitted, the date is handled by node.tpl.php.
   $vars['submitted'] = t('Submitted by !username', array('!username' => $vars['name']));
@@ -357,6 +334,7 @@ function gratis_preprocess_node(&$vars, $hook) {
   $vars['thedate'] = format_date($node->created, "custom", "j");
   $vars['themonth'] = format_date($node->created, "custom", "M");
   $vars['theyear'] = format_date($node->created, "custom", "Y");
+
 }
 
 /**
@@ -441,3 +419,34 @@ function gratis_preprocess_comment(&$vars) {
   $vars['created'] = date('m / j / y', $vars['elements']['#comment']->created);
   $vars['changed'] = date('m / j / y', $vars['elements']['#comment']->created);
 }
+
+
+/**
+ * Preprocess variables for region.tpl.php
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+function gratis_preprocess_region(&$variables, $hook) {
+  // Sidebar regions get some extra classes and a common template suggestion.
+  if (strpos($variables['region'], 'sidebar_') === 0) {
+    $variables['classes_array'][] = 'column';
+    $variables['classes_array'][] = 'l-region l-sidebar';
+    // Allow a region-specific template to override Zen's region--sidebar.
+    array_unshift($variables['theme_hook_suggestions'], 'region__sidebar');
+  }
+  // Use a template with no wrapper for the content region.
+  elseif ($variables['region'] == 'content') {
+    // Allow a region-specific template to override Zen's region--no-wrapper.
+    array_unshift($variables['theme_hook_suggestions'], 'region__no_wrapper');
+  }
+  // Add a SMACSS-style class for header region.
+  elseif ($variables['region'] == 'header') {
+    array_unshift($variables['classes_array'], 'header__region');
+  }
+}
+
+
+

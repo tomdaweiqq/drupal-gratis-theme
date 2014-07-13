@@ -8,8 +8,9 @@ engine = phptemplate
 ; --- Note, 'responsive.css' must come last!
 stylesheets[all][] = css/gratis.normalize.css
 stylesheets[all][] = css/gratis.hacks.css
-stylesheets[all][] = css/gratis.styles.css
+
 stylesheets[all][] = css/gratis.no-query.css
+stylesheets[all][] = css/gratis.styles.css
 
 ; Regions --------------------
 regions[top_links]       = Top Links

@@ -48,7 +48,7 @@
   // up/down the whole project for specific media queries
   // [2] Stops iOS from scaling up text.
   html {
-    font-size: ($base-font-size / 16px) * 100%; // [1]
+    font-size: ($base-font-size / 15px) * 100%; // [1]
     -webkit-text-size-adjust: 100%; // [2]
   }
 

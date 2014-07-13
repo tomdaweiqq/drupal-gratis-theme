@@ -10,10 +10,10 @@
 
 // Susy Variables
 // Globbing from within sub-folders only works with relative paths.
-@import "../../variables/colors";
-@import "../../variables/legacy";
-@import "../../variables/typography";
-@import "../../variables/variables";
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/variables";
 
 
 $susy: (
@@ -44,7 +44,7 @@ gutters: .25,
 .l-header,
 .l-main,
 .l-footer,
-.l-branding {
+.l-branding, {
   @include container;
   @include pie-clearfix;
   margin-bottom: $vert-spacing-unit;
@@ -71,12 +71,22 @@ img {
   // Extends
 
   %grayborder {
-    border: 1px solid $silver;
+    border: 1px solid $medium_gray;
   }
 
   .l-header,
   .l-main,
-  .l-footer {
+  .l-footer,
+  .l-header,
+  .l-main,
+  .l-footer,
+  .l-header,
+  .l-content,
+  .l-main,
+  .l-top-wrapper,
+  .l-menu-wrapper,
+  .l-preface,
+  .l-postscript {
     //@include set-container-width;
     @include container(1100px);
   }
@@ -96,16 +106,16 @@ img {
   .one-sidebar.sidebar-first,
   .one-sidebar.sidebar-second,
   .two-sidebars {
-    #main-content {
+    .l-content {
       // @include span-columns(8, 12);
       @include span(8);
     }
-    #sidebar-first,
-    #sidebar-second {
+    .region-sidebar-first,
+    .region-sidebar-second {
      // @include span-columns(4 omega, 12);
       @include span(4 at 9);
     }
-    #sidebar-second {
+    .region-sidebar-second {
       clear: right;
     }
   }
@@ -118,6 +128,23 @@ img {
   //$total-columns: 16;
   //@include layout(24);
 
+
+  .preface-one .preface.s-grid {
+    @include span(1 of 1);
+  }
+  .preface-two .preface.s-grid {
+    @include span(6 of 12);
+    &:last-child {
+      @include omega;
+    }
+  }
+  .preface-three .preface.s-grid {
+    @include span(4 of 12);
+    &:last-child {
+      @include omega;
+    }
+  }
+
   .l-branding {
    // @include span-columns(6, 16);
     @include span(10);
@@ -128,22 +155,22 @@ img {
   }
 
   .one-sidebar.sidebar-first {
-    #main-content {
+    .l-content {
     //  @include span-columns(12 omega, 16);
       @include span(18 at 17);
     }
-    #sidebar-first {
+    .region-sidebar-first {
     //  @include span-columns(4, 16);
       @include span(6);
     }
   }
 
   .one-sidebar.sidebar-second {
-    #main-content {
+    .l-content {
    //   @include span-columns(12, 16);
       @include span(18);
     }
-    #sidebar-second {
+    .region-sidebar-second {
     //  @include span-columns(4 omega, 16);
       @include span(6 at 19);
       clear: none;
@@ -152,20 +179,20 @@ img {
   }
 
   .two-sidebars {
-    #main-content {
+    .l-content {
    //   @include span-columns(8, 16);
       @include span(8);
       @include push(4);
     }
-    #sidebar-first,
-    #sidebar-second {
+    .region-sidebar-first,
+    .region-sidebar-second {
     //  @include span-columns(4, 16);
       @include span(4);
     }
-    #sidebar-first {
+    .region-sidebar-first {
       @include pull(12);
     }
-    #sidebar-second {
+    .region-sidebar-second {
       @include omega;
       clear: none;
     }

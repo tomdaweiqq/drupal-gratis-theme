@@ -1,6 +1,6 @@
 // Primary Tabs ~~~~~~~~~~~~~~~ (.)(.)
 
-ul.tabs.tabs--primary {
+ul.tabs.primary {
   display: table;
   position: relative;
   overflow: hidden;
@@ -16,9 +16,9 @@ ul.tabs.tabs--primary {
   }
 
   a {
-    background-color: #eff0f2;
+    background-color: $light_gray;
     border-bottom: 1px solid $white;
-    color: $medgray;
+    color: $light_gray;
     font-weight: 500;
     display: block;
     letter-spacing: 0;
@@ -28,14 +28,14 @@ ul.tabs.tabs--primary {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    border-bottom: 2px solid $dark-grey;
+    border-bottom: 2px solid $dark_gray;
     font-size: 12px;
     &.active {
       color: $white;
-      background: lighten($dark-grey, 20%);
+      background: lighten($dark_gray, 20%);
     }
     &:hover {
-      background: lighten($dark-grey, 20%);
+      background: lighten($dark_gray, 20%);
       color: $white;
     }
   }

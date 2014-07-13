@@ -12,79 +12,66 @@
 
       $('body').addClass('js');
 
-      // Set ul depths for better theming.
-      $('#main-menu ul').each(function () {
-        var depth = $(this).parents('ul').length;
-        $(this).addClass('ul-depth-' + depth);
-      });
-
-      // Set ul > li depths for better theming.
-      $('#main-menu ul li').each(function () {
-        var depth = $(this).parents('li').length;
-        $(this).addClass('li-depth-' + depth);
-      });
-
-      // Set li > a depths for better theming.
-      $('#main-menu ul li a').each(function () {
-        var depth = $(this).parents('ul').length;
-        $(this).addClass('ula-depth-' + depth);
-      });
+//      // Set ul depths for better theming.
+//      $('#main-menu ul').each(function () {
+//        var depth = $(this).parents('ul').length;
+//        $(this).addClass('ul-depth-' + depth);
+//      });
+//
+//      // Set ul > li depths for better theming.
+//      $('#main-menu ul li').each(function () {
+//        var depth = $(this).parents('li').length;
+//        $(this).addClass('li-depth-' + depth);
+//      });
+//
+//      // Set li > a depths for better theming.
+//      $('#main-menu ul li a').each(function () {
+//        var depth = $(this).parents('ul').length;
+//        $(this).addClass('ula-depth-' + depth);
+//      });
 
       // Add menu icons.
-      $('#main-menu li.expanded.li-depth-0 a.ula-depth-1').once(function () {
-        $(this).append('<i class="icon-fixed-width desktop-nav">&#xf13a;</i>');
-      });
-
-      $('#main-menu li.expanded.li-depth-0').once(function () {
-        $(this).append('<i class="icon-fixed-width mobile-nav">&#xf13a;</i>');
-      });
-
-      $('#main-menu li.expanded.li-depth-0 a.ula-depth-2').once(function () {
-        $(this).prepend('<i class="icon-fixed-width sub-menu-item">&#xf138;</i>');
-      });
+//      $('#main-menu li.expanded.li-depth-0 a.ula-depth-1').once(function () {
+//        $(this).append('<i class="icon-fixed-width desktop-nav">&#xf13a;</i>');
+//      });
+//
+//      $('#main-menu li.expanded.li-depth-0').once(function () {
+//        $(this).append('<i class="icon-fixed-width mobile-nav">&#xf13a;</i>');
+//      });
+//
+//      $('#main-menu li.expanded.li-depth-0 a.ula-depth-2').once(function () {
+//        $(this).prepend('<i class="icon-fixed-width sub-menu-item">&#xf138;</i>');
+//      });
 
       // Add first / last to menu items.
       $('#main-menu li.li-depth-0 li:visible:first-child').addClass('first');
       $('#main-menu li.li-depth-0 li:visible:last-child').addClass('last');
 
-      // Mobile menu.
-      var $menu = $('#menu'),
-        $menulink = $('.menu-link'),
-        $menuTrigger = $('.expanded > .icon-fixed-width.mobile-nav');
 
-      $menulink.click(function (e) {
-        e.preventDefault();
-        $menulink.toggleClass('active');
-        $menu.toggleClass('active');
-      });
-
-      $menuTrigger.click(function () {
-        $(this).closest('li').find('ul.menu.ul-depth-1').toggleClass('active');
-      });
 
       // Prepend the post date before the h1.
       $(".date-in-parts")
         .prependTo(".not-front.page-node #post-content");
 
       // Global zebra stripes and first / last.
-      $("article:visible:even").addClass("even");
-      $("article:visible:odd").addClass("odd");
-      $("#post-content article:last").addClass("last");
-      $("#post-content article:first").addClass("first");
+//      $("article:visible:even").addClass("even");
+//      $("article:visible:odd").addClass("odd");
+//      $("#post-content article:last").addClass("last");
+//      $("#post-content article:first").addClass("first");
 
       // @todo make these css 3 before elements if possible.
       // Add comment icons using font awesome.
-      $('.comment-add').once(function () {
-        $(this).prepend('<i class="icon-fixed-width">&#xf040;</i>');
-      });
-
-      $('.comment-comments').once(function () {
-        $(this).prepend('<i class="icon-fixed-width">&#xf02d;</i>');
-      });
-
-      $('.node-readmore').once(function () {
-        $(this).prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
-      });
+//      $('.comment-add').once(function () {
+//        $(this).prepend('<i class="icon-fixed-width">&#xf040;</i>');
+//      });
+//
+//      $('.comment-comments').once(function () {
+//        $(this).prepend('<i class="icon-fixed-width">&#xf02d;</i>');
+//      });
+//
+//      $('.node-readmore').once(function () {
+//        $(this).prepend('<i class="icon-fixed-width">&#xf0a9;</i>');
+//      });
 
       // Blockquote.
       $('blockquote').prepend('<i class="icon-quote-left icon-4x pull-left icon-muted"></i>');
