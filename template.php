@@ -342,6 +342,20 @@ function gratis_preprocess_node(&$vars, $hook) {
  */
 function gratis_page_alter($page) {
 
+  // Look in each visible region for blocks.
+  foreach (system_region_list($GLOBALS['theme'], REGIONS_VISIBLE) as $region => $name) {
+    if (!empty($page[$region])) {
+      // Find the last block in the region.
+      $blocks = array_reverse(element_children($page[$region]));
+      while ($blocks && !isset($page[$region][$blocks[0]]['#block'])) {
+        array_shift($blocks);
+      }
+      if ($blocks) {
+        $page[$region][$blocks[0]]['#block']->last_in_region = TRUE;
+      }
+    }
+  }
+
   if (theme_get_setting('gratis_viewport') == FALSE) {
 
     // No pinch and zoom.
@@ -446,6 +460,107 @@ function gratis_preprocess_region(&$variables, $hook) {
   elseif ($variables['region'] == 'header') {
     array_unshift($variables['classes_array'], 'header__region');
   }
+}
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+function gratis_preprocess_block(&$variables, $hook) {
+  // Use a template with no wrapper for the page's main content.
+  if ($variables['block_html_id'] == 'block-system-main') {
+    $variables['theme_hook_suggestions'][] = 'block__no_wrapper';
+  }
+
+  // Classes describing the position of the block within the region.
+  if ($variables['block_id'] == 1) {
+    $variables['classes_array'][] = 'first';
+  }
+  // The last_in_region property is set in zen_page_alter().
+  if (isset($variables['block']->last_in_region)) {
+    $variables['classes_array'][] = 'last';
+  }
+  $variables['classes_array'][] = $variables['block_zebra'];
+
+  $variables['title_attributes_array']['class'][] = 'block__title gamma';
+  $variables['title_attributes_array']['class'][] = 'block-title';
+
+  // Add Aria Roles via attributes.
+  switch ($variables['block']->module) {
+    case 'system':
+      switch ($variables['block']->delta) {
+        case 'main':
+          // Note: the "main" role goes in the page.tpl, not here.
+          break;
+        case 'help':
+        case 'powered-by':
+          $variables['attributes_array']['role'] = 'complementary';
+          break;
+        default:
+          // Any other "system" block is a menu block.
+          $variables['attributes_array']['role'] = 'navigation';
+          break;
+      }
+      break;
+    case 'menu':
+    case 'menu_block':
+    case 'blog':
+    case 'book':
+    case 'comment':
+    case 'forum':
+    case 'shortcut':
+    case 'statistics':
+      $variables['attributes_array']['role'] = 'navigation';
+      break;
+    case 'search':
+      $variables['attributes_array']['role'] = 'search';
+      break;
+    case 'help':
+    case 'aggregator':
+    case 'locale':
+    case 'poll':
+    case 'profile':
+      $variables['attributes_array']['role'] = 'complementary';
+      break;
+    case 'node':
+      switch ($variables['block']->delta) {
+        case 'syndicate':
+          $variables['attributes_array']['role'] = 'complementary';
+          break;
+        case 'recent':
+          $variables['attributes_array']['role'] = 'navigation';
+          break;
+      }
+      break;
+    case 'user':
+      switch ($variables['block']->delta) {
+        case 'login':
+          $variables['attributes_array']['role'] = 'form';
+          break;
+        case 'new':
+        case 'online':
+          $variables['attributes_array']['role'] = 'complementary';
+          break;
+      }
+      break;
+  }
+}
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+function gratis_process_block(&$variables, $hook) {
+  // Drupal 7 should use a $title variable instead of $block->subject.
+  $variables['title'] = isset($variables['block']->subject) ? $variables['block']->subject : '';
 }
 
 

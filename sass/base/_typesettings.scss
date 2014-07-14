@@ -142,13 +142,13 @@
     margin-bottom: emRhythm(4);
     padding-top: 0;
     padding-bottom: 0;
-    max-width: emRhythm(96);
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -o-hyphens: auto;
     hyphens: auto;
     word-wrap: break-word;
+    color: darken($medium_gray, 20%);
 
     @media (min-width: 43.75em) {
       @if $paragraph-justify {

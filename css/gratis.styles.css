@@ -111,14 +111,222 @@
   border-left: 1px solid #eaeaea;
 }
 
-/* line 11, ../sass/base/_design.scss */
+/* line 7, ../sass/base/_design.scss */
+.color-palette-greengray a {
+  color: #7f8c8d;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-greengray a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-greengray input[type="submit"],
+.color-palette-greengray input[type="reset"],
+.color-palette-greengray button {
+  background-color: #7f8c8d;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-greengray input[type="submit"]:hover,
+.color-palette-greengray input[type="reset"]:hover,
+.color-palette-greengray button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
+.color-palette-pink a {
+  color: #b72898;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-pink a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-pink input[type="submit"],
+.color-palette-pink input[type="reset"],
+.color-palette-pink button {
+  background-color: #b72898;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-pink input[type="submit"]:hover,
+.color-palette-pink input[type="reset"]:hover,
+.color-palette-pink button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 13, ../sass/base/_design.scss */
+/* line 9, ../sass/base/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
-  color: #202020;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-orange input[type="submit"],
+.color-palette-orange input[type="reset"],
+.color-palette-orange button {
+  background-color: #e04604;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-orange input[type="submit"]:hover,
+.color-palette-orange input[type="reset"]:hover,
+.color-palette-orange button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
+.color-palette-green a {
+  color: #6a8500;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-green a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-green input[type="submit"],
+.color-palette-green input[type="reset"],
+.color-palette-green button {
+  background-color: #6a8500;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-green input[type="submit"]:hover,
+.color-palette-green input[type="reset"]:hover,
+.color-palette-green button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
+.color-palette-purple a {
+  color: #491f70;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-purple a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-purple input[type="submit"],
+.color-palette-purple input[type="reset"],
+.color-palette-purple button {
+  background-color: #491f70;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-purple input[type="submit"]:hover,
+.color-palette-purple input[type="reset"]:hover,
+.color-palette-purple button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
+.color-palette-turquoise a {
+  color: #02b4ce;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-turquoise a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-turquoise input[type="submit"],
+.color-palette-turquoise input[type="reset"],
+.color-palette-turquoise button {
+  background-color: #02b4ce;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-turquoise input[type="submit"]:hover,
+.color-palette-turquoise input[type="reset"]:hover,
+.color-palette-turquoise button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
+.color-palette-pomegranate a {
+  color: #c0392b;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-pomegranate a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-pomegranate input[type="submit"],
+.color-palette-pomegranate input[type="reset"],
+.color-palette-pomegranate button {
+  background-color: #c0392b;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-pomegranate input[type="submit"]:hover,
+.color-palette-pomegranate input[type="reset"]:hover,
+.color-palette-pomegranate button:hover {
+  background-color: #999999;
+}
+
+/* line 7, ../sass/base/_design.scss */
+.color-palette-seafoam a {
+  color: #16a085;
+}
+/* line 9, ../sass/base/_design.scss */
+.color-palette-seafoam a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 14, ../sass/base/_design.scss */
+.color-palette-seafoam input[type="submit"],
+.color-palette-seafoam input[type="reset"],
+.color-palette-seafoam button {
+  background-color: #16a085;
+  color: white;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-seafoam input[type="submit"]:hover,
+.color-palette-seafoam input[type="reset"]:hover,
+.color-palette-seafoam button:hover {
+  background-color: #999999;
+}
+
+/* line 27, ../sass/base/_design.scss */
+#header-bar {
+  background: black;
+}
+
+/* line 31, ../sass/base/_design.scss */
+#top-bar {
+  background: #333333;
+}
+/* line 33, ../sass/base/_design.scss */
+#top-bar .menu {
+  text-align: right;
+}
+/* line 35, ../sass/base/_design.scss */
+#top-bar .menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px 0 4px 4px;
+}
+
+/* line 47, ../sass/base/_design.scss */
+h2 {
+  color: #02b4ce;
+}
+
+/* line 4, ../sass/base/_forms.scss */
+input[type="submit"],
+input[type="reset"],
+button {
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /*******************************************************************************
@@ -161,7 +369,12 @@
   overflow: hidden;
 }
 
-/* line 44, ../sass/base/_gratis.layout.scss */
+/* line 42, ../sass/base/_gratis.layout.scss */
+#l-menu-wrapper {
+  margin-bottom: 1.5em;
+}
+
+/* line 48, ../sass/base/_gratis.layout.scss */
 .l-header,
 .l-main,
 .l-footer,
@@ -191,12 +404,12 @@
   clear: both;
 }
 
-/* line 53, ../sass/base/_gratis.layout.scss */
+/* line 57, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
   clear: both;
 }
 
-/* line 57, ../sass/base/_gratis.layout.scss */
+/* line 61, ../sass/base/_gratis.layout.scss */
 img {
   width: auto\9;
   height: auto;
@@ -207,7 +420,32 @@ img {
 }
 
 @media (min-width: 44em) {
-  /* line 77, ../sass/base/_gratis.layout.scss */
+  /* line 75, ../sass/base/_gratis.layout.scss */
+  .preface-three .preface.s-grid {
+    width: 29.41176%;
+    float: left;
+  }
+  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+  .preface-three .preface.s-grid:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+  .preface-three .preface.s-grid:nth-child(3n + 2) {
+    margin-left: 35.29412%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+  .preface-three .preface.s-grid:nth-child(3n + 3) {
+    margin-left: 70.58824%;
+    margin-right: -100%;
+    clear: none;
+  }
+
+  /* line 85, ../sass/base/_gratis.layout.scss */
   .l-header,
   .l-main,
   .l-footer,
@@ -244,26 +482,26 @@ img {
     clear: both;
   }
 
-  /* line 94, ../sass/base/_gratis.layout.scss */
+  /* line 102, ../sass/base/_gratis.layout.scss */
   .l-branding {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 98, ../sass/base/_gratis.layout.scss */
+  /* line 106, ../sass/base/_gratis.layout.scss */
   .l-region--header {
     width: 66.10169%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 102, ../sass/base/_gratis.layout.scss */
+  /* line 110, ../sass/base/_gratis.layout.scss */
   .l-region--navigation {
     clear: both;
   }
 
-  /* line 109, ../sass/base/_gratis.layout.scss */
+  /* line 117, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .l-content,
   .one-sidebar.sidebar-second .l-content,
   .two-sidebars .l-content {
@@ -271,7 +509,7 @@ img {
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 113, ../sass/base/_gratis.layout.scss */
+  /* line 121, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .region-sidebar-first,
   .one-sidebar.sidebar-first .region-sidebar-second,
   .one-sidebar.sidebar-second .region-sidebar-first,
@@ -282,7 +520,7 @@ img {
     float: right;
     margin-right: 0;
   }
-  /* line 118, ../sass/base/_gratis.layout.scss */
+  /* line 126, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .region-sidebar-second,
   .one-sidebar.sidebar-second .region-sidebar-second,
   .two-sidebars .region-sidebar-second {
@@ -290,7 +528,7 @@ img {
   }
 }
 @media (min-width: 70em) {
-  /* line 132, ../sass/base/_gratis.layout.scss */
+  /* line 140, ../sass/base/_gratis.layout.scss */
   .preface-one .preface.s-grid {
     width: 100%;
     float: left;
@@ -298,90 +536,105 @@ img {
     margin-right: 0;
   }
 
-  /* line 135, ../sass/base/_gratis.layout.scss */
+  /* line 143, ../sass/base/_gratis.layout.scss */
   .preface-two .preface.s-grid {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 137, ../sass/base/_gratis.layout.scss */
+  /* line 145, ../sass/base/_gratis.layout.scss */
   .preface-two .preface.s-grid:last-child {
     float: right;
     margin-right: 0;
   }
 
-  /* line 141, ../sass/base/_gratis.layout.scss */
+  /* line 149, ../sass/base/_gratis.layout.scss */
   .preface-three .preface.s-grid {
-    width: 32.20339%;
+    width: 29.41176%;
     float: left;
-    margin-right: 1.69492%;
   }
-  /* line 143, ../sass/base/_gratis.layout.scss */
-  .preface-three .preface.s-grid:last-child {
-    float: right;
-    margin-right: 0;
+  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+  .preface-three .preface.s-grid:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+  .preface-three .preface.s-grid:nth-child(3n + 2) {
+    margin-left: 35.29412%;
+    margin-right: -100%;
+    clear: none;
+  }
+  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+  .preface-three .preface.s-grid:nth-child(3n + 3) {
+    margin-left: 70.58824%;
+    margin-right: -100%;
+    clear: none;
   }
 
-  /* line 148, ../sass/base/_gratis.layout.scss */
+  /* line 153, ../sass/base/_gratis.layout.scss */
   .l-branding {
     width: 41.17647%;
     float: left;
     margin-right: 0.84034%;
   }
 
-  /* line 152, ../sass/base/_gratis.layout.scss */
+  /* line 157, ../sass/base/_gratis.layout.scss */
   .l-region--header {
     width: 57.98319%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 158, ../sass/base/_gratis.layout.scss */
+  /* line 163, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .l-content {
     width: 74.78992%;
     float: left;
     margin-right: 0.84034%;
   }
-  /* line 162, ../sass/base/_gratis.layout.scss */
+  /* line 167, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .region-sidebar-first {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
   }
 
-  /* line 169, ../sass/base/_gratis.layout.scss */
+  /* line 174, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-second .l-content {
-    width: 74.78992%;
+    width: 66.10169%;
     float: left;
-    margin-right: 0.84034%;
+    margin-right: 1.69492%;
+    margin-right: -8%;
+    padding-right: 8%;
   }
-  /* line 173, ../sass/base/_gratis.layout.scss */
+  /* line 178, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-second .region-sidebar-second {
-    width: 24.36975%;
+    width: 32.20339%;
     float: right;
     margin-right: 0;
     clear: none;
   }
 
-  /* line 182, ../sass/base/_gratis.layout.scss */
+  /* line 186, ../sass/base/_gratis.layout.scss */
   .two-sidebars .l-content {
     width: 32.77311%;
     float: left;
     margin-right: 0.84034%;
     margin-left: 16.80672%;
   }
-  /* line 187, ../sass/base/_gratis.layout.scss */
+  /* line 191, ../sass/base/_gratis.layout.scss */
   .two-sidebars .region-sidebar-first,
   .two-sidebars .region-sidebar-second {
     width: 15.96639%;
     float: left;
     margin-right: 0.84034%;
   }
-  /* line 192, ../sass/base/_gratis.layout.scss */
+  /* line 196, ../sass/base/_gratis.layout.scss */
   .two-sidebars .region-sidebar-first {
     margin-left: -50.42017%;
   }
-  /* line 195, ../sass/base/_gratis.layout.scss */
+  /* line 199, ../sass/base/_gratis.layout.scss */
   .two-sidebars .region-sidebar-second {
     float: right;
     margin-right: 0;
@@ -555,7 +808,7 @@ img, media {
     -webkit-border-radius: 3px;
     border-radius: 3px 3px 0 0;
   }
-  /* line 42, ../sass/abstractions/_mixins.scss */
+  /* line 48, ../sass/abstractions/_mixins.scss */
   #foobar > ul ul li:first-child > a:after {
     content: '';
     position: absolute;
@@ -596,8 +849,9 @@ ul.tabs.primary {
   overflow: hidden;
   margin: 0 0 10px 0;
   width: 100%;
+  background: #535353;
 }
-/* line 10, ../sass/base/_system.scss */
+/* line 11, ../sass/base/_system.scss */
 ul.tabs.primary li {
   float: left;
   line-height: 30px;
@@ -605,7 +859,7 @@ ul.tabs.primary li {
   padding: 0;
   position: relative;
 }
-/* line 18, ../sass/base/_system.scss */
+/* line 19, ../sass/base/_system.scss */
 ul.tabs.primary a {
   background-color: #cccccc;
   border-bottom: 1px solid white;
@@ -621,13 +875,14 @@ ul.tabs.primary a {
   transition: all 0.2s ease-in-out;
   border-bottom: 2px solid #202020;
   font-size: 12px;
+  color: #202020;
 }
-/* line 33, ../sass/base/_system.scss */
+/* line 35, ../sass/base/_system.scss */
 ul.tabs.primary a.active {
   color: white;
   background: #535353;
 }
-/* line 37, ../sass/base/_system.scss */
+/* line 39, ../sass/base/_system.scss */
 ul.tabs.primary a:hover {
   background: #535353;
   color: white;
@@ -646,7 +901,7 @@ body {
   font-family: "Open-Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: #595959;
+  color: #999999;
 }
 
 /* line 64, ../sass/base/_typesettings.scss */
@@ -746,13 +1001,13 @@ p {
   margin-bottom: 1.5em;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 36em;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
+  color: #666666;
 }
 @media (min-width: 43.75em) {
   /* line 140, ../sass/base/_typesettings.scss */
@@ -852,7 +1107,7 @@ hr {
   margin-top: 1.5em;
   margin-bottom: 0;
   border: none;
-  border-top-color: #595959;
+  border-top-color: #999999;
   border-top-style: solid;
   border-top-width: 1px;
   padding-top: 1.4375em;

@@ -10,6 +10,12 @@
   font-size: 100%;
 }
 
+@mixin no-shadows-borders {
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
@@ -52,6 +58,10 @@
 @mixin gamma {
   margin-bottom: emRhythm(4, $ms-up2);
   @include setType(6, $ms-up2);
+}
+
+@mixin foobar-mixin {
+  color: $turquoise;
 }
 
 

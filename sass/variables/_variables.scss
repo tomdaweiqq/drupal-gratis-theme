@@ -22,6 +22,10 @@ $desk: 70em;
 $base-font-size: 14px;
 $base-line-height: 20px;
 
+// Define the color palettes.
+$palette: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $chartreuse,
+"purple": $purple, "turquoise": $turquoise, "pomegranate": $pomegranate, "seafoam": $sea_green);
+
 // Fonts
 
 $font_awesome: FontAwesome;
@@ -68,7 +72,7 @@ $base-line-height: 36px; // Sets the base line height
 $font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
 $font-serif: Georgia, 'Times New Roman', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
-$text-color: lighten(#000, 35%);
+$text-color: $medium_gray;
 $base-vertical-unit: 6px;
 $base-line-multi: 4;
 $base-font-size: 16px;

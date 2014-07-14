@@ -1,39 +1,50 @@
 
-.color-palette-greengray {
 
-}
+// Paletes defined in _variables
 
-.color-palette-pink {
+@each $hexvar, $color in $palette {
+  .color-palette-#{$hexvar} {
+    a {
+      color: $color;
+      &:hover {
+        text-decoration: none;
+        color: $medium_gray;
+      }
+    }
+    input[type="submit"],
+    input[type="reset"],
+    button {
+      background-color: $color;
+      color: $white;
+      &:hover {
+        background-color: $medium_gray;
 
-}
-
-.color-palette-orange {
-  a {
-    color: $orange;
-    &:hover {
-      text-decoration: none;
-      color: $dark_gray;
+      }
     }
   }
-
 }
 
-.color-palette-green {
-
+#header-bar {
+  background: $black;
 }
 
-.color-palette-purple {
-
+#top-bar {
+  background: lighten($black, 20%);
+  .menu {
+    text-align: right;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 4px 0 4px 4px;
+    }
+  }
 }
 
-.color-palette-turquoise {
+//%foobar-placeholder {
+//  color: $maroon;
+//}
 
-}
-
-.color-palette-pomegranate {
-
-}
-
-.color-palette-seafoam {
-
+h2 {
+  @include foobar-mixin;
+  //@extend %foobar-placeholder;
 }

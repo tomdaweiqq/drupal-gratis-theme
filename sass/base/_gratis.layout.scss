@@ -39,6 +39,10 @@ gutters: .25,
   overflow: hidden;
 }
 
+#l-menu-wrapper {
+  margin-bottom: emRhythm(4);
+}
+
 //@include layout($sixteencols);
 
 .l-header,
@@ -67,6 +71,10 @@ img {
 @include susy-breakpoint($tab, 12) {
 //  $total-columns: 12;
 //  @include layout(12);
+
+  .preface-three .preface.s-grid {
+    @include gallery(4 of 12 2);
+  }
 
   // Extends
 
@@ -139,17 +147,14 @@ img {
     }
   }
   .preface-three .preface.s-grid {
-    @include span(4 of 12);
-    &:last-child {
-      @include omega;
-    }
+    @include gallery(4 of 12 2 isolate);
   }
 
   .l-branding {
    // @include span-columns(6, 16);
     @include span(10);
   }
-  .l-region--header{
+  .l-region--header {
    // @include span-columns(10 omega, 16);
     @include span(14 at 11);
   }
@@ -167,12 +172,11 @@ img {
 
   .one-sidebar.sidebar-second {
     .l-content {
-   //   @include span-columns(12, 16);
-      @include span(18);
+      @include span(8 at 0 of 12);
+      @include bleed(0 8% 0 0);
     }
     .region-sidebar-second {
-    //  @include span-columns(4 omega, 16);
-      @include span(6 at 19);
+      @include span(4 at 9 of 12);
       clear: none;
     }
 

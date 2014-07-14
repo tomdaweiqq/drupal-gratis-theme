@@ -1,4 +1,4 @@
-// Primary Tabs ~~~~~~~~~~~~~~~ (.)(.)
+// Primary Tabs
 
 ul.tabs.primary {
   display: table;
@@ -6,6 +6,7 @@ ul.tabs.primary {
   overflow: hidden;
   margin: 0 0 10px 0;
   width: 100%;
+  background: lighten($dark_gray, 20%);
 
   li {
     float: left;
@@ -30,6 +31,7 @@ ul.tabs.primary {
     transition: all 0.2s ease-in-out;
     border-bottom: 2px solid $dark_gray;
     font-size: 12px;
+    color: $dark_gray;
     &.active {
       color: $white;
       background: lighten($dark_gray, 20%);
@@ -42,4 +44,4 @@ ul.tabs.primary {
 
 }
 
-// End Primary tabs ~~~~~~~~~~~~~~~ (.)(.)
+// End Primary tabs

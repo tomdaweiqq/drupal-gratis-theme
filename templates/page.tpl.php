@@ -112,7 +112,7 @@
           <?php endif; ?>
 
           <?php if ($site_slogan) : ?>
-            <h3 class="brand"><?php print $site_slogan; ?></h3>
+            <h3 class="brand epsilon"><?php print $site_slogan; ?></h3>
           <?php endif; ?>
 
       <?php endif; ?>

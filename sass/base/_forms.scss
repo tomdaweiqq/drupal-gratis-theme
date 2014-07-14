@@ -1,0 +1,8 @@
+// Form elements.
+
+
+input[type="submit"],
+input[type="reset"],
+button {
+  @include no-shadows-borders;
+}

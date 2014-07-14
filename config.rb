@@ -30,6 +30,7 @@ require 'toolkit'
 require 'susy'
 require 'sass-globbing'
 require 'font-awesome-sass'
+require 'zen-grids'
 
 ##
 ## You probably don't need to edit anything below this.
