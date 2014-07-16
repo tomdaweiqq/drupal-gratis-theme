@@ -298,24 +298,25 @@
 /* line 27, ../sass/base/_design.scss */
 #header-bar {
   background: black;
+  color: #851b1d;
 }
 
-/* line 31, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 33, ../sass/base/_design.scss */
+/* line 34, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 35, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 47, ../sass/base/_design.scss */
+/* line 48, ../sass/base/_design.scss */
 h2 {
   color: #02b4ce;
 }
@@ -329,6 +330,12 @@ button {
   box-shadow: none;
 }
 
+@media (min-width: 44em) {
+  /* line 13, ../sass/base/_forms.scss */
+  .foobarz {
+    color: black;
+  }
+}
 /*******************************************************************************
  * off-canvas.layout.scss
  *
@@ -363,18 +370,18 @@ button {
   clear: both;
 }
 
-/* line 37, ../sass/base/_gratis.layout.scss */
+/* line 36, ../sass/base/_gratis.layout.scss */
 .foobar {
   clear: both;
   overflow: hidden;
 }
 
-/* line 42, ../sass/base/_gratis.layout.scss */
+/* line 41, ../sass/base/_gratis.layout.scss */
 #l-menu-wrapper {
   margin-bottom: 1.5em;
 }
 
-/* line 48, ../sass/base/_gratis.layout.scss */
+/* line 45, ../sass/base/_gratis.layout.scss */
 .l-header,
 .l-main,
 .l-footer,
@@ -404,12 +411,12 @@ button {
   clear: both;
 }
 
-/* line 57, ../sass/base/_gratis.layout.scss */
+/* line 54, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
   clear: both;
 }
 
-/* line 61, ../sass/base/_gratis.layout.scss */
+/* line 58, ../sass/base/_gratis.layout.scss */
 img {
   width: auto\9;
   height: auto;
@@ -420,32 +427,7 @@ img {
 }
 
 @media (min-width: 44em) {
-  /* line 75, ../sass/base/_gratis.layout.scss */
-  .preface-three .preface.s-grid {
-    width: 29.41176%;
-    float: left;
-  }
-  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
-  .preface-three .preface.s-grid:nth-child(3n + 1) {
-    margin-left: 0;
-    margin-right: -100%;
-    clear: both;
-    margin-left: 0;
-  }
-  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
-  .preface-three .preface.s-grid:nth-child(3n + 2) {
-    margin-left: 35.29412%;
-    margin-right: -100%;
-    clear: none;
-  }
-  /* line 63, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
-  .preface-three .preface.s-grid:nth-child(3n + 3) {
-    margin-left: 70.58824%;
-    margin-right: -100%;
-    clear: none;
-  }
-
-  /* line 85, ../sass/base/_gratis.layout.scss */
+  /* line 76, ../sass/base/_gratis.layout.scss */
   .l-header,
   .l-main,
   .l-footer,
@@ -482,53 +464,78 @@ img {
     clear: both;
   }
 
-  /* line 102, ../sass/base/_gratis.layout.scss */
+  /* line 93, ../sass/base/_gratis.layout.scss */
   .l-branding {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 106, ../sass/base/_gratis.layout.scss */
+  /* line 96, ../sass/base/_gratis.layout.scss */
   .l-region--header {
     width: 66.10169%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 110, ../sass/base/_gratis.layout.scss */
+  /* line 99, ../sass/base/_gratis.layout.scss */
   .l-region--navigation {
     clear: both;
   }
 
-  /* line 117, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-first .l-content,
-  .one-sidebar.sidebar-second .l-content,
-  .two-sidebars .l-content {
-    width: 66.10169%;
+  /* line 105, ../sass/base/_gratis.layout.scss */
+  .two-sidebars .region-sidebar-first {
+    width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
+    margin-left: -76.27119%;
   }
-  /* line 121, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-first .region-sidebar-first,
-  .one-sidebar.sidebar-first .region-sidebar-second,
-  .one-sidebar.sidebar-second .region-sidebar-first,
-  .one-sidebar.sidebar-second .region-sidebar-second,
-  .two-sidebars .region-sidebar-first,
+  /* line 109, ../sass/base/_gratis.layout.scss */
+  .two-sidebars .l-content {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-left: 25.42373%;
+  }
+  /* line 113, ../sass/base/_gratis.layout.scss */
   .two-sidebars .region-sidebar-second {
-    width: 32.20339%;
+    width: 23.72881%;
     float: right;
     margin-right: 0;
   }
-  /* line 126, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-first .region-sidebar-second,
-  .one-sidebar.sidebar-second .region-sidebar-second,
-  .two-sidebars .region-sidebar-second {
-    clear: right;
+
+  /* line 120, ../sass/base/_gratis.layout.scss */
+  .one-sidebar.sidebar-first .l-content {
+    width: 66.10169%;
+    float: right;
+    margin-right: 0;
   }
-}
-@media (min-width: 70em) {
-  /* line 140, ../sass/base/_gratis.layout.scss */
+  /* line 123, ../sass/base/_gratis.layout.scss */
+  .one-sidebar.sidebar-first .region-sidebar-first {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+
+  /* line 130, ../sass/base/_gratis.layout.scss */
+  .one-sidebar.sidebar-second .l-content {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-right: -2%;
+    padding-right: 2%;
+  }
+  /* line 134, ../sass/base/_gratis.layout.scss */
+  .one-sidebar.sidebar-second .region-sidebar-second {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    margin-left: -2%;
+    padding-left: 2%;
+    clear: none;
+  }
+
+  /* line 142, ../sass/base/_gratis.layout.scss */
   .preface-one .preface.s-grid {
     width: 100%;
     float: left;
@@ -536,19 +543,19 @@ img {
     margin-right: 0;
   }
 
-  /* line 143, ../sass/base/_gratis.layout.scss */
+  /* line 145, ../sass/base/_gratis.layout.scss */
   .preface-two .preface.s-grid {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 145, ../sass/base/_gratis.layout.scss */
+  /* line 147, ../sass/base/_gratis.layout.scss */
   .preface-two .preface.s-grid:last-child {
     float: right;
     margin-right: 0;
   }
 
-  /* line 149, ../sass/base/_gratis.layout.scss */
+  /* line 151, ../sass/base/_gratis.layout.scss */
   .preface-three .preface.s-grid {
     width: 29.41176%;
     float: left;
@@ -572,73 +579,20 @@ img {
     margin-right: -100%;
     clear: none;
   }
-
-  /* line 153, ../sass/base/_gratis.layout.scss */
+}
+@media (min-width: 70em) {
+  /* line 161, ../sass/base/_gratis.layout.scss */
   .l-branding {
-    width: 41.17647%;
-    float: left;
-    margin-right: 0.84034%;
-  }
-
-  /* line 157, ../sass/base/_gratis.layout.scss */
-  .l-region--header {
-    width: 57.98319%;
-    float: right;
-    margin-right: 0;
-  }
-
-  /* line 163, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-first .l-content {
-    width: 74.78992%;
-    float: left;
-    margin-right: 0.84034%;
-  }
-  /* line 167, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-first .region-sidebar-first {
-    width: 24.36975%;
-    float: left;
-    margin-right: 0.84034%;
-  }
-
-  /* line 174, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-second .l-content {
-    width: 66.10169%;
+    width: 83.05085%;
     float: left;
     margin-right: 1.69492%;
-    margin-right: -8%;
-    padding-right: 8%;
-  }
-  /* line 178, ../sass/base/_gratis.layout.scss */
-  .one-sidebar.sidebar-second .region-sidebar-second {
-    width: 32.20339%;
-    float: right;
-    margin-right: 0;
-    clear: none;
   }
 
-  /* line 186, ../sass/base/_gratis.layout.scss */
-  .two-sidebars .l-content {
-    width: 32.77311%;
+  /* line 164, ../sass/base/_gratis.layout.scss */
+  .l-region--header {
+    width: 116.94915%;
     float: left;
-    margin-right: 0.84034%;
-    margin-left: 16.80672%;
-  }
-  /* line 191, ../sass/base/_gratis.layout.scss */
-  .two-sidebars .region-sidebar-first,
-  .two-sidebars .region-sidebar-second {
-    width: 15.96639%;
-    float: left;
-    margin-right: 0.84034%;
-  }
-  /* line 196, ../sass/base/_gratis.layout.scss */
-  .two-sidebars .region-sidebar-first {
-    margin-left: -50.42017%;
-  }
-  /* line 199, ../sass/base/_gratis.layout.scss */
-  .two-sidebars .region-sidebar-second {
-    float: right;
-    margin-right: 0;
-    clear: none;
+    margin-right: 1.69492%;
   }
 }
 /* line 1, ../sass/base/_links.scss */

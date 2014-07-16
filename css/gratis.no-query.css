@@ -298,24 +298,25 @@
 /* line 27, ../sass/base/_design.scss */
 #header-bar {
   background: black;
+  color: #851b1d;
 }
 
-/* line 31, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 33, ../sass/base/_design.scss */
+/* line 34, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 35, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 47, ../sass/base/_design.scss */
+/* line 48, ../sass/base/_design.scss */
 h2 {
   color: #02b4ce;
 }
@@ -363,18 +364,18 @@ button {
   clear: both;
 }
 
-/* line 37, ../sass/base/_gratis.layout.scss */
+/* line 36, ../sass/base/_gratis.layout.scss */
 .foobar {
   clear: both;
   overflow: hidden;
 }
 
-/* line 42, ../sass/base/_gratis.layout.scss */
+/* line 41, ../sass/base/_gratis.layout.scss */
 #l-menu-wrapper {
   margin-bottom: 1.5em;
 }
 
-/* line 48, ../sass/base/_gratis.layout.scss */
+/* line 45, ../sass/base/_gratis.layout.scss */
 .l-header,
 .l-main,
 .l-footer,
@@ -404,12 +405,12 @@ button {
   clear: both;
 }
 
-/* line 57, ../sass/base/_gratis.layout.scss */
+/* line 54, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
   clear: both;
 }
 
-/* line 61, ../sass/base/_gratis.layout.scss */
+/* line 58, ../sass/base/_gratis.layout.scss */
 img {
   width: auto\9;
   height: auto;

@@ -6,3 +6,11 @@ input[type="reset"],
 button {
   @include no-shadows-borders;
 }
+
+
+// Tablet widths
+@include breakpoint($tab) {
+  .foobarz {
+    color: $black;
+  }
+}

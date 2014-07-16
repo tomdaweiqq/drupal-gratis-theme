@@ -8,7 +8,6 @@
 @import "susy";
 
 
-// Susy Variables
 // Globbing from within sub-folders only works with relative paths.
 @import "../variables/colors";
 @import "../variables/legacy";
@@ -26,14 +25,14 @@ columns: 24,
 gutters: .25,
 );
 
+
 .l-constrained {
   width: 95%;
   margin: 0 auto;
   @include pie-clearfix;
 }
 
-
-// clear various elements.
+// Clear various elements. (example)
 .foobar {
   @include break;
   overflow: hidden;
@@ -42,8 +41,6 @@ gutters: .25,
 #l-menu-wrapper {
   margin-bottom: emRhythm(4);
 }
-
-//@include layout($sixteencols);
 
 .l-header,
 .l-main,
@@ -68,13 +65,7 @@ img {
 }
 
 // Tablet widths
-@include susy-breakpoint($tab, 12) {
-//  $total-columns: 12;
-//  @include layout(12);
-
-  .preface-three .preface.s-grid {
-    @include gallery(4 of 12 2);
-  }
+@include breakpoint($tab) {
 
   // Extends
 
@@ -95,48 +86,59 @@ img {
   .l-menu-wrapper,
   .l-preface,
   .l-postscript {
-    //@include set-container-width;
+   //set container width;
     @include container(1100px);
   }
 
   .l-branding {
-    //@include span-columns(4, 12);
     @include span(4);
   }
   .l-region--header {
-    //@include span-columns(8 omega, 12);
     @include span(8 at 5);
   }
   .l-region--navigation {
     clear: both;
   }
 
-  .one-sidebar.sidebar-first,
-  .one-sidebar.sidebar-second,
+  // two sidebars.
   .two-sidebars {
+    .region-sidebar-first {
+      @include span(3 at 1 of 12);
+      @include pull(9);
+    }
     .l-content {
-      // @include span-columns(8, 12);
-      @include span(8);
-    }
-    .region-sidebar-first,
-    .region-sidebar-second {
-     // @include span-columns(4 omega, 12);
-      @include span(4 at 9);
+      @include span(6 at 4 of 12);
+      @include push(3);
     }
     .region-sidebar-second {
-      clear: right;
+      @include span(3 at 10 of 12);
     }
   }
 
-}
+  // One sidebar - sidebar first.
+  .one-sidebar.sidebar-first {
+    .l-content {
+      @include span(8 at 5 of 12);
+    }
+    .region-sidebar-first {
+      @include span(4 at 1 of 12);
+    }
+  }
 
-// Wide screen layout grid.
+  // One sidebar - sidebar second.
+  .one-sidebar.sidebar-second {
+    .l-content {
+      @include span(8 of 12);
+      @include bleed(0 2% 0 0);
+    }
+    .region-sidebar-second {
+      @include span(4 at 9 of 12);
+      @include bleed(0 0 0 2%);
+      clear: none;
+    }
+  }
 
-@include susy-breakpoint($desk, 24) {
-  //$total-columns: 16;
-  //@include layout(24);
-
-
+  // Preface.
   .preface-one .preface.s-grid {
     @include span(1 of 1);
   }
@@ -147,59 +149,22 @@ img {
     }
   }
   .preface-three .preface.s-grid {
-    @include gallery(4 of 12 2 isolate);
+    @include gallery(4 of 12 2);
   }
 
+}
+
+// Wide screen layout grid.
+
+@include breakpoint($desk) {
+
   .l-branding {
-   // @include span-columns(6, 16);
     @include span(10);
   }
   .l-region--header {
-   // @include span-columns(10 omega, 16);
     @include span(14 at 11);
   }
 
-  .one-sidebar.sidebar-first {
-    .l-content {
-    //  @include span-columns(12 omega, 16);
-      @include span(18 at 17);
-    }
-    .region-sidebar-first {
-    //  @include span-columns(4, 16);
-      @include span(6);
-    }
-  }
 
-  .one-sidebar.sidebar-second {
-    .l-content {
-      @include span(8 at 0 of 12);
-      @include bleed(0 8% 0 0);
-    }
-    .region-sidebar-second {
-      @include span(4 at 9 of 12);
-      clear: none;
-    }
-
-  }
-
-  .two-sidebars {
-    .l-content {
-   //   @include span-columns(8, 16);
-      @include span(8);
-      @include push(4);
-    }
-    .region-sidebar-first,
-    .region-sidebar-second {
-    //  @include span-columns(4, 16);
-      @include span(4);
-    }
-    .region-sidebar-first {
-      @include pull(12);
-    }
-    .region-sidebar-second {
-      @include omega;
-      clear: none;
-    }
-  }
 
 }

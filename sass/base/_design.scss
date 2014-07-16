@@ -26,6 +26,7 @@
 
 #header-bar {
   background: $black;
+  color: $maroon;
 }
 
 #top-bar {
@@ -48,3 +49,6 @@ h2 {
   @include foobar-mixin;
   //@extend %foobar-placeholder;
 }
+
+
+

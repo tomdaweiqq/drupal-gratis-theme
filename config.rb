@@ -31,6 +31,7 @@ require 'susy'
 require 'sass-globbing'
 require 'font-awesome-sass'
 require 'zen-grids'
+require 'singularitygs'
 
 ##
 ## You probably don't need to edit anything below this.
