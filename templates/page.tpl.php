@@ -65,7 +65,10 @@
  */
 ?>
 
+
 <div class="l-page-wrapper">
+<div class="l-page">
+
 
 <!-- top links-->
 <?php if ($page['top_links']): ?>
@@ -219,19 +222,19 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 
       <!--Postscript -->
       <?php if (!empty($page['postscript_first'])): ?>
-
+    <div class="l-postscript s-grid">
           <?php print render($page['postscript_first']); ?>
         </div>
       <?php endif; ?>
 
       <?php if (!empty($page['postscript_second'])): ?>
-
+        <div class="l-postscript s-grid">
           <?php print render($page['postscript_second']); ?>
         </div>
       <?php endif; ?>
 
       <?php if (!empty($page['postscript_third'])): ?>
-
+        <div class="l-postscript s-grid">
           <?php print render($page['postscript_third']); ?>
         </div>
       <?php endif; ?>
@@ -253,9 +256,11 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 </footer>
 
 </div>
+</div>
 
-<?php if ($page['top_panel']): ?>
-  <div id="top-panel">
-    <?php print render($page['top_panel']); ?>
-  </div>
-<?php endif; ?>
+<!---->
+<?php //if ($page['top_panel']): ?>
+<!--  <div id="top-panel">-->
+<!--    --><?php //print render($page['top_panel']); ?>
+<!--  </div>-->
+<?php //endif; ?>

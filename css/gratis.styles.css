@@ -796,6 +796,187 @@ img, media {
     border-color: #851b1d;
   }
 }
+/*******************************************************************************
+ * Off canvas portion of styling for the Off Canvas layout.
+ ******************************************************************************/
+/* line 5, ../sass/base/_off-canvas.scss */
+.l-off-canvas-show,
+.l-off-canvas-hide {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent url("../images/menu-icons.png") center center no-repeat;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  position: absolute;
+  display: block;
+  z-index: 1001;
+  top: 12px;
+  background-position: 0 -65px;
+  left: 10px;
+}
+
+/* line 23, ../sass/base/_off-canvas.scss */
+.l-off-canvas-show {
+  background: transparent url("../images/menu-icons.png") center center no-repeat;
+}
+
+@media (min-width: 0) and (max-width: 44em) {
+  /* line 36, ../sass/base/_off-canvas.scss */
+  #block-system-main-menu .menu .nested-menu-item-toggle {
+    position: absolute;
+    top: 1.3em;
+    right: 0;
+    padding-left: 15%;
+    display: block;
+    background-position: 0 -45px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    border: 0;
+  }
+  /* line 48, ../sass/base/_off-canvas.scss */
+  #block-system-main-menu .menu li {
+    position: relative;
+  }
+  /* line 51, ../sass/base/_off-canvas.scss */
+  #block-system-main-menu .menu .expanded .menu {
+    display: block;
+  }
+  /* line 55, ../sass/base/_off-canvas.scss */
+  #block-system-main-menu a {
+    padding: 20px 0;
+    background: #9b2023;
+    color: #f8f8f8;
+    border-bottom: 1px solid #851b1d;
+    font-size: 16px;
+    font-size: 0.88889rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  /* line 66, ../sass/base/_off-canvas.scss */
+  #block-system-main-menu ul.menu {
+    text-align: center;
+  }
+
+  /* line 70, ../sass/base/_off-canvas.scss */
+  .js #block-system-main-menu li .menu {
+    display: none;
+  }
+
+  /* line 76, ../sass/base/_off-canvas.scss */
+  .no-js .l-off-canvas {
+    position: relative;
+    min-height: 24px;
+    padding-right: 24px;
+  }
+  /* line 81, ../sass/base/_off-canvas.scss */
+  .no-js .l-off-canvas .l-region {
+    position: relative;
+    overflow: hidden;
+  }
+  /* line 85, ../sass/base/_off-canvas.scss */
+  .no-js .l-off-canvas .l-off-canvas-hide {
+    display: block;
+  }
+  /* line 89, ../sass/base/_off-canvas.scss */
+  .no-js .l-off-canvas:not(:target) .l-region {
+    min-height: 0;
+    height: 0;
+  }
+  /* line 93, ../sass/base/_off-canvas.scss */
+  .no-js .l-off-canvas:not(:target) .l-off-canvas-show {
+    display: block;
+  }
+  /* line 96, ../sass/base/_off-canvas.scss */
+  .no-js .l-off-canvas:not(:target) .l-off-canvas-hide {
+    display: none;
+  }
+
+  /* line 102, ../sass/base/_off-canvas.scss */
+  .js .off-canvas-left-is-visible .l-off-canvas--left {
+    left: 0%;
+    -moz-box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.9);
+  }
+
+  /* line 107, ../sass/base/_off-canvas.scss */
+  .l-off-canvas-hide--left {
+    left: 100%;
+    margin-left: -40px;
+  }
+
+  /* line 112, ../sass/base/_off-canvas.scss */
+  #off-canvas-left {
+    background: #851b1d;
+  }
+
+  /* line 116, ../sass/base/_off-canvas.scss */
+  .off-canvas-left-is-visible .l-off-canvas-show {
+    opacity: 0;
+  }
+
+  /* line 121, ../sass/base/_off-canvas.scss */
+  .js .l-page {
+    position: relative;
+    height: 100%;
+  }
+
+  /* line 126, ../sass/base/_off-canvas.scss */
+  .js .l-off-canvas {
+    position: absolute;
+    z-index: 99;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    left: -80%;
+    padding-top: 24px;
+    -moz-transition: left 0.2s ease-in;
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+    cursor: pointer;
+  }
+  /* line 137, ../sass/base/_off-canvas.scss */
+  .js .l-off-canvas.is-visible {
+    left: 0;
+    cursor: auto;
+  }
+  /* line 141, ../sass/base/_off-canvas.scss */
+  .js .l-off-canvas.is-visible .l-off-canvas-show {
+    display: none;
+  }
+  /* line 144, ../sass/base/_off-canvas.scss */
+  .js .l-off-canvas.is-visible .l-off-canvas-hide {
+    display: block;
+  }
+  /* line 148, ../sass/base/_off-canvas.scss */
+  .js .l-off-canvas .l-off-canvas-show {
+    display: block;
+  }
+}
+@media (min-width: 70em) {
+  /* line 158, ../sass/base/_off-canvas.scss */
+  a#off-canvas-left-show {
+    display: none;
+  }
+
+  /* line 162, ../sass/base/_off-canvas.scss */
+  .nested-menu-item-toggle {
+    display: none;
+  }
+
+  /* line 166, ../sass/base/_off-canvas.scss */
+  .l-off-canvas-show.l-off-canvas-show--left {
+    display: none;
+  }
+}
 /* line 3, ../sass/base/_system.scss */
 ul.tabs.primary {
   display: table;

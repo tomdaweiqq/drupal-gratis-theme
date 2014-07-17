@@ -452,6 +452,36 @@ img, media {
   max-width: 100%;
 }
 
+/*******************************************************************************
+ * Off canvas portion of styling for the Off Canvas layout.
+ ******************************************************************************/
+/* line 5, ../sass/base/_off-canvas.scss */
+.l-off-canvas-show,
+.l-off-canvas-hide {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent url("../images/menu-icons.png") center center no-repeat;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  position: absolute;
+  display: block;
+  z-index: 1001;
+  top: 12px;
+  background-position: 0 -65px;
+  left: 10px;
+}
+
+/* line 23, ../sass/base/_off-canvas.scss */
+.l-off-canvas-show {
+  background: transparent url("../images/menu-icons.png") center center no-repeat;
+}
+
 /* line 3, ../sass/base/_system.scss */
 ul.tabs.primary {
   display: table;

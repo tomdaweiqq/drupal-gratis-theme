@@ -1,0 +1,172 @@
+/*******************************************************************************
+ * Off canvas portion of styling for the Off Canvas layout.
+ ******************************************************************************/
+
+.l-off-canvas-show,
+.l-off-canvas-hide {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent url("../images/menu-icons.png") center center no-repeat;
+  @include hide-text;
+  position: absolute;
+  display: block;
+  z-index: 1001;
+  top: 12px;
+  background-position: 0 -65px;
+  left: 10px;
+}
+
+.l-off-canvas-show {
+  background: transparent url("../images/menu-icons.png") center center no-repeat;
+}
+
+@include breakpoint(0 $tab) {
+
+  //colors
+  $color_0: #9b2023;
+  $color_1: #f8f8f8;
+  $color_2: #851b1d;
+
+  #block-system-main-menu {
+    .menu {
+      .nested-menu-item-toggle {
+        position: absolute;
+        top: 1.3em;
+        right: 0;
+        padding-left: 15%;
+        display: block;
+        background-position: 0 -45px;
+        height: 20px;
+        width: 20px;
+        padding: 0;
+        border: 0;
+      }
+      li {
+        position: relative;
+      }
+      .expanded .menu {
+        display: block;
+      }
+    }
+    a {
+      padding: 20px 0;
+      background: $color_0;
+      color: $color_1;
+      border-bottom: 1px solid $color_2;
+      font-size: 16px;
+      font-size: 0.88889rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    ul.menu {
+      text-align: center;
+    }
+  }
+  .js #block-system-main-menu li .menu {
+    display: none;
+  }
+
+
+  // No JS Fallbacks
+  .no-js .l-off-canvas {
+    position: relative;
+    min-height: 24px;
+    padding-right: 24px;
+
+    .l-region {
+      position: relative;
+      overflow: hidden;
+    }
+    .l-off-canvas-hide {
+      display: block;
+    }
+    &:not(:target) {
+      .l-region {
+        min-height: 0;
+        height: 0;
+      }
+      .l-off-canvas-show {
+        display: block;
+      }
+      .l-off-canvas-hide {
+        display: none;
+      }
+    }
+  }
+
+  .js .off-canvas-left-is-visible .l-off-canvas--left {
+    left: 0%;
+    @include box-shadow(0 0 50px 5px rgba(0, 0, 0, 0.9));
+  }
+
+  .l-off-canvas-hide--left {
+    left: 100%;
+    margin-left: -40px;
+  }
+
+  #off-canvas-left {
+    background: $color_2;
+  }
+
+  .off-canvas-left-is-visible .l-off-canvas-show {
+    opacity: 0;
+  }
+
+  // JS Enabled Styles
+  .js .l-page {
+    position: relative;
+    height: 100%;
+  }
+
+  .js .l-off-canvas {
+    position: absolute;
+    z-index: 99;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    left: -80%;
+    padding-top: 24px;
+    @include transition(left 0.2s ease-in);
+    cursor: pointer;
+
+    &.is-visible {
+      left: 0;
+      cursor: auto;
+
+      .l-off-canvas-show {
+        display: none;
+      }
+      .l-off-canvas-hide {
+        display: block;
+      }
+    }
+    .l-off-canvas-show {
+      display: block;
+    }
+  }
+}
+
+// Wide screen layout grid.
+
+@include breakpoint($desk) {
+
+  a#off-canvas-left-show {
+    display: none;
+  }
+
+  .nested-menu-item-toggle {
+    display: none;
+  }
+
+  .l-off-canvas-show.l-off-canvas-show--left {
+    display: none;
+  }
+
+}
+
+
