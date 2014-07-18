@@ -8,20 +8,20 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 24px;
-  height: 24px;
+  width: 46px;
+  height: 36px;
   background: transparent url("../images/menu-icons.png") center center no-repeat;
   @include hide-text;
   position: absolute;
   display: block;
   z-index: 1001;
   top: 12px;
-  background-position: 0 -65px;
+//  background-position: 0 -65px;
   left: 10px;
 }
 
 .l-off-canvas-show {
-  background: transparent url("../images/menu-icons.png") center center no-repeat;
+  background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
 }
 
 @include breakpoint(0 $tab) {
@@ -105,8 +105,9 @@
   }
 
   .l-off-canvas-hide--left {
-    left: 100%;
+    left: 95%;
     margin-left: -40px;
+    background-position: 1px -43px;
   }
 
   #off-canvas-left {
@@ -153,9 +154,14 @@
 
 // Wide screen layout grid.
 
-@include breakpoint($desk) {
+@include breakpoint($tab) {
 
   a#off-canvas-left-show {
+    display: none;
+  }
+
+  .l-off-canvas-show,
+  .l-off-canvas-hide {
     display: none;
   }
 

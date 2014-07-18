@@ -65,7 +65,6 @@
  */
 ?>
 
-
 <div class="l-page-wrapper">
 <div class="l-page">
 
@@ -83,7 +82,7 @@
 <!-- //top links-->
 
 <!-- header -->
-<div id="header-bar" class="" role="banner">
+<div id="header-bar" class="l-header-wrapper" role="banner">
   <header class="l-header" style="max-width:<?php print $setwidth; ?>">
 
     <!-- top left -->
@@ -258,9 +257,9 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 </div>
 </div>
 
-<!---->
-<?php //if ($page['top_panel']): ?>
-<!--  <div id="top-panel">-->
-<!--    --><?php //print render($page['top_panel']); ?>
-<!--  </div>-->
-<?php //endif; ?>
+
+<?php if ($page['top_panel']): ?>
+  <div id="top-panel">
+    <?php print render($page['top_panel']); ?>
+  </div>
+<?php endif; ?>

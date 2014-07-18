@@ -112,22 +112,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-greengray .l-header-wrapper {
+  color: #7f8c8d;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-greengray a {
   color: #7f8c8d;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-greengray a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button {
   background-color: #7f8c8d;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover {
@@ -135,22 +139,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-pink .l-header-wrapper {
+  color: #b72898;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-pink a {
   color: #b72898;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-pink a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button {
   background-color: #b72898;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
@@ -158,22 +166,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-orange .l-header-wrapper {
+  color: #e04604;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button {
   background-color: #e04604;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover {
@@ -181,22 +193,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-green .l-header-wrapper {
+  color: #6a8500;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-green a {
   color: #6a8500;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-green a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button {
   background-color: #6a8500;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
@@ -204,22 +220,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-purple .l-header-wrapper {
+  color: #491f70;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-purple a {
   color: #491f70;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-purple a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button {
   background-color: #491f70;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover {
@@ -227,22 +247,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-turquoise .l-header-wrapper {
+  color: #02b4ce;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-turquoise a {
   color: #02b4ce;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-turquoise a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button {
   background-color: #02b4ce;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
@@ -250,22 +274,26 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-pomegranate .l-header-wrapper {
+  color: #c0392b;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-pomegranate a {
   color: #c0392b;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-pomegranate a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button {
   background-color: #c0392b;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover {
@@ -273,52 +301,57 @@
 }
 
 /* line 7, ../sass/base/_design.scss */
+.color-palette-seafoam .l-header-wrapper {
+  color: #16a085;
+}
+/* line 10, ../sass/base/_design.scss */
 .color-palette-seafoam a {
   color: #16a085;
 }
-/* line 9, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
 .color-palette-seafoam a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 14, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button {
   background-color: #16a085;
   color: white;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
 
-/* line 27, ../sass/base/_design.scss */
-#header-bar {
-  background: black;
-  color: #851b1d;
-}
-
-/* line 32, ../sass/base/_design.scss */
+/* line 29, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 31, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 48, ../sass/base/_design.scss */
-h2 {
-  color: #02b4ce;
+/* line 41, ../sass/base/_design.scss */
+.l-header-wrapper {
+  background: black;
+  padding: 10px 0 0 0;
+}
+
+/* line 46, ../sass/base/_design.scss */
+.l-branding,
+.l-logo {
+  text-align: center;
 }
 
 /* line 4, ../sass/base/_forms.scss */
@@ -462,8 +495,8 @@ img, media {
   position: absolute;
   top: 0;
   right: 0;
-  width: 24px;
-  height: 24px;
+  width: 46px;
+  height: 36px;
   background: transparent url("../images/menu-icons.png") center center no-repeat;
   text-indent: -119988px;
   overflow: hidden;
@@ -473,13 +506,12 @@ img, media {
   display: block;
   z-index: 1001;
   top: 12px;
-  background-position: 0 -65px;
   left: 10px;
 }
 
 /* line 23, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show {
-  background: transparent url("../images/menu-icons.png") center center no-repeat;
+  background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
 }
 
 /* line 3, ../sass/base/_system.scss */

@@ -480,7 +480,7 @@ function gratis_preprocess_block(&$variables, $hook) {
   if ($variables['block_id'] == 1) {
     $variables['classes_array'][] = 'first';
   }
-  // The last_in_region property is set in zen_page_alter().
+  // The last_in_region property is set in gratis_page_alter().
   if (isset($variables['block']->last_in_region)) {
     $variables['classes_array'][] = 'last';
   }

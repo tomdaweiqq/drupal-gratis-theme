@@ -90,9 +90,6 @@ img {
     @include container(1100px);
   }
 
-  .l-branding {
-    @include span(4);
-  }
   .l-region--header {
     @include span(8 at 5);
   }
@@ -158,12 +155,6 @@ img {
 
 @include breakpoint($desk) {
 
-  .l-branding {
-    @include span(10);
-  }
-  .l-region--header {
-    @include span(14 at 11);
-  }
 
 
 
