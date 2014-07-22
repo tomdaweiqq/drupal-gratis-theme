@@ -17,6 +17,16 @@ $container-width: 1100px;
 $tab: 44em;
 $desk: 70em;
 
+$susy: (
+columns: 12,
+gutters: .25,
+);
+
+$sixteencols: (
+columns: 24,
+gutters: .25,
+);
+
 // Define Susy v.2 grids.
 
 $base-font-size: 14px;

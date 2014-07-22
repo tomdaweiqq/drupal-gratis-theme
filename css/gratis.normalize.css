@@ -282,10 +282,14 @@ th {
   padding: 0;
 }
 
-/* line 36, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/toolkit-1.3.8/stylesheets/toolkit/_box-sizing.scss */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
+/* line 1, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/toolkit-2.5.0/stylesheets/toolkit/_kickstart.scss */
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url('../behaviors/box-sizing/boxsizing.php');
+}
+
+/* line 11, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/toolkit-2.5.0/stylesheets/toolkit/_kickstart.scss */
+img, video {
+  max-width: 100%;
+  height: auto;
 }

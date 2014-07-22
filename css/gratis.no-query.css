@@ -3,6 +3,19 @@
 @import url(//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600);
+/* line 1, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/toolkit-2.5.0/stylesheets/toolkit/_kickstart.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/toolkit-2.5.0/stylesheets/toolkit/_kickstart.scss */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 /**
 * ==============================================================================
 * Typesettings
@@ -111,263 +124,6 @@
   border-left: 1px solid #eaeaea;
 }
 
-/* line 7, ../sass/base/_design.scss */
-.color-palette-greengray .l-header-wrapper {
-  color: #7f8c8d;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-greengray a {
-  color: #7f8c8d;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-greengray a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-greengray input[type="submit"],
-.color-palette-greengray input[type="reset"],
-.color-palette-greengray button {
-  background-color: #7f8c8d;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-greengray input[type="submit"]:hover,
-.color-palette-greengray input[type="reset"]:hover,
-.color-palette-greengray button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-pink .l-header-wrapper {
-  color: #b72898;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-pink a {
-  color: #b72898;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-pink a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-pink input[type="submit"],
-.color-palette-pink input[type="reset"],
-.color-palette-pink button {
-  background-color: #b72898;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-pink input[type="submit"]:hover,
-.color-palette-pink input[type="reset"]:hover,
-.color-palette-pink button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-orange .l-header-wrapper {
-  color: #e04604;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-orange a {
-  color: #e04604;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-orange a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-orange input[type="submit"],
-.color-palette-orange input[type="reset"],
-.color-palette-orange button {
-  background-color: #e04604;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-orange input[type="submit"]:hover,
-.color-palette-orange input[type="reset"]:hover,
-.color-palette-orange button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-green .l-header-wrapper {
-  color: #6a8500;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-green a {
-  color: #6a8500;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-green a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-green input[type="submit"],
-.color-palette-green input[type="reset"],
-.color-palette-green button {
-  background-color: #6a8500;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-green input[type="submit"]:hover,
-.color-palette-green input[type="reset"]:hover,
-.color-palette-green button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-purple .l-header-wrapper {
-  color: #491f70;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-purple a {
-  color: #491f70;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-purple a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-purple input[type="submit"],
-.color-palette-purple input[type="reset"],
-.color-palette-purple button {
-  background-color: #491f70;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-purple input[type="submit"]:hover,
-.color-palette-purple input[type="reset"]:hover,
-.color-palette-purple button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-turquoise .l-header-wrapper {
-  color: #02b4ce;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-turquoise a {
-  color: #02b4ce;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-turquoise a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-turquoise input[type="submit"],
-.color-palette-turquoise input[type="reset"],
-.color-palette-turquoise button {
-  background-color: #02b4ce;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-turquoise input[type="submit"]:hover,
-.color-palette-turquoise input[type="reset"]:hover,
-.color-palette-turquoise button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-pomegranate .l-header-wrapper {
-  color: #c0392b;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-pomegranate a {
-  color: #c0392b;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-pomegranate a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-pomegranate input[type="submit"],
-.color-palette-pomegranate input[type="reset"],
-.color-palette-pomegranate button {
-  background-color: #c0392b;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-pomegranate input[type="submit"]:hover,
-.color-palette-pomegranate input[type="reset"]:hover,
-.color-palette-pomegranate button:hover {
-  background-color: #999999;
-}
-
-/* line 7, ../sass/base/_design.scss */
-.color-palette-seafoam .l-header-wrapper {
-  color: #16a085;
-}
-/* line 10, ../sass/base/_design.scss */
-.color-palette-seafoam a {
-  color: #16a085;
-}
-/* line 12, ../sass/base/_design.scss */
-.color-palette-seafoam a:hover {
-  text-decoration: none;
-  color: #999999;
-}
-/* line 17, ../sass/base/_design.scss */
-.color-palette-seafoam input[type="submit"],
-.color-palette-seafoam input[type="reset"],
-.color-palette-seafoam button {
-  background-color: #16a085;
-  color: white;
-}
-/* line 22, ../sass/base/_design.scss */
-.color-palette-seafoam input[type="submit"]:hover,
-.color-palette-seafoam input[type="reset"]:hover,
-.color-palette-seafoam button:hover {
-  background-color: #999999;
-}
-
-/* line 29, ../sass/base/_design.scss */
-#top-bar {
-  background: #333333;
-}
-/* line 31, ../sass/base/_design.scss */
-#top-bar .menu {
-  text-align: right;
-}
-/* line 33, ../sass/base/_design.scss */
-#top-bar .menu li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 4px 0 4px 4px;
-}
-
-/* line 41, ../sass/base/_design.scss */
-.l-header-wrapper {
-  background: black;
-  padding: 10px 0 0 0;
-}
-
-/* line 46, ../sass/base/_design.scss */
-.l-branding,
-.l-logo {
-  text-align: center;
-}
-
-/* line 4, ../sass/base/_forms.scss */
-input[type="submit"],
-input[type="reset"],
-button {
-  border: none;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-/*******************************************************************************
- * off-canvas.layout.scss
- *
- * Styling of the Off Canvas layout.
- ******************************************************************************/
 /**
 * ==============================================================================
 * Typesettings
@@ -384,7 +140,308 @@ button {
 * https://github.com/typeplate/typeplate.github.io
 * https://github.com/csswizardry/typecsset
 */
-/* line 29, ../sass/base/_gratis.layout.scss */
+/* line 13, ../sass/base/_design.scss */
+.color-palette-greengray .l-off-canvas--left {
+  background-color: #7f8c8d;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-greengray .l-header-wrapper {
+  color: #7f8c8d;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-greengray a {
+  color: #7f8c8d;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-greengray a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-greengray input[type="submit"],
+.color-palette-greengray input[type="reset"],
+.color-palette-greengray button {
+  background-color: #7f8c8d;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-greengray input[type="submit"]:hover,
+.color-palette-greengray input[type="reset"]:hover,
+.color-palette-greengray button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-pink .l-off-canvas--left {
+  background-color: #b72898;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-pink .l-header-wrapper {
+  color: #b72898;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-pink a {
+  color: #b72898;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-pink a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-pink input[type="submit"],
+.color-palette-pink input[type="reset"],
+.color-palette-pink button {
+  background-color: #b72898;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-pink input[type="submit"]:hover,
+.color-palette-pink input[type="reset"]:hover,
+.color-palette-pink button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-orange .l-off-canvas--left {
+  background-color: #e04604;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-orange .l-header-wrapper {
+  color: #e04604;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-orange a {
+  color: #e04604;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-orange a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-orange input[type="submit"],
+.color-palette-orange input[type="reset"],
+.color-palette-orange button {
+  background-color: #e04604;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-orange input[type="submit"]:hover,
+.color-palette-orange input[type="reset"]:hover,
+.color-palette-orange button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-green .l-off-canvas--left {
+  background-color: #6a8500;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-green .l-header-wrapper {
+  color: #6a8500;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-green a {
+  color: #6a8500;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-green a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-green input[type="submit"],
+.color-palette-green input[type="reset"],
+.color-palette-green button {
+  background-color: #6a8500;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-green input[type="submit"]:hover,
+.color-palette-green input[type="reset"]:hover,
+.color-palette-green button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-purple .l-off-canvas--left {
+  background-color: #491f70;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-purple .l-header-wrapper {
+  color: #491f70;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-purple a {
+  color: #491f70;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-purple a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-purple input[type="submit"],
+.color-palette-purple input[type="reset"],
+.color-palette-purple button {
+  background-color: #491f70;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-purple input[type="submit"]:hover,
+.color-palette-purple input[type="reset"]:hover,
+.color-palette-purple button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-turquoise .l-off-canvas--left {
+  background-color: #02b4ce;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-turquoise .l-header-wrapper {
+  color: #02b4ce;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-turquoise a {
+  color: #02b4ce;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-turquoise a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-turquoise input[type="submit"],
+.color-palette-turquoise input[type="reset"],
+.color-palette-turquoise button {
+  background-color: #02b4ce;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-turquoise input[type="submit"]:hover,
+.color-palette-turquoise input[type="reset"]:hover,
+.color-palette-turquoise button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-pomegranate .l-off-canvas--left {
+  background-color: #c0392b;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-pomegranate .l-header-wrapper {
+  color: #c0392b;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-pomegranate a {
+  color: #c0392b;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-pomegranate a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-pomegranate input[type="submit"],
+.color-palette-pomegranate input[type="reset"],
+.color-palette-pomegranate button {
+  background-color: #c0392b;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-pomegranate input[type="submit"]:hover,
+.color-palette-pomegranate input[type="reset"]:hover,
+.color-palette-pomegranate button:hover {
+  background-color: #999999;
+}
+
+/* line 13, ../sass/base/_design.scss */
+.color-palette-seafoam .l-off-canvas--left {
+  background-color: #16a085;
+}
+/* line 19, ../sass/base/_design.scss */
+.color-palette-seafoam .l-header-wrapper {
+  color: #16a085;
+}
+/* line 22, ../sass/base/_design.scss */
+.color-palette-seafoam a {
+  color: #16a085;
+}
+/* line 24, ../sass/base/_design.scss */
+.color-palette-seafoam a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+/* line 29, ../sass/base/_design.scss */
+.color-palette-seafoam input[type="submit"],
+.color-palette-seafoam input[type="reset"],
+.color-palette-seafoam button {
+  background-color: #16a085;
+  color: white;
+}
+/* line 34, ../sass/base/_design.scss */
+.color-palette-seafoam input[type="submit"]:hover,
+.color-palette-seafoam input[type="reset"]:hover,
+.color-palette-seafoam button:hover {
+  background-color: #999999;
+}
+
+/* line 41, ../sass/base/_design.scss */
+#top-bar {
+  background: #333333;
+}
+/* line 43, ../sass/base/_design.scss */
+#top-bar .menu {
+  text-align: right;
+}
+/* line 45, ../sass/base/_design.scss */
+#top-bar .menu li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px 0 4px 4px;
+}
+
+/* line 53, ../sass/base/_design.scss */
+.l-header-wrapper {
+  background: black;
+  padding: 4px 0 0 0;
+}
+
+/* line 58, ../sass/base/_design.scss */
+.l-branding,
+.l-logo {
+  text-align: center;
+  margin-bottom: 1.125em;
+}
+
+/* line 4, ../sass/base/_forms.scss */
+input[type="submit"],
+input[type="reset"],
+button {
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/**
+* ==============================================================================
+* Typesettings
+* ==============================================================================
+* A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm,
+* and responsive ratio based headlines. Oh, and pixel borders that maintain
+* rhythm.
+*
+* Release Versions: https://github.com/ianrose/typesettings/releases
+* Github: https://github.com/ianrose/typesettings
+* License: The MIT License (MIT)
+*
+* Inspired by and used stuff from:
+* https://github.com/typeplate/typeplate.github.io
+* https://github.com/csswizardry/typecsset
+*/
+/* line 13, ../sass/base/_gratis.layout.scss */
 .l-constrained {
   width: 95%;
   margin: 0 auto;
@@ -397,18 +454,18 @@ button {
   clear: both;
 }
 
-/* line 36, ../sass/base/_gratis.layout.scss */
+/* line 20, ../sass/base/_gratis.layout.scss */
 .foobar {
   clear: both;
   overflow: hidden;
 }
 
-/* line 41, ../sass/base/_gratis.layout.scss */
+/* line 25, ../sass/base/_gratis.layout.scss */
 #l-menu-wrapper {
   margin-bottom: 1.5em;
 }
 
-/* line 45, ../sass/base/_gratis.layout.scss */
+/* line 29, ../sass/base/_gratis.layout.scss */
 .l-header,
 .l-main,
 .l-footer,
@@ -419,7 +476,7 @@ button {
   *zoom: 1;
   margin-bottom: 20px;
 }
-/* line 12, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .l-header:after,
 .l-main:after,
 .l-footer:after,
@@ -438,12 +495,12 @@ button {
   clear: both;
 }
 
-/* line 54, ../sass/base/_gratis.layout.scss */
+/* line 38, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
   clear: both;
 }
 
-/* line 58, ../sass/base/_gratis.layout.scss */
+/* line 42, ../sass/base/_gratis.layout.scss */
 img {
   width: auto\9;
   height: auto;
@@ -458,7 +515,7 @@ a {
   text-decoration: none;
 }
 
-/* line 3, ../sass/base/_lists.scss */
+/* line 4, ../sass/base/_lists.scss */
 ul {
   /* mixin */
   margin: 0;
@@ -469,7 +526,7 @@ ul {
   /* compass */
   list-style: none;
 }
-/* line 8, ../sass/base/_lists.scss */
+/* line 9, ../sass/base/_lists.scss */
 ul li {
   list-style: none;
 }
@@ -481,14 +538,12 @@ ul li li {
 }
 
 /* line 1, ../sass/base/_media.scss */
-img, media {
+img,
+media {
   max-width: 100%;
 }
 
-/*******************************************************************************
- * Off canvas portion of styling for the Off Canvas layout.
- ******************************************************************************/
-/* line 5, ../sass/base/_off-canvas.scss */
+/* line 3, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show,
 .l-off-canvas-hide {
   display: none;
@@ -509,7 +564,7 @@ img, media {
   left: 10px;
 }
 
-/* line 23, ../sass/base/_off-canvas.scss */
+/* line 20, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show {
   background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
 }

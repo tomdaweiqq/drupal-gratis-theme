@@ -1,6 +1,4 @@
-/*******************************************************************************
- * Off canvas portion of styling for the Off Canvas layout.
- ******************************************************************************/
+// Off canvas layout styling.
 
 .l-off-canvas-show,
 .l-off-canvas-hide {
@@ -16,7 +14,6 @@
   display: block;
   z-index: 1001;
   top: 12px;
-//  background-position: 0 -65px;
   left: 10px;
 }
 
@@ -31,8 +28,24 @@
   $color_1: #f8f8f8;
   $color_2: #851b1d;
 
-  #block-system-main-menu {
+  #main-menu.nav {
     .menu {
+      text-align: center;
+      li {
+        position: relative;
+      }
+      a {
+        padding: 20px 0;
+        background: $dark_gray;
+        color: $color_1;
+        border-bottom: 1px solid $color_2;
+        font-size: 16px;
+        font-size: 0.88889rem;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        font-weight: normal;
+        display: block;
+      }
       .nested-menu-item-toggle {
         position: absolute;
         top: 1.3em;
@@ -45,61 +58,14 @@
         padding: 0;
         border: 0;
       }
-      li {
-        position: relative;
-      }
       .expanded .menu {
         display: block;
       }
     }
-    a {
-      padding: 20px 0;
-      background: $color_0;
-      color: $color_1;
-      border-bottom: 1px solid $color_2;
-      font-size: 16px;
-      font-size: 0.88889rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      font-weight: normal;
-    }
-    ul.menu {
-      text-align: center;
-    }
-  }
-  .js #block-system-main-menu li .menu {
-    display: none;
+
   }
 
-
-  // No JS Fallbacks
-  .no-js .l-off-canvas {
-    position: relative;
-    min-height: 24px;
-    padding-right: 24px;
-
-    .l-region {
-      position: relative;
-      overflow: hidden;
-    }
-    .l-off-canvas-hide {
-      display: block;
-    }
-    &:not(:target) {
-      .l-region {
-        min-height: 0;
-        height: 0;
-      }
-      .l-off-canvas-show {
-        display: block;
-      }
-      .l-off-canvas-hide {
-        display: none;
-      }
-    }
-  }
-
-  .js .off-canvas-left-is-visible .l-off-canvas--left {
+  .off-canvas-left-is-visible .l-off-canvas--left {
     left: 0%;
     @include box-shadow(0 0 50px 5px rgba(0, 0, 0, 0.9));
   }
@@ -110,21 +76,17 @@
     background-position: 1px -43px;
   }
 
-  #off-canvas-left {
-    background: $color_2;
-  }
-
   .off-canvas-left-is-visible .l-off-canvas-show {
     opacity: 0;
   }
 
-  // JS Enabled Styles
-  .js .l-page {
+  .l-page {
     position: relative;
     height: 100%;
   }
 
-  .js .l-off-canvas {
+
+  .l-off-canvas {
     position: absolute;
     z-index: 99;
     width: 80%;
@@ -150,6 +112,7 @@
       display: block;
     }
   }
+
 }
 
 // Wide screen layout grid.

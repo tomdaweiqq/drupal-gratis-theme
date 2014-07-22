@@ -1,9 +1,21 @@
 
 
+// Globbing from within sub-folders only works with relative paths.
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/variables";
+
 // Paletes defined in _variables
 
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
+    .l-off-canvas--left {
+      background-color: $designcolor;
+//      a {
+//        color: $dark_gray;
+//      }
+    }
     .l-header-wrapper {
       color: $designcolor;
     }
@@ -40,12 +52,13 @@
 
 .l-header-wrapper {
   background: $black;
-  padding: 10px 0 0 0;
+  padding: 4px 0 0 0;
 }
 
 .l-branding,
 .l-logo {
   text-align: center;
+  margin-bottom: emRhythm(3);
 }
 
 
