@@ -30,8 +30,8 @@ require 'toolkit'
 require 'susy'
 require 'sass-globbing'
 require 'font-awesome-sass'
-require 'zen-grids'
-require 'singularitygs'
+require 'sass-media_query_combiner'
+require 'breakpoint'
 
 ##
 ## You probably don't need to edit anything below this.

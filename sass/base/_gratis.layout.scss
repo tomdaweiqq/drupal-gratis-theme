@@ -143,3 +143,12 @@ img {
 
 
 }
+
+div.quarter {
+  @include span(4);
+  color: #fff;
+  @include susy-breakpoint($tab, 6) {
+    @include span(3);
+  }
+}
+
