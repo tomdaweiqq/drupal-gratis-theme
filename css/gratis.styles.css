@@ -170,6 +170,10 @@ img, video {
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-greengray .l-menu-wrapper {
+  background-color: #7f8c8d;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
@@ -200,6 +204,10 @@ img, video {
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
+}
+/* line 38, ../sass/base/_design.scss */
+.color-palette-pink .l-menu-wrapper {
+  background-color: #b72898;
 }
 
 /* line 13, ../sass/base/_design.scss */
@@ -232,6 +240,10 @@ img, video {
 .color-palette-orange button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-orange .l-menu-wrapper {
+  background-color: #e04604;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
@@ -262,6 +274,10 @@ img, video {
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
+}
+/* line 38, ../sass/base/_design.scss */
+.color-palette-green .l-menu-wrapper {
+  background-color: #6a8500;
 }
 
 /* line 13, ../sass/base/_design.scss */
@@ -294,6 +310,10 @@ img, video {
 .color-palette-purple button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-purple .l-menu-wrapper {
+  background-color: #491f70;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
@@ -324,6 +344,10 @@ img, video {
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
+}
+/* line 38, ../sass/base/_design.scss */
+.color-palette-turquoise .l-menu-wrapper {
+  background-color: #02b4ce;
 }
 
 /* line 13, ../sass/base/_design.scss */
@@ -356,6 +380,10 @@ img, video {
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-pomegranate .l-menu-wrapper {
+  background-color: #c0392b;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
@@ -387,33 +415,64 @@ img, video {
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-seafoam .l-menu-wrapper {
+  background-color: #16a085;
+}
 
-/* line 41, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 43, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 45, ../sass/base/_design.scss */
+/* line 48, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 53, ../sass/base/_design.scss */
+/* line 56, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 58, ../sass/base/_design.scss */
+/* line 61, ../sass/base/_design.scss */
+.l-main,
+.l-footer,
+.l-menu-wrapper,
+.l-logo {
+  *zoom: 1;
+  margin-bottom: 20px;
+}
+/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
+.l-main:after,
+.l-footer:after,
+.l-menu-wrapper:after,
+.l-logo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 69, ../sass/base/_design.scss */
+.l-branding {
+  padding-bottom: 20px;
+}
+
+/* line 73, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
-  margin-bottom: 1.125em;
+}
+
+/* line 78, ../sass/base/_design.scss */
+h3.brand.epsilon {
+  margin: 0;
 }
 
 /* line 4, ../sass/base/_forms.scss */
@@ -440,19 +499,6 @@ button {
 * https://github.com/typeplate/typeplate.github.io
 * https://github.com/csswizardry/typecsset
 */
-/* line 13, ../sass/base/_gratis.layout.scss */
-.l-constrained {
-  width: 95%;
-  margin: 0 auto;
-  *zoom: 1;
-}
-/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
-.l-constrained:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* line 20, ../sass/base/_gratis.layout.scss */
 .foobar {
   clear: both;
@@ -465,41 +511,11 @@ button {
 }
 
 /* line 29, ../sass/base/_gratis.layout.scss */
-.l-header,
-.l-main,
-.l-footer,
-.l-branding {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  *zoom: 1;
-  margin-bottom: 20px;
-}
-/* line 12, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-.l-header:after,
-.l-main:after,
-.l-footer:after,
-.l-branding:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
-.l-header:after,
-.l-main:after,
-.l-footer:after,
-.l-branding:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 38, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
   clear: both;
 }
 
-/* line 42, ../sass/base/_gratis.layout.scss */
+/* line 33, ../sass/base/_gratis.layout.scss */
 img {
   width: auto\9;
   height: auto;
@@ -508,7 +524,7 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-/* line 147, ../sass/base/_gratis.layout.scss */
+/* line 136, ../sass/base/_gratis.layout.scss */
 div.quarter {
   width: 32.20339%;
   float: left;
@@ -835,8 +851,7 @@ body ul.menu li.leaf li {
     color: black;
   }
 
-  /* line 60, ../sass/base/_gratis.layout.scss */
-  .l-header,
+  /* line 51, ../sass/base/_gratis.layout.scss */
   .l-main,
   .l-footer,
   .l-header,
@@ -845,16 +860,14 @@ body ul.menu li.leaf li {
   .l-header,
   .l-content,
   .l-main,
-  .l-top-wrapper,
-  .l-menu-wrapper,
   .l-preface,
-  .l-postscript {
+  .l-postscript,
+  .l-setwidth {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
   /* line 12, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-  .l-header:after,
   .l-main:after,
   .l-footer:after,
   .l-header:after,
@@ -863,62 +876,61 @@ body ul.menu li.leaf li {
   .l-header:after,
   .l-content:after,
   .l-main:after,
-  .l-top-wrapper:after,
-  .l-menu-wrapper:after,
   .l-preface:after,
-  .l-postscript:after {
+  .l-postscript:after,
+  .l-setwidth:after {
     content: " ";
     display: block;
     clear: both;
   }
 
-  /* line 77, ../sass/base/_gratis.layout.scss */
+  /* line 66, ../sass/base/_gratis.layout.scss */
   .l-region--header {
     width: 66.10169%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 80, ../sass/base/_gratis.layout.scss */
+  /* line 69, ../sass/base/_gratis.layout.scss */
   .l-region--navigation {
     clear: both;
   }
 
-  /* line 86, ../sass/base/_gratis.layout.scss */
+  /* line 75, ../sass/base/_gratis.layout.scss */
   .two-sidebars .region-sidebar-first {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
     margin-left: -76.27119%;
   }
-  /* line 90, ../sass/base/_gratis.layout.scss */
+  /* line 79, ../sass/base/_gratis.layout.scss */
   .two-sidebars .l-content {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
     margin-left: 25.42373%;
   }
-  /* line 94, ../sass/base/_gratis.layout.scss */
+  /* line 83, ../sass/base/_gratis.layout.scss */
   .two-sidebars .region-sidebar-second {
     width: 23.72881%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 101, ../sass/base/_gratis.layout.scss */
+  /* line 90, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .l-content {
     width: 66.10169%;
     float: right;
     margin-right: 0;
   }
-  /* line 104, ../sass/base/_gratis.layout.scss */
+  /* line 93, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-first .region-sidebar-first {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
 
-  /* line 111, ../sass/base/_gratis.layout.scss */
+  /* line 100, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-second .l-content {
     width: 66.10169%;
     float: left;
@@ -926,7 +938,7 @@ body ul.menu li.leaf li {
     margin-right: -2%;
     padding-right: 2%;
   }
-  /* line 115, ../sass/base/_gratis.layout.scss */
+  /* line 104, ../sass/base/_gratis.layout.scss */
   .one-sidebar.sidebar-second .region-sidebar-second {
     width: 32.20339%;
     float: right;
@@ -936,7 +948,7 @@ body ul.menu li.leaf li {
     clear: none;
   }
 
-  /* line 123, ../sass/base/_gratis.layout.scss */
+  /* line 112, ../sass/base/_gratis.layout.scss */
   .preface-one .preface.s-grid {
     width: 100%;
     float: left;
@@ -944,19 +956,19 @@ body ul.menu li.leaf li {
     margin-right: 0;
   }
 
-  /* line 126, ../sass/base/_gratis.layout.scss */
+  /* line 115, ../sass/base/_gratis.layout.scss */
   .preface-two .preface.s-grid {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 128, ../sass/base/_gratis.layout.scss */
+  /* line 117, ../sass/base/_gratis.layout.scss */
   .preface-two .preface.s-grid:last-child {
     float: right;
     margin-right: 0;
   }
 
-  /* line 132, ../sass/base/_gratis.layout.scss */
+  /* line 121, ../sass/base/_gratis.layout.scss */
   .preface-three .preface.s-grid {
     width: 29.41176%;
     float: left;
@@ -981,47 +993,40 @@ body ul.menu li.leaf li {
     clear: none;
   }
 
-  /* line 147, ../sass/base/_gratis.layout.scss */
+  /* line 136, ../sass/base/_gratis.layout.scss */
   div.quarter {
     width: 48.27586%;
     float: left;
     margin-right: 3.44828%;
   }
 
-  /* line 5, ../sass/base/_menu.scss */
-  .main-menu-wrapper > ul:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  /* line 13, ../sass/base/_menu.scss */
+  /* line 6, ../sass/base/_menu.scss */
   body {
     -webkit-animation: bugfix infinite 1s;
   }
 
   @-webkit-keyframes bugfix {
-    /* line 18, ../sass/base/_menu.scss */
+    /* line 11, ../sass/base/_menu.scss */
     from {
       padding: 0;
     }
 
-    /* line 21, ../sass/base/_menu.scss */
+    /* line 14, ../sass/base/_menu.scss */
     to {
       padding: 0;
     }
   }
-  /* line 27, ../sass/base/_menu.scss */
+  /* line 20, ../sass/base/_menu.scss */
   .main-menu-wrapper {
     font: bold 13px "Open Sans", Arial, sans-serif;
   }
-  /* line 29, ../sass/base/_menu.scss */
+  /* line 22, ../sass/base/_menu.scss */
   .main-menu-wrapper * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 32, ../sass/base/_menu.scss */
+  /* line 25, ../sass/base/_menu.scss */
   .main-menu-wrapper ul {
     margin: 0;
     padding: 0;
@@ -1030,65 +1035,60 @@ body ul.menu li.leaf li {
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }
-  /* line 38, ../sass/base/_menu.scss */
+  /* line 31, ../sass/base/_menu.scss */
   .main-menu-wrapper li {
     position: relative;
   }
-  /* line 41, ../sass/base/_menu.scss */
+  /* line 34, ../sass/base/_menu.scss */
   .main-menu-wrapper li:hover > ul {
     opacity: 1;
     visibility: visible;
     margin: 0;
   }
-  /* line 46, ../sass/base/_menu.scss */
+  /* line 39, ../sass/base/_menu.scss */
   .main-menu-wrapper li:hover > a {
     color: white;
   }
-  /* line 51, ../sass/base/_menu.scss */
+  /* line 44, ../sass/base/_menu.scss */
   .main-menu-wrapper input[type=checkbox] {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  /* line 56, ../sass/base/_menu.scss */
+  /* line 49, ../sass/base/_menu.scss */
   .main-menu-wrapper label {
     display: none;
     cursor: pointer;
     user-select: none;
   }
 
-  /* line 65, ../sass/base/_menu.scss */
+  /* line 58, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul {
-    border: 1px solid #131313;
-    background-color: #202020;
-    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    *zoom: 1;
   }
-  /* line 70, ../sass/base/_menu.scss */
+  /* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
+  .main-menu-wrapper > ul:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* line 62, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul > li {
     float: left;
     border-right: 1px solid #2d2d2d;
-    -moz-box-shadow: 1px 0 0 #535353;
-    -webkit-box-shadow: 1px 0 0 #535353;
-    box-shadow: 1px 0 0 #535353;
   }
-  /* line 74, ../sass/base/_menu.scss */
+  /* line 65, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul > li > a {
     float: left;
     padding: 1em 3em;
     text-transform: uppercase;
   }
-  /* line 80, ../sass/base/_menu.scss */
+  /* line 71, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul a {
     color: white;
     text-decoration: none;
-    text-shadow: 0 1px 0 #202020;
   }
-  /* line 87, ../sass/base/_menu.scss */
+  /* line 77, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul {
     position: absolute;
     top: 100%;
@@ -1109,18 +1109,9 @@ body ul.menu li.leaf li {
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
   }
-  /* line 99, ../sass/base/_menu.scss */
+  /* line 89, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul li {
     display: block;
-    -moz-box-shadow: 0 1px 0 #2d2d2d, 0 2px 0 #606060;
-    -webkit-box-shadow: 0 1px 0 #2d2d2d, 0 2px 0 #606060;
-    box-shadow: 0 1px 0 #2d2d2d, 0 2px 0 #606060;
-  }
-  /* line 102, ../sass/base/_menu.scss */
-  .main-menu-wrapper > ul ul li:first-child > a {
-    -moz-border-radius: 3px 3px 0 0;
-    -webkit-border-radius: 3px;
-    border-radius: 3px 3px 0 0;
   }
   /* line 48, ../sass/abstractions/_mixins.scss */
   .main-menu-wrapper > ul ul li:first-child > a:after {
@@ -1131,26 +1122,20 @@ body ul.menu li.leaf li {
     border: 6px solid transparent;
     border-bottom-color: inherit;
   }
-  /* line 106, ../sass/base/_menu.scss */
+  /* line 95, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul li:last-child {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  /* line 108, ../sass/base/_menu.scss */
-  .main-menu-wrapper > ul ul li:last-child > a {
-    -moz-border-radius: 0 0 3px 3px;
-    -webkit-border-radius: 0;
-    border-radius: 0 0 3px 3px;
-  }
-  /* line 113, ../sass/base/_menu.scss */
+  /* line 101, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul a {
     padding: 1em;
     width: 100%;
     display: block;
     border-color: #464646;
   }
-  /* line 118, ../sass/base/_menu.scss */
+  /* line 106, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul a:hover {
     background-color: #851b1d;
     border-color: #851b1d;

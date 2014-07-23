@@ -72,7 +72,7 @@
 <!-- top links-->
 <?php if ($page['top_links']): ?>
   <div id="top-bar" class="">
-    <div class="l-top-wrapper" style="max-width:<?php print $setwidth; ?>">
+    <div class="l-top-wrapper l-setwidth" style="max-width:<?php print $setwidth; ?>">
       <div class="top-links s-grid">
         <?php print render($page['top_links']); ?>
       </div>
@@ -83,7 +83,7 @@
 
 <!-- header -->
 <div id="header-bar" class="l-header-wrapper" role="banner">
-  <header class="l-header" style="max-width:<?php print $setwidth; ?>">
+  <header class="l-header l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
     <!-- top left -->
 
@@ -119,14 +119,14 @@
 
       <?php endif; ?>
     </div>
-    <!--//brandinl-->
+    <!--//branding-->
 
   </header>
 
 </div> <!-- // l-header -->
 
-<div id="l-menu-wrapper"  role="navigation">
-  <div class="l-menu-wrapper" style="max-width:<?php print $setwidth; ?>">
+<div id="menu-wrapper" class="l-menu-wrapper" role="navigation" >
+  <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
       <div id="main-menu" class="nav s-grid">
 
         <?php if ($main_menu): ?>
@@ -162,7 +162,7 @@
 <?php if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
 
   <div id="preface-wrap" class="">
-    <div class="l-preface" style="max-width:<?php print $setwidth; ?>">
+    <div class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
       <!--Preface -->
       <?php if (!empty($page['preface_first'])): ?>
@@ -190,7 +190,7 @@
 <?php endif; ?>
 
   <div class="main">
-    <div class="l-main" role="main" style="max-width:<?php print $setwidth; ?>">
+    <div class="l-main l-setwidth" role="main" style="max-width:<?php print $setwidth; ?>">
       <div class="l-content">
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
@@ -218,7 +218,7 @@
 if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
 
   <div id="postscript-wrapper">
-    <div class="grid-container" id="postscript-container" style="max-width:<?php print $setwidth; ?>">
+    <div id="postscript-container" class=" postscript l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
       <!--Postscript -->
       <?php if (!empty($page['postscript_first'])): ?>
@@ -246,7 +246,7 @@ if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript
 
 
 <footer id="footer" role="footer">
-  <section class="grid-container" style="max-width:<?php print $setwidth; ?>">
+  <section class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
     <div class="grid-100">
       <?php if (!empty($page['footer_first'])): ?>
         <?php print render($page['footer_first']); ?>

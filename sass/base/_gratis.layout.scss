@@ -10,11 +10,11 @@
 @import "../variables/variables";
 
 
-.l-constrained {
-  width: 95%;
-  margin: 0 auto;
-  @include pie-clearfix;
-}
+//.l-constrained {
+//  width: 95%;
+//  margin: 0 auto;
+//  @include pie-clearfix;
+//}
 
 // Clear various elements. (example)
 .foobar {
@@ -24,15 +24,6 @@
 
 #l-menu-wrapper {
   margin-bottom: emRhythm(4);
-}
-
-.l-header,
-.l-main,
-.l-footer,
-.l-branding, {
-  @include container;
-  @include pie-clearfix;
-  margin-bottom: $vert-spacing-unit;
 }
 
 .l-off-canvas {
@@ -57,7 +48,6 @@ img {
     border: 1px solid $medium_gray;
   }
 
-  .l-header,
   .l-main,
   .l-footer,
   .l-header,
@@ -66,10 +56,9 @@ img {
   .l-header,
   .l-content,
   .l-main,
-  .l-top-wrapper,
-  .l-menu-wrapper,
   .l-preface,
-  .l-postscript {
+  .l-postscript,
+  .l-setwidth {
    //set container width;
     @include container(1100px);
   }

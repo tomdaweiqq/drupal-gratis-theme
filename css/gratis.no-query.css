@@ -170,6 +170,10 @@ img, video {
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-greengray .l-menu-wrapper {
+  background-color: #7f8c8d;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
@@ -200,6 +204,10 @@ img, video {
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
+}
+/* line 38, ../sass/base/_design.scss */
+.color-palette-pink .l-menu-wrapper {
+  background-color: #b72898;
 }
 
 /* line 13, ../sass/base/_design.scss */
@@ -232,6 +240,10 @@ img, video {
 .color-palette-orange button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-orange .l-menu-wrapper {
+  background-color: #e04604;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
@@ -262,6 +274,10 @@ img, video {
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
+}
+/* line 38, ../sass/base/_design.scss */
+.color-palette-green .l-menu-wrapper {
+  background-color: #6a8500;
 }
 
 /* line 13, ../sass/base/_design.scss */
@@ -294,6 +310,10 @@ img, video {
 .color-palette-purple button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-purple .l-menu-wrapper {
+  background-color: #491f70;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
@@ -324,6 +344,10 @@ img, video {
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
+}
+/* line 38, ../sass/base/_design.scss */
+.color-palette-turquoise .l-menu-wrapper {
+  background-color: #02b4ce;
 }
 
 /* line 13, ../sass/base/_design.scss */
@@ -356,6 +380,10 @@ img, video {
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-pomegranate .l-menu-wrapper {
+  background-color: #c0392b;
+}
 
 /* line 13, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
@@ -387,33 +415,64 @@ img, video {
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
+/* line 38, ../sass/base/_design.scss */
+.color-palette-seafoam .l-menu-wrapper {
+  background-color: #16a085;
+}
 
-/* line 41, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 43, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 45, ../sass/base/_design.scss */
+/* line 48, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 53, ../sass/base/_design.scss */
+/* line 56, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 58, ../sass/base/_design.scss */
+/* line 61, ../sass/base/_design.scss */
+.l-main,
+.l-footer,
+.l-menu-wrapper,
+.l-logo {
+  *zoom: 1;
+  margin-bottom: 20px;
+}
+/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
+.l-main:after,
+.l-footer:after,
+.l-menu-wrapper:after,
+.l-logo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 69, ../sass/base/_design.scss */
+.l-branding {
+  padding-bottom: 20px;
+}
+
+/* line 73, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
-  margin-bottom: 1.125em;
+}
+
+/* line 78, ../sass/base/_design.scss */
+h3.brand.epsilon {
+  margin: 0;
 }
 
 /* line 4, ../sass/base/_forms.scss */
@@ -441,19 +500,6 @@ button {
 * https://github.com/typeplate/typeplate.github.io
 * https://github.com/csswizardry/typecsset
 */
-/* line 13, ../sass/base/_gratis.layout.scss */
-.l-constrained {
-  width: 95%;
-  margin: 0 auto;
-  *zoom: 1;
-}
-/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
-.l-constrained:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* line 20, ../sass/base/_gratis.layout.scss */
 .foobar {
   clear: both;
@@ -466,41 +512,11 @@ button {
 }
 
 /* line 29, ../sass/base/_gratis.layout.scss */
-.l-header,
-.l-main,
-.l-footer,
-.l-branding {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  *zoom: 1;
-  margin-bottom: 20px;
-}
-/* line 12, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-.l-header:after,
-.l-main:after,
-.l-footer:after,
-.l-branding:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
-.l-header:after,
-.l-main:after,
-.l-footer:after,
-.l-branding:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 38, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
   clear: both;
 }
 
-/* line 42, ../sass/base/_gratis.layout.scss */
+/* line 33, ../sass/base/_gratis.layout.scss */
 img {
   width: auto\9;
   height: auto;
@@ -510,7 +526,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 147, ../sass/base/_gratis.layout.scss */
+/* line 136, ../sass/base/_gratis.layout.scss */
 div.quarter {
   width: 32.20339%;
   float: left;
