@@ -1,19 +1,9 @@
-/**
-* ==============================================================================
-* Typesettings
-* ==============================================================================
-* A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm,
-* and responsive ratio based headlines. Oh, and pixel borders that maintain
-* rhythm.
-*
-* Release Versions: https://github.com/ianrose/typesettings/releases
-* Github: https://github.com/ianrose/typesettings
-* License: The MIT License (MIT)
-*
-* Inspired by and used stuff from:
-* https://github.com/typeplate/typeplate.github.io
-* https://github.com/csswizardry/typecsset
-*/
+/* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 /* line 9, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
@@ -285,6 +275,7 @@ th {
 /* line 1, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/toolkit-2.5.0/stylesheets/toolkit/_kickstart.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 

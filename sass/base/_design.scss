@@ -1,12 +1,10 @@
-
-
 // Globbing from within sub-folders only works with relative paths.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/variables";
 
-// Paletes defined in _variables
+// Palettes defined in _variables
 
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
@@ -78,5 +76,3 @@
 h3.brand.epsilon {
   margin: 0;
 }
-
-
