@@ -1,3 +1,4 @@
+@import "compass";
 
 // Gray tones
 
@@ -26,3 +27,8 @@ $green_gray: #7f8c8d;
 
 $maroon: #851b1d;
 $britered: #ef262b;
+
+
+// Define the color palettes.
+$palette: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $chartreuse,
+"purple": $purple, "turquoise": $turquoise, "pomegranate": $pomegranate, "seafoam": $sea_green);

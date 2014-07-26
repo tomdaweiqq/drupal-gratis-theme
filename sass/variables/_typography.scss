@@ -1,8 +1,45 @@
+@import "susy";
+@import "compass";
+
+//Font families and default text color.
 
 $montserrat: 'Montserrat', sans-serif;
 $pt-sans: 'PT Sans', Helvetica, Arial, sans-serif;
 $maven-pro: 'Maven Pro', Helvetica, Arial, sans-serif;
 $opensans: 'Open Sans', Arial, sans-serif;
+$font_awesome: FontAwesome;
+$vera-sans: VeraMono-webfont;
+$font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
+$font-serif: Georgia, 'Times New Roman', serif;
+$font-mono: 'Lucida Console', Monaco, monospace;
+$text-color: $medium_gray;
 
-//$base-font-size: 14px;
-//$base-line-height: 20px;
+// Vertical rhythm / typography
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+$round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
+$rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
+
+$h1: 45px;
+$h2: 30px;
+$h3: 24px;
+$h4: 20px;
+$h5: 16px;
+$h6: 13px;
+
+$alpha: 45px;
+$beta: 30px;
+$gamma: 24px;
+$delta: 20px;
+$epsilon: 16px;
+$zeta: 13px;
+$eta: 18px;
+$theta: 15px;
+$iota: 14px;
+$kappa: 12px;
+
+$para: $theta; 	// Paragraph size
+$quote: $beta;	// Quote size
+

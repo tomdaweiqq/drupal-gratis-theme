@@ -121,308 +121,308 @@ html {
   line-height: 1.5em;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-greengray .l-off-canvas--left {
   background-color: #7f8c8d;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-greengray .l-header-wrapper {
   color: #7f8c8d;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-greengray a {
   color: #7f8c8d;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-greengray a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button {
   background-color: #7f8c8d;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
   background-color: #b72898;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-pink .l-header-wrapper {
   color: #b72898;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-pink a {
   color: #b72898;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-pink a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button {
   background-color: #b72898;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-pink .l-menu-wrapper {
   background-color: #b72898;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-orange .l-off-canvas--left {
   background-color: #e04604;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-orange .l-header-wrapper {
   color: #e04604;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button {
   background-color: #e04604;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
   background-color: #6a8500;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-green .l-header-wrapper {
   color: #6a8500;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-green a {
   color: #6a8500;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-green a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button {
   background-color: #6a8500;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-green .l-menu-wrapper {
   background-color: #6a8500;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-purple .l-off-canvas--left {
   background-color: #491f70;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-purple .l-header-wrapper {
   color: #491f70;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-purple a {
   color: #491f70;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-purple a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button {
   background-color: #491f70;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
   background-color: #02b4ce;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-turquoise .l-header-wrapper {
   color: #02b4ce;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-turquoise a {
   color: #02b4ce;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-turquoise a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button {
   background-color: #02b4ce;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-turquoise .l-menu-wrapper {
   background-color: #02b4ce;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-off-canvas--left {
   background-color: #c0392b;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-header-wrapper {
   color: #c0392b;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-pomegranate a {
   color: #c0392b;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-pomegranate a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button {
   background-color: #c0392b;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
 }
 
-/* line 13, ../sass/base/_design.scss */
+/* line 11, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
   background-color: #16a085;
 }
-/* line 19, ../sass/base/_design.scss */
+/* line 17, ../sass/base/_design.scss */
 .color-palette-seafoam .l-header-wrapper {
   color: #16a085;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 20, ../sass/base/_design.scss */
 .color-palette-seafoam a {
   color: #16a085;
 }
-/* line 24, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-seafoam a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 29, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button {
   background-color: #16a085;
   color: white;
 }
-/* line 34, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
-/* line 38, ../sass/base/_design.scss */
+/* line 36, ../sass/base/_design.scss */
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
 }
 
-/* line 44, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 48, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 56, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 61, ../sass/base/_design.scss */
+/* line 59, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
@@ -440,18 +440,18 @@ html {
   clear: both;
 }
 
-/* line 69, ../sass/base/_design.scss */
+/* line 67, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 73, ../sass/base/_design.scss */
+/* line 71, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
 }
 
-/* line 78, ../sass/base/_design.scss */
+/* line 76, ../sass/base/_design.scss */
 h3.brand.epsilon {
   margin: 0;
 }
@@ -627,6 +627,11 @@ html {
 * @todo get rid of some of these.
 */
 /* line 22, ../sass/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #666666;
+}
+
+/* line 26, ../sass/base/_typography.scss */
 h1 {
   font-size: 45px;
   font-size: 2.8125rem;
@@ -634,15 +639,16 @@ h1 {
   line-height: 3.75rem;
 }
 
-/* line 26, ../sass/base/_typography.scss */
+/* line 30, ../sass/base/_typography.scss */
 h2 {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 36px;
   line-height: 2.25rem;
+  margin: 0 auto 0.75rem auto;
 }
 
-/* line 30, ../sass/base/_typography.scss */
+/* line 35, ../sass/base/_typography.scss */
 h3 {
   font-size: 24px;
   font-size: 1.5rem;
@@ -650,7 +656,7 @@ h3 {
   line-height: 2.25rem;
 }
 
-/* line 34, ../sass/base/_typography.scss */
+/* line 39, ../sass/base/_typography.scss */
 h4 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -658,7 +664,7 @@ h4 {
   line-height: 1.5rem;
 }
 
-/* line 38, ../sass/base/_typography.scss */
+/* line 43, ../sass/base/_typography.scss */
 h5 {
   font-size: 16px;
   font-size: 1rem;
@@ -666,17 +672,12 @@ h5 {
   line-height: 1.5rem;
 }
 
-/* line 42, ../sass/base/_typography.scss */
+/* line 47, ../sass/base/_typography.scss */
 h6 {
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 24px;
   line-height: 1.5rem;
-}
-
-/* line 46, ../sass/base/_typography.scss */
-.preface h2 {
-  margin: 0 auto 1.5rem;
 }
 
 /* line 1, ../sass/components/_navigation.scss */
