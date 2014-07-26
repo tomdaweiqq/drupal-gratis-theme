@@ -23,12 +23,6 @@
   border-radius: $radius;
 }
 
-// Use REMs with a pixel fallback for font sizing.
-@mixin font-size($font-size){
-  font-size: $font-size;
-  font-size: ($font-size / $base-font-size)*1rem;
-}
-
 // Menu background mixin
 @mixin menu-background($color, $menu-gradient: true) {
   background-color: $color;
@@ -55,14 +49,29 @@
   }
 }
 
-@mixin gamma {
-  margin-bottom: emRhythm(4, $ms-up2);
-  @include setType(6, $ms-up2);
+// Mixins for list style types
+@mixin unordered {
+  list-style-position: outside;
+  list-style-type: disc;
 }
 
-@mixin foobar-mixin {
-  color: $turquoise;
+@mixin unordered-inside {
+  list-style-position: inside;
+  list-style-type: disc;
 }
 
+@mixin ordered {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+@mixin ordered-inside {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+@mixin nobullet {
+  list-style-type: none;
+}
 
 

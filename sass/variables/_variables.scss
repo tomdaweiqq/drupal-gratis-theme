@@ -23,38 +23,9 @@ columns: 12,
 gutters: .25,
 );
 
-// Define Susy v.2 grids.
-
-$base-font-size: 14px;
-$base-line-height: 20px;
-
-
 // Define the color palettes.
 $palette: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $chartreuse,
 "purple": $purple, "turquoise": $turquoise, "pomegranate": $pomegranate, "seafoam": $sea_green);
-
-// Fonts
-
-$font_awesome: FontAwesome;
-$vera-sans: VeraMono-webfont;
-
-// Vertical rhythm
-$base-font-size: 16px; // Sets the base font size
-$base-line-height: 24px; // Sets the base line height
-@include establish-baseline;
-
-
-// Font families and default text color.
-$font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
-$font-serif: Georgia, 'Times New Roman', serif;
-$font-mono: 'Lucida Console', Monaco, monospace;
-$text-color: $medium_gray;
-$base-vertical-unit: 6px;
-$base-line-multi: 4;
-$base-font-size: 16px;
-$ms-ratio: 1.414;
-$paragraph-indent: false;
-$paragraph-justify: true;
 
 // Menu Vars.
 
@@ -65,7 +36,44 @@ $baseMenuColor: $white;				// Proper menu items color
 $gutter: 1em;						// Base gutter
 $input: "input[type=checkbox]";  	// Checkbox hack selector
 
+//Font families and default text color.
+
+$font_awesome: FontAwesome;
+$vera-sans: VeraMono-webfont;
 
 
+$font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
+$font-serif: Georgia, 'Times New Roman', serif;
+$font-mono: 'Lucida Console', Monaco, monospace;
+$text-color: $medium_gray;
+
+// Vertical rhythm / typography
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+$round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
+$rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
+
+$h1: 45px;
+$h2: 30px;
+$h3: 24px;
+$h4: 20px;
+$h5: 16px;
+$h6: 13px;
+
+$alpha: 45px;
+$beta: 30px;
+$gamma: 24px;
+$delta: 20px;
+$epsilon: 16px;
+$zeta: 13px;
+$eta: 18px;
+$theta: 15px;
+$iota: 14px;
+$kappa: 12px;
+
+$para: $theta; 	// Paragraph size
+$quote: $beta;	// Quote size
 
 

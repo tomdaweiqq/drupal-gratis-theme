@@ -91,13 +91,13 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'site-slogan-hidden';
   }
 
-  // Add a body class is the theme logo is hidden or not.
-  if (theme_get_setting('gratis_themelogo') == TRUE) {
-    $vars['classes_array'][] = 'theme-logo';
-  }
-  else {
-    $vars['classes_array'][] = 'theme-logo-none';
-  }
+//  // Add a body class is the theme logo is hidden or not.
+//  if (theme_get_setting('gratis_themelogo') == TRUE) {
+//    $vars['classes_array'][] = 'theme-logo';
+//  }
+//  else {
+//    $vars['classes_array'][] = 'theme-logo-none';
+//  }
 
   // Extra body classes for theme variables.
   // The Color Palette.
@@ -245,10 +245,10 @@ function gratis_breadcrumb($vars) {
  */
 function gratis_preprocess_page(&$vars, $hook) {
   // If the default logo is used, then determine which color and set the path.
-  $file = theme_get_setting('theme_color_palette');
-  if (theme_get_setting('gratis_themelogo') == TRUE) {
-    $vars['logo'] = base_path() . path_to_theme() . '/images/logo-' . $file . '.png';
-  }
+//  $file = theme_get_setting('theme_color_palette');
+//  if (theme_get_setting('gratis_themelogo') == TRUE) {
+//    $vars['logo'] = base_path() . path_to_theme() . '/images/logo-' . $file . '.png';
+//  }
 
   // Check if it's a node and set a variable.
   $vars['is_node'] = FALSE;

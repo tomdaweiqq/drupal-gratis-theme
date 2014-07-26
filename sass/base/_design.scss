@@ -4,6 +4,8 @@
 @import "../variables/typography";
 @import "../variables/variables";
 
+@import "compass";
+
 // Palettes defined in _variables
 
 @each $hexvar, $designcolor in $palette {

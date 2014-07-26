@@ -26,7 +26,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      @include border-radius(3px);
     }
     li {
       position: relative;
@@ -89,7 +88,6 @@
       li {
         display: block;
         &:first-child > a {
-          //@include border-radius(3px 3px 0 0);
           @include pseudo-triangle(6px, 4);
         }
         &:last-child {
