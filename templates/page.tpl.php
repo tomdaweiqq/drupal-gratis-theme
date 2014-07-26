@@ -161,7 +161,7 @@
 <!-- preface -->
 <?php if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
 
-  <div id="preface-wrap" class="">
+  <div id="preface-wrap" class="l-preface-wrap">
     <div class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
       <!--Preface -->

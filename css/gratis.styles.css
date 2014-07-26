@@ -155,6 +155,10 @@ html {
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
 }
+/* line 40, ../sass/base/_design.scss */
+.color-palette-greengray .l-menu-wrapper ul.menu > li > a:hover {
+  background-color: #7f8c8d;
+}
 
 /* line 11, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
@@ -188,6 +192,10 @@ html {
 }
 /* line 36, ../sass/base/_design.scss */
 .color-palette-pink .l-menu-wrapper {
+  background-color: #b72898;
+}
+/* line 40, ../sass/base/_design.scss */
+.color-palette-pink .l-menu-wrapper ul.menu > li > a:hover {
   background-color: #b72898;
 }
 
@@ -225,6 +233,10 @@ html {
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
 }
+/* line 40, ../sass/base/_design.scss */
+.color-palette-orange .l-menu-wrapper ul.menu > li > a:hover {
+  background-color: #e04604;
+}
 
 /* line 11, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
@@ -258,6 +270,10 @@ html {
 }
 /* line 36, ../sass/base/_design.scss */
 .color-palette-green .l-menu-wrapper {
+  background-color: #6a8500;
+}
+/* line 40, ../sass/base/_design.scss */
+.color-palette-green .l-menu-wrapper ul.menu > li > a:hover {
   background-color: #6a8500;
 }
 
@@ -295,6 +311,10 @@ html {
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
 }
+/* line 40, ../sass/base/_design.scss */
+.color-palette-purple .l-menu-wrapper ul.menu > li > a:hover {
+  background-color: #491f70;
+}
 
 /* line 11, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
@@ -328,6 +348,10 @@ html {
 }
 /* line 36, ../sass/base/_design.scss */
 .color-palette-turquoise .l-menu-wrapper {
+  background-color: #02b4ce;
+}
+/* line 40, ../sass/base/_design.scss */
+.color-palette-turquoise .l-menu-wrapper ul.menu > li > a:hover {
   background-color: #02b4ce;
 }
 
@@ -365,6 +389,10 @@ html {
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
 }
+/* line 40, ../sass/base/_design.scss */
+.color-palette-pomegranate .l-menu-wrapper ul.menu > li > a:hover {
+  background-color: #c0392b;
+}
 
 /* line 11, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
@@ -400,33 +428,38 @@ html {
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
 }
+/* line 40, ../sass/base/_design.scss */
+.color-palette-seafoam .l-menu-wrapper ul.menu > li > a:hover {
+  background-color: #16a085;
+}
 
-/* line 42, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 44, ../sass/base/_design.scss */
+/* line 51, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 53, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 54, ../sass/base/_design.scss */
+/* line 61, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 59, ../sass/base/_design.scss */
+/* line 66, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
-.l-logo {
+.l-logo,
+.l-preface-wrap {
   *zoom: 1;
   margin-bottom: 20px;
 }
@@ -434,26 +467,22 @@ html {
 .l-main:after,
 .l-footer:after,
 .l-menu-wrapper:after,
-.l-logo:after {
+.l-logo:after,
+.l-preface-wrap:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 67, ../sass/base/_design.scss */
+/* line 75, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 71, ../sass/base/_design.scss */
+/* line 79, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
-}
-
-/* line 76, ../sass/base/_design.scss */
-h3.brand.epsilon {
-  margin: 0;
 }
 
 /* line 4, ../sass/base/_forms.scss */
@@ -533,6 +562,12 @@ ul li li {
 img,
 media {
   max-width: 100%;
+}
+
+/* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
 }
 /* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
@@ -632,9 +667,10 @@ h1 {
   font-size: 2.8125rem;
   line-height: 60px;
   line-height: 3.75rem;
+  margin: 0 auto 0.75rem auto;
 }
 
-/* line 30, ../sass/base/_typography.scss */
+/* line 31, ../sass/base/_typography.scss */
 h2 {
   font-size: 30px;
   font-size: 1.875rem;
@@ -643,15 +679,16 @@ h2 {
   margin: 0 auto 0.75rem auto;
 }
 
-/* line 35, ../sass/base/_typography.scss */
+/* line 36, ../sass/base/_typography.scss */
 h3 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 36px;
   line-height: 2.25rem;
+  margin: 0 auto 0.75rem auto;
 }
 
-/* line 39, ../sass/base/_typography.scss */
+/* line 41, ../sass/base/_typography.scss */
 h4 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -659,7 +696,7 @@ h4 {
   line-height: 1.5rem;
 }
 
-/* line 43, ../sass/base/_typography.scss */
+/* line 45, ../sass/base/_typography.scss */
 h5 {
   font-size: 16px;
   font-size: 1rem;
@@ -667,7 +704,7 @@ h5 {
   line-height: 1.5rem;
 }
 
-/* line 47, ../sass/base/_typography.scss */
+/* line 49, ../sass/base/_typography.scss */
 h6 {
   font-size: 13px;
   font-size: 0.8125rem;
@@ -858,66 +895,66 @@ body ul.menu li.leaf li {
     margin-right: 3.44828%;
   }
 
-  /* line 6, ../sass/base/_menu.scss */
+  /* line 11, ../sass/base/_menu.scss */
   body {
     -webkit-animation: bugfix infinite 1s;
   }
 
   @-webkit-keyframes bugfix {
-    /* line 11, ../sass/base/_menu.scss */
+    /* line 16, ../sass/base/_menu.scss */
     from {
       padding: 0;
     }
 
-    /* line 14, ../sass/base/_menu.scss */
+    /* line 19, ../sass/base/_menu.scss */
     to {
       padding: 0;
     }
   }
-  /* line 20, ../sass/base/_menu.scss */
+  /* line 25, ../sass/base/_menu.scss */
   .main-menu-wrapper {
     font: bold 13px "Open Sans", Arial, sans-serif;
   }
-  /* line 22, ../sass/base/_menu.scss */
+  /* line 27, ../sass/base/_menu.scss */
   .main-menu-wrapper * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 25, ../sass/base/_menu.scss */
+  /* line 30, ../sass/base/_menu.scss */
   .main-menu-wrapper ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  /* line 30, ../sass/base/_menu.scss */
+  /* line 35, ../sass/base/_menu.scss */
   .main-menu-wrapper li {
     position: relative;
   }
-  /* line 33, ../sass/base/_menu.scss */
+  /* line 38, ../sass/base/_menu.scss */
   .main-menu-wrapper li:hover > ul {
     opacity: 1;
     visibility: visible;
     margin: 0;
   }
-  /* line 38, ../sass/base/_menu.scss */
+  /* line 43, ../sass/base/_menu.scss */
   .main-menu-wrapper li:hover > a {
     color: white;
   }
-  /* line 43, ../sass/base/_menu.scss */
+  /* line 48, ../sass/base/_menu.scss */
   .main-menu-wrapper input[type=checkbox] {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  /* line 48, ../sass/base/_menu.scss */
+  /* line 53, ../sass/base/_menu.scss */
   .main-menu-wrapper label {
     display: none;
     cursor: pointer;
     user-select: none;
   }
 
-  /* line 57, ../sass/base/_menu.scss */
+  /* line 62, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul {
     *zoom: 1;
   }
@@ -927,23 +964,23 @@ body ul.menu li.leaf li {
     display: table;
     clear: both;
   }
-  /* line 61, ../sass/base/_menu.scss */
+  /* line 66, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul > li {
     float: left;
     border-right: 1px solid #2d2d2d;
   }
-  /* line 64, ../sass/base/_menu.scss */
+  /* line 69, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul > li > a {
     float: left;
     padding: 1em 3em;
     text-transform: uppercase;
   }
-  /* line 70, ../sass/base/_menu.scss */
+  /* line 75, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul a {
     color: white;
     text-decoration: none;
   }
-  /* line 76, ../sass/base/_menu.scss */
+  /* line 81, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul {
     position: absolute;
     top: 100%;
@@ -964,7 +1001,7 @@ body ul.menu li.leaf li {
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
   }
-  /* line 88, ../sass/base/_menu.scss */
+  /* line 93, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul li {
     display: block;
   }
@@ -977,20 +1014,20 @@ body ul.menu li.leaf li {
     border: 6px solid transparent;
     border-bottom-color: inherit;
   }
-  /* line 93, ../sass/base/_menu.scss */
+  /* line 98, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul li:last-child {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  /* line 99, ../sass/base/_menu.scss */
+  /* line 104, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul a {
     padding: 1em;
     width: 100%;
     display: block;
     border-color: #464646;
   }
-  /* line 104, ../sass/base/_menu.scss */
+  /* line 109, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul a:hover {
     background-color: #851b1d;
     border-color: #851b1d;

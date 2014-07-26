@@ -1,4 +1,4 @@
-// Globbing from within sub-folders only works with relative paths.
+
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
@@ -35,6 +35,13 @@
     }
     .l-menu-wrapper {
       background-color: $designcolor;
+      ul.menu > li {
+        > a {
+          &:hover {
+            background-color: $designcolor;
+          }
+        }
+      }
     }
   }
 }
@@ -59,7 +66,8 @@
 .l-main,
 .l-footer,
 .l-menu-wrapper,
-.l-logo {
+.l-logo,
+.l-preface-wrap {
   @include pie-clearfix;
   margin-bottom: $vert-spacing-unit;
 }
@@ -71,8 +79,4 @@
 .l-branding,
 .l-logo {
   text-align: center;
-}
-
-h3.brand.epsilon {
-  margin: 0;
 }
