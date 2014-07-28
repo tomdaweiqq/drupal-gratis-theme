@@ -1,12 +1,15 @@
 
-// General list reset.
+// General list reset
 
-ul {
-  /* mixin */
+body ul,
+body ul.item-list {
   @include padding-reset;
-  /* compass */
   @include reset-list-style;
   li {
     @include no-bullets;
+    @include padding-reset;
+    @include reset-list-style;
   }
 }
+
+

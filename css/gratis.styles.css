@@ -121,340 +121,308 @@ html {
   line-height: 1.5em;
 }
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-greengray .l-off-canvas--left {
   background-color: #7f8c8d;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-greengray .l-header-wrapper {
   color: #7f8c8d;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-greengray a {
   color: #7f8c8d;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-greengray a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button {
   background-color: #7f8c8d;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-greengray .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #7f8c8d;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
   background-color: #b72898;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-pink .l-header-wrapper {
   color: #b72898;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-pink a {
   color: #b72898;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-pink a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button {
   background-color: #b72898;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-pink .l-menu-wrapper {
   background-color: #b72898;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-pink .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #b72898;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-orange .l-off-canvas--left {
   background-color: #e04604;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-orange .l-header-wrapper {
   color: #e04604;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button {
   background-color: #e04604;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-orange .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #e04604;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
   background-color: #6a8500;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-green .l-header-wrapper {
   color: #6a8500;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-green a {
   color: #6a8500;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-green a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button {
   background-color: #6a8500;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-green .l-menu-wrapper {
   background-color: #6a8500;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-green .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #6a8500;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-purple .l-off-canvas--left {
   background-color: #491f70;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-purple .l-header-wrapper {
   color: #491f70;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-purple a {
   color: #491f70;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-purple a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button {
   background-color: #491f70;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-purple .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #491f70;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
   background-color: #02b4ce;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-turquoise .l-header-wrapper {
   color: #02b4ce;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-turquoise a {
   color: #02b4ce;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-turquoise a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button {
   background-color: #02b4ce;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-turquoise .l-menu-wrapper {
   background-color: #02b4ce;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-turquoise .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #02b4ce;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-off-canvas--left {
   background-color: #c0392b;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-header-wrapper {
   color: #c0392b;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-pomegranate a {
   color: #c0392b;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-pomegranate a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button {
   background-color: #c0392b;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-pomegranate .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #c0392b;
-}
 
-/* line 11, ../sass/base/_design.scss */
+/* line 16, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
   background-color: #16a085;
 }
-/* line 17, ../sass/base/_design.scss */
+/* line 22, ../sass/base/_design.scss */
 .color-palette-seafoam .l-header-wrapper {
   color: #16a085;
 }
-/* line 20, ../sass/base/_design.scss */
+/* line 25, ../sass/base/_design.scss */
 .color-palette-seafoam a {
   color: #16a085;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-seafoam a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button {
   background-color: #16a085;
   color: white;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
-/* line 36, ../sass/base/_design.scss */
+/* line 41, ../sass/base/_design.scss */
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
 }
-/* line 40, ../sass/base/_design.scss */
-.color-palette-seafoam .l-menu-wrapper ul.menu > li > a:hover {
-  background-color: #16a085;
-}
 
-/* line 49, ../sass/base/_design.scss */
+/* line 57, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 51, ../sass/base/_design.scss */
+/* line 59, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 53, ../sass/base/_design.scss */
+/* line 61, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 61, ../sass/base/_design.scss */
+/* line 69, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 66, ../sass/base/_design.scss */
+/* line 74, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
@@ -474,12 +442,12 @@ html {
   clear: both;
 }
 
-/* line 75, ../sass/base/_design.scss */
+/* line 83, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 79, ../sass/base/_design.scss */
+/* line 87, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
@@ -537,22 +505,29 @@ a {
 }
 
 /* line 4, ../sass/base/_lists.scss */
-ul {
-  /* mixin */
+body ul,
+body ul.item-list {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
-  /* compass */
   list-style: none;
 }
-/* line 9, ../sass/base/_lists.scss */
-ul li {
+/* line 8, ../sass/base/_lists.scss */
+body ul li,
+body ul.item-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
   list-style: none;
 }
 /* line 11, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/lists/_bullets.scss */
-ul li li {
+body ul li li,
+body ul.item-list li li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -712,24 +687,10 @@ h6 {
   line-height: 1.5rem;
 }
 
-/* line 1, ../sass/components/_navigation.scss */
-body ul.menu {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  list-style: none;
-}
-/* line 4, ../sass/components/_navigation.scss */
-body ul.menu li.leaf {
-  list-style: none;
-}
-/* line 11, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/lists/_bullets.scss */
-body ul.menu li.leaf li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
+/* line 54, ../sass/base/_typography.scss */
+h3.brand {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* line 1, ../sass/components/_search.scss */
@@ -956,6 +917,8 @@ body ul.menu li.leaf li {
 
   /* line 62, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul {
+    display: table;
+    margin: 0 auto;
     *zoom: 1;
   }
   /* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -964,23 +927,27 @@ body ul.menu li.leaf li {
     display: table;
     clear: both;
   }
-  /* line 66, ../sass/base/_menu.scss */
+  /* line 68, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul > li {
     float: left;
     border-right: 1px solid #2d2d2d;
   }
-  /* line 69, ../sass/base/_menu.scss */
+  /* line 71, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul > li > a {
     float: left;
-    padding: 1em 3em;
+    padding: 1em 2em;
     text-transform: uppercase;
   }
   /* line 75, ../sass/base/_menu.scss */
+  .main-menu-wrapper > ul > li > a:hover {
+    background-color: #333333;
+  }
+  /* line 80, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul a {
     color: white;
     text-decoration: none;
   }
-  /* line 81, ../sass/base/_menu.scss */
+  /* line 86, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul {
     position: absolute;
     top: 100%;
@@ -989,19 +956,17 @@ body ul.menu li.leaf li {
     opacity: 0;
     visibility: hidden;
     margin: 2em 0 0 0;
-    background-color: #464646;
-    background-image: none;
-    -moz-transition-property: "margin, opacity";
-    -webkit-transition-property: "margin, opacity";
-    transition-property: "margin, opacity";
-    -moz-transition-duration: ".15s";
-    -webkit-transition-duration: ".15s";
-    transition-duration: ".15s";
+    -moz-transition-property: margin, opacity;
+    -webkit-transition-property: margin, opacity;
+    transition-property: margin, opacity;
+    -moz-transition-duration: 0.15s;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
     -moz-transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
   }
-  /* line 93, ../sass/base/_menu.scss */
+  /* line 98, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul li {
     display: block;
   }
@@ -1014,22 +979,18 @@ body ul.menu li.leaf li {
     border: 6px solid transparent;
     border-bottom-color: inherit;
   }
-  /* line 98, ../sass/base/_menu.scss */
-  .main-menu-wrapper > ul ul li:last-child {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  /* line 104, ../sass/base/_menu.scss */
+  /* line 109, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul a {
+    white-space: nowrap;
     padding: 1em;
     width: 100%;
     display: block;
+    background-color: #333333;
     border-color: #464646;
   }
-  /* line 109, ../sass/base/_menu.scss */
+  /* line 116, ../sass/base/_menu.scss */
   .main-menu-wrapper > ul ul a:hover {
-    background-color: #851b1d;
+    background-color: #666666;
     border-color: #851b1d;
   }
 
@@ -1080,7 +1041,7 @@ body ul.menu li.leaf li {
     top: 0;
     bottom: 0;
     left: -80%;
-    padding-top: 24px;
+    padding: 60px 0 0 0;
     transition: left 0.2s ease-in;
     cursor: pointer;
   }

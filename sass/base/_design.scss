@@ -8,6 +8,11 @@
 
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
+  .block {
+    h2 {
+//      border: 1px dashed $designcolor;
+    }
+  }
     .l-off-canvas--left {
       background-color: $designcolor;
 //      a {
@@ -38,9 +43,12 @@
       ul.menu > li {
         > a {
           &:hover {
-            background-color: $designcolor;
+//            background-color: $medium_gray2;
           }
         }
+      li {
+
+      }
       }
     }
   }

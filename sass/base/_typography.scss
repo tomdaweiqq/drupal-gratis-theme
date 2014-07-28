@@ -49,3 +49,9 @@ h5 {
 h6 {
   @include adjust-font-size-to($h6);
 }
+
+
+h3.brand {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

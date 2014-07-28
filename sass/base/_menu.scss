@@ -60,6 +60,8 @@
 
   // First level -> main menu items
   .main-menu-wrapper > ul {
+    display: table;
+    margin: 0 auto;
     //border: 1px solid darken($baseMenuBackground, 5%);
     //@include menu-background($baseMenuBackground);
    @include pie-clearfix;
@@ -68,8 +70,11 @@
       border-right: 1px solid lighten($baseMenuBackground, 5%);
       > a {
         float: left;
-        padding: $gutter 3 * $gutter;
+        padding: $gutter 2 * $gutter;
         text-transform: uppercase;
+        &:hover {
+          background-color: $charcol_gray;
+        }
       }
     }
     a {
@@ -77,7 +82,7 @@
       text-decoration: none;
     }
 
-    // Second level.
+    // Second level. ul > ul
     ul {
       position: absolute;
       top: 100%;
@@ -86,9 +91,9 @@
       opacity: 0;
       visibility: hidden;
       margin: 2 * $gutter 0 0 0;
-      @include menu-background(lighten($baseMenuBackground, 15%), false);
-      @include transition-property("margin, opacity");
-      @include transition-duration(".15s");
+  //    @include menu-background(lighten($baseMenuBackground, 15%), false);
+      @include transition-property(margin, opacity);
+      @include transition-duration(.15s);
       @include transition-timing-function(ease-in-out);
       li {
         display: block;
@@ -96,18 +101,21 @@
           @include pseudo-triangle(6px, 4);
         }
         &:last-child {
-          @include box-shadow(none);
+         // @include box-shadow(none);
           > a {
           }
         }
       }
       a {
+        white-space: nowrap;
         padding: $gutter;
         width: $subMenuItemWidth;
         display: block;
+        background-color: $charcol_gray;
         border-color: lighten($baseMenuBackground, 15%);
         &:hover {
-          background-color: $secondaryMenuBackground;
+
+          background-color: lighten($charcol_gray, 20%);
           border-color: $secondaryMenuBackground;
         }
       }

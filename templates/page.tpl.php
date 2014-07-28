@@ -114,7 +114,7 @@
           <?php endif; ?>
 
           <?php if ($site_slogan) : ?>
-            <h3 class="brand epsilon"><?php print $site_slogan; ?></h3>
+            <h3 class="brand"><?php print $site_slogan; ?></h3>
           <?php endif; ?>
 
       <?php endif; ?>
@@ -127,7 +127,7 @@
 
 <div id="menu-wrapper" class="l-menu-wrapper" role="navigation" >
   <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
-      <div id="main-menu" class="nav s-grid">
+<!--      <div id="main-menu" class="nav s-grid">-->
 
         <?php if ($main_menu): ?>
         <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
@@ -146,7 +146,7 @@
           <?php print render($page['thirdparty_menu']); ?>
         <?php endif; ?>
 
-      </div>
+<!--      </div>-->
   </div>
 </div>
 

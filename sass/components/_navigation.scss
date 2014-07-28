@@ -1,7 +1,0 @@
-body ul.menu {
-  @include padding-reset;
-  @include reset-list-style;
-  li.leaf {
-    @include no-bullets;
-  }
-}
