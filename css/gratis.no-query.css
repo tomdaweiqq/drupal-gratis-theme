@@ -23,6 +23,12 @@ html {
   line-height: 1.5em;
 }
 
+/* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
 /* set variables for global use */
 /* line 1, ../sass/base/_comments.scss */
 .comment {
@@ -121,308 +127,340 @@ html {
   line-height: 1.5em;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-greengray .vocabulary-links:before {
+  color: #7f8c8d;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-greengray .l-off-canvas--left {
   background-color: #7f8c8d;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-greengray .l-header-wrapper {
   color: #7f8c8d;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-greengray a {
   color: #7f8c8d;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-greengray a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button {
   background-color: #7f8c8d;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-pink .vocabulary-links:before {
+  color: #b72898;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
   background-color: #b72898;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-pink .l-header-wrapper {
   color: #b72898;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-pink a {
   color: #b72898;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-pink a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button {
   background-color: #b72898;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-pink .l-menu-wrapper {
   background-color: #b72898;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-orange .vocabulary-links:before {
+  color: #e04604;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-orange .l-off-canvas--left {
   background-color: #e04604;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-orange .l-header-wrapper {
   color: #e04604;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button {
   background-color: #e04604;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-green .vocabulary-links:before {
+  color: #6a8500;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
   background-color: #6a8500;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-green .l-header-wrapper {
   color: #6a8500;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-green a {
   color: #6a8500;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-green a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button {
   background-color: #6a8500;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-green .l-menu-wrapper {
   background-color: #6a8500;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-purple .vocabulary-links:before {
+  color: #491f70;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-purple .l-off-canvas--left {
   background-color: #491f70;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-purple .l-header-wrapper {
   color: #491f70;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-purple a {
   color: #491f70;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-purple a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button {
   background-color: #491f70;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-turquoise .vocabulary-links:before {
+  color: #02b4ce;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
   background-color: #02b4ce;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-turquoise .l-header-wrapper {
   color: #02b4ce;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-turquoise a {
   color: #02b4ce;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-turquoise a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button {
   background-color: #02b4ce;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-turquoise .l-menu-wrapper {
   background-color: #02b4ce;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-pomegranate .vocabulary-links:before {
+  color: #c0392b;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-off-canvas--left {
   background-color: #c0392b;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-header-wrapper {
   color: #c0392b;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-pomegranate a {
   color: #c0392b;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-pomegranate a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button {
   background-color: #c0392b;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
 }
 
-/* line 16, ../sass/base/_design.scss */
+/* line 12, ../sass/base/_design.scss */
+.color-palette-seafoam .vocabulary-links:before {
+  color: #16a085;
+}
+/* line 21, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
   background-color: #16a085;
 }
-/* line 22, ../sass/base/_design.scss */
+/* line 27, ../sass/base/_design.scss */
 .color-palette-seafoam .l-header-wrapper {
   color: #16a085;
 }
-/* line 25, ../sass/base/_design.scss */
+/* line 30, ../sass/base/_design.scss */
 .color-palette-seafoam a {
   color: #16a085;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 32, ../sass/base/_design.scss */
 .color-palette-seafoam a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 37, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button {
   background-color: #16a085;
   color: white;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
-/* line 41, ../sass/base/_design.scss */
+/* line 46, ../sass/base/_design.scss */
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
 }
 
-/* line 57, ../sass/base/_design.scss */
+/* line 62, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 59, ../sass/base/_design.scss */
+/* line 64, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 61, ../sass/base/_design.scss */
+/* line 66, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 69, ../sass/base/_design.scss */
+/* line 74, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 74, ../sass/base/_design.scss */
+/* line 79, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
@@ -442,12 +480,12 @@ html {
   clear: both;
 }
 
-/* line 83, ../sass/base/_design.scss */
+/* line 88, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 87, ../sass/base/_design.scss */
+/* line 92, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
@@ -507,9 +545,15 @@ a {
   text-decoration: none;
 }
 
-/* line 4, ../sass/base/_lists.scss */
+/* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 11, ../sass/base/_lists.scss */
 body ul,
-body ul.item-list {
+body .item-list ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -517,29 +561,79 @@ body ul.item-list {
   font-size: 100%;
   list-style: none;
 }
-/* line 8, ../sass/base/_lists.scss */
+/* line 15, ../sass/base/_lists.scss */
 body ul li,
-body ul.item-list li {
+body .item-list ul li {
   list-style: none;
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
-  list-style: none;
 }
 /* line 11, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/lists/_bullets.scss */
 body ul li li,
-body ul.item-list li li {
+body .item-list ul li li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
+}
+
+/* line 23, ../sass/base/_lists.scss */
+body .node ol,
+body .node ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+/* line 38, ../sass/base/_lists.scss */
+.field-label-inline .field-label {
+  display: inline;
+  float: none;
+}
+
+/* line 45, ../sass/base/_lists.scss */
+.vocabulary {
+  margin: 0 0 10px 0;
+  display: block;
+}
+/* line 48, ../sass/base/_lists.scss */
+.vocabulary .field-label {
+  margin: 0 1% 0 0;
+  font-size: 20px;
+}
+
+/* line 54, ../sass/base/_lists.scss */
+ul.links.inline,
+.vocabulary ul {
+  display: inline;
+}
+/* line 57, ../sass/base/_lists.scss */
+ul.links.inline li,
+.vocabulary ul li {
+  display: inline-block;
+  margin: 0 2% 0 0;
+}
+/* line 62, ../sass/base/_lists.scss */
+ul.links.inline li.vocabulary-links:before,
+.vocabulary ul li.vocabulary-links:before {
+  content: '\f02b';
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
 }
 
 /* line 1, ../sass/base/_media.scss */
 img,
 media {
   max-width: 100%;
+}
+
+/* line 6, ../sass/base/_media.scss */
+figure {
+  margin: 0;
 }
 
 /* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */

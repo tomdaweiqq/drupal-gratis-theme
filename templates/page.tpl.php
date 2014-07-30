@@ -125,9 +125,8 @@
 
 </div> <!-- // l-header -->
 
-<div id="menu-wrapper" class="l-menu-wrapper" role="navigation" >
+<div id="menu-wrapper" class="l-menu-wrapper main-menu" role="navigation" >
   <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
-<!--      <div id="main-menu" class="nav s-grid">-->
 
         <?php if ($main_menu): ?>
         <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
@@ -146,7 +145,6 @@
           <?php print render($page['thirdparty_menu']); ?>
         <?php endif; ?>
 
-<!--      </div>-->
   </div>
 </div>
 

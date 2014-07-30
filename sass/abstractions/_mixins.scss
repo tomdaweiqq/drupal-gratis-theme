@@ -1,5 +1,10 @@
 @import "compass";
 
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/misc";
+
 /* set variables for global use */
 
 @mixin padding-reset {
@@ -23,6 +28,7 @@
   border-radius: $radius;
 }
 
+
 // Menu background mixin
 @mixin menu-background($color, $menu-gradient: true) {
   background-color: $color;
@@ -45,7 +51,7 @@
     left: $shift-left * $gutter;
     top: -$size * 2;
     border: $size solid transparent;
-    border-bottom-color: inherit;
+    border-bottom-color: $medium_gray2;
   }
 }
 

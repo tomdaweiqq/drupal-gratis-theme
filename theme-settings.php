@@ -27,13 +27,6 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description' => t("Check this option to show page breadcrumbs. Uncheck to hide."),
   );
 
-  $form['gratis_settings']['general_settings']['gratis_themelogo'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use theme Logo?'),
-    '#default_value' => theme_get_setting('gratis_themelogo', 'gratis'),
-    '#description' => t("Check for yes, uncheck to upload your own logo!"),
-  );
-
   $form['gratis_settings']['general_settings']['theme_color_config']['theme_color_palette'] = array(
     '#type' => 'select',
     '#title' => t('Choose a color palette'),

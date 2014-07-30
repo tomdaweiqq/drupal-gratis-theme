@@ -8,7 +8,12 @@
 
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
-  .block {
+    .vocabulary-links {
+      &:before {
+        color: $designcolor;
+      }
+    }
+    .block {
     h2 {
 //      border: 1px dashed $designcolor;
     }

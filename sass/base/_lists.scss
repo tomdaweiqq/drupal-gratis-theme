@@ -1,15 +1,73 @@
+// import variables
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/misc";
 
-// General list reset
+@import "compass";
+
+// Compass list reset (for menus, asides, blocks etc..)
 
 body ul,
-body ul.item-list {
+body .item-list ul {
   @include padding-reset;
   @include reset-list-style;
   li {
     @include no-bullets;
     @include padding-reset;
-    @include reset-list-style;
   }
 }
 
+// Override list style for body
 
+body .node ol,
+body .node ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  > li {
+
+  }
+  > ol, > ul {
+
+  }
+}
+
+// Fields
+
+.field-label-inline .field-label {
+  display: inline;
+  float: none;
+}
+
+// Taxonomy
+
+.vocabulary {
+  margin: 0 0 10px 0;
+  display: block;
+  .field-label {
+    margin: 0 1% 0 0;
+    font-size: $h4;
+  }
+}
+
+ul.links.inline,
+.vocabulary ul {
+  display: inline;
+  li {
+    display: inline-block;
+    margin: 0 2% 0 0;
+
+    &.vocabulary-links {
+      &:before {
+        content: '\f02b';
+        width: 30px;
+        height: 30px;
+        font-family: FontAwesome;
+        margin-right: 4px;
+      }
+    }
+
+  }
+
+}
