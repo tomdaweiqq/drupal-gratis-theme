@@ -28,6 +28,13 @@
   border-radius: $radius;
 }
 
+@mixin fontawesome {
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: $medium_gray2;
+}
 
 // Menu background mixin
 @mixin menu-background($color, $menu-gradient: true) {

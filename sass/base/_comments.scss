@@ -34,11 +34,10 @@
     border-color: $white;
     position: absolute;
     margin-top: 10px;
-    margin-left: -47px;
+    margin-left: -45px;
     width: 20px;
     height: 40px;
     border-right: 1px solid $white;
-    border-left: 1px solid $white;
     background: url('../images/comment-arrow.gif') no-repeat 0 center transparent;
   }
   .comment-text {
@@ -74,3 +73,5 @@
     border-left: 1px solid $light_gray2;
   }
 }
+
+// @todo media queries

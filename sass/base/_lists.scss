@@ -8,8 +8,8 @@
 
 // Compass list reset (for menus, asides, blocks etc..)
 
-body ul,
-body .item-list ul {
+ul,
+.item-list ul {
   @include padding-reset;
   @include reset-list-style;
   li {
@@ -19,9 +19,9 @@ body .item-list ul {
 }
 
 // Override list style for body
-
-body .node ol,
-body .node ul {
+// @todo below - come up with reasonable defaults for lists in a node.
+.node ol,
+.node ul {
   margin: 0;
   padding: 0;
   list-style-position: inside;
@@ -51,23 +51,37 @@ body .node ul {
   }
 }
 
-ul.links.inline,
-.vocabulary ul {
+// Node links and tags.
+
+ul.vocabulary-list,
+ul.links.inline {
   display: inline;
   li {
     display: inline-block;
     margin: 0 2% 0 0;
-
     &.vocabulary-links {
       &:before {
-        content: '\f02b';
-        width: 30px;
-        height: 30px;
-        font-family: FontAwesome;
-        margin-right: 4px;
+        content: "#{$fatag}";
+        @include fontawesome;
       }
     }
-
+    &.node-readmore {
+      &:before {
+        content: "#{$fabook}";
+        @include fontawesome;
+      }
+    }
+    &.comment-comments {
+      &:before {
+        content: "#{$facomment}";
+        @include fontawesome;
+      }
+    }
+    &.comment-add{
+      &:before {
+        content: "#{$faaddcomment}";
+        @include fontawesome;
+      }
+    }
   }
-
 }

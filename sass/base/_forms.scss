@@ -1,5 +1,11 @@
 // Form elements.
+// import variables
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/misc";
 
+@import "compass";
 
 input[type="submit"],
 input[type="reset"],
@@ -8,9 +14,85 @@ button {
 }
 
 
-// Tablet widths
-@include breakpoint($tab) {
-  .foobarz {
-    color: $black;
+//@extend-elements
+
+%extend_1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.form-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  .description {
+    font-size: 0.85em;
   }
+  input.error {
+    border: 2px solid $britered;
+  }
+  textarea.error {
+    border: 2px solid $britered;
+  }
+  select.error {
+    border: 2px solid $britered;
+  }
+}
+
+.form-actions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+tr {
+  &.odd .form-item {
+    @extend %extend_1;
+  }
+  &.even .form-item {
+    @extend %extend_1;
+  }
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  &.option {
+    display: inline;
+    font-weight: normal;
+  }
+}
+
+input {
+  &.form-checkbox {
+    vertical-align: middle;
+  }
+  &.form-radio {
+    vertical-align: middle;
+  }
+}
+
+.marker {
+  color: $britered;
+}
+
+.form-required {
+  color: $britered;
+}
+
+.form-checkboxes .form-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+.form-radios .form-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+.form-type-radio .description {
+  margin-left: 2.4em;
+}
+
+.form-type-checkbox .description {
+  margin-left: 2.4em;
 }

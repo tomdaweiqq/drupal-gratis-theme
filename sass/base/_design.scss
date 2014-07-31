@@ -8,6 +8,18 @@
 
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
+    .item-list-pager {
+      li {
+        a {
+          &:hover {
+            background-color: $designcolor;
+          }
+        }
+        &.pager-current {
+          background-color: $designcolor;
+        }
+      }
+    }
     .vocabulary-links {
       &:before {
         color: $designcolor;
@@ -80,7 +92,8 @@
 .l-footer,
 .l-menu-wrapper,
 .l-logo,
-.l-preface-wrap {
+.l-preface-wrap,
+article {
   @include pie-clearfix;
   margin-bottom: $vert-spacing-unit;
 }

@@ -73,14 +73,13 @@ html {
   border-color: white;
   position: absolute;
   margin-top: 10px;
-  margin-left: -47px;
+  margin-left: -45px;
   width: 20px;
   height: 40px;
   border-right: 1px solid white;
-  border-left: 1px solid white;
   background: url("../images/comment-arrow.gif") no-repeat 0 center transparent;
 }
-/* line 44, ../sass/base/_comments.scss */
+/* line 43, ../sass/base/_comments.scss */
 .comment .comment-text {
   position: relative;
   display: table-cell;
@@ -88,34 +87,34 @@ html {
   border: 1px solid #eaeaea;
   vertical-align: top;
 }
-/* line 51, ../sass/base/_comments.scss */
+/* line 50, ../sass/base/_comments.scss */
 .comment .indented {
   margin-left: 40px;
 }
-/* line 54, ../sass/base/_comments.scss */
+/* line 53, ../sass/base/_comments.scss */
 .comment h2.title {
   margin-bottom: 1em;
 }
-/* line 57, ../sass/base/_comments.scss */
+/* line 56, ../sass/base/_comments.scss */
 .comment div.user-picture img {
   margin-left: 0;
 }
-/* line 60, ../sass/base/_comments.scss */
+/* line 59, ../sass/base/_comments.scss */
 .comment ul.links {
   margin-bottom: 0;
   padding: 0;
 }
-/* line 63, ../sass/base/_comments.scss */
+/* line 62, ../sass/base/_comments.scss */
 .comment ul.links li {
   padding: 0 0.5em 0 0;
 }
 
-/* line 69, ../sass/base/_comments.scss */
+/* line 68, ../sass/base/_comments.scss */
 .comment-unpublished {
   margin-right: 5px;
   padding: 5px 2px 5px 5px;
 }
-/* line 72, ../sass/base/_comments.scss */
+/* line 71, ../sass/base/_comments.scss */
 .comment-unpublished .comment-text .comment-arrow {
   border-right: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
@@ -127,345 +126,410 @@ html {
   line-height: 1.5em;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-greengray .item-list-pager li a:hover {
+  background-color: #7f8c8d;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-greengray .item-list-pager li.pager-current {
+  background-color: #7f8c8d;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-greengray .vocabulary-links:before {
   color: #7f8c8d;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-greengray .l-off-canvas--left {
   background-color: #7f8c8d;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-greengray .l-header-wrapper {
   color: #7f8c8d;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-greengray a {
   color: #7f8c8d;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-greengray a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button {
   background-color: #7f8c8d;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-pink .item-list-pager li a:hover {
+  background-color: #b72898;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-pink .item-list-pager li.pager-current {
+  background-color: #b72898;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-pink .vocabulary-links:before {
   color: #b72898;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-pink .l-off-canvas--left {
   background-color: #b72898;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-pink .l-header-wrapper {
   color: #b72898;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-pink a {
   color: #b72898;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-pink a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button {
   background-color: #b72898;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-pink .l-menu-wrapper {
   background-color: #b72898;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-orange .item-list-pager li a:hover {
+  background-color: #e04604;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-orange .item-list-pager li.pager-current {
+  background-color: #e04604;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-orange .vocabulary-links:before {
   color: #e04604;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-orange .l-off-canvas--left {
   background-color: #e04604;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-orange .l-header-wrapper {
   color: #e04604;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button {
   background-color: #e04604;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-green .item-list-pager li a:hover {
+  background-color: #6a8500;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-green .item-list-pager li.pager-current {
+  background-color: #6a8500;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-green .vocabulary-links:before {
   color: #6a8500;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-green .l-off-canvas--left {
   background-color: #6a8500;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-green .l-header-wrapper {
   color: #6a8500;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-green a {
   color: #6a8500;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-green a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button {
   background-color: #6a8500;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-green .l-menu-wrapper {
   background-color: #6a8500;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-purple .item-list-pager li a:hover {
+  background-color: #491f70;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-purple .item-list-pager li.pager-current {
+  background-color: #491f70;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-purple .vocabulary-links:before {
   color: #491f70;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-purple .l-off-canvas--left {
   background-color: #491f70;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-purple .l-header-wrapper {
   color: #491f70;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-purple a {
   color: #491f70;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-purple a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button {
   background-color: #491f70;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-turquoise .item-list-pager li a:hover {
+  background-color: #02b4ce;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-turquoise .item-list-pager li.pager-current {
+  background-color: #02b4ce;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-turquoise .vocabulary-links:before {
   color: #02b4ce;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
   background-color: #02b4ce;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-turquoise .l-header-wrapper {
   color: #02b4ce;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-turquoise a {
   color: #02b4ce;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-turquoise a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button {
   background-color: #02b4ce;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-turquoise .l-menu-wrapper {
   background-color: #02b4ce;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-pomegranate .item-list-pager li a:hover {
+  background-color: #c0392b;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-pomegranate .item-list-pager li.pager-current {
+  background-color: #c0392b;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-pomegranate .vocabulary-links:before {
   color: #c0392b;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-off-canvas--left {
   background-color: #c0392b;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-header-wrapper {
   color: #c0392b;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-pomegranate a {
   color: #c0392b;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-pomegranate a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button {
   background-color: #c0392b;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
 }
 
-/* line 12, ../sass/base/_design.scss */
+/* line 14, ../sass/base/_design.scss */
+.color-palette-seafoam .item-list-pager li a:hover {
+  background-color: #16a085;
+}
+/* line 18, ../sass/base/_design.scss */
+.color-palette-seafoam .item-list-pager li.pager-current {
+  background-color: #16a085;
+}
+/* line 24, ../sass/base/_design.scss */
 .color-palette-seafoam .vocabulary-links:before {
   color: #16a085;
 }
-/* line 21, ../sass/base/_design.scss */
+/* line 33, ../sass/base/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
   background-color: #16a085;
 }
-/* line 27, ../sass/base/_design.scss */
+/* line 39, ../sass/base/_design.scss */
 .color-palette-seafoam .l-header-wrapper {
   color: #16a085;
 }
-/* line 30, ../sass/base/_design.scss */
+/* line 42, ../sass/base/_design.scss */
 .color-palette-seafoam a {
   color: #16a085;
 }
-/* line 32, ../sass/base/_design.scss */
+/* line 44, ../sass/base/_design.scss */
 .color-palette-seafoam a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 37, ../sass/base/_design.scss */
+/* line 49, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button {
   background-color: #16a085;
   color: white;
 }
-/* line 42, ../sass/base/_design.scss */
+/* line 54, ../sass/base/_design.scss */
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
-/* line 46, ../sass/base/_design.scss */
+/* line 58, ../sass/base/_design.scss */
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
 }
 
-/* line 62, ../sass/base/_design.scss */
+/* line 74, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
 }
-/* line 64, ../sass/base/_design.scss */
+/* line 76, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 66, ../sass/base/_design.scss */
+/* line 78, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 74, ../sass/base/_design.scss */
+/* line 86, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 79, ../sass/base/_design.scss */
+/* line 91, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
 .l-logo,
-.l-preface-wrap {
+.l-preface-wrap,
+article {
   *zoom: 1;
   margin-bottom: 20px;
 }
@@ -474,30 +538,124 @@ html {
 .l-footer:after,
 .l-menu-wrapper:after,
 .l-logo:after,
-.l-preface-wrap:after {
+.l-preface-wrap:after,
+article:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 88, ../sass/base/_design.scss */
+/* line 101, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 92, ../sass/base/_design.scss */
+/* line 105, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
 }
 
-/* line 4, ../sass/base/_forms.scss */
+/* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 10, ../sass/base/_forms.scss */
 input[type="submit"],
 input[type="reset"],
 button {
   border: none;
   text-shadow: none;
   box-shadow: none;
+}
+
+/* line 19, ../sass/base/_forms.scss */
+tr.odd .form-item, tr.even .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+/* line 25, ../sass/base/_forms.scss */
+.form-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* line 28, ../sass/base/_forms.scss */
+.form-item .description {
+  font-size: 0.85em;
+}
+/* line 31, ../sass/base/_forms.scss */
+.form-item input.error {
+  border: 2px solid #ef262b;
+}
+/* line 34, ../sass/base/_forms.scss */
+.form-item textarea.error {
+  border: 2px solid #ef262b;
+}
+/* line 37, ../sass/base/_forms.scss */
+.form-item select.error {
+  border: 2px solid #ef262b;
+}
+
+/* line 42, ../sass/base/_forms.scss */
+.form-actions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 56, ../sass/base/_forms.scss */
+label {
+  display: block;
+  font-weight: bold;
+}
+/* line 59, ../sass/base/_forms.scss */
+label.option {
+  display: inline;
+  font-weight: normal;
+}
+
+/* line 66, ../sass/base/_forms.scss */
+input.form-checkbox {
+  vertical-align: middle;
+}
+/* line 69, ../sass/base/_forms.scss */
+input.form-radio {
+  vertical-align: middle;
+}
+
+/* line 74, ../sass/base/_forms.scss */
+.marker {
+  color: #ef262b;
+}
+
+/* line 78, ../sass/base/_forms.scss */
+.form-required {
+  color: #ef262b;
+}
+
+/* line 82, ../sass/base/_forms.scss */
+.form-checkboxes .form-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* line 87, ../sass/base/_forms.scss */
+.form-radios .form-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+/* line 92, ../sass/base/_forms.scss */
+.form-type-radio .description {
+  margin-left: 2.4em;
+}
+
+/* line 96, ../sass/base/_forms.scss */
+.form-type-checkbox .description {
+  margin-left: 2.4em;
 }
 
 /* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
@@ -552,8 +710,8 @@ html {
 }
 
 /* line 11, ../sass/base/_lists.scss */
-body ul,
-body .item-list ul {
+ul,
+.item-list ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -562,8 +720,8 @@ body .item-list ul {
   list-style: none;
 }
 /* line 15, ../sass/base/_lists.scss */
-body ul li,
-body .item-list ul li {
+ul li,
+.item-list ul li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -572,16 +730,16 @@ body .item-list ul li {
   font-size: 100%;
 }
 /* line 11, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/lists/_bullets.scss */
-body ul li li,
-body .item-list ul li li {
+ul li li,
+.item-list ul li li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
 }
 
 /* line 23, ../sass/base/_lists.scss */
-body .node ol,
-body .node ul {
+.node ol,
+.node ul {
   margin: 0;
   padding: 0;
   list-style-position: inside;
@@ -604,25 +762,56 @@ body .node ul {
   font-size: 20px;
 }
 
-/* line 54, ../sass/base/_lists.scss */
-ul.links.inline,
-.vocabulary ul {
+/* line 56, ../sass/base/_lists.scss */
+ul.vocabulary-list,
+ul.links.inline {
   display: inline;
 }
-/* line 57, ../sass/base/_lists.scss */
-ul.links.inline li,
-.vocabulary ul li {
+/* line 59, ../sass/base/_lists.scss */
+ul.vocabulary-list li,
+ul.links.inline li {
   display: inline-block;
   margin: 0 2% 0 0;
 }
-/* line 62, ../sass/base/_lists.scss */
-ul.links.inline li.vocabulary-links:before,
-.vocabulary ul li.vocabulary-links:before {
-  content: '\f02b';
+/* line 63, ../sass/base/_lists.scss */
+ul.vocabulary-list li.vocabulary-links:before,
+ul.links.inline li.vocabulary-links:before {
+  content: "\f02b";
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
   margin-right: 4px;
+  color: #666666;
+}
+/* line 69, ../sass/base/_lists.scss */
+ul.vocabulary-list li.node-readmore:before,
+ul.links.inline li.node-readmore:before {
+  content: "\f02d";
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: #666666;
+}
+/* line 75, ../sass/base/_lists.scss */
+ul.vocabulary-list li.comment-comments:before,
+ul.links.inline li.comment-comments:before {
+  content: "\f075";
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: #666666;
+}
+/* line 81, ../sass/base/_lists.scss */
+ul.vocabulary-list li.comment-add:before,
+ul.links.inline li.comment-add:before {
+  content: "\f040";
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: #666666;
 }
 
 /* line 1, ../sass/base/_media.scss */
@@ -672,6 +861,54 @@ html {
 /* line 30, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show {
   background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
+}
+
+/* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 11, ../sass/base/_pager.scss */
+.item-list-pager {
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+/* line 15, ../sass/base/_pager.scss */
+.item-list-pager ul {
+  text-align: center;
+}
+/* line 17, ../sass/base/_pager.scss */
+.item-list-pager ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 6px;
+}
+/* line 21, ../sass/base/_pager.scss */
+.item-list-pager ul li a {
+  transition: all 100ms ease-in-out 0s;
+  background-color: #eaeaea;
+  color: #202020;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  padding: 4px 8px;
+}
+/* line 32, ../sass/base/_pager.scss */
+.item-list-pager ul li a:hover {
+  color: white;
+}
+/* line 36, ../sass/base/_pager.scss */
+.item-list-pager ul li.pager-current {
+  color: white;
+  padding: 4px 8px;
+}
+/* line 39, ../sass/base/_pager.scss */
+.item-list-pager ul li.pager-current:hover {
+  color: white;
 }
 
 /* line 3, ../sass/base/_system.scss */
