@@ -505,25 +505,26 @@ html {
 /* line 75, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
+  min-height: 44px;
 }
-/* line 77, ../sass/base/_design.scss */
+/* line 78, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 79, ../sass/base/_design.scss */
+/* line 80, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 87, ../sass/base/_design.scss */
+/* line 88, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 92, ../sass/base/_design.scss */
+/* line 93, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
@@ -545,13 +546,13 @@ article:after {
   clear: both;
 }
 
-/* line 102, ../sass/base/_design.scss */
+/* line 103, ../sass/base/_design.scss */
 article {
   padding-bottom: 20px;
   border-bottom: 1px dashed #666666;
 }
 
-/* line 108, ../sass/base/_design.scss */
+/* line 109, ../sass/base/_design.scss */
 p.submitted:before {
   content: "\f007";
   width: 30px;
@@ -561,22 +562,22 @@ p.submitted:before {
   color: #666666;
 }
 
-/* line 114, ../sass/base/_design.scss */
+/* line 115, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 118, ../sass/base/_design.scss */
+/* line 119, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
 }
 
-/* line 123, ../sass/base/_design.scss */
+/* line 124, ../sass/base/_design.scss */
 figcaption {
   font-style: italic;
   font-size: .9rem;
-  color: #eaeaea;
+  color: #666666;
 }
 
 /* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
@@ -851,7 +852,7 @@ html {
   line-height: 1.5em;
 }
 
-/* line 13, ../sass/base/_off-canvas.scss */
+/* line 11, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show,
 .l-off-canvas-hide {
   display: none;
@@ -872,7 +873,7 @@ html {
   left: 10px;
 }
 
-/* line 30, ../sass/base/_off-canvas.scss */
+/* line 28, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show {
   background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
 }
@@ -1365,24 +1366,24 @@ h3.brand {
 }
 
 @media (min-width: 0) and (max-width: 44em) {
-  /* line 44, ../sass/base/_off-canvas.scss */
+  /* line 42, ../sass/base/_off-canvas.scss */
   .off-canvas-left-is-visible .l-off-canvas--left {
     left: 0;
     box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.9);
   }
-  /* line 49, ../sass/base/_off-canvas.scss */
+  /* line 47, ../sass/base/_off-canvas.scss */
   .off-canvas-left-is-visible .l-off-canvas-show {
     opacity: 0;
   }
 
-  /* line 53, ../sass/base/_off-canvas.scss */
+  /* line 51, ../sass/base/_off-canvas.scss */
   .l-off-canvas-hide--left {
     left: 95%;
     margin-left: -40px;
     background-position: 1px -43px;
   }
 
-  /* line 58, ../sass/base/_off-canvas.scss */
+  /* line 56, ../sass/base/_off-canvas.scss */
   .l-off-canvas {
     position: absolute;
     z-index: 99;
@@ -1394,42 +1395,46 @@ h3.brand {
     transition: left 0.2s ease-in;
     cursor: pointer;
   }
-  /* line 69, ../sass/base/_off-canvas.scss */
+  /* line 67, ../sass/base/_off-canvas.scss */
   .l-off-canvas.is-visible {
     left: 0;
     cursor: auto;
   }
-  /* line 72, ../sass/base/_off-canvas.scss */
+  /* line 70, ../sass/base/_off-canvas.scss */
   .l-off-canvas.is-visible .l-off-canvas-show {
     display: none;
   }
-  /* line 75, ../sass/base/_off-canvas.scss */
+  /* line 73, ../sass/base/_off-canvas.scss */
   .l-off-canvas.is-visible .l-off-canvas-hide {
     display: block;
   }
-  /* line 79, ../sass/base/_off-canvas.scss */
+  /* line 77, ../sass/base/_off-canvas.scss */
   .l-off-canvas .l-off-canvas-show {
     display: block;
   }
 
-  /* line 83, ../sass/base/_off-canvas.scss */
+  /* line 81, ../sass/base/_off-canvas.scss */
   .l-menu-wrapper .menu {
     text-align: center;
   }
-  /* line 85, ../sass/base/_off-canvas.scss */
+  /* line 83, ../sass/base/_off-canvas.scss */
   .l-menu-wrapper .menu li {
     position: relative;
   }
-  /* line 87, ../sass/base/_off-canvas.scss */
+  /* line 85, ../sass/base/_off-canvas.scss */
   .l-menu-wrapper .menu li .menu {
     display: none;
   }
-  /* line 91, ../sass/base/_off-canvas.scss */
+  /* line 88, ../sass/base/_off-canvas.scss */
+  .l-menu-wrapper .menu li.last > a {
+    border-bottom: none;
+  }
+  /* line 92, ../sass/base/_off-canvas.scss */
   .l-menu-wrapper .menu a {
     padding: 20px 0;
     background: #202020;
     color: #f8f8f8;
-    border-bottom: 1px solid #851b1d;
+    border-bottom: 1px dotted #cccccc;
     font-size: 16px;
     font-size: 0.88889rem;
     letter-spacing: .2em;
@@ -1437,25 +1442,27 @@ h3.brand {
     font-weight: normal;
     display: block;
   }
-  /* line 103, ../sass/base/_off-canvas.scss */
+  /* line 104, ../sass/base/_off-canvas.scss */
   .l-menu-wrapper .menu .nested-menu-item-toggle {
     position: absolute;
     top: 1.3em;
     right: 0;
-    padding-left: 15%;
-    display: block;
-    background-position: 0 -45px;
-    height: 20px;
-    width: 20px;
-    padding: 0;
+    padding-left: 12%;
+    height: 40px;
+    width: 40px;
     border: 0;
+    background: url("../images/menu-icons.png") no-repeat -8px -154px;
   }
   /* line 115, ../sass/base/_off-canvas.scss */
+  .l-menu-wrapper .menu .expanded .nested-menu-item-toggle {
+    background: url("../images/menu-icons.png") no-repeat -8px -202px;
+  }
+  /* line 118, ../sass/base/_off-canvas.scss */
   .l-menu-wrapper .menu .expanded .menu {
     display: block;
   }
 
-  /* line 120, ../sass/base/_off-canvas.scss */
+  /* line 124, ../sass/base/_off-canvas.scss */
   .l-page {
     position: relative;
     height: 100%;

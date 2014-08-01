@@ -505,25 +505,26 @@ html {
 /* line 75, ../sass/base/_design.scss */
 #top-bar {
   background: #333333;
+  min-height: 44px;
 }
-/* line 77, ../sass/base/_design.scss */
+/* line 78, ../sass/base/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 79, ../sass/base/_design.scss */
+/* line 80, ../sass/base/_design.scss */
 #top-bar .menu li {
   display: inline-block;
   vertical-align: top;
   margin: 4px 0 4px 4px;
 }
 
-/* line 87, ../sass/base/_design.scss */
+/* line 88, ../sass/base/_design.scss */
 .l-header-wrapper {
   background: black;
   padding: 4px 0 0 0;
 }
 
-/* line 92, ../sass/base/_design.scss */
+/* line 93, ../sass/base/_design.scss */
 .l-main,
 .l-footer,
 .l-menu-wrapper,
@@ -545,13 +546,13 @@ article:after {
   clear: both;
 }
 
-/* line 102, ../sass/base/_design.scss */
+/* line 103, ../sass/base/_design.scss */
 article {
   padding-bottom: 20px;
   border-bottom: 1px dashed #666666;
 }
 
-/* line 108, ../sass/base/_design.scss */
+/* line 109, ../sass/base/_design.scss */
 p.submitted:before {
   content: "\f007";
   width: 30px;
@@ -561,22 +562,22 @@ p.submitted:before {
   color: #666666;
 }
 
-/* line 114, ../sass/base/_design.scss */
+/* line 115, ../sass/base/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 118, ../sass/base/_design.scss */
+/* line 119, ../sass/base/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
 }
 
-/* line 123, ../sass/base/_design.scss */
+/* line 124, ../sass/base/_design.scss */
 figcaption {
   font-style: italic;
   font-size: .9rem;
-  color: #eaeaea;
+  color: #666666;
 }
 
 /* line 106, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
@@ -854,7 +855,7 @@ html {
   line-height: 1.5em;
 }
 
-/* line 13, ../sass/base/_off-canvas.scss */
+/* line 11, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show,
 .l-off-canvas-hide {
   display: none;
@@ -875,7 +876,7 @@ html {
   left: 10px;
 }
 
-/* line 30, ../sass/base/_off-canvas.scss */
+/* line 28, ../sass/base/_off-canvas.scss */
 .l-off-canvas-show {
   background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
 }
