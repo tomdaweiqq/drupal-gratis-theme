@@ -2,25 +2,17 @@
 @import "breakpoint";
 @import "susy";
 
-
-// Globbing from within sub-folders only works with relative paths.
+// Vars
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
-
 
 //.l-constrained {
 //  width: 95%;
 //  margin: 0 auto;
 //  @include pie-clearfix;
 //}
-
-// Clear various elements. (example)
-.foobar {
-  @include break;
-  overflow: hidden;
-}
 
 #l-menu-wrapper {
   margin-bottom: emRhythm(4);
@@ -48,6 +40,7 @@ img {
     border: 1px solid $medium_gray;
   }
 
+  // @todo simply below, we probably don't need all these.
   .l-main,
   .l-footer,
   .l-header,
@@ -59,8 +52,12 @@ img {
   .l-preface,
   .l-postscript,
   .l-setwidth {
-   //set container width;
+    //set container width;
     @include container(1100px);
+  }
+
+  .l-setwidth {
+    padding: 0 20px;
   }
 
   .l-region--header {
@@ -128,8 +125,7 @@ img {
 
 @include breakpoint($desk) {
 
-
-
+  // @todo
 
 }
 
@@ -140,4 +136,3 @@ div.quarter {
     @include span(3);
   }
 }
-

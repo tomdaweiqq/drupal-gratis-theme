@@ -56,4 +56,24 @@
     }
   };
 
+  /**
+   * Toggle expanded menu states.
+   */
+  Drupal.behaviors.dcOmegaBaseExpandMenus = {
+    attach: function (context) {
+
+      // Nested off canvas menu items
+      $('.menu .expanded').not('.active-trail').removeClass('expanded');
+      $('.menu li a').each(function() {
+        if ($(this).parent().children('ul').length !== 0) {
+          $(this).after('<a href="#" class="nested-menu-item-toggle"></a>');
+        }
+      });
+      $('.nested-menu-item-toggle').click(function() {
+        $(this).closest('li').toggleClass('expanded');
+        return false;
+      });
+    }
+  };
+
 })(jQuery, Drupal);

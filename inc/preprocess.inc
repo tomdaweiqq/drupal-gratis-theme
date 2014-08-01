@@ -29,7 +29,6 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'postscript-one';
   }
 
-
   // Postscript columns ('$pre_columns').
   if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
     $vars['classes_array'][] = 'preface-three';
@@ -46,7 +45,6 @@ function gratis_preprocess_html(&$vars) {
   else {
     $vars['classes_array'][] = 'preface-one';
   }
-
 
   $vars['html_attributes_array'] = array();
   $vars['body_attributes_array'] = array();
@@ -90,14 +88,6 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'site-slogan-hidden';
   }
 
-  //  // Add a body class is the theme logo is hidden or not.
-  //  if (theme_get_setting('gratis_themelogo') == TRUE) {
-  //    $vars['classes_array'][] = 'theme-logo';
-  //  }
-  //  else {
-  //    $vars['classes_array'][] = 'theme-logo-none';
-  //  }
-
   // Extra body classes for theme variables.
   // The Color Palette.
   $file = theme_get_setting('theme_color_palette');
@@ -134,23 +124,6 @@ function gratis_preprocess_html(&$vars) {
 
   $vars['scripts'] = drupal_get_js();
 
-  if (!$vars['is_front']) {
-    // Add unique class for each page.
-    $path = drupal_get_path_alias($_GET['q']);
-    // Add unique class for each website section.
-    list($section,) = explode('/', $path, 2);
-    $arg = explode('/', $_GET['q']);
-    if ($arg[0] == 'node' && isset($arg[1])) {
-      if ($arg[1] == 'add') {
-        $section = 'node-add';
-      }
-      elseif (isset($arg[2]) && is_numeric($arg[1]) && ($arg[2] == 'edit' || $arg[2] == 'delete')) {
-        $section = 'node-' . $arg[2];
-      }
-    }
-    $vars['classes_array'][] = drupal_html_class('section-' . $section);
-  }
-
   // Add various classes for common site paths.
   if ($node = menu_get_object()) {
     $vars['classes_array'][] = 'is-node';
@@ -159,4 +132,28 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'not-node';
   }
 
+}
+
+/**
+ * Override or insert variables into the page template.
+ */
+function gratis_preprocess_page(&$vars, $hook) {
+  // Check if it's a node and set a variable.
+  $vars['is_node'] = FALSE;
+  if ($node = menu_get_object()) {
+    $vars['is_node'] = TRUE;
+  }
+
+  // Set the custom grid width in a variable.
+  $gridwidth = theme_get_setting('gratis_grid_container_width');
+  $vars['setwidth'] = $gridwidth;
+
+  // Primary nav.
+  $vars['primary_nav'] = FALSE;
+  if ($vars['main_menu']) {
+    // Build links.
+    $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+    // Provide default theme wrapper function.
+    $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+  }
 }

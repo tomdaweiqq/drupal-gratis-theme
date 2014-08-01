@@ -74,52 +74,6 @@ function gratis_preprocess_username(&$vars) {
 }
 
 /**
- * Override or insert variables into the page template.
- */
-function gratis_preprocess_page(&$vars, $hook) {
-  // Check if it's a node and set a variable.
-  $vars['is_node'] = FALSE;
-  if ($node = menu_get_object()) {
-    $vars['is_node'] = TRUE;
-  }
-
-  // Set the custom grid width in a variable.
-  $gridwidth = theme_get_setting('gratis_grid_container_width');
-  $vars['setwidth'] = $gridwidth;
-
-  // Add information about the number of sidebars.
-  // Both sidebars.
-  if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
-    $vars['sb_columns'] = 'grid-20 pull-60';
-    $vars['content_columns'] = 'grid-60 push-20';
-  }
-  // Sidebar first.
-  elseif (!empty($vars['page']['sidebar_first'])) {
-    $vars['sb_columns'] = 'grid-20 pull-80';
-    $vars['content_columns'] = 'grid-80 push-20';
-  }
-  // Sidebar second.
-  elseif (!empty($vars['page']['sidebar_second'])) {
-    $vars['sb_columns'] = 'grid-20 sidebar';
-    $vars['content_columns'] = 'grid-80';
-  }
-  // no sidebars
-  else {
-    $vars['sb_columns'] = 1;
-    $vars['content_columns'] = 'grid-100';
-  }
-
-  // Primary nav.
-  $vars['primary_nav'] = FALSE;
-  if ($vars['main_menu']) {
-    // Build links.
-    $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-    // Provide default theme wrapper function.
-    $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
-  }
-}
-
-/**
  * Theme wrapper function for the primary menu links.
  */
 function gratis_menu_tree__primary(&$vars) {

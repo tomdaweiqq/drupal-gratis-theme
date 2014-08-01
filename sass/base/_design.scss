@@ -1,8 +1,9 @@
-
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+
+@import "compass";
 
 // Palettes defined in _colors
 
@@ -98,6 +99,18 @@ article {
   margin-bottom: $vert-spacing-unit;
 }
 
+article {
+  padding-bottom: $vert-spacing-unit;
+  border-bottom: 1px dashed $medium_gray2;
+}
+
+p.submitted {
+  &:before {
+    content: "#{$fauser}";
+    @include fontawesome;
+  }
+}
+
 .l-branding {
   padding-bottom: $vert-spacing-unit;
 }
@@ -105,4 +118,10 @@ article {
 .l-branding,
 .l-logo {
   text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: .9rem;
+  color: $light_gray2;
 }

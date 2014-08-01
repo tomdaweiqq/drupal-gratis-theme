@@ -84,6 +84,9 @@
     text-align: center;
     li {
       position: relative;
+      .menu {
+        display: none;
+      }
     }
     a {
       padding: 20px 0;
@@ -118,6 +121,10 @@
     position: relative;
     height: 100%;
   }
+
+//  .main-menu-wrapper li .menu {
+//    display: none;
+//  }
 
 }
 
