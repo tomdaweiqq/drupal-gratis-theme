@@ -150,7 +150,7 @@
 
 <?php if ($breadcrumb): ?>
   <div id="breadcrumbs-wrapper" class="l-breadcrumbs">
-    <div class="breadcrumbs" style="max-width:<?php print $setwidth; ?>">
+    <div class="breadcrumbs l-setwidth" style="max-width:<?php print $setwidth; ?>">
       <div class="s-grid"><?php print $breadcrumb; ?></div>
     </div>
   </div>
@@ -160,23 +160,23 @@
 <?php if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
 
   <div id="preface-wrap" class="l-preface-wrap">
-    <div class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
+    <div id="preface-container" class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
       <!--Preface -->
       <?php if (!empty($page['preface_first'])): ?>
-        <div class="preface s-grid">
+        <div class="preface">
           <?php print render($page['preface_first']); ?>
         </div>
       <?php endif; ?>
 
       <?php if (!empty($page['preface_second'])): ?>
-        <div class="preface s-grid">
+        <div class="preface">
           <?php print render($page['preface_second']); ?>
         </div>
       <?php endif; ?>
 
       <?php if (!empty($page['preface_third'])): ?>
-        <div class="preface s-grid">
+        <div class="preface">
           <?php print render($page['preface_third']); ?>
         </div>
       <?php endif; ?>
@@ -216,23 +216,23 @@
 if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
 
   <div id="postscript-wrapper">
-    <div id="postscript-container" class=" postscript l-setwidth" style="max-width:<?php print $setwidth; ?>">
+    <div id="postscript-container" class="l-postscript l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
       <!--Postscript -->
       <?php if (!empty($page['postscript_first'])): ?>
-    <div class="l-postscript s-grid">
+    <div class="postscript">
           <?php print render($page['postscript_first']); ?>
         </div>
       <?php endif; ?>
 
       <?php if (!empty($page['postscript_second'])): ?>
-        <div class="l-postscript s-grid">
+        <div class="postscript">
           <?php print render($page['postscript_second']); ?>
         </div>
       <?php endif; ?>
 
       <?php if (!empty($page['postscript_third'])): ?>
-        <div class="l-postscript s-grid">
+        <div class="postscript">
           <?php print render($page['postscript_third']); ?>
         </div>
       <?php endif; ?>

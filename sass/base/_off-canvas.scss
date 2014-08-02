@@ -78,15 +78,12 @@
       display: block;
     }
   }
-  .l-menu-wrapper .menu {
+  .l-menu-wrapper ul.menu {
     text-align: center;
     li {
       position: relative;
       .menu {
         display: none;
-      }
-      &.last > a {
-        border-bottom: none;
       }
     }
     a {

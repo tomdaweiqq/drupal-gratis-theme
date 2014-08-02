@@ -690,11 +690,17 @@ html {
 
 /* line 17, ../sass/base/_gratis.layout.scss */
 #l-menu-wrapper {
-  margin-bottom: emRhythm(4);
+  margin-bottom: 20px;
 }
 
 /* line 21, ../sass/base/_gratis.layout.scss */
 .l-off-canvas {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/utilities/general/_clearfix.scss */
+.l-off-canvas:after {
+  content: "";
+  display: table;
   clear: both;
 }
 
@@ -708,7 +714,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 132, ../sass/base/_gratis.layout.scss */
+/* line 131, ../sass/base/_gratis.layout.scss */
 div.quarter {
   width: 32.20339%;
   float: left;

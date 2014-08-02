@@ -15,11 +15,11 @@
 //}
 
 #l-menu-wrapper {
-  margin-bottom: emRhythm(4);
+  margin-bottom: $vert-spacing-unit;
 }
 
 .l-off-canvas {
-  clear: both;
+  @include pie-clearfix;
 }
 
 img {
@@ -31,8 +31,16 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-// Tablet widths
-@include breakpoint($tab) {
+@include breakpoint(0 $tab) {
+
+  .l-setwidth {
+    padding: 0 20px;
+  }
+
+}
+
+// Tablet, set the width var with a susy grid element.
+@include susy-breakpoint($tab, 12) {
 
   // Extends
 
@@ -40,23 +48,9 @@ img {
     border: 1px solid $medium_gray;
   }
 
-  // @todo simply below, we probably don't need all these.
-  .l-main,
-  .l-footer,
-  .l-header,
-  .l-main,
-  .l-footer,
-  .l-header,
-  .l-content,
-  .l-main,
-  .l-preface,
-  .l-postscript,
+  // Set default container width in case it's not set in the UI which would override this;
   .l-setwidth {
-    //set container width;
     @include container(1100px);
-  }
-
-  .l-setwidth {
     padding: 0 20px;
   }
 
@@ -64,71 +58,76 @@ img {
     @include span(8 at 5);
   }
   .l-region--navigation {
-    clear: both;
+    @include pie-clearfix;
   }
 
   // two sidebars.
   .two-sidebars {
     .region-sidebar-first {
-      @include span(3 at 1 of 12);
+      @include span(3 at 1);
       @include pull(9);
     }
     .l-content {
-      @include span(6 at 4 of 12);
+      @include span(6 at 4);
       @include push(3);
     }
     .region-sidebar-second {
-      @include span(3 at 10 of 12);
+      @include span(3 at 10);
     }
   }
 
   // One sidebar - sidebar first.
   .one-sidebar.sidebar-first {
     .l-content {
-      @include span(8 at 5 of 12);
+      @include span(8 at 5);
     }
     .region-sidebar-first {
-      @include span(4 at 1 of 12);
+      @include span(4 at 1);
     }
   }
 
   // One sidebar - sidebar second.
   .one-sidebar.sidebar-second {
     .l-content {
-      @include span(8 of 12);
+      @include span(8);
       @include bleed(0 2% 0 0);
     }
     .region-sidebar-second {
-      @include span(4 at 9 of 12);
+      @include span(4 at 9);
       @include bleed(0 0 0 2%);
       clear: none;
     }
   }
 
   // Preface.
-  .preface-one .preface.s-grid {
-    @include span(1 of 1);
+  .postscript-one .postscript,
+  .preface-one .preface {
+    @include span(12);
   }
-  .preface-two .preface.s-grid {
-    @include span(6 of 12);
+  .postscript-two .postscript,
+  .preface-two .preface {
+    @include span(6);
     &:last-child {
       @include omega;
     }
   }
-  .preface-three .preface.s-grid {
-    @include gallery(4 of 12 2);
+  .postscript-three .postscript,
+  .preface-three .preface {
+    @include gallery(4);
+    @include pad(0 ,2%);
   }
 
 }
 
 // Wide screen layout grid.
 
-@include breakpoint($desk) {
+@include susy-breakpoint($desk, 12) {
 
   // @todo
 
 }
 
+// Susy breakpoint example within an element.
 div.quarter {
   @include span(4);
   color: #fff;
