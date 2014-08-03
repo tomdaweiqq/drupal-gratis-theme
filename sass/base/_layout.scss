@@ -14,10 +14,6 @@
 //  @include pie-clearfix;
 //}
 
-#l-menu-wrapper {
-  margin-bottom: $vert-spacing-unit;
-}
-
 .l-off-canvas {
   @include pie-clearfix;
 }
@@ -52,6 +48,7 @@ img {
   .l-setwidth {
     @include container(1100px);
     padding: 0 20px;
+    @include pie-clearfix;
   }
 
   .l-region--header {
@@ -61,7 +58,7 @@ img {
     @include pie-clearfix;
   }
 
-  // two sidebars.
+  // Two sidebars.
   .two-sidebars {
     .region-sidebar-first {
       @include span(3 at 1);
@@ -75,6 +72,7 @@ img {
       @include span(3 at 10);
     }
   }
+
 
   // One sidebar - sidebar first.
   .one-sidebar.sidebar-first {
@@ -99,22 +97,26 @@ img {
     }
   }
 
-  // Preface.
+  // Preface, postscript, footer.
+  .footer-one .footer,
   .postscript-one .postscript,
   .preface-one .preface {
     @include span(12);
   }
+  .footer-two .footer,
   .postscript-two .postscript,
   .preface-two .preface {
     @include span(6);
+    @include pad(0 , 2%);
     &:last-child {
       @include omega;
     }
   }
+  .footer-three .footer,
   .postscript-three .postscript,
   .preface-three .preface {
     @include gallery(4);
-    @include pad(0 ,2%);
+    @include pad(0 , 2%);
   }
 
 }

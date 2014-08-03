@@ -90,8 +90,6 @@
   padding: 4px 0 0 0;
 }
 
-.l-main,
-.l-footer,
 .l-menu-wrapper,
 .l-logo,
 .l-preface-wrap,
@@ -125,4 +123,10 @@ figcaption {
   font-style: italic;
   font-size: .9rem;
   color: $medium_gray2;
+}
+
+.l-footer-wrapper {
+  background-color: $charcoal_gray;
+  padding-top: $vert-spacing-unit;
+  color: $white;
 }

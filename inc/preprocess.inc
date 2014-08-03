@@ -12,7 +12,24 @@
  */
 function gratis_preprocess_html(&$vars) {
 
-  // Postscript columns ('$pos_columns').
+  // Postscript columns.
+  if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
+    $vars['classes_array'][] = 'preface-three';
+  }
+  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
+    $vars['classes_array'][] = 'preface-two';
+  }
+  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
+    $vars['classes_array'][] = 'preface-two';
+  }
+  elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
+    $vars['classes_array'][] = 'preface-two';
+  }
+  else {
+    $vars['classes_array'][] = 'preface-one';
+  }
+
+  // Postscript columns.
   if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
     $vars['classes_array'][] = 'postscript-three';
   }
@@ -29,21 +46,21 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'postscript-one';
   }
 
-  // Postscript columns ('$pre_columns').
-  if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['classes_array'][] = 'preface-three';
+  // Footer columns.
+  if (!empty($vars['page']['footer_first']) && !empty($vars['page']['footer_second']) && !empty($vars['page']['footer_third'])) {
+    $vars['classes_array'][] = 'footer-three';
   }
-  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
-    $vars['classes_array'][] = 'preface-two';
+  elseif (!empty($vars['page']['footer_first']) && !empty($vars['page']['footer_second'])) {
+    $vars['classes_array'][] = 'footer-two';
   }
-  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
-    $vars['classes_array'][] = 'preface-two';
+  elseif (!empty($vars['page']['footer_first']) && !empty($vars['page']['footer_third'])) {
+    $vars['classes_array'][] = 'footer-two';
   }
-  elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['classes_array'][] = 'preface-two';
+  elseif (!empty($vars['page']['footer_second']) && !empty($vars['page']['footer_third'])) {
+    $vars['classes_array'][] = 'footer-two';
   }
   else {
-    $vars['classes_array'][] = 'preface-one';
+    $vars['classes_array'][] = 'footer-one';
   }
 
   $vars['html_attributes_array'] = array();

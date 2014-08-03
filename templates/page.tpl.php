@@ -65,196 +65,213 @@
  */
 ?>
 
-<div class="l-page-wrapper">
-<div class="l-page">
+  <div class="l-page-wrapper">
+    <div class="l-page">
 
 
-<!-- top links-->
-<?php if ($page['top_links']): ?>
-  <div id="top-bar" class="">
-    <div class="l-top-wrapper l-setwidth" style="max-width:<?php print $setwidth; ?>">
-      <div class="top-links s-grid">
-        <?php print render($page['top_links']); ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-<!-- //top links-->
+      <!-- top links-->
+      <?php if ($page['top_links']): ?>
+        <div id="top-bar" class="">
+          <div class="l-top-wrapper l-setwidth" style="max-width:<?php print $setwidth; ?>">
+            <div class="top-links s-grid">
+              <?php print render($page['top_links']); ?>
+            </div>
+          </div>
+        </div>
+      <?php endif; ?>
+      <!-- //top links-->
 
-<!-- header -->
-<div id="header-bar" class="l-header-wrapper" role="banner">
-  <header class="l-header l-setwidth" style="max-width:<?php print $setwidth; ?>">
+      <!-- header -->
+      <div id="header-bar" class="l-header-wrapper" role="banner">
+        <header class="l-header l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
-    <!-- top left -->
+          <!-- top left -->
 
-    <div class="l-logo s-grid">
-          <?php if ($logo): ?>
-            <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
-              <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
-          <?php else : ?>
-            <h1 class="site-name">
-              <a href="<?php print $front_page; ?>">
-                <?php print $site_name; ?></a>
-            </h1>
-          <?php endif; ?>
-    </div>
-    <!--// l-logo-->
-
-    <!-- top right -->
-
-    <div class="l-branding s-grid">
-      <?php if ($site_slogan || $site_name) : ?>
-          <?php if ($logo): ?>
-            <?php if ($site_name) : ?>
+          <div class="l-logo s-grid">
+            <?php if ($logo): ?>
+              <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
+                <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
+            <?php else : ?>
               <h1 class="site-name">
                 <a href="<?php print $front_page; ?>">
                   <?php print $site_name; ?></a>
               </h1>
             <?php endif; ?>
+          </div>
+          <!--// l-logo-->
+
+          <!-- top right -->
+
+          <div class="l-branding s-grid">
+            <?php if ($site_slogan || $site_name) : ?>
+              <?php if ($logo): ?>
+                <?php if ($site_name) : ?>
+                  <h1 class="site-name">
+                    <a href="<?php print $front_page; ?>">
+                      <?php print $site_name; ?></a>
+                  </h1>
+                <?php endif; ?>
+              <?php endif; ?>
+
+              <?php if ($site_slogan) : ?>
+                <h3 class="brand"><?php print $site_slogan; ?></h3>
+              <?php endif; ?>
+
+            <?php endif; ?>
+          </div>
+          <!--//branding-->
+
+        </header>
+
+      </div>
+      <!-- // l-header -->
+
+      <div id="menu-wrapper" class="l-menu-wrapper main-menu" role="navigation">
+        <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
+
+          <?php if ($main_menu): ?>
+            <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
+            <div id="off-canvas-left" class="l-off-canvas l-off-canvas--left">
+              <a id="off-canvas-left-hide" href="#" class="l-off-canvas-hide l-off-canvas-hide--left"><?php print t('Hide Navigation'); ?></a>
+
+              <div class="main-menu-wrapper">
+
+                <?php print render($primary_nav); ?>
+              </div>
+            </div><!-- // off-canvas-left -->
+          <?php endif; ?>
+          <!-- //main menu -->
+
+          <!-- for third party menu systems or modules-->
+          <?php if ($page['thirdparty_menu']): ?>
+            <?php print render($page['thirdparty_menu']); ?>
           <?php endif; ?>
 
-          <?php if ($site_slogan) : ?>
-            <h3 class="brand"><?php print $site_slogan; ?></h3>
-          <?php endif; ?>
+        </div>
+      </div>
+
+      <?php if ($breadcrumb): ?>
+        <div id="breadcrumbs-wrapper" class="l-breadcrumbs">
+          <div class="breadcrumbs l-setwidth" style="max-width:<?php print $setwidth; ?>">
+            <div class="s-grid"><?php print $breadcrumb; ?></div>
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <!-- preface -->
+      <?php if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
+
+        <div id="preface-wrap" class="l-preface-wrap">
+          <div id="preface-container" class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
+
+            <!--Preface -->
+            <?php if (!empty($page['preface_first'])): ?>
+              <div class="preface">
+                <?php print render($page['preface_first']); ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if (!empty($page['preface_second'])): ?>
+              <div class="preface">
+                <?php print render($page['preface_second']); ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if (!empty($page['preface_third'])): ?>
+              <div class="preface">
+                <?php print render($page['preface_third']); ?>
+              </div>
+            <?php endif; ?>
+
+          </div>
+        </div>
+        <!-- // preface -->
 
       <?php endif; ?>
-    </div>
-    <!--//branding-->
 
-  </header>
+      <div class="main">
+        <div class="l-main l-setwidth" role="main" style="max-width:<?php print $setwidth; ?>">
+          <div class="l-content">
+            <a id="main-content"></a>
+            <?php print render($title_prefix); ?>
+            <?php if ($title): ?>
+              <h1><?php print $title; ?></h1>
+            <?php endif; ?>
+            <?php print render($title_suffix); ?>
+            <?php print $messages; ?>
+            <?php print render($tabs); ?>
+            <?php print render($page['help']); ?>
+            <?php if ($action_links): ?>
+              <ul class="action-links"><?php print render($action_links); ?></ul>
+            <?php endif; ?>
+            <?php print render($page['content']); ?>
+            <?php print $feed_icons; ?>
+          </div>
+          <?php print render($page['sidebar_first']); ?>
+          <?php print render($page['sidebar_second']); ?>
+        </div>
 
-</div> <!-- // l-header -->
+      </div>
 
-<div id="menu-wrapper" class="l-menu-wrapper main-menu" role="navigation" >
-  <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
+      <?php
+      // Define and divide the postscript page regions.
+      if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
 
-        <?php if ($main_menu): ?>
-        <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
-        <div id="off-canvas-left" class="l-off-canvas l-off-canvas--left">
-          <a id="off-canvas-left-hide" href="#" class="l-off-canvas-hide l-off-canvas-hide--left"><?php print t('Hide Navigation'); ?></a>
-          <div class="main-menu-wrapper">
+        <div id="postscript-wrapper">
+          <div id="postscript-container" class="l-postscript l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
-              <?php print render($primary_nav); ?>
+            <!--Postscript -->
+            <?php if (!empty($page['postscript_first'])): ?>
+              <div class="postscript">
+                <?php print render($page['postscript_first']); ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if (!empty($page['postscript_second'])): ?>
+              <div class="postscript">
+                <?php print render($page['postscript_second']); ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if (!empty($page['postscript_third'])): ?>
+              <div class="postscript">
+                <?php print render($page['postscript_third']); ?>
+              </div>
+            <?php endif; ?>
+
+          </div>
+        </div>
+
+      <?php endif; ?>
+
+
+      <footer id="footer" role="footer" class="l-footer-wrapper">
+        <div class="l-setwidth l-footer" style="max-width:<?php print $setwidth; ?>">
+
+          <!--footer -->
+          <?php if (!empty($page['footer_first'])): ?>
+            <div class="footer">
+              <?php print render($page['footer_first']); ?>
             </div>
-        </div><!-- // off-canvas-left -->
-        <?php endif; ?>
-        <!-- //main menu -->
+          <?php endif; ?>
 
-        <!-- for third party menu systems or modules-->
-        <?php if ($page['thirdparty_menu']): ?>
-          <?php print render($page['thirdparty_menu']); ?>
-        <?php endif; ?>
+          <?php if (!empty($page['footer_second'])): ?>
+            <div class="footer">
+              <?php print render($page['footer_second']); ?>
+            </div>
+          <?php endif; ?>
 
-  </div>
-</div>
+          <?php if (!empty($page['footer_third'])): ?>
+            <div class="footer">
+              <?php print render($page['footer_third']); ?>
+            </div>
+          <?php endif; ?>
 
-<?php if ($breadcrumb): ?>
-  <div id="breadcrumbs-wrapper" class="l-breadcrumbs">
-    <div class="breadcrumbs l-setwidth" style="max-width:<?php print $setwidth; ?>">
-      <div class="s-grid"><?php print $breadcrumb; ?></div>
-    </div>
-  </div>
-<?php endif; ?>
-
-<!-- preface -->
-<?php if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
-
-  <div id="preface-wrap" class="l-preface-wrap">
-    <div id="preface-container" class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
-
-      <!--Preface -->
-      <?php if (!empty($page['preface_first'])): ?>
-        <div class="preface">
-          <?php print render($page['preface_first']); ?>
         </div>
-      <?php endif; ?>
-
-      <?php if (!empty($page['preface_second'])): ?>
-        <div class="preface">
-          <?php print render($page['preface_second']); ?>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($page['preface_third'])): ?>
-        <div class="preface">
-          <?php print render($page['preface_third']); ?>
-        </div>
-      <?php endif; ?>
+      </footer>
 
     </div>
   </div>
-  <!-- // preface -->
-
-<?php endif; ?>
-
-  <div class="main">
-    <div class="l-main l-setwidth" role="main" style="max-width:<?php print $setwidth; ?>">
-      <div class="l-content">
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div>
-      <?php print render($page['sidebar_first']); ?>
-      <?php print render($page['sidebar_second']); ?>
-</div>
-
-  </div>
-
-<?php
-// Define and divide the postscript page regions.
-if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
-
-  <div id="postscript-wrapper">
-    <div id="postscript-container" class="l-postscript l-setwidth" style="max-width:<?php print $setwidth; ?>">
-
-      <!--Postscript -->
-      <?php if (!empty($page['postscript_first'])): ?>
-    <div class="postscript">
-          <?php print render($page['postscript_first']); ?>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($page['postscript_second'])): ?>
-        <div class="postscript">
-          <?php print render($page['postscript_second']); ?>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($page['postscript_third'])): ?>
-        <div class="postscript">
-          <?php print render($page['postscript_third']); ?>
-        </div>
-      <?php endif; ?>
-
-    </div>
-  </div>
-
-<?php endif; ?>
-
-
-<footer id="footer" role="footer">
-  <section class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
-    <div class="grid-100">
-      <?php if (!empty($page['footer_first'])): ?>
-        <?php print render($page['footer_first']); ?>
-      <?php endif; ?>
-    </div>
-  </section>
-</footer>
-
-</div>
-</div>
 
 
 <?php if ($page['top_panel']): ?>

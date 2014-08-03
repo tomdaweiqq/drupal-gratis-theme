@@ -29,6 +29,8 @@ regions[postscript_first]   = Postscript first
 regions[postscript_second]  = Postscript second
 regions[postscript_third]   = Postscript third
 regions[footer_first]   = Footer first
+regions[footer_second]   = Footer second
+regions[footer_third]   = Footer third
 regions[top_panel]  = Top Panel (special use)
 
 ; Features --------------------

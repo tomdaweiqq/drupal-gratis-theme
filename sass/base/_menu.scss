@@ -69,7 +69,7 @@
         padding: $gutter 2 * $gutter;
         text-transform: uppercase;
         &:hover {
-          background-color: $charcol_gray;
+          background-color: $charcoal_gray;
         }
       }
     }
@@ -107,11 +107,11 @@
         padding: $gutter;
         width: $subMenuItemWidth;
         display: block;
-        background-color: $charcol_gray;
+        background-color: $charcoal_gray;
         border-color: lighten($baseMenuBackground, 15%);
         &:hover {
 
-          background-color: lighten($charcol_gray, 20%);
+          background-color: lighten($charcoal_gray, 20%);
           border-color: $secondaryMenuBackground;
         }
       }
