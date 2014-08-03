@@ -85,46 +85,32 @@
       <div id="header-bar" class="l-header-wrapper" role="banner">
         <header class="l-header l-setwidth" style="max-width:<?php print $setwidth; ?>">
 
-          <!-- top left -->
-
-          <div class="l-logo s-grid">
-            <?php if ($logo): ?>
+          <?php if ($logo): ?>
+          <div class="l-logo">
               <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?> » <?php print $site_slogan; ?>">
                 <img id="logo-img" src="<?php print $logo; ?>" alt="<?php print $site_name; ?> » <?php print $site_slogan; ?>"/></a>
-            <?php else : ?>
-              <h1 class="site-name">
-                <a href="<?php print $front_page; ?>">
-                  <?php print $site_name; ?></a>
-              </h1>
+            </div><!--// l-logo-->
             <?php endif; ?>
-          </div>
-          <!--// l-logo-->
 
-          <!-- top right -->
+          <?php if ($site_slogan || $site_name) : ?>
+          <div class="l-branding">
 
-          <div class="l-branding s-grid">
-            <?php if ($site_slogan || $site_name) : ?>
-              <?php if ($logo): ?>
                 <?php if ($site_name) : ?>
                   <h1 class="site-name">
                     <a href="<?php print $front_page; ?>">
                       <?php print $site_name; ?></a>
                   </h1>
+              <?php endif; ?>
+
+                  <?php if ($site_slogan) : ?>
+                    <h3 class="site-slogan"><?php print $site_slogan; ?></h3>
                 <?php endif; ?>
-              <?php endif; ?>
 
-              <?php if ($site_slogan) : ?>
-                <h3 class="brand"><?php print $site_slogan; ?></h3>
-              <?php endif; ?>
-
+          </div><!--//branding-->
             <?php endif; ?>
-          </div>
-          <!--//branding-->
 
         </header>
-
-      </div>
-      <!-- // l-header -->
+      </div><!-- // l-header -wrapper-->
 
       <div id="menu-wrapper" class="l-menu-wrapper main-menu" role="navigation">
         <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
@@ -191,6 +177,7 @@
 
       <div class="main">
         <div class="l-main l-setwidth" role="main" style="max-width:<?php print $setwidth; ?>">
+
           <div class="l-content">
             <a id="main-content"></a>
             <?php print render($title_prefix); ?>
@@ -207,6 +194,7 @@
             <?php print render($page['content']); ?>
             <?php print $feed_icons; ?>
           </div>
+
           <?php print render($page['sidebar_first']); ?>
           <?php print render($page['sidebar_second']); ?>
         </div>

@@ -4,8 +4,6 @@
 @import "../variables/typography";
 @import "../variables/misc";
 
-@import "compass";
-
 // Off canvas layout styling.
 
 .l-off-canvas-show,
@@ -61,8 +59,7 @@
     bottom: 0;
     left: -80%;
     padding: 60px 0 0 0;
-    // @todo convert to compass transistion.
-    transition: left 0.2s ease-in;
+    @include transition(all 0.25s ease-in);
     cursor: pointer;
     &.is-visible {
       left: 0;

@@ -50,10 +50,18 @@ h6 {
   @include adjust-font-size-to($h6);
 }
 
-
-h3.brand {
+h1.site-name {
+  @include adjust-font-size-to($h3);
+  margin: 0 auto rhythm(.5) auto;
   padding-bottom: 0;
   margin-bottom: 0;
+  display: inline-block;
+}
+
+h3.site-slogan {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: inline-block;
 }
 
 .footer h2 {

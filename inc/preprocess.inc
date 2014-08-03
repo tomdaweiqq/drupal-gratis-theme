@@ -89,20 +89,29 @@ function gratis_preprocess_html(&$vars) {
   // Add font awesome cdn.
   drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css', array('type' => 'external'));
 
-  // Add a body class is the site name is hidden or not.
-  if (theme_get_setting('toggle_name') == FALSE) {
+  // Vars for empty / checked / not empty site name and slogan.
+  $vars['hide_site_name']   = theme_get_setting('toggle_name') ? FALSE : TRUE;
+  $vars['hide_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
+
+  if ($vars['hide_site_name']) {
     $vars['classes_array'][] = 'site-name-hidden';
   }
   else {
-    $vars['classes_array'][] = 'site-name';
+    $vars['classes_array'][] = 'site-name-show';
   }
 
-  // Add a body class is the site slogan is hidden or not.
-  if (theme_get_setting('toggle_slogan')) {
-    $vars['classes_array'][] = 'site-slogan';
+  if ($vars['hide_site_slogan']) {
+    $vars['classes_array'][] = 'site-slogan-hidden';
   }
   else {
-    $vars['classes_array'][] = 'site-slogan-hidden';
+    $vars['classes_array'][] = 'site-slogan-show';
+  }
+
+  if (variable_get('site_slogan', '')) {
+    $vars['classes_array'][] = 'site-slogan-not-empty';
+  }
+  else {
+    $vars['classes_array'][] = 'site-slogan-empty';
   }
 
   // Extra body classes for theme variables.

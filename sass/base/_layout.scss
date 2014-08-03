@@ -107,7 +107,7 @@ img {
   .postscript-two .postscript,
   .preface-two .preface {
     @include span(6);
-    @include pad(0 , 2%);
+    @include pad(0, 2%);
     &:last-child {
       @include omega;
     }
@@ -116,7 +116,7 @@ img {
   .postscript-three .postscript,
   .preface-three .preface {
     @include gallery(4);
-    @include pad(0 , 2%);
+    @include pad(0, 2%);
   }
 
 }

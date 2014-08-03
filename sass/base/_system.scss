@@ -1,3 +1,11 @@
+
+// import variables
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/misc";
+
+
 // Primary Tabs
 
 ul.tabs.primary {
@@ -6,7 +14,6 @@ ul.tabs.primary {
   overflow: hidden;
   margin: 0 0 10px 0;
   width: 100%;
-  background: lighten($dark_gray, 20%);
 
   li {
     float: left;
@@ -20,17 +27,14 @@ ul.tabs.primary {
     background-color: $light_gray;
     border-bottom: 1px solid $white;
     color: $light_gray;
-    font-weight: 500;
     display: block;
     letter-spacing: 0;
     outline: none;
     padding: 0 20px;
     text-decoration: none;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    @include transition(all 0.25s ease-in-out);
     border-bottom: 2px solid $dark_gray;
-    font-size: 12px;
+    font-size: 1rem;
     color: $dark_gray;
     &.active {
       color: $white;

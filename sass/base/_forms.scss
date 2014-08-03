@@ -11,6 +11,9 @@ input[type="submit"],
 input[type="reset"],
 button {
   @include no-shadows-borders;
+  margin: 10px 10px 10px 0;
+  font-size: 1.2rem;
+  padding: 8px 14px 4px 14px;
 }
 
 //@extend-elements

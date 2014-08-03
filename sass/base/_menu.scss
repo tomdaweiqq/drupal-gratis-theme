@@ -41,25 +41,12 @@
         }
       }
     }
-//    #{$input} {
-//      position: absolute;
-//      top: -9999px;
-//      left: -9999px;
-//    }
-//    label {
-//      display: none;
-//      cursor: pointer;
-//      user-select: none;
-//    }
   }
-
 
   // First level -> main menu items
   .main-menu-wrapper > ul {
     display: table;
     margin: 0 auto;
-    //border: 1px solid darken($baseMenuBackground, 5%);
-    //@include menu-background($baseMenuBackground);
    @include pie-clearfix;
     > li {
       float: left;
@@ -68,6 +55,7 @@
         float: left;
         padding: $gutter 2 * $gutter;
         text-transform: uppercase;
+        @include transition(all 0.25s ease-in);
         &:hover {
           background-color: $charcoal_gray;
         }
@@ -87,17 +75,14 @@
       opacity: 0;
       visibility: hidden;
       margin: 2 * $gutter 0 0 0;
-  //    @include menu-background(lighten($baseMenuBackground, 15%), false);
       @include transition-property(margin, opacity);
-      @include transition-duration(.15s);
-      @include transition-timing-function(ease-in-out);
+      @include transition(all 0.2s ease-in-out);
       li {
         display: block;
         &:first-child > a {
           @include pseudo-triangle(6px, 4);
         }
         &:last-child {
-         // @include box-shadow(none);
           > a {
           }
         }
