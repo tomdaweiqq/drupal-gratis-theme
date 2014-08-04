@@ -8,12 +8,6 @@
 @import "../variables/typography";
 @import "../variables/misc";
 
-//.l-constrained {
-//  width: 95%;
-//  margin: 0 auto;
-//  @include pie-clearfix;
-//}
-
 .l-off-canvas {
   @include pie-clearfix;
 }

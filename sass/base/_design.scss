@@ -2,6 +2,7 @@
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+@import "../abstractions/mixins";
 
 @import "compass";
 
@@ -52,6 +53,9 @@
     }
     .l-menu-wrapper {
       background-color: $designcolor;
+    }
+    &.site-name-show h1.site-name a:after {
+      color: $designcolor;
     }
   }
 }
@@ -116,4 +120,13 @@ figcaption {
   background-color: $charcoal_gray;
   padding-top: $vert-spacing-unit;
   color: $white;
+}
+
+.site-name-show h1.site-name a:after {
+  content: " #{$faraquo} ";
+  @include fontawesome;
+}
+
+.block {
+  margin-bottom: $vert-spacing-unit;
 }
