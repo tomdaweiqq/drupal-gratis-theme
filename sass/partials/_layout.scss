@@ -81,11 +81,12 @@ img {
   // One sidebar - sidebar second.
   .one-sidebar.sidebar-second {
     .l-content {
-      @include span(8);
+      // Override susy default here.
+      @include span(17 of 24);
       @include bleed(0 2% 0 0);
     }
     .region-sidebar-second {
-      @include span(4 at 9);
+      @include span(7 at 18 of 24);
       @include bleed(0 0 0 2%);
       clear: none;
     }

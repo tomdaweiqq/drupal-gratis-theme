@@ -10,6 +10,14 @@
 
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
+
+    .more-link a {
+      background-color: $designcolor;
+      &:hover {
+        background-color: $medium_gray;
+        color: $white;
+      }
+    }
     .item-list-pager {
       li {
         a {
@@ -57,6 +65,7 @@
     &.site-name-show h1.site-name a:after {
       color: $designcolor;
     }
+
   }
 }
 
