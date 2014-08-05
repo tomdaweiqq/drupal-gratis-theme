@@ -103,9 +103,21 @@ article {
   padding-bottom: 10px;
 }
 
-p.submitted {
+.node-submitted {
+  margin-bottom: 10px;
+}
+
+span.submitted {
+  margin: 0 10px 0 0;
   &:before {
     content: "#{$fauser}";
+    @include fontawesome;
+  }
+}
+
+span.date {
+  &:before {
+    content: "#{$fadate}";
     @include fontawesome;
   }
 }

@@ -668,8 +668,17 @@ article {
   padding-bottom: 10px;
 }
 
-/* line 107, ../sass/partials/_design.scss */
-p.submitted:before {
+/* line 106, ../sass/partials/_design.scss */
+.node-submitted {
+  margin-bottom: 10px;
+}
+
+/* line 110, ../sass/partials/_design.scss */
+span.submitted {
+  margin: 0 10px 0 0;
+}
+/* line 112, ../sass/partials/_design.scss */
+span.submitted:before {
   content: "\f007";
   width: 30px;
   height: 30px;
@@ -678,32 +687,42 @@ p.submitted:before {
   color: #666666;
 }
 
-/* line 113, ../sass/partials/_design.scss */
+/* line 119, ../sass/partials/_design.scss */
+span.date:before {
+  content: "\f073";
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: #666666;
+}
+
+/* line 125, ../sass/partials/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 117, ../sass/partials/_design.scss */
+/* line 129, ../sass/partials/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
 }
 
-/* line 122, ../sass/partials/_design.scss */
+/* line 134, ../sass/partials/_design.scss */
 figcaption {
   font-style: italic;
   font-size: .9rem;
   color: #666666;
 }
 
-/* line 128, ../sass/partials/_design.scss */
+/* line 140, ../sass/partials/_design.scss */
 .l-footer-wrapper {
   background-color: #333333;
   padding-top: 20px;
   color: white;
 }
 
-/* line 134, ../sass/partials/_design.scss */
+/* line 146, ../sass/partials/_design.scss */
 .site-name-show h1.site-name a:after {
   content: " \f101 ";
   width: 30px;
@@ -713,7 +732,7 @@ figcaption {
   color: #666666;
 }
 
-/* line 139, ../sass/partials/_design.scss */
+/* line 151, ../sass/partials/_design.scss */
 .block {
   margin-bottom: 20px;
 }
@@ -767,7 +786,7 @@ tr.odd .form-item, tr.even .form-item {
 }
 /* line 47, ../sass/partials/_forms.scss */
 .form-item textarea {
-  border: 1px solid #eaeaea;
+  border: 1px solid #d1d1d1;
   color: #666666;
   padding: 8px;
   font-size: 1.3rem;
@@ -789,41 +808,39 @@ tr.odd .form-item, tr.even .form-item {
   border: 2px solid #ef262b;
 }
 /* line 65, ../sass/partials/_forms.scss */
-.form-item input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
-  border: 1px solid #eaeaea;
+.form-item input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
+  border: 1px solid #d1d1d1;
   color: #666666;
   font-size: 1.3rem;
   padding: 10px 2px 10px 8px;
   width: 96%;
+  margin: 0 0 4px 0;
 }
 
-/* line 74, ../sass/partials/_forms.scss */
+/* line 75, ../sass/partials/_forms.scss */
 .form-actions {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-/* line 88, ../sass/partials/_forms.scss */
+/* line 89, ../sass/partials/_forms.scss */
 label {
   display: block;
   font-weight: bold;
   color: #666666;
+  margin: 0 0 4px 0;
 }
-/* line 92, ../sass/partials/_forms.scss */
+/* line 94, ../sass/partials/_forms.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
-/* line 99, ../sass/partials/_forms.scss */
-input.form-checkbox {
+/* line 101, ../sass/partials/_forms.scss */
+input.form-radio, input.form-checkbox {
   vertical-align: middle;
   margin: 0 6px 0 0;
-}
-/* line 103, ../sass/partials/_forms.scss */
-input.form-radio {
-  vertical-align: middle;
-  margin: 0 6px 0 0;
+  cursor: pointer;
 }
 
 /* line 109, ../sass/partials/_forms.scss */
@@ -860,7 +877,7 @@ input.form-radio {
 
 /* line 135, ../sass/partials/_forms.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid #d1d1d1;
   color: #666666;
   margin: 10px 0 20px 0;
 }
@@ -1200,7 +1217,7 @@ table {
 }
 /* line 10, ../sass/partials/_tables.scss */
 table thead {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d1d1d1;
   color: #999999;
 }
 /* line 13, ../sass/partials/_tables.scss */
@@ -1223,7 +1240,7 @@ table td {
 }
 /* line 30, ../sass/partials/_tables.scss */
 table tbody tr {
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d1d1d1;
 }
 
 /* line 106, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */

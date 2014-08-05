@@ -45,7 +45,7 @@ button {
     font-size: 0.85em;
   }
   textarea {
-    border: 1px solid $light_gray2;
+    border: 1px solid darken($light_gray2, 10%);
     color: $medium_gray2;
     padding: 8px;
     font-size: 1.3rem;
@@ -62,12 +62,13 @@ button {
   select.error {
     border: 2px solid $britered;
   }
-  input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
-    border: 1px solid $light_gray2;
+  input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
+    border: 1px solid darken($light_gray2, 10%);
     color: $medium_gray2;
     font-size: 1.3rem;
     padding: 10px 2px 10px 8px;
     width: 96%;
+    margin: 0 0 4px 0;
   }
 }
 
@@ -89,6 +90,7 @@ label {
   display: block;
   font-weight: bold;
   color: $medium_gray2;
+  margin: 0 0 4px 0;
   &.option {
     display: inline;
     font-weight: normal;
@@ -96,13 +98,11 @@ label {
 }
 
 input {
+  &.form-radio,
   &.form-checkbox {
     vertical-align: middle;
     margin: 0 6px 0 0;
-  }
-  &.form-radio {
-    vertical-align: middle;
-    margin: 0 6px 0 0;
+    cursor: pointer;
   }
 }
 
@@ -133,7 +133,7 @@ input {
 }
 
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid darken($light_gray2, 10%);
   color: $medium_gray2;
   margin: 10px 0 20px 0;
 }

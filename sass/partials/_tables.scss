@@ -8,7 +8,7 @@ table {
   width: 100%;
   margin: 0 0 10px 0;
   thead {
-    border: 1px solid darken($light_gray2, 2%);
+    border: 1px solid darken($light_gray2, 10%);
     color: $medium_gray;
     th {
       padding: 4px 0 3px 6px;
@@ -28,6 +28,6 @@ table {
     padding: 6px 6px 6px 8px;
   }
   tbody tr {
-    border: 1px solid darken($light_gray2, 2%);
+    border: 1px solid darken($light_gray2, 10%);
   }
 }

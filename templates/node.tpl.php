@@ -92,10 +92,17 @@
   <?php endif; ?>
 
   <?php if ($display_submitted): ?>
-    <footer class="node__submitted">
+    <section class="node-submitted">
+      <span class="submitted">
+        <?php print $submitted; ?>
+      </span>
+        <span class="date">
+          <?php print $thedate; ?> / <?php print $themonth; ?> / <?php print $theyear; ?>
+      </span>
+      <?php if (!$teaser): ?>
       <?php print $user_picture; ?>
-      <p class="submitted"><?php print $submitted; ?></p>
-    </footer>
+      <?php endif; ?>
+    </section>
   <?php endif; ?>
 
   <div<?php print $content_attributes; ?>>

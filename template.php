@@ -109,7 +109,7 @@ function gratis_preprocess_node(&$vars, $hook) {
   $vars['classes_array'][] = 'node--' . $css_node_type . '--' . $css_view_mode;
 
   // Show only the username in submitted, the date is handled by node.tpl.php.
-  $vars['submitted'] = t('Submitted by !username', array('!username' => $vars['name']));
+  $vars['submitted'] = t('By !username', array('!username' => $vars['name']));
 
   // Set date variables using drupal's format_date function.
   $vars['thedate'] = format_date($node->created, "custom", "j");
