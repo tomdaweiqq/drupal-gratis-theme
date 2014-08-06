@@ -1,0 +1,47 @@
+// Import variables.
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/misc";
+@import "../abstractions/mixins";
+
+// Import compass.
+@import "compass";
+
+.node-submitted {
+  margin-bottom: 10px;
+}
+
+span.submitted {
+  margin: 0 10px 0 0;
+  &:before {
+    content: "#{$fauser}";
+    @include fontawesome;
+  }
+}
+
+span.date {
+  &:before {
+    content: "#{$fadate}";
+    @include fontawesome;
+  }
+}
+
+.user-picture {
+  position: relative;
+  top: -12px;
+  float: right;
+  img {
+    @include border-radius(50px);
+  }
+}
+
+figure {
+  border: 1px dotted darken($light_gray2, 10%);
+  figcaption {
+    color: $medium_gray2;
+    font-style: italic;
+    font-size: .9rem;
+    padding: 4px 8px;
+  }
+}

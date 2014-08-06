@@ -36,13 +36,20 @@ html {
   line-height: 1.5em;
 }
 
-/* line 8, ../sass/partials/_comments.scss */
+/* line 106, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* set variables for global use */
+/* line 13, ../sass/partials/_comments.scss */
 .comment {
   display: table;
   margin-bottom: 20px;
   vertical-align: top;
 }
-/* line 12, ../sass/partials/_comments.scss */
+/* line 17, ../sass/partials/_comments.scss */
 .comment .attribution {
   display: table-cell;
   overflow: hidden;
@@ -50,31 +57,31 @@ html {
   vertical-align: top;
   width: 136px;
 }
-/* line 18, ../sass/partials/_comments.scss */
+/* line 23, ../sass/partials/_comments.scss */
 .comment .attribution img {
   margin: 0;
   border: 1px solid #eaeaea;
 }
-/* line 24, ../sass/partials/_comments.scss */
+/* line 29, ../sass/partials/_comments.scss */
 .comment .submitted p {
   margin: 4px 0;
   line-height: 1.2;
 }
-/* line 28, ../sass/partials/_comments.scss */
+/* line 33, ../sass/partials/_comments.scss */
 .comment .submitted .comment-time {
   color: #999999;
   font-size: 0.786em;
 }
-/* line 32, ../sass/partials/_comments.scss */
+/* line 37, ../sass/partials/_comments.scss */
 .comment .submitted .comment-permalink {
   text-transform: lowercase;
   font-size: 0.786em;
 }
-/* line 37, ../sass/partials/_comments.scss */
+/* line 42, ../sass/partials/_comments.scss */
 .comment .content {
   line-height: 1.6;
 }
-/* line 40, ../sass/partials/_comments.scss */
+/* line 45, ../sass/partials/_comments.scss */
 .comment .comment-arrow {
   position: absolute;
   margin-top: 10px;
@@ -86,7 +93,7 @@ html {
   border-right: 1px solid white;
   background: url("../images/comment-arrow.gif") no-repeat 0 center transparent;
 }
-/* line 51, ../sass/partials/_comments.scss */
+/* line 56, ../sass/partials/_comments.scss */
 .comment .comment-text {
   position: relative;
   display: table-cell;
@@ -94,34 +101,34 @@ html {
   border: 1px solid #eaeaea;
   vertical-align: top;
 }
-/* line 58, ../sass/partials/_comments.scss */
+/* line 63, ../sass/partials/_comments.scss */
 .comment .indented {
   margin-left: 40px;
 }
-/* line 61, ../sass/partials/_comments.scss */
+/* line 66, ../sass/partials/_comments.scss */
 .comment h2.title {
   margin-bottom: 1em;
 }
-/* line 64, ../sass/partials/_comments.scss */
+/* line 69, ../sass/partials/_comments.scss */
 .comment div.user-picture img {
   margin-left: 0;
 }
-/* line 67, ../sass/partials/_comments.scss */
+/* line 72, ../sass/partials/_comments.scss */
 .comment ul.links {
   margin-bottom: 0;
   padding: 0;
 }
-/* line 70, ../sass/partials/_comments.scss */
+/* line 75, ../sass/partials/_comments.scss */
 .comment ul.links li {
   padding: 0 0.5em 0 0;
 }
 
-/* line 76, ../sass/partials/_comments.scss */
+/* line 81, ../sass/partials/_comments.scss */
 .comment-unpublished {
   margin-right: 5px;
   padding: 5px 2px 5px 5px;
 }
-/* line 79, ../sass/partials/_comments.scss */
+/* line 84, ../sass/partials/_comments.scss */
 .comment-unpublished .comment-text .comment-arrow {
   border-right: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
@@ -140,509 +147,509 @@ html {
 }
 
 /* set variables for global use */
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-greengray .more-link a {
   background-color: #7f8c8d;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-greengray .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-greengray .item-list-pager li a:hover {
   background-color: #7f8c8d;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-greengray .item-list-pager li.pager-current {
   background-color: #7f8c8d;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-greengray .vocabulary-links:before {
   color: #7f8c8d;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-greengray .l-off-canvas--left {
   background-color: #7f8c8d;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-greengray .l-header-wrapper {
   color: #7f8c8d;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-greengray a {
   color: #7f8c8d;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-greengray a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button {
   background-color: #7f8c8d;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-greengray.site-name-show h1.site-name a:after {
   color: #7f8c8d;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-pink .more-link a {
   background-color: #b72898;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-pink .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-pink .item-list-pager li a:hover {
   background-color: #b72898;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-pink .item-list-pager li.pager-current {
   background-color: #b72898;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-pink .vocabulary-links:before {
   color: #b72898;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-pink .l-off-canvas--left {
   background-color: #b72898;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-pink .l-header-wrapper {
   color: #b72898;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-pink a {
   color: #b72898;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-pink a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button {
   background-color: #b72898;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-pink .l-menu-wrapper {
   background-color: #b72898;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-pink.site-name-show h1.site-name a:after {
   color: #b72898;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-orange .more-link a {
   background-color: #e04604;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-orange .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-orange .item-list-pager li a:hover {
   background-color: #e04604;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-orange .item-list-pager li.pager-current {
   background-color: #e04604;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-orange .vocabulary-links:before {
   color: #e04604;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-orange .l-off-canvas--left {
   background-color: #e04604;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-orange .l-header-wrapper {
   color: #e04604;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-orange a {
   color: #e04604;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-orange a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button {
   background-color: #e04604;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-orange.site-name-show h1.site-name a:after {
   color: #e04604;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-green .more-link a {
   background-color: #6a8500;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-green .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-green .item-list-pager li a:hover {
   background-color: #6a8500;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-green .item-list-pager li.pager-current {
   background-color: #6a8500;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-green .vocabulary-links:before {
   color: #6a8500;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-green .l-off-canvas--left {
   background-color: #6a8500;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-green .l-header-wrapper {
   color: #6a8500;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-green a {
   color: #6a8500;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-green a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button {
   background-color: #6a8500;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-green .l-menu-wrapper {
   background-color: #6a8500;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-green.site-name-show h1.site-name a:after {
   color: #6a8500;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-purple .more-link a {
   background-color: #491f70;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-purple .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-purple .item-list-pager li a:hover {
   background-color: #491f70;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-purple .item-list-pager li.pager-current {
   background-color: #491f70;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-purple .vocabulary-links:before {
   color: #491f70;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-purple .l-off-canvas--left {
   background-color: #491f70;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-purple .l-header-wrapper {
   color: #491f70;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-purple a {
   color: #491f70;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-purple a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button {
   background-color: #491f70;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-purple.site-name-show h1.site-name a:after {
   color: #491f70;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-turquoise .more-link a {
   background-color: #02b4ce;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-turquoise .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-turquoise .item-list-pager li a:hover {
   background-color: #02b4ce;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-turquoise .item-list-pager li.pager-current {
   background-color: #02b4ce;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-turquoise .vocabulary-links:before {
   color: #02b4ce;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-turquoise .l-off-canvas--left {
   background-color: #02b4ce;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-turquoise .l-header-wrapper {
   color: #02b4ce;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-turquoise a {
   color: #02b4ce;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-turquoise a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button {
   background-color: #02b4ce;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-turquoise .l-menu-wrapper {
   background-color: #02b4ce;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-turquoise.site-name-show h1.site-name a:after {
   color: #02b4ce;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-pomegranate .more-link a {
   background-color: #c0392b;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-pomegranate .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-pomegranate .item-list-pager li a:hover {
   background-color: #c0392b;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-pomegranate .item-list-pager li.pager-current {
   background-color: #c0392b;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-pomegranate .vocabulary-links:before {
   color: #c0392b;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-pomegranate .l-off-canvas--left {
   background-color: #c0392b;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-pomegranate .l-header-wrapper {
   color: #c0392b;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-pomegranate a {
   color: #c0392b;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-pomegranate a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button {
   background-color: #c0392b;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-pomegranate.site-name-show h1.site-name a:after {
   color: #c0392b;
 }
 
-/* line 14, ../sass/partials/_design.scss */
+/* line 16, ../sass/partials/_design.scss */
 .color-palette-seafoam .more-link a {
   background-color: #16a085;
 }
-/* line 16, ../sass/partials/_design.scss */
+/* line 18, ../sass/partials/_design.scss */
 .color-palette-seafoam .more-link a:hover {
   background-color: #999999;
   color: white;
 }
-/* line 24, ../sass/partials/_design.scss */
+/* line 27, ../sass/partials/_design.scss */
 .color-palette-seafoam .item-list-pager li a:hover {
   background-color: #16a085;
 }
-/* line 28, ../sass/partials/_design.scss */
+/* line 31, ../sass/partials/_design.scss */
 .color-palette-seafoam .item-list-pager li.pager-current {
   background-color: #16a085;
 }
-/* line 34, ../sass/partials/_design.scss */
+/* line 38, ../sass/partials/_design.scss */
 .color-palette-seafoam .vocabulary-links:before {
   color: #16a085;
 }
-/* line 40, ../sass/partials/_design.scss */
+/* line 46, ../sass/partials/_design.scss */
 .color-palette-seafoam .l-off-canvas--left {
   background-color: #16a085;
 }
-/* line 43, ../sass/partials/_design.scss */
+/* line 49, ../sass/partials/_design.scss */
 .color-palette-seafoam .l-header-wrapper {
   color: #16a085;
 }
-/* line 46, ../sass/partials/_design.scss */
+/* line 53, ../sass/partials/_design.scss */
 .color-palette-seafoam a {
   color: #16a085;
 }
-/* line 48, ../sass/partials/_design.scss */
+/* line 55, ../sass/partials/_design.scss */
 .color-palette-seafoam a:hover {
   text-decoration: none;
   color: #999999;
 }
-/* line 53, ../sass/partials/_design.scss */
+/* line 61, ../sass/partials/_design.scss */
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button {
   background-color: #16a085;
   color: white;
 }
-/* line 58, ../sass/partials/_design.scss */
+/* line 66, ../sass/partials/_design.scss */
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover {
   background-color: #999999;
 }
-/* line 62, ../sass/partials/_design.scss */
+/* line 71, ../sass/partials/_design.scss */
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
 }
-/* line 65, ../sass/partials/_design.scss */
+/* line 74, ../sass/partials/_design.scss */
 .color-palette-seafoam.site-name-show h1.site-name a:after {
   color: #16a085;
 }
 
-/* line 72, ../sass/partials/_design.scss */
+/* line 81, ../sass/partials/_design.scss */
 #top-bar {
-  background: #333333;
   min-height: 44px;
+  background: #333333;
 }
-/* line 75, ../sass/partials/_design.scss */
+/* line 84, ../sass/partials/_design.scss */
 #top-bar .menu {
   text-align: right;
 }
-/* line 77, ../sass/partials/_design.scss */
+/* line 86, ../sass/partials/_design.scss */
 #top-bar .menu li {
   display: inline-block;
-  vertical-align: top;
   margin: 4px 0 4px 4px;
+  vertical-align: top;
 }
 
-/* line 85, ../sass/partials/_design.scss */
+/* line 94, ../sass/partials/_design.scss */
 .l-header-wrapper {
-  background: black;
   padding: 4px 0 0 0;
+  background: black;
 }
 
-/* line 90, ../sass/partials/_design.scss */
+/* line 99, ../sass/partials/_design.scss */
 .l-menu-wrapper,
 .l-preface-wrap,
 article {
@@ -658,72 +665,36 @@ article:after {
   clear: both;
 }
 
-/* line 97, ../sass/partials/_design.scss */
+/* line 106, ../sass/partials/_design.scss */
 article {
   padding-bottom: 20px;
   border-bottom: 1px dashed #666666;
 }
 
-/* line 102, ../sass/partials/_design.scss */
+/* line 111, ../sass/partials/_design.scss */
 .l-logo {
   padding-bottom: 10px;
 }
 
-/* line 106, ../sass/partials/_design.scss */
-.node-submitted {
-  margin-bottom: 10px;
-}
-
-/* line 110, ../sass/partials/_design.scss */
-span.submitted {
-  margin: 0 10px 0 0;
-}
-/* line 112, ../sass/partials/_design.scss */
-span.submitted:before {
-  content: "\f007";
-  width: 30px;
-  height: 30px;
-  font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
-}
-
-/* line 119, ../sass/partials/_design.scss */
-span.date:before {
-  content: "\f073";
-  width: 30px;
-  height: 30px;
-  font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
-}
-
-/* line 125, ../sass/partials/_design.scss */
+/* line 115, ../sass/partials/_design.scss */
 .l-branding {
   padding-bottom: 20px;
 }
 
-/* line 129, ../sass/partials/_design.scss */
+/* line 119, ../sass/partials/_design.scss */
 .l-branding,
 .l-logo {
   text-align: center;
 }
 
-/* line 134, ../sass/partials/_design.scss */
-figcaption {
-  font-style: italic;
-  font-size: .9rem;
-  color: #666666;
-}
-
-/* line 140, ../sass/partials/_design.scss */
+/* line 124, ../sass/partials/_design.scss */
 .l-footer-wrapper {
-  background-color: #333333;
   padding-top: 20px;
+  background-color: #333333;
   color: white;
 }
 
-/* line 146, ../sass/partials/_design.scss */
+/* line 130, ../sass/partials/_design.scss */
 .site-name-show h1.site-name a:after {
   content: " \f101 ";
   width: 30px;
@@ -733,7 +704,7 @@ figcaption {
   color: #666666;
 }
 
-/* line 151, ../sass/partials/_design.scss */
+/* line 135, ../sass/partials/_design.scss */
 .block {
   margin-bottom: 20px;
 }
@@ -1070,6 +1041,73 @@ figure {
 html {
   font-size: 100%;
   line-height: 1.5em;
+}
+
+/* line 106, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 106, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* set variables for global use */
+/* line 11, ../sass/partials/_node.scss */
+.node-submitted {
+  margin-bottom: 10px;
+}
+
+/* line 15, ../sass/partials/_node.scss */
+span.submitted {
+  margin: 0 10px 0 0;
+}
+/* line 17, ../sass/partials/_node.scss */
+span.submitted:before {
+  content: "\f007";
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: #666666;
+}
+
+/* line 24, ../sass/partials/_node.scss */
+span.date:before {
+  content: "\f073";
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  margin-right: 4px;
+  color: #666666;
+}
+
+/* line 30, ../sass/partials/_node.scss */
+.user-picture {
+  position: relative;
+  top: -12px;
+  float: right;
+}
+/* line 34, ../sass/partials/_node.scss */
+.user-picture img {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/* line 39, ../sass/partials/_node.scss */
+figure {
+  border: 1px dotted #d1d1d1;
+}
+/* line 41, ../sass/partials/_node.scss */
+figure figcaption {
+  color: #666666;
+  font-style: italic;
+  font-size: .9rem;
+  padding: 4px 8px;
 }
 
 /* line 106, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */

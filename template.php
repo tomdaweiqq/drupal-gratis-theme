@@ -81,44 +81,6 @@ function gratis_menu_tree__primary(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_node().
- *
- * Copied from Sam Richard's (Snugug) fabulous Aurora Base Theme.
- *
- * Backports the following changes made to Drupal 8:
- * - #1077602: Convert node.tpl.php to HTML5.
- */
-function gratis_preprocess_node(&$vars, $hook) {
-  // Global node.
-  $node = $vars['node'];
-
-  $css_node_type = drupal_clean_css_identifier($vars['type']);
-  $css_view_mode = drupal_clean_css_identifier($vars['view_mode']);
-  // Add article ARIA role.
-  $vars['attributes_array']['role'] = 'article';
-  // Add BEM element classes.
-  $vars['title_attributes_array']['class'][] = 'node__title';
-  $vars['content_attributes_array']['class'][] = 'node__content';
-  $vars['content']['links']['#attributes']['class'][] = 'node__links';
-  // Change modifier classes to use BEM syntax.
-  $vars['classes_array'] = preg_replace('/^node-' . $css_node_type . '$/', 'node--' . $css_node_type, $vars['classes_array']);
-  $vars['classes_array'] = preg_replace('/^node-promoted$/', 'node--promoted', $vars['classes_array']);
-  $vars['classes_array'] = preg_replace('/^node-sticky$/', 'node--sticky', $vars['classes_array']);
-  // Add modifier classes for view mode.
-  $vars['classes_array'][] = 'node--' . $css_view_mode;
-  $vars['classes_array'][] = 'node--' . $css_node_type . '--' . $css_view_mode;
-
-  // Show only the username in submitted, the date is handled by node.tpl.php.
-  $vars['submitted'] = t('By !username', array('!username' => $vars['name']));
-
-  // Set date variables using drupal's format_date function.
-  $vars['thedate'] = format_date($node->created, "custom", "j");
-  $vars['themonth'] = format_date($node->created, "custom", "M");
-  $vars['theyear'] = format_date($node->created, "custom", "Y");
-
-}
-
-/**
  * Implements hook_page_alter().
  */
 function gratis_page_alter($page) {
