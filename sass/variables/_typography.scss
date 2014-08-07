@@ -1,4 +1,3 @@
-@import "susy";
 @import "compass";
 
 //Font families and default text color.
@@ -22,9 +21,9 @@ $base-line-height: 24px;
 $round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
 
-$h1: 45px;
-$h2: 30px;
-$h3: 24px;
+$h1: 43px;
+$h2: 32px;
+$h3: 25px;
 $h4: 20px;
 $h5: 16px;
 $h6: 13px;
@@ -43,7 +42,8 @@ $kappa: 12px;
 $para: $theta; 	// Paragraph size
 $quote: $beta;	// Quote size
 
-// Font-Awesome content vars
+// Font-Awesome content vars.
+
 $fatag: \f02b;
 $fabook: \f02d;
 $facomment: \f075;
@@ -51,3 +51,5 @@ $faaddcomment: \f040;
 $fauser: \f007;
 $faraquo: \f101;
 $fadate: \f073;
+$fabqpre: \f10d;
+$fabqpost: \f10e;

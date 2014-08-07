@@ -13,6 +13,12 @@
 @each $hexvar, $designcolor in $palette {
   .color-palette-#{$hexvar} {
 
+    blockquote {
+      &:before {
+        color: $designcolor;
+      }
+    }
+
     .more-link a {
       background-color: $designcolor;
       &:hover {
@@ -76,7 +82,9 @@
     }
 
   }
-} // End color palettes loop.
+
+} // End color palettes loop. ***********
+
 
 #top-bar {
   min-height: 44px;
@@ -125,6 +133,7 @@ article {
   padding-top: $vert-spacing-unit;
   background-color: $charcoal_gray;
   color: $white;
+  min-height: 100px;
 }
 
 .site-name-show h1.site-name a:after {

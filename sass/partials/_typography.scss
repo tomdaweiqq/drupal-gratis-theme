@@ -1,11 +1,12 @@
-
-// import variables
+// Import variables.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+@import "../abstractions/mixins";
 
-//@import "compass";
+// Import compass.
+@import "compass";
 
 /**
 * Font imports
@@ -17,6 +18,10 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600);
 @import url(//fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700);
 @import url(//fonts.googleapis.com/css?family=Noto+Sans);
+
+body {
+  color: $medium_gray2;
+}
 
 // Cpmpass mixin all headers
 #{headings()} {
@@ -40,14 +45,17 @@ h3 {
 
 h4 {
   @include adjust-font-size-to($h4);
+  margin: 0 auto rhythm(.4) auto;
 }
 
 h5 {
   @include adjust-font-size-to($h5);
+  margin: 0 auto rhythm(.3) auto;
 }
 
 h6 {
   @include adjust-font-size-to($h6);
+  margin: 0 auto rhythm(.2) auto;
 }
 
 h1.site-name {
@@ -67,4 +75,36 @@ h3.site-slogan {
 
 .footer h2 {
   color: $light_gray2;
+}
+
+p {
+  margin: 0 auto rhythm(.8) auto;
+}
+
+blockquote {
+  display:block;
+  background-color: $white;
+  padding: 15px 20px 0 110px;
+  margin: 0 0 20px;
+  position: relative;
+  &:before {
+    content: "\201C";
+    font-size: 17rem;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 132px;
+  }
+}
+
+code,
+kbd,
+pre,
+samp {
+  background-color: lighten($light_gray, 12%);
+  display: block;
+  font-family: monospace, monospace;
+  font-size: .9rem;
+  overflow: auto;
+  padding: 20px;
 }

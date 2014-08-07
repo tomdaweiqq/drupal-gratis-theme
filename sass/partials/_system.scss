@@ -1,10 +1,8 @@
-
 // import variables
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
-
 
 // Primary Tabs
 
@@ -14,15 +12,14 @@ ul.tabs.primary {
   overflow: hidden;
   margin: 0 0 10px 0;
   width: 100%;
-
   li {
     float: left;
     line-height: 30px;
     overflow: hidden;
     padding: 0;
     position: relative;
+    list-style: none outside none;
   }
-
   a {
     background-color: $light_gray;
     border-bottom: 1px solid $white;

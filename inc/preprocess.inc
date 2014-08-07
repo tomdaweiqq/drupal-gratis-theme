@@ -201,9 +201,9 @@ function gratis_preprocess_node(&$vars, $hook) {
   // Add article ARIA role.
   $vars['attributes_array']['role'] = 'article';
   // Add BEM element classes.
-  $vars['title_attributes_array']['class'][] = 'node__title';
-  $vars['content_attributes_array']['class'][] = 'node__content';
-  $vars['content']['links']['#attributes']['class'][] = 'node__links';
+  $vars['title_attributes_array']['class'][] = 'node-title';
+  $vars['content_attributes_array']['class'][] = 'node-content';
+  $vars['content']['links']['#attributes']['class'][] = 'node-links';
   // Change modifier classes to use BEM syntax.
   $vars['classes_array'] = preg_replace('/^node-' . $css_node_type . '$/', 'node--' . $css_node_type, $vars['classes_array']);
   $vars['classes_array'] = preg_replace('/^node-promoted$/', 'node--promoted', $vars['classes_array']);
@@ -226,5 +226,3 @@ function gratis_preprocess_node(&$vars, $hook) {
   }
 
 }
-
-
