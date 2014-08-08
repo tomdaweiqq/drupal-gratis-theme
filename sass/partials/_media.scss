@@ -1,8 +1,19 @@
+// Import variables.
+@import "../variables/colors";
+@import "../variables/legacy";
+@import "../variables/typography";
+@import "../variables/misc";
+@import "../abstractions/mixins";
+
+// Import compass.
+@import "compass";
+
+
 img,
 media {
   max-width: 100%;
 }
 
 figure {
-  margin: 0;
+  margin: 0 0 $vert-spacing-unit 0;
 }

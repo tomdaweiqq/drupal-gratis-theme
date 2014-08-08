@@ -39,7 +39,7 @@ require 'breakpoint'
 relative_assets = true
 
 # Conditionally enable line comments when in development mode.
-line_comments = false
+line_comments = true
 disable_warnings = true
 
 # Output debugging info in development mode.

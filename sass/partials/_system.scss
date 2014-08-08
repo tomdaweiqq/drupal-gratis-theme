@@ -1,8 +1,12 @@
-// import variables
+// Import variables.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+@import "../abstractions/mixins";
+
+// Import compass.
+@import "compass";
 
 // Primary Tabs
 
@@ -46,4 +50,3 @@ ul.tabs.primary {
 }
 
 // End Primary tabs
-

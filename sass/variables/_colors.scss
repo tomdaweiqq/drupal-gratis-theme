@@ -2,7 +2,6 @@
 @import "compass";
 
 // Gray tones
-
 $white: #fff;
 $light_gray2: #eaeaea;
 $light_gray: #ccc;
@@ -13,24 +12,22 @@ $dark_gray: #202020;
 $black: #000;
 
 // Colors
-
 $sea_green: #16a085;
 $pomegranate: #c0392b;
 $orange: #e04604;
 $orange_hover: #e04604;
-$chartreuse: #6a8500;
+$olive_green: #6a8500;
 $pink: #b72898;
 $purple: #491f70;
 $purple_accent: #7629bd;
 $turquoise: #02b4ce;
 $turquoise_hover: #02C9E3;
 $green_gray: #7f8c8d;
-
+$mustard: #c3a918;
 $maroon: #851b1d;
 $britered: #ef262b;
 
-
 // Define the color palettes
 
-$palette: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $chartreuse,
-"purple": $purple, "turquoise": $turquoise, "pomegranate": $pomegranate, "seafoam": $sea_green);
+$palette: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $olive_green,
+"purple": $purple, "turquoise": $turquoise, "pomegranate": $pomegranate, "seafoam": $sea_green, "mustard": $mustard);

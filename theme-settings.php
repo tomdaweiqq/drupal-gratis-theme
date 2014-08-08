@@ -40,6 +40,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state) {
       'seafoam' => t('Seafoam Green'),
       'greengray' => t('Green Gray'),
       'pink' => t('Pink'),
+      'mustard' => t('Mustard'),
     ),
   );
 
