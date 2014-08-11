@@ -38,8 +38,6 @@ require 'breakpoint'
 # the absolute path to the theme from the server omega.
 relative_assets = true
 
-# Conditionally enable line comments when in development mode.
-line_comments = true
 disable_warnings = true
 
 # Output debugging info in development mode.
@@ -62,3 +60,6 @@ firesass = true
 
 #environment = :development
 environment = :production
+
+# Conditionally enable line comments when in development mode.
+line_comments = false

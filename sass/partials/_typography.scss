@@ -10,14 +10,8 @@
 
 /**
 * Font imports
-* @todo get rid of some of these.
 */
-@import url(//fonts.googleapis.com/css?family=Maven+Pro:400,700);
-@import url(//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic);
-@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600);
-@import url(//fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700);
-@import url(//fonts.googleapis.com/css?family=Noto+Sans);
+@import url(//fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+Double+Pica|Open+Sans|Montserrat);
 
 body {
   color: $medium_gray2;
@@ -58,9 +52,17 @@ h6 {
   margin: 0 auto rhythm(.2) auto;
 }
 
+.heading-typeface-garamond,
+.heading-typeface-imfell {
+  h2 {
+    @include adjust-font-size-to($h2 + 6);
+    margin: 0 auto rhythm(.6) auto;
+  }
+}
+
 h1.site-name {
   @include adjust-font-size-to($h3);
-  margin: 0 auto rhythm(.5) auto;
+  margin: 0 auto rhythm(.4) auto;
   padding-bottom: 0;
   margin-bottom: 0;
   display: inline-block;
@@ -91,20 +93,51 @@ blockquote {
     content: "\201C";
     font-size: 17rem;
     left: 0;
-    opacity: 0.6;
     position: absolute;
-    top: 132px;
+    top: 115px;
   }
 }
 
+// Code.
 code,
 kbd,
 pre,
 samp {
   background-color: lighten($light_gray, 12%);
   display: block;
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: .9rem;
   overflow: auto;
   padding: 20px;
+}
+
+// Typography loops.
+
+@each $typevar, $designtype in $typeface {
+  .heading-typeface-#{$typevar} {
+    #{headings()} {
+      font-family: $designtype;
+    }
+  }
+}
+
+@each $typevar, $designtype in $typeface {
+  .body-typeface-#{$typevar} {
+    p,
+    .l-main li,
+    .l-main span,
+    .l-main input {
+      font-family: $designtype;
+    }
+  }
+}
+
+.body-typeface-garamond .l-page-wrapper .l-main {
+  p,
+  span {
+    @include adjust-font-size-to(18px);
+}
+  li {
+    @include adjust-font-size-to(18px);
+  }
 }

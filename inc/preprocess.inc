@@ -115,9 +115,17 @@ function gratis_preprocess_html(&$vars) {
   }
 
   // Extra body classes for theme variables.
-  // The Color Palette.
+  // Color palette.
   $file = theme_get_setting('theme_color_palette');
   $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
+
+  // Heading typeface
+  $file = theme_get_setting('gratis_heading_typeface');
+  $vars['classes_array'][] = drupal_html_class('heading-typeface-' . $file);
+
+  // Body typeface.
+  $file = theme_get_setting('gratis_body_typeface');
+  $vars['classes_array'][] = drupal_html_class('body-typeface-' . $file);
 
   // Local css within theme folder if checked.
   if (theme_get_setting('gratis_localcss') == TRUE) {
@@ -140,13 +148,6 @@ function gratis_preprocess_html(&$vars) {
       ));
     }
   }
-
-  // Add general JS.
-  drupal_add_js(drupal_get_path('theme', 'gratis') . '/js/scripts.js', array(
-    'group' => JS_THEME,
-    'preprocess' => TRUE,
-    'weight' => '999',
-  ));
 
   $vars['scripts'] = drupal_get_js();
 
@@ -180,6 +181,7 @@ function gratis_preprocess_page(&$vars, $hook) {
     // Build links.
     $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
     // Provide default theme wrapper function.
+    // Sets up function gratis_menu_tree__primary in menu.inc.
     $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
 }
@@ -187,7 +189,7 @@ function gratis_preprocess_page(&$vars, $hook) {
 /**
  * Implements hook_preprocess_node().
  *
- * Copied from Sam Richard's (Snugug) fabulous Aurora Base Theme.
+ * Copied from Sam Richard's Aurora Base Theme.
  *
  * Backports the following changes made to Drupal 8:
  * - #1077602: Convert node.tpl.php to HTML5.
@@ -224,5 +226,178 @@ function gratis_preprocess_node(&$vars, $hook) {
     $GLOBALS['conf']['user_picture_style'] = 'thumbnail';
     $vars['user_picture'] = theme('user_picture', array('account' => $vars['node']));
   }
+
+}
+
+/**
+ * Preprocess variables for region.tpl.php
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+function gratis_preprocess_region(&$variables, $hook) {
+  // Sidebar regions get some extra classes and a common template suggestion.
+  if (strpos($variables['region'], 'sidebar_') === 0) {
+    $variables['classes_array'][] = 'column';
+    $variables['classes_array'][] = 'l-region l-sidebar';
+    // Allow a region-specific template to override Zen's region--sidebar.
+    array_unshift($variables['theme_hook_suggestions'], 'region__sidebar');
+  }
+  // Use a template with no wrapper for the content region.
+  elseif ($variables['region'] == 'content') {
+    // Allow a region-specific template to override Zen's region--no-wrapper.
+    array_unshift($variables['theme_hook_suggestions'], 'region__no_wrapper');
+  }
+  // Add a SMACSS-style class for header region.
+  elseif ($variables['region'] == 'header') {
+    array_unshift($variables['classes_array'], 'header__region');
+  }
+}
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+function gratis_preprocess_block(&$variables, $hook) {
+  // Use a template with no wrapper for the page's main content.
+  if ($variables['block_html_id'] == 'block-system-main') {
+    $variables['theme_hook_suggestions'][] = 'block__no_wrapper';
+  }
+
+  // Classes describing the position of the block within the region.
+  if ($variables['block_id'] == 1) {
+    $variables['classes_array'][] = 'first';
+  }
+  // The last_in_region property is set in gratis_page_alter().
+  if (isset($variables['block']->last_in_region)) {
+    $variables['classes_array'][] = 'last';
+  }
+  $variables['classes_array'][] = $variables['block_zebra'];
+
+  $variables['title_attributes_array']['class'][] = 'block__title gamma';
+  $variables['title_attributes_array']['class'][] = 'block-title';
+
+  // Add Aria Roles via attributes.
+  switch ($variables['block']->module) {
+    case 'system':
+      switch ($variables['block']->delta) {
+        case 'main':
+          // Note: the "main" role goes in the page.tpl, not here.
+          break;
+        case 'help':
+        case 'powered-by':
+          $variables['attributes_array']['role'] = 'complementary';
+          break;
+        default:
+          // Any other "system" block is a menu block.
+          $variables['attributes_array']['role'] = 'navigation';
+          break;
+      }
+      break;
+    case 'menu':
+    case 'menu_block':
+    case 'blog':
+    case 'book':
+    case 'comment':
+    case 'forum':
+    case 'shortcut':
+    case 'statistics':
+      $variables['attributes_array']['role'] = 'navigation';
+      break;
+    case 'search':
+      $variables['attributes_array']['role'] = 'search';
+      break;
+    case 'help':
+    case 'aggregator':
+    case 'locale':
+    case 'poll':
+    case 'profile':
+      $variables['attributes_array']['role'] = 'complementary';
+      break;
+    case 'node':
+      switch ($variables['block']->delta) {
+        case 'syndicate':
+          $variables['attributes_array']['role'] = 'complementary';
+          break;
+        case 'recent':
+          $variables['attributes_array']['role'] = 'navigation';
+          break;
+      }
+      break;
+    case 'user':
+      switch ($variables['block']->delta) {
+        case 'login':
+          $variables['attributes_array']['role'] = 'form';
+          break;
+        case 'new':
+        case 'online':
+          $variables['attributes_array']['role'] = 'complementary';
+          break;
+      }
+      break;
+  }
+}
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("block" in this case.)
+ */
+function gratis_process_block(&$variables, $hook) {
+  // Drupal 7 should use a $title variable instead of $block->subject.
+  $variables['title'] = isset($variables['block']->subject) ? $variables['block']->subject : '';
+}
+
+/**
+ * Implements hook_process_html().
+ */
+function gratis_process_html(&$vars) {
+  // Flatten out html_attributes and body_attributes.
+  $vars['html_attributes'] = drupal_attributes($vars['html_attributes_array']);
+  $vars['body_attributes'] = drupal_attributes($vars['body_attributes_array']);
+}
+
+/**
+ * Process variables for comment.tpl.php.
+ *
+ * @see comment.tpl.php
+ */
+function gratis_preprocess_comment(&$vars) {
+  $vars['created'] = date('m / j / y', $vars['elements']['#comment']->created);
+  $vars['changed'] = date('m / j / y', $vars['elements']['#comment']->created);
+}
+
+/**
+ * Preprocesses variables for theme_username().
+ *
+ * Modules that make any changes to variables like 'name' or 'extra' must insure
+ * that the final string is safe to include directly in the output by using
+ * check_plain() or filter_xss().
+ *
+ * @see template_process_username()
+ */
+function gratis_preprocess_username(&$vars) {
+  // Update the username so it's the full name of the user.
+  $account = $vars['account'];
+
+  // Revise the name trimming done in template_preprocess_username.
+  $name = $vars['name_raw'] = format_username($account);
+
+  // Trim the altered name as core does, but with a higher character limit.
+  if (drupal_strlen($name) > 35) {
+    $name = drupal_substr($name, 0, 18) . '...';
+  }
+
+  // Assign the altered name to $vars['name'].
+  $vars['name'] = check_plain($name);
 
 }

@@ -5,10 +5,11 @@
 @import "../variables/misc";
 @import "../abstractions/mixins";
 
-// Import compass.
+// Core imports.
 @import "compass";
+@import "breakpoint";
 
-// Comment styles paying tribute to Bartik.
+// Comment styles paying homage to Bartik.
 
 .comment {
   display: table;
@@ -117,3 +118,13 @@
 
 }
 
+@include breakpoint(0 $tab) {
+
+  .user-picture {
+    float: none;
+    margin-top: 14px;
+    text-align: center;
+    top: 0;
+  }
+
+}

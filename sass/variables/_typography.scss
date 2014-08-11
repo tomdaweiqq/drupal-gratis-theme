@@ -2,27 +2,37 @@
 
 //Font families and default text color.
 
+/*
+usage:
+font-family: 'EB Garamond', serif;
+font-family: 'IM Fell Double Pica', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
 $montserrat: 'Montserrat', sans-serif;
-$pt-sans: 'PT Sans', Helvetica, Arial, sans-serif;
-$maven-pro: 'Maven Pro', Helvetica, Arial, sans-serif;
-$opensans: 'Open Sans', Arial, sans-serif;
+$opensans: 'Open-Sans', Arial, sans-serif;
 $font_awesome: FontAwesome;
-$vera-sans: VeraMono-webfont;
+//$vera-sans: VeraMono-webfont;
 $font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
-$font-serif: Georgia, 'Times New Roman', serif;
+$font-serif: 'EB Garamond', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
-$text-color: $medium_gray;
+$antique: 'IM Fell Double Pica', serif;
 
-// Vertical rhythm / typography
 
+// Define the typeface loop.
+$typeface: ("opensans": $font-sans, "garamond": $font-serif, "imfell": $antique,);
+
+// Vertical rhythm / typography.
 $base-font-size: 16px;
 $base-line-height: 24px;
 @include establish-baseline;
 $round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
+$text-color: $medium_gray;
 
 $h1: 43px;
-$h2: 32px;
+$h2: 34px;
 $h3: 25px;
 $h4: 20px;
 $h5: 16px;

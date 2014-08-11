@@ -1,8 +1,12 @@
-// import variables
+// Import variables.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+@import "../abstractions/mixins";
+
+// Import compass.
+@import "compass";
 
 // Off canvas layout styling.
 
@@ -29,18 +33,11 @@
 
 @include breakpoint(0 $tab) {
 
-  //colors
-  // @todo get the right color vars for these
-  $color_0: #202020;
-  $color_1: #f8f8f8;
-  $color_2: #851b1d;
-  $color_3: rgba(0, 0, 0, 0.9);
-
   .off-canvas-left-is-visible {
     .l-off-canvas--left {
       left: 0;
       // convert to box shadow.
-      box-shadow: 0 0 50px 5px $color_3;
+      box-shadow: 0 0 50px 5px $dark_gray;
     }
     .l-off-canvas-show {
       opacity: 0;
@@ -85,15 +82,18 @@
     }
     a {
       padding: 20px 0;
-      background: $color_0;
-      color: $color_1;
-      border-bottom: 1px dotted $light_gray;
+      background: $dark_gray;
+      color: $light_gray2;
+      border-bottom: 1px dotted $light_gray2;
       font-size: 16px;
       font-size: 0.88889rem;
       letter-spacing: .2em;
       text-transform: uppercase;
       font-weight: normal;
       display: block;
+      &.alink:hover {
+        background: lighten($dark_gray, 10%);
+      }
     }
     .nested-menu-item-toggle {
       position: absolute;
