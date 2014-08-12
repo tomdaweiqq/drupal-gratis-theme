@@ -85,6 +85,12 @@ function gratis_item_list($vars) {
   return $output;
 }
 
+
+/**
+ * Returns HTML for a field.
+ *
+ * Custom field override for gratis.
+ */
 function gratis_field($vars) {
   $output = '';
 
