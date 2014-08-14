@@ -1,22 +1,19 @@
-Version 1.2, September 15, 2013
+Version 2.0, August, 2014
 
 -- SUMMARY --
 
-Gratis is a responsive Drupal 7 HTML5 theme designed and developed by Danny
-Englander (Twitter: @highrockmedia). Based on the CSS Unsemantic Framework,
-it allows for a choice color palettes in the theme's settings page. There
-also may be support in the future for the color module to choose your own
-colors for various elements.
+Gratis 2 is a responsive Drupal 7 HTML5 theme designed and developed by
+Danny Englander (Twitter: @Danny_Englander). Gratis 2.0 has been re-architected
+from the ground up using Sass, Susy and Compass.
 
-Gratis is aimed at users who want to get a nice looking theme up and
+Gratis allows for a choice color palettes in the theme's settings page. and is 
+aimed at users who want to get a nice looking theme up and
 running in short order, may not want to take the time to create a sub-theme
-and mess with regions, settings, media queries, and other highly technical
+and fiddle with regions, settings, media queries, and other highly technical
 things. It's also aimed at a casual Drupal user who has some familiarity
 with building sites. This theme also does not require any base theme.
 
 -- Theme Dependency (NONE) -- 
-
-As of Alpha 24, there is no longer a dependency on jQuery update.
 
 -- CONFIGURATION --
 
@@ -27,21 +24,10 @@ available.
 -- THEME SETTINGS UI --
 
 - Choice of several color palettes: Turquoise Blue, Cool Purple, Pumpkin
-Orange, Olive Green, Pomegranate Red, Seafoam Green, Green Gray
+Orange, Olive Green, Pomegranate Red, Seafoam Green, Green Gray.  
+Gratis 2 also has some new colors, Mustard and Royal Turquoise. 
 
 - Toggle Breadcrumbs on or off
-
-LOGOS
-- Default theme logo changes for each color palette.
-- You can also toggle this off and use your own logo. Do this by 
-Unchecking in the theme settings, "Use theme Logo?". Once you
-do this and upload your own logo, it should now display and 
-override the default logo.
-
-*** Note, it's hard to anticipate what effect various shapes and sizes of a 
-custom uploaded logo will have on the theme so unfortunately support 
-cannot be offered through the issue queue for things
-like this.
 
 - Local CSS - Choose to enable local.css file within the theme folder.
 
@@ -59,33 +45,14 @@ theme settings and use your own third party menu system such as Menu Block
 or Superfish Module. You are responsible for any styling and CSS for this.
 (Use local.css as mentioned above.)
 
-- ADMIN PAGES
-Gratis should work reasonably well with admin pages and will continue to
-be improved for those. NOTE, you cannot or should not use Gratis for the
-admin theme if you have the overlay module enabled. It will simply not
-work and is beyond the scope of this project. if you want to use the Overlay,
-then use a dedicated admin theme that is Overlay ready such as Seven or
-Adminimal.
-
-- Node block region Use this region to have a block region within a node
-which will appear right after the content but before any node links or
-comments. Useful for ads or otherwise. Note, to use this and for this
-region to work properly, you must at least be using the standard Drupal 7
-field_body field, otherwise this region will simply sit below whatever
-blocks are assigned to the content region.
-
 - Pinch and Zoom for Touch friendly devices - Option to choose whether to
 pinch and zoom on a touch sensitive device or not. Default is off. Note,
 there is no support for layouts breaking or otherwise if you choose to
 enable this option.
 
-***** A note about the "Top Panel" block region ***** - This block region
-within the theme does not really have any styling so I would not recommend
-using this unless you want to add your own extra styling and jQuery. This
-was done on purpose for some custom modules that I use in concert with this
-block region.
-
 -- ADDITIONAL FEATURES --
+
+- Mobile friendly off-canvas menu
 
 - HTML5 Image captions on default imagefield, may work for others.
 
@@ -135,7 +102,7 @@ avoid upgrade snags.
 -- NOTES --
 
 This theme supports CSS3 / HTML5 and media queries. There is no support for
-IE8 and below so please do not file any issues in regard to this.
+IE9 or below so please do not file any issues in regard to this.
 
 If you require specific customizations that you are not able to do on your
 own, I can offer paid support. Please email me: contact@highrockmedia.com
