@@ -15,6 +15,10 @@
         }
       });
 
+      // Allow jquery above to fully load.
+      $('.js .main-menu-wrapper li a').hide();
+      $('.js .main-menu-wrapper li a').fadeIn(700);
+
     }
   };
 

@@ -7,6 +7,7 @@
 
 // Import compass.
 @import "compass";
+@import "breakpoint";
 
 @include breakpoint($tab) {
 
@@ -46,7 +47,8 @@
         padding: $gutter 2 * $gutter;
         text-transform: uppercase;
         @include transition(all 0.25s ease-in);
-        &:hover {
+        &:hover,
+        &.active {
           background-color: $charcoal_gray;
         }
       }
@@ -60,8 +62,8 @@
             width: 20px;
             height: 20px;
             color: $white;
-            content: " #{$fadownarrow} ";
-            font-family: FontAwesome;
+            content: " ";
+            background: url("#{$path-to-images}/menu-icons.png") no-repeat -17px -298px;
             vertical-align: top;
             font-size: 14px;
           }
