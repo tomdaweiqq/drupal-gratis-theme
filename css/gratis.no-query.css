@@ -10,27 +10,7 @@ img, video {
   height: auto;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
 .comment {
   display: table;
@@ -104,16 +84,6 @@ html {
 .comment-unpublished .comment-text .comment-arrow {
   border-right: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
 }
 
 /* set variables for global use */
@@ -689,11 +659,6 @@ article {
   margin-bottom: 20px;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -811,11 +776,6 @@ fieldset {
   margin: 10px 0 20px 0;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 .l-off-canvas {
   *zoom: 1;
 }
@@ -841,16 +801,6 @@ div.quarter {
   color: #fff;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
 a {
   text-decoration: none;
@@ -861,16 +811,6 @@ a {
   color: white;
   font-size: 1.2rem;
   padding: 5px 14px;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
 }
 
 /* set variables for global use */
@@ -1001,16 +941,6 @@ ol.search-results li span.search-snippet-info {
   padding-left: 0;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
 img,
 media {
@@ -1021,27 +951,7 @@ figure {
   margin: 0 0 20px 0;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
 .node-submitted {
   margin-bottom: 10px;
@@ -1089,16 +999,6 @@ figure figcaption {
   padding: 4px 8px;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
 .l-off-canvas-show,
 .l-off-canvas-hide {
@@ -1122,11 +1022,6 @@ html {
 
 .l-off-canvas-show {
   background: transparent url("../images/menu-icons.png") 0px -6px no-repeat;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
 }
 
 .item-list-pager {
@@ -1162,16 +1057,6 @@ html {
 }
 .item-list-pager ul li.pager-current:hover {
   color: white;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
 }
 
 /* set variables for global use */
@@ -1228,16 +1113,6 @@ ul.tabs.primary a:hover {
   color: white;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
 table {
   width: 100%;
@@ -1265,17 +1140,12 @@ table tbody tr {
   border: 1px solid #d1d1d1;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
 /* set variables for global use */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
 /**
 * Font imports
 */
