@@ -1127,7 +1127,20 @@ html {
   font-size: 100%;
   line-height: 1.5em;
 }
+
 /*
+usage:
+font-family: 'EB Garamond', serif;
+font-family: 'IM Fell Double Pica', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* set variables for global use *//*
 usage:
 font-family: 'EB Garamond', serif;
 font-family: 'IM Fell Double Pica', serif;
@@ -1318,6 +1331,19 @@ html {
 }
 
 /* set variables for global use */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+
+  to {
+    padding: 0;
+  }
+}
 ul.tabs.primary {
   display: table;
   position: relative;
@@ -1695,6 +1721,14 @@ samp {
   .l-menu-wrapper ul.menu li .menu {
     display: none;
   }
+  .l-menu-wrapper ul.menu li li a:before {
+    position: absolute;
+    left: 2%;
+    width: 28px;
+    height: 32px;
+    background: url("../images/menu-icons.png") no-repeat -8px -246px;
+    content: " ";
+  }
   .l-menu-wrapper ul.menu a {
     padding: 20px 0;
     background: #202020;
@@ -1707,7 +1741,7 @@ samp {
     font-weight: normal;
     display: block;
   }
-  .l-menu-wrapper ul.menu a.alink:hover {
+  .l-menu-wrapper ul.menu a.alink:hover, .l-menu-wrapper ul.menu a.active-trail {
     background: #393939;
   }
   .l-menu-wrapper ul.menu .nested-menu-item-toggle {
@@ -1875,19 +1909,6 @@ samp {
     margin-right: 3.44828%;
   }
 
-  body {
-    -webkit-animation: bugfix infinite 1s;
-  }
-
-  @-webkit-keyframes bugfix {
-    from {
-      padding: 0;
-    }
-
-    to {
-      padding: 0;
-    }
-  }
   .main-menu-wrapper {
     font: bold 13px "Open-Sans", Arial, sans-serif;
   }
@@ -1932,6 +1953,21 @@ samp {
   }
   .main-menu-wrapper > ul > li > a:hover {
     background-color: #333333;
+  }
+  .main-menu-wrapper > ul > li.has-child > a.alink {
+    padding: 1em 2.4em 1em 2em;
+  }
+  .main-menu-wrapper > ul > li.has-child > a.alink:after {
+    position: absolute;
+    top: 12px;
+    margin: 0 10px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    content: " \f0ab ";
+    font-family: FontAwesome;
+    vertical-align: top;
+    font-size: 14px;
   }
   .main-menu-wrapper > ul a {
     color: white;

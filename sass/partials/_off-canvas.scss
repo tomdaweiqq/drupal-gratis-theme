@@ -79,6 +79,16 @@
       .menu {
         display: none;
       }
+      li {
+        a:before {
+          position: absolute;
+          left: 2%;
+          width: 28px;
+          height: 32px;
+          background: url("#{$path-to-images}/menu-icons.png") no-repeat -8px -246px;
+          content: " ";
+        }
+      }
     }
     a {
       padding: 20px 0;
@@ -91,9 +101,12 @@
       text-transform: uppercase;
       font-weight: normal;
       display: block;
-      &.alink:hover {
+      &.alink:hover,
+      &.active-trail {
         background: lighten($dark_gray, 10%);
       }
+
+
     }
     .nested-menu-item-toggle {
       position: absolute;

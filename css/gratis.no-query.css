@@ -1143,6 +1143,19 @@ html {
   line-height: 1.5em;
 }
 
+/* set variables for global use */
+/*
+usage:
+font-family: 'EB Garamond', serif;
+font-family: 'IM Fell Double Pica', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
 /*
 usage:
 font-family: 'EB Garamond', serif;
@@ -1323,6 +1336,19 @@ html {
 }
 
 /* set variables for global use */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+
+  to {
+    padding: 0;
+  }
+}
 ul.tabs.primary {
   display: table;
   position: relative;

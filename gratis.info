@@ -13,6 +13,8 @@ stylesheets[all][] = css/gratis.styles.css
 ; override the system.theme css file.
 stylesheets[all][] = system.theme.css
 
+scripts[] = js/jRespond.js
+
 ; Regions --------------------
 regions[top_links]       = Top Links
 regions[thirdparty_menu]  = Main menu (third party menu systems)

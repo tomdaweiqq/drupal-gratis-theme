@@ -8,7 +8,12 @@
   Drupal.behaviors.gratisMiscfunctions = {
     attach: function (context) {
 
-    // Misc jquery.
+      // Check for child elements on parent menu.
+      $('.main-menu-wrapper ul li').each(function(){
+        if($('ul',this).length){
+          $(this).addClass('has-child');
+        }
+      });
 
     }
   };
@@ -58,7 +63,7 @@
   Drupal.behaviors.gratisExpandMenus = {
     attach: function (context) {
 
-// Nested off canvas menu items
+// Nested off canvas menu items.
       $('.menu .expanded').not('.active-trail').removeClass('expanded');
       $('.menu li a').each(function () {
         if ($(this).parent().children('ul').length !== 0) {
