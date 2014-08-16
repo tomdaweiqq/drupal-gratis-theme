@@ -7,7 +7,7 @@
 
 // Import compass.
 @import "compass";
-
+// Vertical rhythm.
 @include establish-baseline;
 
 /**
@@ -131,14 +131,12 @@ samp {
   }
 }
 
+
 @each $typevar, $designtype in $typeface {
-  .body-typeface-#{$typevar} {
-    p,
-    .l-main li,
-    .l-main span,
-    .l-main input {
+  body {
+  &.body-typeface-#{$typevar} {
       font-family: $designtype;
-    }
+  }
   }
 }
 

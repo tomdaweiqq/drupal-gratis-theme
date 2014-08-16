@@ -118,7 +118,7 @@
       border: 0;
       background: url("#{$path-to-images}/menu-icons.png") no-repeat -8px -154px;
     }
-    .expanded {
+    .has-child {
       .nested-menu-item-toggle {
         background: url("#{$path-to-images}/menu-icons.png") no-repeat -8px -202px;
       }

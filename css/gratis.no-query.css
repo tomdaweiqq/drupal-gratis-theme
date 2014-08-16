@@ -1286,24 +1286,15 @@ samp {
   font-family: "IM Fell Double Pica", serif;
 }
 
-.body-typeface-opensans p,
-.body-typeface-opensans .l-main li,
-.body-typeface-opensans .l-main span,
-.body-typeface-opensans .l-main input {
+body.body-typeface-opensans {
   font-family: "Open-Sans", Helvetica, Arial, sans-serif;
 }
 
-.body-typeface-garamond p,
-.body-typeface-garamond .l-main li,
-.body-typeface-garamond .l-main span,
-.body-typeface-garamond .l-main input {
+body.body-typeface-garamond {
   font-family: "EB Garamond", serif;
 }
 
-.body-typeface-imfell p,
-.body-typeface-imfell .l-main li,
-.body-typeface-imfell .l-main span,
-.body-typeface-imfell .l-main input {
+body.body-typeface-imfell {
   font-family: "IM Fell Double Pica", serif;
 }
 

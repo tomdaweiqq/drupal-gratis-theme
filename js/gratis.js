@@ -8,16 +8,7 @@
   Drupal.behaviors.gratisMiscfunctions = {
     attach: function (context) {
 
-      // Check for child elements on parent menu.
-      $('.main-menu-wrapper ul li').each(function(){
-        if($('ul',this).length){
-          $(this).addClass('has-child');
-        }
-      });
-
-      // Allow jquery above to fully load.
-      $('.js .main-menu-wrapper li a').hide();
-      $('.js .main-menu-wrapper li a').fadeIn(700);
+      // misc scripts here.
 
     }
   };
@@ -67,15 +58,22 @@
   Drupal.behaviors.gratisExpandMenus = {
     attach: function (context) {
 
-// Nested off canvas menu items.
-      $('.menu .expanded').not('.active-trail').removeClass('expanded');
+      // Check for child elements on parent menu.
+      $('.main-menu-wrapper ul li').each(function(){
+        if($('ul',this).length){
+          $(this).addClass('has-child');
+        }
+      });
+
+      // Nested off canvas menu items.
+      $('.menu .has-child').not('.active-trail').removeClass('has-child');
       $('.menu li a').each(function () {
         if ($(this).parent().children('ul').length !== 0) {
           $(this).after('<a href="#" class="nested-menu-item-toggle"></a>');
         }
       });
       $('.nested-menu-item-toggle').click(function () {
-        $(this).closest('li').toggleClass('expanded');
+        $(this).closest('li').toggleClass('has-child');
         return false;
       });
     }

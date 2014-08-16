@@ -52,7 +52,7 @@
           background-color: $charcoal_gray;
         }
       }
-      &.has-child {
+      &.expanded {
         > a.alink {
           padding: 1em 2.4em 1em 2em;
           &:after {
