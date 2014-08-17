@@ -32,8 +32,8 @@
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: $medium_gray2;
+  margin-right: 8px;
+  color: lighten($medium_gray2, 10%);
 }
 
 // Menu background mixin
@@ -60,6 +60,15 @@
     border: $size solid transparent;
     border-bottom-color: $medium_gray2;
   }
+}
+
+// Comment arrow mixin.
+@mixin flex-triangle($bw1, $bw2, $bw3, $bw4, $arrow-color) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $bw1 $bw2 $bw3 $bw4;
+  border-color: transparent $arrow-color transparent transparent;
 }
 
 // Mixins for list style types

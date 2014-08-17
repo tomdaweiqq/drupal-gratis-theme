@@ -61,6 +61,7 @@ img {
     .l-content {
       @include span(6 at 4);
       @include push(3);
+      padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-second {
       @include span(3 at 10);
@@ -72,6 +73,7 @@ img {
   .one-sidebar.sidebar-first {
     .l-content {
       @include span(8 at 5);
+      padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-first {
       @include span(4 at 1);
@@ -84,6 +86,7 @@ img {
       // Override susy default here.
       @include span(17 of 24);
       @include bleed(0 2% 0 0);
+      padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-second {
       @include span(7 at 18 of 24);

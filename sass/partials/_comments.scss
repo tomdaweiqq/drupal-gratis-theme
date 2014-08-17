@@ -46,12 +46,10 @@
     position: absolute;
     margin-top: 10px;
     margin-left: -45px;
-    width: 20px;
     height: 40px;
-    border: $white;
     border-color: $white;
     border-right: 1px solid $white;
-    background: url('#{$path-to-images}/comment-arrow.gif') no-repeat 0 center transparent;
+    @include flex-triangle(20px, 20px, 20px, 0, $light_gray);
   }
   .comment-text {
     position: relative;
@@ -111,9 +109,6 @@
         border-bottom: 1px dashed lighten($medium_gray, 10%);
       }
     }
-    .comment-arrow {
-      background: none;
-    }
   }
 
 }
@@ -127,5 +122,8 @@
     top: 0;
   }
 
-}
+  .comment-arrow {
+    display: none;
+  }
 
+}

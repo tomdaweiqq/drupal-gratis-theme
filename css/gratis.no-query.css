@@ -46,12 +46,14 @@ img, video {
   position: absolute;
   margin-top: 10px;
   margin-left: -45px;
-  width: 20px;
   height: 40px;
-  border: white;
   border-color: white;
   border-right: 1px solid white;
-  background: url("../images/comment-arrow.gif") no-repeat 0 center transparent;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #cccccc transparent transparent;
 }
 .comment .comment-text {
   position: relative;
@@ -136,6 +138,13 @@ img, video {
 .color-palette-greengray.site-name-show h1.site-name a:after {
   color: #7f8c8d;
 }
+.color-palette-greengray .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #7f8c8d transparent transparent;
+}
 
 .color-palette-pink blockquote:before {
   color: #b72898;
@@ -185,6 +194,13 @@ img, video {
 }
 .color-palette-pink.site-name-show h1.site-name a:after {
   color: #b72898;
+}
+.color-palette-pink .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #b72898 transparent transparent;
 }
 
 .color-palette-orange blockquote:before {
@@ -236,6 +252,13 @@ img, video {
 .color-palette-orange.site-name-show h1.site-name a:after {
   color: #e04604;
 }
+.color-palette-orange .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #e04604 transparent transparent;
+}
 
 .color-palette-green blockquote:before {
   color: #6a8500;
@@ -285,6 +308,13 @@ img, video {
 }
 .color-palette-green.site-name-show h1.site-name a:after {
   color: #6a8500;
+}
+.color-palette-green .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #6a8500 transparent transparent;
 }
 
 .color-palette-purple blockquote:before {
@@ -336,6 +366,13 @@ img, video {
 .color-palette-purple.site-name-show h1.site-name a:after {
   color: #491f70;
 }
+.color-palette-purple .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #491f70 transparent transparent;
+}
 
 .color-palette-turquoise blockquote:before {
   color: #02b4ce;
@@ -385,6 +422,13 @@ img, video {
 }
 .color-palette-turquoise.site-name-show h1.site-name a:after {
   color: #02b4ce;
+}
+.color-palette-turquoise .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #02b4ce transparent transparent;
 }
 
 .color-palette-pomegranate blockquote:before {
@@ -436,6 +480,13 @@ img, video {
 .color-palette-pomegranate.site-name-show h1.site-name a:after {
   color: #c0392b;
 }
+.color-palette-pomegranate .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #c0392b transparent transparent;
+}
 
 .color-palette-seafoam blockquote:before {
   color: #16a085;
@@ -485,6 +536,13 @@ img, video {
 }
 .color-palette-seafoam.site-name-show h1.site-name a:after {
   color: #16a085;
+}
+.color-palette-seafoam .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #16a085 transparent transparent;
 }
 
 .color-palette-mustard blockquote:before {
@@ -536,6 +594,13 @@ img, video {
 .color-palette-mustard.site-name-show h1.site-name a:after {
   color: #c3a918;
 }
+.color-palette-mustard .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #c3a918 transparent transparent;
+}
 
 .color-palette-royal-turquoise blockquote:before {
   color: #007e95;
@@ -585,6 +650,184 @@ img, video {
 }
 .color-palette-royal-turquoise.site-name-show h1.site-name a:after {
   color: #007e95;
+}
+.color-palette-royal-turquoise .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #007e95 transparent transparent;
+}
+
+.color-palette-maillot-jaune blockquote:before {
+  color: #f0de16;
+}
+.color-palette-maillot-jaune .more-link a {
+  background-color: #f0de16;
+}
+.color-palette-maillot-jaune .more-link a:hover {
+  background-color: #999999;
+  color: white;
+}
+.color-palette-maillot-jaune .item-list-pager li a:hover {
+  background-color: #f0de16;
+}
+.color-palette-maillot-jaune .item-list-pager li.pager-current {
+  background-color: #f0de16;
+}
+.color-palette-maillot-jaune .vocabulary-links:before {
+  color: #f0de16;
+}
+.color-palette-maillot-jaune .l-off-canvas--left {
+  background-color: #f0de16;
+}
+.color-palette-maillot-jaune .l-header-wrapper {
+  color: #f0de16;
+}
+.color-palette-maillot-jaune a {
+  color: #f0de16;
+}
+.color-palette-maillot-jaune a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+.color-palette-maillot-jaune input[type="submit"],
+.color-palette-maillot-jaune input[type="reset"],
+.color-palette-maillot-jaune button {
+  background-color: #f0de16;
+  color: white;
+}
+.color-palette-maillot-jaune input[type="submit"]:hover,
+.color-palette-maillot-jaune input[type="reset"]:hover,
+.color-palette-maillot-jaune button:hover {
+  background-color: #999999;
+}
+.color-palette-maillot-jaune .l-menu-wrapper {
+  background-color: #f0de16;
+}
+.color-palette-maillot-jaune.site-name-show h1.site-name a:after {
+  color: #f0de16;
+}
+.color-palette-maillot-jaune .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #f0de16 transparent transparent;
+}
+
+.color-palette-caribe blockquote:before {
+  color: #a6c9d1;
+}
+.color-palette-caribe .more-link a {
+  background-color: #a6c9d1;
+}
+.color-palette-caribe .more-link a:hover {
+  background-color: #999999;
+  color: white;
+}
+.color-palette-caribe .item-list-pager li a:hover {
+  background-color: #a6c9d1;
+}
+.color-palette-caribe .item-list-pager li.pager-current {
+  background-color: #a6c9d1;
+}
+.color-palette-caribe .vocabulary-links:before {
+  color: #a6c9d1;
+}
+.color-palette-caribe .l-off-canvas--left {
+  background-color: #a6c9d1;
+}
+.color-palette-caribe .l-header-wrapper {
+  color: #a6c9d1;
+}
+.color-palette-caribe a {
+  color: #a6c9d1;
+}
+.color-palette-caribe a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+.color-palette-caribe input[type="submit"],
+.color-palette-caribe input[type="reset"],
+.color-palette-caribe button {
+  background-color: #a6c9d1;
+  color: white;
+}
+.color-palette-caribe input[type="submit"]:hover,
+.color-palette-caribe input[type="reset"]:hover,
+.color-palette-caribe button:hover {
+  background-color: #999999;
+}
+.color-palette-caribe .l-menu-wrapper {
+  background-color: #a6c9d1;
+}
+.color-palette-caribe.site-name-show h1.site-name a:after {
+  color: #a6c9d1;
+}
+.color-palette-caribe .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #a6c9d1 transparent transparent;
+}
+
+.color-palette-chartreuse blockquote:before {
+  color: #c8dc77;
+}
+.color-palette-chartreuse .more-link a {
+  background-color: #c8dc77;
+}
+.color-palette-chartreuse .more-link a:hover {
+  background-color: #999999;
+  color: white;
+}
+.color-palette-chartreuse .item-list-pager li a:hover {
+  background-color: #c8dc77;
+}
+.color-palette-chartreuse .item-list-pager li.pager-current {
+  background-color: #c8dc77;
+}
+.color-palette-chartreuse .vocabulary-links:before {
+  color: #c8dc77;
+}
+.color-palette-chartreuse .l-off-canvas--left {
+  background-color: #c8dc77;
+}
+.color-palette-chartreuse .l-header-wrapper {
+  color: #c8dc77;
+}
+.color-palette-chartreuse a {
+  color: #c8dc77;
+}
+.color-palette-chartreuse a:hover {
+  text-decoration: none;
+  color: #999999;
+}
+.color-palette-chartreuse input[type="submit"],
+.color-palette-chartreuse input[type="reset"],
+.color-palette-chartreuse button {
+  background-color: #c8dc77;
+  color: white;
+}
+.color-palette-chartreuse input[type="submit"]:hover,
+.color-palette-chartreuse input[type="reset"]:hover,
+.color-palette-chartreuse button:hover {
+  background-color: #999999;
+}
+.color-palette-chartreuse .l-menu-wrapper {
+  background-color: #c8dc77;
+}
+.color-palette-chartreuse.site-name-show h1.site-name a:after {
+  color: #c8dc77;
+}
+.color-palette-chartreuse .comment-by-node-author .comment-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #c8dc77 transparent transparent;
 }
 
 #top-bar {
@@ -651,12 +894,92 @@ article {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 
 .block {
   margin-bottom: 20px;
+}
+
+body.color-palette-maillot-jaune,
+body.color-palette-caribe,
+body.color-palette-chartreuse {
+  background-color: #333333;
+  color: #eaeaea;
+}
+body.color-palette-maillot-jaune h1, body.color-palette-maillot-jaune h2, body.color-palette-maillot-jaune h3, body.color-palette-maillot-jaune h4, body.color-palette-maillot-jaune h5, body.color-palette-maillot-jaune h6,
+body.color-palette-caribe h1,
+body.color-palette-caribe h2,
+body.color-palette-caribe h3,
+body.color-palette-caribe h4,
+body.color-palette-caribe h5,
+body.color-palette-caribe h6,
+body.color-palette-chartreuse h1,
+body.color-palette-chartreuse h2,
+body.color-palette-chartreuse h3,
+body.color-palette-chartreuse h4,
+body.color-palette-chartreuse h5,
+body.color-palette-chartreuse h6 {
+  color: #eaeaea;
+}
+body.color-palette-maillot-jaune blockquote,
+body.color-palette-maillot-jaune code,
+body.color-palette-maillot-jaune kbd,
+body.color-palette-maillot-jaune pre,
+body.color-palette-maillot-jaune samp,
+body.color-palette-caribe blockquote,
+body.color-palette-caribe code,
+body.color-palette-caribe kbd,
+body.color-palette-caribe pre,
+body.color-palette-caribe samp,
+body.color-palette-chartreuse blockquote,
+body.color-palette-chartreuse code,
+body.color-palette-chartreuse kbd,
+body.color-palette-chartreuse pre,
+body.color-palette-chartreuse samp {
+  background-color: #666666;
+}
+body.color-palette-maillot-jaune .l-footer-wrapper,
+body.color-palette-caribe .l-footer-wrapper,
+body.color-palette-chartreuse .l-footer-wrapper {
+  background-color: black;
+}
+body.color-palette-maillot-jaune label,
+body.color-palette-maillot-jaune fieldset,
+body.color-palette-caribe label,
+body.color-palette-caribe fieldset,
+body.color-palette-chartreuse label,
+body.color-palette-chartreuse fieldset {
+  color: #eaeaea;
+}
+body.color-palette-maillot-jaune input[type="submit"],
+body.color-palette-maillot-jaune input[type="reset"],
+body.color-palette-maillot-jaune button,
+body.color-palette-caribe input[type="submit"],
+body.color-palette-caribe input[type="reset"],
+body.color-palette-caribe button,
+body.color-palette-chartreuse input[type="submit"],
+body.color-palette-chartreuse input[type="reset"],
+body.color-palette-chartreuse button {
+  color: #333333;
+}
+body.color-palette-maillot-jaune input[type="submit"]:hover,
+body.color-palette-maillot-jaune input[type="reset"]:hover,
+body.color-palette-maillot-jaune button:hover,
+body.color-palette-caribe input[type="submit"]:hover,
+body.color-palette-caribe input[type="reset"]:hover,
+body.color-palette-caribe button:hover,
+body.color-palette-chartreuse input[type="submit"]:hover,
+body.color-palette-chartreuse input[type="reset"]:hover,
+body.color-palette-chartreuse button:hover {
+  background-color: #999999;
+  color: white;
+}
+body.color-palette-maillot-jaune a:hover,
+body.color-palette-caribe a:hover,
+body.color-palette-chartreuse a:hover {
+  color: #eaeaea;
 }
 
 input[type="button"],
@@ -894,8 +1217,8 @@ ul.links.inline li.vocabulary-links:before {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 ul.vocabulary-list li.node-readmore:before,
 ul.links.inline li.node-readmore:before {
@@ -903,8 +1226,8 @@ ul.links.inline li.node-readmore:before {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 ul.vocabulary-list li.comment-comments:before,
 ul.links.inline li.comment-comments:before {
@@ -912,8 +1235,8 @@ ul.links.inline li.comment-comments:before {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 ul.vocabulary-list li.comment-add:before,
 ul.links.inline li.comment-add:before {
@@ -921,8 +1244,8 @@ ul.links.inline li.comment-add:before {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 
 ol.search-results {
@@ -965,8 +1288,8 @@ span.submitted:before {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 
 span.date:before {
@@ -974,8 +1297,8 @@ span.date:before {
   width: 30px;
   height: 30px;
   font-family: FontAwesome;
-  margin-right: 4px;
-  color: #666666;
+  margin-right: 8px;
+  color: gray;
 }
 
 .user-picture {
@@ -1250,7 +1573,7 @@ p {
 blockquote {
   display: block;
   background-color: white;
-  padding: 15px 20px 0 110px;
+  padding: 15px 20px 10px 120px;
   margin: 0 0 20px;
   position: relative;
 }

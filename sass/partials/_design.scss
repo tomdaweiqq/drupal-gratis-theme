@@ -7,6 +7,7 @@
 
 // Import compass.
 @import "compass";
+@import "breakpoint";
 
 // Palettes defined in colors.
 
@@ -80,11 +81,13 @@
     &.site-name-show h1.site-name a:after {
       color: $designcolor;
     }
-
+    .comment-by-node-author {
+      .comment-arrow {
+        @include flex-triangle(20px, 20px, 20px, 0, $designcolor);
+      }
+    }
   }
-
 } // End color palettes loop. ***********
-
 
 #top-bar {
   min-height: 44px;
@@ -144,5 +147,71 @@ article {
 
 .block {
   margin-bottom: $vert-spacing-unit;
+}
+
+// Dark bg / light headings and text for light color palettes.
+
+body.color-palette-maillot-jaune,
+body.color-palette-caribe,
+body.color-palette-chartreuse {
+  background-color: $charcoal_gray;
+  color: $light_gray2;
+  #{headings()} {
+    color: $light_gray2;
+  }
+  blockquote,
+  code,
+  kbd,
+  pre,
+  samp {
+    background-color: $medium_gray2;
+  }
+  .l-menu-wrapper.main-menu {
+    @include breakpoint($tab) {
+    border-bottom: 1px solid $white;
+    }
+  }
+
+  .main-menu-wrapper {
+    @include breakpoint($tab) {
+    > ul {
+      > li > a {
+        color: $medium_gray2;
+        &:hover,
+        &.active {
+          color: $light_gray2;
+        }
+      }
+      ul a {
+        background-color: $light_gray;
+        color: $charcoal_gray;
+        &:hover {
+          background-color: darken($light_gray, 14%);
+        }
+      }
+    }
+    }
+  }
+  .l-footer-wrapper {
+    background-color: $black;
+  }
+  label,
+  fieldset {
+    color: $light_gray2;
+  }
+  input[type="submit"],
+  input[type="reset"],
+  button {
+    color: $charcoal_gray;
+    &:hover {
+      background-color: $medium_gray;
+      color: $white;
+    }
+  }
+  a {
+    &:hover {
+      color: $light_gray2;
+    }
+  }
 }
 
