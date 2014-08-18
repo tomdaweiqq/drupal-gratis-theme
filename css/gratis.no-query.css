@@ -1117,13 +1117,6 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-div.quarter {
-  width: 32.20339%;
-  float: left;
-  margin-right: 1.69492%;
-  color: #fff;
-}
-
 /* set variables for global use */
 a {
   text-decoration: none;
@@ -1535,8 +1528,7 @@ h6 {
   margin: 0 auto 0.3rem auto;
 }
 
-.heading-typeface-garamond h2,
-.heading-typeface-imfell h2 {
+.heading-typeface-garamond h2 {
   font-size: 40px;
   font-size: 2.5rem;
   line-height: 48px;

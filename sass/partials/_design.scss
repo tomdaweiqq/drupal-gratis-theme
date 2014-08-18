@@ -166,11 +166,6 @@ body.color-palette-chartreuse {
   samp {
     background-color: $medium_gray2;
   }
-  .l-menu-wrapper.main-menu {
-    @include breakpoint($tab) {
-    border-bottom: 1px solid $white;
-    }
-  }
 
   .main-menu-wrapper {
     @include breakpoint($tab) {
@@ -214,4 +209,3 @@ body.color-palette-chartreuse {
     }
   }
 }
-

@@ -1114,12 +1114,6 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-div.quarter {
-  width: 32.20339%;
-  float: left;
-  margin-right: 1.69492%;
-  color: #fff;
-}
 /* set variables for global use */
 a {
   text-decoration: none;
@@ -1529,8 +1523,7 @@ h6 {
   margin: 0 auto 0.3rem auto;
 }
 
-.heading-typeface-garamond h2,
-.heading-typeface-imfell h2 {
+.heading-typeface-garamond h2 {
   font-size: 40px;
   font-size: 2.5rem;
   line-height: 48px;
@@ -1635,7 +1628,7 @@ body.body-typeface-imfell {
   border-radius: 17px;
 }
 
-@media (min-width: 0) and (max-width: 44em) {
+@media (min-width: 0) and (max-width: 48em) {
   .comment {
     padding: 10px;
     border: 1px solid #b3b3b3;
@@ -1769,13 +1762,7 @@ body.body-typeface-imfell {
   }
 }
 
-@media (min-width: 44em) {
-  body.color-palette-maillot-jaune .l-menu-wrapper.main-menu,
-  body.color-palette-caribe .l-menu-wrapper.main-menu,
-  body.color-palette-chartreuse .l-menu-wrapper.main-menu {
-    border-bottom: 1px solid white;
-  }
-
+@media (min-width: 48em) {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a,
   body.color-palette-caribe .main-menu-wrapper > ul > li > a,
   body.color-palette-chartreuse .main-menu-wrapper > ul > li > a {
@@ -1839,6 +1826,8 @@ body.body-typeface-imfell {
     float: left;
     margin-right: 1.69492%;
     margin-left: -76.27119%;
+    padding-left: 0%;
+    padding-right: 2%;
   }
   .two-sidebars .l-content {
     width: 49.15254%;
@@ -1851,6 +1840,8 @@ body.body-typeface-imfell {
     width: 23.72881%;
     float: right;
     margin-right: 0;
+    padding-left: 2%;
+    padding-right: 0%;
   }
 
   .one-sidebar.sidebar-first .l-content {
@@ -1863,6 +1854,8 @@ body.body-typeface-imfell {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
+    padding-left: 0%;
+    padding-right: 3%;
   }
 
   .one-sidebar.sidebar-second .l-content {
@@ -1936,12 +1929,6 @@ body.body-typeface-imfell {
     margin-left: 67.79661%;
     margin-right: -100%;
     clear: none;
-  }
-
-  div.quarter {
-    width: 48.27586%;
-    float: left;
-    margin-right: 3.44828%;
   }
 
   .main-menu-wrapper {
@@ -2036,7 +2023,7 @@ body.body-typeface-imfell {
   }
   .main-menu-wrapper > ul ul a {
     white-space: nowrap;
-    padding: 1em;
+    padding: 0.8em 1.8em;
     width: 100%;
     display: block;
     background-color: #333333;

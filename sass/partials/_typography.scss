@@ -62,8 +62,7 @@ h6 {
   margin: 0 auto rhythm(.2) auto;
 }
 
-.heading-typeface-garamond,
-.heading-typeface-imfell {
+.heading-typeface-garamond {
   h2 {
     @include adjust-font-size-to($h2 + 6);
     margin: 0 auto rhythm(.6) auto;

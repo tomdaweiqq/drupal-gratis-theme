@@ -1,12 +1,12 @@
-@import "compass";
-@import "breakpoint";
-@import "susy";
-
 // Vars
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+
+@import "compass";
+@import "breakpoint";
+@import "susy";
 
 .l-off-canvas {
   @include pie-clearfix;
@@ -38,7 +38,7 @@ img {
     border: 1px solid $medium_gray;
   }
 
-  // Set default container width in case it's not set in the UI which would override this;
+  // Set the default container max-width in case it's not set in the gratis' theme UI which would override this.
   .l-setwidth {
     @include container(1100px);
     padding: 0 20px;
@@ -57,6 +57,7 @@ img {
     .region-sidebar-first {
       @include span(3 at 1);
       @include pull(9);
+      @include pad(0, 2%);
     }
     .l-content {
       @include span(6 at 4);
@@ -65,9 +66,9 @@ img {
     }
     .region-sidebar-second {
       @include span(3 at 10);
+      @include pad(2%, 0);
     }
   }
-
 
   // One sidebar - sidebar first.
   .one-sidebar.sidebar-first {
@@ -77,6 +78,7 @@ img {
     }
     .region-sidebar-first {
       @include span(4 at 1);
+      @include pad(0, 3%);
     }
   }
 
@@ -125,13 +127,4 @@ img {
 
   // @todo
 
-}
-
-// Susy breakpoint example within an element.
-div.quarter {
-  @include span(4);
-  color: #fff;
-  @include susy-breakpoint($tab, 6) {
-    @include span(3);
-  }
 }

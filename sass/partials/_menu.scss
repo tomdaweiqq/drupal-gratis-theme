@@ -13,6 +13,7 @@
 
   // small reset, global.
   .main-menu-wrapper {
+    // Menu font always the same.
     font: bold 13px $opensans;
     ul {
       margin: 0;
@@ -98,13 +99,12 @@
       }
       a {
         white-space: nowrap;
-        padding: $gutter;
+        padding: 0.8em 1.8em;
         width: $subMenuItemWidth;
         display: block;
         background-color: $charcoal_gray;
         border-color: lighten($baseMenuBackground, 15%);
         &:hover {
-
           background-color: lighten($charcoal_gray, 20%);
           border-color: $secondaryMenuBackground;
         }
