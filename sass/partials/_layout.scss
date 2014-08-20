@@ -21,6 +21,14 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+.no-sidebars {
+  figure {
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @include breakpoint(0 $tab) {
 
   .l-setwidth {

@@ -29,7 +29,6 @@ span.date {
 
 .user-picture {
   position: relative;
-  top: -12px;
   float: right;
   img {
     @include border-radius(50px);
@@ -45,3 +44,4 @@ figure {
     padding: 4px 8px;
   }
 }
+

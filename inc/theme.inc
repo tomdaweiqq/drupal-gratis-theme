@@ -161,3 +161,17 @@ function gratis_breadcrumb($vars) {
     }
   }
 }
+
+/**
+ * Returns HTML for a feed icon.
+ *
+ * Override the feed icon.
+ */
+function gratis_feed_icon($vars) {
+  // Define the module path for use below.
+  $theme_path = drupal_get_path('theme', 'gratis');
+  $text = t('Subscribe to !feed-title', array('!feed-title' => $vars['title']));
+  if ($image = theme('image', array('path' => $theme_path . '/images/feed.png', 'width' => 32, 'height' => 32, 'alt' => $text))) {
+    return l($image, $vars['url'], array('html' => TRUE, 'attributes' => array('class' => array('feed-icon'), 'title' => $text)));
+  }
+}

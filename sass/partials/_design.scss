@@ -20,6 +20,13 @@
       }
     }
 
+    .feed-icon {
+      img {
+        background-color: $designcolor;
+        padding: 4px;
+      }
+    }
+
     .more-link a {
       background-color: $designcolor;
       &:hover {
@@ -47,9 +54,6 @@
       }
     }
 
-    .block {
-    }
-
     .l-off-canvas--left {
       background-color: $designcolor;
     }
@@ -67,7 +71,8 @@
 
     input[type="submit"],
     input[type="reset"],
-    button {
+    button,
+    .button a {
       background-color: $designcolor;
       color: $white;
       &:hover {
@@ -83,11 +88,19 @@
     }
     .comment-by-node-author {
       .comment-arrow {
+        // Get the mixin.
         @include flex-triangle(20px, 20px, 20px, 0, $designcolor);
       }
     }
   }
 } // End color palettes loop. ***********
+
+body {
+  background-color: $charcoal_gray;
+  .l-page-wrapper {
+    background-color: $white;
+  }
+}
 
 #top-bar {
   min-height: 44px;
@@ -149,13 +162,21 @@ article {
   margin-bottom: $vert-spacing-unit;
 }
 
+.feed-icon {
+  display: block;
+  margin-bottom: $vert-spacing-unit;
+}
+
 // Dark bg / light headings and text for light color palettes.
 
 body.color-palette-maillot-jaune,
 body.color-palette-caribe,
 body.color-palette-chartreuse {
-  background-color: $charcoal_gray;
+  background-color: $black;
   color: $light_gray2;
+  .l-page-wrapper {
+    background-color: $charcoal_gray;
+  }
   #{headings()} {
     color: $light_gray2;
   }
@@ -171,7 +192,7 @@ body.color-palette-chartreuse {
     @include breakpoint($tab) {
     > ul {
       > li > a {
-        color: $medium_gray2;
+        color: $charcoal_gray;
         &:hover,
         &.active {
           color: $light_gray2;
@@ -196,7 +217,8 @@ body.color-palette-chartreuse {
   }
   input[type="submit"],
   input[type="reset"],
-  button {
+  button,
+  .button a {
     color: $charcoal_gray;
     &:hover {
       background-color: $medium_gray;
@@ -208,4 +230,4 @@ body.color-palette-chartreuse {
       color: $light_gray2;
     }
   }
-}
+} // End dark render.

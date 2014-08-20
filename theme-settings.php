@@ -32,7 +32,6 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   );
 
   // Gratis typography.
-  // @todo
   $form['gratis_typography'] = array(
     '#type' => 'fieldset',
     '#title' => t('Gratis typography'),
@@ -86,9 +85,10 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
       'greengray' => t('Green Gray'),
       'pink' => t('Pink'),
       'mustard' => t('Mustard'),
-      'royal-turquoise' => t('Royal Turquoise'),
+      'surf-green' => t('Surf Green'),
       'maillot-jaune' => t('Maillot Jaune (Dark background)'),
       'caribe' => t('Caribe (Dark background)'),
+      'chartreuse' => t('Chartreuse (Dark background)'),
     ),
   );
 

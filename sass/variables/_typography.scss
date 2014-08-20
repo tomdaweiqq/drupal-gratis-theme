@@ -16,7 +16,7 @@ $typeface: ("opensans": $font-sans, "garamond": $font-serif, "imfell": $antique,
 
 // Vertical rhythm / typography.
 $base-font-size: 16px;
-$base-line-height: 24px;
+$base-line-height: 26px;
 $round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
 $text-color: $medium_gray;
@@ -54,3 +54,4 @@ $fadate: \f073;
 $fabqpre: \f10d;
 $fabqpost: \f10e;
 $fadownarrow: \f0ab;
+$fasearch: \f002;

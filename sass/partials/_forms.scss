@@ -1,22 +1,27 @@
-// Form elements.
-// import variables
+// Import variables.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+@import "../abstractions/mixins";
 
+// Import compass.
 @import "compass";
+@import "breakpoint";
 
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-button {
+button,
+.button a {
   @include no-shadows-borders;
   margin: 10px 10px 10px 0;
-  font-size: 1.2rem;
   padding: 0 20px;
-  height: 32px;
+  height: 36px;
   vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1rem;
 }
 
 @-moz-document url-prefix() {
@@ -29,9 +34,20 @@ button {
   }
 }
 
+input {
+  line-height: inherit;
+}
+
+.button a {
+  display: inline-block;
+  line-height: inherit;
+  padding-top: 7px;
+  margin-top: 10px;
+}
+
 //@extend-elements
 
-%extend_1 {
+%noform_margin {
   margin-top: 0;
   margin-bottom: 0;
   white-space: nowrap;
@@ -44,11 +60,38 @@ button {
   .description {
     font-size: 0.85em;
   }
+  &.form-item-search-block-form {
+    position: relative;
+    &:after {
+      content: "#{$fasearch}";
+      background-color: $medium_gray;
+      color: $white;
+      font-family: FontAwesome;
+      font-size: 21px;
+      height: 44px;
+      margin-right: 0;
+      padding: 9px 12px;
+      position: absolute;
+      right: -33px;
+      top: -15px;
+      width: 40px;
+    }
+    input[type=text] {
+      width: 76%;
+      padding: 8px;
+    }
+    @include breakpoint($tab) {
+      input[type=text] {
+        width: 98%;
+      }
+    }
+  }
+
   textarea {
+    padding: 8px;
     border: 1px solid darken($light_gray2, 10%);
     color: $medium_gray2;
-    padding: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   select {
     color: $medium_gray2;
@@ -63,12 +106,12 @@ button {
     border: 2px solid $britered;
   }
   input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
+    margin: 0 0 4px 0;
+    padding: 8px 2px 8px 8px;
+    width: 96%;
     border: 1px solid darken($light_gray2, 10%);
     color: $medium_gray2;
     font-size: 1.3rem;
-    padding: 10px 2px 10px 8px;
-    width: 96%;
-    margin: 0 0 4px 0;
   }
 }
 
@@ -78,19 +121,16 @@ button {
 }
 
 tr {
-  &.odd .form-item {
-    @extend %extend_1;
-  }
-  &.even .form-item {
-    @extend %extend_1;
+.form-item {
+    @extend %noform_margin;
   }
 }
 
 label {
   display: block;
-  font-weight: bold;
-  color: $medium_gray2;
   margin: 0 0 4px 0;
+  color: $medium_gray2;
+  font-weight: bold;
   &.option {
     display: inline;
     font-weight: normal;
@@ -100,8 +140,8 @@ label {
 input {
   &.form-radio,
   &.form-checkbox {
-    vertical-align: middle;
     margin: 0 6px 0 0;
+    vertical-align: middle;
     cursor: pointer;
   }
 }
@@ -133,7 +173,7 @@ input {
 }
 
 fieldset {
+  margin: 10px 0 20px 0;
   border: 1px solid darken($light_gray2, 10%);
   color: $medium_gray2;
-  margin: 10px 0 20px 0;
 }
