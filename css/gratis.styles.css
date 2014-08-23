@@ -1180,7 +1180,7 @@ article {
 }
 
 .l-footer-wrapper {
-  padding-top: 20px;
+  padding: 20px 0 40px 0;
   min-height: 100px;
   background-color: #333333;
   color: white;
@@ -1361,12 +1361,14 @@ button,
   padding: 0 20px;
   height: 36px;
   border: none;
+  -webkit-border-radius: 0;
   box-shadow: none;
   vertical-align: middle;
   text-transform: uppercase;
   text-shadow: none;
   letter-spacing: 0.03em;
   font-size: 1rem;
+  -webkit-appearance: none;
 }
 
 @-moz-document url-prefix() {
@@ -1380,7 +1382,9 @@ button,
 }
 
 input {
+  -webkit-border-radius: 0;
   line-height: inherit;
+  -webkit-appearance: none;
 }
 
 .button a {
@@ -1928,6 +1932,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #666666;
+  font-weight: normal;
 }
 
 h1 {
@@ -2114,6 +2119,8 @@ body.body-typeface-imfell {
   }
 
   .comment .comment-text h3 {
+    display: inline-block;
+    margin-top: 10px;
     border-bottom: 1px dashed #b3b3b3;
   }
 
@@ -2128,116 +2135,32 @@ body.body-typeface-imfell {
     display: none;
   }
 
+  .l-logo {
+    margin: 34px 0 0;
+  }
+
+  tr .form-item {
+    white-space: normal;
+  }
+
   .l-setwidth {
     padding: 0 20px;
   }
 
-  .off-canvas-left-is-visible .l-off-canvas--left {
-    left: 0;
-    box-shadow: 0 0 50px 5px #202020;
+  h1 {
+    margin: 0 auto 0.65rem auto;
+    font-size: 34px;
+    font-size: 2.125rem;
+    line-height: 39px;
+    line-height: 2.4375rem;
   }
 
-  .off-canvas-left-is-visible .l-off-canvas-show {
-    opacity: 0;
+  blockquote:before {
+    opacity: .6;
   }
 
-  .l-off-canvas-hide--left {
-    left: 95%;
-    margin-left: -40px;
-    background-position: 1px -43px;
-  }
-
-  .l-off-canvas {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -80%;
-    z-index: 99;
-    padding: 60px 0 0 0;
-    width: 80%;
-    cursor: pointer;
-    -webkit-transition: all 0.25s ease-in;
-    -moz-transition: all 0.25s ease-in;
-    transition: all 0.25s ease-in;
-  }
-
-  .l-off-canvas.is-visible {
-    left: 0;
-    cursor: auto;
-  }
-
-  .l-off-canvas.is-visible .l-off-canvas-show {
-    display: none;
-  }
-
-  .l-off-canvas.is-visible .l-off-canvas-hide {
-    display: block;
-  }
-
-  .l-off-canvas .l-off-canvas-show {
-    display: block;
-  }
-
-  .l-menu-wrapper ul.menu {
-    text-align: center;
-  }
-
-  .l-menu-wrapper ul.menu li {
-    position: relative;
-  }
-
-  .l-menu-wrapper ul.menu li .menu {
-    display: none;
-  }
-
-  .l-menu-wrapper ul.menu li li a:before {
-    position: absolute;
-    left: 2%;
-    width: 28px;
-    height: 32px;
-    background: url("../images/menu-icons.png") no-repeat -8px -246px;
-    content: " ";
-  }
-
-  .l-menu-wrapper ul.menu a {
-    display: block;
-    padding: 20px 0;
-    border-bottom: 1px dotted #eaeaea;
-    background: #202020;
-    color: #eaeaea;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-    font-weight: normal;
-    font-size: 16px;
-    font-size: 0.88889rem;
-  }
-
-  .l-menu-wrapper ul.menu a.alink:hover, .l-menu-wrapper ul.menu a.active-trail {
-    background: #393939;
-  }
-
-  .l-menu-wrapper ul.menu .nested-menu-item-toggle {
-    position: absolute;
-    top: 1.3em;
-    right: 0;
-    padding-left: 12%;
-    width: 40px;
-    height: 40px;
-    border: 0;
-    background: url("../images/menu-icons.png") no-repeat -8px -154px;
-  }
-
-  .l-menu-wrapper ul.menu .has-child .nested-menu-item-toggle {
-    background: url("../images/menu-icons.png") no-repeat -8px -202px;
-  }
-
-  .l-menu-wrapper ul.menu .has-child .menu {
-    display: block;
-  }
-
-  .l-page {
-    position: relative;
-    height: 100%;
+  blockquote {
+    padding: 14px;
   }
 }
 
@@ -2423,7 +2346,9 @@ body.body-typeface-imfell {
     margin-right: -100%;
     margin-left: 67.79661%;
   }
+}
 
+@media (min-width: 64.5em) {
   .main-menu-wrapper ul {
     margin: 0;
     padding: 0;
@@ -2539,7 +2464,7 @@ body.body-typeface-imfell {
   }
 
   .main-menu-wrapper > ul ul a:hover {
-    border-color: #851b1d;
+    border-color: #999999;
     background-color: #666666;
   }
 
@@ -2558,5 +2483,115 @@ body.body-typeface-imfell {
 
   .nested-menu-item-toggle {
     display: none;
+  }
+}
+
+@media (min-width: 0) and (max-width: 64.5em) {
+  .off-canvas-left-is-visible .l-off-canvas--left {
+    left: 0;
+    box-shadow: 0 0 50px 5px #202020;
+  }
+
+  .off-canvas-left-is-visible .l-off-canvas-show {
+    opacity: 0;
+  }
+
+  .l-off-canvas-hide--left {
+    left: 95%;
+    margin-left: -40px;
+    background-position: 1px -43px;
+  }
+
+  .l-off-canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -80%;
+    z-index: 99;
+    padding: 60px 0 0 0;
+    width: 80%;
+    cursor: pointer;
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+  }
+
+  .l-off-canvas.is-visible {
+    left: 0;
+    cursor: auto;
+  }
+
+  .l-off-canvas.is-visible .l-off-canvas-show {
+    display: none;
+  }
+
+  .l-off-canvas.is-visible .l-off-canvas-hide {
+    display: block;
+  }
+
+  .l-off-canvas .l-off-canvas-show {
+    display: block;
+  }
+
+  .l-menu-wrapper ul.menu {
+    text-align: center;
+  }
+
+  .l-menu-wrapper ul.menu li {
+    position: relative;
+  }
+
+  .l-menu-wrapper ul.menu li .menu {
+    display: none;
+  }
+
+  .l-menu-wrapper ul.menu li li a:before {
+    position: absolute;
+    left: 2%;
+    width: 28px;
+    height: 32px;
+    background: url("../images/menu-icons.png") no-repeat -8px -246px;
+    content: " ";
+  }
+
+  .l-menu-wrapper ul.menu a {
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px dotted #eaeaea;
+    background: #202020;
+    color: #eaeaea;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: normal;
+    font-size: 16px;
+    font-size: 0.88889rem;
+  }
+
+  .l-menu-wrapper ul.menu a.alink:hover, .l-menu-wrapper ul.menu a.active-trail {
+    background: #393939;
+  }
+
+  .l-menu-wrapper ul.menu .nested-menu-item-toggle {
+    position: absolute;
+    top: 1.3em;
+    right: 0;
+    padding-left: 12%;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: url("../images/menu-icons.png") no-repeat -8px -154px;
+  }
+
+  .l-menu-wrapper ul.menu .has-child .nested-menu-item-toggle {
+    background: url("../images/menu-icons.png") no-repeat -8px -202px;
+  }
+
+  .l-menu-wrapper ul.menu .has-child .menu {
+    display: block;
+  }
+
+  .l-page {
+    position: relative;
+    height: 100%;
   }
 }

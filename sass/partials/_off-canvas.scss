@@ -5,8 +5,9 @@
 @import "../variables/misc";
 @import "../abstractions/mixins";
 
-// Import compass.
+// Core imports.
 @import "compass";
+@import "breakpoint";
 
 // Off canvas layout styling.
 
@@ -31,7 +32,7 @@
   background: transparent url("#{$path-to-images}/menu-icons.png") 0px -6px no-repeat;
 }
 
-@include breakpoint(0 $tab) {
+@include breakpoint(0 $menu) {
 
   .off-canvas-left-is-visible {
     .l-off-canvas--left {
@@ -135,7 +136,7 @@
 
 }
 
-@include breakpoint($tab) {
+@include breakpoint($menu) {
 
   .l-off-canvas-show {
     display: none;

@@ -16,6 +16,7 @@ $container-style: magic;
 $container-width: 1100px;
 
 $tab: 48em;
+$menu: 64.5em;
 $desk: 70em;
 
 $susy: (
@@ -25,15 +26,15 @@ gutters: .25,
 
 // Menu Vars.
 
-$subMenuItemWidth: 100%;			// Minimum width for submenus' items
-$baseMenuBackground: $dark_gray;			// Base color theme
-$secondaryMenuBackground: $maroon; 	// Secondary color (highlights, triangles...)
-$baseMenuColor: $white;				// Proper menu items color
-$gutter: 1em;						// Base gutter
-$input: "input[type=checkbox]";  	// Checkbox hack selector
+$subMenuItemWidth: 100%;
+$baseMenuBackground: $dark_gray;
+$secondaryMenuBackground: $medium_gray;
+$baseMenuColor: $white;
+$gutter: 1em;
+$input: "input[type=checkbox]";
 $path-to-images: '../images';
 
-//$experimental-support-for-mozilla : true !default;
+$experimental-support-for-mozilla : true !default;
 $experimental-support-for-webkit : true !default;
 $support-for-original-webkit-gradients : true !default;
 $experimental-support-for-opera : true !default;

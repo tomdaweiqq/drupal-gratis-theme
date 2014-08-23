@@ -135,6 +135,9 @@ article {
 
 .l-logo {
   padding-bottom: 10px;
+  @include breakpoint(0 $tab) {
+      margin: 34px 0 0;
+  }
 }
 
 .l-branding {
@@ -147,7 +150,7 @@ article {
 }
 
 .l-footer-wrapper {
-  padding-top: $vert-spacing-unit;
+  padding: $vert-spacing-unit 0 #{(2 * $vert-spacing-unit)} 0;
   background-color: $charcoal_gray;
   color: $white;
   min-height: 100px;

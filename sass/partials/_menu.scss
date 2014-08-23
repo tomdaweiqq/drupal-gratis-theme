@@ -22,7 +22,7 @@
 }
 
 // Desktop specific menu within the media query.
-@include breakpoint($tab) {
+@include breakpoint($menu) {
 
   // Small reset, global.
   .main-menu-wrapper {
