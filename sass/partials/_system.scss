@@ -7,6 +7,7 @@
 
 // Import compass.
 @import "compass";
+@import "breakpoint";
 
 // Fix for Android
 // http://timpietrusky.com/advanced-checkbox-hack
@@ -23,7 +24,7 @@ body {
   }
 }
 
-// Primary Tabs
+// Primary Tabs.
 
 ul.tabs.primary {
   display: table;
@@ -64,4 +65,10 @@ ul.tabs.primary {
 
 }
 
-// End Primary tabs
+// End Primary tabs.
+
+.contextual-links {
+  a {
+    font-family: $font-sans;
+  }
+}

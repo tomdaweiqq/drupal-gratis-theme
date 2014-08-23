@@ -7,22 +7,13 @@
 
 // Import compass.
 @import "compass";
+@import "breakpoint";
 
 // Vertical rhythm.
 @include establish-baseline;
 
-/**
-* Font imports
-*/
+// Google font import.
 @import url(//fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+Double+Pica|Open+Sans|Montserrat);
-
-/*
-usage:
-font-family: 'EB Garamond', serif;
-font-family: 'IM Fell Double Pica', serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
 
 body {
   color: $medium_gray2;
@@ -90,21 +81,43 @@ h3.site-slogan {
 }
 
 p {
-  margin: 0 auto rhythm(.8) auto;
+  margin: 0 auto rhythm(.85) auto;
 }
+
+//blockquote {
+//  display:block;
+//  background-color: $white;
+//  padding: 15px 20px 10px 120px;
+//  margin: 0 0 20px;
+//  position: relative;
+//  &:before {
+//    content: "\201C";
+//    font-size: 17rem;
+//    left: 0;
+//    position: absolute;
+//    top: 115px;
+//  }
+//}
 
 blockquote {
   display:block;
-  background-color: $white;
-  padding: 15px 20px 10px 120px;
+  background: $white;
+  padding: 15px 20px 15px 170px;
   margin: 0 0 20px;
   position: relative;
+  border: 1px dotted $medium_gray;
   &:before {
     content: "\201C";
-    font-size: 17rem;
-    left: 0;
+    font-family: Georgia, serif;
+    font-size: 16em;
+    font-weight: bold;
+    color: $medium_gray;
     position: absolute;
-    top: 115px;
+    left: 10px;
+    line-height: 0.9;
+  }
+  &:after {
+    content: "";
   }
 }
 
@@ -119,6 +132,7 @@ samp {
   font-size: .9rem;
   overflow: auto;
   padding: 20px;
+  font: $font-mono;
 }
 
 // Typography loops.
@@ -131,7 +145,6 @@ samp {
   }
 }
 
-
 @each $typevar, $designtype in $typeface {
   body {
   &.body-typeface-#{$typevar} {
@@ -143,9 +156,10 @@ samp {
 .body-typeface-garamond .l-page-wrapper .l-main {
   p,
   span {
-    @include adjust-font-size-to(18px);
+    @include adjust-font-size-to(19px);
 }
   li {
-    @include adjust-font-size-to(18px);
+    @include adjust-font-size-to(19px);
   }
 }
+

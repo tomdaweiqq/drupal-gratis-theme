@@ -13,7 +13,7 @@
 .main-menu-wrapper {
   a {
     // Menu font always the same.
-    font-family: $opensans;
+    font-family: $font-sans;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: .04em;
@@ -107,14 +107,20 @@
           > a {
           }
         }
+        &.last {
+          a {
+            border-bottom: none;
+          }
+        }
       }
       a {
         white-space: nowrap;
-        padding: 0.6em 1.8em;
+        padding: 0.4em 1.8em;
         width: $subMenuItemWidth;
         display: block;
         background-color: $charcoal_gray;
         border-color: lighten($baseMenuBackground, 15%);
+        border-bottom: 1px dotted $medium_gray2;
         &:hover {
           background-color: lighten($charcoal_gray, 20%);
           border-color: $secondaryMenuBackground;

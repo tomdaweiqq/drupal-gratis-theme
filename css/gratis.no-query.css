@@ -47,8 +47,6 @@ img, video {
   margin-top: 10px;
   margin-left: -45px;
   height: 40px;
-  border-color: white;
-  border-right: 1px solid white;
   width: 0;
   height: 0;
   border-style: solid;
@@ -1035,6 +1033,11 @@ body.color-palette-chartreuse pre,
 body.color-palette-chartreuse samp {
   background-color: #666666;
 }
+body.color-palette-maillot-jaune figure figcaption,
+body.color-palette-caribe figure figcaption,
+body.color-palette-chartreuse figure figcaption {
+  color: #cccccc;
+}
 body.color-palette-maillot-jaune .l-footer-wrapper,
 body.color-palette-caribe .l-footer-wrapper,
 body.color-palette-chartreuse .l-footer-wrapper {
@@ -1082,8 +1085,44 @@ body.color-palette-caribe a:hover,
 body.color-palette-chartreuse a:hover {
   color: #eaeaea;
 }
+body.color-palette-maillot-jaune table tr.even,
+body.color-palette-caribe table tr.even,
+body.color-palette-chartreuse table tr.even {
+  background-color: #666666;
+}
+body.color-palette-maillot-jaune table tr.odd,
+body.color-palette-caribe table tr.odd,
+body.color-palette-chartreuse table tr.odd {
+  background-color: #525252;
+}
+
+.color-palette-purple.site-name-show h1.site-name a:after {
+  color: #b58dd9;
+}
+.color-palette-purple.site-name-show h1.site-name a:after:hover, .color-palette-purple.site-name-show h1.site-name a:after:hover:after {
+  color: #cccccc;
+}
+.color-palette-purple .l-header-wrapper a,
+.color-palette-purple .l-footer-wrapper a {
+  color: #b58dd9;
+}
+.color-palette-purple .l-header-wrapper a:hover, .color-palette-purple .l-header-wrapper a:hover:after,
+.color-palette-purple .l-footer-wrapper a:hover,
+.color-palette-purple .l-footer-wrapper a:hover:after {
+  color: #cccccc;
+}
+.color-palette-purple .l-header-wrapper:after,
+.color-palette-purple .l-footer-wrapper:after {
+  color: #b58dd9;
+}
 
 /* set variables for global use */
+tr .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -1121,39 +1160,12 @@ input {
   margin-top: 10px;
 }
 
-tr .form-item {
-  margin-top: 0;
-  margin-bottom: 0;
-  white-space: nowrap;
-}
-
 .form-item {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 .form-item .description {
   font-size: 0.85em;
-}
-.form-item.form-item-search-block-form {
-  position: relative;
-}
-.form-item.form-item-search-block-form:after {
-  content: "\f002";
-  background-color: #999999;
-  color: white;
-  font-family: FontAwesome;
-  font-size: 21px;
-  height: 44px;
-  margin-right: 0;
-  padding: 9px 12px;
-  position: absolute;
-  right: -33px;
-  top: -15px;
-  width: 40px;
-}
-.form-item.form-item-search-block-form input[type=text] {
-  width: 76%;
-  padding: 8px;
 }
 .form-item textarea {
   padding: 8px;
@@ -1176,7 +1188,7 @@ tr .form-item {
 .form-item input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
   margin: 0 0 4px 0;
   padding: 8px 2px 8px 8px;
-  width: 96%;
+  width: 100%;
   border: 1px solid #d1d1d1;
   color: #666666;
   font-size: 1.3rem;
@@ -1202,6 +1214,25 @@ input.form-radio, input.form-checkbox {
   margin: 0 6px 0 0;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.block-search .form-actions.form-wrapper {
+  margin-top: 4px;
+  position: relative;
+  display: inline-block;
+}
+.block-search .form-actions.form-wrapper input[type=submit] {
+  padding: 0 46px 0 20px;
+}
+.block-search .form-actions.form-wrapper:after {
+  content: "\f002";
+  color: white;
+  font-family: FontAwesome;
+  font-size: 20px;
+  top: 1px;
+  position: relative;
+  right: 40px;
+  pointer-events: none;
 }
 
 .marker {
@@ -1410,7 +1441,7 @@ figure {
 
 /* set variables for global use */
 .main-menu-wrapper a {
-  font-family: "Open-Sans", Arial, sans-serif;
+  font-family: "Open-Sans", Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: .04em;
@@ -1577,6 +1608,10 @@ ul.tabs.primary a:hover {
   color: white;
 }
 
+.contextual-links a {
+  font-family: "Open-Sans", Helvetica, Arial, sans-serif;
+}
+
 /* set variables for global use */
 table {
   width: 100%;
@@ -1610,16 +1645,6 @@ html {
   line-height: 1.625em;
 }
 
-/**
-* Font imports
-*/
-/*
-usage:
-font-family: 'EB Garamond', serif;
-font-family: 'IM Fell Double Pica', serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
 body {
   color: #666666;
 }
@@ -1707,22 +1732,29 @@ h3.site-slogan {
 }
 
 p {
-  margin: 0 auto 1.3rem auto;
+  margin: 0 auto 1.38125rem auto;
 }
 
 blockquote {
   display: block;
-  background-color: white;
-  padding: 15px 20px 10px 120px;
+  background: white;
+  padding: 15px 20px 15px 170px;
   margin: 0 0 20px;
   position: relative;
+  border: 1px dotted #999999;
 }
 blockquote:before {
   content: "\201C";
-  font-size: 17rem;
-  left: 0;
+  font-family: Georgia, serif;
+  font-size: 16em;
+  font-weight: bold;
+  color: #999999;
   position: absolute;
-  top: 115px;
+  left: 10px;
+  line-height: 0.9;
+}
+blockquote:after {
+  content: "";
 }
 
 code,
@@ -1735,6 +1767,7 @@ samp {
   font-size: .9rem;
   overflow: auto;
   padding: 20px;
+  font: "Lucida Console", Monaco, monospace;
 }
 
 .heading-typeface-opensans h1, .heading-typeface-opensans h2, .heading-typeface-opensans h3, .heading-typeface-opensans h4, .heading-typeface-opensans h5, .heading-typeface-opensans h6 {
@@ -1763,14 +1796,14 @@ body.body-typeface-imfell {
 
 .body-typeface-garamond .l-page-wrapper .l-main p,
 .body-typeface-garamond .l-page-wrapper .l-main span {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 26px;
   line-height: 1.625rem;
 }
 .body-typeface-garamond .l-page-wrapper .l-main li {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 26px;
   line-height: 1.625rem;
 }

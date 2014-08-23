@@ -187,7 +187,9 @@ body.color-palette-chartreuse {
   samp {
     background-color: $medium_gray2;
   }
-
+  figure figcaption {
+    color: $light_gray;
+  }
   .main-menu-wrapper {
     @include breakpoint($tab) {
     > ul {
@@ -230,4 +232,45 @@ body.color-palette-chartreuse {
       color: $light_gray2;
     }
   }
+  table {
+    tr {
+      &.even {
+        background-color: $medium_gray2;
+      }
+      &.odd {
+        background-color: darken($medium_gray2, 8%);
+      }
+    }
+  }
 } // End dark render.
+
+// color-palette-purple on dark bgs.
+
+.color-palette-purple {
+  &.site-name-show {
+    h1.site-name {
+      a:after {
+        color: $purple_light;
+        &:hover,
+        &:hover:after {
+          color: $light_gray;
+        }
+      }
+    }
+  }
+  .l-header-wrapper,
+  .l-footer-wrapper {
+    a {
+      color: $purple_light;
+      &:hover,
+      &:hover:after {
+        color: $light_gray;
+      }
+    }
+    &:after {
+      color: $purple_light;
+    }
+  }
+}
+
+// end color-palette-purple on dark bgs.

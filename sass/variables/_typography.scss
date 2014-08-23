@@ -1,25 +1,22 @@
 @import "compass";
 
-//Font families and default text color.
+// Font families and default text color.
 
 $montserrat: 'Montserrat', sans-serif;
-$opensans: 'Open-Sans', Arial, sans-serif;
-$font_awesome: FontAwesome;
-//$vera-sans: VeraMono-webfont;
 $font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
 $font-serif: 'EB Garamond', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
 $antique: 'IM Fell Double Pica', serif;
+$font_awesome: FontAwesome;
 
 // Define the typeface loop.
-$typeface: ("opensans": $font-sans, "garamond": $font-serif, "imfell": $antique,);
+$typeface: ("opensans": $font-sans, "garamond": $font-serif, "imfell": $antique);
 
 // Vertical rhythm / typography.
 $base-font-size: 16px;
 $base-line-height: 26px;
 $round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
-$text-color: $medium_gray;
 
 $h1: 43px;
 $h2: 34px;
@@ -27,20 +24,6 @@ $h3: 25px;
 $h4: 20px;
 $h5: 16px;
 $h6: 14px;
-
-$alpha: 45px;
-$beta: 30px;
-$gamma: 24px;
-$delta: 20px;
-$epsilon: 16px;
-$zeta: 13px;
-$eta: 18px;
-$theta: 15px;
-$iota: 14px;
-$kappa: 12px;
-
-$para: $theta; 	// Paragraph size
-$quote: $beta;	// Quote size
 
 // Font-Awesome content vars.
 

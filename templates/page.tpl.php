@@ -260,10 +260,3 @@
 
     </div>
   </div>
-
-
-<?php if ($page['top_panel']): ?>
-  <div id="top-panel">
-    <?php print render($page['top_panel']); ?>
-  </div>
-<?php endif; ?>

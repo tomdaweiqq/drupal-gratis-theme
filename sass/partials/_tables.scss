@@ -1,8 +1,13 @@
+// Import variables.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
 @import "../abstractions/mixins";
+
+// Import compass.
+@import "compass";
+@import "breakpoint";
 
 table {
   width: 100%;

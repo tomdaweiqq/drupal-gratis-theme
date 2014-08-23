@@ -58,8 +58,8 @@ enable_sourcemaps = true
 
 firesass = true
 
-#environment = :development
-environment = :production
+environment = :development
+#environment = :production
 
 # Conditionally enable line comments when in development mode.
 line_comments = false

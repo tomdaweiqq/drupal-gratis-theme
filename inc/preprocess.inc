@@ -159,6 +159,10 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'not-node';
   }
 
+  if (theme_get_setting('theme_color_palette') == 'chartreuse' || 'caribe' || 'maillot-jaune') {
+    $vars['classes_array'][] = 'dark-bg';
+  }
+
 }
 
 /**
