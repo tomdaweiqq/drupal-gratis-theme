@@ -194,7 +194,14 @@ body.color-palette-chartreuse {
     color: $light_gray;
   }
   .main-menu-wrapper {
-    @include breakpoint($tab) {
+    @include breakpoint(0 $menu) {
+      > ul {
+        > li > a {
+      color: $light_gray2;
+        }
+      }
+    }
+    @include breakpoint($menu) {
     > ul {
       > li > a {
         color: $charcoal_gray;
