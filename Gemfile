@@ -4,7 +4,7 @@ group :development do
 
   # Sass, Compass and extensions.
   gem 'sass',       '~>3.3.10'       # Sass.
-  gem 'sass-globbing'      # Import Sass files based on globbing pattern.
+  gem 'sass-globbing', '~>1.1.1'  # Import Sass files based on globbing pattern.
   gem 'compass'            # Framework built on Sass.
   gem 'compass-validator'       # So you can `compass validate`.
   gem 'compass-normalize'       # Compass version of normalize.css.

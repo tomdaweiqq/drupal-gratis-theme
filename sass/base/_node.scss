@@ -7,6 +7,7 @@
 
 // Import compass.
 @import "compass";
+@import "breakpoint";
 
 .node-submitted {
   margin-bottom: 10px;
@@ -33,6 +34,11 @@ span.date {
   img {
     @include border-radius(50px);
   }
+  @include breakpoint(0 $tab) {
+    img {
+      float: none;
+    }
+  }
 }
 
 figure {
@@ -45,3 +51,34 @@ figure {
   }
 }
 
+@include breakpoint(0 $tab) {
+  .node-submitted {
+    .user-picture {
+      float: none;
+      text-align: center;
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+@include breakpoint(0 $mobile) {
+  .node-submitted {
+    .submitted {
+      display: block;
+      text-align: center;
+    }
+    .date {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .node-content {
+    .vocabulary.field-label-inline {
+      text-align: center;
+      .field-label {
+        display: block;
+      }
+    }
+  }
+}

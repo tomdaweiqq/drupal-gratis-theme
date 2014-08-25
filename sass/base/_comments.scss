@@ -22,7 +22,6 @@
     width: 136px;
     img {
       margin: 0;
-      border: 1px solid $light_gray2;
     }
   }
   .submitted {
@@ -97,6 +96,9 @@
       .user-picture {
         float: left;
         margin: 0 10px 0 0;
+        margin-top: 14px;
+        text-align: center;
+        top: 0;
       }
     }
     .comment-text {
@@ -108,22 +110,9 @@
         display: inline-block;
         margin-top: 10px;
       }
+      .comment-arrow {
+        display: none;
+      }
     }
   }
-
-}
-
-@include breakpoint(0 $tab) {
-
-  .user-picture {
-    float: none;
-    margin-top: 14px;
-    text-align: center;
-    top: 0;
-  }
-
-  .comment-arrow {
-    display: none;
-  }
-
 }

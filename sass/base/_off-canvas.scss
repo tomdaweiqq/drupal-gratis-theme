@@ -19,7 +19,7 @@
   right: 0;
   width: 46px;
   height: 36px;
-  background: transparent url("#{$path-to-images}/menu-icons.png") center center no-repeat;
+  background: transparent url("#{$path-to-images}/gratis-sprite.png") center center no-repeat;
   @include hide-text;
   position: absolute;
   display: block;
@@ -29,7 +29,7 @@
 }
 
 .l-off-canvas-show {
-  background: transparent url("#{$path-to-images}/menu-icons.png") 0px -6px no-repeat;
+  background: transparent url("#{$path-to-images}/gratis-sprite.png") 0px -6px no-repeat;
 }
 
 @include breakpoint(0 $menu) {
@@ -52,12 +52,12 @@
   .l-off-canvas {
     position: absolute;
     z-index: 99;
-    width: 80%;
+    width: 70%;
     top: 0;
     bottom: 0;
-    left: -80%;
+    left: -70%;
     padding: 60px 0 0 0;
-    @include transition(all 0.25s ease-in);
+    @include transition(all 0.15s ease-in);
     cursor: pointer;
     &.is-visible {
       left: 0;
@@ -86,7 +86,7 @@
           left: 2%;
           width: 28px;
           height: 32px;
-          background: url("#{$path-to-images}/menu-icons.png") no-repeat -8px -246px;
+          background: url("#{$path-to-images}/gratis-sprite.png") no-repeat -8px -246px;
           content: " ";
         }
       }
@@ -117,11 +117,11 @@
       height: 40px;
       width: 40px;
       border: 0;
-      background: url("#{$path-to-images}/menu-icons.png") no-repeat -8px -154px;
+      background: url("#{$path-to-images}/gratis-sprite.png") no-repeat -8px -154px;
     }
     .has-child {
       .nested-menu-item-toggle {
-        background: url("#{$path-to-images}/menu-icons.png") no-repeat -8px -202px;
+        background: url("#{$path-to-images}/gratis-sprite.png") no-repeat -8px -202px;
       }
       .menu {
         display: block;

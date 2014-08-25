@@ -109,6 +109,14 @@ theme folder. Only check this box if you have renamed local.sample.css to local.
 You must clear the Drupal cache after doing this."),
   );
 
+  $form['gratis_css']['gratis_hacks_settings'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable gratis hacks css?'),
+    '#default_value' => theme_get_setting('gratis_hacks_settings', 'gratis'),
+    '#description' => t('Check this if you want these hacks. <ul><li>no admin menu  /
+    toolbar at narrow viewports. (this might be good while in development.) </li></ul>'),
+  );
+
   $form['gratis_css']['custom_css_path_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Custom css path settings'),
@@ -117,7 +125,7 @@ You must clear the Drupal cache after doing this."),
 
   $form['gratis_css']['custom_css_path_settings']['custom_css_path']['gratis_custom_css_location'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Only check the box if you want to specify a custom path below to your local css file.'),
+    '#title' => t('Only check this box if you want to specify a custom path below to your local css file.'),
     '#default_value' => theme_get_setting('gratis_custom_css_location', 'gratis'),
   );
 

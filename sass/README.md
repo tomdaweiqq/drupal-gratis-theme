@@ -93,6 +93,9 @@ contained in the partials (see below) through @import directives.
 #### gratis.styles.scss
 This file aggregates all the components into a single file.
 
+#### gratis.color-palettes.scss
+This file contains the color styles sass loops.
+
 #### gratis.normalize.scss
 This file provides a CSS reset/normalize generated based on the legacy
 variables.
@@ -117,8 +120,5 @@ This is where you place your Sass variables.
 #### abstractions
 This is where you place your functions, mixins and extends.
 
-#### base
+#### partials
 This is where you place all your basic, raw HTML element styling.
-
-#### components
-This is where you place your components.

@@ -259,4 +259,5 @@
       </footer>
 
     </div>
+    <a href="#" class="scrolltop">Scroll to the top</a>
   </div>

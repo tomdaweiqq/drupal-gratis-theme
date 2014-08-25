@@ -72,6 +72,22 @@ function gratis_page_alter($page) {
   );
   drupal_render($gratis_js);
 
+  if (theme_get_setting('gratis_hacks_settings') == TRUE) {
+    $hacks_css = array(
+      '#attached' => array(
+        'css' => array(
+          $theme_path . '/css/gratis.hacks.css' => array(
+            'group' => CSS_THEME,
+            'preprocess' => TRUE,
+          ),
+        ),
+      ),
+    );
+    drupal_render($hacks_css);
+  }
+
+  //stylesheets[all][] = css/gratis.hacks.css
+
   // Look in each visible region for blocks.
   foreach (system_region_list($GLOBALS['theme'], REGIONS_VISIBLE) as $region => $name) {
     if (!empty($page[$region])) {

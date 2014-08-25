@@ -8,7 +8,21 @@
   Drupal.behaviors.gratisMiscfunctions = {
     attach: function (context) {
 
-      // misc scripts here.
+      // Scroll to top.
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+          $('.scrolltop').fadeIn();
+        } else {
+          $('.scrolltop').fadeOut();
+        }
+      });
+
+      $('.scrolltop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+
+      // End scroll to top.
 
     }
   };
@@ -19,6 +33,8 @@
    */
   Drupal.behaviors.gratisOffCanvasLayout = {
     attach: function (context) {
+
+      // Off-canvas menu.
 
       $('.l-page').click(function (e) {
         var offCanvasVisible = $('.l-page-wrapper').hasClass('off-canvas-left-is-visible') || $('.l-page-wrapper').hasClass('off-canvas-right-is-visible');
@@ -58,7 +74,7 @@
   Drupal.behaviors.gratisExpandMenus = {
     attach: function (context) {
 
-      // Check for child elements on parent menu.
+      // Off-canvas, check for child elements on parent menu.
       $('.main-menu-wrapper ul li').each(function(){
         if($('ul',this).length){
           $(this).addClass('has-child');

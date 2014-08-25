@@ -29,7 +29,6 @@ require 'rgbapng'
 require 'toolkit'
 require 'susy'
 require 'sass-globbing'
-require 'font-awesome-sass'
 require 'sass-media_query_combiner'
 require 'breakpoint'
 
@@ -37,7 +36,6 @@ require 'breakpoint'
 # themes can be installed in multiple locations, we don't need to worry about
 # the absolute path to the theme from the server omega.
 relative_assets = true
-
 disable_warnings = true
 
 # Output debugging info in development mode.
@@ -53,9 +51,11 @@ add_import_path 'sass'
 #set a pretty output style.
 output_style = :expanded
 
+#Chrome web inspector sass debugging
 sass_options = {:sourcemap => true}
 enable_sourcemaps = true
 
+#Firesass extension
 firesass = true
 
 environment = :development

@@ -6,8 +6,7 @@ engine = phptemplate
 ; CSS --------------------
 
 stylesheets[all][] = css/gratis.normalize.css
-stylesheets[all][] = css/gratis.hacks.css
-;stylesheets[all][] = css/gratis.no-query.css
+stylesheets[all][] = css/gratis.color-palettes.css
 stylesheets[all][] = css/gratis.styles.css
 
 ; override the system.theme css file.
@@ -37,7 +36,7 @@ regions[footer_third]   = Footer third
 
 ; Gratis default settings --------------
 
-settings[gratis_themelogo]  = 1
+settings[gratis_hacks_settings]  = 1
 settings[breadcrumbs]  = 1
 settings[gratis_viewport]  = 0
 settings[theme_color_palette]  = orange
