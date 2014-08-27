@@ -875,6 +875,11 @@ body.color-palette-chartreuse figure figcaption {
   }
 }
 @media (min-width: 64.5em) {
+  body.color-palette-maillot-jaune .main-menu-wrapper > ul > li.active-trail > a,
+  body.color-palette-caribe .main-menu-wrapper > ul > li.active-trail > a,
+  body.color-palette-chartreuse .main-menu-wrapper > ul > li.active-trail > a {
+    color: #eaeaea;
+  }
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a,
   body.color-palette-caribe .main-menu-wrapper > ul > li > a,
   body.color-palette-chartreuse .main-menu-wrapper > ul > li > a {

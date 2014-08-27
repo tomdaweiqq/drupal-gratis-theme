@@ -81,6 +81,12 @@
           }
         }
       }
+      &.active-trail {
+        > a {
+          background-color: $charcoal_gray;
+          color: $light_gray2;
+        }
+      }
     }
     a {
       color: $baseMenuColor;

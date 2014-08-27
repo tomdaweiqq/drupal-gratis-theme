@@ -82,8 +82,9 @@
       }
     }
   }
-} // End color palettes loop. ***********
+}
 
+// End color palettes loop. ***********
 
 // Dark bg / light headings and text for light color palettes.
 
@@ -118,11 +119,18 @@ body.color-palette-chartreuse {
     }
     @include breakpoint($menu) {
       > ul {
-        > li > a {
-          color: $charcoal_gray;
-          &:hover,
-          &.active {
-            color: $light_gray2;
+        > li {
+          &.active-trail {
+            > a {
+              color: $light_gray2;
+            }
+          }
+          > a {
+            color: $charcoal_gray;
+            &:hover,
+            &.active {
+              color: $light_gray2;
+            }
           }
         }
         ul a {
@@ -167,8 +175,9 @@ body.color-palette-chartreuse {
       }
     }
   }
-} // End dark render.
+}
 
+// End dark render.
 
 // color-palette-purple on dark bgs.
 

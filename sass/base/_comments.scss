@@ -96,7 +96,6 @@
       .user-picture {
         float: left;
         margin: 0 10px 0 0;
-        margin-top: 14px;
         text-align: center;
         top: 0;
       }
@@ -107,7 +106,7 @@
       border: none;
       h3 {
         border-bottom: 1px dashed lighten($medium_gray, 10%);
-        display: inline-block;
+        display: block;
         margin-top: 10px;
       }
       .comment-arrow {

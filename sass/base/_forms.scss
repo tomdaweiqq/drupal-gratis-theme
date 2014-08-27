@@ -4,7 +4,6 @@
 @import "../variables/typography";
 @import "../variables/misc";
 @import "../abstractions/mixins";
-
 // Import compass.
 @import "compass";
 @import "breakpoint";
@@ -62,35 +61,43 @@ input {
   margin-top: 1em;
   margin-bottom: 1em;
   .description {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
+}
 
-  textarea {
-    padding: 8px;
-    border: 1px solid darken($light_gray2, 10%);
-    color: $medium_gray2;
-    font-size: 1.2rem;
-  }
-  select {
-    color: $medium_gray2;
-  }
-  input.error {
-    border: 2px solid $britered;
-  }
-  textarea.error {
-    border: 2px solid $britered;
-  }
-  select.error {
-    border: 2px solid $britered;
-  }
-  input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
-    margin: 0 0 4px 0;
-    padding: 8px 2px 8px 8px;
-    width: 100%;
-    border: 1px solid darken($light_gray2, 10%);
-    color: $medium_gray2;
-    font-size: 1.3rem;
-  }
+textarea {
+  padding: 8px;
+  border: 1px solid darken($light_gray2, 10%);
+  color: $medium_gray2;
+  font-size: 1.2rem;
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+select {
+  color: $medium_gray2;
+}
+
+input.error {
+  border: 2px solid $britered;
+}
+
+textarea.error {
+  border: 2px solid $britered;
+}
+
+select.error {
+  border: 2px solid $britered;
+}
+
+input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
+  margin: 0 0 4px 0;
+  padding: 8px 2px 8px 8px;
+  width: 100%;
+  border: 1px solid darken($light_gray2, 10%);
+  color: $medium_gray2;
+  font-size: 1.3rem;
 }
 
 .form-actions {
@@ -99,7 +106,7 @@ input {
 }
 
 tr {
-.form-item {
+  .form-item {
     @extend %noform_margin;
   }
 }

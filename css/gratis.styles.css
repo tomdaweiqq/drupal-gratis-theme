@@ -98,7 +98,6 @@ img, video {
   .comment .attribution .user-picture {
     float: left;
     margin: 0 10px 0 0;
-    margin-top: 14px;
     text-align: center;
     top: 0;
   }
@@ -109,7 +108,7 @@ img, video {
   }
   .comment .comment-text h3 {
     border-bottom: 1px dashed #b3b3b3;
-    display: inline-block;
+    display: block;
     margin-top: 10px;
   }
   .comment .comment-text .comment-arrow {
@@ -277,27 +276,36 @@ input {
   margin-bottom: 1em;
 }
 .form-item .description {
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
-.form-item textarea {
+
+textarea {
   padding: 8px;
   border: 1px solid #d1d1d1;
   color: #666666;
   font-size: 1.2rem;
+  display: block;
+  margin: 0;
+  width: 100%;
 }
-.form-item select {
+
+select {
   color: #666666;
 }
-.form-item input.error {
+
+input.error {
   border: 2px solid #ef262b;
 }
-.form-item textarea.error {
+
+textarea.error {
   border: 2px solid #ef262b;
 }
-.form-item select.error {
+
+select.error {
   border: 2px solid #ef262b;
 }
-.form-item input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
+
+input:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]):not([type=reset]) {
   margin: 0 0 4px 0;
   padding: 8px 2px 8px 8px;
   width: 100%;
@@ -767,6 +775,10 @@ figure {
     background: url("../images/gratis-sprite.png") no-repeat -17px -298px;
     vertical-align: top;
     font-size: 14px;
+  }
+  .main-menu-wrapper > ul > li.active-trail > a {
+    background-color: #333333;
+    color: #eaeaea;
   }
   .main-menu-wrapper > ul a {
     color: white;
@@ -1265,11 +1277,12 @@ blockquote {
   margin: 0 0 20px;
   position: relative;
   border: 1px dotted #999999;
+  min-height: 120px;
 }
 blockquote:before {
   content: "\201C";
   font-family: Georgia, serif;
-  font-size: 16em;
+  font-size: 14em;
   font-weight: bold;
   color: #999999;
   position: absolute;
@@ -1296,11 +1309,17 @@ pre,
 samp {
   background-color: #ebebeb;
   display: block;
-  font-family: monospace;
-  font-size: .9rem;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 1rem;
   overflow: auto;
   padding: 20px;
-  font: "Lucida Console", Monaco, monospace;
+  white-space: pre-wrap;
+}
+code br,
+kbd br,
+pre br,
+samp br {
+  display: none;
 }
 
 .heading-typeface-opensans h1, .heading-typeface-opensans h2, .heading-typeface-opensans h3, .heading-typeface-opensans h4, .heading-typeface-opensans h5, .heading-typeface-opensans h6 {

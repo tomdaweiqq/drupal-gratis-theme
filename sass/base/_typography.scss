@@ -96,10 +96,11 @@ blockquote {
   margin: 0 0 20px;
   position: relative;
   border: 1px dotted $medium_gray;
+  min-height: 120px;
   &:before {
     content: "\201C";
     font-family: Georgia, serif;
-    font-size: 16em;
+    font-size: 14em;
     font-weight: bold;
     color: $medium_gray;
     position: absolute;
@@ -124,11 +125,14 @@ pre,
 samp {
   background-color: lighten($light_gray, 12%);
   display: block;
-  font-family: monospace;
-  font-size: .9rem;
+  font-family: $font-mono;
+  font-size: 1rem;
   overflow: auto;
   padding: 20px;
-  font: $font-mono;
+  white-space: pre-wrap;
+    br {
+      display: none;
+  }
 }
 
 // Typography loops.
