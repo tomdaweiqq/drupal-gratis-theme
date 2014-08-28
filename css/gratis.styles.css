@@ -206,13 +206,12 @@ article {
 }
 
 .scrolltop {
-  font-size: 2.5em;
   width: 46px;
   height: 46px;
   opacity: 1;
+  opacity: .7;
   position: fixed;
-  bottom: 42px;
-  right: 20px;
+  bottom: 10px;
   display: none;
   z-index: 999;
   background: url("../images/gratis-sprite.png") no-repeat 0 -341px;
@@ -1043,6 +1042,7 @@ figure figcaption {
     display: none;
   }
 }
+/* set variables for global use */
 .item-list-pager {
   margin: 20px 0;
   overflow: hidden;
@@ -1057,6 +1057,10 @@ figure figcaption {
   margin: 10px 6px;
 }
 .item-list-pager ul li a {
+  -moz-transition: all 100ms ease-in-out 0s;
+  -o-transition: all 100ms ease-in-out 0s;
+  -webkit-transition: all 100ms ease-in-out;
+  -webkit-transition-delay: 0s;
   transition: all 100ms ease-in-out 0s;
   background-color: #eaeaea;
   color: #202020;

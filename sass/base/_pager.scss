@@ -1,12 +1,13 @@
-// Pager styles
-
-// import variables
+// Import variables.
 @import "../variables/colors";
 @import "../variables/legacy";
 @import "../variables/typography";
 @import "../variables/misc";
+@import "../abstractions/mixins";
 
+// Import compass.
 @import "compass";
+@import "breakpoint";
 
 .item-list-pager {
   margin: 20px 0;
@@ -19,8 +20,8 @@
       vertical-align: middle;
       margin: 10px 6px;
       a {
-        // @todo include border-radius($radius, $vertical-radius)
-        transition: all 100ms ease-in-out 0s;
+        //transition: all 100ms ease-in-out 0s;
+        @include transition(all 100ms ease-in-out 0s);
         background-color: $light_gray2;
         color: $dark_gray;
         display: block;

@@ -9,8 +9,6 @@
 @import "compass";
 @import "breakpoint";
 
-
-
 body {
   background-color: $charcoal_gray;
   .l-page-wrapper {
@@ -87,13 +85,12 @@ article {
 }
 
 .scrolltop {
-  font-size: 2.5em;
   width: 46px;
   height: 46px;
   opacity: 1;
+  opacity: .7;
   position: fixed;
-  bottom: 42px;
-  right: 20px;
+  bottom: 10px;
   display: none;
   z-index: 999;
   background: url("#{$path-to-images}/gratis-sprite.png") no-repeat 0 -341px;

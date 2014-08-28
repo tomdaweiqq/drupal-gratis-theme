@@ -130,8 +130,8 @@ samp {
   overflow: auto;
   padding: 20px;
   white-space: pre-wrap;
-    br {
-      display: none;
+  br {
+    display: none;
   }
 }
 
@@ -147,9 +147,9 @@ samp {
 
 @each $typevar, $designtype in $typeface {
   body {
-  &.body-typeface-#{$typevar} {
+    &.body-typeface-#{$typevar} {
       font-family: $designtype;
-  }
+    }
   }
 }
 
@@ -157,7 +157,7 @@ samp {
   p,
   span {
     @include adjust-font-size-to(19px);
-}
+  }
   li {
     @include adjust-font-size-to(19px);
   }
