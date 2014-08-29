@@ -29,19 +29,13 @@ regions[postscript_first]   = Postscript first
 regions[postscript_second]  = Postscript second
 regions[postscript_third]   = Postscript third
 regions[footer_first]   = Footer first
-regions[top_panel]  = Top Panel (special use)
+regions[footer_second]   = Footer second
+regions[footer_third]   = Footer third
 
-; Features --------------------
-features[] = logo
-features[] = name
-features[] = slogan
-features[] = comment_user_picture
-features[] = favicon
-features[] = main_menu
 
 ; Gratis default settings --------------
 
-settings[gratis_themelogo]  = 1
+settings[gratis_hacks_settings]  = 1
 settings[breadcrumbs]  = 1
 settings[gratis_viewport]  = 0
 settings[theme_color_palette]  = orange

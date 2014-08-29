@@ -103,7 +103,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   $form['gratis_css']['gratis_localcss'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use local.css?'),
-    '#default_value' => theme_get_setting('gratis_localcss', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_localcss'),
     '#description' => t("This setting allows you to use your own custom css file within the gratis
 theme folder. Only check this box if you have renamed local.sample.css to local.css.
 You must clear the Drupal cache after doing this."),
@@ -112,7 +112,7 @@ You must clear the Drupal cache after doing this."),
   $form['gratis_css']['gratis_hacks_settings'] = array(
     '#type' => 'checkbox',
     '#title' => t('Enable gratis hacks css?'),
-    '#default_value' => theme_get_setting('gratis_hacks_settings', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_hacks_settings'),
     '#description' => t('Check this if you want these hacks. <ul><li>no admin menu  /
     toolbar at narrow viewports. (this might be good while in development.) </li></ul>'),
   );
@@ -120,7 +120,7 @@ You must clear the Drupal cache after doing this."),
   $form['gratis_css']['gratis_header_layout'] = array(
     '#type' => 'checkbox',
     '#title' => t('Gratis Header Layout'),
-    '#default_value' => theme_get_setting('gratis_header_layout', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_header_layout'),
     '#description' => t("Check this option to have the header logo left and the site slogan right. (default is both centered"),
   );
 
@@ -133,7 +133,7 @@ You must clear the Drupal cache after doing this."),
   $form['gratis_css']['custom_css_path_settings']['custom_css_path']['gratis_custom_css_location'] = array(
     '#type' => 'checkbox',
     '#title' => t('Only check this box if you want to specify a custom path below to your local css file.'),
-    '#default_value' => theme_get_setting('gratis_custom_css_location', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_custom_css_location'),
   );
 
   $form['gratis_css']['custom_css_path_settings']['custom_css_path']['gratis_custom_css_path'] = array(
@@ -141,7 +141,7 @@ You must clear the Drupal cache after doing this."),
     '#title' => t('Path to Custom Stylesheet'),
     '#description' => t('Specify a custom path to the local.css file without the leading slash:
 e.g.: sites/default/files/custom-css/local.css you must check the box above for this to work.'),
-    '#default_value' => theme_get_setting('gratis_custom_css_path', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_custom_css_path'),
   );
 
   $form['gratis_gridwidth'] = array(
@@ -154,7 +154,7 @@ e.g.: sites/default/files/custom-css/local.css you must check the box above for 
   $form['gratis_gridwidth']['gratis_grid_container_width'] = array(
     '#type' => 'textfield',
     '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
-    '#default_value' => theme_get_setting('gratis_grid_container_width', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_grid_container_width'),
     '#description' => t('This setting allows you to set the width of the entire gird container.
 Leave blank for the default max width of 1200px.  All inner grids are percentage based
 so this should work with most any value you set within reason.'),
@@ -170,7 +170,7 @@ so this should work with most any value you set within reason.'),
   $form['gratis_breadcrumb']['breadcrumb'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show page breadcrumbs'),
-    '#default_value' => theme_get_setting('breadcrumb', 'gratis'),
+    '#default_value' => theme_get_setting('breadcrumb'),
     '#description' => t("Check this option to show page breadcrumbs. Uncheck to hide."),
   );
 
@@ -184,7 +184,7 @@ so this should work with most any value you set within reason.'),
   $form['gratis_touch']['gratis_viewport'] = array(
     '#type' => 'checkbox',
     '#title' => t('Use Touch device pinch and zoom?'),
-    '#default_value' => theme_get_setting('gratis_viewport', 'gratis'),
+    '#default_value' => theme_get_setting('gratis_viewport'),
     '#description' => t('Check this box ONLY if you want to enable touch device users to be able to pinch and zoom.'),
   );
 
