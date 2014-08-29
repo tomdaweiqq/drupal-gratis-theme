@@ -133,6 +133,17 @@ img {
 
 @include susy-breakpoint($desk, 12) {
 
-  // @todo
+ .header-left-right .l-header {
+    .l-logo {
+      @include span(5 at 1);
+      padding-bottom: $vert-spacing-unit;
+      text-align: left;
+    }
+    .l-branding {
+      @include span(7 at 6);
+      text-align: right;
+      padding: 10px 0 0 0;
+    }
+  }
 
 }

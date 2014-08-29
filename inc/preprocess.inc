@@ -90,7 +90,7 @@ function gratis_preprocess_html(&$vars) {
   drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css', array('type' => 'external'));
 
   // Vars for empty / checked / not empty site name and slogan.
-  $vars['hide_site_name']   = theme_get_setting('toggle_name') ? FALSE : TRUE;
+  $vars['hide_site_name'] = theme_get_setting('toggle_name') ? FALSE : TRUE;
   $vars['hide_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
 
   if ($vars['hide_site_name']) {
@@ -119,13 +119,18 @@ function gratis_preprocess_html(&$vars) {
   $file = theme_get_setting('theme_color_palette');
   $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
 
-  // Heading typeface
+  // Heading typeface.
   $file = theme_get_setting('gratis_heading_typeface');
   $vars['classes_array'][] = drupal_html_class('heading-typeface-' . $file);
 
   // Body typeface.
   $file = theme_get_setting('gratis_body_typeface');
   $vars['classes_array'][] = drupal_html_class('body-typeface-' . $file);
+
+  // Layout options.
+  if (theme_get_setting('gratis_header_layout') == TRUE) {
+    $vars['classes_array'][] = 'header-left-right';
+  }
 
   // Local css within theme folder if checked.
   if (theme_get_setting('gratis_localcss') == TRUE) {
@@ -201,7 +206,6 @@ function gratis_preprocess_page(&$vars, $hook) {
 function gratis_preprocess_node(&$vars, $hook) {
   // Global node.
   $node = $vars['node'];
-
   $css_node_type = drupal_clean_css_identifier($vars['type']);
   $css_view_mode = drupal_clean_css_identifier($vars['view_mode']);
   // Add article ARIA role.
@@ -403,5 +407,4 @@ function gratis_preprocess_username(&$vars) {
 
   // Assign the altered name to $vars['name'].
   $vars['name'] = check_plain($name);
-
 }

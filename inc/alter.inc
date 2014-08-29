@@ -30,7 +30,6 @@ function gratis_css_alter(&$css) {
  * Implements hook_html_head_alter().
  */
 function gratis_html_head_alter(&$head_elements) {
-
   global $base_url;
   // Get our current uri.
   $uri = drupal_get_path_alias();
@@ -54,23 +53,8 @@ function gratis_html_head_alter(&$head_elements) {
  * Implements hook_page_alter().
  */
 function gratis_page_alter($page) {
-
   // Define the module path for use below.
   $theme_path = drupal_get_path('theme', 'gratis');
-
-  // Add general JS, weight last.
-  $gratis_js = array(
-    '#attached' => array(
-      'js' => array(
-        $theme_path . '/js/gratis.js' => array(
-          'group' => JS_THEME,
-          'preprocess' => TRUE,
-          'weight' => 999,
-        ),
-      ),
-    ),
-  );
-  drupal_render($gratis_js);
 
   if (theme_get_setting('gratis_hacks_settings') == TRUE) {
     $hacks_css = array(
@@ -85,8 +69,6 @@ function gratis_page_alter($page) {
     );
     drupal_render($hacks_css);
   }
-
-  //stylesheets[all][] = css/gratis.hacks.css
 
   // Look in each visible region for blocks.
   foreach (system_region_list($GLOBALS['theme'], REGIONS_VISIBLE) as $region => $name) {
@@ -103,7 +85,6 @@ function gratis_page_alter($page) {
   }
 
   if (theme_get_setting('gratis_viewport') == FALSE) {
-
     // No pinch and zoom.
     $viewport = array(
       '#type' => 'html_tag',

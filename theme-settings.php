@@ -117,6 +117,13 @@ You must clear the Drupal cache after doing this."),
     toolbar at narrow viewports. (this might be good while in development.) </li></ul>'),
   );
 
+  $form['gratis_css']['gratis_header_layout'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Gratis Header Layout'),
+    '#default_value' => theme_get_setting('gratis_header_layout', 'gratis'),
+    '#description' => t("Check this option to have the header logo left and the site slogan right. (default is both centered"),
+  );
+
   $form['gratis_css']['custom_css_path_settings'] = array(
     '#type' => 'fieldset',
     '#title' => t('Custom css path settings'),

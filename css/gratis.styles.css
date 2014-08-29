@@ -558,6 +558,22 @@ img {
     clear: none;
   }
 }
+@media (min-width: 70em) {
+  .header-left-right .l-header .l-logo {
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+  .header-left-right .l-header .l-branding {
+    width: 57.62712%;
+    float: right;
+    margin-right: 0;
+    text-align: right;
+    padding: 10px 0 0 0;
+  }
+}
 /* set variables for global use */
 a {
   text-decoration: none;
@@ -1040,6 +1056,16 @@ figure figcaption {
 
   .nested-menu-item-toggle {
     display: none;
+  }
+}
+@media (min-width: 0) and (max-width: 30em) {
+  .l-off-canvas {
+    width: 80%;
+    left: -80%;
+  }
+
+  .l-menu-wrapper ul.menu li li a {
+    font-size: .7rem;
   }
 }
 /* set variables for global use */

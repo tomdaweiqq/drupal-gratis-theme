@@ -13,6 +13,8 @@ stylesheets[all][] = css/gratis.styles.css
 stylesheets[all][] = system.theme.css
 
 scripts[] = js/jRespond.js
+scripts[] = js/gratis.js
+
 
 ; Regions --------------------
 regions[top_links]       = Top Links

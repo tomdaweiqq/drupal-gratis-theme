@@ -106,8 +106,6 @@
       &.active-trail {
         background: lighten($dark_gray, 10%);
       }
-
-
     }
     .nested-menu-item-toggle {
       position: absolute;
@@ -152,4 +150,20 @@
     display: none;
   }
 
+}
+
+@include breakpoint(0 $mobile) {
+  .l-off-canvas {
+    width: 80%;
+    left: -80%;
+  }
+  .l-menu-wrapper ul.menu {
+    li {
+      li {
+        a {
+          font-size: .7rem;
+        }
+      }
+    }
+  }
 }
