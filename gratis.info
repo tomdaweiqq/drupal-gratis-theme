@@ -11,10 +11,11 @@ stylesheets[all][] = css/gratis.styles.css
 
 ; override the system.theme css file.
 stylesheets[all][] = system.theme.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = aggregator.css
 
 scripts[] = js/jRespond.js
 scripts[] = js/gratis.js
-
 
 ; Regions --------------------
 regions[top_links]       = Top Links

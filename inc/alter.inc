@@ -8,25 +8,6 @@
  */
 
 /**
- * Alters the JavaScript/CSS library registry.
- */
-function gratis_css_alter(&$css) {
-  $path_system = drupal_get_path('module', 'system');
-  $path_aggregator = drupal_get_path('module', 'aggregator');
-  $remove = array(
-    $path_system . '/system.menus.css',
-    $path_aggregator . '/aggregator.css',
-  );
-
-  // Remove stylesheets which match our remove array.
-  foreach ($css as $stylesheet => $options) {
-    if (in_array($stylesheet, $remove)) {
-      unset($css[$stylesheet]);
-    }
-  }
-}
-
-/**
  * Implements hook_html_head_alter().
  */
 function gratis_html_head_alter(&$head_elements) {
