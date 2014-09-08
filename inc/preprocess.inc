@@ -119,13 +119,16 @@ function gratis_preprocess_html(&$vars) {
   $file = theme_get_setting('theme_color_palette');
   $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
 
-  // Heading typeface.
-  $file = theme_get_setting('gratis_heading_typeface');
-  $vars['classes_array'][] = drupal_html_class('heading-typeface-' . $file);
+  // Typography.
+  if (theme_get_setting('gratis_setfonts') == TRUE) {
+    // Heading typeface.
+    $file = theme_get_setting('gratis_heading_typeface');
+    $vars['classes_array'][] = drupal_html_class('heading-typeface-' . $file);
 
-  // Body typeface.
-  $file = theme_get_setting('gratis_body_typeface');
-  $vars['classes_array'][] = drupal_html_class('body-typeface-' . $file);
+    // Body typeface.
+    $file = theme_get_setting('gratis_body_typeface');
+    $vars['classes_array'][] = drupal_html_class('body-typeface-' . $file);
+  }
 
   // Layout options.
   if (theme_get_setting('gratis_header_layout') == TRUE) {
