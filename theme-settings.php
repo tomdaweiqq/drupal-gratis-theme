@@ -31,7 +31,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#weight' => 99,
   );
 
-  // Tropica typography.
+  // Gratis typography.
   $form['gratis_typography'] = array(
     '#type' => 'fieldset',
     '#title' => t('Gratis typography'),
@@ -41,9 +41,9 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
 
   $form['gratis_typography']['gratis_setfonts'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Would you like to use Tropica\'s default typography? '),
+    '#title' => t('Would you like to use Gratis\' default typography? '),
     '#default_value' => theme_get_setting('gratis_setfonts'),
-    '#description' => t('Check this box to use gratis\'s built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
+    '#description' => t('Check this box to use gratis\' built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
   );
 
   $form['gratis_typography']['gratis_typography_settings'] = array(
