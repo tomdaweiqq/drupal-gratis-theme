@@ -1,16 +1,5 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+Double+Pica|Open+Sans|Montserrat);
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
 .comment {
   display: table;
   margin-bottom: 20px;
