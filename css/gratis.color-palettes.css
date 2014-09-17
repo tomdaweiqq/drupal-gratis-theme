@@ -1,5 +1,3 @@
-/* set variables for global use */
-/* import the override base partial*/
 .color-palette-greengray blockquote:before {
   color: #7f8c8d;
 }
@@ -11,8 +9,8 @@
   background-color: #7f8c8d;
 }
 .color-palette-greengray .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-greengray .item-list-pager li a:hover {
   background-color: #7f8c8d;
@@ -34,20 +32,20 @@
 }
 .color-palette-greengray a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-greengray input[type="submit"],
 .color-palette-greengray input[type="reset"],
 .color-palette-greengray button,
 .color-palette-greengray .button a {
   background-color: #7f8c8d;
-  color: white;
+  color: #fff;
 }
 .color-palette-greengray input[type="submit"]:hover,
 .color-palette-greengray input[type="reset"]:hover,
 .color-palette-greengray button:hover,
 .color-palette-greengray .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-greengray .l-menu-wrapper {
   background-color: #7f8c8d;
@@ -74,8 +72,8 @@
   background-color: #b72898;
 }
 .color-palette-pink .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-pink .item-list-pager li a:hover {
   background-color: #b72898;
@@ -97,20 +95,20 @@
 }
 .color-palette-pink a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-pink input[type="submit"],
 .color-palette-pink input[type="reset"],
 .color-palette-pink button,
 .color-palette-pink .button a {
   background-color: #b72898;
-  color: white;
+  color: #fff;
 }
 .color-palette-pink input[type="submit"]:hover,
 .color-palette-pink input[type="reset"]:hover,
 .color-palette-pink button:hover,
 .color-palette-pink .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-pink .l-menu-wrapper {
   background-color: #b72898;
@@ -137,8 +135,8 @@
   background-color: #e04604;
 }
 .color-palette-orange .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-orange .item-list-pager li a:hover {
   background-color: #e04604;
@@ -160,20 +158,20 @@
 }
 .color-palette-orange a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-orange input[type="submit"],
 .color-palette-orange input[type="reset"],
 .color-palette-orange button,
 .color-palette-orange .button a {
   background-color: #e04604;
-  color: white;
+  color: #fff;
 }
 .color-palette-orange input[type="submit"]:hover,
 .color-palette-orange input[type="reset"]:hover,
 .color-palette-orange button:hover,
 .color-palette-orange .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-orange .l-menu-wrapper {
   background-color: #e04604;
@@ -200,8 +198,8 @@
   background-color: #6a8500;
 }
 .color-palette-green .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-green .item-list-pager li a:hover {
   background-color: #6a8500;
@@ -223,20 +221,20 @@
 }
 .color-palette-green a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-green input[type="submit"],
 .color-palette-green input[type="reset"],
 .color-palette-green button,
 .color-palette-green .button a {
   background-color: #6a8500;
-  color: white;
+  color: #fff;
 }
 .color-palette-green input[type="submit"]:hover,
 .color-palette-green input[type="reset"]:hover,
 .color-palette-green button:hover,
 .color-palette-green .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-green .l-menu-wrapper {
   background-color: #6a8500;
@@ -263,8 +261,8 @@
   background-color: #491f70;
 }
 .color-palette-purple .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-purple .item-list-pager li a:hover {
   background-color: #491f70;
@@ -286,20 +284,20 @@
 }
 .color-palette-purple a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-purple input[type="submit"],
 .color-palette-purple input[type="reset"],
 .color-palette-purple button,
 .color-palette-purple .button a {
   background-color: #491f70;
-  color: white;
+  color: #fff;
 }
 .color-palette-purple input[type="submit"]:hover,
 .color-palette-purple input[type="reset"]:hover,
 .color-palette-purple button:hover,
 .color-palette-purple .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-purple .l-menu-wrapper {
   background-color: #491f70;
@@ -326,8 +324,8 @@
   background-color: #02b4ce;
 }
 .color-palette-turquoise .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-turquoise .item-list-pager li a:hover {
   background-color: #02b4ce;
@@ -349,20 +347,20 @@
 }
 .color-palette-turquoise a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-turquoise input[type="submit"],
 .color-palette-turquoise input[type="reset"],
 .color-palette-turquoise button,
 .color-palette-turquoise .button a {
   background-color: #02b4ce;
-  color: white;
+  color: #fff;
 }
 .color-palette-turquoise input[type="submit"]:hover,
 .color-palette-turquoise input[type="reset"]:hover,
 .color-palette-turquoise button:hover,
 .color-palette-turquoise .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-turquoise .l-menu-wrapper {
   background-color: #02b4ce;
@@ -389,8 +387,8 @@
   background-color: #c0392b;
 }
 .color-palette-pomegranate .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-pomegranate .item-list-pager li a:hover {
   background-color: #c0392b;
@@ -412,20 +410,20 @@
 }
 .color-palette-pomegranate a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-pomegranate input[type="submit"],
 .color-palette-pomegranate input[type="reset"],
 .color-palette-pomegranate button,
 .color-palette-pomegranate .button a {
   background-color: #c0392b;
-  color: white;
+  color: #fff;
 }
 .color-palette-pomegranate input[type="submit"]:hover,
 .color-palette-pomegranate input[type="reset"]:hover,
 .color-palette-pomegranate button:hover,
 .color-palette-pomegranate .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-pomegranate .l-menu-wrapper {
   background-color: #c0392b;
@@ -452,8 +450,8 @@
   background-color: #16a085;
 }
 .color-palette-seafoam .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-seafoam .item-list-pager li a:hover {
   background-color: #16a085;
@@ -475,20 +473,20 @@
 }
 .color-palette-seafoam a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-seafoam input[type="submit"],
 .color-palette-seafoam input[type="reset"],
 .color-palette-seafoam button,
 .color-palette-seafoam .button a {
   background-color: #16a085;
-  color: white;
+  color: #fff;
 }
 .color-palette-seafoam input[type="submit"]:hover,
 .color-palette-seafoam input[type="reset"]:hover,
 .color-palette-seafoam button:hover,
 .color-palette-seafoam .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-seafoam .l-menu-wrapper {
   background-color: #16a085;
@@ -515,8 +513,8 @@
   background-color: #c3a918;
 }
 .color-palette-mustard .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-mustard .item-list-pager li a:hover {
   background-color: #c3a918;
@@ -538,20 +536,20 @@
 }
 .color-palette-mustard a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-mustard input[type="submit"],
 .color-palette-mustard input[type="reset"],
 .color-palette-mustard button,
 .color-palette-mustard .button a {
   background-color: #c3a918;
-  color: white;
+  color: #fff;
 }
 .color-palette-mustard input[type="submit"]:hover,
 .color-palette-mustard input[type="reset"]:hover,
 .color-palette-mustard button:hover,
 .color-palette-mustard .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-mustard .l-menu-wrapper {
   background-color: #c3a918;
@@ -578,8 +576,8 @@
   background-color: #02aab3;
 }
 .color-palette-surf-green .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-surf-green .item-list-pager li a:hover {
   background-color: #02aab3;
@@ -601,20 +599,20 @@
 }
 .color-palette-surf-green a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-surf-green input[type="submit"],
 .color-palette-surf-green input[type="reset"],
 .color-palette-surf-green button,
 .color-palette-surf-green .button a {
   background-color: #02aab3;
-  color: white;
+  color: #fff;
 }
 .color-palette-surf-green input[type="submit"]:hover,
 .color-palette-surf-green input[type="reset"]:hover,
 .color-palette-surf-green button:hover,
 .color-palette-surf-green .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-surf-green .l-menu-wrapper {
   background-color: #02aab3;
@@ -641,8 +639,8 @@
   background-color: #f0de16;
 }
 .color-palette-maillot-jaune .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-maillot-jaune .item-list-pager li a:hover {
   background-color: #f0de16;
@@ -664,20 +662,20 @@
 }
 .color-palette-maillot-jaune a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-maillot-jaune input[type="submit"],
 .color-palette-maillot-jaune input[type="reset"],
 .color-palette-maillot-jaune button,
 .color-palette-maillot-jaune .button a {
   background-color: #f0de16;
-  color: white;
+  color: #fff;
 }
 .color-palette-maillot-jaune input[type="submit"]:hover,
 .color-palette-maillot-jaune input[type="reset"]:hover,
 .color-palette-maillot-jaune button:hover,
 .color-palette-maillot-jaune .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-maillot-jaune .l-menu-wrapper {
   background-color: #f0de16;
@@ -704,8 +702,8 @@
   background-color: #a6c9d1;
 }
 .color-palette-caribe .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-caribe .item-list-pager li a:hover {
   background-color: #a6c9d1;
@@ -727,20 +725,20 @@
 }
 .color-palette-caribe a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-caribe input[type="submit"],
 .color-palette-caribe input[type="reset"],
 .color-palette-caribe button,
 .color-palette-caribe .button a {
   background-color: #a6c9d1;
-  color: white;
+  color: #fff;
 }
 .color-palette-caribe input[type="submit"]:hover,
 .color-palette-caribe input[type="reset"]:hover,
 .color-palette-caribe button:hover,
 .color-palette-caribe .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-caribe .l-menu-wrapper {
   background-color: #a6c9d1;
@@ -767,8 +765,8 @@
   background-color: #c8dc77;
 }
 .color-palette-chartreuse .more-link a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 .color-palette-chartreuse .item-list-pager li a:hover {
   background-color: #c8dc77;
@@ -790,20 +788,20 @@
 }
 .color-palette-chartreuse a:hover {
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .color-palette-chartreuse input[type="submit"],
 .color-palette-chartreuse input[type="reset"],
 .color-palette-chartreuse button,
 .color-palette-chartreuse .button a {
   background-color: #c8dc77;
-  color: white;
+  color: #fff;
 }
 .color-palette-chartreuse input[type="submit"]:hover,
 .color-palette-chartreuse input[type="reset"]:hover,
 .color-palette-chartreuse button:hover,
 .color-palette-chartreuse .button a:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 .color-palette-chartreuse .l-menu-wrapper {
   background-color: #c8dc77;
@@ -822,13 +820,13 @@
 body.color-palette-maillot-jaune,
 body.color-palette-caribe,
 body.color-palette-chartreuse {
-  background-color: black;
+  background-color: #000;
   color: #eaeaea;
 }
 body.color-palette-maillot-jaune .l-page-wrapper,
 body.color-palette-caribe .l-page-wrapper,
 body.color-palette-chartreuse .l-page-wrapper {
-  background-color: #333333;
+  background-color: #333;
 }
 body.color-palette-maillot-jaune h1, body.color-palette-maillot-jaune h2, body.color-palette-maillot-jaune h3, body.color-palette-maillot-jaune h4, body.color-palette-maillot-jaune h5, body.color-palette-maillot-jaune h6,
 body.color-palette-caribe h1,
@@ -860,12 +858,12 @@ body.color-palette-chartreuse code,
 body.color-palette-chartreuse kbd,
 body.color-palette-chartreuse pre,
 body.color-palette-chartreuse samp {
-  background-color: #666666;
+  background-color: #666;
 }
 body.color-palette-maillot-jaune figure figcaption,
 body.color-palette-caribe figure figcaption,
 body.color-palette-chartreuse figure figcaption {
-  color: #cccccc;
+  color: #ccc;
 }
 @media (min-width: 0) and (max-width: 64.5em) {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a,
@@ -883,7 +881,7 @@ body.color-palette-chartreuse figure figcaption {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a,
   body.color-palette-caribe .main-menu-wrapper > ul > li > a,
   body.color-palette-chartreuse .main-menu-wrapper > ul > li > a {
-    color: #333333;
+    color: #333;
   }
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a:hover, body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a.active,
   body.color-palette-caribe .main-menu-wrapper > ul > li > a:hover,
@@ -895,8 +893,8 @@ body.color-palette-chartreuse figure figcaption {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul ul a,
   body.color-palette-caribe .main-menu-wrapper > ul ul a,
   body.color-palette-chartreuse .main-menu-wrapper > ul ul a {
-    background-color: #cccccc;
-    color: #333333;
+    background-color: #ccc;
+    color: #333;
   }
   body.color-palette-maillot-jaune .main-menu-wrapper > ul ul a:hover,
   body.color-palette-caribe .main-menu-wrapper > ul ul a:hover,
@@ -907,7 +905,7 @@ body.color-palette-chartreuse figure figcaption {
 body.color-palette-maillot-jaune .l-footer-wrapper,
 body.color-palette-caribe .l-footer-wrapper,
 body.color-palette-chartreuse .l-footer-wrapper {
-  background-color: black;
+  background-color: #000;
 }
 body.color-palette-maillot-jaune label,
 body.color-palette-maillot-jaune fieldset,
@@ -929,7 +927,7 @@ body.color-palette-chartreuse input[type="submit"],
 body.color-palette-chartreuse input[type="reset"],
 body.color-palette-chartreuse button,
 body.color-palette-chartreuse .button a {
-  color: #333333;
+  color: #333;
 }
 body.color-palette-maillot-jaune input[type="submit"]:hover,
 body.color-palette-maillot-jaune input[type="reset"]:hover,
@@ -943,8 +941,8 @@ body.color-palette-chartreuse input[type="submit"]:hover,
 body.color-palette-chartreuse input[type="reset"]:hover,
 body.color-palette-chartreuse button:hover,
 body.color-palette-chartreuse .button a:hover {
-  background-color: #999999;
-  color: white;
+  background-color: #999;
+  color: #fff;
 }
 body.color-palette-maillot-jaune a:hover,
 body.color-palette-caribe a:hover,
@@ -954,7 +952,7 @@ body.color-palette-chartreuse a:hover {
 body.color-palette-maillot-jaune table tr.even,
 body.color-palette-caribe table tr.even,
 body.color-palette-chartreuse table tr.even {
-  background-color: #666666;
+  background-color: #666;
 }
 body.color-palette-maillot-jaune table tr.odd,
 body.color-palette-caribe table tr.odd,
@@ -966,7 +964,7 @@ body.color-palette-chartreuse table tr.odd {
   color: #b58dd9;
 }
 .color-palette-purple.site-name-show h1.site-name a:after:hover, .color-palette-purple.site-name-show h1.site-name a:after:hover:after {
-  color: #cccccc;
+  color: #ccc;
 }
 .color-palette-purple .l-header-wrapper a,
 .color-palette-purple .l-footer-wrapper a {
@@ -975,7 +973,7 @@ body.color-palette-chartreuse table tr.odd {
 .color-palette-purple .l-header-wrapper a:hover, .color-palette-purple .l-header-wrapper a:hover:after,
 .color-palette-purple .l-footer-wrapper a:hover,
 .color-palette-purple .l-footer-wrapper a:hover:after {
-  color: #cccccc;
+  color: #ccc;
 }
 .color-palette-purple .l-header-wrapper:after,
 .color-palette-purple .l-footer-wrapper:after {

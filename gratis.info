@@ -7,6 +7,7 @@ engine = phptemplate
 
 stylesheets[all][] = css/gratis.normalize.css
 stylesheets[all][] = css/gratis.color-palettes.css
+stylesheets[all][] = css/gratis.core.css
 stylesheets[all][] = css/gratis.styles.css
 
 ; override the system.theme css file.

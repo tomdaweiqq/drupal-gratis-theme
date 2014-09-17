@@ -1,11 +1,7 @@
 // Import variables.
-@import "../variables/colors";
-@import "../variables/legacy";
-@import "../variables/typography";
-@import "../variables/misc";
-@import "../abstractions/mixins";
+@import "../variables/vars";
 
-// Import compass.
+// Core imports.
 @import "compass";
 @import "breakpoint";
 
