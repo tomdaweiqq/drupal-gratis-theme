@@ -412,7 +412,7 @@ ul li li,
 }
 .node-content ul li {
   margin: 0 0 2px 0;
-  list-style: disc inside;
+  list-style: disc;
 }
 .node-content ul li ul {
   margin: 4px 0 2px 16px;
