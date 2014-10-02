@@ -161,20 +161,43 @@ e.g.: sites/default/files/custom-css/local.css you must check the box above for 
     '#default_value' => theme_get_setting('gratis_custom_css_path'),
   );
 
-  $form['gratis_gridwidth'] = array(
+  $form['gratis_layout'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Gratis grid width'),
+    '#title' => t('Gratis layout options'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
   );
 
-  $form['gratis_gridwidth']['gratis_grid_container_width'] = array(
+  $form['gratis_layout']['gratis_width']['gratis_grid_container_width'] = array(
     '#type' => 'textfield',
-    '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
+    '#title' => t('Optional grid width value, pixels or percentage. e.g 1020px, 100% etc...'),
     '#default_value' => theme_get_setting('gratis_grid_container_width'),
-    '#description' => t('This setting allows you to set the width of the entire gird container.
+    '#description' => t('This setting allows you to set the width of the entire grid container.
 Leave blank for the default max width of 1200px.  All inner grids are percentage based
 so this should work with most any value you set within reason.'),
+  );
+
+  $form['gratis_layout']['gratis_min_height'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use a minimum height for the main container?'),
+    '#default_value' => theme_get_setting('gratis_min_height'),
+    '#description' => t("Check this option to use a minimum height for the main container.
+    This might be helpful if you have posts that are very short in length."),
+  );
+
+  $form['gratis_layout']['gratis_min_height_setting'] = array(
+    '#type' => 'textfield',
+    '#size' => 10,
+    '#maxlength' => 10,
+    '#field_suffix' => t('px'),
+    '#title' => t('Minimum main container height'),
+    '#default_value' => theme_get_setting('gratis_min_height_setting'),
+    '#description' => t('Set a minimum height, this will be rendered as pixels.  Do not enter "px", this is done for you in code. examples, 300, 500, 700 etc...'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="gratis_min_height"]' => array('checked' => TRUE),
+      ),
+    ),
   );
 
   $form['gratis_breadcrumb'] = array(

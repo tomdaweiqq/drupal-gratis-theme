@@ -10,15 +10,15 @@
 /**
  * Theme wrapper function for the primary menu links.
  */
-function gratis_menu_tree__primary(&$vars) {
-  return '<ul class="menu primary">' . $vars['tree'] . '</ul>';
+function gratis_menu_tree__primary(&$variables) {
+  return '<ul class="menu primary">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Returns HTML for a menu link and submenu.
  */
-function gratis_menu_link(array $vars) {
-  $element = $vars['element'];
+function gratis_menu_link(array $variables) {
+  $element = $variables['element'];
   $sub_menu = '';
   $name_id = strtolower(strip_tags($element['#title']));
   // Remove colons and anything past colons.
@@ -28,7 +28,7 @@ function gratis_menu_link(array $vars) {
   // li.
   $element['#attributes']['class'][] = 'menu-' . $element['#original_link']['mlid'] . ' ' . $name_id;
   // li > a.
-  $element['#localized_options']['attributes']['class'][] = 'alink menu-' . $vars['element']['#original_link']['mlid'] . ' ' . $name_id;
+  $element['#localized_options']['attributes']['class'][] = 'alink menu-' . $variables['element']['#original_link']['mlid'] . ' ' . $name_id;
   // Add levels.
   $element['#attributes']['class'][] = 'level-' . $element['#original_link']['depth'];
 

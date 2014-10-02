@@ -72,7 +72,7 @@
       <!-- top links-->
       <?php if ($page['top_links']): ?>
         <div id="top-bar" class="">
-          <div class="l-top-wrapper l-setwidth" style="max-width:<?php print $setwidth; ?>">
+          <div class="l-top-wrapper l-setwidth" <?php print $set_width; ?>>
             <div class="top-links s-grid">
               <?php print render($page['top_links']); ?>
             </div>
@@ -83,7 +83,7 @@
 
       <!-- header -->
       <div id="header-bar" class="l-header-wrapper" role="banner">
-        <header class="l-header l-setwidth" style="max-width:<?php print $setwidth; ?>">
+        <header class="l-header l-setwidth" <?php print $set_width; ?>>
 
           <?php if ($logo): ?>
           <div class="l-logo">
@@ -113,7 +113,7 @@
       </div><!-- // l-header -wrapper-->
 
       <div id="menu-wrapper" class="l-menu-wrapper main-menu" role="navigation">
-        <div class="l-setwidth" style="max-width:<?php print $setwidth; ?>">
+        <div class="l-setwidth" <?php print $set_width; ?>>
 
           <?php if ($main_menu): ?>
             <a id="off-canvas-left-show" href="#off-canvas" class="l-off-canvas-show l-off-canvas-show--left"><?php print t('Show Navigation'); ?></a>
@@ -138,7 +138,7 @@
 
       <?php if ($breadcrumb): ?>
         <div id="breadcrumbs-wrapper" class="l-breadcrumbs">
-          <div class="breadcrumbs l-setwidth" style="max-width:<?php print $setwidth; ?>">
+          <div class="breadcrumbs l-setwidth" <?php print $set_width; ?>>
             <div class="s-grid"><?php print $breadcrumb; ?></div>
           </div>
         </div>
@@ -148,7 +148,7 @@
       <?php if ($page['preface_first'] || $page['preface_second'] || $page['preface_third']): ?>
 
         <div id="preface-wrap" class="l-preface-wrap">
-          <div id="preface-container" class="l-preface l-setwidth" style="max-width:<?php print $setwidth; ?>">
+          <div id="preface-container" class="l-preface l-setwidth" <?php print $set_width; ?>>
 
             <!--Preface -->
             <?php if (!empty($page['preface_first'])): ?>
@@ -175,8 +175,8 @@
 
       <?php endif; ?>
 
-      <div class="main">
-        <div class="l-main l-setwidth" role="main" style="max-width:<?php print $setwidth; ?>">
+      <div class="main" <?php print $min_height; ?>>
+        <div class="l-main l-setwidth" role="main" <?php print $set_width; ?>>
 
           <div class="l-content">
             <a id="main-content"></a>
@@ -206,7 +206,7 @@
       if ($page['postscript_first'] || $page['postscript_second'] || $page['postscript_third']): ?>
 
         <div id="postscript-wrapper">
-          <div id="postscript-container" class="l-postscript l-setwidth" style="max-width:<?php print $setwidth; ?>">
+          <div id="postscript-container" class="l-postscript l-setwidth" <?php print $set_width; ?>>
 
             <!--Postscript -->
             <?php if (!empty($page['postscript_first'])): ?>
@@ -234,7 +234,7 @@
 
 
       <footer id="footer" role="footer" class="l-footer-wrapper">
-        <div class="l-setwidth l-footer" style="max-width:<?php print $setwidth; ?>">
+        <div class="l-setwidth l-footer" <?php print $set_width; ?>>
 
           <!--footer -->
           <?php if (!empty($page['footer_first'])): ?>

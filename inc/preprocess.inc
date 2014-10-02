@@ -10,129 +10,129 @@
 /**
  * Implements hook_preprocess_html().
  */
-function gratis_preprocess_html(&$vars) {
+function gratis_preprocess_html(&$variables) {
 
   // Postscript columns.
-  if (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['classes_array'][] = 'preface-three';
+  if (!empty($variables['page']['preface_first']) && !empty($variables['page']['preface_second']) && !empty($variables['page']['preface_third'])) {
+    $variables['classes_array'][] = 'preface-three';
   }
-  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_second'])) {
-    $vars['classes_array'][] = 'preface-two';
+  elseif (!empty($variables['page']['preface_first']) && !empty($variables['page']['preface_second'])) {
+    $variables['classes_array'][] = 'preface-two';
   }
-  elseif (!empty($vars['page']['preface_first']) && !empty($vars['page']['preface_third'])) {
-    $vars['classes_array'][] = 'preface-two';
+  elseif (!empty($variables['page']['preface_first']) && !empty($variables['page']['preface_third'])) {
+    $variables['classes_array'][] = 'preface-two';
   }
-  elseif (!empty($vars['page']['preface_second']) && !empty($vars['page']['preface_third'])) {
-    $vars['classes_array'][] = 'preface-two';
+  elseif (!empty($variables['page']['preface_second']) && !empty($variables['page']['preface_third'])) {
+    $variables['classes_array'][] = 'preface-two';
   }
   else {
-    $vars['classes_array'][] = 'preface-one';
+    $variables['classes_array'][] = 'preface-one';
   }
 
   // Postscript columns.
-  if (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['classes_array'][] = 'postscript-three';
+  if (!empty($variables['page']['postscript_first']) && !empty($variables['page']['postscript_second']) && !empty($variables['page']['postscript_third'])) {
+    $variables['classes_array'][] = 'postscript-three';
   }
-  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_second'])) {
-    $vars['classes_array'][] = 'postscript-two';
+  elseif (!empty($variables['page']['postscript_first']) && !empty($variables['page']['postscript_second'])) {
+    $variables['classes_array'][] = 'postscript-two';
   }
-  elseif (!empty($vars['page']['postscript_first']) && !empty($vars['page']['postscript_third'])) {
-    $vars['classes_array'][] = 'postscript-two';
+  elseif (!empty($variables['page']['postscript_first']) && !empty($variables['page']['postscript_third'])) {
+    $variables['classes_array'][] = 'postscript-two';
   }
-  elseif (!empty($vars['page']['postscript_second']) && !empty($vars['page']['postscript_third'])) {
-    $vars['classes_array'][] = 'postscript-two';
+  elseif (!empty($variables['page']['postscript_second']) && !empty($variables['page']['postscript_third'])) {
+    $variables['classes_array'][] = 'postscript-two';
   }
   else {
-    $vars['classes_array'][] = 'postscript-one';
+    $variables['classes_array'][] = 'postscript-one';
   }
 
   // Footer columns.
-  if (!empty($vars['page']['footer_first']) && !empty($vars['page']['footer_second']) && !empty($vars['page']['footer_third'])) {
-    $vars['classes_array'][] = 'footer-three';
+  if (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+    $variables['classes_array'][] = 'footer-three';
   }
-  elseif (!empty($vars['page']['footer_first']) && !empty($vars['page']['footer_second'])) {
-    $vars['classes_array'][] = 'footer-two';
+  elseif (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second'])) {
+    $variables['classes_array'][] = 'footer-two';
   }
-  elseif (!empty($vars['page']['footer_first']) && !empty($vars['page']['footer_third'])) {
-    $vars['classes_array'][] = 'footer-two';
+  elseif (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_third'])) {
+    $variables['classes_array'][] = 'footer-two';
   }
-  elseif (!empty($vars['page']['footer_second']) && !empty($vars['page']['footer_third'])) {
-    $vars['classes_array'][] = 'footer-two';
+  elseif (!empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+    $variables['classes_array'][] = 'footer-two';
   }
   else {
-    $vars['classes_array'][] = 'footer-one';
+    $variables['classes_array'][] = 'footer-one';
   }
 
-  $vars['html_attributes_array'] = array();
-  $vars['body_attributes_array'] = array();
+  $variables['html_attributes_array'] = array();
+  $variables['body_attributes_array'] = array();
 
   // HTML element attributes.
-  $vars['html_attributes_array']['lang'] = $vars['language']->language;
-  $vars['html_attributes_array']['dir'] = $vars['language']->dir;
+  $variables['html_attributes_array']['lang'] = $variables['language']->language;
+  $variables['html_attributes_array']['dir'] = $variables['language']->dir;
 
   // Adds RDF namespace prefix bindings in the form of an RDFa 1.1 prefix
   // attribute inside the html element.
   if (function_exists('rdf_get_namespaces')) {
-    $vars['rdf'] = new stdClass();
-    $vars['rdf']->prefix = '';
+    $variables['rdf'] = new stdClass();
+    $variables['rdf']->prefix = '';
     foreach (rdf_get_namespaces() as $prefix => $uri) {
-      $vars['rdf']->prefix .= $prefix . ': ' . $uri . "\n";
+      $variables['rdf']->prefix .= $prefix . ': ' . $uri . "\n";
     }
-    $vars['html_attributes_array']['prefix'] = $vars['rdf']->prefix;
+    $variables['html_attributes_array']['prefix'] = $variables['rdf']->prefix;
   }
 
   // BODY element attributes.
-  $vars['body_attributes_array']['class'] = $vars['classes_array'];
-  $vars['body_attributes_array'] += $vars['attributes_array'];
-  $vars['attributes_array'] = '';
+  $variables['body_attributes_array']['class'] = $variables['classes_array'];
+  $variables['body_attributes_array'] += $variables['attributes_array'];
+  $variables['attributes_array'] = '';
 
   // Add font awesome cdn.
   drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css', array('type' => 'external'));
 
   // Vars for empty / checked / not empty site name and slogan.
-  $vars['hide_site_name'] = theme_get_setting('toggle_name') ? FALSE : TRUE;
-  $vars['hide_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
+  $variables['hide_site_name'] = theme_get_setting('toggle_name') ? FALSE : TRUE;
+  $variables['hide_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
 
-  if ($vars['hide_site_name']) {
-    $vars['classes_array'][] = 'site-name-hidden';
+  if ($variables['hide_site_name']) {
+    $variables['classes_array'][] = 'site-name-hidden';
   }
   else {
-    $vars['classes_array'][] = 'site-name-show';
+    $variables['classes_array'][] = 'site-name-show';
   }
 
-  if ($vars['hide_site_slogan']) {
-    $vars['classes_array'][] = 'site-slogan-hidden';
+  if ($variables['hide_site_slogan']) {
+    $variables['classes_array'][] = 'site-slogan-hidden';
   }
   else {
-    $vars['classes_array'][] = 'site-slogan-show';
+    $variables['classes_array'][] = 'site-slogan-show';
   }
 
   if (variable_get('site_slogan', '')) {
-    $vars['classes_array'][] = 'site-slogan-not-empty';
+    $variables['classes_array'][] = 'site-slogan-not-empty';
   }
   else {
-    $vars['classes_array'][] = 'site-slogan-empty';
+    $variables['classes_array'][] = 'site-slogan-empty';
   }
 
   // Extra body classes for theme variables.
   // Color palette.
   $file = theme_get_setting('theme_color_palette');
-  $vars['classes_array'][] = drupal_html_class('color-palette-' . $file);
+  $variables['classes_array'][] = drupal_html_class('color-palette-' . $file);
 
   // Typography.
   if (theme_get_setting('gratis_setfonts') == TRUE) {
     // Heading typeface.
     $file = theme_get_setting('gratis_heading_typeface');
-    $vars['classes_array'][] = drupal_html_class('heading-typeface-' . $file);
+    $variables['classes_array'][] = drupal_html_class('heading-typeface-' . $file);
 
     // Body typeface.
     $file = theme_get_setting('gratis_body_typeface');
-    $vars['classes_array'][] = drupal_html_class('body-typeface-' . $file);
+    $variables['classes_array'][] = drupal_html_class('body-typeface-' . $file);
   }
 
   // Layout options.
   if (theme_get_setting('gratis_header_layout') == TRUE) {
-    $vars['classes_array'][] = 'header-left-right';
+    $variables['classes_array'][] = 'header-left-right';
   }
 
   // Local css within theme folder if checked.
@@ -157,18 +157,18 @@ function gratis_preprocess_html(&$vars) {
     }
   }
 
-  $vars['scripts'] = drupal_get_js();
+  $variables['scripts'] = drupal_get_js();
 
   // Add various classes for common site paths.
   if ($node = menu_get_object()) {
-    $vars['classes_array'][] = 'is-node';
+    $variables['classes_array'][] = 'is-node';
   }
   else {
-    $vars['classes_array'][] = 'not-node';
+    $variables['classes_array'][] = 'not-node';
   }
 
   if (theme_get_setting('theme_color_palette') == 'chartreuse' || 'caribe' || 'maillot-jaune') {
-    $vars['classes_array'][] = 'dark-bg';
+    $variables['classes_array'][] = 'dark-bg';
   }
 
 }
@@ -176,25 +176,32 @@ function gratis_preprocess_html(&$vars) {
 /**
  * Override or insert variables into the page template.
  */
-function gratis_preprocess_page(&$vars, $hook) {
+function gratis_preprocess_page(&$variables, $hook) {
   // Check if it's a node and set a variable.
-  $vars['is_node'] = FALSE;
+  $variables['is_node'] = FALSE;
   if ($node = menu_get_object()) {
-    $vars['is_node'] = TRUE;
+    $variables['is_node'] = TRUE;
   }
 
   // Set the custom grid width in a variable.
-  $gridwidth = theme_get_setting('gratis_grid_container_width');
-  $vars['setwidth'] = $gridwidth;
+  $set_width = filter_xss_admin(theme_get_setting('gratis_grid_container_width'));
+    if (!empty($set_width)) {
+    $variables['set_width'] = check_plain('style=max-width:' . $set_width . '; ');
+  }
+
+  $min_height = filter_xss_admin(theme_get_setting('gratis_min_height_setting'));
+  if (!empty($min_height)) {
+    $variables['min_height'] = check_plain('style=min-height:' . $min_height . 'px; ');
+  }
 
   // Primary nav.
-  $vars['primary_nav'] = FALSE;
-  if ($vars['main_menu']) {
+  $variables['primary_nav'] = FALSE;
+  if ($variables['main_menu']) {
     // Build links.
-    $vars['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+    $variables['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
     // Provide default theme wrapper function.
     // Sets up function gratis_menu_tree__primary in menu.inc.
-    $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+    $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
 }
 
@@ -206,36 +213,36 @@ function gratis_preprocess_page(&$vars, $hook) {
  * Backports the following changes made to Drupal 8:
  * - #1077602: Convert node.tpl.php to HTML5.
  */
-function gratis_preprocess_node(&$vars, $hook) {
+function gratis_preprocess_node(&$variables, $hook) {
   // Global node.
-  $node = $vars['node'];
-  $css_node_type = drupal_clean_css_identifier($vars['type']);
-  $css_view_mode = drupal_clean_css_identifier($vars['view_mode']);
+  $node = $variables['node'];
+  $css_node_type = drupal_clean_css_identifier($variables['type']);
+  $css_view_mode = drupal_clean_css_identifier($variables['view_mode']);
   // Add article ARIA role.
-  $vars['attributes_array']['role'] = 'article';
+  $variables['attributes_array']['role'] = 'article';
   // Add BEM element classes.
-  $vars['title_attributes_array']['class'][] = 'node-title';
-  $vars['content_attributes_array']['class'][] = 'node-content';
-  $vars['content']['links']['#attributes']['class'][] = 'node-links';
+  $variables['title_attributes_array']['class'][] = 'node-title';
+  $variables['content_attributes_array']['class'][] = 'node-content';
+  $variables['content']['links']['#attributes']['class'][] = 'node-links';
   // Change modifier classes to use BEM syntax.
-  $vars['classes_array'] = preg_replace('/^node-' . $css_node_type . '$/', 'node--' . $css_node_type, $vars['classes_array']);
-  $vars['classes_array'] = preg_replace('/^node-promoted$/', 'node--promoted', $vars['classes_array']);
-  $vars['classes_array'] = preg_replace('/^node-sticky$/', 'node--sticky', $vars['classes_array']);
+  $variables['classes_array'] = preg_replace('/^node-' . $css_node_type . '$/', 'node--' . $css_node_type, $variables['classes_array']);
+  $variables['classes_array'] = preg_replace('/^node-promoted$/', 'node--promoted', $variables['classes_array']);
+  $variables['classes_array'] = preg_replace('/^node-sticky$/', 'node--sticky', $variables['classes_array']);
   // Add modifier classes for view mode.
-  $vars['classes_array'][] = 'node--' . $css_view_mode;
-  $vars['classes_array'][] = 'node--' . $css_node_type . '--' . $css_view_mode;
+  $variables['classes_array'][] = 'node--' . $css_view_mode;
+  $variables['classes_array'][] = 'node--' . $css_node_type . '--' . $css_view_mode;
 
   // Show only the username in submitted, the date is handled by node.tpl.php.
-  $vars['submitted'] = t('By !username', array('!username' => $vars['name']));
+  $variables['submitted'] = t('By !username', array('!username' => $variables['name']));
 
   // Set date variables using drupal's format_date function.
-  $vars['thedate'] = format_date($node->created, "custom", "j");
-  $vars['themonth'] = format_date($node->created, "custom", "M");
-  $vars['theyear'] = format_date($node->created, "custom", "Y");
+  $variables['thedate'] = format_date($node->created, "custom", "j");
+  $variables['themonth'] = format_date($node->created, "custom", "M");
+  $variables['theyear'] = format_date($node->created, "custom", "Y");
 
-  if ($vars['user_picture'] && $vars['display_submitted']) {
+  if ($variables['user_picture'] && $variables['display_submitted']) {
     $GLOBALS['conf']['user_picture_style'] = 'thumbnail';
-    $vars['user_picture'] = theme('user_picture', array('account' => $vars['node']));
+    $variables['user_picture'] = theme('user_picture', array('account' => $variables['node']));
   }
 
 }
@@ -253,12 +260,12 @@ function gratis_preprocess_region(&$variables, $hook) {
   if (strpos($variables['region'], 'sidebar_') === 0) {
     $variables['classes_array'][] = 'column';
     $variables['classes_array'][] = 'l-region l-sidebar';
-    // Allow a region-specific template to override Zen's region--sidebar.
+    // Allow a region-specific template to override region--sidebar.
     array_unshift($variables['theme_hook_suggestions'], 'region__sidebar');
   }
   // Use a template with no wrapper for the content region.
   elseif ($variables['region'] == 'content') {
-    // Allow a region-specific template to override Zen's region--no-wrapper.
+    // Allow a region-specific template to override region--no-wrapper.
     array_unshift($variables['theme_hook_suggestions'], 'region__no_wrapper');
   }
   // Add a SMACSS-style class for header region.
@@ -294,65 +301,6 @@ function gratis_preprocess_block(&$variables, $hook) {
   $variables['title_attributes_array']['class'][] = 'block__title gamma';
   $variables['title_attributes_array']['class'][] = 'block-title';
 
-  // Add Aria Roles via attributes.
-  switch ($variables['block']->module) {
-    case 'system':
-      switch ($variables['block']->delta) {
-        case 'main':
-          // Note: the "main" role goes in the page.tpl, not here.
-          break;
-        case 'help':
-        case 'powered-by':
-          $variables['attributes_array']['role'] = 'complementary';
-          break;
-        default:
-          // Any other "system" block is a menu block.
-          $variables['attributes_array']['role'] = 'navigation';
-          break;
-      }
-      break;
-    case 'menu':
-    case 'menu_block':
-    case 'blog':
-    case 'book':
-    case 'comment':
-    case 'forum':
-    case 'shortcut':
-    case 'statistics':
-      $variables['attributes_array']['role'] = 'navigation';
-      break;
-    case 'search':
-      $variables['attributes_array']['role'] = 'search';
-      break;
-    case 'help':
-    case 'aggregator':
-    case 'locale':
-    case 'poll':
-    case 'profile':
-      $variables['attributes_array']['role'] = 'complementary';
-      break;
-    case 'node':
-      switch ($variables['block']->delta) {
-        case 'syndicate':
-          $variables['attributes_array']['role'] = 'complementary';
-          break;
-        case 'recent':
-          $variables['attributes_array']['role'] = 'navigation';
-          break;
-      }
-      break;
-    case 'user':
-      switch ($variables['block']->delta) {
-        case 'login':
-          $variables['attributes_array']['role'] = 'form';
-          break;
-        case 'new':
-        case 'online':
-          $variables['attributes_array']['role'] = 'complementary';
-          break;
-      }
-      break;
-  }
 }
 
 /**
@@ -371,10 +319,10 @@ function gratis_process_block(&$variables, $hook) {
 /**
  * Implements hook_process_html().
  */
-function gratis_process_html(&$vars) {
+function gratis_process_html(&$variables) {
   // Flatten out html_attributes and body_attributes.
-  $vars['html_attributes'] = drupal_attributes($vars['html_attributes_array']);
-  $vars['body_attributes'] = drupal_attributes($vars['body_attributes_array']);
+  $variables['html_attributes'] = drupal_attributes($variables['html_attributes_array']);
+  $variables['body_attributes'] = drupal_attributes($variables['body_attributes_array']);
 }
 
 /**
@@ -382,9 +330,9 @@ function gratis_process_html(&$vars) {
  *
  * @see comment.tpl.php
  */
-function gratis_preprocess_comment(&$vars) {
-  $vars['created'] = date('m / j / y', $vars['elements']['#comment']->created);
-  $vars['changed'] = date('m / j / y', $vars['elements']['#comment']->created);
+function gratis_preprocess_comment(&$variables) {
+  $variables['created'] = date('m / j / y', $variables['elements']['#comment']->created);
+  $variables['changed'] = date('m / j / y', $variables['elements']['#comment']->created);
 }
 
 /**
@@ -396,18 +344,18 @@ function gratis_preprocess_comment(&$vars) {
  *
  * @see template_process_username()
  */
-function gratis_preprocess_username(&$vars) {
+function gratis_preprocess_username(&$variables) {
   // Update the username so it's the full name of the user.
-  $account = $vars['account'];
+  $account = $variables['account'];
 
   // Revise the name trimming done in template_preprocess_username.
-  $name = $vars['name_raw'] = format_username($account);
+  $name = $variables['name_raw'] = format_username($account);
 
   // Trim the altered name as core does, but with a higher character limit.
   if (drupal_strlen($name) > 35) {
     $name = drupal_substr($name, 0, 18) . '...';
   }
 
-  // Assign the altered name to $vars['name'].
-  $vars['name'] = check_plain($name);
+  // Assign the altered name to $variables['name'].
+  $variables['name'] = check_plain($name);
 }

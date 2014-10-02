@@ -46,4 +46,6 @@ settings[gratis_viewport]  = 0
 settings[theme_color_palette]  = orange
 settings[gratis_localcss]  = 0
 settings[gratis_custom_css_location]  = 0
-settings[tropica_setfonts]  = 1
+settings[gratis_setfonts]  = 1
+settings[gratis_heading_typeface] = opensans
+settings[gratis_body_typeface] = opensans
