@@ -189,9 +189,12 @@ function gratis_preprocess_page(&$variables, $hook) {
     $variables['set_width'] = check_plain('style=max-width:' . $set_width . '; ');
   }
 
-  $min_height = filter_xss_admin(theme_get_setting('gratis_min_height_setting'));
-  if (!empty($min_height)) {
-    $variables['min_height'] = check_plain('style=min-height:' . $min_height . 'px; ');
+  // Gratis min height.
+  if (theme_get_setting('gratis_min_height') == TRUE ) {
+    $min_height = filter_xss_admin(theme_get_setting('gratis_min_height_setting'));
+    if (!empty($min_height)) {
+      $variables['min_height'] = check_plain('style=min-height:' . $min_height . 'px; ');
+    }
   }
 
   // Primary nav.
