@@ -1,10 +1,6 @@
 // Import variables.
 @import "../definitions/vars";
 
-// Core imports.
-
-
-
 //@extend-elements
 
 %noform_margin {
@@ -34,7 +30,7 @@ button,
 }
 
 @-moz-document url-prefix() {
-  /* firefox line-height behaves differently, compensate with padding-top  */
+  // firefox line-height behaves differently, compensate with padding-top
   input[type="button"],
   input[type="submit"],
   input[type="reset"],

@@ -1,7 +1,4 @@
-
-
-// Legacy support.
-$legacy-support-for-ie8: true;
+// Sass variables
 
 // Set consistent vertical and horizontal spacing units.
 $vert-spacing-unit: 20px;
@@ -60,7 +57,6 @@ $mediterranean-red: #ff513a;
 $text-color: $medium_gray;
 
 // Define the color palettes
-
 $palette: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $olive_green,
         "purple": $purple, "turquoise": $turquoise, "pomegranate": $pomegranate, "seafoam": $sea_green,
         "mustard": $mustard, "surf-green": $surf-green,  "maillot-jaune": $maillot-jaune,
@@ -72,7 +68,6 @@ $tint: ("greengray": $green_gray, "pink": $pink, "orange": $orange, "green": $ol
         "caribe": $caribe, "chartreuse": $chartreuse, "mediterranean-red": $mediterranean-red);
 
 // Font families and default text color.
-
 $montserrat: 'Montserrat', sans-serif;
 $font-sans: 'Open-Sans', Helvetica, Arial, sans-serif;
 $font-serif: 'EB Garamond', serif;
@@ -86,7 +81,6 @@ $typeface: ("opensans": $font-sans, "garamond": $font-serif, "imfell": $antique)
 // Vertical rhythm / typography.
 $base-font-size: 16px;
 $base-line-height: 26px;
-$round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
 
 $h1: 43px;
@@ -98,21 +92,19 @@ $h6: 14px;
 $h1-tab: 34px;
 
 // Font-Awesome content vars.
-
 $fatag: \f02b;
-$fabook: "\f02d";
-$facomment: "\f075";
-$faaddcomment: "\f040";
-$fauser: "\f007";
-$faraquo: "\f101";
-$fadate: "\f073";
-$fabqpre: "\f10d";
-$fabqpost: "\f10e";
-$fadownarrow: "\f0ab";
-$fasearch: "\f002";
+$fabook: \f02d;
+$facomment: \f075;
+$faaddcomment: \f040;
+$fauser: \f007;
+$faraquo: \f101;
+$fadate: \f073;
+$fabqpre: \f10d;
+$fabqpost: \f10e;
+$fadownarrow: \f0ab;
+$fasearch: \f002;
 
 // Menu Vars.
-
 $subMenuItemWidth: 100%;
 $baseMenuBackground: $dark_gray;
 $secondaryMenuBackground: $medium_gray;
@@ -121,12 +113,10 @@ $gutter: 1em;
 $input: "input[type=checkbox]";
 $path-to-images: '../images';
 
-
 $text-color: #333;
 $quiet-color: #ccc;
 $loud-color: #000;
 $heading-color: #111;
-
 $link-color: $orange;
 $link-hover-color: $dark_gray;
 $link-visited-color: $orange;
