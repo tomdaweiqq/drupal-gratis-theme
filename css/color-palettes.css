@@ -1,7 +1,3 @@
-/* Neat 1.7.0
- * http://neat.bourbon.io
- * Copyright 2012-2014 thoughtbot, inc.
- * MIT License */
 html {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,7 +10,6 @@ html {
   -webkit-box-sizing: inherit;
 }
 
-/* set variables for global use */
 .box-layout.has-tint:before {
   content: '';
   display: block;

@@ -20,47 +20,46 @@
 // Node links and tags.
 ul.vocabulary-list,
 ul.links.inline {
-  display: inline;
-  margin: 0;
-  li {
-    display: inline-block;
-    margin: 0 2% 0 0;
-    &.vocabulary-links {
-      &:before {
-        content: "#{$fatag}";
-        @include fontawesome;
+  .l-main & {
+    display: inline;
+    margin: 0;
+    li {
+      display: inline-block;
+      margin: 0 2% 0 0;
+      &.vocabulary-links {
+        &:before {
+          content: "#{$fatag}";
+          @include fontawesome;
+        }
       }
-    }
-    &.node-readmore {
-      &:before {
-        content: "#{$fabook}";
-        @include fontawesome;
+      &.node-readmore {
+        &:before {
+          content: "#{$fabook}";
+          @include fontawesome;
+        }
       }
-    }
-    &.comment-comments {
-      &:before {
-        content: "#{$facomment}";
-        @include fontawesome;
+      &.comment-comments {
+        &:before {
+          content: "#{$facomment}";
+          @include fontawesome;
+        }
       }
-    }
-    &.comment-add {
-      &:before {
-        content: "#{$faaddcomment}";
-        @include fontawesome;
+      &.comment-add {
+        &:before {
+          content: "#{$faaddcomment}";
+          @include fontawesome;
+        }
       }
     }
   }
 }
 
 // Search results.
-
 ol.search-results {
   padding: 0;
   li {
     h3.title {
       line-height: inherit;
-     // @include adjust-font-size-to($h2);
-    //  margin: 0 auto rhythm(.3) auto;
     }
     span.search-snippet-info {
       display: block;

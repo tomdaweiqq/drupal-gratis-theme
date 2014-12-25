@@ -12,7 +12,6 @@
       vertical-align: middle;
       margin: 10px 6px;
       a {
-        //transition: all 100ms ease-in-out 0s;
         @include transition(all 100ms ease-in-out 0s);
         background-color: $light_gray2;
         color: $dark_gray;
