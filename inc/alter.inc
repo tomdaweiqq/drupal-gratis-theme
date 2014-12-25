@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Gratis custom alter functions.
+ * gratis custom alter functions.
  *
  * If you need to add or modify functions do it in your sub-theme.
  */
@@ -38,17 +38,10 @@ function gratis_page_alter($page) {
   $theme_path = drupal_get_path('theme', 'gratis');
 
   if (theme_get_setting('gratis_hacks_settings') == TRUE) {
-    $hacks_css = array(
-      '#attached' => array(
-        'css' => array(
-          $theme_path . '/css/gratis.hacks.css' => array(
-            'group' => CSS_THEME,
-            'preprocess' => TRUE,
-          ),
-        ),
-      ),
-    );
-    drupal_render($hacks_css);
+    drupal_add_css($theme_path . '/css/hacks.css', array(
+      'group' => CSS_THEME,
+      'preprocess' => TRUE,
+    ));
   }
 
   // Look in each visible region for blocks.
@@ -90,4 +83,14 @@ function gratis_page_alter($page) {
     );
     drupal_add_html_head($viewport, 'viewport');
   }
+
+  // Live reload.
+  if (theme_get_setting('gratis_livereload') == TRUE) {
+    // livereload.js
+    $livereload_js = 'http://localhost:35729/livereload.js';
+    drupal_add_js($livereload_js, array(
+      'scope' => 'footer',
+    ));
+  }
+
 }

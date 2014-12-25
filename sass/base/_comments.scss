@@ -1,11 +1,4 @@
-// Import variables.
-@import "../variables/vars";
-
-// Core imports.
-@import "compass";
-@import "breakpoint";
-
-// Comment styles paying homage to Bartik.
+// Comment styles
 
 .comment {
   display: table;
@@ -57,7 +50,8 @@
   h2.title {
     margin-bottom: 1em;
   }
-  div.user-picture img {
+  div.user-picture img,
+  div.field-user--user-picture img {
     margin-left: 0;
   }
   ul.links {
@@ -80,7 +74,7 @@
 
 // Media query
 
-@include breakpoint(0 $tab) {
+@include media($mobile) {
 
   .comment {
     padding: 10px;
@@ -89,7 +83,8 @@
       display: block;
       padding: 0 30px 10px 0;
       width: inherit;
-      .user-picture {
+      .user-picture,
+      .field-user--user-picture {
         float: left;
         margin: 0 10px 0 0;
         text-align: center;

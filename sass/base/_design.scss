@@ -1,9 +1,9 @@
 // Import variables.
-@import "../variables/vars";
+@import "../definitions/vars";
 
 // Core imports.
-@import "compass";
-@import "breakpoint";
+
+
 
 body {
   background-color: $charcoal_gray;
@@ -33,19 +33,19 @@ body {
 .l-menu-wrapper,
 .l-breadcrumbs,
 .l-preface-wrap,
-article {
-  @include pie-clearfix;
+article.node {
+  @include clearfix;
   margin-bottom: $vert-spacing-unit;
 }
 
-article {
+article.node {
   padding-bottom: $vert-spacing-unit;
-  border-bottom: 1px dashed $medium_gray2;
+ // border-bottom: 1px dashed $medium_gray2;
 }
 
 .l-logo {
-  padding-bottom: 10px;
-  @include breakpoint(0 $tab) {
+  padding-top: 10px;
+  @include media($mobile) {
       margin: 34px 0 0;
   }
 }
@@ -89,7 +89,7 @@ article {
   bottom: 10px;
   display: none;
   z-index: 999;
-  background: url("#{$path-to-images}/gratis-sprite.png") no-repeat 0 -341px;
+  background: url("#{$path-to-images}/theme-sprite.png") no-repeat 0 -341px;
   text-align: left;
   text-indent: -9999px;
 }

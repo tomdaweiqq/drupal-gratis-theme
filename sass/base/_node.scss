@@ -1,9 +1,9 @@
 // Import variables.
-@import "../variables/vars";
+@import "../definitions/vars";
 
 // Core imports.
-@import "compass";
-@import "breakpoint";
+
+
 
 .node-submitted {
   margin-bottom: 10px;
@@ -24,13 +24,19 @@ span.date {
   }
 }
 
-.user-picture {
+span.author {
+  display: block;
+  margin-bottom: $vert-spacing-unit;
+}
+
+.user-picture,
+.field-user--user-picture {
   position: relative;
   float: right;
   img {
     @include border-radius(50px);
   }
-  @include breakpoint(0 $tab) {
+  @include media($mobile) {
     img {
       float: none;
     }
@@ -38,7 +44,6 @@ span.date {
 }
 
 figure {
-  border: 1px dotted darken($light_gray2, 10%);
   figcaption {
     color: $medium_gray2;
     font-style: italic;
@@ -47,9 +52,10 @@ figure {
   }
 }
 
-@include breakpoint(0 $tab) {
+@include media($mobile) {
   .node-submitted {
-    .user-picture {
+    .user-picture,
+    .field-user--user-picture {
       float: none;
       text-align: center;
       margin: 10px 0 0 0;
@@ -57,7 +63,7 @@ figure {
   }
 }
 
-@include breakpoint(0 $mobile) {
+@include media($mobile) {
   .node-submitted {
     .submitted {
       display: block;

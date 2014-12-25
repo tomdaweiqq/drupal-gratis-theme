@@ -13,70 +13,12 @@
  */
 function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
 
-  // @ theme_form_system_theme_settings_alter() name-clash.
-  // See http://drupal.org/node/943212.
-  if (isset($form_id)) {
-    return;
-  }
-
-  // Form alters to put drupal settings in vertical tabs.
-  $form['logo']['#group'] = 'gratis_settings';
-  unset($form['logo']['#attributes']['class']);
-  $form['favicon']['#group'] = 'gratis_settings';
-  $form['theme_settings']['#group'] = 'gratis_settings';
+  //$form['theme_settings']['#group'] = 'gratis_settings';
 
   // Set the vertical tabs up.
   $form['gratis_settings'] = array(
     '#type' => 'vertical_tabs',
     '#weight' => 99,
-  );
-
-  // Gratis typography.
-  $form['gratis_typography'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Gratis typography'),
-    '#collapsible' => TRUE,
-    '#group' => 'gratis_settings',
-  );
-
-  $form['gratis_typography']['gratis_setfonts'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Would you like to use Gratis\' default typography? '),
-    '#default_value' => theme_get_setting('gratis_setfonts'),
-    '#description' => t('Check this box to use gratis\' built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
-  );
-
-  $form['gratis_typography']['gratis_typography_settings'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Font choices'),
-    '#collapsible' => TRUE,
-    '#description' => t('Choose your fonts.'),
-    '#states' => array(
-      'visible' => array(
-        ':input[name="gratis_setfonts"]' => array('checked' => TRUE),
-      ),
-    ),
-  );
-
-  $form['gratis_typography']['gratis_typography_settings']['gratis_heading_typeface'] = array(
-    '#type' => 'select',
-    '#title' => t('Choose a heading typeface'),
-    '#default_value' => theme_get_setting('gratis_heading_typeface'),
-    '#options' => array(
-      'opensans' => t('Open Sans (modern clean sans-serif)'),
-      'garamond' => t('EB Garamond (tradtional serif)'),
-      'imfell' => t('IM Fell (antique style)'),
-    ),
-  );
-
-  $form['gratis_typography']['gratis_typography_settings']['gratis_body_typeface'] = array(
-    '#type' => 'select',
-    '#title' => t('Choose a body typeface'),
-    '#default_value' => theme_get_setting('gratis_body_typeface'),
-    '#options' => array(
-      'opensans' => t('Open Sans (modern clean sans-serif)'),
-      'garamond' => t('EB Garamond (tradtional serif)'),
-    ),
   );
 
   // Gratis color settings tab area.
@@ -85,7 +27,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#title' => t('Gratis color settings'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
-    '#description' => t("Set the theme color palette for Gratis from the list below."),
+    '#description' => t("Set the theme color palette for gratis from the list below."),
   );
 
   $form['gratis_color_settings']['theme_color_palette'] = array(
@@ -106,10 +48,67 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
       'maillot-jaune' => t('Maillot Jaune (Dark background)'),
       'caribe' => t('Caribe (Dark background)'),
       'chartreuse' => t('Chartreuse (Dark background)'),
+      'mediterranean-red' => t('Mystic Blue (Dark background)'),
     ),
   );
 
-  // gratis additional settings.
+  // Gratis bg patterns settings.
+  $form['gratis_bg_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Gratis background settings'),
+    '#collapsible' => TRUE,
+    '#group' => 'gratis_settings',
+    '#description' => t("Choose a background pattern. These will only show if you choose box layout."),
+  );
+
+  $form['gratis_bg_settings']['theme_bg_pattern'] = array(
+    '#type' => 'select',
+    '#title' => t('Choose a background pattern'),
+    '#default_value' => theme_get_setting('theme_bg_pattern'),
+    '#description' => t("See the theme page for patterns key"),
+    '#options' => array(
+      'bg_pattern_01' => t('Background pattern 1'),
+      'bg_pattern_02' => t('Background pattern 2'),
+      'bg_pattern_03' => t('Background pattern 3'),
+      'bg_pattern_04' => t('Background pattern 4'),
+      'bg_pattern_05' => t('Background pattern 5'),
+      'bg_pattern_06' => t('Background pattern 6'),
+      'bg_pattern_07' => t('Background pattern 7'),
+      'bg_pattern_08' => t('Background pattern 8'),
+      'bg_pattern_09' => t('Background pattern 9'),
+      'bg_pattern_10' => t('Background pattern 10'),
+      'bg_pattern_11' => t('Background pattern 11'),
+      'bg_pattern_12' => t('Background pattern 12'),
+      'bg_pattern_13' => t('Background pattern 13'),
+      'bg_pattern_14' => t('Background pattern 14'),
+      'bg_pattern_15' => t('Background pattern 15'),
+    )
+  );
+
+  $form['gratis_bg_settings']['theme_bg_tint'] = array(
+    '#type' => 'select',
+    '#title' => t('Background Tint'),
+    '#default_value' => theme_get_setting('theme_bg_tint'),
+    '#description' => t("Choose a tint hue for your background"),
+    '#options' => array(
+      'no_tint' => t('None'),
+      'bg-tint-turquoise' => t('Tint Turquoise Blue'),
+      'bg-tint-purple' => t('Tint Cool Purple'),
+      'bg-tint-orange' => t('Tint Pumpkin Orange'),
+      'bg-tint-green' => t('Tint Olive Green'),
+      'bg-tint-pomegranate' => t('Tint Pomegranate Red'),
+      'bg-tint-seafoam' => t('Tint Seafoam Green'),
+      'bg-tint-greengray' => t('Tint Green Gray'),
+      'bg-tint-pink' => t('Tint Pink'),
+      'bg-tint-mustard' => t('Tint Mustard'),
+      'bg-tint-surf-green' => t('Tint Surf Green'),
+      'bg-tint-maillot-jaune' => t('Tint Maillot Jaune'),
+      'bg-tint-caribe' => t('Tint Caribe'),
+      'bg-tint-chartreuse' => t('Tint Chartreuse'),
+      'bg-tint-mediterranean-red' => t('Tint Mystic Blue'),
+    )
+  );
+
   $form['gratis_css'] = array(
     '#type' => 'fieldset',
     '#title' => t('Gratis css settings'),
@@ -161,42 +160,29 @@ e.g.: sites/default/files/custom-css/local.css you must check the box above for 
     '#default_value' => theme_get_setting('gratis_custom_css_path'),
   );
 
-  $form['gratis_layout'] = array(
+  $form['gratis_gridwidth'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Gratis layout options'),
+    '#title' => t('Gratis page width and style'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
   );
 
-  $form['gratis_layout']['gratis_width']['gratis_grid_container_width'] = array(
+  $form['gratis_gridwidth']['gratis_grid_container_width'] = array(
     '#type' => 'textfield',
-    '#title' => t('Optional grid width value, pixels or percentage. e.g 1020px, 100% etc...'),
+    '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
     '#default_value' => theme_get_setting('gratis_grid_container_width'),
-    '#description' => t('This setting allows you to set the width of the entire grid container.
+    '#description' => t('This setting allows you to set the width of the entire gird container.
 Leave blank for the default max width of 1200px.  All inner grids are percentage based
 so this should work with most any value you set within reason.'),
   );
 
-  $form['gratis_layout']['gratis_min_height'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use a minimum height for the main container?'),
-    '#default_value' => theme_get_setting('gratis_min_height'),
-    '#description' => t("Check this option to use a minimum height for the main container.
-    This might be helpful if you have posts that are very short in length."),
-  );
-
-  $form['gratis_layout']['gratis_min_height_setting'] = array(
-    '#type' => 'textfield',
-    '#size' => 10,
-    '#maxlength' => 10,
-    '#field_suffix' => t('px'),
-    '#title' => t('Minimum main container height'),
-    '#default_value' => theme_get_setting('gratis_min_height_setting'),
-    '#description' => t('Set a minimum height, this will be rendered as pixels.  Do not enter "px", this is done for you in code. examples, 300, 500, 700 etc...'),
-    '#states' => array(
-      'visible' => array(
-        ':input[name="gratis_min_height"]' => array('checked' => TRUE),
-      ),
+  $form['gratis_gridwidth']['gratis_page_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Choose a page style'),
+    '#default_value' => theme_get_setting('gratis_page_style'),
+    '#options' => array(
+      'default' => t('Default'),
+      'boxed' => t('Boxed'),
     ),
   );
 
@@ -227,5 +213,99 @@ so this should work with most any value you set within reason.'),
     '#default_value' => theme_get_setting('gratis_viewport'),
     '#description' => t('Check this box ONLY if you want to enable touch device users to be able to pinch and zoom.'),
   );
+
+  // gratis additional settings.
+  $form['gratis_icons'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Gratis icons'),
+    '#collapsible' => TRUE,
+    '#group' => 'gratis_settings',
+  );
+
+  $form['gratis_icons']['gratis_use_listicons'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use Font-Awesome for unordered list items?'),
+    '#default_value' => theme_get_setting('gratis_use_listicons'),
+  );
+
+  $form['gratis_icons']['icon_select']['gratis_listicon_style'] = array(
+    '#type' => 'select',
+    '#options' => array(
+      'arrow_circle' => t('Arrow circle (f0a9)'),
+      'chevron_circle' => t('Chevron circle (f138)'),
+      'chevron' => t('Chevron (f054)'),
+      'checkmark' => t('Checkmark (f00c)'),
+    ),
+    '#title' => t('What list style icon would you like to use?'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="gratis_use_listicons"]' => array('checked' => TRUE),
+      ),
+    ),
+    '#default_value' => theme_get_setting('gratis_listicon_style'),
+  );
+
+  // gratis additional settings.
+  $form['gratis_js'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Gratis livereload'),
+    '#collapsible' => TRUE,
+    '#group' => 'gratis_settings',
+  );
+
+  $form['gratis_js']['gratis_livereload'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use Live Reload?'),
+    '#default_value' => theme_get_setting('gratis_livereload'),
+  );
+
+  // Gratis typography.
+  $form['gratis_typography'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Gratis typography'),
+    '#collapsible' => TRUE,
+    '#group' => 'gratis_settings',
+  );
+
+  $form['gratis_typography']['gratis_setfonts'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Would you like to use Gratis\' default typography? '),
+    '#default_value' => theme_get_setting('gratis_setfonts'),
+    '#description' => t('Check this box to use gratis\' built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
+  );
+
+  $form['gratis_typography']['gratis_typography_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Font choices'),
+    '#collapsible' => TRUE,
+    '#description' => t('Choose your fonts.'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="gratis_setfonts"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+
+  $form['gratis_typography']['gratis_typography_settings']['gratis_heading_typeface'] = array(
+    '#type' => 'select',
+    '#title' => t('Choose a heading typeface'),
+    '#default_value' => theme_get_setting('gratis_heading_typeface'),
+    '#options' => array(
+      'opensans' => t('Open Sans (modern clean sans-serif)'),
+      'garamond' => t('EB Garamond (tradtional serif)'),
+      'imfell' => t('IM Fell (antique style)'),
+    ),
+  );
+
+  $form['gratis_typography']['gratis_typography_settings']['gratis_body_typeface'] = array(
+    '#type' => 'select',
+    '#title' => t('Choose a body typeface'),
+    '#default_value' => theme_get_setting('gratis_body_typeface'),
+    '#options' => array(
+      'opensans' => t('Open Sans (modern clean sans-serif)'),
+      'garamond' => t('EB Garamond (tradtional serif)'),
+    ),
+  );
+
 
 }

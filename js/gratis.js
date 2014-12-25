@@ -9,7 +9,7 @@
     attach: function (context) {
 
       // Scroll to top.
-      $(window).scroll(function(){
+      $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
           $('.scrolltop').fadeIn();
         } else {
@@ -17,13 +17,12 @@
         }
       });
 
-      $('.scrolltop').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 500);
+      $('.scrolltop').click(function () {
+        $("html, body").animate({scrollTop: 0}, 500);
         return false;
       });
 
       // End scroll to top.
-
     }
   };
 
@@ -75,8 +74,8 @@
     attach: function (context) {
 
       // Off-canvas, check for child elements on parent menu.
-      $('.main-menu-wrapper ul li').each(function(){
-        if($('ul',this).length){
+      $('.main-menu-wrapper ul li').each(function () {
+        if ($('ul', this).length) {
           $(this).addClass('has-child');
         }
       });

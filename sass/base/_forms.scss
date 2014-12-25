@@ -1,9 +1,9 @@
 // Import variables.
-@import "../variables/vars";
+@import "../definitions/vars";
 
 // Core imports.
-@import "compass";
-@import "breakpoint";
+
+
 
 //@extend-elements
 
@@ -11,7 +11,7 @@
   margin-top: 0;
   margin-bottom: 0;
   white-space: nowrap;
-  @include breakpoint(0 $tab) {
+  @include media($mobile) {
     white-space: normal;
   }
 }
@@ -147,7 +147,7 @@ input {
       pointer-events: none;
 
     }
-    @include breakpoint(0 $tab) {
+    @include media($mobile) {
     }
   }
 }

@@ -1,29 +1,31 @@
-Version 7.x-2.2, October, 2014
+Version 2.0, August, 2014
 
 -- SUMMARY --
 
-Gratis is a responsive Drupal 7 HTML5 Sass based theme designed and developed
-by Danny Englander (Twitter: @Danny_Englander). It allows for a choice color
-palettes on the theme's settings page.
+gratis 2 is a responsive Drupal 7 HTML5 theme designed and developed by
+Danny Englander (Twitter: @Danny_Englander). gratis 2.0 has been re-architected
+from the ground up using Sass, Susy and Compass.
 
-Gratis is aimed at users who want to get a nice looking theme up and
+gratis allows for a choice color palettes in the theme's settings page. and is
+aimed at users who want to get a nice looking theme up and
 running in short order, may not want to take the time to create a sub-theme
-and mess with regions, settings, media queries, and other highly technical
+and fiddle with regions, settings, media queries, and other highly technical
 things. It's also aimed at a casual Drupal user who has some familiarity
 with building sites. This theme also does not require any base theme.
+
+-- Theme Dependency (NONE) -- 
 
 -- CONFIGURATION --
 
 - Configure theme settings in Administration > Appearance > Settings >
-Gratis or /admin/appearance/settings/gratis and choose various options
+gratis or admin/appearance/settings/gratis and choose various options
 available.
 
 -- THEME SETTINGS UI --
 
 - Choice of several color palettes: Turquoise Blue, Cool Purple, Pumpkin
-Orange, Olive Green, Pomegranate Red, Seafoam Green, Green Gray,
-Pink, Mustard, Surf Green, Maillot Jaune (Dark background),
-Caribe (Dark background), and Chartreuse (Dark background)
+Orange, Olive Green, Pomegranate Red, Seafoam Green, Green Gray.  
+gratis 2 also has some new colors, Mustard and Royal Turquoise.
 
 - Toggle Breadcrumbs on or off
 
@@ -32,9 +34,16 @@ Caribe (Dark background), and Chartreuse (Dark background)
 - Custom Path CSS -  Define a custom path for your own css file to use with
 the theme.
 
+- Tertiary Menus -  Currently not supported but possibly planned.
+
 - Customizable layout width in the theme settings UI, go as wide as you
 want! It's all percentage based within the parent container. That's one of
 the drawbacks of Bamboo and there were a lot of feature requests for this.
+
+- Main Menu block region Use this region if you turn off "Main Menu" in the
+theme settings and use your own third party menu system such as Menu Block
+or Superfish Module. You are responsible for any styling and CSS for this.
+(Use local.css as mentioned above.)
 
 - Pinch and Zoom for Touch friendly devices - Option to choose whether to
 pinch and zoom on a touch sensitive device or not. Default is off. Note,
@@ -42,6 +51,10 @@ there is no support for layouts breaking or otherwise if you choose to
 enable this option.
 
 -- ADDITIONAL FEATURES --
+
+- Mobile friendly off-canvas menu
+
+- HTML5 Image captions on default imagefield, may work for others.
 
 - Responsive for phone, tablet, and desktop using media queries
 
@@ -56,8 +69,6 @@ your menu item. Or simply go to: Administration > Structure > Menus > Main
 menu and then click a menu item and edit. If you need help with this,
 please consult Drupal core documentation.
 
-- Tertiary Menus -  Currently not supported but possibly planned.
-
 -- REQUIREMENTS --
 
 No base theme needed, simply use this theme on its own.
@@ -71,7 +82,7 @@ information.
 
 * As with any other Drupal theme you are able to customize just about every
 aspect of this theme but some nice defaults are provided out of the box
-with Gratis.
+with gratis.
 
 - drupal.org theme guide is here : http://drupal.org/documentation/theme
 
@@ -91,12 +102,15 @@ avoid upgrade snags.
 -- NOTES --
 
 This theme supports CSS3 / HTML5 and media queries. There is no support for
-IE9 and below.
+IE9 or below so please do not file any issues in regard to this.
 
-Buy me a Latte - Help support Gratis but it's not a requirement.
+If you require specific customizations that you are not able to do on your
+own, I can offer paid support. Please email me: contact@highrockmedia.com
+or through my website's contact form. http://highrockmedia.com/contact-us
+
+Buy me a Latte - Help support gratis but it's not a requirement.
 http://highrockmedia.com/buy-me-latte
 
--- Danny Englander Drupal Themer and Photographer --
-San Diego, California
-http://highrockmedia.com
+------------------------ Danny Englander Drupal Themer and Photographer
+High Rock Media San Diego, California http://highrockmedia.com
 http://highrockphoto.com

@@ -1,0 +1,154 @@
+// Import variables.
+@import "../definitions/vars";
+
+.l-off-canvas {
+  @include clearfix;
+}
+
+img {
+  width: auto \9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+.no-sidebars {
+  figure {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Set the default container max-width in case it's not set in the gratis' theme UI which would override this.
+.l-setwidth {
+  @include outer-container;
+  padding: 0 20px;
+  @include clearfix;
+}
+
+// box layout default.
+.box-layout {
+  .l-page-wrapper {
+    @include outer-container(1020px);
+    @include clearfix;
+    margin-top: 30px;
+  //  @include transition(all 0.55s ease-in);
+    @include media($tab_end) {
+      margin-top: 0;
+    }
+    position: relative;
+    z-index: 200;
+  }
+  // Generate background pattern css for box layouts.
+  @for $i from 1 through 15 {
+    @if $i < 10 {
+      &.bg_pattern_0#{$i} {
+        background: url("#{$path-to-images}/bg/bg-pattern-0#{$i}.png") repeat fixed;
+      }
+    } @else {
+      &.bg_pattern_#{$i} {
+        background: url("#{$path-to-images}/bg/bg-pattern-#{$i}.png") repeat fixed;
+      }
+    }
+  }
+
+}
+
+// Media query for wide layouts.
+@include media($desk) {
+
+  // Extends
+  %grayborder {
+    border: 1px solid $medium_gray;
+  }
+
+  .l-region--navigation {
+    @include clearfix;
+  }
+
+  // Two sidebars.
+  .two-sidebars {
+    .region-sidebar-first {
+      @include span-columns(5 of 20);
+      @include shift(-15);
+      @include pad(0 2% 0 0);
+    }
+    .l-content {
+      @include span-columns(10 of 20);
+      @include shift(5);
+      @include pad(0 2%);
+      padding-bottom: $vert-spacing-unit;
+    }
+    .region-sidebar-second {
+      @include span-columns(5 of 20);
+    }
+  }
+
+  // One sidebar - sidebar first.
+  .one-sidebar.sidebar-first {
+    .l-content {
+      @include span-columns(9);
+      @include shift(3);
+      @include pad(0 2%);
+      padding-bottom: $vert-spacing-unit;
+    }
+    .region-sidebar-first {
+      @include span-columns(3);
+      @include shift(-12);
+    }
+  }
+
+  // One sidebar - sidebar second.
+  .one-sidebar.sidebar-second {
+    .l-content {
+      @include span-columns(9);
+      @include pad(0 2%);
+      padding-bottom: $vert-spacing-unit;
+    }
+    .region-sidebar-second {
+      @include span-columns(3);
+    }
+  }
+
+  // Preface, postscript, footer.
+  .footer-one .footer,
+  .postscript-one .postscript,
+  .preface-one .preface {
+    @include span-columns(12);
+  }
+  .footer-two .footer,
+  .postscript-two .postscript,
+  .preface-two .preface {
+    @include pad(0 2%);
+    @include span-columns(6);
+  }
+  .footer-three .footer,
+  .postscript-three .postscript,
+  .preface-three .preface {
+    @include span-columns(4);
+    @include pad(0 2%);
+  }
+
+}
+
+// Wide screen layout grid.
+
+@include media($desk) {
+
+  .header-left-right .l-header {
+    .l-logo {
+      @include span-columns(5);
+      padding-bottom: $vert-spacing-unit;
+      text-align: left;
+    }
+    .l-branding {
+      @include span-columns(7);
+      text-align: right;
+      padding: 10px 0 0 0;
+    }
+  }
+
+}
