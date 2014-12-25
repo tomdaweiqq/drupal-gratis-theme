@@ -1,19 +1,27 @@
-Version 2.0, August, 2014
+Version 2.0, December, 2014
 
 -- SUMMARY --
 
-gratis 2 is a responsive Drupal 7 HTML5 theme designed and developed by
-Danny Englander (Twitter: @Danny_Englander). gratis 2.0 has been re-architected
-from the ground up using Sass, Susy and Compass.
+Gratis 2 is a responsive Drupal 7 HTML5 theme designed and developed by
+Danny Englander (Twitter: @Danny_Englander). Gratis 2.0 has been re-architected
+from the ground up using LibSass, Neat, Boubon, and Grunt.
 
-gratis allows for a choice color palettes in the theme's settings page. and is
+Gratis allows for a choice color palettes in the theme's settings page. and is
 aimed at users who want to get a nice looking theme up and
 running in short order, may not want to take the time to create a sub-theme
 and fiddle with regions, settings, media queries, and other highly technical
 things. It's also aimed at a casual Drupal user who has some familiarity
 with building sites. This theme also does not require any base theme.
 
--- Theme Dependency (NONE) -- 
+-- Gratis, LibSass, and Grunt
+Gratis 2 now uses Grunt and LibSass via Node.js NPM (Grunt Sass)
+To get up and running, follow the steps below:
+
+1. Install node.js from http://nodejs.org/
+2. cd to the gratis folder (or your subtheme)
+3. run sudo npm install (if all went well, you will now have your local node modules)
+4. run grunt
+5. make css changes
 
 -- CONFIGURATION --
 
@@ -106,11 +114,11 @@ IE9 or below so please do not file any issues in regard to this.
 
 If you require specific customizations that you are not able to do on your
 own, I can offer paid support. Please email me: contact@highrockmedia.com
-or through my website's contact form. http://highrockmedia.com/contact-us
+or through my website's contact form. http://dannyenglander.com/contact-us
 
 Buy me a Latte - Help support gratis but it's not a requirement.
-http://highrockmedia.com/buy-me-latte
+http://dannyenglander.com/buy-me-latte
 
 ------------------------ Danny Englander Drupal Themer and Photographer
-High Rock Media San Diego, California http://highrockmedia.com
-http://highrockphoto.com
+San Diego, California http://dannyenglander.com
+Photos: http://highrockphoto.com

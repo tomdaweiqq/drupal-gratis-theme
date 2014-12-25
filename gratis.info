@@ -4,7 +4,6 @@ core = 7.x
 engine = phptemplate
 
 ; CSS --------------------
-
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/color-palettes.css
 stylesheets[all][] = css/core.css
@@ -22,7 +21,6 @@ regions[preface_first]  = Preface first
 regions[preface_second] = Preface second
 regions[preface_third]  = Preface third
 regions[full_width_highlight]  = Full Width Highlight
-regions[content_top]    = Content top
 regions[help]           = Help
 regions[sidebar_first]  = Sidebar First
 regions[sidebar_second]  = Sidebar Second
@@ -37,7 +35,6 @@ regions[footer_third]   = Footer third
 
 
 ; gratis default settings --------------
-
 settings[gratis_hacks_settings]  = 1
 settings[breadcrumbs]  = 0
 settings[gratis_viewport]  = 0
@@ -45,3 +42,4 @@ settings[theme_color_palette]  = orange
 settings[gratis_localcss]  = 0
 settings[gratis_custom_css_location]  = 0
 settings[gratis_setfonts]  = 0
+settings[gratis_page_style]  = 0

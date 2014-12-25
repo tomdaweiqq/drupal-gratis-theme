@@ -34,7 +34,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     underscores.
 
     For example, copy the sites/all/themes/Gratis/STARTERKIT folder and rename it
-    as sites/all/themes/Gratis_subtheme.
+    as sites/all/themes/gratis_subtheme.
 
       Why? Each theme should reside in its own folder. To make it easier to
       upgrade Gratis, sub-themes should reside in a folder separate from the base

@@ -57,6 +57,7 @@ img {
 
 }
 
+
 // Media query for wide layouts.
 @include media($desk) {
 
@@ -92,7 +93,7 @@ img {
     .l-content {
       @include span-columns(9);
       @include shift(3);
-      @include pad(0 2%);
+      @include pad(0 0 0 2%);
       padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-first {
@@ -105,7 +106,7 @@ img {
   .one-sidebar.sidebar-second {
     .l-content {
       @include span-columns(9);
-      @include pad(0 2%);
+      @include pad(0 2% 0 0);
       padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-second {
@@ -122,14 +123,14 @@ img {
   .footer-two .footer,
   .postscript-two .postscript,
   .preface-two .preface {
-    @include pad(0 2%);
+    @include pad(0 2% 0 0);
     @include span-columns(6);
   }
   .footer-three .footer,
   .postscript-three .postscript,
   .preface-three .preface {
     @include span-columns(4);
-    @include pad(0 2%);
+    @include pad(0 2% 0 0);
   }
 
 }
