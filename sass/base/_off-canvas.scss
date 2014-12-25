@@ -24,7 +24,6 @@
 }
 
 @include media($off_canvas) {
-
   .off-canvas-left-is-visible {
     .l-off-canvas--left {
       left: 0;
@@ -126,7 +125,6 @@
 }
 
 @include media($menu) {
-
   .l-off-canvas-show {
     display: none;
     display: none;
@@ -140,21 +138,4 @@
   .nested-menu-item-toggle {
     display: none;
   }
-
 }
-
-//@include media(0 $mobile) {
-//  .l-off-canvas {
-//    width: 80%;
-//    left: -80%;
-//  }
-//  .l-menu-wrapper ul.menu {
-//    li {
-//      li {
-//        a {
-//          font-size: .7rem;
-//        }
-//      }
-//    }
-//  }
-//}
