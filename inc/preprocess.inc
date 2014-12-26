@@ -195,7 +195,7 @@ function gratis_preprocess_page(&$vars, $hook) {
 
   // Set the custom grid width in a variable.
   $gridwidth = theme_get_setting('gratis_grid_container_width');
-  $vars['setwidth'] = $gridwidth;
+  $vars['set_width'] = check_plain($gridwidth);
 
   // Primary nav.
   $vars['primary_nav'] = FALSE;

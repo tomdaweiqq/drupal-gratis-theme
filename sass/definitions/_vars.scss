@@ -78,11 +78,6 @@ $font_awesome: FontAwesome;
 // Define the typeface loop.
 $typeface: ("opensans": $font-sans, "garamond": $font-serif, "imfell": $antique);
 
-// Vertical rhythm / typography.
-$base-font-size: 16px;
-$base-line-height: 26px;
-$rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
-
 $h1: 43px;
 $h2: 34px;
 $h3: 25px;
@@ -122,8 +117,9 @@ $link-hover-color: $dark_gray;
 $link-visited-color: $orange;
 
 $base-font-family: 'Open Sans', sans-serif;
-$base-font-size: 18px;
+$base-font-size: 1.1rem;
 $base-font-weight: 300;
+$base-line-height: 1.7;
 
 $fixed-font-family: 'Source Code Pro', monospace;
 $fixed-font-size: 15px;

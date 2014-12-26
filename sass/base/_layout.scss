@@ -32,10 +32,9 @@ img {
 // box layout default.
 .box-layout {
   .l-page-wrapper {
-    @include outer-container(1020px);
+    @include outer-container(1040px);
     @include clearfix;
     margin-top: 30px;
-  //  @include transition(all 0.55s ease-in);
     @include media($tab_end) {
       margin-top: 0;
     }
