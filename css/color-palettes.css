@@ -10,6 +10,7 @@ html {
   -webkit-box-sizing: inherit;
 }
 
+/* set variables for global use */
 .box-layout.has-tint:before {
   content: '';
   display: block;
