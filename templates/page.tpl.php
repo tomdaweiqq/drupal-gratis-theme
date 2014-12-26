@@ -135,6 +135,8 @@
         </div>
       </div>
 
+<div class="l-content-wrap">
+
       <?php if ($breadcrumb): ?>
         <div id="breadcrumbs-wrapper" class="l-breadcrumbs">
           <div class="breadcrumbs l-setwidth" <?php if (isset($set_width)) : print 'style="max-width:' . $set_width . ';"' ; endif; ?>>
@@ -256,6 +258,8 @@
 
         </div>
       </footer>
+
+</div>
 
     </div>
     <a href="#" class="scrolltop">Scroll to the top</a>
