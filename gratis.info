@@ -43,3 +43,5 @@ settings[gratis_localcss]  = 0
 settings[gratis_custom_css_location]  = 0
 settings[gratis_setfonts]  = 0
 settings[gratis_page_style]  = default
+settings[gratis_setfonts]  = 1
+
