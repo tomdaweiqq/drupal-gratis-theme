@@ -573,23 +573,24 @@ figure figcaption {
   }
 }
 
-.item-list-pager {
+.l-content-wrap .item-list-pager {
   margin: 20px 0;
   overflow: hidden;
   position: relative;
 }
 
-.item-list-pager ul {
+.l-content-wrap .item-list-pager ul {
   text-align: center;
 }
 
-.item-list-pager ul li {
+.l-content-wrap .item-list-pager ul li {
   display: inline-block;
   margin: 10px 6px;
+  min-width: 30px;
   vertical-align: middle;
 }
 
-.item-list-pager ul li a {
+.l-content-wrap .item-list-pager ul li a {
   background-color: #eaeaea;
   color: #202020;
   display: block;
@@ -603,16 +604,16 @@ figure figcaption {
   -webkit-transition: all 100ms ease-in-out 0s;
 }
 
-.item-list-pager ul li a:hover {
+.l-content-wrap .item-list-pager ul li a:hover {
   color: #fff;
 }
 
-.item-list-pager ul li.pager-current {
+.l-content-wrap .item-list-pager ul li.pager-current {
   color: #fff;
   padding: 4px 8px;
 }
 
-.item-list-pager ul li.pager-current:hover {
+.l-content-wrap .item-list-pager ul li.pager-current:hover {
   color: #fff;
 }
 

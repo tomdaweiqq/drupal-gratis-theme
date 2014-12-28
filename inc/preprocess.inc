@@ -112,7 +112,7 @@ function gratis_preprocess_html(&$vars) {
   }
 
   // Layout options.
-    if (theme_get_setting('gratis_header_layout') == TRUE) {
+  if (theme_get_setting('gratis_header_layout') == TRUE) {
     $vars['classes_array'][] = 'header-left-right';
   }
 
@@ -128,7 +128,7 @@ function gratis_preprocess_html(&$vars) {
 
   // Custom css file path if checked and file exists.
   if (theme_get_setting('gratis_custom_css_location') == TRUE) {
-    $path = theme_get_setting('gratis_custom_css_path');
+    $path = check_plain(theme_get_setting('gratis_custom_css_path'));
     if (file_exists($path)) {
       drupal_add_css("$path", array(
         'group' => CSS_THEME,
@@ -194,8 +194,8 @@ function gratis_preprocess_page(&$vars, $hook) {
   }
 
   // Set the custom grid width in a variable.
-  $gridwidth = theme_get_setting('gratis_grid_container_width');
-  $vars['set_width'] = check_plain($gridwidth);
+  $gridwidth = check_plain(theme_get_setting('gratis_grid_container_width'));
+  $vars['set_width'] = filter_xss($gridwidth);
 
   // Primary nav.
   $vars['primary_nav'] = FALSE;
@@ -225,13 +225,8 @@ function gratis_preprocess_page(&$vars, $hook) {
 /**
  * Implements hook_preprocess_node().
  *
- * Copied from Sam Richard's Aurora Base Theme.
- *
- * Backports the following changes made to Drupal 8:
- * - #1077602: Convert node.tpl.php to HTML5.
  */
 function gratis_preprocess_node(&$vars, $hook) {
-
   // Global node.
   $node = $vars['node'];
   $css_node_type = drupal_clean_css_identifier($vars['type']);
@@ -265,18 +260,8 @@ function gratis_preprocess_node(&$vars, $hook) {
   }
 
   // Set the custom grid width in a variable.
-  $gridwidth = theme_get_setting('gratis_grid_container_width');
-  $vars['setwidth'] = $gridwidth;
-
-  // Show hide gallery filtering.
-  $show_gallery_filtering = field_get_items('node', $node, 'field_show_gallery_filtering');
-  if ($show_gallery_filtering[0]['value'] == TRUE) {
-    $vars['show_gallery_filtering'] = $show_gallery_filtering[0]['value'];
-    $vars['classes_array'][] = 'show-gallery-filtering';
-  }
-  else {
-    $vars['classes_array'][] = 'no-gallery-filtering';
-  }
+  $gridwidth = check_plain(theme_get_setting('gratis_grid_container_width'));
+  $vars['set_width'] = filter_xss($gridwidth);
 
 }
 
@@ -395,11 +380,4 @@ function gratis_preprocess_html_tag(&$vars) {
       'charset' => 'utf-8',
     );
   }
-}
-
-function gratis_preprocess_file_entity(&$vars) {
-  global $base_url;
-  $vars['baseurl'] = $base_url;
-  $vars['theme_path'] = drupal_get_path('theme', 'gratis');
-
 }
