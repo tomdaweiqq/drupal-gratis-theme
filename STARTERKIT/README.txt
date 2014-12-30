@@ -3,14 +3,15 @@ BUILD A SUB-THEME WITH Gratis
 
 The base Gratis theme is designed to be easily extended by a sub-theme. You
 shouldn't modify any of the CSS or PHP files in the gratis/ folder unless you've
-specified to use local.css; It's preferred instead you should create a sub-theme
+specified to use local.css. It's preferred instead you should create a sub-theme
 of Gratis which is located in a folder outside of the root Gratis/ folder.
 The examples below assume Gratis and your sub-theme will be
 installed in sites/all/themes/, but any valid theme directory is acceptable
 (read the sites/default/default.settings.php for more info.)
 
-  Why? To learn why you shouldn't modify any of the files in the Gratis/ folder,
-  see https://drupal.org/node/245802
+Why? To learn why you shouldn't modify any of the files in the Gratis/ folder,
+
+see https://drupal.org/node/245802
 
 
 *** IMPORTANT NOTE ***
@@ -36,9 +37,9 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     For example, copy the sites/all/themes/Gratis/STARTERKIT folder and rename it
     as sites/all/themes/gratis_subtheme.
 
-      Why? Each theme should reside in its own folder. To make it easier to
-      upgrade Gratis, sub-themes should reside in a folder separate from the base
-      theme.
+    Why? Each theme should reside in its own folder. To make it easier to
+    upgrade Gratis, sub-themes should reside in a folder separate from the base
+    theme.
 
  2. Setup the basic information for your sub-theme.
 
@@ -53,21 +54,19 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     Starter Kit" to "name = Gratis Sub-theme" and "description = Read..."
     to "description = A Gratis sub-theme".
 
-      Why? The .info file describes the basic things about your theme: its
-      name, description, features, template regions, CSS files, and JavaScript
-      files. See the Drupal 7 Theme Guide for more info:
-      https://drupal.org/node/171205
+    Why? The .info file describes the basic things about your theme: its
+    name, description, features, template regions, CSS files, and JavaScript
+    files. See the Drupal 7 Theme Guide for more info:
+    https://drupal.org/node/171205
 
     Then, visit your site's Appearance page at admin/appearance to refresh
     Drupal 7's cache of .info file data.
-
 
  3. Set your website's default theme.
 
     Log in as an administrator on your Drupal site, go to the Appearance page at
     admin/appearance and click the "Enable and set default" link next to your
     new sub-theme.
-
 
 Optional steps:
 
@@ -80,9 +79,14 @@ Optional steps:
     For example, copy Gratis/templates/page.tpl.php
     to Gratis_subtheme/templates/page.tpl.php.
 
-
  5. Further extend your sub-theme.
 
     Discover further ways to extend your sub-theme by reading
     Drupal 7's Theme Guide online at:
-   https://drupal.org/theme-guide
+    https://drupal.org/theme-guide
+
+  6. Optionally use Grunt and LibSass
+
+      See the main readme file for more info. There
+      is a package.json and gruntfile.js in the starterkit to get you
+      up and running.
