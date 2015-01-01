@@ -105,12 +105,12 @@ img {
   // One sidebar - sidebar second.
   .one-sidebar.sidebar-second {
     .l-content {
-      @include span-columns(9);
-      @include pad(0 2% 0 0);
+      @include span-columns(18 of 24);
+      @include pad(0 3% 0 0);
       padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-second {
-      @include span-columns(3);
+      @include span-columns(6 of 24);
       @include pad(0 2% 0 0);
     }
   }
