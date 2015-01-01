@@ -98,6 +98,9 @@ body {
 .unordered-list {
   list-style-type: disc;
   margin: 0 0 0 40px;
+  aside & {
+    margin: 0 0 0 20px;
+  }
 }
 
 .ordered-list {

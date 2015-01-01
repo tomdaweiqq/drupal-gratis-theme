@@ -834,6 +834,10 @@ body.body-typeface-garamond {
   margin: 0 0 0 40px;
 }
 
+aside .unordered-list, aside .l-content-wrap ul, .l-content-wrap aside ul {
+  margin: 0 0 0 20px;
+}
+
 .ordered-list, .l-content-wrap ol {
   list-style: decimal;
   margin: 0 0 0.5em 40px;
