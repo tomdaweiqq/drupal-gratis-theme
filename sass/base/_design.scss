@@ -36,18 +36,17 @@ article.node {
 
 article.node {
   padding-bottom: $vert-spacing-unit;
- // border-bottom: 1px dashed $medium_gray2;
 }
 
 .l-logo {
-  padding-top: 10px;
+  padding: #{($vert-spacing-unit / 2)} 0;
   @include media($mobile) {
       margin: 34px 0 0;
   }
 }
 
 .l-branding {
-  padding-bottom: $vert-spacing-unit;
+  padding-bottom: #{($vert-spacing-unit / 2)};
 }
 
 .l-branding,
