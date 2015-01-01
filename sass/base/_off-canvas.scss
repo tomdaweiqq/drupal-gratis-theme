@@ -139,3 +139,12 @@
     display: none;
   }
 }
+
+
+@include media($ultra_narrow) {
+  .l-off-canvas {
+    width: 90%;
+    left: -90%;
+  }
+}
+

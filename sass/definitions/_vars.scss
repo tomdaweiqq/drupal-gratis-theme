@@ -20,6 +20,7 @@ $tab: new-breakpoint(768px); // min 768
 $tab_range: new-breakpoint(min-width 768px max-width 1024px); // min max range
 $tab_end: new-breakpoint(max-width 1024px); // max 1024
 $desk: new-breakpoint(min-width 1025px); // 1025 or >
+$ultra_narrow: new-breakpoint(max-width 480px); // max 480
 
 // Gray tones
 $white: #fff;

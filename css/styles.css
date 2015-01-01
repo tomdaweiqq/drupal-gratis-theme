@@ -1160,6 +1160,7 @@ img {
     display: block;
     float: left;
     margin-right: 1.4013751414%;
+    padding: 0 2% 0 0;
     width: 23.948968644%;
   }
 
@@ -1210,6 +1211,7 @@ img {
     display: block;
     float: left;
     margin-right: 2.3576515979%;
+    padding: 0 2% 0 0;
     width: 23.2317613015%;
   }
 
@@ -1567,6 +1569,13 @@ img {
 
   .nested-menu-item-toggle {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .l-off-canvas {
+    left: -90%;
+    width: 90%;
   }
 }
 
