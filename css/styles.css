@@ -1499,6 +1499,11 @@ img {
     display: block;
   }
 
+  .l-off-canvas ul {
+    list-style: none;
+    margin: 0;
+  }
+
   .l-menu-wrapper ul.menu {
     text-align: center;
   }
@@ -1587,5 +1592,3 @@ img {
     width: 90%;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
