@@ -13,14 +13,34 @@ $container-style: magic;
 $container-width: 1100px;
 
 // Neat Breakpoints.
-$off_canvas: new-breakpoint(min-width 0 max-width 64.5em); // min max range
-$menu: new-breakpoint(64.51em); // (defaults to min width)
 $mobile: new-breakpoint(min-width 0 max-width 767px); // 0 - 767
 $tab: new-breakpoint(768px); // min 768
 $tab_range: new-breakpoint(min-width 768px max-width 1024px); // min max range
 $tab_end: new-breakpoint(max-width 1024px); // max 1024
 $desk: new-breakpoint(min-width 1025px); // 1025 or >
 $ultra_narrow: new-breakpoint(max-width 480px); // max 480
+
+// Breakpoints - primary, adjust as needed
+$bp-narrow: 30em;  // 480px
+
+$bp-narrow-end: 47.938em; // 767px;
+$bp-med: 48em; // 768px
+
+$bp-med-end: 59.938em; // 959px;
+$bp-large: 60em; // 960px
+
+$bp-large2: 64em; // 1024px
+$bp-xl: 73.125em; // 1170px
+
+// menus
+$menu: 59.938em; // 959px
+$off_canvas: 60em; // 960px
+
+// Define susy
+$susy: (
+        columns: 12,
+        gutters: .25,
+);
 
 // Gray tones
 $white: #fff;

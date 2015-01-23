@@ -278,12 +278,12 @@ function gratis_preprocess_region(&$vars, $hook) {
   if (strpos($vars['region'], 'sidebar_') === 0) {
     $vars['classes_array'][] = 'column';
     $vars['classes_array'][] = 'l-region l-sidebar col';
-    // Allow a region-specific template to override Zen's region--sidebar.
+    // Allow a region-specific template to override Gratis' region--sidebar.
     array_unshift($vars['theme_hook_suggestions'], 'region__sidebar');
   }
   // Use a template with no wrapper for the content region.
   elseif ($vars['region'] == 'content') {
-    // Allow a region-specific template to override Zen's region--no-wrapper.
+    // Allow a region-specific template to override Gratis' region--no-wrapper.
     array_unshift($vars['theme_hook_suggestions'], 'region__no_wrapper');
   }
   // Add a SMACSS-style class for header region.

@@ -8,13 +8,13 @@
     font-family: $font-sans;
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: .04em;
+    letter-spacing: .041em;
     font-weight: normal;
   }
 }
 
 // Desktop specific menu within the media query.
-@include media($menu) {
+@include susy-media($menu) {
 
   // Small reset, global.
   .main-menu-wrapper {

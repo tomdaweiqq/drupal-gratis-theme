@@ -7,7 +7,7 @@
   margin-top: 0;
   margin-bottom: 0;
   white-space: nowrap;
-  @include media($mobile) {
+  @include susy-media(0 $bp-narrow-end) {
     white-space: normal;
   }
 }
@@ -142,8 +142,6 @@ input {
       right: 40px;
       pointer-events: none;
 
-    }
-    @include media($mobile) {
     }
   }
 }
