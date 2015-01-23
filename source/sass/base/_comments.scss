@@ -64,6 +64,16 @@
       padding: 0 0.5em 0 0;
     }
   }
+  .submitted {
+    @include susy-media($bp-med) {
+      text-align: center;
+    }
+  }
+  .user-picture {
+    @include susy-media($bp-med) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .comment-unpublished {
@@ -75,9 +85,8 @@
   }
 }
 
-// Media query
-
-@include media($mobile) {
+// Narrow
+@include susy-media(0 $bp-narrow-end) {
 
   .comment {
     padding: 10px;

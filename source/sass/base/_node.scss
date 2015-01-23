@@ -32,7 +32,7 @@ span.author {
   img {
     @include border-radius(50px);
   }
-  @include media($mobile) {
+  @include susy-media(0 $bp-narrow-end) {
     img {
       float: none;
     }
@@ -48,7 +48,7 @@ figure {
   }
 }
 
-@include media($mobile) {
+@include susy-media(0 $bp-narrow-end) {
   .node-submitted {
     .user-picture,
     .field-user--user-picture {
@@ -59,7 +59,7 @@ figure {
   }
 }
 
-@include media($mobile) {
+@include susy-media(0 $bp-narrow-end) {
   .node-submitted {
     .submitted {
       display: block;

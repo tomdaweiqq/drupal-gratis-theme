@@ -1,41 +1,87 @@
-var timer = require("grunt-timer");
 module.exports = function (grunt) {
-  timer.init(grunt);
+  grunt.loadNpmTasks('grunt-cssbeautifier');
+  grunt.loadNpmTasks('grunt-strip-css-comments');
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    watch: {
-      options: {
-        includePaths: require('node-neat').includePaths
-      }, // watch options
-      sass: {
-        files: ['sass/**/*.{scss,sass}', 'sass/_base/**/*.{scss,sass}'],
-        tasks: ['sass:render']
-      }, //sass
-      livereload: {
-        files: ['*.html', '*.php', 'templates/**/*.{tpl,php}', 'js/**/*.{js,json}', 'css/*.css', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}'],
+    pkg: grunt.file.readJSON("package.json"),
+
+    // Define paths.
+    paths: {
+      sass: 'source/sass',
+      devCSS: 'css',
+      prodCSS: 'source/deploy/styles',
+    }, // paths
+
+    uglify: {
+      global: {
+        files: {
+          "js/site.min.js": ['source/js/*.js']
+        }
+      }
+    }, // uglify
+
+    cssbeautifier: {
+      global: {
+        files: {
+          src: ['css/*.css']
+        },
         options: {
-          livereload: true
-        } // options
-      } // livereload
-    }, //watch
+          indent: '  ',
+          openbrace: 'end-of-line',
+          autosemicolon: false
+        }
+      }
+    }, // cssbeautifier
+
+    stripCssComments: {
+      global: {
+        files: [{
+          expand: true,
+          src: ['css/*.css']
+        }]
+      }
+    }, // stripCssComments
+
     sass: {
-      render: {
+      global: {
         options: {
-          includePaths: require('node-neat').includePaths,
           sourceMap: true,
           sourceComments: false,
-          outputStyle: 'expanded'
+          outputStyle: 'nested'
         },
+        // I suspect this method slows down grunt
+        // @todo - test with named files.
         files: {
           'css/normalize.css': 'sass/normalize.scss',
           'css/styles.css': 'sass/styles.scss',
           'css/hacks.css': 'sass/hacks.scss',
           'css/color-palettes.css': 'sass/color-palettes.scss'
         } //files
-      } // render
-    } // sass
+      }
+    }, // sass
+
+    watch: {
+      options: {
+        livereload: true
+      },
+      site: {
+        files: ['templates/**/*.tpl.php', 'js/**/*.{js,json}', 'css/*.css', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+      },
+      js: {
+        files: ['source/js/*.js'],
+        tasks: ["uglify"]
+      },
+      css: {
+        files: ["source/sass/**/*.scss"],
+        tasks: ["sass"]
+      },
+    } // watch
+
   });
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['sass:render', 'watch']);
+  require("load-grunt-tasks")(grunt);
+  // grunt command
+  grunt.registerTask("default", ["sass", "watch"]);
+
+  // grunt format command (run before code commit)
+  grunt.registerTask("format", ["cssbeautifier", "stripCssComments"]);
+
 };

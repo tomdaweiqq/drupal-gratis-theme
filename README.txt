@@ -4,7 +4,7 @@ Version 2.4, December 30, 2014
 
 Gratis 2 is a responsive Drupal 7 HTML5 theme designed and developed by
 Danny Englander (Twitter: @Danny_Englander). Gratis 2.0 has been
-re-architected from the ground up using LibSass, Neat, Boubon, and Grunt.
+re-architected from the ground up using LibSass, Susy, Boubon, and Grunt.
 
 Gratis is aimed at users who want to get a nice looking theme up and
 running in short order, but may not want to take the time to create a sub-theme
