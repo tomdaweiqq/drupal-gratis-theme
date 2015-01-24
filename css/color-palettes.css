@@ -1,16 +1,3 @@
-
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
 .box-layout.has-tint:before {
   opacity: 0.15;
   content: '';
@@ -1104,13 +1091,13 @@ body.color-palette-maillot-jaune figure figcaption, body.color-palette-caribe fi
   color: #ccc;
 }
 
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media (min-width: 0) and (max-width: 47.938em) {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a, body.color-palette-caribe .main-menu-wrapper > ul > li > a, body.color-palette-chartreuse .main-menu-wrapper > ul > li > a, body.color-palette-mediterranean-red .main-menu-wrapper > ul > li > a {
     color: #eaeaea;
   }
 }
 
-@media screen and (min-width: 59.938em) {
+@media (min-width: 59.938em) {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li.active-trail > a, body.color-palette-caribe .main-menu-wrapper > ul > li.active-trail > a, body.color-palette-chartreuse .main-menu-wrapper > ul > li.active-trail > a, body.color-palette-mediterranean-red .main-menu-wrapper > ul > li.active-trail > a {
     color: #eaeaea;
   }

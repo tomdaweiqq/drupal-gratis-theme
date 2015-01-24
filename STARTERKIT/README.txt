@@ -35,7 +35,9 @@ see https://drupal.org/node/245802
     underscores.
 
     For example, copy the sites/all/themes/Gratis/STARTERKIT folder and rename it
-    as sites/all/themes/gratis_subtheme.
+    as sites/all/themes/gratis_subtheme. In other words, you need to move
+    your new sub-theme up to the root of the themes directory. Do not use it
+    in place here.
 
     Why? Each theme should reside in its own folder. To make it easier to
     upgrade Gratis, sub-themes should reside in a folder separate from the base
