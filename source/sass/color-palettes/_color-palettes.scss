@@ -1,5 +1,3 @@
-
-
 .box-layout {
 
   &.has-tint {
@@ -126,9 +124,6 @@ body.color-palette-mediterranean-red {
   .l-page-wrapper {
     background-color: $charcoal_gray;
   }
-//  #{headings()} {
-//    color: $light_gray2;
-//  }
   blockquote,
   code,
   kbd,
@@ -140,14 +135,14 @@ body.color-palette-mediterranean-red {
     color: $light_gray;
   }
   .main-menu-wrapper {
-    @include media($mobile) {
+    @include susy-media(0 $bp-narrow-end) {
       > ul {
         > li > a {
           color: $light_gray2;
         }
       }
     }
-    @include media($menu) {
+    @include susy-media($menu) {
       > ul {
         > li {
           &.active-trail {

@@ -68,48 +68,42 @@ img {
     @include clearfix;
   }
 
+  .l-content {
+    padding-bottom: $vert-spacing-unit;
+  }
+
   // Two sidebars.
   .two-sidebars {
     .region-sidebar-first {
-      @include span(3 at 1);
+      @include span(3);
       @include pull(9);
-      @include pad(0, 2%);
     }
     .l-content {
-      @include span(6 at 4);
+      @include span(6);
       @include push(3);
-      padding-bottom: $vert-spacing-unit;
     }
     .region-sidebar-second {
       @include span(3 at 10);
-      @include pad(2%, 0);
     }
   }
 
   // One sidebar - sidebar first.
   .one-sidebar.sidebar-first {
     .l-content {
-      @include span(8 at 5);
-      padding-bottom: $vert-spacing-unit;
+      @include span(11 of $susy16 at 6);
     }
     .region-sidebar-first {
-      @include span(4 at 1);
-      @include pad(0, 3%);
+      @include span(5 of $susy16 at 1);
     }
   }
 
   // One sidebar - sidebar second.
   .one-sidebar.sidebar-second {
     .l-content {
-      // Override susy default here.
-      @include span(17 of 24);
-      @include bleed(0 2% 0 0);
-      padding-bottom: $vert-spacing-unit;
+      @include span(11 of $susy16);
     }
     .region-sidebar-second {
-      @include span(7 at 18 of 24);
-      @include bleed(0 0 0 2%);
-      clear: none;
+      @include span(5 of $susy16 at 12);
     }
   }
 
@@ -124,7 +118,6 @@ img {
   .postscript-two .postscript,
   .preface-two .preface {
     @include span(6);
-    @include pad(0, 2%);
     &:last-child {
       @include omega;
     }
@@ -133,24 +126,20 @@ img {
   .postscript-three .postscript,
   .preface-three .preface {
     @include gallery(4);
-    @include pad(0, 2%);
   }
 
 }
 
-// Wide screen layout grid.
-
 //@include media($desk) {
 @include susy-media($bp-large) {
-
   .header-left-right .l-header {
     .l-logo {
-      @include span-columns(5);
+      @include span(5);
       padding-bottom: $vert-spacing-unit;
       text-align: left;
     }
     .l-branding {
-      @include span-columns(7);
+      @include span(7 at 6);
       text-align: right;
       padding: 10px 0 0 0;
     }

@@ -66,7 +66,7 @@ module.exports = function (grunt) {
         livereload: true
       },
       site: {
-        files: ['*.html', 'templates/**/*.{tpl.php}', 'js/**/*.{js,json}', 'css/*.css', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+        files: ['templates/**/*.tpl.php', 'js/**/*.{js,json}', 'css/*.css', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}']
       },
       js: {
         files: ['source/js/*.js'],

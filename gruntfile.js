@@ -50,12 +50,14 @@ module.exports = function (grunt) {
         },
         // I suspect this method slows down grunt
         // @todo - test with named files.
-        files: {
-          'css/normalize.css': 'sass/normalize.scss',
-          'css/styles.css': 'sass/styles.scss',
-          'css/hacks.css': 'sass/hacks.scss',
-          'css/color-palettes.css': 'sass/color-palettes.scss'
-        } //files
+        files: [{
+          expand: true,
+          cwd: '<%= paths.sass %>/',
+          src: ['**/*.scss'],
+          dest: '<%= paths.devCSS %>/',
+          ext: '.css'
+        },
+        ],
       }
     }, // sass
 
@@ -80,8 +82,6 @@ module.exports = function (grunt) {
   require("load-grunt-tasks")(grunt);
   // grunt command
   grunt.registerTask("default", ["sass", "watch"]);
-
   // grunt format command (run before code commit)
   grunt.registerTask("format", ["cssbeautifier", "stripCssComments"]);
-
 };

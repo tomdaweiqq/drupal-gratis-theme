@@ -12,14 +12,6 @@ $grid-padding: 10px;
 $container-style: magic;
 $container-width: 1100px;
 
-// Neat Breakpoints.
-$mobile: new-breakpoint(min-width 0 max-width 767px); // 0 - 767
-$tab: new-breakpoint(768px); // min 768
-$tab_range: new-breakpoint(min-width 768px max-width 1024px); // min max range
-$tab_end: new-breakpoint(max-width 1024px); // max 1024
-$desk: new-breakpoint(min-width 1025px); // 1025 or >
-$ultra_narrow: new-breakpoint(max-width 480px); // max 480
-
 // Breakpoints - primary, adjust as needed
 $bp-narrow: 30em;  // 480px
 
@@ -39,8 +31,13 @@ $off_canvas: 60em; // 960px
 // Define susy
 $susy: (
         columns: 12,
-        gutters: .25,
+        gutters: 1.2,
 );
+
+// Define custom susy maps.
+// 16 cols
+$susy16: layout(16 5 fluid float);
+
 
 // Gray tones
 $white: #fff;

@@ -28,7 +28,7 @@ span.author {
 .user-picture,
 .field-user--user-picture {
   position: relative;
-  float: right;
+  text-align: center;
   img {
     @include border-radius(50px);
   }
