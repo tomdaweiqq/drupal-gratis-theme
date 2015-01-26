@@ -7,6 +7,15 @@ body {
   -webkit-animation: bugfix infinite 1s;
 }
 
+
+html {
+  @include box-sizing(border-box);
+}
+
+*, *:before, *:after {
+  @include box-sizing(inherit);
+}
+
 @-webkit-keyframes bugfix {
   from {
     padding: 0;
