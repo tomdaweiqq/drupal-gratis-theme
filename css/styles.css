@@ -1033,7 +1033,7 @@ img {
 }
 
 .no-sidebars figure img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .l-setwidth {

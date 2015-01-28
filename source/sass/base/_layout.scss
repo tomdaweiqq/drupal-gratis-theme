@@ -17,7 +17,7 @@ img {
 .no-sidebars {
   figure {
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
 }
@@ -106,7 +106,6 @@ img {
       @include span(5 of $susy16 at 12);
     }
   }
-
 
   // Preface, postscript, footer.
   .footer-one .footer,
