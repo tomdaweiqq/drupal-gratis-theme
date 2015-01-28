@@ -83,5 +83,5 @@ module.exports = function (grunt) {
   // grunt command
   grunt.registerTask("default", ["sass", "watch"]);
   // grunt format command (run before code commit)
-  grunt.registerTask("format", ["cssbeautifier", "stripCssComments"]);
+  grunt.registerTask("format", ["stripCssComments", "cssbeautifier"]);
 };
