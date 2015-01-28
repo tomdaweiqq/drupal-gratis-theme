@@ -181,6 +181,10 @@ function gratis_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'has-tint';
   }
 
+  if (!empty($vars['page']['full_width_highlight'])) {
+    $vars['classes_array'][] = 'fullwidth-highlight';
+  }
+
 }
 
 /**

@@ -58,6 +58,12 @@ with building sites. This theme also does not require any base theme.
   menu and then click a menu item and edit. If you need help with this,
   please consult Drupal core documentation.
 
+- Full Width Highlight block region
+   This region is meant to be used for full width images and slideshows. This will
+   require addtional theming on the user's end. There is no inner div element out
+   of the box so if you would like to use this for something other than an image,
+   you will need to theme it yourself.
+
 -- REQUIREMENTS --
 
 No base theme needed, simply use this theme on its own.

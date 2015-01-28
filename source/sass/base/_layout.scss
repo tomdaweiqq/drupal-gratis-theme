@@ -129,7 +129,6 @@ img {
 
 }
 
-//@include media($desk) {
 @include susy-media($bp-large) {
   .header-left-right .l-header {
     .l-logo {
