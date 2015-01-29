@@ -253,7 +253,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
   text-shadow: none;
   box-shadow: none;
   margin: 10px 10px 10px 0;
-  padding: 0 20px;
+  padding: 4px 20px 0px 20px;
   height: 36px;
   vertical-align: middle;
   text-transform: uppercase;
@@ -527,6 +527,11 @@ span.author {
 .user-picture, .field-user--user-picture {
   position: relative;
   text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.comment .user-picture, .comment .field-user--user-picture {
+  margin: 0;
 }
 
 .user-picture img, .field-user--user-picture img {
@@ -553,7 +558,6 @@ figure figcaption {
   .node-submitted .user-picture, .node-submitted .field-user--user-picture {
     float: none;
     text-align: center;
-    margin: 10px 0 0 0;
   }
 }
 
@@ -757,7 +761,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 body.body-typeface-garamond {

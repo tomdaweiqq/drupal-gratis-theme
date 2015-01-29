@@ -19,7 +19,7 @@ button,
 .button a {
   @include no-shadows-borders;
   margin: 10px 10px 10px 0;
-  padding: 0 20px;
+  padding: 4px 20px 0px 20px;
   height: 36px;
   vertical-align: middle;
   text-transform: uppercase;
