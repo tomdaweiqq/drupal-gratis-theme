@@ -211,19 +211,6 @@ function gratis_preprocess_page(&$vars, $hook) {
     $vars['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
 
-  // Global node.
-  if ($node = menu_get_object()) {
-
-    // Define node types.
-    $types = array(
-      'gratis_project',
-    );
-
-    // Unset the title for projects, we render it in views.
-    if (!empty($node) && in_array($node->type, $types)) {
-      $vars['title'] = '';
-    }
-  }
 }
 
 /**
