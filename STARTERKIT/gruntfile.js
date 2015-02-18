@@ -46,7 +46,7 @@ module.exports = function (grunt) {
         options: {
           sourceMap: true,
           sourceComments: false,
-          outputStyle: 'nested'
+          outputStyle: 'expanded'
         },
         // I suspect this method slows down grunt
         // @todo - test with named files.
