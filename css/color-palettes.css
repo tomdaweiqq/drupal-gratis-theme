@@ -1091,13 +1091,13 @@ body.color-palette-maillot-jaune figure figcaption, body.color-palette-caribe fi
   color: #ccc;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li > a, body.color-palette-caribe .main-menu-wrapper > ul > li > a, body.color-palette-chartreuse .main-menu-wrapper > ul > li > a, body.color-palette-mediterranean-red .main-menu-wrapper > ul > li > a {
     color: #eaeaea;
   }
 }
 
-@media (min-width: 59.938em) {
+@media (min-width: 60.01em) {
   body.color-palette-maillot-jaune .main-menu-wrapper > ul > li.active-trail > a, body.color-palette-caribe .main-menu-wrapper > ul > li.active-trail > a, body.color-palette-chartreuse .main-menu-wrapper > ul > li.active-trail > a, body.color-palette-mediterranean-red .main-menu-wrapper > ul > li.active-trail > a {
     color: #eaeaea;
   }

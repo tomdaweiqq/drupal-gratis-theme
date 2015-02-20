@@ -97,7 +97,7 @@
   border-left: 1px solid #eaeaea;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   .comment {
     padding: 10px;
     border: 1px solid #b3b3b3;
@@ -183,7 +183,7 @@ article.node, article.header-block {
   padding: 10px 0;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   .l-logo {
     margin: 34px 0 0;
   }
@@ -242,7 +242,7 @@ tr .form-item {
   white-space: nowrap;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   tr .form-item {
     white-space: normal;
   }
@@ -541,7 +541,7 @@ span.author {
   border-radius: 50px;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   .user-picture img, .field-user--user-picture img {
     float: none;
   }
@@ -554,14 +554,14 @@ figure figcaption {
   padding: 4px 8px;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   .node-submitted .user-picture, .node-submitted .field-user--user-picture {
     float: none;
     text-align: center;
   }
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   .node-submitted .submitted {
     display: block;
     text-align: center;
@@ -811,7 +811,7 @@ h1, .h1 {
   font-size: 260%;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   h1, .h1 {
     font-size: 200%;
     line-height: 1.2;
@@ -822,7 +822,7 @@ h2, .h2 {
   font-size: 220%;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   h2, .h2 {
     font-size: 170%;
     line-height: 1.5;
@@ -971,7 +971,7 @@ blockquote:before {
   position: absolute;
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   blockquote:before {
     opacity: 0.6;
   }
@@ -981,7 +981,7 @@ blockquote:after {
   content: "";
 }
 
-@media (min-width: 0) and (max-width: 47.938em) {
+@media (min-width: 0) and (max-width: 47.99em) {
   blockquote {
     padding: 14px;
   }
@@ -1275,7 +1275,7 @@ img {
   font-weight: normal;
 }
 
-@media (min-width: 59.938em) {
+@media (min-width: 60.01em) {
   .main-menu-wrapper ul {
     margin: 0;
     padding: 0;
@@ -1542,7 +1542,7 @@ img {
   }
 }
 
-@media (min-width: 59.938em) {
+@media (min-width: 60.01em) {
   .l-off-canvas-show {
     display: none;
     display: none;
