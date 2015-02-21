@@ -101,19 +101,20 @@ learn about and leverage Grunt and LibSass, ideally in a sub-theme.
 To get up and running, follow the steps below:
 
 1. Install node.js from http://nodejs.org/
-2. In terminal, cd to the gratis folder (or your subtheme)
-3. Run npm install (if all went well, you will now have your
+2. make sure to install grunt CLI globally -  npm install -g grunt-cli
+3. In terminal, cd to the gratis folder (or your subtheme)
+4. Run npm install (if all went well, you will now have your
     local node modules) Note you may need to preface this
     with sudo if you run into permissions issues or fix the
     permissions.
-4. Still in terminal, run 'grunt' (no quotes)
-5. Make sass changes
-6. Watch Grunt and LibSass instantly render your changes.
-7. For a better experience, activate LiveReload in the theme settings UI
+5. Still in terminal, run 'grunt' (no quotes)
+6. Make sass changes
+7. Watch Grunt and LibSass instantly render your changes.
+8. For a better experience, activate LiveReload in the theme settings UI
     and you'll no longer have to keep reloading your page. (Assumes
     you are using Chrome) You'll need to manually reload the page
     once for this to work after activation.
-8. You can also run 'grunt format' (no quotes) for nicely formatted CSS.
+9. You can also run 'grunt format' (no quotes) for nicely formatted CSS.
     You should do this in a new terminal tab or window.
 
 -- NOTES --
