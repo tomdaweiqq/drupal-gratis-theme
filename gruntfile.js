@@ -1,6 +1,10 @@
 module.exports = function (grunt) {
+  require('time-grunt')(grunt);
   grunt.loadNpmTasks('grunt-cssbeautifier');
   grunt.loadNpmTasks('grunt-strip-css-comments');
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-csscomb');
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
@@ -76,12 +80,35 @@ module.exports = function (grunt) {
         files: ["source/sass/**/*.scss"],
         tasks: ["sass"]
       },
-    } // watch
+    }, // watch
+
+    csscomb: {
+      options: {
+        config: 'csscomb.json'
+      },
+      dynamic_mappings: {
+        expand: true,
+        cwd: 'css',
+        src: ['*.css', '!*.min.css'], // Pattern(s) to match.
+        dest: 'css'
+      }
+    },
+
+    // Grunt notify
+    notify_hooks: {
+      options: {
+        enabled: true,
+        max_jshint_notifications: 5,
+        title: "Gratis LibSass",
+        success: true,
+        duration: 50
+      }
+    } // notify
 
   });
   require("load-grunt-tasks")(grunt);
-  // grunt command
+  grunt.task.run('notify_hooks');
   grunt.registerTask("default", ["sass", "watch"]);
-  // grunt format command (run before code commit)
-  grunt.registerTask("format", ["stripCssComments", "cssbeautifier"]);
+  // Grunt format command (run before code commit)
+  grunt.registerTask("format", ["csscomb", "stripCssComments",  "cssbeautifier"]);
 };
