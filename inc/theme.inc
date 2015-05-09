@@ -61,11 +61,11 @@ function gratis_item_list($vars) {
       if (count($children) > 0) {
         // Render nested list.
         $data .= theme_item_list(array(
-            'items' => $children,
-            'title' => NULL,
-            'type' => $type,
-            'attributes' => $attributes
-          ));
+          'items' => $children,
+          'title' => NULL,
+          'type' => $type,
+          'attributes' => $attributes
+        ));
       }
 
       if ($i & 1) {
@@ -148,15 +148,15 @@ function gratis_feed_icon($vars) {
   $theme_path = drupal_get_path('theme', 'gratis');
   $text = t('Subscribe to !feed-title', array('!feed-title' => $vars['title']));
   if ($image = theme('image', array(
-      'path' => $theme_path . '/images/feed.png',
-      'width' => 32,
-      'height' => 32,
-      'alt' => $text
-    ))
+    'path' => $theme_path . '/images/feed.png',
+    'width' => 32,
+    'height' => 32,
+    'alt' => $text
+  ))
   ) {
     return l($image, $vars['url'], array(
-        'html' => TRUE,
-        'attributes' => array('class' => array('feed-icon'), 'title' => $text)
-      ));
+      'html' => TRUE,
+      'attributes' => array('class' => array('feed-icon'), 'title' => $text)
+    ));
   }
 }

@@ -220,7 +220,7 @@ so this should work with most any value you set within reason.'),
   // gratis additional settings.
   $form['gratis_js'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Gratis livereload'),
+    '#title' => t('Gratis JS settings'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
   );
@@ -229,6 +229,14 @@ so this should work with most any value you set within reason.'),
     '#type' => 'checkbox',
     '#title' => t('Use Live Reload?'),
     '#default_value' => theme_get_setting('gratis_livereload'),
+    '#description' => t('Check this box to use livereload. (Recommneded for local development only.)'),
+  );
+
+  $form['gratis_js']['gratis_minifiedjs'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use minified js scripts file?'),
+    '#default_value' => theme_get_setting('gratis_minifiedjs'),
+    '#description' => t('Check this box and the site will use the generated minified custom JS file within the theme.'),
   );
 
   // Gratis typography.
@@ -278,6 +286,5 @@ so this should work with most any value you set within reason.'),
       'garamond' => t('EB Garamond (tradtional serif)'),
     ),
   );
-
 
 }

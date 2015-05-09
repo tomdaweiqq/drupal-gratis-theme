@@ -91,6 +91,7 @@
         $(this).closest('li').toggleClass('has-child');
         return false;
       });
+
     }
   };
 

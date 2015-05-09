@@ -44,6 +44,20 @@ function gratis_page_alter($page) {
     ));
   }
 
+  // Custom scripts file, minfied or regular.
+  if (theme_get_setting('gratis_minifiedjs') == TRUE) {
+    drupal_add_js($theme_path . '/js/site.min.js', array(
+      'weight' => '999',
+      'group' => JS_THEME,
+    ));
+  }
+  else {
+    drupal_add_js($theme_path . '/source/js/site.js', array(
+      'weight' => '9999',
+      'group' => JS_THEME,
+    ));
+  }
+
   // Look in each visible region for blocks.
   foreach (system_region_list($GLOBALS['theme'], REGIONS_VISIBLE) as $region => $name) {
     if (!empty($page[$region])) {
