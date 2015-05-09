@@ -1552,7 +1552,7 @@ img {
   background: transparent url("../images/theme-sprite.png") 0 -6px no-repeat;
 }
 
-@media (min-width: 0) and (max-width: 64em) {
+@media (min-width: 0) and (max-width: 60.01em) {
   .off-canvas-left-is-visible .l-off-canvas--left {
     left: 0;
     box-shadow: 0 0 50px 5px #202020;
@@ -1668,7 +1668,7 @@ img {
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 60.01em) {
   .l-off-canvas-show {
     display: none;
     display: none;
