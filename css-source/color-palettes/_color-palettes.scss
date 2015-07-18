@@ -135,14 +135,14 @@ body.color-palette-mediterranean-red {
     color: $light_gray;
   }
   .main-menu-wrapper {
-    @include susy-media(0 $bp-narrow-end) {
+      @include media( "<#{$gbp-med}") {
       > ul {
         > li > a {
           color: $light_gray2;
         }
       }
     }
-    @include susy-media($menu) {
+    @include media(">#{$gbp-large}") {
       > ul {
         > li {
           &.active-trail {

@@ -3,7 +3,6 @@
   #admin-menu {
     display: none;
   }
-
   html body.toolbar,
   html body.admin-menu {
     padding-top: 0 !important;
@@ -11,4 +10,4 @@
   }
 }
 
-
+/*# sourceMappingURL=hacks.css.map */

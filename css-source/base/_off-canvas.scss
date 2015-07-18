@@ -23,7 +23,7 @@
   background: transparent url("#{$path-to-images}/theme-sprite.png") 0px -6px no-repeat;
 }
 
-@include susy-media(0 $menu) {
+@include media( "<#{$gbp-large}") {
   .off-canvas-left-is-visible {
     .l-off-canvas--left {
       left: 0;
@@ -128,7 +128,7 @@
 
 }
 
-@include susy-media($menu) {
+@include media(">#{$gbp-large}") {
   .l-off-canvas-show {
     display: none;
     display: none;
@@ -145,7 +145,7 @@
 }
 
 
-@include susy-media(0 $bp-narrow) {
+@include media( "<#{$gbp-narrow}") {
   .l-off-canvas {
     width: 90%;
     left: -90%;

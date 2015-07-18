@@ -35,7 +35,7 @@ img {
     @include container(1064px);
     @include clearfix;
     margin-top: 30px;
-    @include susy-media(0 $bp-large2) {
+    @include media( "<#{$gbp-wide}") {
       margin-top: 0;
     }
     position: relative;
@@ -57,7 +57,7 @@ img {
 }
 
 // Media query for wide layouts.
-@include susy-media($bp-large) {
+@include media(">#{$gbp-large}") {
 
   // Extends
   %grayborder {
@@ -129,7 +129,7 @@ img {
 
 }
 
-@include susy-media($bp-large) {
+@include media(">#{$gbp-large}") {
   .header-left-right .l-header {
     .l-logo {
       @include span(5);

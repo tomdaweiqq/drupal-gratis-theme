@@ -36,7 +36,7 @@ span.author {
   img {
     @include border-radius(50px);
   }
-  @include susy-media(0 $bp-narrow-end) {
+  @include media( "<#{$gbp-med}") {
     img {
       float: none;
     }
@@ -52,7 +52,7 @@ figure {
   }
 }
 
-@include susy-media(0 $bp-narrow-end) {
+@include media( "<#{$gbp-med}") {
   .node-submitted {
     .user-picture,
     .field-user--user-picture {
@@ -62,7 +62,7 @@ figure {
   }
 }
 
-@include susy-media(0 $bp-narrow-end) {
+@include media( "<#{$gbp-med}") {
   .node-submitted {
     .submitted {
       display: block;

@@ -44,7 +44,7 @@ article.node {
 
 .l-logo {
   padding: #{($vert-spacing-unit / 2)} 0;
-  @include susy-media(0 $bp-narrow-end) {
+  @include media( "<#{$gbp-med}") {
     margin: 34px 0 0;
   }
 }

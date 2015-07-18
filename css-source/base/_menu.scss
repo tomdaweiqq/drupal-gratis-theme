@@ -14,7 +14,7 @@
 }
 
 // Desktop specific menu within the media query.
-@include susy-media($menu) {
+@include media(">#{$gbp-large}") {
 
   // Small reset, global.
   .main-menu-wrapper {

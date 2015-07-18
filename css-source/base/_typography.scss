@@ -61,7 +61,7 @@ body {
 
 .h1 {
   font-size: 260%;
-  @include susy-media(0 $bp-narrow-end) {
+  @include media( "<#{$gbp-med}") {
     font-size: 200%;
     line-height: 1.2;
   }
@@ -69,7 +69,7 @@ body {
 
 .h2 {
   font-size: 220%;
-  @include susy-media(0 $bp-narrow-end) {
+  @include media( "<#{$gbp-med}") {
     font-size: 170%;
     line-height: 1.5;
   }
@@ -265,14 +265,14 @@ blockquote {
     left: 10px;
     line-height: 0.9;
     position: absolute;
-    @include susy-media(0 $bp-narrow-end) {
+    @include media( "<#{$gbp-med}") {
       opacity: .6;
     }
   }
   &:after {
     content: "";
   }
-  @include susy-media(0 $bp-narrow-end) {
+  @include media( "<#{$gbp-med}") {
     padding: 14px;
   }
 }

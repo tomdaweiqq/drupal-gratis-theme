@@ -12,21 +12,37 @@ $grid-padding: 10px;
 $container-style: magic;
 $container-width: 1100px;
 
-// Breakpoints - primary, adjust as needed
-$bp-narrow: 30em;  // 480px
+//// Breakpoints - primary, adjust as needed
+//$bp-narrow: 30em;  // 480px
+//
+//$bp-narrow-end: 47.99em; // 767px;
+//$bp-med: 48em; // 768px
+//
+//$bp-med-end: 59.99em; // 959px;
+//$bp-large: 60em; // 960px
+//
+//$bp-large2: 64em; // 1024px
+//$bp-xl: 73.125em; // 1170px
+//
+//// menus
+//$off_canvas: 60em; // 960px
+//$menu: 60.01em; // 961px
 
-$bp-narrow-end: 47.99em; // 767px;
-$bp-med: 48em; // 768px
 
-$bp-med-end: 59.99em; // 959px;
-$bp-large: 60em; // 960px
+// Breakpoints
+$gbp-narrow: 30em; // 480px
+$gbp-med: 48em; // 768px
+$gbp-large: 60em; // 960px
+$gbp-wide: 64em; // 1024px
+$gbp-xwide: 73em;
 
-$bp-large2: 64em; // 1024px
-$bp-xl: 73.125em; // 1170px
-
-// menus
-$off_canvas: 60em; // 960px
-$menu: 60.01em; // 961px
+// Define the interval for the media queries, this overrides the interval from /source/sass/vendors/_include-media.scss
+// See https://github.com/eduardoboucas/include-media/issues/14 for more info.
+$unit-intervals: (
+        'px': 1,
+        'em': 0.062, // .063 = .99px
+        'rem': 0.1
+);
 
 // Define susy
 $susy: (

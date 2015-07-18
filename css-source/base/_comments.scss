@@ -65,12 +65,12 @@
     }
   }
   .submitted {
-    @include susy-media($bp-med) {
+    @include media(">=#{$gbp-med}") {
       text-align: center;
     }
   }
   .user-picture {
-    @include susy-media($bp-med) {
+    @include media(">=#{$gbp-med}") {
       margin-bottom: 10px;
     }
   }
@@ -80,13 +80,13 @@
   margin-right: 5px;
   padding: 5px 2px 5px 5px;
   .comment-text .comment-arrow {
-    border-right: 1px solid $light_gray2;
     border-left: 1px solid $light_gray2;
+    border-right: 1px solid $light_gray2;
   }
 }
 
 // Narrow
-@include susy-media(0 $bp-narrow-end) {
+@include media( "<#{$gbp-med}") {
 
   .comment {
     padding: 10px;
