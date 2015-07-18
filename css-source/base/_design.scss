@@ -30,7 +30,6 @@ body {
 .l-breadcrumbs,
 .l-preface-wrap,
 article.node {
-  @include clearfix;
   margin-bottom: $vert-spacing-unit;
 }
 

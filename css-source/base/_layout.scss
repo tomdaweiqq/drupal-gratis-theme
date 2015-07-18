@@ -1,10 +1,6 @@
 // Import variables.
 @import "../definitions/vars";
 
-.l-off-canvas {
-  @include clearfix;
-}
-
 img {
   width: auto \9;
   height: auto;
@@ -26,14 +22,12 @@ img {
 .l-setwidth {
   @include container(1064px);
   padding: 0 20px;
-  @include clearfix;
 }
 
 // box layout default.
 .box-layout {
   .l-page-wrapper {
     @include container(1064px);
-    @include clearfix;
     margin-top: 30px;
     @include media( "<#{$gbp-wide}") {
       margin-top: 0;

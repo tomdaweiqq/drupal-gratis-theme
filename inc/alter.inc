@@ -52,7 +52,7 @@ function gratis_page_alter($page) {
     ));
   }
   else {
-    drupal_add_js($theme_path . '/source/js/site.js', array(
+    drupal_add_js($theme_path . '/js-source/site.js', array(
       'weight' => '9999',
       'group' => JS_THEME,
     ));

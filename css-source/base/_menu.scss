@@ -43,7 +43,6 @@
   .main-menu-wrapper > ul {
     display: table;
     margin: 0 auto;
-    @include clearfix;
     > li {
       float: left;
       border-right: 1px solid lighten($baseMenuBackground, 5%);

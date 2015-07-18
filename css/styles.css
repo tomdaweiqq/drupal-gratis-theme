@@ -145,8 +145,6 @@ body .l-page-wrapper {
 .l-preface-wrap,
 article.node,
 article.header-block {
-  overflow: hidden;
-  *zoom: 1;
   margin-bottom: 20px;
 }
 
@@ -1059,11 +1057,6 @@ body.body-typeface-imfell {
   font-family: 'IM Fell Double Pica', serif;
 }
 
-.l-off-canvas {
-  overflow: hidden;
-  *zoom: 1;
-}
-
 img {
   width: auto \9;
   height: auto;
@@ -1082,8 +1075,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
-  overflow: hidden;
-  *zoom: 1;
 }
 .l-setwidth:after {
   content: " ";
@@ -1095,8 +1086,6 @@ img {
   max-width: 1064px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
-  *zoom: 1;
   margin-top: 30px;
   position: relative;
   z-index: 200;
@@ -1298,8 +1287,6 @@ img {
   .main-menu-wrapper > ul {
     display: table;
     margin: 0 auto;
-    overflow: hidden;
-    *zoom: 1;
   }
   .main-menu-wrapper > ul > li {
     float: left;
