@@ -392,9 +392,8 @@ a {
   padding: 5px 14px;
 }
 
-.field-label-inline .field-label {
-  display: inline;
-  float: left;
+.field {
+  margin-bottom: 10px;
 }
 
 .vocabulary {
