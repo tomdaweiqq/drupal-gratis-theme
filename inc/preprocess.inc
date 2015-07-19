@@ -64,7 +64,10 @@ function gratis_preprocess_html(&$vars) {
   }
 
   // Add font awesome cdn.
-  drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css', array('type' => 'external'));
+  // Add font awesome cdn.
+  if (!module_exists('fontawesome')) {
+    drupal_add_css('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', array('type' => 'external'));
+  }
 
   if (theme_get_setting('gratis_setfonts') == TRUE) {
     drupal_add_css('//fonts.googleapis.com/css?family=EB+Garamond|IM+Fell+Double+Pica|Open+Sans|Montserrat', array('type' => 'external'));

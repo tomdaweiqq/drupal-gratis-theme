@@ -114,8 +114,6 @@ To get up and running, follow the steps below:
     and you'll no longer have to keep reloading your page. (Assumes
     you are using Chrome) You'll need to manually reload the page
     once for this to work after activation.
-9. You can also run 'grunt format' (no quotes) for nicely formatted CSS.
-    You should do this in a new terminal tab or window.
 
 -- NOTES --
 
