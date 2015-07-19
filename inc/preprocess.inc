@@ -64,7 +64,6 @@ function gratis_preprocess_html(&$vars) {
   }
 
   // Add font awesome cdn.
-  // Add font awesome cdn.
   if (!module_exists('fontawesome')) {
     drupal_add_css('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css', array('type' => 'external'));
   }
