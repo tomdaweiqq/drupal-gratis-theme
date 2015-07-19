@@ -59,9 +59,12 @@ with building sites. This theme also does not require any base theme.
   please consult Drupal core documentation.
 
 - Full Width Highlight block region
-   This region is meant to be used for full width images and slideshows. This will
-   require addtional theming on the user's end. There is no inner div element out
-   of the box so if you would like to use this for something other than an image,
+   This region is meant to be used for full width images and slideshows. This
+will
+   require addtional theming on the user's end. There is no inner div element
+out
+   of the box so if you would like to use this for something other than an
+image,
    you will need to theme it yourself.
 
 -- REQUIREMENTS --
@@ -105,33 +108,36 @@ To get up and running, follow the steps below:
     removal if needed below, see Reinstalling Node.js)
 
 2. Install Node.js (this is needed for grunt) from http://nodejs.org/ +
-    Ideally at the moment, install node.js version v0.10.35 though in some cases
-    the newest line of Node, .12.x may work. If grunt freezes and you can't compile,
-    best to go down to the .10.x series.
+    Ideally at the moment, install node.js version v0.10.35 though in some
+    cases the newest line of Node, .12.x may work. If grunt freezes and
+    you can't compile, best to go down to the .10.x series.
 
--- https://nodejs.org/download/
--- http://nodejs.org/dist/v0.10.35/ (node-v0.10.35.pkg is ideal for OS X)
+    -- https://nodejs.org/download/
+    -- http://nodejs.org/dist/v0.10.35/ (node-v0.10.35.pkg is ideal for OS X)
 
-3. Once you install node, then install grunt CLI globally: npm install -g grunt-cli
+3. Once you install node, then install grunt CLI globally: npm install -g
+    grunt-cli
 
-4. In terminal, cd to the gratis folder (or your subtheme which would be prefered)
-    Note, see the Starterkit readme for setting up a sub-theme
-    /gratis/STARTERKIT/README.txt
+4. In terminal, cd to the gratis folder (or your subtheme which would be
+   prefered) Note, see the Starterkit readme for setting up a sub-theme
+   /gratis/STARTERKIT/README.txt
 
-5. Run npm install. If you have errors, try prefacing with sudo but this might indicate
-    a directory ownership issue that needs fixing.
+5. Run npm install. If you have errors, try prefacing with sudo but this might
+    indicate a directory ownership issue that needs fixing.
 
 6. You should see a node_modules folder in the root of the theme folder. This
-    contains all the modules needed for grunt to run. e.g. grunt-sass, susy, etc...
+    contains all the modules needed for grunt to run. e.g. grunt-sass, susy,
+    etc...
 
 7. Enable LiveReload in the theme's UI settings page.
 
-8. Download / enable the LInk CSS module either via drush or the module admin UI.
+8. Download / enable the Link CSS module either via drush or the module admin
+   UI.
 
 9. Start grunt: type grunt in terminal (no quotes)
 
 10. Add or change some Sass. You will see terminal print out a time bar with
-    the render times.
+      the render times.
 
 Reinstalling Node.js
 
@@ -142,12 +148,14 @@ See this for more info:
 How do I uninstall nodejs installed from pkg (Mac OS X)?
 http://stackoverflow.com/a/17203692/819276
 
-If you remove node and then reinstall, you'll need to also reinstall the grunt CLI.
+If you remove node and then reinstall, you'll need to also reinstall the grunt
+CLI.
 
 -- NOTES --
 
 Include Media is now implemeted in the Node build. This is a great
-media query mixin library. See this for more info:
+media query mixin library.
+See this for more info:
 https://github.com/eduardoboucas/include-media
 
 This theme supports CSS3 / HTML5 and media queries. There is no support for
