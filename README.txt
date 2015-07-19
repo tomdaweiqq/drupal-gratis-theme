@@ -1,4 +1,4 @@
-Version 2.4, December 30, 2014
+Version 2.10, Summer, 2015
 
 -- SUMMARY --
 
@@ -100,22 +100,55 @@ learn about and leverage Grunt and LibSass, ideally in a sub-theme.
 
 To get up and running, follow the steps below:
 
-1. Install node.js from http://nodejs.org/
-2. make sure to install grunt CLI globally -  npm install -g grunt-cli
-3. In terminal, cd to the gratis folder (or your subtheme)
-4. Run npm install (if all went well, you will now have your
-    local node modules) Note you may need to preface this
-    with sudo if you run into permissions issues or fix the
-    permissions.
-5. Still in terminal, run 'grunt' (no quotes)
-6. Make sass changes
-7. Watch Grunt and LibSass instantly render your changes.
-8. For a better experience, activate LiveReload in the theme settings UI
-    and you'll no longer have to keep reloading your page. (Assumes
-    you are using Chrome) You'll need to manually reload the page
-    once for this to work after activation.
+1. First check to see if you have node.js installed: node -v - If so you may
+    need to update it to the version needed here. (Steps for other versions
+    removal if needed below, see Reinstalling Node.js)
+
+2. Install Node.js (this is needed for grunt) from http://nodejs.org/ +
+    Ideally at the moment, install node.js version v0.10.35 though in some cases
+    the newest line of Node, .12.x may work. If grunt freezes and you can't compile,
+    best to go down to the .10.x series.
+
+-- https://nodejs.org/download/
+-- http://nodejs.org/dist/v0.10.35/ (node-v0.10.35.pkg is ideal for OS X)
+
+3. Once you install node, then install grunt CLI globally: npm install -g grunt-cli
+
+4. In terminal, cd to the gratis folder (or your subtheme which would be prefered)
+    Note, see the Starterkit readme for setting up a sub-theme
+    /gratis/STARTERKIT/README.txt
+
+5. Run npm install. If you have errors, try prefacing with sudo but this might indicate
+    a directory ownership issue that needs fixing.
+
+6. You should see a node_modules folder in the root of the theme folder. This
+    contains all the modules needed for grunt to run. e.g. grunt-sass, susy, etc...
+
+7. Enable LiveReload in the theme's UI settings page.
+
+8. Download / enable the LInk CSS module either via drush or the module admin UI.
+
+9. Start grunt: type grunt in terminal (no quotes)
+
+10. Add or change some Sass. You will see terminal print out a time bar with
+    the render times.
+
+Reinstalling Node.js
+
+If you ever need to reinstall node try this:
+rm -rf /usr/local/{bin/{node,npm},lib/node_modules/npm,lib/node,share/man/*/node.*}
+
+See this for more info:
+How do I uninstall nodejs installed from pkg (Mac OS X)?
+http://stackoverflow.com/a/17203692/819276
+
+If you remove node and then reinstall, you'll need to also reinstall the grunt CLI.
 
 -- NOTES --
+
+Include Media is now implemeted in the Node build. This is a great
+media query mixin library. See this for more info:
+https://github.com/eduardoboucas/include-media
 
 This theme supports CSS3 / HTML5 and media queries. There is no support for
 IE9 or below so please do not file any issues in regard to this.
@@ -128,5 +161,6 @@ Buy me a Latte - Help support gratis but it's not a requirement.
 http://dannyenglander.com/buy-me-latte
 
 -- Danny Englander Drupal Themer and Photographer --
-San Diego, California http://dannyenglander.com
+San Diego, California
+Blog: http://dannyenglander.com
 Photos: http://highrockphoto.com
