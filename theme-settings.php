@@ -127,7 +127,7 @@ so this should work with most any value you set within reason.'),
       'default' => t('Default'),
       'boxed' => t('Boxed'),
     ),
-    '#description' => t("Deafult appears as a fuil width layout with a container within. Boxed
+    '#description' => t("Default appears as a full width layout with a container within. Boxed
     appears more as a fixed width container, yet is still responsive. With boxed, you can
     utilize background tints and patterns for wider screen layouts."),
   );
@@ -229,7 +229,7 @@ so this should work with most any value you set within reason.'),
     '#type' => 'checkbox',
     '#title' => t('Use Live Reload?'),
     '#default_value' => theme_get_setting('gratis_livereload'),
-    '#description' => t('Check this box to use livereload. (Recommneded for local development only.)'),
+    '#description' => t('Check this box to use livereload. (Recommended for local development only.)'),
   );
 
   $form['gratis_js']['gratis_minifiedjs'] = array(
@@ -251,7 +251,7 @@ so this should work with most any value you set within reason.'),
     '#type' => 'checkbox',
     '#title' => t('Would you like to use Gratis\' default typography? '),
     '#default_value' => theme_get_setting('gratis_setfonts'),
-    '#description' => t('Check this box to use gratis\' built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
+    '#description' => t('Check this box to use Gratis\' built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
   );
 
   $form['gratis_typography']['gratis_typography_settings'] = array(
