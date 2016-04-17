@@ -115,7 +115,7 @@ e.g.: sites/default/files/custom-css/local.css you must check the box above for 
     '#title' => t('Optional grid width value. e.g 1020px, 100% etc...'),
     '#default_value' => theme_get_setting('gratis_grid_container_width'),
     '#description' => t('This setting allows you to set the width of the entire gird container.
-Leave blank for the default max width of 1200px.  All inner grids are percentage based
+Leave blank for the default max width of 1064px.  All inner grids are percentage based
 so this should work with most any value you set within reason.'),
   );
 
