@@ -83,7 +83,7 @@
       // Nested off canvas menu items.
       $('.menu .has-child').not('.active-trail').removeClass('has-child');
       $('.menu li a').each(function () {
-        if ($(this).parent().children('ul').length !== 0) {
+        if ($(this).parent().children('ul').length !== 0 && $(this).parent().children(".nested-menu-item-toggle").length == 0) {
           $(this).after('<a href="#" class="nested-menu-item-toggle"></a>');
         }
       });
