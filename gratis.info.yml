@@ -1,0 +1,32 @@
+name: Gratis
+desciption: A Drupal 8 theme by Danny Englander
+type: theme
+base theme: classy
+core: 8.x
+version: VERSION
+screenshot: screenshot.png
+
+#Define global libraries.
+libraries:
+  - gratis/google-fonts
+  - gratis/gratis-styles
+
+#Define theme regions.
+regions:
+  top_links: 'Top Links'
+  primary_menu: 'Primary menu'
+  breadcrumb: Breadcrumb
+  preface_first: 'Preface first'
+  preface_second:  'Preface second'
+  preface_third: 'Preface third'
+  highlight: Highlight
+  help: Help
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  content: Content
+  postscript_first:  'Postscript first'
+  postscript_second: 'Postscript second'
+  postscript_third:  'Postscript third'
+  footer_first:  'Footer first'
+  footer_second:  'Footer second'
+  footer_third:  'Footer third'

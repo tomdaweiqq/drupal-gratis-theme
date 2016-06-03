@@ -1,10 +1,10 @@
-Version 2.10, Summer, 2015
+Version 3.0.0, Summer, 2016
 
 -- SUMMARY --
 
-Gratis 2 is a responsive Drupal 7 HTML5 theme designed and developed by
-Danny Englander (Twitter: @Danny_Englander). Gratis 2.0 has been
-re-architected from the ground up using LibSass, Susy, Boubon, and Grunt.
+Gratis 3 for Drupal 8 is a responsive Drupal 8 HTML5 theme designed and developed by
+Danny Englander (Twitter: @Danny_Englander). Gratis 3.0 has been
+re-architected from the ground up using LibSass, Susy, Compass Mixins, and Gulp.
 
 Gratis is aimed at users who want to get a nice looking theme up and
 running in short order, but may not want to take the time to create a sub-theme
@@ -171,4 +171,4 @@ http://dannyenglander.com/buy-me-latte
 -- Danny Englander Drupal Themer and Photographer --
 San Diego, California
 Blog: http://dannyenglander.com
-Photos: http://highrockphoto.com
+Photos: http://dannyenglander.photo
