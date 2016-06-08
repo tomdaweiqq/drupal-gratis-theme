@@ -2,18 +2,20 @@
 
 /**
  * @file
- * theme-settings.php provides the custom theme settings
- *
- * Provides the checkboxes for the CSS overrides functionality
- * as well as the serif/sans-serif style option.
+ * Custom theme settings.
  */
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_system_theme_settings_alter().
+ *
+ * @param $form
+ *   Nested array of form elements that comprise the form.
+ *
+ * @param $form_state
+ *   A keyed array containing the current state of the form.
  */
-function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
 
-  //$form['theme_settings']['#group'] = 'gratis_settings';
+function gratis_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
 
   // Set the vertical tabs up.
   $form['gratis_settings'] = array(
@@ -23,7 +25,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
 
   // Gratis color settings tab area.
   $form['gratis_color_settings'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis color settings'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -53,7 +55,7 @@ function gratis_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   );
 
   $form['gratis_css'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis css settings'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -84,7 +86,7 @@ You must clear the Drupal cache after doing this."),
   );
 
   $form['gratis_css']['custom_css_path_settings'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Custom css path settings'),
     '#collapsible' => FALSE,
   );
@@ -104,7 +106,7 @@ e.g.: sites/default/files/custom-css/local.css you must check the box above for 
   );
 
   $form['gratis_gridwidth'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis page width and style'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -134,7 +136,7 @@ so this should work with most any value you set within reason.'),
 
   // Gratis bg patterns settings.
   $form['gratis_bg_settings'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis boxed layout background settings'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -190,7 +192,7 @@ so this should work with most any value you set within reason.'),
   );
 
   $form['gratis_breadcrumb'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis breadcrumbs'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -204,7 +206,7 @@ so this should work with most any value you set within reason.'),
   );
 
   $form['gratis_touch'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis touch device'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -217,9 +219,9 @@ so this should work with most any value you set within reason.'),
     '#description' => t('Check this box ONLY if you want to enable touch device users to be able to pinch and zoom.'),
   );
 
-  // gratis additional settings.
+  // Gratis additional settings.
   $form['gratis_js'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis JS settings'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -241,7 +243,7 @@ so this should work with most any value you set within reason.'),
 
   // Gratis typography.
   $form['gratis_typography'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Gratis typography'),
     '#collapsible' => TRUE,
     '#group' => 'gratis_settings',
@@ -249,13 +251,13 @@ so this should work with most any value you set within reason.'),
 
   $form['gratis_typography']['gratis_setfonts'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Would you like to use Gratis\' default typography? '),
+    '#title' => t("Would you like to use Gratis' default typography?"),
     '#default_value' => theme_get_setting('gratis_setfonts'),
-    '#description' => t('Check this box to use Gratis\' built-in fonts, leave unchecked to use the @font-your-face module or other font providers.'),
+    '#description' => t("Check this box to use Gratis' built-in fonts, leave unchecked to use the @font-your-face module or other font providers."),
   );
 
   $form['gratis_typography']['gratis_typography_settings'] = array(
-    '#type' => 'fieldset',
+    '#type' => 'details',
     '#title' => t('Font choices'),
     '#collapsible' => TRUE,
     '#description' => t('Choose your fonts.'),
@@ -286,5 +288,4 @@ so this should work with most any value you set within reason.'),
       'garamond' => t('EB Garamond (tradtional serif)'),
     ),
   );
-
 }
