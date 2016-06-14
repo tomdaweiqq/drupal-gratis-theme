@@ -8,12 +8,68 @@
  * Break up template.php into fine grained includes.
  */
 
+use Drupal\Component\Utility\Xss;
+
 $path_to_gratis = drupal_get_path('theme', 'gratis');
 
 /**
  * The includes.
  */
-include_once $path_to_gratis . '/inc/preprocess.inc';
-include_once $path_to_gratis . '/inc/theme.inc';
-include_once $path_to_gratis . '/inc/alter.inc';
-include_once $path_to_gratis . '/inc/menu.inc';
+//include_once $path_to_gratis . '/inc/preprocess.inc';
+//include_once $path_to_gratis . '/inc/theme.inc';
+//include_once $path_to_gratis . '/inc/alter.inc';
+//include_once $path_to_gratis . '/inc/menu.inc';
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function gratis_preprocess_html(&$vars) {
+
+  // Global theme accent color.
+  $color_palette = theme_get_setting('theme_color_palette');
+  $vars['attributes']['class'][] = 'color-palette-' . str_replace('_', '-', $color_palette);
+
+  // Add a class for the page style.
+  if ((theme_get_setting('gratis_page_style') == 'default')) {
+    $vars['attributes']['class'][] = 'default-layout';
+  }
+  else {
+    $vars['attributes']['class'][] = 'box-layout';
+  }
+
+  // Add a class for the theme background pattern.
+  $bg_pattern = theme_get_setting('theme_bg_pattern');
+  $vars['attributes']['class'][] = str_replace('_', '-', $bg_pattern);
+
+  // Add a class for the theme background tint.
+  $bg_tint = theme_get_setting('theme_bg_tint');
+  $vars['attributes']['class'][] = str_replace('_', '-', $bg_tint);
+
+  // Add light / dark class depending on color palette choice.
+  $color_palette = theme_get_setting('theme_color_palette');
+  $themebg_dark = array(
+    'chartreuse',
+    'caribe',
+    'maillot_jaune',
+    'mediterranean_red',
+  );
+
+  // Now check for the color in the array.
+  if (in_array($color_palette, $themebg_dark)) {
+    $vars['attributes']['class'][] = 'themebg-dark';
+  }
+  else {
+    $vars['attributes']['class'][] = 'themebg-light';
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function gratis_preprocess_page(&$vars) {
+
+  $set_width = theme_get_setting('gratis_grid_container_width');
+  $vars['setwidth'] = $set_width;
+
+}

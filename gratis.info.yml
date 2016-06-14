@@ -8,7 +8,7 @@ screenshot: screenshot.png
 
 #Define global libraries.
 libraries:
-  - gratis/google-fonts
+  - gratis/gratis-typography
   - gratis/gratis-styles
 
 #Define theme regions.

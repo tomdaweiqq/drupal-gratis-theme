@@ -46,11 +46,11 @@ function gratis_form_system_theme_settings_alter(&$form, $form_state, $form_id =
       'greengray' => t('Green Gray'),
       'pink' => t('Pink'),
       'mustard' => t('Mustard'),
-      'surf-green' => t('Surf Green'),
-      'maillot-jaune' => t('Maillot Jaune (Dark background)'),
+      'surf_green' => t('Surf Green'),
+      'maillot_jaune' => t('Maillot Jaune (Dark background)'),
       'caribe' => t('Caribe (Dark background)'),
       'chartreuse' => t('Chartreuse (Dark background)'),
-      'mediterranean-red' => t('Mystic Blue (Dark background)'),
+      'mediterranean_red' => t('Mystic Blue (Dark background)'),
     ),
   );
 
@@ -164,7 +164,7 @@ so this should work with most any value you set within reason.'),
       'bg_pattern_13' => t('Background pattern 13'),
       'bg_pattern_14' => t('Background pattern 14'),
       'bg_pattern_15' => t('Background pattern 15'),
-    )
+    ),
   );
 
   $form['gratis_bg_settings']['theme_bg_tint'] = array(
@@ -174,21 +174,21 @@ so this should work with most any value you set within reason.'),
     '#description' => t("Choose a tint hue for your background"),
     '#options' => array(
       'no_tint' => t('None'),
-      'bg-tint-turquoise' => t('Tint Turquoise Blue'),
-      'bg-tint-purple' => t('Tint Cool Purple'),
-      'bg-tint-orange' => t('Tint Pumpkin Orange'),
-      'bg-tint-green' => t('Tint Olive Green'),
-      'bg-tint-pomegranate' => t('Tint Pomegranate Red'),
-      'bg-tint-seafoam' => t('Tint Seafoam Green'),
-      'bg-tint-greengray' => t('Tint Green Gray'),
-      'bg-tint-pink' => t('Tint Pink'),
-      'bg-tint-mustard' => t('Tint Mustard'),
-      'bg-tint-surf-green' => t('Tint Surf Green'),
-      'bg-tint-maillot-jaune' => t('Tint Maillot Jaune'),
-      'bg-tint-caribe' => t('Tint Caribe'),
-      'bg-tint-chartreuse' => t('Tint Chartreuse'),
-      'bg-tint-mediterranean-red' => t('Tint Mystic Blue'),
-    )
+      'bg_tint_turquoise' => t('Tint Turquoise Blue'),
+      'bg_tint_purple' => t('Tint Cool Purple'),
+      'bg_tint_orange' => t('Tint Pumpkin Orange'),
+      'bg_tint_green' => t('Tint Olive Green'),
+      'bg_tint_pomegranate' => t('Tint Pomegranate Red'),
+      'bg_tint_seafoam' => t('Tint Seafoam Green'),
+      'bg_tint_greengray' => t('Tint Green Gray'),
+      'bg_tint_pink' => t('Tint Pink'),
+      'bg_tint_mustard' => t('Tint Mustard'),
+      'bg_tint_surf_green' => t('Tint Surf Green'),
+      'bg_tint_maillot_jaune' => t('Tint Maillot Jaune'),
+      'bg_tint_caribe' => t('Tint Caribe'),
+      'bg_tint_chartreuse' => t('Tint Chartreuse'),
+      'bg_tint_mediterranean_red' => t('Tint Mystic Blue'),
+    ),
   );
 
   $form['gratis_breadcrumb'] = array(
@@ -203,20 +203,6 @@ so this should work with most any value you set within reason.'),
     '#title' => t('Show page breadcrumbs'),
     '#default_value' => theme_get_setting('breadcrumb'),
     '#description' => t("Check this option to show page breadcrumbs. Uncheck to hide."),
-  );
-
-  $form['gratis_touch'] = array(
-    '#type' => 'details',
-    '#title' => t('Gratis touch device'),
-    '#collapsible' => TRUE,
-    '#group' => 'gratis_settings',
-  );
-
-  $form['gratis_touch']['gratis_viewport'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use Touch device pinch and zoom?'),
-    '#default_value' => theme_get_setting('gratis_viewport'),
-    '#description' => t('Check this box ONLY if you want to enable touch device users to be able to pinch and zoom.'),
   );
 
   // Gratis additional settings.

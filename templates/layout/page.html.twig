@@ -110,7 +110,8 @@
 
                 {% endif %}
 
-                <main role="main" class="container-wrap">
+                <main role="main" class="main container-wrap ">
+                    <div class="l-main l-setwidth" role="main" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
                     <div class="l-content">
@@ -128,7 +129,7 @@
                             {{ page.sidebar_second }}
                         </aside>
                     {% endif %}
-
+                    </div>
                 </main>
 
                 {# Define and divide the postscript page regions.#}
