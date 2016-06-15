@@ -99,6 +99,7 @@
     .l-menu-wrapper {
       background-color: $hexvar;
     }
+    
     &.site-name-show h1.site-name a:after {
       color: $hexvar;
     }
@@ -134,7 +135,7 @@ body.color-palette-mediterranean-red {
   figure figcaption {
     color: $light_gray;
   }
-  .main-menu-wrapper {
+  .region-primary-menu {
       @include media( "<#{$gbp-med}") {
       > ul {
         > li > a {

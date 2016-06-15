@@ -2,7 +2,7 @@
 @import "../definitions/vars";
 
 // Applies to desktop and off-canvas menu.
-.main-menu-wrapper {
+.region-primary-menu {
   a {
     // Menu font always the same.
     font-family: $font-sans;
@@ -17,7 +17,7 @@
 @include media(">#{$gbp-large}") {
 
   // Small reset, global.
-  .main-menu-wrapper {
+  .region-primary-menu {
 
     ul {
       margin: 0;
@@ -40,7 +40,7 @@
   }
 
   // First level -> main menu items
-  .main-menu-wrapper > ul {
+  .region-primary-menu > ul {
     display: table;
     margin: 0 auto;
     > li {

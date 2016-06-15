@@ -70,6 +70,5 @@ function gratis_preprocess_html(&$vars) {
 function gratis_preprocess_page(&$vars) {
 
   $set_width = theme_get_setting('gratis_grid_container_width');
-  $vars['setwidth'] = $set_width;
-
+  $vars['setwidth'] = Xss::filterAdmin($set_width);
 }
