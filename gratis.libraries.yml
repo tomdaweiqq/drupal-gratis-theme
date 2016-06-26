@@ -1,8 +1,10 @@
-# Core materialize scripts, required for all pages.
+# Core styles & scripts, required for all pages.
 gratis-styles:
   version: VERSION
   css:
     theme:
+      css/grid.css: {}
+      css/color-palettes.css: {}
       css/styles.css: {}
   js:
     js/gratis.js: {}

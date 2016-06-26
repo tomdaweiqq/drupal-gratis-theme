@@ -1166,10 +1166,10 @@ body.color-palette-mediterranean-red {
   color: #eaeaea;
 }
 
-body.color-palette-maillot-jaune .l-page-wrapper,
-body.color-palette-caribe .l-page-wrapper,
-body.color-palette-chartreuse .l-page-wrapper,
-body.color-palette-mediterranean-red .l-page-wrapper {
+body.color-palette-maillot-jaune .page-wrap,
+body.color-palette-caribe .page-wrap,
+body.color-palette-chartreuse .page-wrap,
+body.color-palette-mediterranean-red .page-wrap {
   background-color: #333;
 }
 

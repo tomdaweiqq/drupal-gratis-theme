@@ -26,7 +26,7 @@ img {
 
 // box layout default.
 .box-layout {
-  .l-page-wrapper {
+  .page-wrap{
     @include container(1064px);
     margin-top: 30px;
     @include media( "<#{$gbp-wide}") {

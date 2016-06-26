@@ -99,7 +99,7 @@
     .l-menu-wrapper {
       background-color: $hexvar;
     }
-    
+
     &.site-name-show h1.site-name a:after {
       color: $hexvar;
     }
@@ -122,7 +122,7 @@ body.color-palette-chartreuse,
 body.color-palette-mediterranean-red {
   background-color: $black;
   color: $light_gray2;
-  .l-page-wrapper {
+  .page-wrap{
     background-color: $charcoal_gray;
   }
   blockquote,

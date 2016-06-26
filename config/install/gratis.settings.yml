@@ -1,11 +1,33 @@
 features:
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
   logo: true
   name: true
-  node_user_picture: true
+  node_user_picture: 1
   slogan: true
   site_name: false
 copyright_holder: ' fooz 1 '
 search_placeholder: 'Search site yada'
+_core:
+  default_config_hash: cdyT0umlV8UXTqqeMO21XOpttPNS1Xap5ghgq1nx0dU
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+theme_color_palette: turquoise
+gratis_localcss: 0
+gratis_hacks_settings: 0
+gratis_header_layout: 0
+gratis_custom_css_location: 0
+gratis_custom_css_path: ''
+gratis_grid_container_width: ''
+gratis_page_style: default
+theme_bg_pattern: bg_pattern_02
+theme_bg_tint: bg_tint_green
+breadcrumb: 0
+gratis_livereload: 0
+gratis_minifiedjs: 0
+gratis_setfonts: 0
+gratis_heading_typeface: opensans
+gratis_body_typeface: opensans

@@ -1,127 +1,112 @@
-// Import variables.
-@import "../definitions/vars";
-
-// Applies to desktop and off-canvas menu.
-.region-primary-menu {
-  a {
-    // Menu font always the same.
-    font-family: $font-sans;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: .041em;
-    font-weight: normal;
+nav.menu--main {
+  @include container(1200px);
+  @include media(">=#{$desktop}") {
+    border: none;
   }
 }
 
-// Desktop specific menu within the media query.
-@include media(">#{$gbp-large}") {
 
-  // Small reset, global.
-  .region-primary-menu {
+.main-menu-wrap {
+  display: none;
 
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    li {
-      position: relative;
-      &:hover {
-        > ul {
-          opacity: 1;
+  @include media(">=#{$desktop}") {
+    display: block;
+
+    > ul.menu {
+     // position: absolute;
+
+      > li {
+        position: relative;
+      }
+
+      .menu-level {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        display: block;
+        height: auto;
+
+        // Menu fade in effect. //
+        @include transition(visibility 0s linear 0.4s, opacity 0.4s linear);
+      }
+
+      ul.menu-level--2 {
+        border: 1px solid #ccc;
+        left: 0;
+        top: 100%;
+        min-width: 200px;
+        max-width: 230px;
+        z-index: 1400;
+
+        // debug menu
+        //visibility: visible;
+        //opacity: 1;
+
+        &.hover {
           visibility: visible;
-          margin: 0;
+          opacity: 1;
+          // Menu fade out. //
+          @include transition-delay(0s);
         }
-        > a {
-          color: lighten($baseMenuColor, 80%);
-        }
-      }
-    }
-  }
 
-  // First level -> main menu items
-  .region-primary-menu > ul {
-    display: table;
-    margin: 0 auto;
-    > li {
-      float: left;
-      border-right: 1px solid lighten($baseMenuBackground, 5%);
-      > a {
-        float: left;
-        padding: .8em 1em;
-        @include transition(all 0.25s ease-in);
-        &:hover,
-        &.active {
-          background-color: $charcoal_gray;
-        }
-      }
-      &.expanded {
-        > a.alink {
-          padding: .8em 2.9em .8em 1.3em;
-          &:after {
-            position: absolute;
-            top: 10px;
-            margin: 0 10px;
-            width: 20px;
-            height: 20px;
-            color: $white;
-            content: " ";
-            background: url("#{$path-to-images}/theme-sprite.png") no-repeat -17px -298px;
-            vertical-align: top;
-            font-size: 14px;
-          }
-        }
-      }
-      &.active-trail {
-        > a {
-          background-color: $charcoal_gray;
-          color: $light_gray2;
-        }
-      }
-    }
-    a {
-      color: $baseMenuColor;
-      text-decoration: none;
-    }
+        li {
+          width: 100%;
+          position: relative;
 
-    // Second level. ul > ul
-    ul {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 1;
-      opacity: 0;
-      visibility: hidden;
-      margin: 0;
-      @include transition-property(margin, opacity);
-      @include transition(all 0.5s ease-in-out);
-      li {
-        display: block;
-        &:first-child > a {
-          @include pseudo-triangle(6px, 4);
-        }
-        &:last-child {
-          > a {
-          }
-        }
-        &.last {
           a {
-            border-bottom: none;
+            background-color: rgba(10, 10, 10, 0.8);
+            line-height: 40px;
+            border-bottom: 1px dotted #ccc;
+
+            &:hover {
+              background-color: rgba(10, 10, 10, 0.9);
+            }
+
+          }
+
+          &:last-child {
+            a {
+              border-bottom: none;
+            }
           }
         }
       }
-      a {
-        white-space: nowrap;
-        padding: 0.4em 1.8em;
-        width: $subMenuItemWidth;
-        display: block;
-        background-color: $charcoal_gray;
-        border-color: lighten($baseMenuBackground, 15%);
-        border-bottom: 1px dotted $medium_gray2;
-        &:hover {
-          background-color: lighten($charcoal_gray, 20%);
-          border-color: $secondaryMenuBackground;
+
+      ul.menu.menu-level--3 {
+        left: 100%;
+        top: 0;
+        width: 200px;
+
+        &.hover {
+          visibility: visible;
+          opacity: 1;
+          // Menu fade out. //
+          @include transition-delay(0s);
         }
+      }
+    }
+
+    /** Expanded menu items **/
+    ul.menu-level--1 {
+      > li.menu-item--expanded {
+        > a {
+       //   @include icon-font(before, ElegantIcons, '\47', absolute, 1px, white, inherit, 8px, 20);
+        }
+      }
+    }
+
+    ul.menu-level--2 {
+      li.menu-item--expanded {
+        > a {
+    //      @include icon-font(before, ElegantIcons, '\49', absolute, 1px, white, inherit, 8px, 20);
+        }
+      }
+    }
+
+    li.menu-item-level--1.menu-item--expanded {
+      > a {
+        padding-right: 32px;
+        margin-right: 10px;
       }
     }
   }

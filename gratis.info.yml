@@ -14,8 +14,10 @@ libraries:
 #Define theme regions.
 regions:
   top_links: 'Top Links'
+  header: header
   primary_menu: 'Primary menu'
   breadcrumb: Breadcrumb
+  title_bar: 'Title Bar'
   preface_first: 'Preface first'
   preface_second:  'Preface second'
   preface_third: 'Preface third'

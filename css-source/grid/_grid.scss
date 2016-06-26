@@ -1,0 +1,153 @@
+// Import variables.
+@import "../definitions/vars";
+
+// Grid system inspired by https://github.com/dogfalo/materialize/
+// https://github.com/Dogfalo/materialize/blob/master/LICENSE
+// https://github.com/Dogfalo/materialize/blob/master/sass/components/_grid.scss
+
+.container {
+  max-width: 1064px;
+  margin: 0 auto;
+}
+
+//@media #{$medium-and-up} {
+//  .container {
+//    width: 92%;
+//  }
+//}
+//@media #{$large-and-up} {
+//  .container {
+//    width: 70%;
+//  }
+//}
+
+.container .row {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &.no-pad {
+    padding: 0;
+  }
+  &.no-pad-bot {
+    padding-bottom: 0;
+  }
+  &.no-pad-top {
+    padding-top: 0;
+  }
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  // Clear floating children
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 $gutter-width / 2;
+
+    &[class*="push-"],
+    &[class*="pull-"] {
+      position: relative;
+    }
+
+    $increment: 1;
+    @while $increment <= $num-cols {
+      $percentage: unquote((100 / ($num-cols / $increment)) + "%");
+      &.sm#{$increment} {
+        width: $percentage;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+      }
+      $increment: $increment + 1;
+    }
+
+    $increment: 1;
+    @while $increment <= $num-cols {
+      $percentage: unquote((100 / ($num-cols / $increment)) + "%");
+      &.offset-sm#{$increment} {
+        margin-left: $percentage;
+      }
+      &.pull-sm#{$increment} {
+        right: $percentage;
+      }
+      &.push-sm#{$increment} {
+        left: $percentage;
+      }
+      $increment: $increment + 1;
+    }
+
+    @media #{$medium-and-up} {
+
+      $increment: 1;
+      @while $increment <= $num-cols {
+        $percentage: unquote((100 / ($num-cols / $increment)) + "%");
+        &.med#{$increment} {
+          width: $percentage;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $increment: $increment + 1
+      }
+
+      $increment: 1;
+      @while $increment <= $num-cols {
+        $percentage: unquote((100 / ($num-cols / $increment)) + "%");
+        &.offset-med#{$increment} {
+          margin-left: $percentage;
+        }
+        &.pull-med#{$increment} {
+          right: $percentage;
+        }
+        &.push-med#{$increment} {
+          left: $percentage;
+        }
+        $increment: $increment + 1;
+      }
+    }
+
+    @media #{$large-and-up} {
+
+      $increment: 1;
+      @while $increment <= $num-cols {
+        $percentage: unquote((100 / ($num-cols / $increment)) + "%");
+        &.lg#{$increment} {
+          width: $percentage;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $increment: $increment + 1;
+      }
+
+      $increment: 1;
+      @while $increment <= $num-cols {
+        $percentage: unquote((100 / ($num-cols / $increment)) + "%");
+        &.offset-lg#{$increment} {
+          margin-left: $percentage;
+        }
+        &.pull-lg#{$increment} {
+          right: $percentage;
+        }
+        &.push-lg#{$increment} {
+          left: $percentage;
+        }
+        $increment: $increment + 1;
+      }
+    }
+  }
+}
