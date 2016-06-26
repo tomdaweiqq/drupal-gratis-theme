@@ -1,0 +1,20 @@
+uuid: b6d8d891-9ef0-4753-8ef1-8b68afbe76c5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gratis
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: gratis_page_title
+theme: gratis
+region: title_bar
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

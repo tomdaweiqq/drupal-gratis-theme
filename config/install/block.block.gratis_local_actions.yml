@@ -1,0 +1,20 @@
+uuid: 80c325ad-95bc-469c-9ae2-c0937e302555
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gratis
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: gratis_local_actions
+theme: gratis
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
