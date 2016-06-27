@@ -9,20 +9,19 @@
 
 // Definitions
 @import "definitions/mixins";
-@import "definitions/vars";
+@import "definitions/variables";
 
 // Partials
-@import "base/comments";
-@import "base/design";
-@import "base/forms";
-@import "base/links";
-@import "base/lists";
-@import "base/media";
-@import "base/node";
-@import "base/pager";
-@import "base/system";
-@import "base/tables";
-@import "base/typography";
-@import "base/layout";
-@import "base/menu";
-@import "base/off-canvas";
+@import "components/comments";
+@import "components/design";
+@import "components/forms";
+@import "components/links";
+@import "components/lists";
+@import "components/node";
+@import "components/pager";
+@import "components/system";
+@import "components/tables";
+@import "components/typography";
+@import "components/layout";
+@import "components/menu";
+@import "components/mmenu";

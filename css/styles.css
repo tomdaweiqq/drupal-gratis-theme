@@ -565,14 +565,6 @@ body .page-wrap {
   background: #000;
 }
 
-.l-menu-wrapper,
-.l-breadcrumbs,
-.l-preface-wrap,
-article.node,
-article.header-block {
-  margin-bottom: 20px;
-}
-
 .fullwidth-highlight .l-menu-wrapper {
   margin-bottom: 0;
 }
@@ -614,10 +606,6 @@ article.node, article.header-block {
   font-family: FontAwesome;
   margin-right: 8px;
   color: gray;
-}
-
-.block {
-  margin-bottom: 20px;
 }
 
 .feed-icon {
@@ -898,14 +886,6 @@ ol.search-results li h3.title {
 ol.search-results li span.search-snippet-info {
   display: block;
   padding-left: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-figure {
-  margin: 0 0 20px 0;
 }
 
 .node-submitted {
@@ -1596,92 +1576,6 @@ img {
   .l-content {
     padding-bottom: 20px;
   }
-  .two-sidebars .region-sidebar-first {
-    width: 21.42857%;
-    float: left;
-    margin-right: 4.7619%;
-    margin-left: -78.57143%;
-  }
-  .two-sidebars .l-content {
-    width: 47.61905%;
-    float: left;
-    margin-right: 4.7619%;
-    margin-left: 26.19048%;
-  }
-  .two-sidebars .region-sidebar-second {
-    width: 21.42857%;
-    float: right;
-    margin-right: 0;
-  }
-  .one-sidebar.sidebar-first .l-content {
-    width: 67.03297%;
-    float: right;
-    margin-right: 0;
-  }
-  .one-sidebar.sidebar-first .region-sidebar-first {
-    width: 27.47253%;
-    float: left;
-    margin-right: 5.49451%;
-  }
-  .one-sidebar.sidebar-second .l-content {
-    width: 67.03297%;
-    float: left;
-    margin-right: 5.49451%;
-  }
-  .one-sidebar.sidebar-second .region-sidebar-second {
-    width: 27.47253%;
-    float: right;
-    margin-right: 0;
-  }
-  .footer-one .footer,
-  .postscript-one .postscript,
-  .preface-one .preface {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .footer-two .footer,
-  .postscript-two .postscript,
-  .preface-two .preface {
-    width: 47.61905%;
-    float: left;
-    margin-right: 4.7619%;
-  }
-  .footer-two .footer:last-child,
-  .postscript-two .postscript:last-child,
-  .preface-two .preface:last-child {
-    float: right;
-    margin-right: 0;
-  }
-  .footer-three .footer,
-  .postscript-three .postscript,
-  .preface-three .preface {
-    width: 30.15873%;
-    float: left;
-  }
-  .footer-three .footer:nth-child(3n + 1),
-  .postscript-three .postscript:nth-child(3n + 1),
-  .preface-three .preface:nth-child(3n + 1) {
-    margin-left: 0;
-    margin-right: -100%;
-    clear: both;
-    margin-left: 0;
-  }
-  .footer-three .footer:nth-child(3n + 2),
-  .postscript-three .postscript:nth-child(3n + 2),
-  .preface-three .preface:nth-child(3n + 2) {
-    margin-left: 34.92063%;
-    margin-right: -100%;
-    clear: none;
-  }
-  .footer-three .footer:nth-child(3n + 3),
-  .postscript-three .postscript:nth-child(3n + 3),
-  .preface-three .preface:nth-child(3n + 3) {
-    margin-left: 69.84127%;
-    margin-right: -100%;
-    clear: none;
-  }
 }
 
 @media (min-width: 60.062em) {
@@ -1701,26 +1595,114 @@ img {
   }
 }
 
-nav.menu--main {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-nav.menu--main:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 @media (min-width: 60em) {
   nav.menu--main {
+    color: #fff;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+  }
+  nav.menu--main .nav-wrapper {
+    position: relative;
+    height: 100%;
+  }
+  nav.menu--main .button-collapse {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: 56px;
+  }
+  nav.menu--main .button-collapse i {
+    font-size: 2.7rem;
+    height: 56px;
+    line-height: 56px;
+  }
+  nav.menu--main ul {
+    margin: 0;
+  }
+  nav.menu--main ul li {
+    transition: background-color .3s;
+    float: left;
+    padding: 0;
+  }
+  nav.menu--main ul li.active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  nav.menu--main ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  nav.menu--main ul a.btn, nav.menu--main ul a.btn-large, nav.menu--main ul a.btn-flat, nav.menu--main ul a.btn-floating {
+    margin-top: -2px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  nav.menu--main ul a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  nav.menu--main ul.left {
+    float: left;
+  }
+  nav.menu--main form {
+    height: 100%;
+  }
+  nav.menu--main .input-field {
+    margin: 0;
+    height: 100%;
+  }
+  nav.menu--main .input-field input {
+    height: 100%;
+    font-size: 1.2rem;
     border: none;
+    padding-left: 2rem;
+  }
+  nav.menu--main .input-field input:focus, nav.menu--main .input-field input[type=text]:valid, nav.menu--main .input-field input[type=password]:valid, nav.menu--main .input-field input[type=email]:valid, nav.menu--main .input-field input[type=url]:valid, nav.menu--main .input-field input[type=date]:valid {
+    border: none;
+    box-shadow: none;
+  }
+  nav.menu--main .input-field label {
+    top: 0;
+    left: 0;
+  }
+  nav.menu--main .input-field label i {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color .3s;
+  }
+  nav.menu--main .input-field label.active {
+    transform: translateY(0);
+  }
+}
+
+nav.menu--main .navbar-fixed {
+  position: relative;
+  height: 56px;
+  z-index: 998;
+}
+
+nav.menu--main .navbar-fixed nav {
+  position: fixed;
+}
+
+@media only screen and (min-width: 601px) {
+  nav.menu--main nav, nav.menu--main nav .nav-wrapper i, nav.menu--main nav a.button-collapse, nav.menu--main nav a.button-collapse i {
+    height: 64px;
+    line-height: 64px;
+  }
+  nav.menu--main .navbar-fixed {
+    height: 64px;
   }
 }
 
 .main-menu-wrap {
   display: none;
+  position: relative;
+}
+
+.main-menu-wrap li {
+  list-style: none;
 }
 
 @media (min-width: 60em) {
@@ -1730,6 +1712,10 @@ nav.menu--main:after {
   }
   .main-menu-wrap > ul.menu > li {
     position: relative;
+    float: left;
+  }
+  .main-menu-wrap > ul.menu > li a {
+    color: #fff;
   }
   .main-menu-wrap > ul.menu .menu-level {
     position: absolute;
@@ -1750,6 +1736,8 @@ nav.menu--main:after {
     min-width: 200px;
     max-width: 230px;
     z-index: 1400;
+    visibility: visible;
+    opacity: 1;
   }
   .main-menu-wrap > ul.menu ul.menu-level--2.hover {
     visibility: visible;

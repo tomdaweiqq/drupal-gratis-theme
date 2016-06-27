@@ -70,7 +70,7 @@
     </header>
 
     {% if page.primary_menu %}
-        <div class="gratis-menu-wrap">
+        <div class="l-menu-wrap">
             <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                 <div class="row">
                     {{ page.primary_menu }}
@@ -99,21 +99,21 @@
             {% set preface_classes = [
             'setwidth',
             'l-preface',
-            page.preface_first and page.preface_second and preface_third ? 'col sm6 med4 lg4',
+            page.preface_first and page.preface_second and preface_third ? 'preface-thirds col sm6 med4 lg4',
 
-            page.preface_first and page.preface_second and page.preface_third is empty ? 'col sm6 med6 lg6',
-            page.preface_first and page.preface_third and page.preface_second is empty ? 'col sm6 med6 lg6',
-            page.preface_second and page.preface_third and page.preface_first is empty ? 'col sm6 med6 lg6',
+            page.preface_first and page.preface_second and page.preface_third is empty ? 'preface-half col sm6 med6 lg6',
+            page.preface_first and page.preface_third and page.preface_second is empty ? 'preface-half col sm6 med6 lg6',
+            page.preface_second and page.preface_third and page.preface_first is empty ? 'preface-half col sm6 med6 lg6',
 
-            page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
-            page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
-            page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'col sm12 med12 lg12',
+            page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'preface-100 col sm12 med12 lg12',
+            page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'preface-100 col sm12 med12 lg12',
+            page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'preface-100 col sm12 med12 lg12',
             ] %}
 
             <section id="preface-wrap" class="l-preface-wrap container-wrap">
                 <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                     <div class="row">
-                        <div{{ content_attributes.addClass(preface_classes) }}>
+                        <div{{ attributes.addClass(preface_classes) }}>
                             <!--Preface -->
                             {% if page.preface_first %}
                                 {{ page.preface_first }}
@@ -151,7 +151,6 @@
                     page.sidebar_second and page.sidebar_first is empty ? 'col sm12 med12 lg9',
                     page.sidebar_first is empty and page.sidebar_second is empty ? 'col sm12 med12 lg12'
                     ] %}
-
                     <section{{ content_attributes.addClass(content_classes) }}>
                         {{ page.content }}
                     </section>{# /.layout-content #}
@@ -190,7 +189,7 @@
             <section id="postscript-wrap" class="l-postscript-wrap container-wrap">
                 <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                     <div class="row">
-                        <div{{ content_attributes.addClass(postscript_classes) }}>
+                        <div{{ attributes.addClass(postscript_classes) }}>
                             <!--Preface -->
                             {% if page.postscript_first %}
                                 {{ page.postscript_first }}

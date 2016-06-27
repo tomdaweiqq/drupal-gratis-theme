@@ -1,9 +1,9 @@
 // Import variables.
-@import "../definitions/vars";
+@import "../definitions/variables";
 
 body {
   background-color: $charcoal_gray;
-  .page-wrap{
+  .page-wrap {
     background-color: $white;
   }
 }
@@ -26,13 +26,6 @@ body {
   background: $black;
 }
 
-.l-menu-wrapper,
-.l-breadcrumbs,
-.l-preface-wrap,
-article.node {
-  margin-bottom: $vert-spacing-unit;
-}
-
 .fullwidth-highlight .l-menu-wrapper {
   margin-bottom: 0;
 }
@@ -43,7 +36,7 @@ article.node {
 
 .l-logo {
   padding: #{($vert-spacing-unit / 2)} 0;
-  @include media( "<#{$gbp-med}") {
+  @include media("<#{$gbp-med}") {
     margin: 34px 0 0;
   }
 }
@@ -67,10 +60,6 @@ article.node {
 .site-name-show h1.site-name a:after {
   content: " #{$faraquo} ";
   @include fontawesome;
-}
-
-.block {
-  margin-bottom: $vert-spacing-unit;
 }
 
 .feed-icon {

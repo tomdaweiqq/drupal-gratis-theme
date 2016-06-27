@@ -11,6 +11,16 @@ libraries:
   - gratis/gratis-typography
   - gratis/gratis-styles
 
+
+# Remove unneeded classy stylesheets.
+stylesheets-remove:
+  - core/themes/classy/css/components/menu.css
+  - core/themes/classy/css/components/form.css
+  - core/themes/classy/css/components/pager.css
+  - core/themes/classy/css/components/links.css
+  - core/themes/classy/css/components/item-list.css
+  - core/themes/classy/css/components/textarea.css
+
 #Define theme regions.
 regions:
   top_links: 'Top Links'

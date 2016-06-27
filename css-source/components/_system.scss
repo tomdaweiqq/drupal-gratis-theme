@@ -1,12 +1,11 @@
 // Import variables.
-@import "../definitions/vars";
+@import "../definitions/variables";
 
 // Fix for Android
 // http://timpietrusky.com/advanced-checkbox-hack
 body {
   -webkit-animation: bugfix infinite 1s;
 }
-
 
 html {
   @include box-sizing(border-box);
@@ -82,15 +81,4 @@ ul.tabs.primary {
       color: $white;
     }
   }
-
 }
-
-// End Primary tabs.
-
-.contextual-links {
-  a {
-    font-family: $font-sans;
-  }
-}
-
-
