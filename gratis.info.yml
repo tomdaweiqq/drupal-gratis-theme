@@ -29,6 +29,4 @@ regions:
   postscript_first:  'Postscript first'
   postscript_second: 'Postscript second'
   postscript_third:  'Postscript third'
-  footer_first:  'Footer first'
-  footer_second:  'Footer second'
-  footer_third:  'Footer third'
+  footer:  'Page footer'

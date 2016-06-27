@@ -35,6 +35,7 @@ img {
     position: relative;
     z-index: 200;
   }
+
   // Generate background pattern css for box layouts.
   @for $i from 1 through 15 {
     @if $i < 10 {
@@ -47,7 +48,6 @@ img {
       }
     }
   }
-
 }
 
 // Media query for wide layouts.
@@ -64,61 +64,6 @@ img {
 
   .l-content {
     padding-bottom: $vert-spacing-unit;
-  }
-
-  // Two sidebars.
-  .two-sidebars {
-    .region-sidebar-first {
-      @include span(3);
-      @include pull(9);
-    }
-    .l-content {
-      @include span(6);
-      @include push(3);
-    }
-    .region-sidebar-second {
-      @include span(3 at 10);
-    }
-  }
-
-  // One sidebar - sidebar first.
-  .one-sidebar.sidebar-first {
-    .l-content {
-      @include span(11 of $susy16 at 6);
-    }
-    .region-sidebar-first {
-      @include span(5 of $susy16 at 1);
-    }
-  }
-
-  // One sidebar - sidebar second.
-  .one-sidebar.sidebar-second {
-    .l-content {
-      @include span(11 of $susy16);
-    }
-    .region-sidebar-second {
-      @include span(5 of $susy16 at 12);
-    }
-  }
-
-  // Preface, postscript, footer.
-  .footer-one .footer,
-  .postscript-one .postscript,
-  .preface-one .preface {
-    @include span(12);
-  }
-  .footer-two .footer,
-  .postscript-two .postscript,
-  .preface-two .preface {
-    @include span(6);
-    &:last-child {
-      @include omega;
-    }
-  }
-  .footer-three .footer,
-  .postscript-three .postscript,
-  .preface-three .preface {
-    @include gallery(4);
   }
 
 }

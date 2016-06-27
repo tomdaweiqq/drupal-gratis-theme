@@ -44,12 +44,6 @@
  */
 #}
 {% set dynamic_container = edgy ? 'container-edgy' : 'container' %}
-{% set footer_classes = [
-'l-footer',
-footer_bg_color|clean_class,
-footer_hue|clean_class,
-] %}
-
 <div id="page" class="page-wrap">
 
     <a href="#block-gratis-main-menu" class="mmenu-trigger">
@@ -77,7 +71,7 @@ footer_hue|clean_class,
 
     {% if page.primary_menu %}
     <div class="gratis-menu-wrap">
-        <div class="container setwidth" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+        <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
             <div class="row">
                     {{ page.primary_menu }}
                 </div>
@@ -102,33 +96,46 @@ footer_hue|clean_class,
             {# Define and divide the preface page regions.#}
             {% if page.preface_first or page.preface_second or page.preface_third %}
 
-                <div id="preface-wrap" class="l-preface-wrap container-wrap grey lighten-3 amber-text text-darken-4">
-                    <div class="l-preface container setwidth" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                {% set preface_classes = [
+                'setwidth',
+                'l-preface',
+                page.preface_first and page.preface_second and preface_third ? 'col sm6 med4 lg4',
 
-                        <!--Preface -->
-                        {% if page.preface_first %}
-                            {{ page.preface_first }}
-                        {% endif %}
+                page.preface_first and page.preface_second and page.preface_third is empty ? 'col sm6 med6 lg6',
+                page.preface_first and page.preface_third and page.preface_second is empty ? 'col sm6 med6 lg6',
+                page.preface_second and page.preface_third and page.preface_first is empty ? 'col sm6 med6 lg6',
 
-                        {% if page.preface_second %}
-                            {{ page.preface_second }}
-                        {% endif %}
+                page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
+                page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
+                page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'col sm12 med12 lg12',
+                ] %}
 
-                        {% if page.preface_third %}
-                            {{ page.preface_third }}
-                        {% endif %}
+                <section id="preface-wrap" class="l-preface-wrap container-wrap">
+                    <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                        <div class="row">
+                            <div{{ content_attributes.addClass(preface_classes) }}>
+                                <!--Preface -->
+                                {% if page.preface_first %}
+                                    {{ page.preface_first }}
+                                {% endif %}
 
+                                {% if page.preface_second %}
+                                    {{ page.preface_second }}
+                                {% endif %}
+
+                                {% if page.preface_third %}
+                                    {{ page.preface_third }}
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- // preface -->
-
+                </section>
+                {# // preface  #}
             {% endif %}
-
 
             <main role="main" class="container-wrap">
                 <div class="{{ dynamic_container }}">
                     <div class="row">
-
                         <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
                         {% if page.title_bar %}
@@ -167,36 +174,52 @@ footer_hue|clean_class,
             {# Define and divide the postscript page regions.#}
             {% if page.postscript_first or page.postscript_second or page.postscript_third %}
 
-                <div id="postscript-wrapper">
-                    <div id="postscript-container" class="l-postscript setwidth" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                {% set postscript_classes = [
+                'l-postscript',
+                page.postscript_first and page.postscript_second and postscript_third ? 'col sm6 med4 lg4',
 
-                        <!--Postscript -->
-                        {% if page.postscript_first %}
-                            <div class="postscript">
-                                {{ page.postscript_first }}
+                page.postscript_first and page.postscript_second and page.postscript_third is empty ? 'col sm6 med6 lg6',
+                page.postscript_first and page.postscript_third and page.postscript_second is empty ? 'col sm6 med6 lg6',
+                page.postscript_second and page.postscript_third and page.postscript_first is empty ? 'col sm6 med6 lg6',
+
+                page.postscript_first and page.postscript_second is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
+                page.postscript_second and page.postscript_first is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
+                page.postscript_third and page.postscript_first is empty and page.postscript_second is empty ? 'col sm12 med12 lg12',
+                ] %}
+
+                <section id="postscript-wrap" class="l-postscript-wrap container-wrap">
+                    <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                        <div class="row">
+                            <div{{ content_attributes.addClass(postscript_classes) }}>
+                                <!--Preface -->
+                                {% if page.postscript_first %}
+                                    {{ page.postscript_first }}
+                                {% endif %}
+
+                                {% if page.postscript_second %}
+                                    {{ page.postscript_second }}
+                                {% endif %}
+
+                                {% if page.postscript_third %}
+                                    {{ page.postscript_third }}
+                                {% endif %}
                             </div>
-                        {% endif %}
-
-                        {% if page.postscript_second %}
-                            <div class="postscript">
-                                {{ page.postscript_second }}
-                            </div>
-                        {% endif %}
-
-                        {% if page.postscript_third %}
-                            <div class="postscript">
-                                {{ page.postscript_third }}
-                            </div>
-                        {% endif %}
-
+                        </div>
                     </div>
-                </div>
+                </section>
+                {# // postscript  #}
             {% endif %}
 
-            {% if page.footer_first %}
+            {% set footer_classes = [
+            'l-footer',
+            footer_bg_color|clean_class,
+            footer_hue|clean_class,
+            ] %}
+
+            {% if page.footer %}
                 <footer role="contentinfo" {{ attributes.addClass(footer_classes) }}>
                     <div class="container">
-                        {{ page.footer_first }}
+                        {{ page.footer }}
                     </div>
                 </footer>
             {% endif %}
@@ -208,5 +231,4 @@ footer_hue|clean_class,
             {% endif %}
 
         </div>{# /.layout-container #}
-
     </div>
