@@ -7,10 +7,10 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+  default_config_hash: 7-x4WKoJ9f7F9m2VoSR2GrPPJ2CrHk1fT9k9rnJ_VGc
 id: gratis_powered
 theme: gratis
-region: top_links
+region: preface_first
 weight: -6
 provider: null
 plugin: system_powered_by_block

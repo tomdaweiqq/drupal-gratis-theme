@@ -5,7 +5,7 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+  default_config_hash: tw8ZTcYlueQx5loDLvOdbGcQ0J-RajZndHyJNbpbADA
 id: gratis_local_tasks
 theme: gratis
 region: title_bar

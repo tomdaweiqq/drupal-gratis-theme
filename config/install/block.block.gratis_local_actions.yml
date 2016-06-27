@@ -5,7 +5,7 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+  default_config_hash: ph8V-YUI8XDaqtl85ANYBvIdlLNdMyw8S50UjiYOYSw
 id: gratis_local_actions
 theme: gratis
 region: content
