@@ -70,165 +70,165 @@
     </header>
 
     {% if page.primary_menu %}
-    <div class="gratis-menu-wrap">
-        <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
-            <div class="row">
+        <div class="gratis-menu-wrap">
+            <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                <div class="row">
                     {{ page.primary_menu }}
                 </div>
             </div>
         </div>
+    {% endif %}
+
+    {% if page.banner %}
+        {{ page.banner }}
+    {% endif %}
+
+    <div class="l-page-wrap">
+
+        {% if page.breadcrumb %}
+            {{ page.breadcrumb }}
         {% endif %}
 
-        {% if page.banner %}
-            {{ page.banner }}
+        {% if page.highlight %}
+            {{ page.highlight }}
         {% endif %}
 
-        <div class="l-page-wrap">
+        {# Define and divide the preface page regions.#}
+        {% if page.preface_first or page.preface_second or page.preface_third %}
 
-            {% if page.breadcrumb %}
-                {{ page.breadcrumb }}
-            {% endif %}
+            {% set preface_classes = [
+            'setwidth',
+            'l-preface',
+            page.preface_first and page.preface_second and preface_third ? 'col sm6 med4 lg4',
 
-            {% if page.highlight %}
-                {{ page.highlight }}
-            {% endif %}
+            page.preface_first and page.preface_second and page.preface_third is empty ? 'col sm6 med6 lg6',
+            page.preface_first and page.preface_third and page.preface_second is empty ? 'col sm6 med6 lg6',
+            page.preface_second and page.preface_third and page.preface_first is empty ? 'col sm6 med6 lg6',
 
-            {# Define and divide the preface page regions.#}
-            {% if page.preface_first or page.preface_second or page.preface_third %}
-
-                {% set preface_classes = [
-                'setwidth',
-                'l-preface',
-                page.preface_first and page.preface_second and preface_third ? 'col sm6 med4 lg4',
-
-                page.preface_first and page.preface_second and page.preface_third is empty ? 'col sm6 med6 lg6',
-                page.preface_first and page.preface_third and page.preface_second is empty ? 'col sm6 med6 lg6',
-                page.preface_second and page.preface_third and page.preface_first is empty ? 'col sm6 med6 lg6',
-
-                page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
-                page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
-                page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'col sm12 med12 lg12',
-                ] %}
-
-                <section id="preface-wrap" class="l-preface-wrap container-wrap">
-                    <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
-                        <div class="row">
-                            <div{{ content_attributes.addClass(preface_classes) }}>
-                                <!--Preface -->
-                                {% if page.preface_first %}
-                                    {{ page.preface_first }}
-                                {% endif %}
-
-                                {% if page.preface_second %}
-                                    {{ page.preface_second }}
-                                {% endif %}
-
-                                {% if page.preface_third %}
-                                    {{ page.preface_third }}
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {# // preface  #}
-            {% endif %}
-
-            <main role="main" class="container-wrap">
-                <div class="{{ dynamic_container }}">
-                    <div class="row">
-                        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-                        {% if page.title_bar %}
-                            <div id="title-wrap" class="l-title-wrap">
-                                {{ page.title_bar }}
-                            </div>
-                        {% endif %}
-
-                        {% set content_classes = [
-                        edgy ? 'edge-to-edge',
-                        page.sidebar_first and page.sidebar_second ? 'col sm6 med6 lg6',
-                        page.sidebar_first and page.sidebar_second is empty ? 'col sm12 med12 lg9',
-                        page.sidebar_second and page.sidebar_first is empty ? 'col sm12 med12 lg9',
-                        page.sidebar_first is empty and page.sidebar_second is empty ? 'col sm12 med12 lg12'
-                        ] %}
-
-                        <section{{ content_attributes.addClass(content_classes) }}>
-                            {{ page.content }}
-                        </section>{# /.layout-content #}
-
-                        {% if page.sidebar_first %}
-                            <aside class="layout-sidebar-first col sm12 med3 lg3" role="complementary">
-                                {{ page.sidebar_first }}
-                            </aside>
-                        {% endif %}
-
-                        {% if page.sidebar_second %}
-                            <aside class="layout-sidebar-second col sm12 med3 lg3" role="complementary">
-                                {{ page.sidebar_second }}
-                            </aside>
-                        {% endif %}
-                    </div>
-                </div>
-            </main>
-
-            {# Define and divide the postscript page regions.#}
-            {% if page.postscript_first or page.postscript_second or page.postscript_third %}
-
-                {% set postscript_classes = [
-                'l-postscript',
-                page.postscript_first and page.postscript_second and postscript_third ? 'col sm6 med4 lg4',
-
-                page.postscript_first and page.postscript_second and page.postscript_third is empty ? 'col sm6 med6 lg6',
-                page.postscript_first and page.postscript_third and page.postscript_second is empty ? 'col sm6 med6 lg6',
-                page.postscript_second and page.postscript_third and page.postscript_first is empty ? 'col sm6 med6 lg6',
-
-                page.postscript_first and page.postscript_second is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
-                page.postscript_second and page.postscript_first is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
-                page.postscript_third and page.postscript_first is empty and page.postscript_second is empty ? 'col sm12 med12 lg12',
-                ] %}
-
-                <section id="postscript-wrap" class="l-postscript-wrap container-wrap">
-                    <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
-                        <div class="row">
-                            <div{{ content_attributes.addClass(postscript_classes) }}>
-                                <!--Preface -->
-                                {% if page.postscript_first %}
-                                    {{ page.postscript_first }}
-                                {% endif %}
-
-                                {% if page.postscript_second %}
-                                    {{ page.postscript_second }}
-                                {% endif %}
-
-                                {% if page.postscript_third %}
-                                    {{ page.postscript_third }}
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {# // postscript  #}
-            {% endif %}
-
-            {% set footer_classes = [
-            'l-footer',
-            footer_bg_color|clean_class,
-            footer_hue|clean_class,
+            page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
+            page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'col sm12 med12 lg12',
+            page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'col sm12 med12 lg12',
             ] %}
 
-            {% if page.footer %}
-                <footer role="contentinfo" {{ attributes.addClass(footer_classes) }}>
-                    <div class="container">
-                        {{ page.footer }}
+            <section id="preface-wrap" class="l-preface-wrap container-wrap">
+                <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                    <div class="row">
+                        <div{{ content_attributes.addClass(preface_classes) }}>
+                            <!--Preface -->
+                            {% if page.preface_first %}
+                                {{ page.preface_first }}
+                            {% endif %}
+
+                            {% if page.preface_second %}
+                                {{ page.preface_second }}
+                            {% endif %}
+
+                            {% if page.preface_third %}
+                                {{ page.preface_third }}
+                            {% endif %}
+                        </div>
                     </div>
-                </footer>
-            {% endif %}
-
-            {% if copyright %}
-                <div class="copyright container">
-                    {{ copyright }} {% if copyright_holder %} | {{ copyright_holder }} {% endif %}
                 </div>
-            {% endif %}
+            </section>
+            {# // preface  #}
+        {% endif %}
 
-        </div>{# /.layout-container #}
-    </div>
+        <main role="main" class="container-wrap">
+            <div class="{{ dynamic_container }}">
+                <div class="row">
+                    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+                    {% if page.title_bar %}
+                        <div id="title-wrap" class="l-title-wrap">
+                            {{ page.title_bar }}
+                        </div>
+                    {% endif %}
+
+                    {% set content_classes = [
+                    edgy ? 'edge-to-edge',
+                    page.sidebar_first and page.sidebar_second ? 'col sm6 med6 lg6',
+                    page.sidebar_first and page.sidebar_second is empty ? 'col sm12 med12 lg9',
+                    page.sidebar_second and page.sidebar_first is empty ? 'col sm12 med12 lg9',
+                    page.sidebar_first is empty and page.sidebar_second is empty ? 'col sm12 med12 lg12'
+                    ] %}
+
+                    <section{{ content_attributes.addClass(content_classes) }}>
+                        {{ page.content }}
+                    </section>{# /.layout-content #}
+
+                    {% if page.sidebar_first %}
+                        <aside class="layout-sidebar-first col sm12 med3 lg3" role="complementary">
+                            {{ page.sidebar_first }}
+                        </aside>
+                    {% endif %}
+
+                    {% if page.sidebar_second %}
+                        <aside class="layout-sidebar-second col sm12 med3 lg3" role="complementary">
+                            {{ page.sidebar_second }}
+                        </aside>
+                    {% endif %}
+                </div>
+            </div>
+        </main>
+
+        {# Define and divide the postscript page regions.#}
+        {% if page.postscript_first or page.postscript_second or page.postscript_third %}
+
+            {% set postscript_classes = [
+            'l-postscript',
+            page.postscript_first and page.postscript_second and postscript_third ? 'col sm6 med4 lg4',
+
+            page.postscript_first and page.postscript_second and page.postscript_third is empty ? 'col sm6 med6 lg6',
+            page.postscript_first and page.postscript_third and page.postscript_second is empty ? 'col sm6 med6 lg6',
+            page.postscript_second and page.postscript_third and page.postscript_first is empty ? 'col sm6 med6 lg6',
+
+            page.postscript_first and page.postscript_second is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
+            page.postscript_second and page.postscript_first is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
+            page.postscript_third and page.postscript_first is empty and page.postscript_second is empty ? 'col sm12 med12 lg12',
+            ] %}
+
+            <section id="postscript-wrap" class="l-postscript-wrap container-wrap">
+                <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
+                    <div class="row">
+                        <div{{ content_attributes.addClass(postscript_classes) }}>
+                            <!--Preface -->
+                            {% if page.postscript_first %}
+                                {{ page.postscript_first }}
+                            {% endif %}
+
+                            {% if page.postscript_second %}
+                                {{ page.postscript_second }}
+                            {% endif %}
+
+                            {% if page.postscript_third %}
+                                {{ page.postscript_third }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {# // postscript  #}
+        {% endif %}
+
+        {% set footer_classes = [
+        'l-footer',
+        footer_bg_color|clean_class,
+        footer_hue|clean_class,
+        ] %}
+
+        {% if page.footer %}
+            <footer role="contentinfo" {{ attributes.addClass(footer_classes) }}>
+                <div class="container">
+                    {{ page.footer }}
+                </div>
+            </footer>
+        {% endif %}
+
+        {% if copyright %}
+            <div class="copyright container">
+                {{ copyright }} {% if copyright_holder %} | {{ copyright_holder }} {% endif %}
+            </div>
+        {% endif %}
+
+    </div>{# /.layout-container #}
+</div>
