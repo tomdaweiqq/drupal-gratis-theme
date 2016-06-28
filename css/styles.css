@@ -1004,6 +1004,7 @@ ul.tabs.primary {
   overflow: hidden;
   margin: 0 0 10px 0;
   width: 100%;
+  border-bottom: 1px solid #a5a5a5;
 }
 
 ul.tabs.primary li {
@@ -1013,12 +1014,11 @@ ul.tabs.primary li {
   padding: 0;
   position: relative;
   list-style: none outside none;
+  margin: 0 6px 0 0;
 }
 
 ul.tabs.primary a {
   background-color: #ccc;
-  border-bottom: 1px solid #fff;
-  color: #ccc;
   display: block;
   letter-spacing: 0;
   outline: none;
@@ -1028,7 +1028,6 @@ ul.tabs.primary a {
   -moz-transition: all 0.25s ease-in-out false;
   -o-transition: all 0.25s ease-in-out false;
   transition: all 0.25s ease-in-out;
-  border-bottom: 2px solid #202020;
   font-size: 1rem;
   color: #202020;
 }
@@ -1508,8 +1507,6 @@ img {
     min-width: 200px;
     max-width: 230px;
     z-index: 1400;
-    visibility: visible;
-    opacity: 1;
   }
   .main-menu-wrap > ul.menu ul.menu-level--2.hover {
     visibility: visible;

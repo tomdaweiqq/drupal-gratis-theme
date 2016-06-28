@@ -104,11 +104,11 @@
   color: #7f8c8d;
 }
 
-.color-palette-greengray a {
+.color-palette-greengray .page-wrap a {
   color: #7f8c8d;
 }
 
-.color-palette-greengray a:hover {
+.color-palette-greengray .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -182,11 +182,11 @@
   color: #b72898;
 }
 
-.color-palette-pink a {
+.color-palette-pink .page-wrap a {
   color: #b72898;
 }
 
-.color-palette-pink a:hover {
+.color-palette-pink .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -260,11 +260,11 @@
   color: #e04604;
 }
 
-.color-palette-orange a {
+.color-palette-orange .page-wrap a {
   color: #e04604;
 }
 
-.color-palette-orange a:hover {
+.color-palette-orange .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -338,11 +338,11 @@
   color: #6a8500;
 }
 
-.color-palette-green a {
+.color-palette-green .page-wrap a {
   color: #6a8500;
 }
 
-.color-palette-green a:hover {
+.color-palette-green .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -416,11 +416,11 @@
   color: #491f70;
 }
 
-.color-palette-purple a {
+.color-palette-purple .page-wrap a {
   color: #491f70;
 }
 
-.color-palette-purple a:hover {
+.color-palette-purple .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -494,11 +494,11 @@
   color: #02b4ce;
 }
 
-.color-palette-turquoise a {
+.color-palette-turquoise .page-wrap a {
   color: #02b4ce;
 }
 
-.color-palette-turquoise a:hover {
+.color-palette-turquoise .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -572,11 +572,11 @@
   color: #c0392b;
 }
 
-.color-palette-pomegranate a {
+.color-palette-pomegranate .page-wrap a {
   color: #c0392b;
 }
 
-.color-palette-pomegranate a:hover {
+.color-palette-pomegranate .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -650,11 +650,11 @@
   color: #16a085;
 }
 
-.color-palette-seafoam a {
+.color-palette-seafoam .page-wrap a {
   color: #16a085;
 }
 
-.color-palette-seafoam a:hover {
+.color-palette-seafoam .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -728,11 +728,11 @@
   color: #c3a918;
 }
 
-.color-palette-mustard a {
+.color-palette-mustard .page-wrap a {
   color: #c3a918;
 }
 
-.color-palette-mustard a:hover {
+.color-palette-mustard .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -806,11 +806,11 @@
   color: #02aab3;
 }
 
-.color-palette-surf-green a {
+.color-palette-surf-green .page-wrap a {
   color: #02aab3;
 }
 
-.color-palette-surf-green a:hover {
+.color-palette-surf-green .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -884,11 +884,11 @@
   color: #f0de16;
 }
 
-.color-palette-maillot-jaune a {
+.color-palette-maillot-jaune .page-wrap a {
   color: #f0de16;
 }
 
-.color-palette-maillot-jaune a:hover {
+.color-palette-maillot-jaune .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -962,11 +962,11 @@
   color: #a6c9d1;
 }
 
-.color-palette-caribe a {
+.color-palette-caribe .page-wrap a {
   color: #a6c9d1;
 }
 
-.color-palette-caribe a:hover {
+.color-palette-caribe .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -1040,11 +1040,11 @@
   color: #c8dc77;
 }
 
-.color-palette-chartreuse a {
+.color-palette-chartreuse .page-wrap a {
   color: #c8dc77;
 }
 
-.color-palette-chartreuse a:hover {
+.color-palette-chartreuse .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }
@@ -1118,11 +1118,11 @@
   color: #ff513a;
 }
 
-.color-palette-mediterranean-red a {
+.color-palette-mediterranean-red .page-wrap a {
   color: #ff513a;
 }
 
-.color-palette-mediterranean-red a:hover {
+.color-palette-mediterranean-red .page-wrap a:hover {
   text-decoration: none;
   color: #999;
 }

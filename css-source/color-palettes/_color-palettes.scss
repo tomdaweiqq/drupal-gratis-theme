@@ -24,8 +24,7 @@
   }
 }
 
-// Palettes defined in colors.
-
+// Palettes defined in colors //
 @each $designcolor in map-keys($palette) {
   $hexvar: map-get($palette, $designcolor);
   .color-palette-#{$designcolor} {
@@ -77,7 +76,7 @@
       color: $hexvar;
     }
 
-    a {
+    .page-wrap a {
       color: $hexvar;
       &:hover {
         text-decoration: none;

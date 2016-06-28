@@ -7,7 +7,7 @@ gratis-styles:
       css/color-palettes.css: {}
       css/styles.css: {}
   js:
-    js/gratis.js: {}
+    js-source/gratis.js: {}
   dependencies:
     - core/jquery
     - core/drupal

@@ -51,6 +51,8 @@ ul.tabs.primary {
   overflow: hidden;
   margin: 0 0 10px 0;
   width: 100%;
+  border-bottom: 1px solid #a5a5a5;
+
   li {
     float: left;
     line-height: 30px;
@@ -58,24 +60,25 @@ ul.tabs.primary {
     padding: 0;
     position: relative;
     list-style: none outside none;
+    margin: 0 6px 0 0;
   }
+
   a {
     background-color: $light_gray;
-    border-bottom: 1px solid $white;
-    color: $light_gray;
     display: block;
     letter-spacing: 0;
     outline: none;
     padding: 0 20px;
     text-decoration: none;
     @include transition(all 0.25s ease-in-out);
-    border-bottom: 2px solid $dark_gray;
     font-size: 1rem;
     color: $dark_gray;
+
     &.active {
       color: $white;
       background: lighten($dark_gray, 20%);
     }
+
     &:hover {
       background: lighten($dark_gray, 20%);
       color: $white;
