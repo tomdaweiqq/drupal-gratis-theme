@@ -809,83 +809,8 @@ a {
   padding: 5px 14px;
 }
 
-.field {
-  margin-bottom: 10px;
-}
-
-.vocabulary {
-  margin: 0 0 10px 0;
-  display: block;
-}
-
-.vocabulary .field-label {
-  margin: 0 1% 0 0;
-  font-size: 20px;
-}
-
-.l-main ul.vocabulary-list, .l-main
-ul.links.inline {
-  display: inline;
-  margin: 0;
-}
-
-.l-main ul.vocabulary-list li, .l-main
-ul.links.inline li {
-  display: inline-block;
-  margin: 0 2% 0 0;
-}
-
-.l-main ul.vocabulary-list li.vocabulary-links:before, .l-main
-ul.links.inline li.vocabulary-links:before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  font-family: FontAwesome;
-  margin-right: 8px;
-  color: gray;
-}
-
-.l-main ul.vocabulary-list li.node-readmore:before, .l-main
-ul.links.inline li.node-readmore:before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  font-family: FontAwesome;
-  margin-right: 8px;
-  color: gray;
-}
-
-.l-main ul.vocabulary-list li.comment-comments:before, .l-main
-ul.links.inline li.comment-comments:before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  font-family: FontAwesome;
-  margin-right: 8px;
-  color: gray;
-}
-
-.l-main ul.vocabulary-list li.comment-add:before, .l-main
-ul.links.inline li.comment-add:before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  font-family: FontAwesome;
-  margin-right: 8px;
-  color: gray;
-}
-
-ol.search-results {
-  padding: 0;
-}
-
-ol.search-results li h3.title {
-  line-height: inherit;
-}
-
-ol.search-results li span.search-snippet-info {
-  display: block;
-  padding-left: 0;
+ul {
+  -webkit-padding-start: 0;
 }
 
 .node-submitted {
