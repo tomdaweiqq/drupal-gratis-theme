@@ -2,7 +2,7 @@
 gratis-styles:
   version: VERSION
   css:
-    theme:
+    state:
       css/grid.css: {}
       css/color-palettes.css: {}
       css/styles.css: {}
@@ -20,3 +20,17 @@ gratis-typography:
     theme:
       //fonts.googleapis.com/css?family=Roboto:200,300,400,500,700: { type: external }
       //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css: { type: external }
+
+gratis-localcss:
+  version: VERSION
+  css:
+    theme:
+      css/local.css: {}
+
+
+### CSS weights
+#base key assigns a weight of CSS_BASE = -200
+#layout key assigns a weight of CSS_LAYOUT = -100
+#component key assigns a weight of CSS_COMPONENT = 0;
+#state key assigns a weight of CSS_STATE = 100
+#theme key assigns a weight of CSS_THEME = 200

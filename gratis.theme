@@ -10,6 +10,26 @@
 use Drupal\Component\Utility\Xss;
 
 /**
+ * Alter attachments (typically assets) to a page before it is rendered.
+ *
+ * Use this hook when you want to remove or alter attachments on the page, or
+ * add attachments to the page that depend on another module's attachments (this
+ * hook runs after hook_page_attachments().
+ *
+ * @param array &$page
+ *   An empty renderable array representing the page.
+ *
+ * @see hook_page_attachments_alter()
+ */
+function gratis_page_attachments_alter(array &$page) {
+
+  // Add local css library if set to true.
+  if (theme_get_setting('gratis_localcss') == 1) {
+    $page['#attached']['library'][] = 'gratis/gratis-localcss';
+  }
+}
+
+/**
  * Implements hook_preprocess_html().
  */
 function gratis_preprocess_html(&$vars) {
