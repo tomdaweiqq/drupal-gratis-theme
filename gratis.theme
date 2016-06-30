@@ -36,7 +36,8 @@ function gratis_preprocess_html(&$vars) {
 
   // Global theme accent color.
   $color_palette = theme_get_setting('theme_color_palette');
-  $vars['attributes']['class'][] = 'color-palette-' . str_replace('_', '-', $color_palette);
+  $vars['attributes']['class'][] = 'color-palette-' .
+    str_replace('_', '-', $color_palette);
 
   // Add a class for the page style.
   if ((theme_get_setting('gratis_page_style') == 'default')) {
@@ -71,6 +72,10 @@ function gratis_preprocess_html(&$vars) {
     $vars['attributes']['class'][] = 'themebg-light';
   }
 
+  // Use browsersync.
+  if (theme_get_setting('gratis_browsersync') == 1) {
+    $vars['browsersync'] = TRUE;
+  }
 }
 
 /**
@@ -78,6 +83,7 @@ function gratis_preprocess_html(&$vars) {
  */
 function gratis_preprocess_page(&$vars) {
 
+  // Get the custom container width theme setting.
   $set_width = theme_get_setting('gratis_grid_container_width');
   $vars['setwidth'] = Xss::filterAdmin($set_width);
 }
