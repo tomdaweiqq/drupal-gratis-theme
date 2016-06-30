@@ -10,7 +10,7 @@ features:
 copyright_holder: ' fooz 1 '
 search_placeholder: 'Search site yada'
 _core:
-  default_config_hash: 47GXpUYgfeM7-OjsNM7sd2mXVBL-EkYe95bEtgYh3lM
+  default_config_hash: 8KIHzWcaDQVZNTTnrU4C0R-xAE0p7VuYxOCY3adDkNM
 logo:
   use_default: 1
 favicon:
@@ -19,8 +19,8 @@ theme_color_palette: turquoise
 gratis_localcss: 0
 gratis_hacks_settings: 0
 gratis_header_layout: 0
-gratis_custom_css_location: 0
-gratis_custom_css_path: ''
+gratis_custom_css_location: 1
+gratis_custom_css_path: sites/default/files/custom-css/custom.css
 gratis_grid_container_width: ''
 gratis_page_style: default
 theme_bg_pattern: bg_pattern_02
@@ -31,3 +31,4 @@ gratis_minifiedjs: 0
 gratis_setfonts: 0
 gratis_heading_typeface: opensans
 gratis_body_typeface: opensans
+gratis_browsersync: 0

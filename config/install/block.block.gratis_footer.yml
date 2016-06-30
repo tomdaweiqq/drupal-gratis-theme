@@ -1,6 +1,6 @@
 uuid: 70e617d4-b5ef-4944-9f66-46b7ebadde40
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -9,10 +9,10 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: AhzZhiazt0UxcRi4d5H8vaKepthUNVp0ZQ67nlCjUPE
+  default_config_hash: 4Z8hDXlIGx8p0bs612Tl7IN9tOA9y14E6541UFICc6M
 id: gratis_footer
 theme: gratis
-region: footer_first
+region: '-1'
 weight: -6
 provider: null
 plugin: 'system_menu_block:footer'

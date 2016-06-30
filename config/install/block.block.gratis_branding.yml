@@ -7,7 +7,7 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: GdleVTkWsj_28yKRNQGlyGvckdFyHuiEKLil2swj__4
+  default_config_hash: AwgIIqvSewwoux2JorPTynIpVQN4kr9P2pWdy_21e6I
 id: gratis_branding
 theme: gratis
 region: header

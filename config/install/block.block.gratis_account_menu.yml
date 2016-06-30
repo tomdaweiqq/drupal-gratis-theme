@@ -9,7 +9,7 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: FUVxn9AElfcbgxcHRVXXjymW-oeqdmF0fcGw5z8vj1Y
+  default_config_hash: _SG1a3pEwlsuteuVsuLuMsAcClWGhxdTZCBKPBwwDiQ
 id: gratis_account_menu
 theme: gratis
 region: sidebar_second

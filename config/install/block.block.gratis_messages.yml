@@ -7,7 +7,7 @@ dependencies:
   theme:
     - gratis
 _core:
-  default_config_hash: LKYKsOSWDAkdO1gwbGWPfgdXZlkuM9JqB9HmIVrp688
+  default_config_hash: PVGc-R78OubSo5KkOOUK3OeRqmQvL4NE-0-uOKk_inM
 id: gratis_messages
 theme: gratis
 region: title_bar
