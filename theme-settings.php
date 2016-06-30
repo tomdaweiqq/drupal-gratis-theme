@@ -70,39 +70,11 @@ theme folder. Only check this box if you have renamed local.sample.css to local.
 You must clear the Drupal cache after doing this."),
   );
 
-  $form['gratis_css']['gratis_hacks_settings'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable gratis hacks css?'),
-    '#default_value' => theme_get_setting('gratis_hacks_settings'),
-    '#description' => t('Check this if you want these hacks. <ul><li>no admin menu  /
-    toolbar at narrow viewports. (this might be good while in development.) </li></ul>'),
-  );
-
   $form['gratis_css']['gratis_header_layout'] = array(
     '#type' => 'checkbox',
     '#title' => t('Gratis Header Layout'),
     '#default_value' => theme_get_setting('gratis_header_layout'),
     '#description' => t("Check this option to have the header logo left and the site slogan right. (default is both centered"),
-  );
-
-  $form['gratis_css']['custom_css_path_settings'] = array(
-    '#type' => 'details',
-    '#title' => t('Custom css path settings'),
-    '#collapsible' => FALSE,
-  );
-
-  $form['gratis_css']['custom_css_path_settings']['custom_css_path']['gratis_custom_css_location'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Only check this box if you want to specify a custom path below to your local css file.'),
-    '#default_value' => theme_get_setting('gratis_custom_css_location'),
-  );
-
-  $form['gratis_css']['custom_css_path_settings']['custom_css_path']['gratis_custom_css_path'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Path to Custom Stylesheet'),
-    '#description' => t('Specify a custom path to the local.css file without the leading slash:
-e.g.: sites/default/files/custom-css/local.css you must check the box above for this to work.'),
-    '#default_value' => theme_get_setting('gratis_custom_css_path'),
   );
 
   $form['gratis_gridwidth'] = array(
@@ -213,11 +185,11 @@ so this should work with most any value you set within reason.'),
     '#group' => 'gratis_settings',
   );
 
-  $form['gratis_js']['gratis_livereload'] = array(
+  $form['gratis_js']['gratis_browsersync'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Use Live Reload?'),
-    '#default_value' => theme_get_setting('gratis_livereload'),
-    '#description' => t('Check this box to use livereload. (Recommended for local development only.)'),
+    '#title' => t('Use Browsersync?'),
+    '#default_value' => theme_get_setting('gratis_browsersync'),
+    '#description' => t('Check this box to use browsersync. (Recommended for local development only.)'),
   );
 
   $form['gratis_js']['gratis_minifiedjs'] = array(
