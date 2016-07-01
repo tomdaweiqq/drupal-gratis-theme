@@ -1,23 +1,6 @@
 // Import variables.
 @import "../definitions/variables";
 
-img {
-  width: auto \9;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-
-.no-sidebars {
-  figure {
-    img {
-      max-width: 100%;
-    }
-  }
-}
-
 // Set the default container max-width in case it's not set in the gratis' theme UI which would override this.
 .l-setwidth {
   @include container(1064px);
@@ -26,10 +9,10 @@ img {
 
 // box layout default.
 .box-layout {
-  .page-wrap{
+  .page-wrap {
     @include container(1064px);
     margin-top: 30px;
-    @include media( "<#{$gbp-wide}") {
+    @include media("<#{$gbp-wide}") {
       margin-top: 0;
     }
     position: relative;
@@ -48,24 +31,6 @@ img {
       }
     }
   }
-}
-
-// Media query for wide layouts.
-@include media(">#{$gbp-large}") {
-
-  // Extends
-  %grayborder {
-    border: 1px solid $medium_gray;
-  }
-
-  .l-region--navigation {
-    @include clearfix;
-  }
-
-  .l-content {
-    padding-bottom: $vert-spacing-unit;
-  }
-
 }
 
 @include media(">#{$gbp-large}") {

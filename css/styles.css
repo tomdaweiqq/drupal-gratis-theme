@@ -616,7 +616,6 @@ article.node {
 .scrolltop {
   width: 46px;
   height: 46px;
-  opacity: 1;
   opacity: .7;
   position: fixed;
   bottom: 10px;
@@ -796,10 +795,6 @@ fieldset {
   margin: 10px 0 20px 0;
   border: 1px solid #d1d1d1;
   color: #666;
-}
-
-a {
-  text-decoration: none;
 }
 
 .more-link a {
@@ -999,47 +994,7 @@ html {
 }
 
 ul.tabs.primary {
-  display: table;
-  position: relative;
-  overflow: hidden;
-  margin: 0 0 10px 0;
-  width: 100%;
-  border-bottom: 1px solid #a5a5a5;
-}
-
-ul.tabs.primary li {
-  float: left;
-  line-height: 30px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  list-style: none outside none;
-  margin: 0 6px 0 0;
-}
-
-ul.tabs.primary a {
-  background-color: #ccc;
-  display: block;
-  letter-spacing: 0;
-  outline: none;
-  padding: 0 20px;
-  text-decoration: none;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out false;
-  -o-transition: all 0.25s ease-in-out false;
-  transition: all 0.25s ease-in-out;
-  font-size: 1rem;
-  color: #202020;
-}
-
-ul.tabs.primary a.active {
-  color: #fff;
-  background: #535353;
-}
-
-ul.tabs.primary a:hover {
-  background: #535353;
-  color: #fff;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 table {
@@ -1280,19 +1235,6 @@ body.body-typeface-imfell {
   font-family: "IM Fell Double Pica", serif;
 }
 
-img {
-  width: auto \9;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-
-.no-sidebars figure img {
-  max-width: 100%;
-}
-
 .l-setwidth {
   max-width: 1064px;
   margin-left: auto;
@@ -1385,16 +1327,6 @@ img {
 
 .box-layout.bg_pattern_15 {
   background: url("../images/bg/bg-pattern-15.png") repeat fixed;
-}
-
-@media (min-width: 60.062em) {
-  .l-region--navigation {
-    overflow: hidden;
-    *zoom: 1;
-  }
-  .l-content {
-    padding-bottom: 20px;
-  }
 }
 
 @media (min-width: 60.062em) {

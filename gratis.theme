@@ -87,3 +87,36 @@ function gratis_preprocess_page(&$vars) {
   $set_width = theme_get_setting('gratis_grid_container_width');
   $vars['setwidth'] = Xss::filterAdmin($set_width);
 }
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function gratis_theme_suggestions_region_alter(&$suggestions, $vars, $hook) {
+
+  // Define a variable for the #region name.
+  $region = $vars['elements']['#region'];
+
+  $region_preface = array(
+    'preface_first',
+    'preface_second',
+    'preface_third',
+  );
+
+  // Now check for any of the three preface regions and create a theme hook.
+  if (in_array($region, $region_preface)) {
+    $suggestions[] = 'region__preface';
+  }
+
+  // Define an array of our postscript regions.
+  $region_postscript = array(
+    'postscript_first',
+    'postscript_second',
+    'postscript_third',
+  );
+
+  // If we are in any of these regions, create a theme hook suggestion.
+  if (in_array($region, $region_postscript)) {
+    $suggestions[] = 'region__postscript';
+  }
+}

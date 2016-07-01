@@ -19,7 +19,6 @@ stylesheets-remove:
   - core/themes/classy/css/components/links.css
   - core/themes/classy/css/components/item-list.css
   - core/themes/classy/css/components/textarea.css
-  - core/themes/classy/css/components/tabs.css
 
 #Define theme regions.
 regions:

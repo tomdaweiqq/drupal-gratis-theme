@@ -97,14 +97,10 @@
         {% if page.preface_first or page.preface_second or page.preface_third %}
 
             {% set preface_classes = [
-            'setwidth',
-            'l-preface',
             page.preface_first and page.preface_second and preface_third ? 'preface-thirds col sm6 med4 lg4',
-
-            page.preface_first and page.preface_second and page.preface_third is empty ? 'preface-half col sm6 med6 lg6',
-            page.preface_first and page.preface_third and page.preface_second is empty ? 'preface-half col sm6 med6 lg6',
-            page.preface_second and page.preface_third and page.preface_first is empty ? 'preface-half col sm6 med6 lg6',
-
+            page.preface_first and page.preface_second and page.preface_third is empty ? 'preface-half col sm12 med6 lg6',
+            page.preface_first and page.preface_third and page.preface_second is empty ? 'preface-half col sm12 med6 lg6',
+            page.preface_second and page.preface_third and page.preface_first is empty ? 'preface-half col sm12 med6 lg6',
             page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'preface-100 col sm12 med12 lg12',
             page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'preface-100 col sm12 med12 lg12',
             page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'preface-100 col sm12 med12 lg12',
@@ -113,20 +109,24 @@
             <section id="preface-wrap" class="l-preface-wrap container-wrap">
                 <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                     <div class="row">
-                        <div{{ attributes.addClass(preface_classes) }}>
-                            <!--Preface -->
-                            {% if page.preface_first %}
+                        <!--Preface -->
+                        {% if page.preface_first %}
+                            <div{{ attributes.addClass(preface_classes) }}>
                                 {{ page.preface_first }}
-                            {% endif %}
+                            </div>
+                        {% endif %}
 
-                            {% if page.preface_second %}
+                        {% if page.preface_second %}
+                            <div{{ attributes.addClass(preface_classes) }}>
                                 {{ page.preface_second }}
-                            {% endif %}
+                            </div>
+                        {% endif %}
 
-                            {% if page.preface_third %}
+                        {% if page.preface_third %}
+                            <div{{ attributes.addClass(preface_classes) }}>
                                 {{ page.preface_third }}
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </section>
