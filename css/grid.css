@@ -40,7 +40,16 @@
 .row .col {
   float: left;
   box-sizing: border-box;
-  padding: 0 0.5em;
+}
+
+@media (min-width: 60em) {
+  .row .col {
+    padding: 0 4.16667em 0 0;
+  }
+}
+
+.row .col:last-child {
+  padding: 0;
 }
 
 .row .col[class*="push-"], .row .col[class*="pull-"] {

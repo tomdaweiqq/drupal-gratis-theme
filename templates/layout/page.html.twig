@@ -97,19 +97,20 @@
         {% if page.preface_first or page.preface_second or page.preface_third %}
 
             {% set preface_classes = [
+            'l-preface',
             page.preface_first and page.preface_second and preface_third ? 'preface-thirds col sm6 med4 lg4',
             page.preface_first and page.preface_second and page.preface_third is empty ? 'preface-half col sm12 med6 lg6',
             page.preface_first and page.preface_third and page.preface_second is empty ? 'preface-half col sm12 med6 lg6',
             page.preface_second and page.preface_third and page.preface_first is empty ? 'preface-half col sm12 med6 lg6',
-            page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'preface-100 col sm12 med12 lg12',
-            page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'preface-100 col sm12 med12 lg12',
-            page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'preface-100 col sm12 med12 lg12',
+            page.preface_first and page.preface_second is empty and page.preface_third is empty ? 'preface-full col sm12 med12 lg12',
+            page.preface_second and page.preface_first is empty and page.preface_third is empty ? 'preface-full col sm12 med12 lg12',
+            page.preface_third and page.preface_first is empty and page.preface_second is empty ? 'preface-full col sm12 med12 lg12',
             ] %}
 
             <section id="preface-wrap" class="l-preface-wrap container-wrap">
                 <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                     <div class="row">
-                        <!--Preface -->
+                        {#Preface regions #}
                         {% if page.preface_first %}
                             <div{{ attributes.addClass(preface_classes) }}>
                                 {{ page.preface_first }}
@@ -176,11 +177,9 @@
             {% set postscript_classes = [
             'l-postscript',
             page.postscript_first and page.postscript_second and postscript_third ? 'col sm6 med4 lg4',
-
             page.postscript_first and page.postscript_second and page.postscript_third is empty ? 'col sm6 med6 lg6',
             page.postscript_first and page.postscript_third and page.postscript_second is empty ? 'col sm6 med6 lg6',
             page.postscript_second and page.postscript_third and page.postscript_first is empty ? 'col sm6 med6 lg6',
-
             page.postscript_first and page.postscript_second is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
             page.postscript_second and page.postscript_first is empty and page.postscript_third is empty ? 'col sm12 med12 lg12',
             page.postscript_third and page.postscript_first is empty and page.postscript_second is empty ? 'col sm12 med12 lg12',
@@ -189,20 +188,24 @@
             <section id="postscript-wrap" class="l-postscript-wrap container-wrap">
                 <div class="container" {% if setwidth %} style="max-width:{{ setwidth }}" {% endif %}>
                     <div class="row">
-                        <div{{ attributes.addClass(postscript_classes) }}>
-                            <!--Preface -->
-                            {% if page.postscript_first %}
+                        {#Preface regions #}
+                        {% if page.postscript_first %}
+                            <div{{ attributes.addClass(postscript_classes) }}>
                                 {{ page.postscript_first }}
-                            {% endif %}
+                            </div>
+                        {% endif %}
 
-                            {% if page.postscript_second %}
+                        {% if page.postscript_second %}
+                            <div{{ attributes.addClass(postscript_classes) }}>
                                 {{ page.postscript_second }}
-                            {% endif %}
+                            </div>
+                        {% endif %}
 
-                            {% if page.postscript_third %}
+                        {% if page.postscript_third %}
+                            <div{{ attributes.addClass(postscript_classes) }}>
                                 {{ page.postscript_third }}
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </section>

@@ -56,7 +56,15 @@
   .col {
     float: left;
     box-sizing: border-box;
-    padding: 0 $gutter-width / 2;
+
+
+    @include media(">=#{$desktop}") {
+      padding: 0 $gutter-width / .24 0 0;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
 
     &[class*="push-"],
     &[class*="pull-"] {
